@@ -66,3 +66,38 @@ Not done: searching for further scale or app repos. Not done: remaining builds b
 - Datasheet OSR table: confirm the absolute sample rate per OSR setting.
 - Pushing these notes to GitHub needs the user's go-ahead (not pushed).
 - The GitHub token pasted in chat should be revoked.
+
+## 5. Expanded search (candidates found, NOT cloned or tested)
+
+Search only: no licence, activity, or protocol review yet. Listed so they can be triaged. Licence exclusion does not apply to research scope.
+
+Scale protocols / apps:
+- oliexdev/openScale (wiki documents Xiaomi Mi Scale reverse engineering); YoannDev90/openScale is a fork.
+- KristianP26/ble-scale-sync and JohnTheNerd/ble-scale-sync (the second is apparently a fork of the first; the first is already in the collection as ble-scale-sync).
+- faraga1/xiaomi-scale-s200-ble — Xiaomi S200, protocol reference, claims no body-composition values exist in its protocol (weight-only).
+- Shah-Dom/SmartScale — IF_B2 Web Bluetooth client, includes its own estimates of body composition.
+- PavelDemyanov/qn-scale — QN-Scale protocol (Libra, Renpho, FitIndex, Kamtron).
+- eayrenk/bioscale-okok-alternative — Chipsea/OKOK BIA formulas (Janssen 2000, Kyle 2004 cited).
+- etlami/opentara — Xiaomi/Huami body-metric formulas (claims to match Zepp Life).
+- uniextra/Yunmai-dashboard — Yunmai BLE protocol.
+- ronnnnnnnnnnnnn/renpho-escs20m (and iios-co fork) — Renpho ES-CS20M, body-fat algorithm 0x03/0x04 described.
+- robzarry/healthtrack — RENPHO Elis 1 logger on ESP32, protocol notes in docs/protocol.md.
+- ipanalytics/Xiaomi-Scale-Unlocked-Reverse-Engineering — BLE advertisement layouts, offline decoder.
+- lswiderski/MiScaleBodyComposition (C#), lolouk44/xiaomi_mi_scale (Python, MQTT), zibous/ha-miscale2, zibous/hc_scale, dkuku/bodymiscale, dkuku/bodymeasurements (tape-measure model, no impedance).
+- jpfranca-br/miscale-dashboard; LookHin/xiaomi-mi-body-composition-scale-2.
+- Pasynkov "BodyScan" write-up (GARLYN IF_B8B protocol, DEV Community article).
+
+Open BIA hardware / firmware:
+- dyarleniber/AD5933-arduino-bioimpedance — AD5933 BIA, FM/FFM/TBW equations on Arduino, 50 kHz & 100 kHz; has a paper PDF.
+- openebi/hardware and openebi/software — four-electrode AD5933 EBI spectrometer, few kHz to 100 kHz.
+- syoo15/AD5933_ARDUINO_Biomass — MATLAB + Arduino AD5933 calibration and sweep.
+- mjmeli/arduino-ad5933, justiceamoh/autoimpedance, ashtonchase/ad5933_analyzer — AD5933 libraries / instruments.
+- analogdevicesinc/MAX32655_MAX30009 — official MAX30009 example on MAX32655. Its register writes match the no-OS driver (see section 1). Its comment gives ADC 222 Sps and DAC 14.208 kHz at ADC field 4, DAC field 3, consistent with the decoding in section 1.
+- oscaroflores/UPRM-Multi_Frq-BioZ-Research — UPRM project. Already in the collection; the upstream MAX32655_MAX30009 repo is the reference.
+
+Datasheet note: an application-note table lists BIOZ_DAC_OSR as [2:0] (values 32–256), but the no-OS driver uses a 2-bit field. Check the datasheet before using the table.
+
+## 6. Still open
+- Clone and triage the top candidates (openScale, xiaomi-scale-s200-ble, renpho-escs20m, AD5933-arduino-bioimpedance, openebi).
+- Build or test any candidate that is actually relevant.
+- Verify the literature numbers in section 2 against full text.
