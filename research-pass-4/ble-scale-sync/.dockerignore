@@ -1,0 +1,72 @@
+# Dependencies & build artifacts
+node_modules
+dist
+
+# Version control
+.git
+.gitignore
+
+# Tests (the root suite, and the Garmin uploader's under garmin-scripts/)
+tests
+garmin-scripts/tests
+
+# CI / GitHub
+.github
+
+# Documentation (not needed at runtime)
+*.md
+LICENSE
+docs
+
+# HA Add-on (separate build context)
+ble-scale-sync-addon
+repository.yaml
+
+# Auxiliary directories (not needed at runtime)
+worker
+drivers
+firmware
+
+# Docker files (avoid recursive COPY)
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Config & secrets (mounted at runtime)
+.env
+.env.example
+config.yaml
+config.yaml.*
+.update-check-state.json
+.update-check-state.json.tmp
+.scale-dedup-marks.json
+.scale-dedup-marks.json.tmp
+
+# IDE & editor
+.idea
+.vscode
+*.swp
+*.swo
+
+# Garmin tokens (mounted at runtime)
+.garmin_tokens
+.garmin_renpho_tokens
+
+# Python virtual environments and caches, at any depth: a bare name only
+# matches at the root of the build context.
+**/.venv
+env
+venv
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+
+# Lint / format configs (not needed at runtime)
+eslint.config.js
+.prettierrc
+tsconfig.eslint.json
+
+# OS files
+.DS_Store
+Thumbs.db
+nul
