@@ -1,6 +1,5 @@
 {
- "generated": "2026-10-18",
- "file_count": 2968,
+ "file_count": 3004,
  "files": [
   {
    "path": "AD5940-ARM-Build-Package.zip",
@@ -191,6 +190,11 @@
    "path": "ad5940-audit/findings.csv",
    "bytes": 2193,
    "sha256": "56ef94c6370e3bfbb2824fb425c31fb8a28cc3d444851d4fdf4830ea0b15dcb9"
+  },
+  {
+   "path": "ad5940-audit/source/.gitmodules",
+   "bytes": 113,
+   "sha256": "06a7665f76d52079ca07236b92f9032c471341a7c78e8ef53b235178d18044ed"
   },
   {
    "path": "ad5940-audit/source/CHANGELOG.md",
@@ -401,6 +405,11 @@
    "path": "ad5940-fixed/parse_bia_stream.py",
    "bytes": 10825,
    "sha256": "1f0b721a8f9d479c80ec93b3261c9904b73aa4218deab94e8dbda2c0b92f60bf"
+  },
+  {
+   "path": "ad5940-fixed/source/.gitmodules",
+   "bytes": 113,
+   "sha256": "06a7665f76d52079ca07236b92f9032c471341a7c78e8ef53b235178d18044ed"
   },
   {
    "path": "ad5940-fixed/source/CHANGELOG.md",
@@ -786,6 +795,11 @@
    "path": "ad5940-target-build/receipts/warning-triage.json",
    "bytes": 4349,
    "sha256": "8b29508ea6a7ccfcdefa615accd25d964f2e4f93fccbad407bf37bb67079f288"
+  },
+  {
+   "path": "ad5940-target-build/source/.gitmodules",
+   "bytes": 113,
+   "sha256": "06a7665f76d52079ca07236b92f9032c471341a7c78e8ef53b235178d18044ed"
   },
   {
    "path": "ad5940-target-build/source/CHANGELOG.md",
@@ -2573,6 +2587,11 @@
    "sha256": "385ea8defc162c5c3391cc1eca9d86c097d4ca9b0b6f85577edb42fbca6b7b42"
   },
   {
+   "path": "dexa-investigation/DeepACSA/.DS_Store",
+   "bytes": 8196,
+   "sha256": "6732af12c8bd0a128ad0690675a874719ab5d34c6e4a4db65f954d0f3892290d"
+  },
+  {
    "path": "dexa-investigation/DeepACSA/.github/workflows/dependency-review.yml",
    "bytes": 1729,
    "sha256": "8a0c92aad092e83608bdb45c4ba01d07b6e85efd80b5f4212b9de9003b1596c2"
@@ -2598,6 +2617,11 @@
    "sha256": "97da9377cc72863968d3ade15b51417369eb70656fc50cdadad63bd44e399d6d"
   },
   {
+   "path": "dexa-investigation/DeepACSA/DeepACSA/.DS_Store",
+   "bytes": 6148,
+   "sha256": "ada4a95b74b645955f7dd077747dfaaa54f5832a9632c1fc0b8358df1df1cb6f"
+  },
+  {
    "path": "dexa-investigation/DeepACSA/DeepACSA/DeepACSA.iss",
    "bytes": 621,
    "sha256": "72c2eac72b430e9201a74a8f0a076388d215fbb5c4241b4f22299a1da228a594"
@@ -2621,6 +2645,11 @@
    "path": "dexa-investigation/DeepACSA/DeepACSA/deep_acsa_gui.py",
    "bytes": 29401,
    "sha256": "e2a5b2b383c8ba225fd5e8bba823e026e3a25ec9725fdac2f7f446d9cf2f9b16"
+  },
+  {
+   "path": "dexa-investigation/DeepACSA/DeepACSA/gui_helpers/.DS_Store",
+   "bytes": 6148,
+   "sha256": "713e930e4fefd47aeaf9c3500f19193c57a276ffa63f9f948c7df0c82a8dc179"
   },
   {
    "path": "dexa-investigation/DeepACSA/DeepACSA/gui_helpers/__init__.py",
@@ -2721,6 +2750,11 @@
    "path": "dexa-investigation/DeepACSA/README_Pypi.md",
    "bytes": 911,
    "sha256": "a262587c14de1728a611e12ebde5c2ceddae57ded8b09de3980bb2f57a7e1768"
+  },
+  {
+   "path": "dexa-investigation/DeepACSA/docs/.DS_Store",
+   "bytes": 6148,
+   "sha256": "a8e87913cbc3522e5a80a0dd859dfaefb7f8e11b3b7f7b8674c9a4706cbf03db"
   },
   {
    "path": "dexa-investigation/DeepACSA/docs/Makefile",
@@ -2906,6 +2940,11 @@
    "path": "dexa-investigation/FatSegNet/tool/Adipose_Seg_Models/Localization/Loc_CDFNet_Baseline_sagittal/train_parameters.npy",
    "bytes": 5069,
    "sha256": "1a0af9d8cf66560c7bf67447f305895334d9fbb45571eab06a6edc314fe31834"
+  },
+  {
+   "path": "dexa-investigation/FatSegNet/tool/Adipose_Seg_Models/Segmentation/.DS_Store",
+   "bytes": 6148,
+   "sha256": "7d51bd985be5f27da912fb8996af2023c404f569caf748a8852e0d31eabc7103"
   },
   {
    "path": "dexa-investigation/FatSegNet/tool/Adipose_Seg_Models/Segmentation/Baseline_Mixed_Multi_Plane/logs/Baseline_Mixed_Multi_Plane_best_weights.h5",
@@ -3186,6 +3225,11 @@
    "path": "dexa-investigation/Ogo/ogo/__init__.py",
    "bytes": 330,
    "sha256": "5c940e1103830fd4ed32be497cfa1cbc3f737262b852714f02f319a6f7edd910"
+  },
+  {
+   "path": "dexa-investigation/Ogo/ogo/calib/.DS_Store",
+   "bytes": 6148,
+   "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
   },
   {
    "path": "dexa-investigation/Ogo/ogo/calib/__init__.py",
@@ -3586,6 +3630,11 @@
    "path": "dexa-investigation/Ogo/ogo/util/graphcuts/OGO_GRAPHCUTS_INSTALL.txt",
    "bytes": 3847,
    "sha256": "fd71322cad53bb1d6817b766f932eda36210eb1603483d67c6d837b42e4e9753"
+  },
+  {
+   "path": "dexa-investigation/Ogo/ogo/util/graphcuts/include/.DS_Store",
+   "bytes": 6148,
+   "sha256": "0c8d5d3a67edec760ae538535124cd12df574e7176c51890695edfbcce66ee5b"
   },
   {
    "path": "dexa-investigation/Ogo/ogo/util/graphcuts/include/dev/itkMultiLabelGridCutImageFilter.h",
@@ -4743,6 +4792,11 @@
    "sha256": "1855ac293ba780a877927656f0c59cbf9fba1284214f874bed4c60ecfa02ed08"
   },
   {
+   "path": "hardware-search/BioGAP/.gitmodules",
+   "bytes": 676,
+   "sha256": "479cc45bc26f3369cbfb39de52b6e880a44c31a22293ae2b5c521548fd0508d4"
+  },
+  {
    "path": "hardware-search/BioGAP/Changelog.md",
    "bytes": 528,
    "sha256": "8a25f966fa7305f310c73d726586d895e4ff32a8e7a1460ed2e25b4b3fb1f922"
@@ -5343,6 +5397,16 @@
    "sha256": "9d45fa697169915dbad6faf82602bf5aaeb2dd44d9bb6d079ec902eccc0d5b29"
   },
   {
+   "path": "hardware-search/BioGAP/Firmware/src_esp/.devcontainer/Dockerfile",
+   "bytes": 279,
+   "sha256": "5b86515dbea1edf3c18fbe791524a49d256ef6c18543233d7bea71352ab8d058"
+  },
+  {
+   "path": "hardware-search/BioGAP/Firmware/src_esp/.devcontainer/devcontainer.json",
+   "bytes": 416,
+   "sha256": "a22aada8fe2ec934bb9923e8f54e65b1bd4ba9b810cb8b956248ad6596e13933"
+  },
+  {
    "path": "hardware-search/BioGAP/Firmware/src_esp/.gitignore",
    "bytes": 129,
    "sha256": "275a597317d9e5b48886f3aab5ed5e852f3e6c33f7784f13e8775cae05fc3904"
@@ -5598,6 +5662,16 @@
    "sha256": "e73fe136c78902a62228ad49c072d8058c8dcd0687c2510b0617c82d8bac0cff"
   },
   {
+   "path": "hardware-search/protocentral_max86150_ecg_ppg/.DS_Store",
+   "bytes": 10244,
+   "sha256": "dd10accfe4b1bf1d8ef4fb798975dd91d5ddb2396543a82d82fff6ccbb8cab01"
+  },
+  {
+   "path": "hardware-search/protocentral_max86150_ecg_ppg/.github/.DS_Store",
+   "bytes": 6148,
+   "sha256": "995da4080995ac414bbb5a589f603e43e6913b755da7dd14c5c5f056a62e05c0"
+  },
+  {
    "path": "hardware-search/protocentral_max86150_ecg_ppg/.github/workflows/compile-examples.yml",
    "bytes": 6875,
    "sha256": "d2f9ca48198ed477b97423d3459168fe9d616ead014c9f08fa2fc009aa0801cc"
@@ -5623,6 +5697,11 @@
    "sha256": "ce06d7b5a9d897f541e6c885f987596f618353fb7123fb9fff3c08da56671ec0"
   },
   {
+   "path": "hardware-search/protocentral_max86150_ecg_ppg/assets/.DS_Store",
+   "bytes": 6148,
+   "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+  },
+  {
    "path": "hardware-search/protocentral_max86150_ecg_ppg/assets/gif-max86150-openview.gif",
    "bytes": 403429,
    "sha256": "15dda009d292bef3394eac4fa04e7e8a12df5566fa2b179d33760f1f744889d0"
@@ -5631,6 +5710,11 @@
    "path": "hardware-search/protocentral_max86150_ecg_ppg/assets/max86150_breakout.jpg",
    "bytes": 62672,
    "sha256": "2960b75feff88a245946c69e6cdf2dd84a4903cdf346830a3dd2a8b8216ad468"
+  },
+  {
+   "path": "hardware-search/protocentral_max86150_ecg_ppg/examples/.DS_Store",
+   "bytes": 6148,
+   "sha256": "8102efb415e66bab91631b784c3c2068c0fe140798de7e1851d18fcf96fb0b3b"
   },
   {
    "path": "hardware-search/protocentral_max86150_ecg_ppg/examples/Example1-PPG-Stream-Arduino-Plotter/Example1-PPG-Stream-Arduino-Plotter.ino",
@@ -5646,6 +5730,11 @@
    "path": "hardware-search/protocentral_max86150_ecg_ppg/examples/Example3-Openview-Streaming/Example3-Openview-Streaming.ino",
    "bytes": 2399,
    "sha256": "992014662d43eef98c50413f7cdaf92348d4ddc3947c23840fb67b80c37517ef"
+  },
+  {
+   "path": "hardware-search/protocentral_max86150_ecg_ppg/hardware/.DS_Store",
+   "bytes": 10244,
+   "sha256": "beff8bb1450b6f75e71bb030160d0ca43958249b5ebbdcff768d25b41a1b0d86"
   },
   {
    "path": "hardware-search/protocentral_max86150_ecg_ppg/hardware/pc_max86150_breakout_qwiic_v1_3.brd",
@@ -5748,9 +5837,44 @@
    "sha256": "4fe14880a125f412ca38adaceff0495f60ebd7826d288f5ad8750b36eff06636"
   },
   {
+   "path": "hardware-search/wulpus/fw/msp430/wulpus_msp430_firmware/.ccsproject",
+   "bytes": 648,
+   "sha256": "96d1a5cf5b375ab7106df743caef46dc6041ddae7e4758385d1b789d3659eec2"
+  },
+  {
+   "path": "hardware-search/wulpus/fw/msp430/wulpus_msp430_firmware/.cproject",
+   "bytes": 31054,
+   "sha256": "c5eaf9887c0e7789db79055f0a8146a9c9ad982ba9f4fde82d2fecb2ea3cd368"
+  },
+  {
    "path": "hardware-search/wulpus/fw/msp430/wulpus_msp430_firmware/.gitignore",
    "bytes": 6,
    "sha256": "cd4f9c6599bc6ebfbb2dc848c9d7f4423d7ce58225ead2acb56d4dc95d6eafbf"
+  },
+  {
+   "path": "hardware-search/wulpus/fw/msp430/wulpus_msp430_firmware/.launches/wulpus_msp430_firmware.launch",
+   "bytes": 4993,
+   "sha256": "c793467587d5608f72dec9bc485e729448a21eb6e9d52561d1a5e1fb86483203"
+  },
+  {
+   "path": "hardware-search/wulpus/fw/msp430/wulpus_msp430_firmware/.project",
+   "bytes": 825,
+   "sha256": "e44ed9b69fe11309d756fee0d0c55ecfc0973b9979d29b40432783d7bf516662"
+  },
+  {
+   "path": "hardware-search/wulpus/fw/msp430/wulpus_msp430_firmware/.settings/org.eclipse.cdt.codan.core.prefs",
+   "bytes": 59,
+   "sha256": "b1c83a6a46239ad09976388089063b07db085461f61859033e98c3c3d0ee9566"
+  },
+  {
+   "path": "hardware-search/wulpus/fw/msp430/wulpus_msp430_firmware/.settings/org.eclipse.cdt.debug.core.prefs",
+   "bytes": 121,
+   "sha256": "ad32bb684e847737a67839dedc92178a4a478dcf311b7ad05007f9fb2365c57f"
+  },
+  {
+   "path": "hardware-search/wulpus/fw/msp430/wulpus_msp430_firmware/.settings/org.eclipse.core.resources.prefs",
+   "bytes": 505,
+   "sha256": "013de5a18419654d10c7f83a1bce9febe2e8e71333b3f0df5f4f4b452fb17e9a"
   },
   {
    "path": "hardware-search/wulpus/fw/msp430/wulpus_msp430_firmware/CHANGELOG.md",
@@ -8438,6 +8562,16 @@
    "sha256": "227e903aea67ead8d2d9c76d23d81361db420ec034f82b0ad69a19e45812a548"
   },
   {
+   "path": "research-pass-4/ble-scale-sync/.dockerignore",
+   "bytes": 1122,
+   "sha256": "eeaa95f82705a13885058133c3b9b76fb425e2d6c895b5927dd68dea430519a7"
+  },
+  {
+   "path": "research-pass-4/ble-scale-sync/.env.example",
+   "bytes": 7288,
+   "sha256": "8d8967c21f93d2965959ad1cab4e3a91f96637f17e9bba3aa463f21711c76e5c"
+  },
+  {
    "path": "research-pass-4/ble-scale-sync/.gitattributes",
    "bytes": 129,
    "sha256": "b978577949ef11f358001689fe3b5496d6730966200062e6ad3063256639adbc"
@@ -8511,6 +8645,26 @@
    "path": "research-pass-4/ble-scale-sync/.gitignore",
    "bytes": 1286,
    "sha256": "cead987977aa306ac6cdc2bb920756da264292eea485cf22900d1632607b291c"
+  },
+  {
+   "path": "research-pass-4/ble-scale-sync/.nvmrc",
+   "bytes": 2,
+   "sha256": "785f3ec7eb32f30b90cd0fcf3657d388b5ff4297f2f9716ff66e9b69c05ddd09"
+  },
+  {
+   "path": "research-pass-4/ble-scale-sync/.prettierrc",
+   "bytes": 129,
+   "sha256": "5fb584ca9131c4307c52fc3b90f777568a01fa8a7668dbd93103122c1da09865"
+  },
+  {
+   "path": "research-pass-4/ble-scale-sync/.release-please-config.json",
+   "bytes": 1457,
+   "sha256": "67961f56009729ce35ecb531d4f9522fae63e89f3bb667d05b494ed02c046112"
+  },
+  {
+   "path": "research-pass-4/ble-scale-sync/.release-please-manifest.json",
+   "bytes": 20,
+   "sha256": "df5c9f8fdb2b85eb6c3e0dc42cd7f21135d0a4e63c26ecfa01fb545dc45249e7"
   },
   {
    "path": "research-pass-4/ble-scale-sync/CHANGELOG.md",
@@ -8621,6 +8775,26 @@
    "path": "research-pass-4/ble-scale-sync/docker-entrypoint.sh",
    "bytes": 2461,
    "sha256": "2a5ecc5e04a32ccf878d70259eabad09ea4ed8a890cb6549a604794298ab7e14"
+  },
+  {
+   "path": "research-pass-4/ble-scale-sync/docs/.vitepress/config.ts",
+   "bytes": 3543,
+   "sha256": "4c49298f58c34cd6444c69f7ddc3022d2657171a3b06e37863023416ea79100f"
+  },
+  {
+   "path": "research-pass-4/ble-scale-sync/docs/.vitepress/theme/GitHubStars.vue",
+   "bytes": 1333,
+   "sha256": "157514567d7adf5e1bf47d96f004a2650b27b255d909fa628e022df09126db82"
+  },
+  {
+   "path": "research-pass-4/ble-scale-sync/docs/.vitepress/theme/index.ts",
+   "bytes": 367,
+   "sha256": "a04caefb1ebcf783bb7a119eaa1d6d5c72e0ec3803ec18e2fcd89b407f618abb"
+  },
+  {
+   "path": "research-pass-4/ble-scale-sync/docs/.vitepress/theme/styles/custom.css",
+   "bytes": 878,
+   "sha256": "2b51a38077145244a2b755bd06b1a29c1108947f941aff33ea06dedf02dfc462"
   },
   {
    "path": "research-pass-4/ble-scale-sync/docs/alternatives.md",
@@ -11826,6 +12000,11 @@
    "path": "research-pass-5/openScale/README.md",
    "bytes": 9358,
    "sha256": "f3bf277308754ef31e6a3f32429c6c2e9d2864e465da66e32fd34a74fc6b35a9"
+  },
+  {
+   "path": "research-pass-5/openScale/android_app/.run/Store Screenshots.run.xml",
+   "bytes": 1034,
+   "sha256": "0bbaa17de32c9cd3491688549112632528203b60cab8c306878946beb1fd65d3"
   },
   {
    "path": "research-pass-5/openScale/android_app/app/build.gradle.kts",
