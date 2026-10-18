@@ -1,0 +1,12 @@
+Original retained-source SHA256 verification: PASS
+patching file examples/AD5940_BIA/AD5940Main.c
+patching file examples/AD5940_BIA/ADICUP3029/AD5940_BIA.uvprojx
+patching file examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c
+patching file examples/AD5940_BIA/ADICUP3029/main.c
+patching file examples/AD5940_BIA/BenchLog.h
+patching file examples/AD5940_BIA/BenchLog.inc
+patching file examples/AD5940_BIA/BodyImpedance.c
+patching file examples/AD5940_BIA/BodyImpedance.h
+patching file examples/ad5940lib/ad5940.c
+patching file examples/ad5940lib/ad5940.h
+Reconstructed source: all 24 files byte-identical to delivered fork.

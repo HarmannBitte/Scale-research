@@ -1,0 +1,440 @@
+import { describe, it, expect, vi } from 'vitest';
+import { bleLog } from '../../src/ble/types.js';
+import { InlifeScaleAdapter } from '../../src/scales/inlife.js';
+import type { ConnectionContext } from '../../src/interfaces/scale-adapter.js';
+import {
+  mockPeripheral,
+  defaultProfile,
+  assertPayloadRanges,
+} from '../helpers/scale-test-utils.js';
+import { uuid16 } from '../../src/scales/body-comp-helpers.js';
+
+function makeAdapter() {
+  return new InlifeScaleAdapter();
+}
+
+describe('InlifeScaleAdapter', () => {
+  describe('matches()', () => {
+    it.each(['000fatscale01', '000fatscale02', '042fatscale01'])(
+      'matches known name "%s"',
+      (name) => {
+        const adapter = makeAdapter();
+        expect(adapter.matches(mockPeripheral(name))).toBe(true);
+      },
+    );
+
+    it('matches by service UUID "fff0"', () => {
+      const adapter = makeAdapter();
+      expect(adapter.matches(mockPeripheral('Unknown', ['fff0']))).toBe(true);
+    });
+
+    it('matches case-insensitive name', () => {
+      const adapter = makeAdapter();
+      expect(adapter.matches(mockPeripheral('000FatScale01'))).toBe(true);
+    });
+
+    it('does not match unrelated name without service UUID', () => {
+      const adapter = makeAdapter();
+      expect(adapter.matches(mockPeripheral('Random Scale'))).toBe(false);
+    });
+
+    it('matches post-discovery by its own 0xFFF2 characteristic (#177)', () => {
+      const adapter = makeAdapter();
+      const info = mockPeripheral('', [uuid16(0xfff0)], undefined, [
+        uuid16(0xfff1),
+        uuid16(0xfff2),
+      ]);
+      expect(adapter.matches(info)).toBe(true);
+    });
+
+    it('does not match a 1byone/T9146 device once characteristics are known (#177)', () => {
+      const adapter = makeAdapter();
+      // T9146 exposes 0xFFF1 + 0xFFF4 but never Inlife's write char 0xFFF2.
+      const info = mockPeripheral('', [uuid16(0xfff0)], undefined, [
+        uuid16(0xfff1),
+        uuid16(0xfff4),
+      ]);
+      expect(adapter.matches(info)).toBe(false);
+    });
+
+    it('rejects a device exposing both 0xFFF2 and the 1byone 0xFFF4 char (#251)', () => {
+      const adapter = makeAdapter();
+      // Some Eufy variants (T9147) expose fff2 AND fff4; the fff4 presence
+      // means it is not a real Inlife, so it must fall to 1byone (Eufy).
+      const info = mockPeripheral('', [uuid16(0xfff0)], undefined, [
+        uuid16(0xfff1),
+        uuid16(0xfff2),
+        uuid16(0xfff4),
+      ]);
+      expect(adapter.matches(info)).toBe(false);
+    });
+
+    // PICOOC's connection-based scales: the PICOOC Mini advertises PICOOC-CQ and
+    // 0xFFF0 (oliexdev/openScale#401, artsight, btsnoop_hci.log, ADV_IND at
+    // 2019-02-16 14:53:44.187 from D0:49:00:30:0F:5D), the S1 Pro PICOOC-CC
+    // (openScale#544, pililac, PICOOC_S1.zip, btsnoop_hci_1.log). Both captures
+    // show 0xFFF1 (read + indicate) and 0xFFF2 (write with response) on 0xFFF0
+    // and no 0xFFF4, and the scale sends 35 02 until it gets the time.
+    describe('PICOOC connection-based scales (#408)', () => {
+      const PICOOC_NAMES = ['PICOOC-CQ', 'PICOOC-CC'];
+
+      it.each(PICOOC_NAMES)('does not claim "%s" on its advertised 0xFFF0', (name) => {
+        const adapter = makeAdapter();
+        expect(adapter.matches(mockPeripheral(name, ['fff0']))).toBe(false);
+        expect(adapter.matches(mockPeripheral(name, [uuid16(0xfff0)]))).toBe(false);
+      });
+
+      it.each(PICOOC_NAMES)('does not claim "%s" after discovery (0xFFF2, no 0xFFF4)', (name) => {
+        const adapter = makeAdapter();
+        const info = mockPeripheral(name, [uuid16(0xfff0)], undefined, [
+          uuid16(0xfff1),
+          uuid16(0xfff2),
+        ]);
+        expect(adapter.matches(info)).toBe(false);
+      });
+
+      it('still claims its own names and an unnamed 0xFFF0 device, before and after discovery', () => {
+        const adapter = makeAdapter();
+        const chars = [uuid16(0xfff1), uuid16(0xfff2)];
+        for (const name of ['000FatScale01', 'Unknown', '']) {
+          expect(adapter.matches(mockPeripheral(name, ['fff0']))).toBe(true);
+          expect(adapter.matches(mockPeripheral(name, [uuid16(0xfff0)], undefined, chars))).toBe(
+            true,
+          );
+        }
+      });
+    });
+  });
+
+  describe('parseNotification()', () => {
+    it('parses impedance-mode frame (mode 0x80)', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0x02; // marker
+      buf.writeUInt16BE(800, 2); // weight = 800 / 10 = 80.0 kg
+      buf.writeUInt32BE(500, 4); // impedance = 500
+      buf[11] = 0x80; // impedance mode
+
+      const reading = adapter.parseNotification(buf);
+      expect(reading).not.toBeNull();
+      expect(reading!.weight).toBe(80);
+      expect(reading!.impedance).toBe(500);
+    });
+
+    it('parses impedance-mode frame (mode 0x81)', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0x02;
+      buf.writeUInt16BE(750, 2); // 75.0 kg
+      buf.writeUInt32BE(480, 4);
+      buf[11] = 0x81;
+
+      const reading = adapter.parseNotification(buf);
+      expect(reading).not.toBeNull();
+      expect(reading!.weight).toBe(75);
+      expect(reading!.impedance).toBe(480);
+    });
+
+    it('parses legacy-mode frame (visceral fat)', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0x02;
+      buf.writeUInt16BE(800, 2);
+      // Legacy mode: visceral at [7-8] BE / 10
+      buf.writeUInt16BE(80, 7); // visceral = 8.0
+      buf[11] = 0x00; // legacy mode
+
+      const reading = adapter.parseNotification(buf);
+      expect(reading).not.toBeNull();
+      expect(reading!.weight).toBe(80);
+      expect(reading!.impedance).toBe(0); // no impedance in legacy mode
+    });
+
+    it('returns null for wrong marker', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0x03; // wrong
+      expect(adapter.parseNotification(buf)).toBeNull();
+    });
+
+    it('returns null for too-short buffer', () => {
+      const adapter = makeAdapter();
+      expect(adapter.parseNotification(Buffer.alloc(13))).toBeNull();
+    });
+
+    it('returns null when weight is zero', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0x02;
+      buf.writeUInt16BE(0, 2);
+      buf[11] = 0x80;
+      expect(adapter.parseNotification(buf)).toBeNull();
+    });
+  });
+
+  describe('isComplete()', () => {
+    it('returns true when weight > 0', () => {
+      const adapter = makeAdapter();
+      expect(adapter.isComplete({ weight: 80, impedance: 0 })).toBe(true);
+    });
+
+    it('returns false when weight is 0', () => {
+      const adapter = makeAdapter();
+      expect(adapter.isComplete({ weight: 0, impedance: 0 })).toBe(false);
+    });
+  });
+
+  describe('onConnected()', () => {
+    it('sends user config with real profile data', async () => {
+      const adapter = makeAdapter();
+      const writeFn = vi.fn().mockResolvedValue(undefined);
+      const profile = defaultProfile({ gender: 'male', height: 183, age: 30 });
+
+      const ctx: ConnectionContext = {
+        write: writeFn,
+        read: vi.fn(),
+        subscribe: vi.fn(),
+        profile,
+      };
+
+      await adapter.onConnected!(ctx);
+
+      expect(writeFn).toHaveBeenCalledOnce();
+      const [charUuid, data, withResponse] = writeFn.mock.calls[0];
+      expect(charUuid).toBe(adapter.charWriteUuid);
+      expect(withResponse).toBe(false);
+
+      expect(data[0]).toBe(0x02);
+      expect(data[1]).toBe(0xd2);
+      expect(data[3]).toBe(0x00); // male
+      expect(data[5]).toBe(30); // age
+      expect(data[6]).toBe(183); // height
+      expect(data[data.length - 1]).toBe(0xaa); // trailer
+    });
+
+    it('sends female gender code for female profile', async () => {
+      const adapter = makeAdapter();
+      const writeFn = vi.fn().mockResolvedValue(undefined);
+      const profile = defaultProfile({ gender: 'female' });
+
+      const ctx: ConnectionContext = {
+        write: writeFn,
+        read: vi.fn(),
+        subscribe: vi.fn(),
+        profile,
+      };
+
+      await adapter.onConnected!(ctx);
+
+      const data = writeFn.mock.calls[0][1];
+      expect(data[3]).toBe(0x01); // female
+    });
+  });
+
+  describe('computeMetrics()', () => {
+    it('returns valid BodyComposition with impedance', () => {
+      const adapter = makeAdapter();
+      const profile = defaultProfile();
+      const payload = adapter.computeMetrics({ weight: 80, impedance: 500 }, profile);
+      expect(payload.weight).toBe(80);
+      assertPayloadRanges(payload);
+    });
+
+    it('returns valid BodyComposition with cached visceral (legacy mode)', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0x02;
+      buf.writeUInt16BE(800, 2);
+      buf.writeUInt16BE(80, 7);
+      buf[11] = 0x00;
+      adapter.parseNotification(buf);
+
+      const profile = defaultProfile();
+      const payload = adapter.computeMetrics({ weight: 80, impedance: 0 }, profile);
+      expect(payload.weight).toBe(80);
+      assertPayloadRanges(payload);
+    });
+
+    it('returns zero weight in payload for zero weight input', () => {
+      const adapter = makeAdapter();
+      const profile = defaultProfile();
+      const payload = adapter.computeMetrics({ weight: 0, impedance: 0 }, profile);
+      expect(payload.weight).toBe(0);
+    });
+  });
+});
+
+// #394: adapters are shared singletons and computeMetrics() runs LATER than the
+// parse that produced the reading. On the mqtt-proxy and esphome-proxy watchers
+// the loop awaits processReading() - network exports included - while the
+// watcher is free to open the NEXT session, so onSessionStart() for session N+1
+// can land BEFORE computeMetrics() for session N. Reading the live cache there
+// hands the completed reading somebody else's composition.
+//
+// Each test below interleaves the two in exactly that order. Asserting only on
+// the payload of an uninterrupted session would pass with or without the fix.
+
+describe('InlifeScaleAdapter session boundary (#394)', () => {
+  function legacyFrame(visceralTenths: number): Buffer {
+    const buf = Buffer.alloc(14);
+    buf[0] = 0x02;
+    buf.writeUInt16BE(800, 2);
+    buf.writeUInt16BE(visceralTenths, 7);
+    buf[11] = 0x00; // legacy mode
+    return buf;
+  }
+
+  it('keeps the completed reading composition when the NEXT session starts first', () => {
+    const a = makeAdapter();
+    const reading = a.parseNotification(legacyFrame(200))!;
+    a.onSessionStart();
+    const payload = a.computeMetrics(reading, defaultProfile());
+    expect(payload.visceralFat).toBeCloseTo(20, 1);
+  });
+
+  it('does not hand a hand-built reading the previous session composition', () => {
+    const a = makeAdapter();
+    // 200 -> visceral 20. The estimator lands near 9 for the default profile,
+    // so a pinned value of 8 would have passed by a single unit and would have
+    // FAILED on correct code had defaultProfile()'s age been 25.
+    a.parseNotification(legacyFrame(200));
+    a.onSessionStart();
+    const payload = a.computeMetrics({ weight: 80, impedance: 0 }, defaultProfile());
+    expect(payload.visceralFat).not.toBeCloseTo(20, 1);
+  });
+});
+
+describe('InlifeScaleAdapter diagnostics (#405)', () => {
+  /** An impedance-mode frame with a known value in every candidate window. */
+  function impedanceFrame(raw: number): Buffer {
+    const buf = Buffer.alloc(14);
+    buf[0] = 0x02;
+    buf[1] = 0x10;
+    buf.writeUInt16BE(784, 2); // 78.4 kg
+    buf.writeUInt32BE(raw, 4);
+    buf[11] = 0x80;
+    return buf;
+  }
+
+  it('logs every candidate reading of the unverified field, with the whole frame', () => {
+    const lines: string[] = [];
+    const spy = vi.spyOn(bleLog, 'debug').mockImplementation((m: string) => {
+      lines.push(m);
+    });
+    try {
+      const adapter = new InlifeScaleAdapter();
+      // Four distinct non-zero bytes: with 500 (00 00 01 f4) three of them are
+      // zero, so a transposed or shifted read would still print the expected
+      // numbers and the assertions would not notice.
+      const frame = impedanceFrame(0x0a0b0c0d);
+      adapter.parseNotification(frame);
+
+      const line = lines.find((l) => l.includes('u32[4..7]'));
+      expect(line, 'the candidate line must be logged').toBeDefined();
+      // All four widths, so a later proposal needs no rebuild to be checked...
+      expect(line).toContain('u32[4..7]=168496141');
+      expect(line).toContain('u24[4..6]=658188');
+      expect(line).toContain('u16[4..5]=2571');
+      expect(line).toContain('u16[6..7]=3085');
+      // ...and the raw frame, so a split nobody has thought of yet is still
+      // recoverable from an old reporter log.
+      expect(line).toContain(frame.toString('hex'));
+    } finally {
+      spy.mockRestore();
+    }
+  });
+
+  it('logs the mode byte for a legacy frame too, so silence is distinguishable', () => {
+    const lines: string[] = [];
+    const spy = vi.spyOn(bleLog, 'debug').mockImplementation((m: string) => {
+      lines.push(m);
+    });
+    try {
+      const buf = Buffer.alloc(14);
+      buf[0] = 0x02;
+      buf.writeUInt16BE(784, 2);
+      buf[11] = 0x00; // legacy mode
+      new InlifeScaleAdapter().parseNotification(buf);
+
+      expect(lines.some((l) => l.includes('mode=0x0'))).toBe(true);
+      // The candidate line must NOT fire here: those bytes are LBM and
+      // visceral in this mode.
+      expect(lines.some((l) => l.includes('u32[4..7]'))).toBe(false);
+    } finally {
+      spy.mockRestore();
+    }
+  });
+
+  it('says why a frame was rejected, so silence is never ambiguous', () => {
+    const lines: string[] = [];
+    const spy = vi.spyOn(bleLog, 'debug').mockImplementation((m: string) => {
+      lines.push(m);
+    });
+    try {
+      // Too short for this parser: the reporter must be able to tell this apart
+      // from "the adapter never saw a frame at all".
+      const short = Buffer.from([0x02, 0x10, 0x03, 0x10]);
+      expect(new InlifeScaleAdapter().parseNotification(short)).toBeNull();
+
+      const line = lines.find((l) => l.includes('rejected'));
+      expect(line).toBeDefined();
+      expect(line).toContain('len=4');
+      expect(line).toContain(short.toString('hex'));
+    } finally {
+      spy.mockRestore();
+    }
+  });
+
+  it('changes nothing about what is exported', () => {
+    const adapter = new InlifeScaleAdapter();
+    const reading = adapter.parseNotification(impedanceFrame(500))!;
+    expect(reading).toEqual({ weight: 78.4, impedance: 500 });
+  });
+});
+
+describe('InlifeScaleAdapter impedance hold (#413)', () => {
+  function frame(mode: number, impedanceRaw = 0): Buffer {
+    const buf = Buffer.alloc(14);
+    buf[0] = 0x02;
+    buf[1] = 0x10;
+    buf.writeUInt16BE(784, 2); // 78.4 kg
+    if (mode === 0x80) buf.writeUInt32BE(impedanceRaw, 4);
+    buf[11] = mode;
+    return buf;
+  }
+
+  it('is not final on a legacy frame, so the session holds instead of resolving', () => {
+    const adapter = new InlifeScaleAdapter();
+    adapter.onSessionStart?.();
+    const reading = adapter.parseNotification(frame(0x00))!;
+
+    expect(adapter.isComplete(reading)).toBe(true);
+    expect(adapter.isFinal!(reading)).toBe(false);
+    expect(adapter.completionHoldMs).toBe(4000);
+  });
+
+  it('is final on an impedance frame, so that one resolves at once', () => {
+    const adapter = new InlifeScaleAdapter();
+    adapter.onSessionStart?.();
+    const reading = adapter.parseNotification(frame(0x80, 500))!;
+    expect(adapter.isFinal!(reading)).toBe(true);
+  });
+
+  it('gates on the mode flag, not on the value of the unverified field', () => {
+    // The width of [4..7] is the open question in #405, so a zero there must
+    // not be read as "no measurement": this frame IS the impedance frame.
+    const adapter = new InlifeScaleAdapter();
+    adapter.onSessionStart?.();
+    const reading = adapter.parseNotification(frame(0x80, 0))!;
+    expect(reading.impedance).toBe(0);
+    expect(adapter.isFinal!(reading)).toBe(true);
+  });
+
+  it('goes back to not-final when a legacy frame follows an impedance one', () => {
+    const adapter = new InlifeScaleAdapter();
+    adapter.onSessionStart?.();
+    adapter.parseNotification(frame(0x80, 500));
+    const legacy = adapter.parseNotification(frame(0x00))!;
+    expect(adapter.isFinal!(legacy)).toBe(false);
+  });
+});

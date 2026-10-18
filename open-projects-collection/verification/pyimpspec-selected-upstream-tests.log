@@ -1,0 +1,47 @@
+........................................................................ [ 51%]
+..............................F....................................      [100%]
+=================================== FAILURES ===================================
+____________________ TestRegistry.test_user_defined_element ____________________
+
+self = <test_element.TestRegistry testMethod=test_user_defined_element>
+
+    def test_user_defined_element(self):
+        with self.assertRaises(TypeError):
+            register_element(UserDefined)
+    
+        kwargs: Dict[str, Any] = {
+            "symbol": "U",
+            "name": "User-defined element",
+            "description": "A custom circuit element",
+            "equation": "TODO",
+            "parameters": [],
+        }
+        with self.assertRaises(TypeError):
+            redirect_output(
+                lambda: register_element(
+                    ElementDefinition(
+                        Class=UserDefinedIncomplete,
+                        **kwargs,
+                    ),
+                ),
+                stderr=True,
+            )
+    
+        # The equation is only a placeholder (i.e., 'todo')
+        lines: List[str] = redirect_output(
+            lambda: register_element(
+                ElementDefinition(
+                    Class=UserDefinedInvalid,
+                    **kwargs,
+                ),
+                validate_impedances=False,
+            ),
+            stderr=True,
+        )
+>       self.assertTrue("The equation is missing!" in "\n".join(lines))
+E       AssertionError: False is not true
+
+test_element.py:556: AssertionError
+=========================== short test summary info ============================
+FAILED test_element.py::TestRegistry::test_user_defined_element - AssertionEr...
+1 failed, 138 passed, 2 warnings in 10.13s

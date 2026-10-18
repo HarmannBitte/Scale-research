@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.0.3, pluggy-1.6.0
+rootdir: /home/user/research-pass-3/fitdays-lefu-scale
+configfile: pyproject.toml
+plugins: anyio-4.15.1, platformdirs-4.12.3
+collected 12 items
+
+tests/test_protocol.py ...........s                                      [100%]
+
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_protocol.py:126: vendor library not provided — set WLA37_SO_PATH to your own copy
+======================== 11 passed, 1 skipped in 0.03s =========================

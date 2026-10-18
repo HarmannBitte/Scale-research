@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-17",
+  "scope": "Bench plan and offline synthetic checks only; no hardware measurements",
+  "files": {
+    "impedance-bench/README.md": "74efc7fe181f9f343548e17aeb368ee4213c7861ed6ddd6bf0b19aa13bccf0d0",
+    "impedance-bench/evidence/fixture-compensation.txt": "0b44199b532c985ae3580ae3eaf2bcfcc4c5ba82a15e79cb6372654683ef8ccc",
+    "impedance-bench/evidence/manifest.json": "13035eb4229787d9a694efd53b3be617b02448d00377f8d77fad061f7916513c",
+    "impedance-bench/parts-shortlist.csv": "64cb978c3b421d4690b16ef451ab83ed19770e684dae9b05be0c8fd7e8e9dc73",
+    "impedance-bench/phantom_check.py": "a8c1f4afb17f36bfb1e2d05c0647ac4ee0fbd96ca30f118c379db28934de3086",
+    "impedance-bench/software-tests.txt": "daf81532d37fbdc2c7edd4803015a82a649a714cd4c9174e4aadd91c9e85a9a9",
+    "impedance-bench/synthetic-demo/primary-results.json": "7d841b335cf3eb62b61e010370f59b59b98121342611d511d22f4772d6246941",
+    "impedance-bench/synthetic-demo/references.csv": "da1658eca68065a1bd29dde8df0434e48ab58e942f657c93e2e8249aed43464a",
+    "impedance-bench/synthetic-demo/run.json": "c1d8e4cd83f6cf40391797fa99fb804e56e49f422aa8aab70efe244462ee15bb",
+    "impedance-bench/synthetic-demo/samples.csv": "a7dbbe03364e7cc3772d33e657f4352ba7a08d2a1404df50796ec6962a85b6ad",
+    "impedance-bench/synthetic-demo/spectral-results.json": "9c51616d78184604ba4470660d9b9cc3681063c1d4bb0e77a4440be8baaacd76",
+    "impedance-bench/test_phantom_check.py": "ce9f46c3dad22ab120296acb3ce20e217b14a2ecd6d5c4af0ac6a5d77dcaf077",
+    "Impedance-Bench-Acquisition-Specification.md": "4606a4f5ba2c3c50c985839710ee02b2496afd4b3be9d6415199c719fed78cca"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "repo": "OpenEIT/OpenEIT",
+  "commit": "418b5e1fdf99366a83a2f46e06fdc3c91a89db0c",
+  "source_path": "/home/user/.cache/open-projects/OpenEIT__OpenEIT/OpenEIT/backend/serialhandler.py",
+  "method": "AST-isolated exact upstream parse_any_line; no transport/GUI executed",
+  "probes": [
+    {
+      "label": "time_series",
+      "input": "1.5,-2.0",
+      "mode": "a",
+      "returned": [
+        1.5,
+        -2.0
+      ]
+    },
+    {
+      "label": "spectroscopy",
+      "input": "magnitudes:50000;123.4",
+      "mode": "b",
+      "returned": [
+        50000.0,
+        123.4
+      ]
+    },
+    {
+      "label": "EIT",
+      "input": "magnitudes:1,2,3",
+      "mode": "c",
+      "returned": [
+        1.0,
+        2.0,
+        3.0
+      ]
+    },
+    {
+      "label": "bad_token",
+      "input": "magnitudes:1,wrong,3",
+      "mode": "c",
+      "returned": null
+    },
+    {
+      "label": "nonfinite",
+      "input": "magnitudes:nan,inf,-inf",
+      "mode": "c",
+      "returned": [
+        "nan",
+        "inf",
+        "-inf"
+      ]
+    },
+    {
+      "label": "empty_frame",
+      "input": "magnitudes:",
+      "mode": "c",
+      "returned": []
+    },
+    {
+      "label": "empty_fields",
+      "input": "magnitudes:1,,3",
+      "mode": "c",
+      "returned": [
+        1.0,
+        3.0
+      ]
+    }
+  ],
+  "interpretation": "Valid lines parse and nonnumeric text rejects; NaN/infinity, empty frames and dropped empty fields are accepted without a quality flag. No expected frame-length check in this function."
+}

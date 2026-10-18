@@ -1,0 +1,26 @@
+test_18bit_negative_boundary (__main__.Audit.test_18bit_negative_boundary) ... ok
+test_18bit_positive_boundary (__main__.Audit.test_18bit_positive_boundary) ... ok
+test_calibration_failure_swallowed (__main__.Audit.test_calibration_failure_swallowed) ... ok
+test_capacitive_sign (__main__.Audit.test_capacitive_sign) ... ok
+test_declared_capacity_exceeded (__main__.Audit.test_declared_capacity_exceeded) ... ok
+test_fifo_full_1024_vs_buffer512 (__main__.Audit.test_fifo_full_1024_vs_buffer512) ... ok
+test_formatter_omits_per_record_metadata (__main__.Audit.test_formatter_omits_per_record_metadata) ... ok
+test_frequency_word_both_silicon_modes (__main__.Audit.test_frequency_word_both_silicon_modes) ... ok
+test_invalid_single_point_sweep_nonfinite (__main__.Audit.test_invalid_single_point_sweep_nonfinite) ... ok
+test_invalid_zero_calibration_accepted (__main__.Audit.test_invalid_zero_calibration_accepted) ... ok
+test_nominal_resistor (__main__.Audit.test_nominal_resistor) ... ok
+test_normal_fifo (__main__.Audit.test_normal_fifo) ... ok
+test_phase_not_wrapped (__main__.Audit.test_phase_not_wrapped) ... ok
+test_random_complex_agreement (__main__.Audit.test_random_complex_agreement) ... ok
+test_retained_source_hashes_unchanged (__main__.Audit.test_retained_source_hashes_unchanged) ... ok
+test_uninitialized_error_leaves_capacity_as_count (__main__.Audit.test_uninitialized_error_leaves_capacity_as_count) ... ok
+test_valid_log_sweep (__main__.Audit.test_valid_log_sweep) ... ok
+test_wakeup_error_leaves_capacity_as_count (__main__.Audit.test_wakeup_error_leaves_capacity_as_count) ... ok
+test_zero_both_nonfinite_success (__main__.Audit.test_zero_both_nonfinite_success) ... ok
+test_zero_capacity_not_enforced (__main__.Audit.test_zero_capacity_not_enforced) ... ok
+test_zero_current_nonfinite_success (__main__.Audit.test_zero_current_nonfinite_success) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.106s
+
+OK

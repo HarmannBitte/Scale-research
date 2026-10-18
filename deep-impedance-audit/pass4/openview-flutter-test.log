@@ -1,0 +1,89 @@
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 103.0.0 (109.0.0 available)
+  analyzer 13.3.0 (14.5.0 available)
+  bluez 0.8.3 (0.9.0 available)
+  cli_util 0.4.2 (0.6.0 available)
+  coverage 1.15.1 (1.16.0 available)
+  cross_file 0.3.5+5 (0.4.0 available)
+! csv 5.1.1 (overridden) (8.0.0 available)
+  cupertino_icons 1.0.9 (2.0.0 available)
+  dbus 0.7.15 (0.8.0 available)
+  equatable 2.1.0 (3.0.0 available)
+  fl_chart 0.71.0 (1.2.0 available)
+  flutter_form_builder 10.3.0+2 (11.0.0 available)
+  flutter_lints 5.0.0 (6.0.0 available)
+  go_router 14.8.1 (18.1.0 available)
+! intl 0.18.1 (overridden) (0.20.3 available)
+  lints 5.1.1 (6.1.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  mcumgr_dart 0.1.0 (0.4.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  package_info_plus 9.0.1 (10.2.2 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  permission_handler 12.0.3 (13.0.2 available)
+  permission_handler_android 13.0.1 (14.1.0 available)
+  screen_retriever 0.2.2 (0.3.0 available)
+  signal_strength_indicator 0.4.1 (0.5.0 available)
+  sn_progress_dialog 1.2.0 (2.0.0 available)
+  test 1.31.1 (1.33.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  test_core 0.6.18 (0.6.21 available)
+  universal_ble 2.3.0 (3.1.0 available)
+  win32 5.15.0 (6.4.0 available)
+  window_manager 0.4.3 (0.5.2 available)
+  xml 6.6.1 (7.1.0 available)
+Got dependencies!
+33 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart
+00:00 +0 -1: loading /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart [E]
+  Error: The Dart compiler exited unexpectedly.
+  package:flutter_tools/src/base/common.dart 34:3  throwToolExit
+  package:flutter_tools/src/compile.dart 1024:11   DefaultResidentCompiler._compile.<fn>
+  dart:async/zone_root.dart 48:47                  _rootRunUnary
+  dart:async/zone.dart 816:35                      _CustomZone.runUnary
+  dart:async/future_impl.dart 948:45               Future._propagateToListeners.handleValueCallback
+  dart:async/future_impl.dart 977:13               Future._propagateToListeners
+  dart:async/future_impl.dart 720:5                Future._completeWithValue
+  dart:async/future_impl.dart 804:7                Future._asyncCompleteWithValue.<fn>
+  dart:async/zone_root.dart 35:13                  _rootRun
+  dart:async/zone.dart 810:35                      _CustomZone.run
+  dart:async/zone.dart 702:7                       _CustomZone.runGuarded
+  dart:async/zone.dart 743:23                      _CustomZone.bindCallbackGuarded.<fn>
+  dart:async/schedule_microtask.dart 40:35         _microtaskLoop
+  dart:async/schedule_microtask.dart 49:5          _startMicrotaskLoop
+  dart:isolate-patch/isolate_patch.dart 127:13     _runPendingImmediateCallback
+  dart:isolate-patch/isolate_patch.dart 193:5      _RawReceivePort._handleMessage
+  
+00:00 +0 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: version comparison detects a newer release
+00:00 +1 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: version comparison same or older never prompts
+00:00 +2 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: version comparison build metadata is ignored
+00:00 +3 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: version comparison a leading v is tolerated on either side
+00:00 +4 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: version comparison short versions pad with zeros
+00:00 +5 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: version comparison a prerelease sorts below its release
+00:00 +6 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: version comparison unparseable input never triggers a prompt
+00:00 +7 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: release parsing reads version, notes and page URL
+00:00 +8 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: release parsing picks up SHA256SUMS.txt for verification
+00:00 +9 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: release parsing drafts and prereleases are ignored
+00:00 +10 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: release parsing a tag that is not a version is ignored
+00:00 +11 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: release parsing a release with no matching asset still offers the page
+00:00 +12 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: release parsing size renders as MB
+00:00 +13 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: asset selection maps each desktop platform to its release zip
+00:00 +14 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: asset selection mobile has no self-distributed asset
+00:00 +15 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: check flow a newer release becomes available
+00:00 +16 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: check flow the same release reports up to date
+00:00 +17 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: check flow every completed check stamps the clock
+00:00 +18 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: check flow a rate limit fails quietly
+[OV] update check failed: HttpException: GitHub returned 403, uri = https://api.github.com/repos/Protocentral/protocentral_openview/releases/latest
+00:00 +19 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: check flow being offline fails quietly
+[OV] update check failed: SocketException: down
+00:00 +20 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: check flow startup check honours the opt-out
+00:00 +21 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: check flow startup check runs at most once a day
+00:00 +22 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: check flow a skipped version is silent at startup but not on demand
+00:00 +23 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: check flow skipping records the version and clears the banner
+00:00 +24 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: check flow store builds never issue a request
+00:00 +25 -1: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_controller_test.dart: distribution channel defaults to store, so store builds never check
+00:00 +26 -1: loading /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/widget_test.dart
+Waiting for current test(s) to finish.
+Press Control-C again to terminate immediately.

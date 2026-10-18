@@ -1,0 +1,124 @@
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 103.0.0 (109.0.0 available)
+  analyzer 13.3.0 (14.5.0 available)
+  bluez 0.8.3 (0.9.0 available)
+  cli_util 0.4.2 (0.6.0 available)
+  coverage 1.15.1 (1.16.0 available)
+  cross_file 0.3.5+5 (0.4.0 available)
+! csv 5.1.1 (overridden) (8.0.0 available)
+  cupertino_icons 1.0.9 (2.0.0 available)
+  dbus 0.7.15 (0.8.0 available)
+  equatable 2.1.0 (3.0.0 available)
+  fl_chart 0.71.0 (1.2.0 available)
+  flutter_form_builder 10.3.0+2 (11.0.0 available)
+  flutter_lints 5.0.0 (6.0.0 available)
+  go_router 14.8.1 (18.1.0 available)
+! intl 0.18.1 (overridden) (0.20.3 available)
+  lints 5.1.1 (6.1.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  mcumgr_dart 0.1.0 (0.4.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  package_info_plus 9.0.1 (10.2.2 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  permission_handler 12.0.3 (13.0.2 available)
+  permission_handler_android 13.0.1 (14.1.0 available)
+  screen_retriever 0.2.2 (0.3.0 available)
+  signal_strength_indicator 0.4.1 (0.5.0 available)
+  sn_progress_dialog 1.2.0 (2.0.0 available)
+  test 1.31.1 (1.33.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  test_core 0.6.18 (0.6.21 available)
+  universal_ble 2.3.0 (3.1.0 available)
+  win32 5.15.0 (6.4.0 available)
+  window_manager 0.4.3 (0.5.2 available)
+  xml 6.6.1 (7.1.0 available)
+Got dependencies!
+33 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/settings_updates_test.dart                                      00:01 +0: loading /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/settings_updates_test.dart                                      00:02 +0: loading /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/settings_updates_test.dart                                      00:03 +0: loading /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/settings_updates_test.dart                                      00:04 +0: loading /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/settings_updates_test.dart                                      00:04 +0 -1: loading /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/settings_updates_test.dart [E]                               
+  Error: The Dart compiler exited unexpectedly.
+  package:flutter_tools/src/base/common.dart 34:3  throwToolExit
+  package:flutter_tools/src/compile.dart 1011:15   DefaultResidentCompiler._compile.<fn>
+  dart:async/zone_root.dart 27:47                  _rootRun
+  dart:async/zone.dart 810:35                      _CustomZone.run
+  dart:async/zone.dart 702:7                       _CustomZone.runGuarded
+  dart:async/stream_impl.dart 434:13               _BufferingStreamSubscription._sendDone.sendDone
+  dart:async/stream_impl.dart 444:7                _BufferingStreamSubscription._sendDone
+  dart:async/stream_impl.dart 333:7                _BufferingStreamSubscription._close
+  dart:async/stream_transformers.dart 91:11        _SinkTransformerStreamSubscription._close
+  dart:async/stream_transformers.dart 21:11        _EventSinkWrapper.close
+  dart:convert/string_conversion.dart 244:11       _StringAdapterSink.close
+  dart:convert/line_splitter.dart 141:11           _LineSplitterSink.close
+  dart:async/stream_transformers.dart 136:24       _SinkTransformerStreamSubscription._handleDone
+  dart:async/zone_root.dart 27:47                  _rootRun
+  dart:async/zone.dart 810:35                      _CustomZone.run
+  dart:async/zone.dart 702:7                       _CustomZone.runGuarded
+  dart:async/stream_impl.dart 434:13               _BufferingStreamSubscription._sendDone.sendDone
+  dart:async/stream_impl.dart 444:7                _BufferingStreamSubscription._sendDone
+  dart:async/stream_impl.dart 333:7                _BufferingStreamSubscription._close
+  dart:async/stream_transformers.dart 91:11        _SinkTransformerStreamSubscription._close
+  dart:async/stream_transformers.dart 21:11        _EventSinkWrapper.close
+  dart:async/stream_transformers.dart 258:12       _HandlerEventSink.close
+  dart:async/stream_transformers.dart 136:24       _SinkTransformerStreamSubscription._handleDone
+  dart:async/zone_root.dart 27:47                  _rootRun
+  dart:async/zone.dart 810:35                      _CustomZone.run
+  dart:async/zone.dart 702:7                       _CustomZone.runGuarded
+  dart:async/stream_impl.dart 434:13               _BufferingStreamSubscription._sendDone.sendDone
+  dart:async/stream_impl.dart 444:7                _BufferingStreamSubscription._sendDone
+  dart:async/stream_impl.dart 333:7                _BufferingStreamSubscription._close
+  dart:async/stream_transformers.dart 91:11        _SinkTransformerStreamSubscription._close
+  dart:async/stream_transformers.dart 21:11        _EventSinkWrapper.close
+  dart:convert/string_conversion.dart 244:11       _StringAdapterSink.close
+  dart:convert/string_conversion.dart 304:20       _Utf8ConversionSink.close
+  dart:convert/chunked_conversion.dart 79:18       _ConverterStreamEventSink.close
+  dart:async/stream_transformers.dart 136:24       _SinkTransformerStreamSubscription._handleDone
+  dart:async/zone_root.dart 27:47                  _rootRun
+  dart:async/zone.dart 810:35                      _CustomZone.run
+  dart:async/zone.dart 702:7                       _CustomZone.runGuarded
+  dart:async/stream_impl.dart 434:13               _BufferingStreamSubscription._sendDone.sendDone
+  dart:async/stream_impl.dart 444:7                _BufferingStreamSubscription._sendDone
+  dart:async/stream_impl.dart 333:7                _BufferingStreamSubscription._close
+  dart:async/stream_controller.dart 806:19         _SyncStreamControllerDispatch._sendDone
+  dart:async/stream_controller.dart 652:7          _StreamController._closeUnchecked
+  dart:async/stream_controller.dart 645:5          _StreamController.close
+  dart:io-patch/socket_patch.dart 2913:21          _Socket._onData
+  dart:async/zone_root.dart 56:13                  _rootRunUnary
+  dart:async/zone.dart 816:35                      _CustomZone.runUnary
+  dart:async/zone.dart 710:7                       _CustomZone.runUnaryGuarded
+  dart:async/stream_impl.dart 381:11               _BufferingStreamSubscription._sendData
+  dart:async/stream_impl.dart 312:7                _BufferingStreamSubscription._add
+  dart:async/stream_controller.dart 798:19         _SyncStreamControllerDispatch._sendData
+  dart:async/stream_controller.dart 663:7          _StreamController._add
+  dart:async/stream_controller.dart 618:5          _StreamController.add
+  dart:io-patch/socket_patch.dart 2351:33          new _RawSocket.<fn>
+  dart:io-patch/socket_patch.dart 1672:18          _NativeSocket.issueReadEvent.issue
+  dart:async/schedule_microtask.dart 40:35         _microtaskLoop
+  dart:async/schedule_microtask.dart 49:5          _startMicrotaskLoop
+  dart:isolate-patch/isolate_patch.dart 127:13     _runPendingImmediateCallback
+  dart:isolate-patch/isolate_patch.dart 193:5      _RawReceivePort._handleMessage
+  
+  Null check operator used on a null value
+  package:flutter_tools/src/test/test_compiler.dart 271:34  TestCompiler._onCompilationRequest
+  
+  Error: The Dart compiler exited unexpectedly.
+  package:flutter_tools/src/base/common.dart 34:3  throwToolExit
+  package:flutter_tools/src/compile.dart 1024:11   DefaultResidentCompiler._compile.<fn>
+  dart:async/zone_root.dart 48:47                  _rootRunUnary
+  dart:async/zone.dart 816:35                      _CustomZone.runUnary
+  dart:async/future_impl.dart 948:45               Future._propagateToListeners.handleValueCallback
+  dart:async/future_impl.dart 977:13               Future._propagateToListeners
+  dart:async/future_impl.dart 720:5                Future._completeWithValue
+  dart:async/future_impl.dart 804:7                Future._asyncCompleteWithValue.<fn>
+  dart:async/zone_root.dart 35:13                  _rootRun
+  dart:async/zone.dart 810:35                      _CustomZone.run
+  dart:async/zone.dart 702:7                       _CustomZone.runGuarded
+  dart:async/zone.dart 743:23                      _CustomZone.bindCallbackGuarded.<fn>
+  dart:async/schedule_microtask.dart 40:35         _microtaskLoop
+  dart:async/schedule_microtask.dart 49:5          _startMicrotaskLoop
+  dart:isolate-patch/isolate_patch.dart 127:13     _runPendingImmediateCallback
+  dart:isolate-patch/isolate_patch.dart 193:5      _RawReceivePort._handleMessage
+  
+
+To run this test again: /home/user/.cache/open-projects/flutter/flutter/bin/cache/dart-sdk/bin/dart test /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/settings_updates_test.dart -p vm --plain-name 'loading /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/settings_updates_test.dart'
+04:58 +0 -1: Some tests failed.                                                                                                                                                                        

@@ -1,0 +1,161 @@
+[
+  {
+    "name": "uprm-fifo-0-0",
+    "group": "uprm-fifo",
+    "arguments": [
+      0,
+      0
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "diagnostic": "=================================================================\n==1910==ERROR: AddressSanitizer: dynamic-stack-buffer-overflow on address 0x7ffd5030cc00 at pc 0x000000401639 bp 0x7ffd5030cb50 sp 0x7ffd5030cb48\nWRITE of size 1 at 0x7ffd5030cc00 thread T0\n    #0 0x401638 in spiBurst /home/user/deep-impedance-audit/generated/uprm-fifo.c:34\n    #1 0x40190c in main /home/user/deep-impedance-audit/generated/uprm-fifo.c:81\n    #2 0x7f9d82945ca7  (/lib/x86_64-linux-gnu/libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n    #3 0x7f9d82945d64 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x29d64) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n    #4 0x401160 in _start (/home/user/.cache/open-projects/deep-audit/native/uprm-fifo+0x401160) (BuildId: 6b632b5d355387552faf7d037b95bbce674fdf00)\n\nAddress 0x7ffd5030cc00 is located in stack of thread T0\nSUMMARY: AddressSa",
+    "log": "uprm-fifo-0-0.log"
+  },
+  {
+    "name": "uprm-fifo-128-0",
+    "group": "uprm-fifo",
+    "arguments": [
+      128,
+      0
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "diagnostic": "=================================================================\n==1911==ERROR: AddressSanitizer: dynamic-stack-buffer-overflow on address 0x7ffc73aa2800 at pc 0x000000401639 bp 0x7ffc73aa2740 sp 0x7ffc73aa2738\nWRITE of size 1 at 0x7ffc73aa2800 thread T0\n    #0 0x401638 in spiBurst /home/user/deep-impedance-audit/generated/uprm-fifo.c:34\n    #1 0x40190c in main /home/user/deep-impedance-audit/generated/uprm-fifo.c:81\n    #2 0x7fc46ff45ca7  (/lib/x86_64-linux-gnu/libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n    #3 0x7fc46ff45d64 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x29d64) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n    #4 0x401160 in _start (/home/user/.cache/open-projects/deep-audit/native/uprm-fifo+0x401160) (BuildId: 6b632b5d355387552faf7d037b95bbce674fdf00)\n\nAddress 0x7ffc73aa2800 is located in stack of thread T0\nSUMMARY: AddressSa",
+    "log": "uprm-fifo-128-0.log"
+  },
+  {
+    "name": "uprm-fifo-0-1",
+    "group": "uprm-fifo",
+    "arguments": [
+      0,
+      1
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "diagnostic": "=================================================================\n==1912==ERROR: AddressSanitizer: dynamic-stack-buffer-overflow on address 0x7ffe4f32e321 at pc 0x00000040163e bp 0x7ffe4f32e270 sp 0x7ffe4f32e268\nWRITE of size 1 at 0x7ffe4f32e321 thread T0\n    #0 0x40163d in spiBurst /home/user/deep-impedance-audit/generated/uprm-fifo.c:35\n    #1 0x40190c in main /home/user/deep-impedance-audit/generated/uprm-fifo.c:81\n    #2 0x7fa902035ca7  (/lib/x86_64-linux-gnu/libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n    #3 0x7fa902035d64 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x29d64) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n    #4 0x401160 in _start (/home/user/.cache/open-projects/deep-audit/native/uprm-fifo+0x401160) (BuildId: 6b632b5d355387552faf7d037b95bbce674fdf00)\n\nAddress 0x7ffe4f32e321 is located in stack of thread T0\nSUMMARY: AddressSa",
+    "log": "uprm-fifo-0-1.log"
+  },
+  {
+    "name": "uprm-fifo-0-2",
+    "group": "uprm-fifo",
+    "arguments": [
+      0,
+      2
+    ],
+    "exit_code": 0,
+    "stdout": "transaction_bytes=2 (upstream fifoCount=(counter1&0x7F)*2+counter2)\nreturn=0 decoded_pairs=0\n",
+    "diagnostic": "",
+    "log": "uprm-fifo-0-2.log"
+  },
+  {
+    "name": "uprm-fifo-0-3",
+    "group": "uprm-fifo",
+    "arguments": [
+      0,
+      3
+    ],
+    "exit_code": 1,
+    "stdout": "transaction_bytes=3 (upstream fifoCount=(counter1&0x7F)*2+counter2)\n",
+    "diagnostic": "=================================================================\n==1914==ERROR: AddressSanitizer: dynamic-stack-buffer-overflow on address 0x7ffebe7876e3 at pc 0x00000040170d bp 0x7ffebe7876b0 sp 0x7ffebe7876a8\nREAD of size 1 at 0x7ffebe7876e3 thread T0\n    #0 0x40170c in spiBurst /home/user/deep-impedance-audit/generated/uprm-fifo.c:60\n    #1 0x40190c in main /home/user/deep-impedance-audit/generated/uprm-fifo.c:81\n    #2 0x7f541a635ca7  (/lib/x86_64-linux-gnu/libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n    #3 0x7f541a635d64 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x29d64) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)\n    #4 0x401160 in _start (/home/user/.cache/open-projects/deep-audit/native/uprm-fifo+0x401160) (BuildId: 6b632b5d355387552faf7d037b95bbce674fdf00)\n\nAddress 0x7ffebe7876e3 is located in stack of thread T0\nSUMMARY: AddressSan",
+    "log": "uprm-fifo-0-3.log"
+  },
+  {
+    "name": "uprm-fifo-0-8",
+    "group": "uprm-fifo",
+    "arguments": [
+      0,
+      8
+    ],
+    "exit_code": 0,
+    "stdout": "transaction_bytes=8 (upstream fifoCount=(counter1&0x7F)*2+counter2)\nreturn=0 decoded_pairs=1\n",
+    "diagnostic": "",
+    "log": "uprm-fifo-0-8.log"
+  },
+  {
+    "name": "uprm-fifo-1-0",
+    "group": "uprm-fifo",
+    "arguments": [
+      1,
+      0
+    ],
+    "exit_code": 0,
+    "stdout": "transaction_bytes=2 (upstream fifoCount=(counter1&0x7F)*2+counter2)\nreturn=0 decoded_pairs=0\n",
+    "diagnostic": "",
+    "log": "uprm-fifo-1-0.log"
+  },
+  {
+    "name": "uprm-clock-scale-",
+    "group": "uprm-clock-scale",
+    "arguments": [],
+    "exit_code": 0,
+    "stdout": "reg17=133 reg20=160 raw_mdiv=512 gain=10 current_uA=45.2488687783 coeff_ohm_per_count=0.00662128426021\ninterval_seconds=0.00389863547758 sample_interval_us_assigned_as_upstream=0 samples_per_second=256.5\nlow_frequency_Hz=4104\nhigh_frequency_Hz=131328\n",
+    "diagnostic": "",
+    "log": "uprm-clock-scale-.log"
+  },
+  {
+    "name": "openebi-averaging-0-1000",
+    "group": "openebi-averaging",
+    "arguments": [
+      0,
+      1000
+    ],
+    "exit_code": 0,
+    "stdout": "real=-nan imag=-nan finite=0 polls=0\n",
+    "diagnostic": "",
+    "log": "openebi-averaging-0-1000.log"
+  },
+  {
+    "name": "openebi-averaging-1-1000",
+    "group": "openebi-averaging",
+    "arguments": [
+      1,
+      1000
+    ],
+    "exit_code": 0,
+    "stdout": "real=-1234 imag=2345 finite=1 polls=1\n",
+    "diagnostic": "",
+    "log": "openebi-averaging-1-1000.log"
+  },
+  {
+    "name": "openebi-averaging-16-1000",
+    "group": "openebi-averaging",
+    "arguments": [
+      16,
+      1000
+    ],
+    "exit_code": 0,
+    "stdout": "real=-1234 imag=2345 finite=1 polls=16\n",
+    "diagnostic": "",
+    "log": "openebi-averaging-16-1000.log"
+  },
+  {
+    "name": "openebi-averaging-1-50",
+    "group": "openebi-averaging",
+    "arguments": [
+      1,
+      50
+    ],
+    "exit_code": 42,
+    "stdout": "stub_poll_budget_exhausted (upstream never returned)\n",
+    "diagnostic": "",
+    "log": "openebi-averaging-1-50.log"
+  },
+  {
+    "name": "spectra-fixed-point-",
+    "group": "spectra-fixed-point",
+    "arguments": [],
+    "exit_code": 0,
+    "stdout": "numerator=1000 denominator=1000 raw=16 displayed_ohm_equivalent=1.000000\nnumerator=1000 denominator=0 raw=0 displayed_ohm_equivalent=0.000000\nnumerator=134217728 denominator=1 raw=-2147483648 displayed_ohm_equivalent=-134217728.000000\nnumerator=268435456 denominator=1 raw=2147483647 displayed_ohm_equivalent=134217727.937500\n",
+    "diagnostic": "",
+    "log": "spectra-fixed-point-.log"
+  },
+  {
+    "name": "openeit-bipolar-amplitude-",
+    "group": "openeit-bipolar-amplitude",
+    "arguments": [],
+    "exit_code": 0,
+    "stdout": "unipolar_word=1533\nbipolar_word=61323\nbipolar_word_hex=0xEF8B\nsequence_word=0x9E00EF8B address_field_ok=1\nfield_after_11bit_mask=1931\nfield_mV_equiv_at_0.39072mV_per_code=754.48\nintended_mV_equiv=23960.00\nfull_scale_11bit_mV=799.80\nunipolar_mV_equiv=598.97\n",
+    "diagnostic": "",
+    "log": "openeit-bipolar-amplitude-.log"
+  }
+]

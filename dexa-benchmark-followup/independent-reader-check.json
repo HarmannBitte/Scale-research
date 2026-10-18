@@ -1,0 +1,6 @@
+{
+  "reader": "pyreadstat 1.3.6",
+  "agreement": "All IDs, imputation/version/status flags and target values agree with normalized pandas within absolute 1e-50, rtol0, equalNaN",
+  "independently_found_inconsistent_ids": 80,
+  "reason": "Conservative exclusion; source inconsistency observed, cause not established. Not proof of CDC error or clinical measurement failure."
+}

@@ -1,0 +1,1 @@
+{"label": "SYNTHETIC NOT HARDWARE DATA", "frequency_Hz": [5000.0, 10000.0, 20000.0, 50000.0, 100000.0, 200000.0], "true_parameters": [100.0, 500.0, 1e-08], "fit_parameters": [100.00000026448245, 499.99999937390487, 9.999999971427964e-09], "max_complex_error_ohm": 9.43014839431317e-07}

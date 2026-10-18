@@ -1,0 +1,40 @@
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 103.0.0 (109.0.0 available)
+  analyzer 13.3.0 (14.5.0 available)
+  bluez 0.8.3 (0.9.0 available)
+  cli_util 0.4.2 (0.6.0 available)
+  coverage 1.15.1 (1.16.0 available)
+  cross_file 0.3.5+5 (0.4.0 available)
+! csv 5.1.1 (overridden) (8.0.0 available)
+  cupertino_icons 1.0.9 (2.0.0 available)
+  dbus 0.7.15 (0.8.0 available)
+  equatable 2.1.0 (3.0.0 available)
+  fl_chart 0.71.0 (1.2.0 available)
+  flutter_form_builder 10.3.0+2 (11.0.0 available)
+  flutter_lints 5.0.0 (6.0.0 available)
+  go_router 14.8.1 (18.1.0 available)
+! intl 0.18.1 (overridden) (0.20.3 available)
+  lints 5.1.1 (6.1.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  mcumgr_dart 0.1.0 (0.4.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  package_info_plus 9.0.1 (10.2.2 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  permission_handler 12.0.3 (13.0.2 available)
+  permission_handler_android 13.0.1 (14.1.0 available)
+  screen_retriever 0.2.2 (0.3.0 available)
+  signal_strength_indicator 0.4.1 (0.5.0 available)
+  sn_progress_dialog 1.2.0 (2.0.0 available)
+  test 1.31.1 (1.33.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  test_core 0.6.18 (0.6.21 available)
+  universal_ble 2.3.0 (3.1.0 available)
+  win32 5.15.0 (6.4.0 available)
+  window_manager 0.4.3 (0.5.2 available)
+  xml 6.6.1 (7.1.0 available)
+Got dependencies!
+33 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Building Linux application...                                   
+✓ Built build/linux/x64/debug/bundle/OpenView

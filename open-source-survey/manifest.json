@@ -1,0 +1,441 @@
+{
+  "research_date": "2026-10-18",
+  "scope": "public repository/documentation and selected-source inspection; no third-party builds or hardware tests",
+  "files": [
+    {
+      "path": "open-source-survey/ECSHackWeek__impedance.py/LICENSE",
+      "bytes": 1081,
+      "sha256": "4d879c74dd5866a30a7c8ab353c7963e300b74d60aba706c7d227d9586232980"
+    },
+    {
+      "path": "open-source-survey/ECSHackWeek__impedance.py/README.md",
+      "bytes": 15667,
+      "sha256": "abaed37c272ab82a18950f0f22e257d1ba7d68318d52b52ba7787607808786ea"
+    },
+    {
+      "path": "open-source-survey/ECSHackWeek__impedance.py/metadata.json",
+      "bytes": 7297,
+      "sha256": "ab17e0a983e236e458fe31b93990b6a92a106de6717e81709f43c7956d5c5d64"
+    },
+    {
+      "path": "open-source-survey/ECSHackWeek__impedance.py/tree.json",
+      "bytes": 26898,
+      "sha256": "a24e00df7173e3b02f81a585d7c36dbe6422fe504fd59a66c7679ef85677c838"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__EIT_EE/LICENSE.txt",
+      "bytes": 14885,
+      "sha256": "1e91f4a2dbaae3acba3807abd0467329bbad4222371d7ea30b970263c57cb153"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__EIT_EE/README.md",
+      "bytes": 3710,
+      "sha256": "f2cf3db6f0885acd8c720d99da8936de88698174c68a0ccd8375f1d819ed2e68"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__EIT_EE/metadata.json",
+      "bytes": 6594,
+      "sha256": "48804534fddcc3f41782424f314c867a04736b6810b76028ee806522df2b0911"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__EIT_EE/tree.json",
+      "bytes": 13968,
+      "sha256": "f1c3cf9dfd5544dec406d0c85f89a7ab599e2ec3f60d4d2ef78382e3aaa2f9c1"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__EIT_Firmware/LICENSE.txt",
+      "bytes": 14885,
+      "sha256": "1e91f4a2dbaae3acba3807abd0467329bbad4222371d7ea30b970263c57cb153"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__EIT_Firmware/README.md",
+      "bytes": 7489,
+      "sha256": "3fc65c226c192c9f1f0ef04352ac4d7185562139acc11e74ed44a42d59810764"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__EIT_Firmware/README_old.md",
+      "bytes": 5563,
+      "sha256": "5afb981436dbe6e6dc61c5f2d8819ab8ba1e672fb089e74de6ccaa2c13fc7ba3"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__EIT_Firmware/metadata.json",
+      "bytes": 6877,
+      "sha256": "849d17d11d131042774a2c7f335bbe76a19c2b5ca2fcaf516876039eba665871"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__EIT_Firmware/tree.json",
+      "bytes": 108120,
+      "sha256": "1d799298bd450f8b4f2a31580da1cc170891b542b1a32c9aebdfd08b17820cf8"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__OpenEIT/LICENSE.txt",
+      "bytes": 14885,
+      "sha256": "1e91f4a2dbaae3acba3807abd0467329bbad4222371d7ea30b970263c57cb153"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__OpenEIT/README.md",
+      "bytes": 6959,
+      "sha256": "357487c93f3de4cf52fa81f7f7a71c7c2f621aaf8c5d23fb783c22cec1830aa4"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__OpenEIT/metadata.json",
+      "bytes": 6973,
+      "sha256": "0864fbedb1a9848976795de8b1b9e491dfa984cc1e39ff60e1ddb150d3fd2a2a"
+    },
+    {
+      "path": "open-source-survey/OpenEIT__OpenEIT/tree.json",
+      "bytes": 67272,
+      "sha256": "0ffb8d5ce47d301bbc4ca659acc1c0642d7afab5541a53fbc1bf29cfcfc79874"
+    },
+    {
+      "path": "open-source-survey/Protocentral__protocentral_max30001/LICENSE.md",
+      "bytes": 2798,
+      "sha256": "15405f2c1524fc2d56db7bcfbe5045bd05f1a57135665eee34dbcf759a65fbcc"
+    },
+    {
+      "path": "open-source-survey/Protocentral__protocentral_max30001/README.md",
+      "bytes": 7151,
+      "sha256": "dc5db26fed625255dfc1aaa8a4e1100a8788d71767bac3bd20e39e496418a54c"
+    },
+    {
+      "path": "open-source-survey/Protocentral__protocentral_max30001/license_mark.svg",
+      "bytes": 9032,
+      "sha256": "4109224c5553d31adb6bfc8eaeb0a700fb3ccbfa02a9e11cd98a23a696967282"
+    },
+    {
+      "path": "open-source-survey/Protocentral__protocentral_max30001/metadata.json",
+      "bytes": 7575,
+      "sha256": "8e48ca253da41ee728d98e847f51f547e10f8b3f973c9cfd8944c4241ad73094"
+    },
+    {
+      "path": "open-source-survey/Protocentral__protocentral_max30001/tree.json",
+      "bytes": 4119,
+      "sha256": "72cf9ea9ed967eec43db6577a526f9ac8b92fffdf71376932c2248a3eb74edec"
+    },
+    {
+      "path": "open-source-survey/TAMU-ESP__BioZPulse-Sim-Platform/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "open-source-survey/TAMU-ESP__BioZPulse-Sim-Platform/README.md",
+      "bytes": 3804,
+      "sha256": "7bc438f03cea7b089a8a629ccd22f7ba156f8113f5615448ffa2ab86aad70c82"
+    },
+    {
+      "path": "open-source-survey/TAMU-ESP__BioZPulse-Sim-Platform/metadata.json",
+      "bytes": 7505,
+      "sha256": "66491abeba799d4d1172b3365c54aad66e07281ca8209de103a0e26a31a42f4d"
+    },
+    {
+      "path": "open-source-survey/TAMU-ESP__BioZPulse-Sim-Platform/tree.json",
+      "bytes": 35463,
+      "sha256": "c8cb0bc350edf24f9111a868f93d892b2ec94fac4e839779c00dbdc3a95c85bf"
+    },
+    {
+      "path": "open-source-survey/analogdevicesinc__MAX32655_MAX30009/README.md",
+      "bytes": 2804,
+      "sha256": "1e9588b5bb39c70cc5ad6a27db1299bf3bf303291d3de9c99bb7747a66e8a821"
+    },
+    {
+      "path": "open-source-survey/analogdevicesinc__MAX32655_MAX30009/license.txt",
+      "bytes": 1742,
+      "sha256": "e2b53aece0d43f6c3b72397837c6037963e507833e57bb2e33999832d38477e3"
+    },
+    {
+      "path": "open-source-survey/analogdevicesinc__MAX32655_MAX30009/metadata.json",
+      "bytes": 7947,
+      "sha256": "3486449c4b155b986f302cc5a36c86b44a053e133d3768a762ccc2a739aa03ae"
+    },
+    {
+      "path": "open-source-survey/analogdevicesinc__MAX32655_MAX30009/tree.json",
+      "bytes": 8564,
+      "sha256": "c3839eabcd7c28ba438a6b7b299d8c4cb00f7086683533d77947a8e0be5a6026"
+    },
+    {
+      "path": "open-source-survey/analogdevicesinc__no-OS/selected/doc/sphinx/source/projects/afe/max30009.rst",
+      "bytes": 56,
+      "sha256": "e2919f0897fbb42ccf2f9c5fd5759a7f61ce06090190a516b10ba8f2d5b6756a"
+    },
+    {
+      "path": "open-source-survey/analogdevicesinc__no-OS/selected/drivers/afe/max30009/max30009.c",
+      "bytes": 70265,
+      "sha256": "3416dfcc1da050873a7ab3f112ebac5a77e0efdae70f31fe908cd35acb9af19d"
+    },
+    {
+      "path": "open-source-survey/analogdevicesinc__no-OS/selected/drivers/afe/max30009/max30009.h",
+      "bytes": 29378,
+      "sha256": "bc237e0ea583e1fef29c9fad4e837f1ec9dc108f0737f05019453cd44df5e673"
+    },
+    {
+      "path": "open-source-survey/analogdevicesinc__no-OS/selected/projects/max30009/README.rst",
+      "bytes": 6704,
+      "sha256": "1e4d2abad8c312954e1d8f24b5a145c3285f15e2cc5aa7e9d5f12ac0340c6599"
+    },
+    {
+      "path": "open-source-survey/analogdevicesinc__no-OS/selected/projects/max30009/src/examples/basic/basic_example.c",
+      "bytes": 10558,
+      "sha256": "22924f703e3ff6eea8ca55e93c2a89ccd9c14bf24e0c6c125931f8f091286b8f"
+    },
+    {
+      "path": "open-source-survey/collect.py",
+      "bytes": 2352,
+      "sha256": "44c9a20a158d49114a67be5ad00dca7c31aa18c02cd44d61a508149e2358e83a"
+    },
+    {
+      "path": "open-source-survey/dyarleniber__AD5933-arduino-bioimpedance/LICENSE",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "open-source-survey/dyarleniber__AD5933-arduino-bioimpedance/README.md",
+      "bytes": 2019,
+      "sha256": "63b4052e7884f33c77ffec39ec088ea4110c21fe7f22b4d6ab50bc25f1a3e89c"
+    },
+    {
+      "path": "open-source-survey/dyarleniber__AD5933-arduino-bioimpedance/metadata.json",
+      "bytes": 6757,
+      "sha256": "79e98a96a43e355880e8d2bad68ace3f3b63485c70800937d63ede272df0b0c8"
+    },
+    {
+      "path": "open-source-survey/dyarleniber__AD5933-arduino-bioimpedance/selected/AD5933.ino",
+      "bytes": 6954,
+      "sha256": "6adf0d9f8229a17ef3378f3c59ac2b7c9cff6ef318214b869760ad8a394deee3"
+    },
+    {
+      "path": "open-source-survey/dyarleniber__AD5933-arduino-bioimpedance/tree.json",
+      "bytes": 1438,
+      "sha256": "3218ea93c39dfe067188299c30b20739771372ca85d28de2f270a3cf7a788830"
+    },
+    {
+      "path": "open-source-survey/eayrenk__bioscale-okok-alternative/LICENSE",
+      "bytes": 1069,
+      "sha256": "8502be57c7ae432d926449db7665e0b5abc4acbdd9258b359ba8535aa1865ffa"
+    },
+    {
+      "path": "open-source-survey/eayrenk__bioscale-okok-alternative/README.md",
+      "bytes": 13810,
+      "sha256": "b537de94f04d86008d355d10f733207a086980b1eaafb16c3ca1331dad66bf2a"
+    },
+    {
+      "path": "open-source-survey/eayrenk__bioscale-okok-alternative/metadata.json",
+      "bytes": 19851,
+      "sha256": "287e6093db8579b3d1d759a1b82726c98666bfec259a31faaaf95e842259273e"
+    },
+    {
+      "path": "open-source-survey/eayrenk__bioscale-okok-alternative/selected/calculations/body_composition.py",
+      "bytes": 27940,
+      "sha256": "3218ee2dd432807ff9c33fc0658731150e8a8d5a3c978d126d98d6bb5a3b206a"
+    },
+    {
+      "path": "open-source-survey/eayrenk__bioscale-okok-alternative/selected/tests/test_calculations.py",
+      "bytes": 1056,
+      "sha256": "83daebb524a2bcf34c9440e61a50767158df0ef8179c05b09fd78bbfc8a00730"
+    },
+    {
+      "path": "open-source-survey/eayrenk__bioscale-okok-alternative/tree.json",
+      "bytes": 81378,
+      "sha256": "c4a43654863b93b455d1899e80e28884a1ba562aa12da8d688f58e6dd4cf1e50"
+    },
+    {
+      "path": "open-source-survey/eitcom__pyEIT/LICENSE.txt",
+      "bytes": 1802,
+      "sha256": "c9b666934c8b6ee4eb42176365146162e3072858864680b0cec9d66726490009"
+    },
+    {
+      "path": "open-source-survey/eitcom__pyEIT/README.md",
+      "bytes": 6240,
+      "sha256": "2714b0604c71b975f942192c45d495d47db33c230b1a945aa04e0f67cd159fa0"
+    },
+    {
+      "path": "open-source-survey/eitcom__pyEIT/metadata.json",
+      "bytes": 6651,
+      "sha256": "6e0a66ca849c5178d8bfd5f8b3da8287b26eac437ed24ba07b3bb1ddf8de61cf"
+    },
+    {
+      "path": "open-source-survey/eitcom__pyEIT/tree.json",
+      "bytes": 40386,
+      "sha256": "9ae4cffeda230ce4b29811ce430fb8e5c2d0ce0d0e1836946ff1ef9600f3f31c"
+    },
+    {
+      "path": "open-source-survey/inspect_sources.py",
+      "bytes": 2044,
+      "sha256": "66bbdc435a7448f1a1d533c0576cf02d415e0d14db7d981b51689fb44f3e7a0a"
+    },
+    {
+      "path": "open-source-survey/inventory.json",
+      "bytes": 43789,
+      "sha256": "f6b69d8b21db3ef0020ca994f76d03617395617f47c577f2b1492bcd2a98c275"
+    },
+    {
+      "path": "open-source-survey/melazab__AD5940-BIOZ/README.md",
+      "bytes": 15143,
+      "sha256": "0924fb2e5d2f5d98aaeb23cdeaf05b40e10886b3a01d7ad2d687632887385079"
+    },
+    {
+      "path": "open-source-survey/melazab__AD5940-BIOZ/metadata.json",
+      "bytes": 5500,
+      "sha256": "37dd50372f1c40c45ce03238a71ceda62368b4f21c5fb7005e564ae46f15a7c9"
+    },
+    {
+      "path": "open-source-survey/melazab__AD5940-BIOZ/selected/gui/main.py",
+      "bytes": 38015,
+      "sha256": "d62611f8ac50018a7025e13f5bc18665dd73f07592d31591ffc5b52bfcf65fb5"
+    },
+    {
+      "path": "open-source-survey/melazab__AD5940-BIOZ/selected/gui/test_flash_targets.py",
+      "bytes": 4220,
+      "sha256": "745a176ae69dcce52765eef39bd7903f6cf22afe2ce29ff40a8b6888fc8d476c"
+    },
+    {
+      "path": "open-source-survey/melazab__AD5940-BIOZ/selected/measure-4wire-bioz/Makefile",
+      "bytes": 1486,
+      "sha256": "a0052c8514167c947ec7e8bee3778bba791fc1a5ca5494faada375dd95efd6dc"
+    },
+    {
+      "path": "open-source-survey/melazab__AD5940-BIOZ/selected/measure-4wire-bioz/ad5940lib/LICENSE",
+      "bytes": 2234,
+      "sha256": "177858bc98800428455e96603362511206a5cfdf17ff64aec4a849df40a7007e"
+    },
+    {
+      "path": "open-source-survey/melazab__AD5940-BIOZ/selected/measure-4wire-bioz/main.c",
+      "bytes": 11479,
+      "sha256": "412a5f9a98498ceaeb84ec0805a0e687da67a1432037943d231b27c812451b84"
+    },
+    {
+      "path": "open-source-survey/melazab__AD5940-BIOZ/tree.json",
+      "bytes": 26872,
+      "sha256": "4d2b0bcf5067bfe79ac5826b14117c42c784a3ebff88509a44cd6f672dc385fe"
+    },
+    {
+      "path": "open-source-survey/oliexdev__openScale/LICENSE",
+      "bytes": 35122,
+      "sha256": "12ac5047f2af0522f06798b1589ffc4599bc29c91f954d7874e0320634e777c0"
+    },
+    {
+      "path": "open-source-survey/oliexdev__openScale/README.md",
+      "bytes": 9358,
+      "sha256": "f3bf277308754ef31e6a3f32429c6c2e9d2864e465da66e32fd34a74fc6b35a9"
+    },
+    {
+      "path": "open-source-survey/oliexdev__openScale/metadata.json",
+      "bytes": 5768,
+      "sha256": "3a3fba4cf7d885a0726c179853688fba78978a4f1d26c280e41bfbdcc9ebf970"
+    },
+    {
+      "path": "open-source-survey/oliexdev__openScale/tree.json",
+      "bytes": 258541,
+      "sha256": "8d1e7f227d42c6aa4de87b53b83eac1c60c7585f2d834e46b82f45353dcadaac"
+    },
+    {
+      "path": "open-source-survey/openebi__hardware/README.md",
+      "bytes": 2766,
+      "sha256": "99aefcfd8e0ccd931d33b49e18564459085dff430fbd81ea6dfdde20f72f5cf6"
+    },
+    {
+      "path": "open-source-survey/openebi__hardware/metadata.json",
+      "bytes": 6536,
+      "sha256": "a41f5ac0ac9d825572f11e1df8118011005ba48759efcbcba5fdb14c7ca0bd7b"
+    },
+    {
+      "path": "open-source-survey/openebi__hardware/tree.json",
+      "bytes": 3602,
+      "sha256": "2ca1a8fd890385778ab7ec9e5cdb15577a4fc13dd6219cf654a0e5c5b9eb9367"
+    },
+    {
+      "path": "open-source-survey/openebi__software/LICENSE.txt",
+      "bytes": 1147,
+      "sha256": "524cc582bbaffcb652c98f112213f8f00feb709b032075ba90d73874a76cbe8a"
+    },
+    {
+      "path": "open-source-survey/openebi__software/README.md",
+      "bytes": 958,
+      "sha256": "e859f893b020aab9023ccba5877546708f64da04ca8c3c59877b911c8278d1f0"
+    },
+    {
+      "path": "open-source-survey/openebi__software/metadata.json",
+      "bytes": 6651,
+      "sha256": "ada2eadfd7c42a1ebf199d2e02749a8a3964af8000b837bf18a7a42b84b5b109"
+    },
+    {
+      "path": "open-source-survey/openebi__software/tree.json",
+      "bytes": 3758,
+      "sha256": "4b0b5a03eb6b000f7bf4786a17284a393df93a8c527b6c4b1597c1e2980b2df3"
+    },
+    {
+      "path": "open-source-survey/oscaroflores__UPRM-Multi_Frq-BioZ-Research/README.md",
+      "bytes": 556,
+      "sha256": "af5b3a942561bedd51dba5d32555ec007e33732162f1ccfbdd129a4f2ea4c9e3"
+    },
+    {
+      "path": "open-source-survey/oscaroflores__UPRM-Multi_Frq-BioZ-Research/license.txt",
+      "bytes": 1742,
+      "sha256": "e2b53aece0d43f6c3b72397837c6037963e507833e57bb2e33999832d38477e3"
+    },
+    {
+      "path": "open-source-survey/oscaroflores__UPRM-Multi_Frq-BioZ-Research/metadata.json",
+      "bytes": 20643,
+      "sha256": "f44f55d45edd9f14bc3d4a63cf926e8d9d6a115c35b59e3d66d7e9ebdd3ae3ac"
+    },
+    {
+      "path": "open-source-survey/oscaroflores__UPRM-Multi_Frq-BioZ-Research/selected/BLE_GUI.py",
+      "bytes": 19711,
+      "sha256": "0f3d9542dd2b2eb3e1c524fc088aaebc58aff1c5dad3c46a8f2e8ae70bfab046"
+    },
+    {
+      "path": "open-source-survey/oscaroflores__UPRM-Multi_Frq-BioZ-Research/selected/main.c",
+      "bytes": 20028,
+      "sha256": "5166e38dee3f3a176a35e6007b3c21f92fcb7a6d8a1bd1715bda715690fb8853"
+    },
+    {
+      "path": "open-source-survey/oscaroflores__UPRM-Multi_Frq-BioZ-Research/selected/src/bioZ.c",
+      "bytes": 15510,
+      "sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee"
+    },
+    {
+      "path": "open-source-survey/oscaroflores__UPRM-Multi_Frq-BioZ-Research/tree.json",
+      "bytes": 18858,
+      "sha256": "2b4d8125f31518d88e7bdce533497580d67aa2bcdb0b0002051a3d82d1c25f74"
+    },
+    {
+      "path": "open-source-survey/project-comparison.csv",
+      "bytes": 3940,
+      "sha256": "3f62112716fe6c5533ddb63632bc0d18aa8fd3cada93c95e383dab53ef76b416"
+    },
+    {
+      "path": "open-source-survey/selected-heads.json",
+      "bytes": 994,
+      "sha256": "2f282b77b7034e63ea4b8b5367ff8e89ad71713942b32263f0dd55e3dcafae9e"
+    },
+    {
+      "path": "open-source-survey/selected-sources.json",
+      "bytes": 3400,
+      "sha256": "c6666ec43d608059030843173e6c60a49da277d9d938fb0c63bde1acbaa07669"
+    },
+    {
+      "path": "open-source-survey/vyrjana__DearEIS/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "open-source-survey/vyrjana__DearEIS/README.md",
+      "bytes": 4135,
+      "sha256": "089dc8a481832be03e93a0f41ec63f3f8b7da5eafc8c38029db8c5ead0cb6a8e"
+    },
+    {
+      "path": "open-source-survey/vyrjana__DearEIS/metadata.json",
+      "bytes": 5711,
+      "sha256": "473515aa100bbc4f873b80174d230e2a80fc8a5f5fb6b43435eb1e2d1178be44"
+    },
+    {
+      "path": "open-source-survey/vyrjana__DearEIS/tree.json",
+      "bytes": 76306,
+      "sha256": "e7dddb6208837bbdddc61053ea415e7d03c2a070d52e5501ebfcdd22dab871b2"
+    },
+    {
+      "path": "Open-Source-Bioimpedance-Project-Survey.md",
+      "bytes": 27030,
+      "sha256": "d87a920fb9592e5971904b0a483f337e8f3548061298ced8832143e5961b6ef0"
+    }
+  ]
+}

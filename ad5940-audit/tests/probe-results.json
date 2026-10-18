@@ -1,0 +1,102 @@
+[
+  {
+    "arguments": [
+      "process",
+      10000,
+      0,
+      5000,
+      0,
+      1000,
+      0
+    ],
+    "stdout": "0 1 500 0 1",
+    "scope": "NATIVE_HOST_MOCKED_PERIPHERALS_NO_HARDWARE"
+  },
+  {
+    "arguments": [
+      "process",
+      10000,
+      0,
+      5000,
+      1000,
+      1000,
+      0
+    ],
+    "stdout": "0 1 509.901947 -0.197395563 1",
+    "scope": "NATIVE_HOST_MOCKED_PERIPHERALS_NO_HARDWARE"
+  },
+  {
+    "arguments": [
+      "process",
+      0,
+      0,
+      5000,
+      0,
+      1000,
+      0
+    ],
+    "stdout": "0 1 inf 0 0",
+    "scope": "NATIVE_HOST_MOCKED_PERIPHERALS_NO_HARDWARE"
+  },
+  {
+    "arguments": [
+      "process",
+      0,
+      0,
+      0,
+      0,
+      1000,
+      0
+    ],
+    "stdout": "0 1 -nan 0 0",
+    "scope": "NATIVE_HOST_MOCKED_PERIPHERALS_NO_HARDWARE"
+  },
+  {
+    "arguments": [
+      "isr",
+      516,
+      512,
+      0,
+      1
+    ],
+    "stdout": "0 129 516",
+    "scope": "NATIVE_HOST_MOCKED_PERIPHERALS_NO_HARDWARE"
+  },
+  {
+    "arguments": [
+      "isr",
+      1024,
+      512,
+      0,
+      1
+    ],
+    "stdout": "0 256 1024",
+    "scope": "NATIVE_HOST_MOCKED_PERIPHERALS_NO_HARDWARE"
+  },
+  {
+    "arguments": [
+      "isr",
+      4,
+      512,
+      11,
+      1
+    ],
+    "stdout": "-9 512 0",
+    "scope": "NATIVE_HOST_MOCKED_PERIPHERALS_NO_HARDWARE"
+  },
+  {
+    "arguments": [
+      "calfail"
+    ],
+    "stdout": "0 1 1000",
+    "scope": "NATIVE_HOST_MOCKED_PERIPHERALS_NO_HARDWARE"
+  },
+  {
+    "arguments": [
+      "sweep",
+      1
+    ],
+    "stdout": "-nan 0 0",
+    "scope": "NATIVE_HOST_MOCKED_PERIPHERALS_NO_HARDWARE"
+  }
+]

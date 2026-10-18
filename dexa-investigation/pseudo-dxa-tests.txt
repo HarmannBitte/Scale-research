@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.0.3, pluggy-1.6.0
+rootdir: /home/user/dexa-investigation/Pseudo-DXA
+plugins: anyio-4.15.1, platformdirs-4.12.3
+collected 3 items / 1 skipped
+
+tests/test_config_contracts.py .                                         [ 33%]
+tests/test_predict_utils.py ..                                           [100%]
+
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_tensorflow_contracts.py:7: unittest.case.SkipTest: tensorflow is not installed
+========================= 3 passed, 1 skipped in 1.42s =========================

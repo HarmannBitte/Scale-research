@@ -1,0 +1,27 @@
+{
+  "name": "ad5940-gui-upstream-tests",
+  "repo": "melazab/AD5940-BIOZ",
+  "commit": "dcd50963aba362ebcfdb090548d099d047451394",
+  "command": [
+    "/home/user/.cache/open-projects/test-env/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "gui",
+    "-p",
+    "test_*.py"
+  ],
+  "cwd": "/home/user/.cache/open-projects/full/melazab__AD5940-BIOZ/AD5940-BIOZ-dcd50963aba362ebcfdb090548d099d047451394",
+  "timeout_seconds": 60,
+  "environment_overrides": {
+    "MPLBACKEND": "Agg",
+    "PYTHONPATH": "/home/user/.cache/open-projects/full/melazab__AD5940-BIOZ/AD5940-BIOZ-dcd50963aba362ebcfdb090548d099d047451394",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+  },
+  "exit_code": 0,
+  "status": "pass",
+  "duration_seconds": 2.768,
+  "log": "ad5940-gui-upstream-tests.log",
+  "log_sha256": "464e0ee629edf74de09ef21e4232fbcedc26588ff7cc23c470f47fe2da88c255"
+}

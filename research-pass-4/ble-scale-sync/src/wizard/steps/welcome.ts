@@ -1,0 +1,90 @@
+import { existsSync, readFileSync } from 'node:fs';
+import { parseConfigYaml } from '../../config/yaml-parse.js';
+import type { WizardStep, WizardContext } from '../types.js';
+import { banner, dim, warn } from '../ui.js';
+import { checkForUpdate } from '../../update-check.js';
+import { configureUpdateState } from '../../update-state.js';
+import { EXPORTER_SCHEMAS } from '../../exporters/registry.js';
+
+export const welcomeStep: WizardStep = {
+  id: 'welcome',
+  title: 'Welcome',
+  order: 10,
+
+  async run(ctx: WizardContext): Promise<void> {
+    banner();
+
+    // Respect update_check: false from existing config
+    let updateCheckEnabled = true;
+    const exists = existsSync(ctx.configPath);
+    // Why an existing file cannot be edited, or undefined when it can.
+    let unreadable: string | undefined;
+    if (exists) {
+      try {
+        const raw = readFileSync(ctx.configPath, 'utf8');
+        // The app's own parser: its error and warning text never quote the
+        // line, which may hold a password.
+        const parsed: unknown = parseConfigYaml(raw, ctx.configPath);
+        if (parsed === null || typeof parsed !== 'object' || Array.isArray(parsed)) {
+          unreadable = 'it does not contain a YAML mapping';
+        } else if ((parsed as { update_check?: unknown }).update_check === false) {
+          updateCheckEnabled = false;
+        }
+      } catch (err) {
+        // Without its own final period: the line below adds one.
+        unreadable = (err instanceof Error ? err.message.split('\n')[0] : String(err)).replace(
+          /\.$/,
+          '',
+        );
+      }
+    }
+
+    // Share the app's persisted cooldown: running the wizard repeatedly must
+    // not send an extra check per run.
+    configureUpdateState(ctx.configPath);
+
+    // Show update notice if a newer version is available
+    const update = await checkForUpdate(updateCheckEnabled);
+    if (update) {
+      console.log(
+        warn(`Update available: v${update.latest} (current: v${update.current})`) +
+          '\n    https://blescalesync.dev/changelog\n',
+      );
+    }
+
+    console.log(dim('  Before you start, make sure you have:'));
+    console.log(dim('    - Your scale nearby (powered on)'));
+    // Named from the registry: the hand-written list stopped at five exporters
+    // while the app grew to twelve.
+    const targets = EXPORTER_SCHEMAS.map((s) => s.displayName).join(', ');
+    console.log(dim('    - Logins, tokens or URLs for the export targets you will use'));
+    console.log(dim(`      (${targets})`));
+    console.log(dim('    - For Strava, an API application created at strava.com/settings/api\n'));
+
+    // An unparseable file used to be offered for editing as if it were empty,
+    // so "Edit existing configuration" quietly started from nothing (G-23).
+    if (exists && unreadable !== undefined) {
+      console.log(
+        warn(`The existing config.yaml cannot be edited: ${unreadable}.`) +
+          '\n    Setting up a new one; the old file is kept as config.yaml.bak when you save.\n',
+      );
+      return;
+    }
+
+    // Check for existing config
+    if (exists) {
+      const action = await ctx.prompts.select(
+        'An existing config.yaml was found. What would you like to do?',
+        [
+          { name: 'Edit existing configuration', value: 'edit' },
+          { name: 'Start fresh (overwrite)', value: 'fresh' },
+        ],
+      );
+
+      if (action === 'edit') {
+        ctx.isEditMode = true;
+        return;
+      }
+    }
+  },
+};

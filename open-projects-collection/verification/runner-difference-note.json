@@ -1,0 +1,8 @@
+{
+  "package": "pyimpspec",
+  "pytest_selection": "test_circuit.py test_connection.py test_element.py test_data.py",
+  "pytest_result": "138 passed, 1 failed; test expected warning text in redirected stderr",
+  "unittest_result": "Same four modules: 139 passed",
+  "source_observation": "src/pyimpspec/circuit/registry.py:234 calls warnings.warn for a TODO equation; tests/test_element.py uses redirect_stderr and asserts warning text. Pytest intercepts warnings; upstream tests/run_tests.sh uses unittest.",
+  "upstream_code_changed": false
+}

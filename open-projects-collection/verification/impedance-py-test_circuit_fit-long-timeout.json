@@ -1,0 +1,29 @@
+{
+  "name": "impedance-py-test_circuit_fit-long-timeout",
+  "repo": "ECSHackWeek/impedance.py",
+  "commit": "e175ad2b2ce66006423038480cc8ce4d899d7886",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "impedance/tests/test_fitting.py::test_circuit_fit",
+    "--disable-warnings",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "environment_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+  },
+  "timeout_seconds": 1500,
+  "status": "pass",
+  "exit_code": 0,
+  "result_line": "1 passed, 10 warnings in 158.86s (0:02:38)",
+  "supersedes": "impedance-py-global-fit-isolated.json (90 s limit, timed out; not a test failure)",
+  "log": "impedance-py-test_circuit_fit-long-timeout.log",
+  "log_sha256": "15817f829488944a9659e0f8fd2d264de28a73d24d1a6f3416124c6d697c8ac4",
+  "date": "2026-10-18"
+}

@@ -1,0 +1,15 @@
+role,item,quantity_sets,required_characteristics,caveat
+Preferred acquisition,MAX30009EVKIT#,1,"Confirm exact MCU/sensor revisions, applicable datasheet, actual frequencies and raw export",Unquoted; stock and license not confirmed
+Alternative acquisition,EVAL-ADICUP3029 + EVAL-AD5940BIOZ + Z test board,1,Confirm actual bundle contents and four-wire application firmware; manufacturer prohibits human connection,"Alternative, not an additional mandatory purchase"
+Independent reference,Calibrated impedance analyzer/LCR service,1,Complex R/X and phase uncertainty at actual 5–200 kHz test frequencies; characterize assembled fixtures,Rental or laboratory service may be preferable to purchase
+Calibration standard,680 ohm precision resistor candidate,1,Independent characterization; target 0.01% nominal and low TCR; verify applicability to selected board calibration,Separate from held-out check loads; not a universal AD5940 RCAL value
+Held-out resistor,100 ohm precision resistor,1,"Nominal tolerance <=0.1%, low TCR; characterize assembled fixture AC parasitics",No unverified nominal value may serve as physical reference
+Held-out resistor,220 ohm precision resistor,1,"Nominal tolerance <=0.1%, low TCR; characterize assembled fixture",Held-out fixture
+Held-out resistor,470 ohm precision resistor,1,"Nominal tolerance <=0.1%, low TCR; characterize assembled fixture",Separate physical part from RC_A resistor
+Held-out resistor,1000 ohm precision resistor,1,"Nominal tolerance <=0.1%, low TCR; characterize assembled fixture",Held-out fixture
+RC_A,470 ohm series + 210 ohm parallel + 15 nF,1,Resistors <=0.1%; low-loss capacitor <=1%; independently characterize complete network,Capacitor across 210 ohm only
+RC_B,500 ohm series + 500 ohm parallel + 6.8 nF,1,Resistors <=0.1%; low-loss capacitor <=1%; independently characterize complete network,Capacitor across parallel 500 ohm only
+Fixture construction,Fixed geometry PCB/enclosure and Kelvin-style terminals,6,"Stable geometry, labeled force/sense reference plane; no solderless breadboard for qualification",Does not include manufacturer-specific connector pinout design
+Stress testing,Removable 1k/10k resistors and 10k || 10nF contact networks,1,Passive isolated fixtures; characterize networks; follow manufacturer ratings and fault procedures,Subset quantity to be finalized with fixture design
+Bench instrumentation,Current/voltage/frequency check equipment,1,"Appropriate uncertainty, bandwidth and loading; review grounding and supply paths",Bench measurement only; does not establish human isolation
+Host,Compatible Windows PC with BLE and GUI,1,"Verify installed GUI/firmware, offline use, vendor log format, parser availability",Existing host may suffice; no subscription assumed or required by checker

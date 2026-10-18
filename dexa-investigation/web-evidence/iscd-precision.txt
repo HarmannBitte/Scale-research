@@ -1,0 +1,289 @@
+Precision Assessment & Calculator FAQs - ISCD
+Skip to content
+1.860.259.1000
+iscd@iscd.org
+About ISCD
+Alliances
+Awards
+Support ISCD
+President’s Message
+Board of Directors
+Committees
+Bylaws
+Staff Directory
+Bone Clubs
+International
+Regional Panels
+Local Organizing Committee (LOC)
+Calendar Of Events
+Contact
+Login
+No Account - Create
+Education
+Learning Activities
+ACCME Credit
+ASRT Credit
+On-Demand
+Non-Credit (Free)
+Full Catalog
+Courses
+Quality Bone Densitometry for Clinicians
+Quality Bone Densitometry for Technologists
+Orthopedic Osteoporosis and Densitometry
+Vertebral Fracture Recognition
+Pediatric Bone Densitometry
+DXA Body Composition Analysis
+Events
+2027 Position Development & ISCD Conference
+Calendar of Events
+Official Positions
+Adult Positions
+Pediatric Positions
+FRAX Positions
+Certification
+Certifications
+Certified Bone Densitometry Technologist (CBDT®)
+Certified Clinical Densitometry (CCD®)
+Recertification Options
+Maintenance of Certification
+Certification Resources
+Appeals Form
+Certification Annual Reports
+Certification Registry
+Test Locations
+Membership
+Membership Types
+Individual Memberships
+Corporate Memberships
+2027 Member Model
+Member Benefits
+On Demand Courses
+Ask an Expert
+DXA Atlas
+Journal of Clinical Densitometry
+Membership Directory
+JOIN NOW
+Accreditation
+Application
+Accredited Facilities
+Program Requirements
+RESOURCES
+Calculators
+Official Positions
+Patient Resources
+View All
+Login
+No Account - Create
+Search Knowledge Base by Keyword
+Search
+Best Practices/Guidelines
+ISCD Official Positions (Adults)
+ISCD Official Positions (Pediatric)
+ISCD & IOF Official Positions (Frax)
+DXA Best Practices
+Orthogeriatrics
+BHOF Guidelines
+IOF Positions and Statements
+AACE Guidelines
+American College of Rheumatology
+Endocrine Society Guidelines
+ISCD White Paper on radiation safety and precision assessment
+ISCD/NOF FRAX Implementation Guide
+ACR-SPR*SSR Practice Parameters for the Performance of DXA
+International Working Group on DXA Best Practices:
+European Society for Clinical and Economic Aspects of Osteoporosis (ESCEO) TBS guidance:
+Professional Resources
+Calculators
+DXA Report Examples
+Bone Clubs
+Bone Health Echo by Osteoporosis Foundation of New Mexico
+Public Policy Resources
+Precision Assessment & Calculator FAQs
+ISCD DXA Machine Cross Calibration Tool (Members Only)
+Patient Resources
+1. What to Expect When You Are Having a DXA Scan
+2. Which Bones Are Scanned for a DXA Bone Density Test
+3. Understanding Your Bone Density Test Results
+4. What Does it Mean if I Have Poor Bone Density Test Results
+5. How to Know if You’ve Had a Good Quality DXA Scan
+6. Are the Comparisons of Your DXA Scans Reliable
+How To's and FAQ's
+ISCD Learning Center How to's
+ISCD Member Benefits How to’s
+MY ISCD How to’s
+ISCD Corporate Members
+Amgen
+Hologic
+GE Healthcare
+Radius
+Medimaps Group
+OsteoSys
+Cardea Technology
+Fitnescity Health
+DEXA Solutions
+Perth Radiological Clinic
+IKON Healthcare
+International Resources
+Regional Panels
+How to offer an ISCD Course Internationally
+Chinese translation of Official Positions
+Calendar of Events
+Regional Panel Activities
+Precision Assessment & Calculator FAQs
+You are here:
+< All Topics
+What is precision assessment?
+Precision is reproducibility of a measurement.  Precision assessment in the field of bone densitometry is the process whereby the ability of the instrument and the technologist to reproduce similar results, given no real biologic change, is tested.  The mathematical result of precision assessment is called the precision error.
+Is precision different than accuracy?
+Yes.  Accuracy is the ability of a test to match the “real” value, as determined by a “gold standard” test.  In bone densitometry, the gold standard is the ash weight of the skeletal site being tested.  BMD testing is very precise and accurate compared to other tests commonly used in clinical practice, but precision and accuracy will vary according to the instrument used, the skeletal site being measured, and the skill of the technologist.
+Why should precision assessment be done?
+When comparing BMD results from different measurements over time, it is important to know if a change in BMD is significant, or simply a variation that is within the “noise” of the test.
+How do I do precision assessment?
+To achieve statistical power, BMD testing is done on 15 patients 3 times, or 30 patients 2 times.  The standard deviation for each patient is calculated, then the root mean square standard deviation for the group is calculated.
+Which patients should be used for precision assessment?
+The patients tested should be similar in age, gender, and bone density to those actually seen in your practice.  You should not use “normal volunteers” (i.e. your office staff), if your staff is young and healthy and your patients are old and frail.
+Which skeletal sites should be measured?
+Precision assessment should be done for any skeletal site you plan on using to monitor patients.  The lumbar spine(L1-L4) usually has the highest precision and the most rapid change in response to therapy.  The total proximal femur may also be used, but precision is usually less and response to therapy slower than that in the spine.  In certain clinical situations, such as primary hyperparathyroidism, you may want to monitor BMD in the mid forearm.
+Is there a recommended timeframe for completing a precision assessment?
+The intent of a precision assessment is to determine the precision of the technologist on a particular machine without introducing uncontrolled variables.  Therefore, there is no recommended timeframe that each technologist must complete their collection of duplicate or triplicate subjects, providing their technique for scanning is not changing.  Some have recommended completing the scans within a 30 day period to minimize the possibility that equipment failure (which can happen gradually over several months before being detected) will influence data. If an equipment failure and subsequent major repair occurs during the collection of data for a precision assessment, pre-failure data may need to be discarded and then reacquired depending on the nature of the failure.
+Is there a recommended time for acquiring multiple scans on an individual patient?
+Short-term precision assessments are typically done by scanning patients on the same day with repositioning.  This means removing the patient from the scanner between sets.  If necessary, you may delay the acquisition of the second or third set of scans by up to a week.  Longer delays may cause real changes in the patient’s bone density or body composition that could influence the results.  It is also recommended that the same amount of time be allowed per set of scans as you normally allow in your clinical setting.  For example, if your clinical patients are scheduled every 15 minutes, then duplicate scans on a single patient should not take more than 30 minutes to complete.
+How do I express the results?
+The ISCD recommends expressing precision error as root mean square standard deviation in absolute terms (g/cm2).  It is sometimes expressed as CV or %CV, but this is less desirable due variation in these values over a range of measured BMD.
+What is least significant change?
+Least significant change, or LSC, is the least amount of BMD change that can be considered statistically significant.  The ISCD recommends calculating this for a 95% confidence level, which is done by multiplying the precision error by 2.77.
+Sounds pretty complicated.  How do I do all of this?
+Use the
+ISCD Precision Calculator
+. As a service to professionals in the field of bone densitometry, ISCD has developed the
+ISCD Precision Calculator
+which is available for download from this Website.
+How do I use the results?
+Subtract the recent BMD result from the one used for comparison.  If the difference is the same or greater than the LSC, then the change is considered to be statistically significant.  The clinician must determine whether this is clinically significant.  For example, there may be a statistically significant increase in spine BMD, but it could be due to degenerative arthritis or compression fractures rather than a response to therapy.
+Why can’t I use the precision error listed by the manufacturer of my DXA machine?
+Precision error is very dependent on the skill of the technologist at positioning the patient, and will also vary according to the patient population being tested.  Your technologist may not have the same skill level as those used by the manufacturer, and your patient population may not be the same as that of the manufacturer.
+Can I compare T-scores instead of absolute BMD values?
+No.  T-scores vary according to the mean of the standard deviation of the “normal” population used.  The normative database used by different manufacturers, or even the same manufacturer at different times, will be different.
+Are there legal or ethical issues associated with precision assessment?
+Yes.  Although the radiation exposure with DXA is very tiny, no patient should be exposed to radiation without the possibility of clinical benefit from the test.  Your state may have regulations that apply to the use of any procedure involving radiation.  If you are unsure, please consult the appropriate regulatory agency.
+Why do my calculations come out different than those of the ISCD Calculator?
+Assuming you have made no mathematical errors, there may be slight discrepancies due to rounding differences.
+Is patient permission required to conduct a precision assessment study?
+Adherence to local radiation safety regulations is necessary. A precision study does require the consent of participating patients.  Precision assessment is not research and may potentially benefit patients.  Patients should be informed of the merits of precision assessment, with right of refusal, but use of a consent form is not suggested.
+Since a consent form is not suggested, what do I say to a patient?
+An ISCD White Paper entitled, “Precision Assessment and Radiation Safety for Dual-energy X-ray Absorptiometry Precision Assessment Information for Patients,
+”
+suggests the following:
+To find out if there has been a change in your bone density, a recent bone density test is compared with a previous test. For an accurate comparison, we must know when the change is greater than the normal day-to-day fluctuation in the measurement itself. This is done by doing mathematical calculations on repeat bone density measurements of the same person made on the same day. This is called a “precision assessment.”  You have been asked to participate in a precision assessment. You will have your bone density measured again at the [spine and hip] [spine, hip, and forearm]. After the first scan you will need to get off the table and then back on for the additional scan(s). The X-ray exposure involved in this is exceedingly small – typically less than the normal radiation all of us are exposed to on a daily basis. Nevertheless, you should not participate if you think you might be pregnant. Participation is up to you. If you do not wish to participate, it will have no effect on your future treatment or benefits at [clinic name]. Please ask your doctor or nurse if you have any questions or if you do not understand why you have been asked to participate.
+Was this article helpful?
+4.8 out Of 5 Stars
+5 ratings
+5 Stars
+60%
+4 Stars
+40%
+3 Stars
+0%
+2 Stars
+0%
+1 Stars
+0%
+5
+Submit
+How can we improve this article?
+Please submit the reason for your vote so that we can improve the article.
+Name
+Email
+Submit
+ISCD Headquarters
+955 South Main St. B202 Middletown, CT 06457.
+EMAIL
+iscd@iscd.org
+PHONE
+1 (860) 259-1000
+ABOUT
+JOIN/MEMBERSHIP
+RESOURCES
+ONLINE STORE
+EDUCATION
+OFFICIAL POSITIONS
+CERTIFICATION
+ACCREDITATION
+Login
+No Account - Create
+ISCD Bylaws
+Policies
+Privacy Information
+Online Store
+Education
+Learning Activities
+ACCME Credit
+ASRT Credit
+On-Demand
+Non-Credit (Free)
+Full Catalog
+Courses
+Quality Bone Densitometry for Clinicians
+Quality Bone Densitometry for Technologists
+Orthopedic Osteoporosis and Densitometry
+Vertebral Fracture Recognition
+Pediatric Bone Densitometry
+DXA Body Composition Analysis
+Events
+2027 Position Development & ISCD Conference
+Calendar of Events
+Official Positions
+Adult Positions
+Pediatric Positions
+FRAX Positions
+Certification
+Certifications
+Certified Bone Densitometry Technologist (CBDT®)
+Certified Clinical Densitometry (CCD®)
+Recertification Options
+Maintenance of Certification
+Certification Resources
+Appeals Form
+Certification Annual Reports
+Certification Registry
+Test Locations
+Membership
+Membership Types
+Individual Memberships
+Corporate Memberships
+2027 Member Model
+Member Benefits
+On Demand Courses
+Ask an Expert
+DXA Atlas
+Journal of Clinical Densitometry
+Membership Directory
+JOIN NOW
+Accreditation
+Application
+Accredited Facilities
+Program Requirements
+RESOURCES
+Calculators
+Official Positions
+Patient Resources
+View All
+About ISCD
+Alliances
+Awards
+Support ISCD
+President’s Message
+Board of Directors
+Committees
+Bylaws
+Staff Directory
+Bone Clubs
+International
+Regional Panels
+Local Organizing Committee (LOC)
+Calendar Of Events
+Contact
+-
+We use necessary cookies to operate and secure our website. With your consent, we also use optional analytics cookies to understand site traffic and improve our services.
+Accept All
+Reject Non-Essential

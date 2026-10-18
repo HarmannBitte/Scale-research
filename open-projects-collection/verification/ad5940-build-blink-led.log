@@ -1,0 +1,7 @@
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -Os -ffreestanding -Wall -Wextra -std=c11 -g -c -o startup.o startup.c
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -Os -ffreestanding -Wall -Wextra -std=c11 -g -c -o blink_led.o blink_led.c
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -nostartfiles -nodefaultlibs -lgcc -Wl,-T,linker.ld -Wl,--gc-sections -Wl,-Map,blink_led.map -o blink_led.elf startup.o blink_led.o
+arm-none-eabi-size blink_led.elf
+   text	   data	    bss	    dec	    hex	filename
+    548	      0	      0	    548	    224	blink_led.elf
+arm-none-eabi-objcopy -O binary blink_led.elf blink_led.bin

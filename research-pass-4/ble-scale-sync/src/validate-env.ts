@@ -1,0 +1,160 @@
+import { config } from 'dotenv';
+import { createLogger } from './logger.js';
+import { isValidScaleId } from './ble/scale-id.js';
+import type { Gender, UserProfile } from './interfaces/scale-adapter.js';
+
+const log = createLogger('Config');
+
+import type { WeightUnit } from './config/schema.js';
+import { defaultEnvPath } from './config/paths.js';
+export type { WeightUnit } from './config/schema.js';
+
+export interface Config {
+  profile: UserProfile;
+  scaleMac?: string;
+  weightUnit: WeightUnit;
+  dryRun: boolean;
+  continuousMode: boolean;
+  scanCooldownSec: number;
+}
+
+function fail(msg: string): never {
+  log.error(msg);
+  throw new Error(msg);
+}
+
+function requireEnv(key: string): string {
+  const val = process.env[key];
+  if (!val) {
+    fail(`Missing required env var: ${key}. Check your .env file.`);
+  }
+  return val;
+}
+
+function parseNumber(key: string, raw: string, min: number, max: number): number {
+  const num = Number(raw);
+  if (!Number.isFinite(num)) {
+    fail(`${key} must be a number, got '${raw}'`);
+  }
+  if (num < min || num > max) {
+    fail(`${key} must be between ${min} and ${max}, got ${num}`);
+  }
+  return num;
+}
+
+function parseGender(raw: string): Gender {
+  const lower = raw.toLowerCase();
+  if (lower === 'male' || lower === 'female') return lower;
+  fail(`USER_GENDER must be 'male' or 'female', got '${raw}'`);
+}
+
+// The same words the config.yaml overrides (boolEnv) accept, so DRY_RUN=on
+// does not start in one mode and fail in the other (G-22).
+function parseBoolean(key: string, raw: string): boolean {
+  const lower = raw.trim().toLowerCase();
+  if (['true', 'yes', 'on', '1'].includes(lower)) return true;
+  if (['false', 'no', 'off', '0'].includes(lower)) return false;
+  fail(`${key} must be true/false/yes/no/on/off/1/0, got '${raw}'`);
+}
+
+export function loadConfig(): Config {
+  config({ path: defaultEnvPath(), quiet: true });
+
+  const weightUnit = parseWeightUnit(process.env.WEIGHT_UNIT);
+  const heightUnit = parseHeightUnit(process.env.HEIGHT_UNIT);
+
+  const heightRange = heightUnit === 'in' ? { min: 20, max: 100 } : { min: 50, max: 250 };
+  let height = parseNumber(
+    'USER_HEIGHT',
+    requireEnv('USER_HEIGHT'),
+    heightRange.min,
+    heightRange.max,
+  );
+  if (heightUnit === 'in') {
+    height = height * 2.54;
+  }
+
+  const birthDate = parseBirthDate(requireEnv('USER_BIRTH_DATE'));
+  const age = computeAge(birthDate);
+  if (age < 5) {
+    fail(`USER_BIRTH_DATE results in age ${age}, minimum age is 5`);
+  }
+
+  const gender = parseGender(requireEnv('USER_GENDER'));
+  const isAthlete = parseBoolean('USER_IS_ATHLETE', requireEnv('USER_IS_ATHLETE'));
+
+  let scaleMac: string | undefined;
+  const rawMac = process.env.SCALE_MAC;
+  if (rawMac) {
+    if (!isValidScaleId(rawMac)) {
+      fail(
+        `SCALE_MAC must be a MAC address (XX:XX:XX:XX:XX:XX) ` +
+          `or CoreBluetooth UUID (macOS), got '${rawMac}'`,
+      );
+    }
+    scaleMac = rawMac;
+  }
+
+  const dryRun = process.env.DRY_RUN ? parseBoolean('DRY_RUN', process.env.DRY_RUN) : false;
+  const continuousMode = process.env.CONTINUOUS_MODE
+    ? parseBoolean('CONTINUOUS_MODE', process.env.CONTINUOUS_MODE)
+    : false;
+  // Whole seconds and a default of 30, as in the config.yaml schema and in
+  // .env.example; this path defaulted to 20 and accepted 12.5 (G-22).
+  let scanCooldownSec = 30;
+  if (process.env.SCAN_COOLDOWN) {
+    scanCooldownSec = parseNumber('SCAN_COOLDOWN', process.env.SCAN_COOLDOWN, 5, 3600);
+    if (!Number.isInteger(scanCooldownSec)) {
+      fail(`SCAN_COOLDOWN must be a whole number of seconds, got ${scanCooldownSec}`);
+    }
+  }
+
+  return {
+    profile: { height, age, gender, isAthlete },
+    scaleMac,
+    weightUnit,
+    dryRun,
+    continuousMode,
+    scanCooldownSec,
+  };
+}
+
+function parseBirthDate(raw: string): Date {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw);
+  if (!match) {
+    fail(`USER_BIRTH_DATE must be in YYYY-MM-DD format, got '${raw}'`);
+  }
+  const [, y, m, d] = match.map(Number);
+  const date = new Date(y, m - 1, d);
+  if (date.getFullYear() !== y || date.getMonth() !== m - 1 || date.getDate() !== d) {
+    fail(`USER_BIRTH_DATE is not a valid date: '${raw}'`);
+  }
+  if (date > new Date()) {
+    fail('USER_BIRTH_DATE cannot be in the future');
+  }
+  return date;
+}
+
+function computeAge(birth: Date): number {
+  const today = new Date();
+  let age = today.getFullYear() - birth.getFullYear();
+  const monthDiff = today.getMonth() - birth.getMonth();
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+    age--;
+  }
+  return age;
+}
+
+function parseWeightUnit(raw: string | undefined): WeightUnit {
+  if (!raw || raw === '') return 'kg';
+  const lower = raw.toLowerCase();
+  if (lower === 'kg' || lower === 'lbs') return lower;
+  fail(`WEIGHT_UNIT must be 'kg' or 'lbs', got '${raw}'`);
+}
+
+function parseHeightUnit(raw: string | undefined): 'cm' | 'in' {
+  if (!raw || raw === '') return 'cm';
+  const lower = raw.toLowerCase();
+  if (lower === 'cm' || lower === 'in') return lower;
+  fail(`HEIGHT_UNIT must be 'cm' or 'in', got '${raw}'`);
+}

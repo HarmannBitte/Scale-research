@@ -1,0 +1,11 @@
+id,severity_for_bench_reliability,finding,source_location,evidence,remediation
+A01,High,FIFO caller capacity ignored,BodyImpedance.c:589-593,Native mocked ISR requested 516 words with capacity 512,Enforce capacity/alignment and explicit loss policy
+A02,High,Output count stale on early error; main ignores return,BodyImpedance.c:576-582; AD5940Main.c:134-136,Mocked wakeup error returns -9 with count 512; caller consequence reviewed statically,Zero count before early returns; check every return
+A03,High,Calibration return swallowed,"BodyImpedance.c:392,406-408,435",Mocked parameter failure returns application OK and stale 1000 coefficient,Propagate error and invalidate calibration
+A04,High,Nonfinite ratio accepted,BodyImpedance.c:546-557,Zero current produces inf and success; zero/zero produces NaN,Validate denominator/calibration/finite output
+A05,High,Raw DFT provenance overwritten,BodyImpedance.c:521-555,Source inspection: mask/sign conversion and polar output in same buffer,Capture original words and separate derived buffer
+A06,High,No complete quality/export contract,"AD5940Main.c:32-45,79-83","Exact formatter probe outputs polar-only text, one frequency per batch",Framed raw/config/cal/status export and diagnostic validation
+A07,Medium,Sweep input/table guards incomplete,ad5940.c:569-605; BodyImpedance.c:390-392; BodyImpedance.h:26,One-point log sweep nonfinite in exact library extract; table bound concern static,Validate point count and supported per-frequency settings
+A08,Medium,Unbounded hardware/transport waits,"BodyImpedance.c:475; ad5940.c:3556,3570; ADICUP3029Port.c:37-54",Source inspection only; actual timeout/fault behavior not measured,Bound waits; recovery/session transitions
+A09,Decision constraint,ADI-product and third-party license restrictions,source/LICENSE; source/examples/ad5940lib/LICENSE,"Direct license review, not legal opinion","Review exact intended use, combination and pack/tool licenses"
+A10,Decision constraint,Embedded build dependencies not reproduced,README.md; AD5940_BIA.uvprojx; AD5940_BIA.ewp,Compiler/pack settings inspected; native harness only built,Freeze and validate target toolchain/packs/startup licenses

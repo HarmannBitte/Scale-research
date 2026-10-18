@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-17",
+  "scope": "Procurement web observations and draft inquiries only; no purchases/contact/hardware work",
+  "sha256": {
+    "Impedance-Bench-Procurement-Review.md": "9b77f62262b69f31e1d4b75c0d8521b9abf78d3937261c37461bb21e683b1300",
+    "impedance-procurement/Supplier-Questions.md": "e8d90bdcff7adb4eb171225c5dfdf06875973b4bf9397f92625dee340a50abd5",
+    "impedance-procurement/arithmetic-checks.txt": "89c40e31d588ac7fc2d69fe0c0a5feff64b18b0a9343e73c0b9fe4e38bb32656",
+    "impedance-procurement/reference-request-grid.csv": "72d065d54530339717e6f5f352e65307c9a6fa73a956b27d137f78afb5b2fb99",
+    "impedance-procurement/evidence-notes.json": "86e400cabb0ff3595af236f03a40fff2dc33df5baab05de4d36598d74b72a89c",
+    "impedance-procurement/build_reference_request.py": "bfa34a757aed7eeb245ecdaf1eaf6a50811d23ec6b907aadac790dd3ab5b8836",
+    "impedance-procurement/vendor-observations.csv": "3ff8ccc71bbc6830dfa41772fdec81761554a61bb727cbcc16b167ca001f00a5"
+  }
+}

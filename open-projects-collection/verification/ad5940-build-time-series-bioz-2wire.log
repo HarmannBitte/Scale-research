@@ -1,0 +1,68 @@
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -Os -Wall -Wextra -std=c11 -g -ffunction-sections -fdata-sections -I. -Iad5940lib -DCHIPSEL_594X -DADI_DEBUG -c -o startup.o startup.c
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -Os -Wall -Wextra -std=c11 -g -ffunction-sections -fdata-sections -I. -Iad5940lib -DCHIPSEL_594X -DADI_DEBUG -c -o main.o main.c
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -Os -Wall -Wextra -std=c11 -g -ffunction-sections -fdata-sections -I. -Iad5940lib -DCHIPSEL_594X -DADI_DEBUG -c -o ad5940_port.o ad5940_port.c
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -Os -Wall -Wextra -std=c11 -g -ffunction-sections -fdata-sections -I. -Iad5940lib -DCHIPSEL_594X -DADI_DEBUG -c -o bioz_2wire.o bioz_2wire.c
+bioz_2wire.c: In function 'AppBIOZRegModify':
+bioz_2wire.c:603:33: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]
+  603 |     if(AppBIOZCfg.FifoDataCount >= AppBIOZCfg.NumOfData)
+      |                                 ^~
+bioz_2wire.c:598:51: warning: unused parameter 'pData' [-Wunused-parameter]
+  598 | static AD5940Err AppBIOZRegModify(int32_t * const pData, uint32_t *pDataCount)
+      |                                   ~~~~~~~~~~~~~~~~^~~~~
+bioz_2wire.c: In function 'AppBIOZISR':
+bioz_2wire.c:679:12: warning: unused variable 'BuffCount' [-Wunused-variable]
+  679 |   uint32_t BuffCount;
+      |            ^~~~~~~~~
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -Os -Wall -Wextra -std=c11 -g -ffunction-sections -fdata-sections -I. -Iad5940lib -DCHIPSEL_594X -DADI_DEBUG -c -o ad5940lib/ad5940.o ad5940lib/ad5940.c
+ad5940lib/ad5940.c: In function 'AD5940_Initialize':
+ad5940lib/ad5940.c:1156:13: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+ 1156 |   for(i=0; i<sizeof(RegTable)/sizeof(RegTable[0]); i++)
+      |             ^
+ad5940lib/ad5940.c: In function 'AD5940_WakeUp':
+ad5940lib/ad5940.c:2985:14: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]
+ 2985 |     if(count > TryCount)
+      |              ^
+ad5940lib/ad5940.c: In function 'AD5940_HSTIAOffsetCal':
+ad5940lib/ad5940.c:3403:54: warning: unused parameter 'pHSTIAOffsetCal' [-Wunused-parameter]
+ 3403 | AD5940Err AD5940_HSTIAOffsetCal(LPTIAOffsetCal_Type *pHSTIAOffsetCal)
+      |                                 ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+ad5940lib/ad5940.c: In function 'AD5940_HSRtiaCal':
+ad5940lib/ad5940.c:3437:54: warning: unsigned conversion from 'long long int' to 'long unsigned int' changes value from '999999999999' to '3567587327' [-Woverflow]
+ 3437 |   uint32_t const HSTIADERLOADTable[]={0,10,30,50,100,999999999999};
+      |                                                      ^~~~~~~~~~~~
+ad5940lib/ad5940.c:3438:94: warning: unsigned conversion from 'long long int' to 'long unsigned int' changes value from '999999999999999' to '2764472319' [-Woverflow]
+ 3438 |   uint32_t const HSTIADERTIATable[] = {50,100,200,1000,5000,10000,20000,40000,80000,160000,0,999999999999999};
+      |                                                                                              ^~~~~~~~~~~~~~~
+ad5940lib/ad5940.c: In function 'AD5940_ADCPGACal':
+ad5940lib/ad5940.c:3240:31: warning: 'HSDACCode' may be used uninitialized [-Wmaybe-uninitialized]
+ 3240 |       hsloop_cfg.WgCfg.WgCode = HSDACCode;
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+ad5940lib/ad5940.c:3235:16: note: 'HSDACCode' was declared here
+ 3235 |       uint32_t HSDACCode;
+      |                ^~~~~~~~~
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -nostartfiles -specs=nosys.specs -Wl,-T,linker.ld -Wl,--gc-sections -Wl,-Map,time_series_bioz_2wire.map -o time_series_bioz_2wire.elf startup.o main.o ad5940_port.o bioz_2wire.o ad5940lib/ad5940.o -lm
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-closer.o): in function `_close_r':
+/build/reproducible-path/newlib-4.5.0.20241231/build/arm-none-eabi/thumb/v7-m/nofp/newlib/../../../../../../newlib/libc/reent/closer.c:47:(.text+0xc): warning: _close is not implemented and will always fail
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-closer.o): note: the message above does not take linker garbage collection into account
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-fstatr.o): in function `_fstat_r':
+/build/reproducible-path/newlib-4.5.0.20241231/build/arm-none-eabi/thumb/v7-m/nofp/newlib/../../../../../../newlib/libc/reent/fstatr.c:55:(.text+0xe): warning: _fstat is not implemented and will always fail
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-fstatr.o): note: the message above does not take linker garbage collection into account
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-signalr.o): in function `_getpid_r':
+/build/reproducible-path/newlib-4.5.0.20241231/build/arm-none-eabi/thumb/v7-m/nofp/newlib/../../../../../../newlib/libc/reent/signalr.c:83:(.text+0x28): warning: _getpid is not implemented and will always fail
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-signalr.o): note: the message above does not take linker garbage collection into account
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-isattyr.o): in function `_isatty_r':
+/build/reproducible-path/newlib-4.5.0.20241231/build/arm-none-eabi/thumb/v7-m/nofp/newlib/../../../../../../newlib/libc/reent/isattyr.c:52:(.text+0xc): warning: _isatty is not implemented and will always fail
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-isattyr.o): note: the message above does not take linker garbage collection into account
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-signalr.o): in function `_kill_r':
+/build/reproducible-path/newlib-4.5.0.20241231/build/arm-none-eabi/thumb/v7-m/nofp/newlib/../../../../../../newlib/libc/reent/signalr.c:53:(.text+0xe): warning: _kill is not implemented and will always fail
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-signalr.o): note: the message above does not take linker garbage collection into account
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+/build/reproducible-path/newlib-4.5.0.20241231/build/arm-none-eabi/thumb/v7-m/nofp/newlib/../../../../../../newlib/libc/reent/lseekr.c:49:(.text+0x14): warning: _lseek is not implemented and will always fail
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-lseekr.o): note: the message above does not take linker garbage collection into account
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-readr.o): in function `_read_r':
+/build/reproducible-path/newlib-4.5.0.20241231/build/arm-none-eabi/thumb/v7-m/nofp/newlib/../../../../../../newlib/libc/reent/readr.c:49:(.text+0x14): warning: _read is not implemented and will always fail
+/usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/14.2.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-readr.o): note: the message above does not take linker garbage collection into account
+arm-none-eabi-size time_series_bioz_2wire.elf
+   text	   data	    bss	    dec	    hex	filename
+  73076	   2764	   2480	  78320	  131f0	time_series_bioz_2wire.elf
+arm-none-eabi-objcopy -O binary time_series_bioz_2wire.elf time_series_bioz_2wire.bin

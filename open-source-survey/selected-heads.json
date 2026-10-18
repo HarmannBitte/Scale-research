@@ -1,0 +1,22 @@
+{
+  "melazab/AD5940-BIOZ": {
+    "sha": "dcd50963aba362ebcfdb090548d099d047451394",
+    "committer_date": "2026-09-21T12:31:15Z",
+    "url": "https://github.com/melazab/AD5940-BIOZ/commit/dcd50963aba362ebcfdb090548d099d047451394"
+  },
+  "oscaroflores/UPRM-Multi_Frq-BioZ-Research": {
+    "sha": "b3a8844a511c87d28e6929e658218d85c8097f8f",
+    "committer_date": "2026-07-04T22:03:33Z",
+    "url": "https://github.com/oscaroflores/UPRM-Multi_Frq-BioZ-Research/commit/b3a8844a511c87d28e6929e658218d85c8097f8f"
+  },
+  "analogdevicesinc/no-OS": {
+    "sha": "bdd9427af10c767f6bf3aa9a61100317d1192b44",
+    "committer_date": "2026-10-14T12:19:02Z",
+    "url": "https://github.com/analogdevicesinc/no-OS/commit/bdd9427af10c767f6bf3aa9a61100317d1192b44"
+  },
+  "ECSHackWeek/impedance.py": {
+    "sha": "e175ad2b2ce66006423038480cc8ce4d899d7886",
+    "committer_date": "2026-10-11T18:34:01Z",
+    "url": "https://github.com/ECSHackWeek/impedance.py/commit/e175ad2b2ce66006423038480cc8ce4d899d7886"
+  }
+}

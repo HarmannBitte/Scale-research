@@ -1,0 +1,2 @@
+transaction_bytes=2 (upstream fifoCount=(counter1&0x7F)*2+counter2)
+return=0 decoded_pairs=0

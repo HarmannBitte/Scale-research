@@ -1,0 +1,2 @@
+PASS: both ARM ELFs, vectors, reservations, real-header dependencies, gates, symbol resolution and selected backend checks.
+Not a target execution, runtime stack proof, flash authorization or electrical test.

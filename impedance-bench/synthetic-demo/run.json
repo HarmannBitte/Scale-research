@@ -1,0 +1,10 @@
+{
+  "source_kind": "synthetic",
+  "scope": "Numerical demonstration only. No board, cables or components measured.",
+  "seed": 20261017,
+  "repetitions": 30,
+  "profiles": [
+    "primary",
+    "spectral"
+  ]
+}

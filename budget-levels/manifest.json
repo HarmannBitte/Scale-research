@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-17",
+  "sha256": {
+    "Impedance-and-Body-Composition-Budget-Levels.md": "a1c70de142634191326337738bb0104216b39ea9d6a4da0ecac73dbbe01468e6",
+    "Body-Composition-Budget-Levels.xlsx": "0a2971ce917c284f3815c6a6409e2f4fb4e75a9f5c9cf8547eab67bb56de1602",
+    "budget-levels/make_workbook.py": "169b2cb71e0bc988262f30b7db8cc9dee2359c884ff9c93c891f430befc38566",
+    "budget-levels/price-observations.csv": "c7457b386e0cc5488498d67c28342ea3dc2c678e0847e89c51329d195d2dad6c",
+    "budget-levels/price-observations.json": "1a837fff9b0e9ff956ab55b632557d9b49102b2120c9a14a8353480fc680ad74",
+    "budget-levels/workbook-check.json": "f3bb5e8ef2e874e099b3ddc9d21835d6bbbbba657ef27acea4e2953f481a0e2c"
+  },
+  "purchases_or_contacts_made": false,
+  "scope": "Planning estimates and public listing observations only; no clinical/hardware validation"
+}

@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-17",
+  "python": "3.13.16",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "sklearn": "1.6.1",
+  "seed": 20261017,
+  "earlier_cohort_feature_target_equality_checked": true,
+  "frozen_scientific_settings": true,
+  "weighted_results_are_not_design_corrected": true,
+  "hashes": {
+    "PROTOCOL.md": "1233b57c5f1feaa1075824162107f0475d5062e187bb2c200351374fd18c56cc",
+    "run_followup.py": "9ee1c22eb0148b8f151cfb2e64585a22fd20ce6fabc481d82752229be30c15e9",
+    "cohort_loader.py": "39dc7a6172da485c3d3adc303d7170843d8e0a79554bd9267a30171ab6c8de0e"
+  },
+  "original_script_sha256": "cd1357d8e754b3fe22bf28ae89bf7721f64ee35f4b5d26f8f0121b20e49949cf"
+}

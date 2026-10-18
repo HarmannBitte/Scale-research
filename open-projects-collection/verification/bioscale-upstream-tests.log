@@ -1,0 +1,14 @@
+...F.                                                                    [100%]
+=================================== FAILURES ===================================
+_____________________________ test_classifications _____________________________
+
+    def test_classifications():
+        metrics = get_all_metrics(80, 175, 35, 'M', impedance=500)
+>       classes = get_classifications(metrics, 'M', 35)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: get_classifications() missing 1 required positional argument: 'height_cm'
+
+tests/test_calculations.py:28: TypeError
+=========================== short test summary info ============================
+FAILED tests/test_calculations.py::test_classifications - TypeError: get_clas...
+1 failed, 4 passed in 0.09s

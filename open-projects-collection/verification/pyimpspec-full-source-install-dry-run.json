@@ -1,0 +1,16 @@
+{
+  "name": "pyimpspec-full-source-install-dry-run",
+  "command": [
+    "/home/user/.cache/open-projects/test-env/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--dry-run",
+    "/home/user/.cache/open-projects/full/vyrjana__pyimpspec/pyimpspec-c822717c7f1c942cb707c5bcd74d3ad034f8166c"
+  ],
+  "source": "complete pinned upstream archive, not compact snapshot",
+  "status": "pass",
+  "exit_code": 0,
+  "duration_seconds": 4.775529227000334,
+  "log_sha256": "d7b60b5eafbf70e12251ad3417100eacb0791056f35c0a954fcbe5d01f96d355"
+}

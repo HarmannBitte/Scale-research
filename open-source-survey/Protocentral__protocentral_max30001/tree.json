@@ -1,0 +1,109 @@
+{
+  "sha": "f7114c9406ffe2bdfbc66d45fa3b88225c88b3ec",
+  "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/trees/f7114c9406ffe2bdfbc66d45fa3b88225c88b3ec",
+  "tree": [
+    {
+      "path": ".DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77bb84740d6275cfeafade4c1c6c26c519417a1b",
+      "size": 6148,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/blobs/77bb84740d6275cfeafade4c1c6c26c519417a1b"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6127b38c1aa25968a88db3940604d41529e4cf5",
+      "size": 430,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/blobs/c6127b38c1aa25968a88db3940604d41529e4cf5"
+    },
+    {
+      "path": "LICENSE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33b6344f8479b7da6b994734975380424e4ac711",
+      "size": 2798,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/blobs/33b6344f8479b7da6b994734975380424e4ac711"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b908803ced7af0200df118adcda3d3be83fd0b57",
+      "size": 7151,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/blobs/b908803ced7af0200df118adcda3d3be83fd0b57"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "59f3386f2c2549df1dab28f59949c273bd1d9961",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/trees/59f3386f2c2549df1dab28f59949c273bd1d9961"
+    },
+    {
+      "path": "assets/body.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc80e2d9413b3d9501a5a1b34e35deabb170a2a7",
+      "size": 16944,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/blobs/cc80e2d9413b3d9501a5a1b34e35deabb170a2a7"
+    },
+    {
+      "path": "assets/max30001_breakout.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccc85c5e1e01a7ec572d770c5a5dea8ed3411755",
+      "size": 287708,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/blobs/ccc85c5e1e01a7ec572d770c5a5dea8ed3411755"
+    },
+    {
+      "path": "hardware",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9410f0c653efc70ccc083d05999cd391ae8f85a4",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/trees/9410f0c653efc70ccc083d05999cd391ae8f85a4"
+    },
+    {
+      "path": "hardware/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be788e55d535e8ddfe998d0b3ef2644caab40bb3",
+      "size": 10244,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/blobs/be788e55d535e8ddfe998d0b3ef2644caab40bb3"
+    },
+    {
+      "path": "hardware/pc_max30001_brk_v1.0.brd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eea89308b05ec94fc1b7476c2ae78f01f2fbcb4a",
+      "size": 378522,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/blobs/eea89308b05ec94fc1b7476c2ae78f01f2fbcb4a"
+    },
+    {
+      "path": "hardware/pc_max30001_brk_v1.0.sch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2398df48f557e28df9129c679c4805f70268d6d",
+      "size": 1210510,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/blobs/d2398df48f557e28df9129c679c4805f70268d6d"
+    },
+    {
+      "path": "hardware/pc_max30001_brk_v1.0_schematic.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d4da281b64122eb83f8def84ac1c54b15253a13",
+      "size": 55385,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/blobs/4d4da281b64122eb83f8def84ac1c54b15253a13"
+    },
+    {
+      "path": "license_mark.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "800cd99595569d568fdb8c8c054abd54ac41d803",
+      "size": 9032,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001/git/blobs/800cd99595569d568fdb8c8c054abd54ac41d803"
+    }
+  ],
+  "truncated": false
+}

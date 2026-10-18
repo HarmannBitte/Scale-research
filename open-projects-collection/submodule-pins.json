@@ -1,0 +1,8 @@
+[
+  {
+    "path": "examples/ad5940lib",
+    "mode": "160000",
+    "type": "commit",
+    "sha": "d4c2ba01f0c1f8cb47264905407a4a3f7bf1cd47"
+  }
+]

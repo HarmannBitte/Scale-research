@@ -1,0 +1,7 @@
+{
+  "name": "impedance-py-layout-corrected-tests",
+  "status": "pass",
+  "detail": "34 passed, 1 deselected; upstream repository-name alias supplied, no upstream code edited",
+  "log": "impedance-py-layout-corrected-tests.log",
+  "log_sha256": "1968235b654f875dbef99e02725ad2db82b5c8132b0061c93efa4e8bda6db18a"
+}

@@ -1,0 +1,144 @@
+NHANES 1999-2006 DXA Multiple Imputation Data Files
+Skip directly to site content
+Centers for Disease Control and Prevention. CDC twenty four seven. Saving Lives, Protecting People
+Centers for Disease Control and Prevention. CDC twenty four seven. Saving Lives, Protecting People
+National Center for Health Statistics
+NHANES 1999-2006 DXA Multiple Imputation Data Files
+minus
+Related Pages
+The 1999-2006 Dual Energy X-ray Absorptiometry (DXA) Multiple Imputation Data Files and Technical Documentation
+Typically, NHANES data sets with missing data/variables are released without statistical adjustment because the amount of missing data is small and the data items are usually missing at random. However, examination of missing items in the DXA data files indicated that the amount of missing DXA data was somewhat larger than for other data files and there seemed to be systematic, non-random patterns to the missing data. Use of only the measured variables could lead to biased results. To provide the user with a “complete” data file, missing and invalid DXA data from NHANES 1999-2006 were imputed using multiple-imputation methodology.
+Data files for 1999-2000, 2001-2002, 2003-2004, and 2005-2006 can be downloaded via the Data links below. Each of the data files contains
+FIVE
+sets of measured and imputed values. Each set of measured and imputed values can be merged with other data from NHANES to create analytic datasets.
+NOTE:
+The multiple imputation procedure produced a small number of imputed values with extreme variability for some survey participants. Because of the extreme variability of these imputed values, the data for these participants have been placed in separate files labeled Supplemental Highly Variable Data. Analysts should be aware of the highly variable nature of these imputed DXA data when considering the use of these separate files.
+Multiple imputation is a technique that allows analysts to incorporate the extra variability due to imputation into their analyses. Imputed values should not be treated as measured variables without accounting for the extra variability introduced by the imputation process. The extra variability due to imputation
+CANNOT
+be incorporated by simply analyzing a
+SINGLE
+dataset as if the imputed values were true values. Moreover, analysts
+SHOULD NOT
+create a single dataset using the
+AVERAGE
+of the five sets of valid and imputed values. The preferred statistical approach is to analyze
+EACH OF THE FIVE
+datasets separately using methods and software that are appropriate for survey data and then combining the estimates and standard errors using the combining rules described in Section 4 of the document available via the Technical Documentation for Multiple Imputation link below.
+Section 4 of the Technical Documentation also contains examples for multiply imputed data analyses using SAS-callable SUDAAN. Answers to questions about the multiply imputed DXA data are available via the Frequently Asked Questions for the Multiple Imputation link.
+Information on the DXA examination, the data files (variable descriptions, file structure, control counts), and codebook are available via the Data File Documentation links below. Users interested in analyzing data for several years should note that the variables and file structure are identical for all four release cycles.
+ANALYSTS ARE STRONGLY ENCOURAGED TO READ BOTH THE TECHNICAL DOCUMENTATION AND THE DATA FILE DOCUMENTATION.
+Users are also encouraged to check the NHANES What's New website for updates and to subscribe to the NHANES
+Listserv
+to receive notices of any corrections/updates.
+NOTE
+: The same model and procedures used in multiply imputing the 1999-2004 DXA data were used in imputing the 2005-2006 data.
+Technical Documentation for the 1999-2004 Dual Energy X-Ray Absorptiometry (DXA) Multiple Imputation Data File [PDF - 1 MB]
+Two lines of code needed to construct the sample weights were inadvertently omitted from the SAS programs PROC DESCRIPT and PROC REGRESS in the documentation. The programs have been corrected as of 12/19/08; if you used this SAS code prior to this date, please review your SAS program code.
+Frequently Asked Questions (FAQ) for the 1999-2004 Dual Energy X-ray Absorptiometry (DXA) Multiple Imputation Data Files
+Years
+Data File Name
+Doc File
+Data File
+Date Published
+2005-2006
+Dual-Energy X-ray Absorptiometry - Whole Body
+DXX_D Doc
+DXX_D Data [XPT - 28.2 MB]
+Updated December 2016
+2003-2004
+Dual-Energy X-ray Absorptiometry - Whole Body
+DXX_C Doc
+DXX_C Data [XPT - 28.9 MB]
+Updated March 2010
+2001-2002
+Dual-Energy X-ray Absorptiometry - Whole Body
+DXX_B Doc
+DXX_B Data [XPT - 31.1 MB]
+Updated March 2010
+1999-2000
+Dual-Energy X-ray Absorptiometry - Whole Body
+DXX Doc
+DXX Data [XPT - 23.5 MB]
+Updated March 2010
+Supplemental
+1999-2006 Supplemental Highly Variable Data
+Content source:
+CDC/National Center for Health Statistics
+Related Sites
+NHANES Longitudinal Study
+Growth Charts
+Surveys and Data Collection Systems
+NCHS Data Linkage Activities
+Research Data Center
+About CDC
+Contact Us
+800-232-4636
+Facebook
+Twitter
+Instagram
+LinkedIn
+Youtube
+Pinterest
+Snapchat
+RSS
+CONTACT CDC
+Contact Us
+Call 800-232-4636
+Email Us
+ABOUT CDC
+About CDC
+Jobs
+Funding
+POLICIES
+Accessibility
+External Links
+Privacy
+Web Policies
+FOIA
+OIG
+No Fear Act
+Nondiscrimination
+Vulnerability Disclosure Policy
+CDC Archive
+Public Health Publications
+HHS.gov
+USA.gov
+CONNECT WITH US
+Facebook
+Twitter
+Instagram
+LinkedIn
+Youtube
+Pinterest
+Snapchat
+Email
+LANGUAGES
+Español
+繁體中文
+Tiếng Việt
+한국어
+Tagalog
+Русский
+العربية
+Kreyòl Ayisyen
+Français
+Polski
+Português
+Italiano
+Deutsch
+日本語
+فارسی
+English
+Accessibility
+External Links
+Privacy
+Web Policies
+FOIA
+OIG
+No Fear Act
+Nondiscrimination
+Vulnerability Disclosure Policy
+CDC Archive
+Public Health Publications
+HHS.gov
+USA.gov

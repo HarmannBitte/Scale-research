@@ -1,0 +1,156 @@
+arm-none-eabi-gcc [unarmed] source/examples/ad5940lib/ad5940.c
+source/examples/ad5940lib/ad5940.c: In function 'AD5940_Initialize':
+source/examples/ad5940lib/ad5940.c:1167:13: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+ 1167 |   for(i=0; i<sizeof(RegTable)/sizeof(RegTable[0]); i++)
+      |             ^
+source/examples/ad5940lib/ad5940.c: In function 'AD5940_WakeUp':
+source/examples/ad5940lib/ad5940.c:2998:14: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]
+ 2998 |     if(count > TryCount)
+      |              ^
+source/examples/ad5940lib/ad5940.c: In function 'AD5940_HSTIAOffsetCal':
+source/examples/ad5940lib/ad5940.c:3416:54: warning: unused parameter 'pHSTIAOffsetCal' [-Wunused-parameter]
+ 3416 | AD5940Err AD5940_HSTIAOffsetCal(LPTIAOffsetCal_Type *pHSTIAOffsetCal)
+      |                                 ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+source/examples/ad5940lib/ad5940.c: In function 'AD5940_ADCPGACal':
+source/examples/ad5940lib/ad5940.c:3253:31: warning: 'HSDACCode' may be used uninitialized [-Wmaybe-uninitialized]
+ 3253 |       hsloop_cfg.WgCfg.WgCode = HSDACCode;
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+source/examples/ad5940lib/ad5940.c:3248:16: note: 'HSDACCode' was declared here
+ 3248 |       uint32_t HSDACCode;
+      |                ^~~~~~~~~
+arm-none-eabi-gcc [unarmed] source/examples/AD5940_BIA/BodyImpedance.c
+source/examples/AD5940_BIA/BodyImpedance.c: In function 'AppBIABenchFrames':
+source/examples/AD5940_BIA/BodyImpedance.c:104:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  104 |  if(count)*count=FrameCount;return Frames;
+      |  ^~
+source/examples/AD5940_BIA/BodyImpedance.c:104:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  104 |  if(count)*count=FrameCount;return Frames;
+      |                             ^~~~~~
+source/examples/AD5940_BIA/BodyImpedance.c: In function 'AppBIARegModify':
+source/examples/AD5940_BIA/BodyImpedance.c:589:32: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]
+  589 |     if(AppBIACfg.FifoDataCount >= AppBIACfg.NumOfData)
+      |                                ^~
+source/examples/AD5940_BIA/BodyImpedance.c:584:50: warning: unused parameter 'pData' [-Wunused-parameter]
+  584 | static AD5940Err AppBIARegModify(int32_t * const pData, uint32_t *pDataCount)
+      |                                  ~~~~~~~~~~~~~~~~^~~~~
+In file included from source/examples/AD5940_BIA/BodyImpedance.c:679:
+source/examples/AD5940_BIA/BenchLog.inc: In function 'BenchLogBegin':
+source/examples/AD5940_BIA/BenchLog.inc:24:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   24 |  if(!id)return AD5940ERR_NULLP;n=strlen(id);
+      |  ^~
+source/examples/AD5940_BIA/BenchLog.inc:24:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   24 |  if(!id)return AD5940ERR_NULLP;n=strlen(id);
+      |                                ^
+source/examples/AD5940_BIA/BenchLog.inc: In function 'AppBIABenchExportConfig':
+source/examples/AD5940_BIA/BenchLog.inc:54:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   54 |  if(n<0||(size_t)n>=sizeof(p))return AD5940ERR_BUFF;return BenchLogEmitJson(p);
+      |  ^~
+source/examples/AD5940_BIA/BenchLog.inc:54:53: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   54 |  if(n<0||(size_t)n>=sizeof(p))return AD5940ERR_BUFF;return BenchLogEmitJson(p);
+      |                                                     ^~~~~~
+arm-none-eabi-gcc [unarmed] source/examples/AD5940_BIA/AD5940Main.c
+arm-none-eabi-gcc [unarmed] source/examples/AD5940_BIA/ADICUP3029/main.c
+source/examples/AD5940_BIA/ADICUP3029/main.c: In function 'MCUPlatformInit':
+source/examples/AD5940_BIA/ADICUP3029/main.c:31:32: warning: unused parameter 'pCfg' [-Wunused-parameter]
+   31 | uint32_t MCUPlatformInit(void *pCfg)
+      |                          ~~~~~~^~~~
+source/examples/AD5940_BIA/ADICUP3029/main.c: In function 'fputc':
+source/examples/AD5940_BIA/ADICUP3029/main.c:144:24: warning: unused parameter 'f' [-Wunused-parameter]
+  144 | int fputc(int c, FILE *f)
+      |                  ~~~~~~^
+arm-none-eabi-gcc [unarmed] source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c
+source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c:22:1: warning: 'static' is not at beginning of declaration [-Wold-style-declaration]
+   22 | volatile static uint32_t ucInterrupted = 0;       /* Flag to indicate interrupt occurred */
+      | ^~~~~~~~
+source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c: In function 'AD5940_MCUResourceInit':
+source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c:117:39: warning: unused parameter 'pCfg' [-Wunused-parameter]
+  117 | uint32_t AD5940_MCUResourceInit(void *pCfg)
+      |                                 ~~~~~~^~~~
+arm-none-eabi-gcc [unarmed] vendor/ADuCM302x_DFP-3.2.1/Source/GCC/startup_ADuCM3029.c
+arm-none-eabi-gcc [unarmed] vendor/ADuCM302x_DFP-3.2.1/Source/system_ADuCM3029.c
+arm-none-eabi-gcc [unarmed] gnu/newlib_io.c
+Memory region         Used Size  Region Size  %age Used
+          FLASH0:         320 B        384 B     83.33%
+           FLASH:       36184 B     261760 B     13.82%
+         DSRAM_A:         12 KB        16 KB     75.00%
+         DSRAM_B:        8068 B        16 KB     49.24%
+   text	   data	    bss	    dec	    hex	filename
+  36504	   2776	   5292	  44572	   ae1c	build/unarmed/firmware.elf
+arm-none-eabi-gcc [fullpath-linkcheck] source/examples/ad5940lib/ad5940.c
+source/examples/ad5940lib/ad5940.c: In function 'AD5940_Initialize':
+source/examples/ad5940lib/ad5940.c:1167:13: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+ 1167 |   for(i=0; i<sizeof(RegTable)/sizeof(RegTable[0]); i++)
+      |             ^
+source/examples/ad5940lib/ad5940.c: In function 'AD5940_WakeUp':
+source/examples/ad5940lib/ad5940.c:2998:14: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]
+ 2998 |     if(count > TryCount)
+      |              ^
+source/examples/ad5940lib/ad5940.c: In function 'AD5940_HSTIAOffsetCal':
+source/examples/ad5940lib/ad5940.c:3416:54: warning: unused parameter 'pHSTIAOffsetCal' [-Wunused-parameter]
+ 3416 | AD5940Err AD5940_HSTIAOffsetCal(LPTIAOffsetCal_Type *pHSTIAOffsetCal)
+      |                                 ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+source/examples/ad5940lib/ad5940.c: In function 'AD5940_ADCPGACal':
+source/examples/ad5940lib/ad5940.c:3253:31: warning: 'HSDACCode' may be used uninitialized [-Wmaybe-uninitialized]
+ 3253 |       hsloop_cfg.WgCfg.WgCode = HSDACCode;
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+source/examples/ad5940lib/ad5940.c:3248:16: note: 'HSDACCode' was declared here
+ 3248 |       uint32_t HSDACCode;
+      |                ^~~~~~~~~
+arm-none-eabi-gcc [fullpath-linkcheck] source/examples/AD5940_BIA/BodyImpedance.c
+source/examples/AD5940_BIA/BodyImpedance.c: In function 'AppBIABenchFrames':
+source/examples/AD5940_BIA/BodyImpedance.c:104:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  104 |  if(count)*count=FrameCount;return Frames;
+      |  ^~
+source/examples/AD5940_BIA/BodyImpedance.c:104:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  104 |  if(count)*count=FrameCount;return Frames;
+      |                             ^~~~~~
+source/examples/AD5940_BIA/BodyImpedance.c: In function 'AppBIARegModify':
+source/examples/AD5940_BIA/BodyImpedance.c:589:32: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]
+  589 |     if(AppBIACfg.FifoDataCount >= AppBIACfg.NumOfData)
+      |                                ^~
+source/examples/AD5940_BIA/BodyImpedance.c:584:50: warning: unused parameter 'pData' [-Wunused-parameter]
+  584 | static AD5940Err AppBIARegModify(int32_t * const pData, uint32_t *pDataCount)
+      |                                  ~~~~~~~~~~~~~~~~^~~~~
+In file included from source/examples/AD5940_BIA/BodyImpedance.c:679:
+source/examples/AD5940_BIA/BenchLog.inc: In function 'BenchLogBegin':
+source/examples/AD5940_BIA/BenchLog.inc:24:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   24 |  if(!id)return AD5940ERR_NULLP;n=strlen(id);
+      |  ^~
+source/examples/AD5940_BIA/BenchLog.inc:24:32: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   24 |  if(!id)return AD5940ERR_NULLP;n=strlen(id);
+      |                                ^
+source/examples/AD5940_BIA/BenchLog.inc: In function 'AppBIABenchExportConfig':
+source/examples/AD5940_BIA/BenchLog.inc:54:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   54 |  if(n<0||(size_t)n>=sizeof(p))return AD5940ERR_BUFF;return BenchLogEmitJson(p);
+      |  ^~
+source/examples/AD5940_BIA/BenchLog.inc:54:53: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   54 |  if(n<0||(size_t)n>=sizeof(p))return AD5940ERR_BUFF;return BenchLogEmitJson(p);
+      |                                                     ^~~~~~
+arm-none-eabi-gcc [fullpath-linkcheck] source/examples/AD5940_BIA/AD5940Main.c
+arm-none-eabi-gcc [fullpath-linkcheck] source/examples/AD5940_BIA/ADICUP3029/main.c
+source/examples/AD5940_BIA/ADICUP3029/main.c: In function 'MCUPlatformInit':
+source/examples/AD5940_BIA/ADICUP3029/main.c:31:32: warning: unused parameter 'pCfg' [-Wunused-parameter]
+   31 | uint32_t MCUPlatformInit(void *pCfg)
+      |                          ~~~~~~^~~~
+source/examples/AD5940_BIA/ADICUP3029/main.c: In function 'fputc':
+source/examples/AD5940_BIA/ADICUP3029/main.c:144:24: warning: unused parameter 'f' [-Wunused-parameter]
+  144 | int fputc(int c, FILE *f)
+      |                  ~~~~~~^
+arm-none-eabi-gcc [fullpath-linkcheck] source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c
+source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c:22:1: warning: 'static' is not at beginning of declaration [-Wold-style-declaration]
+   22 | volatile static uint32_t ucInterrupted = 0;       /* Flag to indicate interrupt occurred */
+      | ^~~~~~~~
+source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c: In function 'AD5940_MCUResourceInit':
+source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c:117:39: warning: unused parameter 'pCfg' [-Wunused-parameter]
+  117 | uint32_t AD5940_MCUResourceInit(void *pCfg)
+      |                                 ~~~~~~^~~~
+arm-none-eabi-gcc [fullpath-linkcheck] vendor/ADuCM302x_DFP-3.2.1/Source/GCC/startup_ADuCM3029.c
+arm-none-eabi-gcc [fullpath-linkcheck] vendor/ADuCM302x_DFP-3.2.1/Source/system_ADuCM3029.c
+arm-none-eabi-gcc [fullpath-linkcheck] gnu/newlib_io.c
+Memory region         Used Size  Region Size  %age Used
+          FLASH0:         320 B        384 B     83.33%
+           FLASH:       60120 B     261760 B     22.97%
+         DSRAM_A:         12 KB        16 KB     75.00%
+         DSRAM_B:        8172 B        16 KB     49.88%
+   text	   data	    bss	    dec	    hex	filename
+  60440	   2776	   5396	  68612	  10c04	build/fullpath-linkcheck/firmware.elf

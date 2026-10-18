@@ -1,0 +1,487 @@
+{
+  "sha": "b3a8844a511c87d28e6929e658218d85c8097f8f",
+  "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/trees/b3a8844a511c87d28e6929e658218d85c8097f8f",
+  "tree": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfe0770424b2a19faf507a501ebfc23be8f54e7b",
+      "size": 66,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/dfe0770424b2a19faf507a501ebfc23be8f54e7b"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": ".idea",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01ce775a9bb1a5fa9cd59645ad3eec28536aa61d",
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/trees/01ce775a9bb1a5fa9cd59645ad3eec28536aa61d"
+    },
+    {
+      "path": ".idea/UPRM-Multi_Frq-BioZ-Research.iml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0876a78d06ac03b5d78c8dcdb95570281c6f1d6",
+      "size": 284,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/d0876a78d06ac03b5d78c8dcdb95570281c6f1d6"
+    },
+    {
+      "path": ".idea/inspectionProfiles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "97824ec9b0149e48c91dce4fee530335b327c686",
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/trees/97824ec9b0149e48c91dce4fee530335b327c686"
+    },
+    {
+      "path": ".idea/inspectionProfiles/profiles_settings.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "105ce2da2d6447d11dfe32bfb846c3d5b199fc99",
+      "size": 174,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/105ce2da2d6447d11dfe32bfb846c3d5b199fc99"
+    },
+    {
+      "path": ".idea/modules.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "377bd3e9dbda7ac27e4a173d43cc617eba75788b",
+      "size": 308,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/377bd3e9dbda7ac27e4a173d43cc617eba75788b"
+    },
+    {
+      "path": ".idea/vcs.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35eb1ddfbbc029bcab630581847471d7f238ec53",
+      "size": 167,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/35eb1ddfbbc029bcab630581847471d7f238ec53"
+    },
+    {
+      "path": ".idea/workspace.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a54e937eff74e55137fe8ff37151e5f42bba7d3",
+      "size": 12823,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/2a54e937eff74e55137fe8ff37151e5f42bba7d3"
+    },
+    {
+      "path": ".vscode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "76d1456b48464ea6c3a46484da57d129b7414181",
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/trees/76d1456b48464ea6c3a46484da57d129b7414181"
+    },
+    {
+      "path": ".vscode/.cortex-debug.peripherals.state.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc",
+      "size": 2,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc"
+    },
+    {
+      "path": ".vscode/.cortex-debug.registers.state.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc",
+      "size": 2,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/0637a088a01e8ddab3bf3fa98dbe804cbde1a0dc"
+    },
+    {
+      "path": ".vscode/Reset.JLinkScript",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd937220e67c228bf7891dba3b8c1241c52e1a11",
+      "size": 1251,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/cd937220e67c228bf7891dba3b8c1241c52e1a11"
+    },
+    {
+      "path": ".vscode/c_cpp_properties.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7fd3e39b72f0d842b22b8f8a73a08a6e4f9e652",
+      "size": 1571,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/f7fd3e39b72f0d842b22b8f8a73a08a6e4f9e652"
+    },
+    {
+      "path": ".vscode/flash.gdb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc627ae86a308de110f2b69cedfd89c9151dc785",
+      "size": 490,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/fc627ae86a308de110f2b69cedfd89c9151dc785"
+    },
+    {
+      "path": ".vscode/flash_gdb_",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59d9dbd67e53b8c3b89b9f9c995ce9956df80871",
+      "size": 616,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/59d9dbd67e53b8c3b89b9f9c995ce9956df80871"
+    },
+    {
+      "path": ".vscode/launch.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af0d6f650c7c6e7eb7c73eb83162723d57299194",
+      "size": 5986,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/af0d6f650c7c6e7eb7c73eb83162723d57299194"
+    },
+    {
+      "path": ".vscode/manual_flash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36ed5f5ba31276c79992032f53e1908bf6f3be6d",
+      "size": 309,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/36ed5f5ba31276c79992032f53e1908bf6f3be6d"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1f789206731a6aa448925611fd23413f4d235f5",
+      "size": 3858,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/b1f789206731a6aa448925611fd23413f4d235f5"
+    },
+    {
+      "path": ".vscode/tasks.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23f00049c4e2df209f33534c94707aca16cd3110",
+      "size": 3995,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/23f00049c4e2df209f33534c94707aca16cd3110"
+    },
+    {
+      "path": "32655 on 30009.code-profile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63a1a8b2bb60cd25d4df396ac2ca7fb712e1dde2",
+      "size": 27451,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/63a1a8b2bb60cd25d4df396ac2ca7fb712e1dde2"
+    },
+    {
+      "path": "ARM",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "22077bcd56faf3a831e4189730fff48f6e207938",
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/trees/22077bcd56faf3a831e4189730fff48f6e207938"
+    },
+    {
+      "path": "ARM/Abstract.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c320ebf22ea43a13824d4d1c29686b26e9b604df",
+      "size": 16,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/c320ebf22ea43a13824d4d1c29686b26e9b604df"
+    },
+    {
+      "path": "ARM/BLE.sct",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2482c178c74d2b084c7514276595946b3e30f4d",
+      "size": 1104,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/d2482c178c74d2b084c7514276595946b3e30f4d"
+    },
+    {
+      "path": "ARM/BTLE_fit.uvoptx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cd09313aa46c7baa9d0ff06e3e8ecc61dc31222",
+      "size": 8335,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/0cd09313aa46c7baa9d0ff06e3e8ecc61dc31222"
+    },
+    {
+      "path": "ARM/BTLE_fit.uvprojx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe83389bfb2c876a3cf03351e7abad2cf50698df",
+      "size": 26749,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/fe83389bfb2c876a3cf03351e7abad2cf50698df"
+    },
+    {
+      "path": "ARM/EventRecorderStub.scvd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2956b29683898915efa436cc948384a2c431dc31",
+      "size": 330,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/2956b29683898915efa436cc948384a2c431dc31"
+    },
+    {
+      "path": "BLE_GUI.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5410ac09a83e0ed1a25c0fd34a5f9d21679d61e",
+      "size": 19711,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/b5410ac09a83e0ed1a25c0fd34a5f9d21679d61e"
+    },
+    {
+      "path": "GUI.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "213ebed106b2996fbb44c2486a7c7a58f9a16458",
+      "size": 9821,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/213ebed106b2996fbb44c2486a7c7a58f9a16458"
+    },
+    {
+      "path": "GUI.spec",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bddb832d3ba88297cfcbb326a3311f55fa8dc0e0",
+      "size": 655,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/bddb832d3ba88297cfcbb326a3311f55fa8dc0e0"
+    },
+    {
+      "path": "MAX32655_SDHC_FAT.launch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39d45f4e5e8e4dee8569e35b0ce9b304c393b56f",
+      "size": 5696,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/39d45f4e5e8e4dee8569e35b0ce9b304c393b56f"
+    },
+    {
+      "path": "Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f3c4ded60feda92644c651608467f1a08b6603b",
+      "size": 15302,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/5f3c4ded60feda92644c651608467f1a08b6603b"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecf23f81fb4f17f387d041cbb2549839e8d50c87",
+      "size": 556,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/ecf23f81fb4f17f387d041cbb2549839e8d50c87"
+    },
+    {
+      "path": "flash.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "770a9b39c58977342fa13b174b245c341d665895",
+      "size": 1382,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/770a9b39c58977342fa13b174b245c341d665895"
+    },
+    {
+      "path": "include",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3e5462e845e39457f7e586c2ce77fac179854242",
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/trees/3e5462e845e39457f7e586c2ce77fac179854242"
+    },
+    {
+      "path": "include/MAX30009.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7a7036ea14f654d3eebf8680eb0f8135c31f93a",
+      "size": 11071,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/f7a7036ea14f654d3eebf8680eb0f8135c31f93a"
+    },
+    {
+      "path": "include/MAX32655.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b50b8a8c39340df19cb71b570e193fcf2c8835d2",
+      "size": 30458,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/b50b8a8c39340df19cb71b570e193fcf2c8835d2"
+    },
+    {
+      "path": "include/bioZ.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "106a84349c455423c176d4f3f4aeffb1e217104d",
+      "size": 478,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/106a84349c455423c176d4f3f4aeffb1e217104d"
+    },
+    {
+      "path": "include/cli.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4564ecc70d270cebc7e909fa5b2262c710a0a50a",
+      "size": 3680,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/4564ecc70d270cebc7e909fa5b2262c710a0a50a"
+    },
+    {
+      "path": "include/dats_api.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7ec5cca65210a4031b88a587b4a56c7e93c41ae",
+      "size": 2782,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/b7ec5cca65210a4031b88a587b4a56c7e93c41ae"
+    },
+    {
+      "path": "include/sdhc.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2471386cbec81df8aebd3eb76ef7bb03432b655b",
+      "size": 2150,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/2471386cbec81df8aebd3eb76ef7bb03432b655b"
+    },
+    {
+      "path": "include/spiFunctions.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f83038a476b6166183558fcb3c5ec11be8bf8d9",
+      "size": 644,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/7f83038a476b6166183558fcb3c5ec11be8bf8d9"
+    },
+    {
+      "path": "include/user-cli.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f60021fa14c5e4fd04ffda3998782cd85894aa0c",
+      "size": 2122,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/f60021fa14c5e4fd04ffda3998782cd85894aa0c"
+    },
+    {
+      "path": "license.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "878623b69046bf75dc45b0a8308a051cbad0f528",
+      "size": 1742,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/878623b69046bf75dc45b0a8308a051cbad0f528"
+    },
+    {
+      "path": "main.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "486f971357e94848f351c2f930d177e1bef6c24c",
+      "size": 20028,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/486f971357e94848f351c2f930d177e1bef6c24c"
+    },
+    {
+      "path": "matlab",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa8a8b023a347b7e185aad9ec066c1063b428e72",
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/trees/aa8a8b023a347b7e185aad9ec066c1063b428e72"
+    },
+    {
+      "path": "matlab/GraphingScript.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a29f40260eba961c0f59caf9dbc5807c87a2e600",
+      "size": 6658,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/a29f40260eba961c0f59caf9dbc5807c87a2e600"
+    },
+    {
+      "path": "matlab/bioz-log-20251205-105535.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9c38201c9a835e026e86254d3f99684b35662ae",
+      "size": 262834,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/e9c38201c9a835e026e86254d3f99684b35662ae"
+    },
+    {
+      "path": "matlab/imu-log-20251205-105535.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0af9dd4d387167d4d57bb10da23501246bf8c54e",
+      "size": 688787,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/0af9dd4d387167d4d57bb10da23501246bf8c54e"
+    },
+    {
+      "path": "project.mk",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aea2a3e7d86593498ba35e5c16a0fafccd7309d2",
+      "size": 1150,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/aea2a3e7d86593498ba35e5c16a0fafccd7309d2"
+    },
+    {
+      "path": "services",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ccb654eed1c687a7517e5b373a80b486095a1b8",
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/trees/3ccb654eed1c687a7517e5b373a80b486095a1b8"
+    },
+    {
+      "path": "services/svc_sds.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9206e12b4b8a747a7dc45476f2e8fa0c015095d0",
+      "size": 5263,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/9206e12b4b8a747a7dc45476f2e8fa0c015095d0"
+    },
+    {
+      "path": "services/svc_sds.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "644613dfbf6c46895379d917825b21589c996153",
+      "size": 4438,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/644613dfbf6c46895379d917825b21589c996153"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "38b8bf92464349baa227820056efc7d73da82e5a",
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/trees/38b8bf92464349baa227820056efc7d73da82e5a"
+    },
+    {
+      "path": "src/bioZ.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2b535fe7d3452fc578fe59b32979fa355305677",
+      "size": 15510,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/f2b535fe7d3452fc578fe59b32979fa355305677"
+    },
+    {
+      "path": "src/cli.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec8589262ea2320858724595a4642846c9436eee",
+      "size": 10430,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/ec8589262ea2320858724595a4642846c9436eee"
+    },
+    {
+      "path": "src/dats_main.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b05416d5269cef281ba857f72169f68447756a40",
+      "size": 38524,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/b05416d5269cef281ba857f72169f68447756a40"
+    },
+    {
+      "path": "src/sdhc.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a88b3b4ac78b2f7024c57118625610b91f1fffc",
+      "size": 14683,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/0a88b3b4ac78b2f7024c57118625610b91f1fffc"
+    },
+    {
+      "path": "src/spiFunctions.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e06aad114e441177afad8a35fcafc9e71d378b8a",
+      "size": 6877,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/e06aad114e441177afad8a35fcafc9e71d378b8a"
+    },
+    {
+      "path": "src/stack_dats.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b7756102a67a628dc1df8276f3414ca4fcc439c",
+      "size": 2614,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/0b7756102a67a628dc1df8276f3414ca4fcc439c"
+    },
+    {
+      "path": "src/user-cli.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36234f2939ca236106aaf45a749c0f72090715d3",
+      "size": 6866,
+      "url": "https://api.github.com/repos/oscaroflores/UPRM-Multi_Frq-BioZ-Research/git/blobs/36234f2939ca236106aaf45a749c0f72090715d3"
+    }
+  ],
+  "truncated": false
+}

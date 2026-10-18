@@ -1,0 +1,25 @@
+{
+  "name": "pyeit-upstream-tests",
+  "repo": "eitcom/pyEIT",
+  "commit": "106863ab123e7763e6cdad0d43b338672731121c",
+  "command": [
+    "/home/user/.cache/open-projects/test-env/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests",
+    "--disable-warnings"
+  ],
+  "cwd": "/home/user/.cache/open-projects/full/eitcom__pyEIT/pyEIT-106863ab123e7763e6cdad0d43b338672731121c",
+  "timeout_seconds": 180,
+  "environment_overrides": {
+    "MPLBACKEND": "Agg",
+    "PYTHONPATH": "/home/user/.cache/open-projects/full/eitcom__pyEIT/pyEIT-106863ab123e7763e6cdad0d43b338672731121c",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+  },
+  "exit_code": 0,
+  "status": "pass",
+  "duration_seconds": 10.723,
+  "log": "pyeit-upstream-tests.log",
+  "log_sha256": "3cc943df0537245dd523539a8e1397912ad7c5623e16ac6c39ef9f54705842cd"
+}

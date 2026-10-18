@@ -1,0 +1,352 @@
+import { describe, it, expect } from 'vitest';
+import { diffRestartRequired } from '../../src/config/reload-diff.js';
+import type { AppConfig } from '../../src/config/schema.js';
+
+function baseConfig(overrides: Partial<AppConfig> = {}): AppConfig {
+  return {
+    version: 1,
+    scale: { weight_unit: 'kg', height_unit: 'cm' },
+    unknown_user: 'nearest',
+    update_check: true,
+    users: [
+      {
+        name: 'Alice',
+        slug: 'alice',
+        height: 170,
+        birth_date: '1990-01-01',
+        gender: 'female',
+        is_athlete: false,
+        weight_range: { min: 50, max: 70 },
+        last_known_weight: null,
+      },
+    ],
+    ...overrides,
+  } as AppConfig;
+}
+
+describe('diffRestartRequired', () => {
+  it('returns empty array when nothing relevant changed', () => {
+    const a = baseConfig();
+    const b = baseConfig();
+    expect(diffRestartRequired(a, b)).toEqual([]);
+  });
+
+  it('flags ble.handler change', () => {
+    const a = baseConfig({ ble: { handler: 'auto' } });
+    const b = baseConfig({ ble: { handler: 'mqtt-proxy' } });
+    const diff = diffRestartRequired(a, b);
+    expect(diff).toEqual([{ key: 'ble.handler', oldValue: 'auto', newValue: 'mqtt-proxy' }]);
+  });
+
+  it('flags ble.adapter change', () => {
+    const a = baseConfig({ ble: { handler: 'auto', adapter: 'hci0' } });
+    const b = baseConfig({ ble: { handler: 'auto', adapter: 'hci1' } });
+    const diff = diffRestartRequired(a, b);
+    expect(diff.find((f) => f.key === 'ble.adapter')).toEqual({
+      key: 'ble.adapter',
+      oldValue: 'hci0',
+      newValue: 'hci1',
+    });
+  });
+
+  // #407: the adapter list is built once before the loop, so this key takes
+  // effect only after a restart. Without a row here the user gets neither the
+  // effect nor the warning.
+  it('flags ble.force_scale_adapter change', () => {
+    const a = baseConfig({ ble: { handler: 'auto', force_scale_adapter: 'Hutbit' } });
+    const b = baseConfig({ ble: { handler: 'auto', force_scale_adapter: 'QN Scale' } });
+    const diff = diffRestartRequired(a, b);
+    expect(diff.find((f) => f.key === 'ble.force_scale_adapter')).toEqual({
+      key: 'ble.force_scale_adapter',
+      oldValue: 'Hutbit',
+      newValue: 'QN Scale',
+    });
+  });
+
+  // #407: these five are built once at startup (the embedded broker) or when
+  // the watcher starts (the ESPHome pool), so they need the warning as much as
+  // the connection fields next to them.
+  it('flags the embedded broker and ESPHome pool fields', () => {
+    const a = baseConfig({
+      ble: {
+        handler: 'mqtt-proxy',
+        mqtt_proxy: { broker_url: 'mqtt://h:1883', embedded_broker_port: 1883 },
+      },
+    });
+    const b = baseConfig({
+      ble: {
+        handler: 'mqtt-proxy',
+        mqtt_proxy: { broker_url: 'mqtt://h:1883', embedded_broker_port: 1884 },
+      },
+    });
+    expect(diffRestartRequired(a, b).map((f) => f.key)).toContain(
+      'ble.mqtt_proxy.embedded_broker_port',
+    );
+
+    const c = baseConfig({
+      ble: { handler: 'esphome-proxy', esphome_proxy: { host: 'p', advertisement_timeout: 0 } },
+    });
+    const d = baseConfig({
+      ble: { handler: 'esphome-proxy', esphome_proxy: { host: 'p', advertisement_timeout: 30 } },
+    });
+    expect(diffRestartRequired(c, d).map((f) => f.key)).toContain(
+      'ble.esphome_proxy.advertisement_timeout',
+    );
+  });
+
+  it('does not flag a hot-reloadable ble key', () => {
+    const a = baseConfig({ ble: { handler: 'auto', session_timeout_sec: 60 } });
+    const b = baseConfig({ ble: { handler: 'auto', session_timeout_sec: 120 } });
+    expect(diffRestartRequired(a, b)).toEqual([]);
+  });
+
+  it('flags mqtt_proxy.broker_url change', () => {
+    const a = baseConfig({
+      ble: {
+        handler: 'mqtt-proxy',
+        mqtt_proxy: {
+          broker_url: 'mqtt://a:1883',
+          device_id: 'esp',
+          username: null,
+          password: null,
+          topic_prefix: 'ble',
+          embedded_broker_port: 1883,
+          embedded_broker_bind: '127.0.0.1',
+        },
+      },
+    });
+    const b = baseConfig({
+      ble: {
+        handler: 'mqtt-proxy',
+        mqtt_proxy: {
+          broker_url: 'mqtt://b:1883',
+          device_id: 'esp',
+          username: null,
+          password: null,
+          topic_prefix: 'ble',
+          embedded_broker_port: 1883,
+          embedded_broker_bind: '127.0.0.1',
+        },
+      },
+    });
+    const diff = diffRestartRequired(a, b);
+    expect(diff.find((f) => f.key === 'ble.mqtt_proxy.broker_url')).toBeDefined();
+  });
+
+  // E-18: processReading branches on the live user count, so the switch is
+  // hot-swapped and a "restart required" warning for it was false.
+  it('does NOT flag a switch from single to multi user (or back)', () => {
+    const single = baseConfig();
+    const multi = baseConfig({
+      users: [
+        ...single.users,
+        {
+          name: 'Bob',
+          slug: 'bob',
+          height: 180,
+          birth_date: '1985-05-15',
+          gender: 'male',
+          is_athlete: true,
+          weight_range: { min: 75, max: 95 },
+          last_known_weight: null,
+        },
+      ],
+    });
+    expect(diffRestartRequired(single, multi)).toEqual([]);
+    expect(diffRestartRequired(multi, single)).toEqual([]);
+  });
+
+  it('does NOT flag user profile edits within the same multi/single bucket', () => {
+    const a = baseConfig();
+    const b = baseConfig({
+      users: [{ ...baseConfig().users[0], height: 175, last_known_weight: 65.5 }],
+    });
+    expect(diffRestartRequired(a, b)).toEqual([]);
+  });
+
+  it('does NOT flag scale.weight_unit / unknown_user / runtime.dry_run / scale_mac', () => {
+    const a = baseConfig({
+      ble: { handler: 'auto', scale_mac: 'AA:BB:CC:DD:EE:FF' },
+      runtime: { dry_run: false } as AppConfig['runtime'],
+    });
+    const b = baseConfig({
+      ble: { handler: 'auto', scale_mac: 'FF:EE:DD:CC:BB:AA' },
+      scale: { weight_unit: 'lbs', height_unit: 'in' },
+      unknown_user: 'log',
+      runtime: { dry_run: true } as AppConfig['runtime'],
+    });
+    expect(diffRestartRequired(a, b)).toEqual([]);
+  });
+
+  it('flags runtime.continuous_mode change', () => {
+    const a = baseConfig({ runtime: { continuous_mode: false } as AppConfig['runtime'] });
+    const b = baseConfig({ runtime: { continuous_mode: true } as AppConfig['runtime'] });
+    const diff = diffRestartRequired(a, b);
+    expect(diff.find((f) => f.key === 'runtime.continuous_mode')).toEqual({
+      key: 'runtime.continuous_mode',
+      oldValue: 'false',
+      newValue: 'true',
+    });
+  });
+
+  it('flags ble.adapter_privacy, which is read once at start-up (#417)', () => {
+    const a = baseConfig({ ble: { handler: 'auto' } });
+    const b = baseConfig({ ble: { handler: 'auto', adapter_privacy: true } });
+    expect(diffRestartRequired(a, b)).toEqual([
+      { key: 'ble.adapter_privacy', oldValue: '<unset>', newValue: 'true' },
+    ]);
+  });
+
+  it('does NOT flag ble.preemptive_adapter_reset, which the poll source re-reads per cycle', () => {
+    const a = baseConfig({ ble: { handler: 'auto', preemptive_adapter_reset: true } });
+    const b = baseConfig({ ble: { handler: 'auto', preemptive_adapter_reset: false } });
+    expect(diffRestartRequired(a, b)).toEqual([]);
+  });
+
+  it('redacts mqtt_proxy.password values in the warn payload', () => {
+    const a = baseConfig({
+      ble: {
+        handler: 'mqtt-proxy',
+        mqtt_proxy: {
+          broker_url: 'mqtt://a:1883',
+          device_id: 'esp',
+          username: 'u',
+          password: 'old-secret',
+          topic_prefix: 'ble',
+          embedded_broker_port: 1883,
+          embedded_broker_bind: '127.0.0.1',
+        },
+      },
+    });
+    const b = baseConfig({
+      ble: {
+        handler: 'mqtt-proxy',
+        mqtt_proxy: {
+          broker_url: 'mqtt://a:1883',
+          device_id: 'esp',
+          username: 'u',
+          password: 'new-secret',
+          topic_prefix: 'ble',
+          embedded_broker_port: 1883,
+          embedded_broker_bind: '127.0.0.1',
+        },
+      },
+    });
+    const diff = diffRestartRequired(a, b);
+    const entry = diff.find((f) => f.key === 'ble.mqtt_proxy.password');
+    expect(entry).toEqual({
+      key: 'ble.mqtt_proxy.password',
+      oldValue: '<redacted>',
+      newValue: '<redacted>',
+    });
+    // Ensure the actual secret never makes it into the warn payload.
+    const flat = JSON.stringify(diff);
+    expect(flat).not.toContain('old-secret');
+    expect(flat).not.toContain('new-secret');
+  });
+
+  it('redacts esphome_proxy.encryption_key and password', () => {
+    const a = baseConfig({
+      ble: {
+        handler: 'esphome-proxy',
+        esphome_proxy: {
+          host: '10.0.0.5',
+          port: 6053,
+          encryption_key: 'aaa',
+          password: '',
+        },
+      },
+    });
+    const b = baseConfig({
+      ble: {
+        handler: 'esphome-proxy',
+        esphome_proxy: {
+          host: '10.0.0.5',
+          port: 6053,
+          encryption_key: 'bbb',
+          password: 'pw',
+        },
+      },
+    });
+    const diff = diffRestartRequired(a, b);
+    expect(diff.find((f) => f.key === 'ble.esphome_proxy.encryption_key')).toEqual({
+      key: 'ble.esphome_proxy.encryption_key',
+      oldValue: '<redacted>',
+      newValue: '<redacted>',
+    });
+    expect(diff.find((f) => f.key === 'ble.esphome_proxy.password')).toEqual({
+      key: 'ble.esphome_proxy.password',
+      oldValue: '<unset>',
+      newValue: '<redacted>',
+    });
+    const flat = JSON.stringify(diff);
+    expect(flat).not.toContain('aaa');
+    expect(flat).not.toContain('bbb');
+    expect(flat).not.toContain('"pw"');
+  });
+
+  it('redacts ha_bluetooth.token and reports url changes', () => {
+    const a = baseConfig({
+      ble: { handler: 'ha-bluetooth', ha_bluetooth: { url: 'http://ha:8123', token: 'aaa' } },
+    });
+    const b = baseConfig({
+      ble: { handler: 'ha-bluetooth', ha_bluetooth: { url: 'http://ha2:8123', token: 'bbb' } },
+    });
+    const diff = diffRestartRequired(a, b);
+    expect(diff.find((f) => f.key === 'ble.ha_bluetooth.url')).toEqual({
+      key: 'ble.ha_bluetooth.url',
+      oldValue: 'http://ha:8123',
+      newValue: 'http://ha2:8123',
+    });
+    expect(diff.find((f) => f.key === 'ble.ha_bluetooth.token')).toEqual({
+      key: 'ble.ha_bluetooth.token',
+      oldValue: '<redacted>',
+      newValue: '<redacted>',
+    });
+    const flat = JSON.stringify(diff);
+    expect(flat).not.toContain('aaa');
+    expect(flat).not.toContain('bbb');
+  });
+
+  it('redacts encryption_key and password inside additional_proxies entries', () => {
+    const esp = { host: '10.0.0.5', port: 6053 };
+    const a = baseConfig({ ble: { handler: 'esphome-proxy', esphome_proxy: { ...esp } } });
+    const b = baseConfig({
+      ble: {
+        handler: 'esphome-proxy',
+        esphome_proxy: {
+          ...esp,
+          additional_proxies: [
+            { host: '10.0.0.6', port: 6053, encryption_key: 'NOISEKEY==', password: 'apipw' },
+          ],
+        },
+      },
+    } as Partial<AppConfig>);
+    const diff = diffRestartRequired(a, b);
+    const row = diff.find((f) => f.key === 'ble.esphome_proxy.additional_proxies');
+    expect(row).toBeDefined();
+    // The host stays visible so the warning still says what changed.
+    expect(row!.newValue).toContain('10.0.0.6');
+    expect(row!.newValue).toContain('<redacted>');
+    const flat = JSON.stringify(diff);
+    expect(flat).not.toContain('NOISEKEY==');
+    expect(flat).not.toContain('apipw');
+  });
+
+  it('strips the password from a broker_url with userinfo', () => {
+    const mk = (url: string) =>
+      baseConfig({
+        ble: { handler: 'mqtt-proxy', mqtt_proxy: { broker_url: url } },
+      } as Partial<AppConfig>);
+    const diff = diffRestartRequired(
+      mk('mqtt://scale:oldsecret@broker:1883'),
+      mk('mqtt://scale:newsecret@broker2:1883'),
+    );
+    const row = diff.find((f) => f.key === 'ble.mqtt_proxy.broker_url');
+    expect(row).toBeDefined();
+    expect(row!.newValue).toContain('broker2');
+    const flat = JSON.stringify(diff);
+    expect(flat).not.toContain('oldsecret');
+    expect(flat).not.toContain('newsecret');
+  });
+});

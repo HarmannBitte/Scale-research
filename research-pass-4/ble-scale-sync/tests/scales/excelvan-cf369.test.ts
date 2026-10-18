@@ -1,0 +1,265 @@
+import { describe, it, expect, vi } from 'vitest';
+import { ExcelvanCF369Adapter } from '../../src/scales/excelvan-cf369.js';
+import type { ConnectionContext } from '../../src/interfaces/scale-adapter.js';
+import {
+  mockPeripheral,
+  defaultProfile,
+  assertPayloadRanges,
+} from '../helpers/scale-test-utils.js';
+import { WEIGHT_ONLY_HOLD_MS } from '../../src/scales/body-comp-helpers.js';
+
+function makeAdapter() {
+  return new ExcelvanCF369Adapter();
+}
+
+describe('ExcelvanCF369Adapter', () => {
+  describe('matches()', () => {
+    it('matches "electronic scale" exact', () => {
+      const adapter = makeAdapter();
+      expect(adapter.matches(mockPeripheral('electronic scale'))).toBe(true);
+    });
+
+    it('matches case-insensitive', () => {
+      const adapter = makeAdapter();
+      expect(adapter.matches(mockPeripheral('Electronic Scale'))).toBe(true);
+      expect(adapter.matches(mockPeripheral('ELECTRONIC SCALE'))).toBe(true);
+    });
+
+    it('does not match "cf369"', () => {
+      const adapter = makeAdapter();
+      expect(adapter.matches(mockPeripheral('cf369'))).toBe(false);
+    });
+
+    it('does not match unrelated name', () => {
+      const adapter = makeAdapter();
+      expect(adapter.matches(mockPeripheral('Random Scale'))).toBe(false);
+    });
+  });
+
+  describe('parseNotification()', () => {
+    it('parses frame with body comp (complete, [6] != 0xFF)', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0xcf; // marker
+      buf.writeUInt16BE(800, 4); // weight = 800 / 10 = 80.0 kg
+      buf.writeUInt16BE(225, 6); // fat = 22.5%
+      buf[8] = 35; // bone = 3.5 kg
+      buf.writeUInt16BE(400, 9); // muscle = 40.0%
+      buf[11] = 8; // visceral fat
+      buf.writeUInt16BE(550, 12); // water = 55.0%
+
+      const reading = adapter.parseNotification(buf);
+      expect(reading).not.toBeNull();
+      expect(reading!.weight).toBe(80);
+      expect(reading!.impedance).toBe(0);
+    });
+
+    it('parses incomplete frame ([6] == 0xFF)', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0xcf;
+      buf.writeUInt16BE(800, 4);
+      buf[6] = 0xff; // incomplete — fat undefined
+
+      const reading = adapter.parseNotification(buf);
+      expect(reading).not.toBeNull();
+      expect(reading!.weight).toBe(80);
+    });
+
+    it('returns null for wrong marker', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0xce; // wrong
+      buf.writeUInt16BE(800, 4);
+      expect(adapter.parseNotification(buf)).toBeNull();
+    });
+
+    it('returns null for too-short buffer', () => {
+      const adapter = makeAdapter();
+      expect(adapter.parseNotification(Buffer.alloc(13))).toBeNull();
+    });
+
+    it('returns null when weight is zero', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0xcf;
+      buf.writeUInt16BE(0, 4);
+      expect(adapter.parseNotification(buf)).toBeNull();
+    });
+  });
+
+  describe('isComplete()', () => {
+    it('returns true when weight > 0 and cachedFat > 0', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0xcf;
+      buf.writeUInt16BE(800, 4);
+      buf.writeUInt16BE(225, 6);
+      buf[8] = 35;
+      buf.writeUInt16BE(400, 9);
+      buf[11] = 8;
+      buf.writeUInt16BE(550, 12);
+      adapter.parseNotification(buf);
+
+      expect(adapter.isComplete({ weight: 80, impedance: 0 })).toBe(true);
+    });
+
+    it('completes a weigh-in without composition after a short hold (D-07, D028)', () => {
+      // A weigh-in the scale could not analyse (socks, a child) used to be
+      // refused here, so the session never produced a reading and ran into its
+      // timeout. Now the weight completes, waits WEIGHT_ONLY_HOLD_MS for a frame
+      // with composition, and resolves weight-only when none comes.
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0xcf;
+      buf.writeUInt16BE(800, 4);
+      buf[6] = 0xff;
+      const reading = adapter.parseNotification(buf)!;
+
+      expect(adapter.isComplete(reading)).toBe(true);
+      expect(adapter.isFinal(reading)).toBe(false);
+      expect(adapter.completionHoldMs).toBe(WEIGHT_ONLY_HOLD_MS);
+    });
+
+    it('resolves at once on the frame that carries composition', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0xcf;
+      buf.writeUInt16BE(800, 4);
+      buf.writeUInt16BE(225, 6);
+      buf[8] = 35;
+      buf.writeUInt16BE(400, 9);
+      buf[11] = 8;
+      buf.writeUInt16BE(550, 12);
+      const reading = adapter.parseNotification(buf)!;
+
+      expect(adapter.isComplete(reading)).toBe(true);
+      expect(adapter.isFinal(reading)).toBe(true);
+    });
+
+    it('returns false when weight is 0', () => {
+      const adapter = makeAdapter();
+      expect(adapter.isComplete({ weight: 0, impedance: 0 })).toBe(false);
+    });
+  });
+
+  describe('onConnected()', () => {
+    it('sends user-config command with correct profile data', async () => {
+      const adapter = makeAdapter();
+      const writeFn = vi.fn().mockResolvedValue(undefined);
+      const profile = defaultProfile({ gender: 'male', height: 183, age: 30 });
+
+      const ctx: ConnectionContext = {
+        write: writeFn,
+        read: vi.fn(),
+        subscribe: vi.fn(),
+        profile,
+      };
+
+      await adapter.onConnected(ctx);
+
+      expect(writeFn).toHaveBeenCalledOnce();
+      const [charUuid, data, withResponse] = writeFn.mock.calls[0];
+      expect(charUuid).toBe(adapter.charWriteUuid);
+      expect(withResponse).toBe(false);
+
+      // Verify command structure: [0xFE, userId, sex, activity, height, age, unit, xor]
+      expect(data[0]).toBe(0xfe);
+      expect(data[1]).toBe(0x01); // userId
+      expect(data[2]).toBe(0x01); // male
+      expect(data[3]).toBe(0x01); // activity
+      expect(data[4]).toBe(183); // height
+      expect(data[5]).toBe(30); // age
+      expect(data[6]).toBe(0x01); // kg unit
+      expect(data.length).toBe(8); // includes XOR checksum
+    });
+
+    it('sends female gender code for female profile', async () => {
+      const adapter = makeAdapter();
+      const writeFn = vi.fn().mockResolvedValue(undefined);
+      const profile = defaultProfile({ gender: 'female', height: 165, age: 25 });
+
+      const ctx: ConnectionContext = {
+        write: writeFn,
+        read: vi.fn(),
+        subscribe: vi.fn(),
+        profile,
+      };
+
+      await adapter.onConnected(ctx);
+
+      const data = writeFn.mock.calls[0][1];
+      expect(data[2]).toBe(0x00); // female
+      expect(data[4]).toBe(165);
+      expect(data[5]).toBe(25);
+    });
+  });
+
+  describe('computeMetrics()', () => {
+    it('returns valid BodyComposition with cached body comp', () => {
+      const adapter = makeAdapter();
+      const buf = Buffer.alloc(14);
+      buf[0] = 0xcf;
+      buf.writeUInt16BE(800, 4);
+      buf.writeUInt16BE(225, 6);
+      buf[8] = 35;
+      buf.writeUInt16BE(400, 9);
+      buf[11] = 8;
+      buf.writeUInt16BE(550, 12);
+      adapter.parseNotification(buf);
+
+      const profile = defaultProfile();
+      const payload = adapter.computeMetrics({ weight: 80, impedance: 0 }, profile);
+      expect(payload.weight).toBe(80);
+      assertPayloadRanges(payload);
+    });
+
+    it('returns zero weight in payload for zero weight input', () => {
+      const adapter = makeAdapter();
+      const profile = defaultProfile();
+      const payload = adapter.computeMetrics({ weight: 0, impedance: 0 }, profile);
+      expect(payload.weight).toBe(0);
+    });
+  });
+});
+
+// #394: adapters are shared singletons and computeMetrics() runs LATER than the
+// parse that produced the reading. On the mqtt-proxy and esphome-proxy watchers
+// the loop awaits processReading() - network exports included - while the
+// watcher is free to open the NEXT session, so onSessionStart() for session N+1
+// can land BEFORE computeMetrics() for session N. Reading the live cache there
+// hands the completed reading somebody else's composition.
+//
+// Each test below interleaves the two in exactly that order. Asserting only on
+// the payload of an uninterrupted session would pass with or without the fix.
+
+describe('ExcelvanCF369Adapter session boundary (#394)', () => {
+  function compFrame(fatTenths: number): Buffer {
+    const buf = Buffer.alloc(14);
+    buf[0] = 0xcf; // marker
+    buf.writeUInt16BE(800, 4);
+    buf.writeUInt16BE(fatTenths, 6);
+    // bone = 3.5 kg, as in the frames above. Left at 0 it is not a measurement,
+    // and buildPayload now discards the whole composition for it (D028).
+    buf[8] = 35;
+    buf.writeUInt16BE(400, 9);
+    buf.writeUInt16BE(550, 12);
+    return buf;
+  }
+
+  it('keeps the completed reading composition when the NEXT session starts first', () => {
+    const a = makeAdapter();
+    const reading = a.parseNotification(compFrame(225))!;
+    a.onSessionStart();
+    const payload = a.computeMetrics(reading, defaultProfile());
+    expect(payload.bodyFatPercent).toBeCloseTo(22.5, 1);
+  });
+
+  it('does not hand a hand-built reading the previous session composition', () => {
+    const a = makeAdapter();
+    a.parseNotification(compFrame(225));
+    a.onSessionStart();
+    const payload = a.computeMetrics({ weight: 80, impedance: 0 }, defaultProfile());
+    expect(payload.bodyFatPercent).not.toBeCloseTo(22.5, 1);
+  });
+});

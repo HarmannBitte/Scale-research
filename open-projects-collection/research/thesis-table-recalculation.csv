@@ -1,0 +1,9 @@
+load,frequency_Hz,reported_theoretical_ohm,reported_measured_ohm,recomputed_signed_error_percent,note
+1210R,50000,1210,1195.33,-1.212396694214882,Historical thesis table; not new physical measurements and not a calibrated uncertainty statement
+1210R,100000,1210,1182.77,-2.250413223140497,Historical thesis table; not new physical measurements and not a calibrated uncertainty statement
+511R,50000,511,500.17,-2.1193737769080205,Historical thesis table; not new physical measurements and not a calibrated uncertainty statement
+511R,100000,511,507.88,-0.6105675146771046,Historical thesis table; not new physical measurements and not a calibrated uncertainty statement
+249R,50000,249,242.7,-2.530120481927715,Historical thesis table; not new physical measurements and not a calibrated uncertainty statement
+249R,100000,249,245.81,-1.281124497991967,Historical thesis table; not new physical measurements and not a calibrated uncertainty statement
+2R1C,50000,208.87,213.8,2.3603198161535914,Historical thesis table; not new physical measurements and not a calibrated uncertainty statement
+2R1C,100000,165.56,169.48,2.367721671901418,Historical thesis table; not new physical measurements and not a calibrated uncertainty statement

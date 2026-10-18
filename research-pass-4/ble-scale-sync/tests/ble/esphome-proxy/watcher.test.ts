@@ -1,0 +1,409 @@
+import { describe, it, expect, vi } from 'vitest';
+import type { BleChar } from '../../../src/ble/shared.js';
+import { normalizeUuid } from '../../../src/ble/types.js';
+import type {
+  ScaleAdapter,
+  ScaleReading,
+  BleDeviceInfo,
+} from '../../../src/interfaces/scale-adapter.js';
+
+const NOTIFY = normalizeUuid('2a9d');
+const WRITE = normalizeUuid('2a9c');
+
+const closeSpy = vi.fn(async () => {});
+const connectGattSpy = vi.fn();
+const fireDisconnectSpy = vi.fn();
+// When set, connectGatt hands back a session that never notifies and whose
+// device never reports a disconnect - an ESP32 that dropped off Wi-Fi mid-read.
+let hangSession = false;
+// When set, connectGatt rejects with this reason (a full proxy slot, a peer
+// that refuses the link).
+let failConnectWith: string | null = null;
+
+vi.mock('../../../src/ble/handler-esphome-proxy/pool.js', () => {
+  class FakeEsphomeProxyPool {
+    private subs: Array<(info: BleDeviceInfo, mac: string) => void> = [];
+    constructor(_cfg: unknown) {}
+    async start(): Promise<void> {}
+    async stop(): Promise<void> {}
+    emitAdvert(info: BleDeviceInfo, mac: string): void {
+      for (const cb of this.subs) cb(info, mac);
+    }
+    onAdvertisement(cb: (info: BleDeviceInfo, mac: string) => void): () => void {
+      this.subs.push(cb);
+      return () => {
+        this.subs = this.subs.filter((s) => s !== cb);
+      };
+    }
+    async connectGatt(mac: string) {
+      connectGattSpy(mac);
+      if (failConnectWith !== null) throw new Error(failConnectWith);
+      if (hangSession) {
+        const silent: BleChar = {
+          async read() {
+            return Buffer.alloc(0);
+          },
+          async write() {},
+          async subscribe() {
+            return () => {};
+          },
+        };
+        return {
+          charMap: new Map<string, BleChar>([
+            [NOTIFY, silent],
+            [WRITE, silent],
+          ]),
+          device: { onDisconnect: (_cb: () => void) => {}, fireDisconnect: fireDisconnectSpy },
+          close: closeSpy,
+        };
+      }
+      let notifyCb: ((d: Buffer) => void) | null = null;
+      const notifyChar: BleChar = {
+        async read() {
+          return Buffer.alloc(0);
+        },
+        async write() {},
+        async subscribe(onData) {
+          notifyCb = onData;
+          setImmediate(() => notifyCb && notifyCb(Buffer.from([0x01])));
+          return () => {};
+        },
+      };
+      const noop: BleChar = {
+        async read() {
+          return Buffer.alloc(0);
+        },
+        async write() {},
+        async subscribe() {
+          return () => {};
+        },
+      };
+      return {
+        charMap: new Map<string, BleChar>([
+          [NOTIFY, notifyChar],
+          [WRITE, noop],
+        ]),
+        device: { onDisconnect: (_cb: () => void) => {}, fireDisconnect: () => {} },
+        close: closeSpy,
+      };
+    }
+  }
+  return { EsphomeProxyPool: FakeEsphomeProxyPool };
+});
+
+const { ReadingWatcher } = await import('../../../src/ble/handler-esphome-proxy/watcher.js');
+const { bleLog } = await import('../../../src/ble/types.js');
+
+const config = { host: 'p1', port: 6053, client_info: 'x', additional_proxies: [] } as never;
+
+function gattAdapter(): ScaleAdapter {
+  return {
+    name: 'GattMock',
+    charNotifyUuid: NOTIFY,
+    charWriteUuid: WRITE,
+    unlockCommand: [],
+    unlockIntervalMs: 0,
+    matches: (info: BleDeviceInfo) => info.localName === 'GATT-scale',
+    parseNotification: (): ScaleReading => ({ weight: 82, impedance: 0 }),
+    isComplete: (r: ScaleReading) => r.weight > 0,
+    computeMetrics: (r: ScaleReading) =>
+      ({ weight: r.weight }) as ReturnType<ScaleAdapter['computeMetrics']>,
+  } as ScaleAdapter;
+}
+
+describe('ReadingWatcher GATT continuous (#116)', () => {
+  it('connects on demand, queues the GATT reading, closes, and guards re-entry', async () => {
+    closeSpy.mockClear();
+    connectGattSpy.mockClear();
+    const watcher = new ReadingWatcher(config, [gattAdapter()]);
+    await watcher.start();
+
+    // Reach the mocked pool instance the watcher created.
+    const pool = (
+      watcher as unknown as {
+        pool: { emitAdvert: (info: BleDeviceInfo, mac: string) => void };
+      }
+    ).pool;
+    const info: BleDeviceInfo = { localName: 'GATT-scale', serviceUuids: [] };
+    pool.emitAdvert(info, 'AA:BB:CC:DD:EE:02');
+    // A second advert for the same scale while the first GATT read is in flight.
+    pool.emitAdvert(info, 'AA:BB:CC:DD:EE:02');
+
+    const reading = await watcher.nextReading();
+    expect(reading.reading.weight).toBe(82);
+    expect(reading.adapter.name).toBe('GattMock');
+    expect(connectGattSpy).toHaveBeenCalledTimes(1);
+    expect(closeSpy).toHaveBeenCalled();
+
+    await watcher.stop();
+  });
+
+  it('bounds a hung GATT read instead of disabling that scale for the process', async () => {
+    // waitForRawReading only settles on a reading, a subscribe failure, or the
+    // proxy's disconnect frame. An ESP32 that vanishes sends no such frame, so
+    // an unbounded read never returns: the finally never runs, gattInFlight is
+    // never cleared (that scale is never read again) and the session is never
+    // closed (the advertisement watchdog stays disarmed for that endpoint).
+    closeSpy.mockClear();
+    connectGattSpy.mockClear();
+    fireDisconnectSpy.mockClear();
+    vi.useFakeTimers();
+    try {
+      hangSession = true;
+      const watcher = new ReadingWatcher(config, [gattAdapter()]);
+      await watcher.start();
+      const pool = (
+        watcher as unknown as {
+          pool: { emitAdvert: (info: BleDeviceInfo, mac: string) => void };
+        }
+      ).pool;
+      const info: BleDeviceInfo = { localName: 'GATT-scale', serviceUuids: [] };
+      pool.emitAdvert(info, 'AA:BB:CC:DD:EE:03');
+
+      // Past the absolute session cap. Without the bound nothing below happens.
+      await vi.advanceTimersByTimeAsync(95_000);
+
+      // Both run: the abandoned wait is told to tear itself down, and the
+      // session is closed. fireDisconnect goes first, though the order is not
+      // load-bearing - see its doc comment in gatt.ts.
+      expect(fireDisconnectSpy).toHaveBeenCalled();
+      expect(closeSpy).toHaveBeenCalled();
+
+      // The in-flight guard was released, so the scale is readable again.
+      hangSession = false;
+      pool.emitAdvert(info, 'AA:BB:CC:DD:EE:03');
+      await vi.advanceTimersByTimeAsync(0);
+      const reading = await watcher.nextReading();
+      expect(reading.reading.weight).toBe(82);
+      expect(connectGattSpy).toHaveBeenCalledTimes(2);
+
+      await watcher.stop();
+    } finally {
+      hangSession = false;
+      vi.useRealTimers();
+    }
+  });
+});
+
+describe('ReadingWatcher GATT session timeout with stored records (#331)', () => {
+  // A scale that hands over a weigh-in from its memory and then keeps the link
+  // up with nobody weighing: the session ends on the idle timeout, and the
+  // stored record has to reach the queue anyway. Adapters with a dedup mark
+  // count it as reported once they hand it over.
+  it('queues the stored record of a session that timed out', async () => {
+    vi.useFakeTimers();
+    try {
+      vi.setSystemTime(new Date('2026-10-07T20:30:00Z'));
+      const stored: ScaleReading = {
+        weight: 76.55,
+        impedance: 0,
+        timestamp: new Date('2026-10-07T19:57:25Z'),
+      };
+      const adapter = {
+        ...gattAdapter(),
+        parseNotification: (): ScaleReading => ({ ...stored }),
+      } as ScaleAdapter;
+      const watcher = new ReadingWatcher(config, [adapter]);
+      await watcher.start();
+      const pool = (
+        watcher as unknown as {
+          pool: { emitAdvert: (info: BleDeviceInfo, mac: string) => void };
+        }
+      ).pool;
+      pool.emitAdvert({ localName: 'GATT-scale', serviceUuids: [] }, 'AA:BB:CC:DD:EE:05');
+      const next = watcher.nextReading();
+
+      // Past the 60 s idle timeout, before the 90 s session cap.
+      await vi.advanceTimersByTimeAsync(65_000);
+      const raw = await Promise.race([next, Promise.resolve(null)]);
+      expect(raw?.reading).toEqual(stored);
+      expect(raw?.history ?? []).toEqual([]);
+
+      await watcher.stop();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+});
+
+describe('ReadingWatcher GATT failure logging (B-13)', () => {
+  it('keeps reporting why a scale fails after the first warning', async () => {
+    // The first failure for an address warns. Every later one used to say
+    // nothing at all, at any level, so a scale that broke for good after one
+    // transient failure left only "opening GATT via ESPHome proxy" in the log.
+    const warn = vi.spyOn(bleLog, 'warn').mockImplementation(() => {});
+    const debug = vi.spyOn(bleLog, 'debug').mockImplementation(() => {});
+    const watcher = new ReadingWatcher(config, [gattAdapter()]);
+    await watcher.start();
+    const pool = (
+      watcher as unknown as {
+        pool: { emitAdvert: (info: BleDeviceInfo, mac: string) => void };
+      }
+    ).pool;
+    const info: BleDeviceInfo = { localName: 'GATT-scale', serviceUuids: [] };
+    const mac = 'AA:BB:CC:DD:EE:04';
+    const settle = () => new Promise((r) => setImmediate(r));
+    const logged = (spy: typeof warn) => spy.mock.calls.map((c) => String(c[0])).join(' | ');
+
+    try {
+      failConnectWith = 'first-reason';
+      pool.emitAdvert(info, mac);
+      await settle();
+      expect(logged(warn)).toContain('first-reason');
+
+      failConnectWith = 'second-reason';
+      pool.emitAdvert(info, mac);
+      await settle();
+      expect(logged(warn)).not.toContain('second-reason');
+      expect(logged(debug)).toContain('second-reason');
+
+      // A success clears the record, so the next failure is news again.
+      failConnectWith = null;
+      pool.emitAdvert(info, mac);
+      await watcher.nextReading();
+      await settle();
+      failConnectWith = 'third-reason';
+      pool.emitAdvert(info, mac);
+      await settle();
+      expect(logged(warn)).toContain('third-reason');
+    } finally {
+      failConnectWith = null;
+      warn.mockRestore();
+      debug.mockRestore();
+      await watcher.stop();
+    }
+  });
+});
+
+/**
+ * The watcher is built and hot-reloaded from src/runtime/sources.ts. Before,
+ * it never received `scale.weight_unit` (a GATT read from an adapter without
+ * `normalizesWeight` was exported as kg whatever the unit), and a reload that
+ * removed the Beurer PIN kept the old one because updateConfig only assigned a
+ * truthy scaleAuth.
+ */
+describe('ReadingWatcher config: weight unit, PIN removal, device name', () => {
+  type Pool = { emitAdvert: (info: BleDeviceInfo, mac: string) => void };
+  const poolOf = (w: unknown): Pool => (w as { pool: Pool }).pool;
+  const ADVERT: BleDeviceInfo = { localName: 'GATT-scale', serviceUuids: [] };
+
+  it('converts a GATT reading with the configured lbs unit, and follows a reload', async () => {
+    const adapters = [gattAdapter()];
+    const watcher = new ReadingWatcher(config, adapters, undefined, undefined, undefined, 'lbs');
+    await watcher.start();
+    poolOf(watcher).emitAdvert(ADVERT, 'AA:BB:CC:DD:EE:10');
+    expect((await watcher.nextReading()).reading.weight).toBeCloseTo(82 * 0.45359237, 2);
+
+    watcher.updateConfig({ adapters, weightUnit: 'kg' });
+    poolOf(watcher).emitAdvert(ADVERT, 'AA:BB:CC:DD:EE:11');
+    expect((await watcher.nextReading()).reading.weight).toBe(82);
+    await watcher.stop();
+  });
+
+  it('drops the PIN when a reload no longer carries one, and passes the device name', async () => {
+    const seen: Array<{ pin?: number; name?: string }> = [];
+    const adapter = {
+      ...gattAdapter(),
+      onConnected: async (ctx: Parameters<NonNullable<ScaleAdapter['onConnected']>>[0]) => {
+        seen.push({ pin: ctx.scaleAuth?.pin, name: ctx.deviceName });
+      },
+    } as ScaleAdapter;
+    const watcher = new ReadingWatcher(config, [adapter], undefined, undefined, { pin: 1234 });
+    watcher.updateConfig({ adapters: [adapter], scaleAuth: undefined });
+    await watcher.start();
+    poolOf(watcher).emitAdvert(ADVERT, 'AA:BB:CC:DD:EE:12');
+    await watcher.nextReading();
+    expect(seen).toEqual([{ pin: undefined, name: 'GATT-scale' }]);
+    await watcher.stop();
+  });
+
+  it('resolves the user profile again for every GATT session (#331)', async () => {
+    const anchors: Array<number | undefined> = [];
+    const adapter = {
+      ...gattAdapter(),
+      onConnected: async (ctx: Parameters<NonNullable<ScaleAdapter['onConnected']>>[0]) => {
+        anchors.push(ctx.profile.lastKnownWeight);
+      },
+    } as ScaleAdapter;
+    // The processor moves last_known_weight after every export; the watcher
+    // must not keep the value it had when it was built.
+    const weights = [70, 72.5];
+    const profile = vi.fn(() => ({
+      height: 180,
+      age: 40,
+      gender: 'male' as const,
+      isAthlete: false,
+      lastKnownWeight: weights.shift(),
+    }));
+    const watcher = new ReadingWatcher(config, [adapter], undefined, profile);
+    await watcher.start();
+    poolOf(watcher).emitAdvert(ADVERT, 'AA:BB:CC:DD:EE:13');
+    await watcher.nextReading();
+    poolOf(watcher).emitAdvert(ADVERT, 'AA:BB:CC:DD:EE:14');
+    await watcher.nextReading();
+    expect(anchors).toEqual([70, 72.5]);
+    await watcher.stop();
+  });
+});
+
+// #461: the proxy delivers the advertisement and its scan response as two
+// events, and the one that matches (named) need not carry the manufacturer
+// data. The bytes are the #461 Physiq advertisement (node-ble log); the split
+// into a nameless event with them and a named one without is synthetic.
+describe('ReadingWatcher manufacturer data handoff (#461)', () => {
+  type Pool = { emitAdvert: (info: BleDeviceInfo, mac: string) => void };
+  const poolOf = (w: unknown): Pool => (w as { pool: Pool }).pool;
+  const MFG_461 = {
+    id: 0xffff,
+    data: Buffer.from('081401000025e0160005ff6108010015', 'hex'),
+  };
+  const MAC = 'FF:05:00:16:E0:25';
+
+  function recordingAdapter(
+    matched: BleDeviceInfo[],
+    ctxMfg: Array<{ id: number; data: Buffer } | undefined>,
+  ): ScaleAdapter {
+    return {
+      ...gattAdapter(),
+      matches: (info: BleDeviceInfo) => {
+        if (info.localName !== 'GATT-scale') return false;
+        matched.push(info);
+        return true;
+      },
+      onConnected: async (ctx: Parameters<NonNullable<ScaleAdapter['onConnected']>>[0]) => {
+        ctxMfg.push(ctx.manufacturerData);
+      },
+    } as ScaleAdapter;
+  }
+
+  it('hands the last seen manufacturer data to the session, not to the matcher', async () => {
+    const matched: BleDeviceInfo[] = [];
+    const ctxMfg: Array<{ id: number; data: Buffer } | undefined> = [];
+    const watcher = new ReadingWatcher(config, [recordingAdapter(matched, ctxMfg)]);
+    await watcher.start();
+    poolOf(watcher).emitAdvert({ localName: '', serviceUuids: [], manufacturerData: MFG_461 }, MAC);
+    poolOf(watcher).emitAdvert(
+      { localName: 'GATT-scale', serviceUuids: [normalizeUuid('ffe0')] },
+      MAC,
+    );
+    await watcher.nextReading();
+    expect(ctxMfg).toEqual([MFG_461]);
+    // Advertisement-time and post-discovery resolution both saw the named event
+    // as it arrived, without the cached manufacturer data.
+    expect(matched.length).toBeGreaterThan(0);
+    expect(matched.every((info) => info.manufacturerData === undefined)).toBe(true);
+    await watcher.stop();
+  });
+
+  it('hands none when no event for that address carried any', async () => {
+    const matched: BleDeviceInfo[] = [];
+    const ctxMfg: Array<{ id: number; data: Buffer } | undefined> = [];
+    const watcher = new ReadingWatcher(config, [recordingAdapter(matched, ctxMfg)]);
+    await watcher.start();
+    poolOf(watcher).emitAdvert({ localName: '', serviceUuids: [], manufacturerData: MFG_461 }, MAC);
+    poolOf(watcher).emitAdvert({ localName: 'GATT-scale', serviceUuids: [] }, 'AA:BB:CC:DD:EE:31');
+    await watcher.nextReading();
+    expect(ctxMfg).toEqual([undefined]);
+    await watcher.stop();
+  });
+});

@@ -1,0 +1,26 @@
+area,status,evidence_or_limit
+FIFO bounds,implemented and host-tested,Reject oversized/partial batches before read; maximum 32 frames
+Output count discipline,implemented and host-tested,Zero on early errors; explicit captured invalid count after successful raw transfer
+Calibration return codes,implemented and host-tested,Driver calibration result mocked; real HSRtiaCal not executed on hardware
+Calibration invalidation,implemented and host-tested,Private configuration and coefficient snapshots
+Numerical guards,implemented and host-tested,Positive current floor; finite checks; complex double arithmetic; wrapped phase
+Immutable raw FIFO,implemented and host-tested,Full original words and signed DFT counts separate from results
+Post-read hardware flags,implemented and host-tested,Captured raw retained with invalid results
+Application sweeps,disabled,Fixed nominal 50 kHz only; sweep operation not qualified
+Generic library helper guards,selected fixes and host-tested,Invalid sweeps/waveform inputs; no all-library qualification
+Selected BIA waits,bounded and host-tested in part,Exact helper probes plus stalled fake SPI/delay registers
+MCU oscillator and UART waits,source modified only,Actual MCU main not target-built or exercised
+SPI error receive-buffer handling,implemented and host-tested in part,Stalled actual port path zeroes buffer; no real SPI transactions
+Fault stop/reset,source implemented and mocks checked,Actual stop timing and electrical outcome unverified
+Framed stream,implemented and host-tested,BIA1 length plus CRC32 ASCII JSON
+Raw calibration trace,source implemented with synthetic export tests,Real calibration routine not physically executed
+Configuration readback,implemented and host-tested in part,Chip ID and FCW; not full register dump or independent frequency measurement
+Strict offline parser,implemented and host-tested,New fork protocol only; not vendor SensorPal adapter
+Startup gates,implemented and host-tested,Default unarmed; explicit run ID and characterized RCAL/current floor required
+Electrical clipping/compliance/lead-off,not implemented or validated,Unknown/null; never qualification-eligible
+Acquisition timestamps,not implemented,Null; no fabricated hardware timestamp
+Reference certificate and full build provenance,incomplete,External traceability and full capture still required
+Nonblocking transport queue,not implemented,Bounded blocking output and fail-stop batch policy instead
+Target firmware build,not performed,Native GCC objects/probes only; no embedded image
+Board and reference-fixture measurements,not performed,No physical measurement or accuracy claim
+Human-connected use,not authorized,Evaluation board must not be connected to people

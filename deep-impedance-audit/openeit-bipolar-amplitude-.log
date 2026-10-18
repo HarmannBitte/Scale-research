@@ -1,0 +1,9 @@
+unipolar_word=1533
+bipolar_word=61323
+bipolar_word_hex=0xEF8B
+sequence_word=0x9E00EF8B address_field_ok=1
+field_after_11bit_mask=1931
+field_mV_equiv_at_0.39072mV_per_code=754.48
+intended_mV_equiv=23960.00
+full_scale_11bit_mV=799.80
+unipolar_mV_equiv=598.97

@@ -1,0 +1,1 @@
+Sources and per-file manifests are in ../Open-Source-Projects-Collection.tar.xz. Extract it; run tools/verify_collection.py. The intermediate ZIPs were removed only after the extracted final archive passed verification, to avoid duplicate storage.

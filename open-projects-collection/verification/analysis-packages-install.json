@@ -1,0 +1,19 @@
+{
+  "name": "analysis-packages-install",
+  "status": "pass",
+  "command": [
+    "/home/user/.cache/open-projects/analysis-env/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "/home/user/.cache/open-projects/full/vyrjana__pyimpspec/pyimpspec-c822717c7f1c942cb707c5bcd74d3ad034f8166c",
+    "/home/user/.cache/open-projects/full/vyrjana__DearEIS/DearEIS-0c683ba5708774cc9590f8923dd8ed1c1e67c3e2",
+    "pytest"
+  ],
+  "cwd": "/home/user/.cache/open-projects",
+  "timeout_seconds": 180,
+  "duration_seconds": 38.61265129500043,
+  "exit_code": 0,
+  "log": "analysis-packages-install.log",
+  "log_sha256": "1cefebb31fc2ec07581e7e234f7d779af1c886feb46ed3cfe1fb8b72152a56ae"
+}

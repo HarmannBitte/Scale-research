@@ -1,0 +1,8 @@
+{
+  "device_pack_url": "https://download.analog.com/tools/EZBoards/CM302x/Releases/AnalogDevices.ADuCM302x_DFP.3.2.1.pack",
+  "device_pack_archive_sha256": "845c537cac31a8f1a7e745e7c89970ad222e18aa5079e961cd17485dc89b7f7e",
+  "cmsis_tag": "5.2.0",
+  "cmsis_commit": "80cc44bba16cb4c8f495b7aa9709d41ac50e9529",
+  "cmsis_source": "https://github.com/ARM-software/CMSIS_5",
+  "retained_scope": "All DFP include files, GCC startup/linker files, system source, full DFP licenses; CMSIS Core include files and LICENSE.txt only"
+}

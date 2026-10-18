@@ -1,0 +1,39 @@
+name: Deploy Worker
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'worker/**'
+      - '.github/workflows/worker.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+          cache-dependency-path: worker/package-lock.json
+
+      # Installs the wrangler pinned in worker/package-lock.json so
+      # wrangler-action finds it locally. Without this the action falls back to
+      # a fresh `npm i wrangler@4`, which resolves to a wrangler whose optional
+      # peer @cloudflare/workers-types has moved to v5 and fails ERESOLVE
+      # against the v4 pinned here.
+      - name: Install worker dependencies
+        run: npm ci
+        working-directory: worker
+
+      - name: Deploy to Cloudflare Workers
+        # Pinned to a commit: this step receives the Cloudflare API token.
+        uses: cloudflare/wrangler-action@953926a2e2182532811c01a25e53647d93bf07c0 # v4.1.3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: worker
+          command: deploy

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "impedance-py-bounded-upstream-tests",
+    "command": [
+      "/home/user/.cache/open-projects/test-env/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "impedance/tests",
+      "-k",
+      "not test_circuit_fit",
+      "--disable-warnings"
+    ],
+    "cwd": "/home/user/.cache/open-projects/full/ECSHackWeek__impedance.py/impedance.py-e175ad2b2ce66006423038480cc8ce4d899d7886",
+    "environment_overrides": {
+      "MPLBACKEND": "Agg",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1"
+    },
+    "timeout_seconds": 90,
+    "status": "failed",
+    "exit_code": 1,
+    "duration_seconds": 7.136,
+    "log": "impedance-py-bounded-upstream-tests.log",
+    "log_sha256": "743160bbfe4f2943649b9f97ffb4c61435983331ac781e3f431ed0c8a22872c6"
+  },
+  {
+    "name": "impedance-py-synthetic-rc-check",
+    "command": [
+      "/home/user/.cache/open-projects/test-env/bin/python",
+      "/home/user/open-projects-collection/verification/synthetic-rc-check.py"
+    ],
+    "cwd": "/home/user/.cache/open-projects/full/ECSHackWeek__impedance.py/impedance.py-e175ad2b2ce66006423038480cc8ce4d899d7886",
+    "environment_overrides": {
+      "MPLBACKEND": "Agg",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1"
+    },
+    "timeout_seconds": 60,
+    "status": "pass",
+    "exit_code": 0,
+    "duration_seconds": 4.268,
+    "log": "impedance-py-synthetic-rc-check.log",
+    "log_sha256": "966ebcad22fd73aefa4507de1e15fa243fcc33c0f51e23dd70a970151ef6be90"
+  },
+  {
+    "name": "pyimpspec-install-dry-run",
+    "command": [
+      "/home/user/.cache/open-projects/test-env/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--dry-run",
+      "/home/user/.cache/open-projects/vyrjana__pyimpspec"
+    ],
+    "cwd": "/home/user/.cache/open-projects",
+    "environment_overrides": {
+      "MPLBACKEND": "Agg",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1"
+    },
+    "timeout_seconds": 90,
+    "status": "failed",
+    "exit_code": 1,
+    "duration_seconds": 5.337,
+    "log": "pyimpspec-install-dry-run.log",
+    "log_sha256": "3ee708ebd7799c7fb2c11fbd5a9ec1a283856ad989396f163aa443c7dbecf40f"
+  }
+]

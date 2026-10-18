@@ -1,0 +1,224 @@
+# ============================================================
+# BLE Scale Sync, Example Configuration
+# ============================================================
+# Copy this file to config.yaml and edit the values.
+# Run "npm run validate" to check your config.
+# Run "npm run setup" for an interactive wizard.
+#
+# Secrets: use ${ENV_VAR} references (resolved from .env or
+# environment variables at load time).
+# ============================================================
+
+version: 1
+
+# --- BLE Settings (optional, uncomment to pin to a specific scale) ---
+# ble:
+#   scale_mac: "FF:03:00:13:A1:04"   # Run "npm run scan" to find yours
+#   bind_key: "${XIAOMI_BIND_KEY}"     # Xiaomi S800 / S400: 32-hex MiBeacon key from the Mi cloud
+#   noble_driver: abandonware         # "abandonware" | "stoprocent"
+#   handler: auto                     # "auto" | "mqtt-proxy" | "esphome-proxy" | "ha-bluetooth"
+#   adapter: hci0                     # Linux only: select BLE adapter (omit for default)
+#   force_scale_adapter: "Hutbit"     # override protocol auto-detection (requires scale_mac)
+#   session_timeout_sec: 20           # seconds one GATT session waits for a reading (default 120)
+#   preemptive_adapter_reset: false   # Linux node-ble: skip the btmgmt power-cycle after each session (default true)
+#   adapter_privacy: true             # Linux node-ble: LE privacy so Beurer scales keep the pairing (adapter-wide, see docs)
+#   qn_protocol_byte: 0               # QN scales only: 0 to 255, see below
+#
+# scale_mac: omit for auto-discovery. On macOS, use the CoreBluetooth UUID.
+# noble_driver: default is node-ble (Linux), abandonware (Windows), stoprocent (macOS).
+# handler: "auto" uses local Bluetooth. "mqtt-proxy" uses an ESP32 BLE-to-MQTT bridge.
+#          "esphome-proxy" uses an existing ESPHome BT proxy via Native API (port 6053).
+#          "ha-bluetooth" subscribes to Home Assistant's Bluetooth advertisement stream (broadcast scales only).
+# adapter: Linux only, select which Bluetooth adapter to use (e.g., hci1 for a USB dongle).
+#          Run "hciconfig" or "btmgmt info" to list available adapters.
+#          Ignored on macOS/Windows. Omit to use the first adapter (hci0).
+# force_scale_adapter: name of the scale protocol adapter to use, exactly as printed in the
+#          "Adapters:" line at startup. Only for when auto-detection picks the wrong one;
+#          it bypasses matching entirely, so scale_mac is required. Please also open an
+#          issue when you need this, so the matcher itself can be fixed.
+# session_timeout_sec: 5 to 600, native BLE handlers only. Lower it for scales that refuse to
+#          run a standalone weigh-in while a host holds the session open (e.g. Beurer BF500,
+#          which displays "APP"). Shorter sessions mean more adapter resets and trip the
+#          runtime.watchdog_max_consecutive_failures limit sooner.
+# qn_protocol_byte: QN-family scales only (Renpho, Arboleaf, FITINDEX, GE and rebadges). The
+#          protocol byte the handshake echoes back to the scale. Set it only when a QN scale
+#          connects, completes the whole handshake in the debug log and then never reports a
+#          weight. Try 0, or 255, or the value the "QN: scale info" log line reports.
+# qn_report_byte: QN-family scales only. Leave it unset: it deletes data on the scale. When
+#          set, every connection sends the command that deletes the user slots this mask
+#          selects (252 = slots 3 to 8, 254 = slots 2 to 8), which can remove other people's
+#          users on a shared scale. Only for a scale that stopped reporting without it; see
+#          the configuration guide.
+#
+# --- ESP32 MQTT Proxy (when handler: mqtt-proxy) ---
+#   mqtt_proxy:
+#     broker_url: "mqtt://192.168.1.50:1883"  # MQTT broker URL
+#     device_id: esp32-ble-proxy               # must match ESP32 config.json
+#     topic_prefix: ble-proxy                  # must match ESP32 config.json
+#     username: myuser                         # optional
+#     password: "${MQTT_PASSWORD}"             # optional
+#
+# --- Home Assistant Bluetooth (when handler: ha-bluetooth) ---
+#   ha_bluetooth:
+#     url: "http://homeassistant.local:8123"  # HA base URL (http/https) or ws(s)://.../api/websocket
+#     token: "${HA_TOKEN}"                    # long-lived access token of an ADMIN user, from .env
+#     source: "9c:13:9e:34:82:08"           # optional: only this HA scanner (source id)
+
+# --- Scale Units ---
+
+scale:
+  weight_unit: kg   # kg | lbs (display only, calculations always use kg)
+  height_unit: cm   # cm | in  (for height input below)
+  display_unit: weight_unit # weight_unit | kg | lbs | st (physical display, QN-family scales only)
+
+# --- Multi-User Matching ---
+# Strategy when weight falls outside all configured ranges:
+#   "nearest" = assign to closest range midpoint (with warning)
+#   "log"     = log warning and skip the measurement
+#   "ignore"  = silently skip the measurement
+unknown_user: nearest
+
+# What to do with a reading no user's weight_range covers.
+#   "warn" (default) = log it and export it anyway (the behaviour before
+#                      this option existed)
+#   "skip"           = log it and stop: no export, and last_known_weight is
+#                      left alone so the next weigh-in still matches correctly
+out_of_range: warn
+
+# --- Users ---
+# At least one user is required. For multi-user setups,
+# define weight_range so the app can identify who stepped on the scale.
+
+users:
+  - name: Alice
+    slug: alice                          # unique, lowercase, used in MQTT topics & InfluxDB tags
+    height: 168
+    birth_date: "1995-03-20"
+    gender: female
+    is_athlete: false
+    weight_range: { min: 50, max: 75 }   # always in kg
+    last_known_weight: null               # auto-updated after each measurement
+
+    # Beurer BF7xx / BF9xx only (consent-gated SIG scales):
+    # beurer_pin: 1234                    # code the scale was paired with; 0 on a wiped scale
+    # beurer_user_index: 1                # scale user slot the code belongs to
+    # beurer_provision: false             # write this profile into a scale that has none stored
+
+    # Per-user exporters (optional). They are added to global_exporters; a type
+    # listed here replaces the global entry of that type for this user.
+    # exporters:
+    #   - type: garmin
+    #     email: alice@example.com
+    #     password: "${GARMIN_PASSWORD_ALICE}"
+    #     token_dir: ./garmin-tokens/alice
+    #   - type: strava
+    #     client_id: "${STRAVA_CLIENT_ID}"
+    #     client_secret: "${STRAVA_CLIENT_SECRET}"
+    #     token_dir: ./strava-tokens/alice   # run "npm run setup-strava" after config
+    #   - type: intervals
+    #     athlete_id: i123456                # Intervals.icu Settings → Developer
+    #     api_key: "${INTERVALS_API_KEY}"
+    #   - type: dreeve
+    #     base_url: https://dreeve.example   # your Dreeve APP_URL (Dreeve 5.3.3 or newer)
+    #     token: "${DREEVE_TOKEN}"           # key from Settings -> Security -> API access
+    #     unit_system: metric                # metric | imperial, as Settings -> Appearance
+    #   - type: wger                         # self-hosted weight/workout manager
+    #     base_url: https://wger.de          # your instance URL
+    #     token: "${WGER_TOKEN}"             # API key from <base_url>/en/user/api-key
+    #     sync_measurements: true            # also push body fat/water/muscle/bone
+    #   - type: healthlog                    # self-hosted health tracker
+    #     base_url: https://healthlog.example  # your instance URL
+    #     token: "${HEALTHLOG_TOKEN}"        # Measurement ingest token (Settings -> API & Tokens)
+    #     sync_measurements: true            # also push body fat/water/muscle/bone/visceral
+
+  - name: Bob
+    slug: bob
+    height: 183
+    birth_date: "1990-06-15"
+    gender: male
+    is_athlete: true
+    weight_range: { min: 75, max: 100 }
+    last_known_weight: 85.5
+
+# --- Global Exporters ---
+# Shared by all users; a user's own exporter of the same type replaces the global
+# one for that user.
+# All enabled exporters run in parallel.
+
+global_exporters:
+  # -- Garmin Connect --
+  - type: garmin
+    email: "${GARMIN_EMAIL}"
+    password: "${GARMIN_PASSWORD}"
+    token_dir: ~/.garmin_tokens
+    # weight_only: true    # upload the weight alone; BMI, body fat, water, bone,
+    #                      # muscle, visceral fat, physique rating and metabolic
+    #                      # age are left unset in Garmin Connect
+    # skip_metabolic_age: true    # upload everything except metabolic age
+
+  # -- MQTT (Home Assistant auto-discovery) --
+  # - type: mqtt
+  #   broker_url: "mqtt://localhost:1883"  # use mqtts:// for TLS
+  #   topic: scale/body-composition
+  #   qos: 1                               # 0, 1, or 2
+  #   retain: true
+  #   username: myuser
+  #   password: "${MQTT_PASSWORD}"
+  #   client_id: ble-scale-sync
+  #   ha_discovery: true                   # Home Assistant auto-discovery
+  #   ha_device_name: BLE Scale
+
+  # -- Webhook (generic HTTP) --
+  # - type: webhook
+  #   url: "https://example.com/hook"
+  #   method: POST
+  #   headers:
+  #     X-Api-Key: secret123
+  #   timeout: 10000
+
+  # -- InfluxDB v2 --
+  # - type: influxdb
+  #   url: "http://localhost:8086"
+  #   token: "${INFLUXDB_TOKEN}"
+  #   org: my-org
+  #   bucket: my-bucket
+  #   measurement: body_composition
+
+  # -- Ntfy (push notifications) --
+  # - type: ntfy
+  #   url: "https://ntfy.sh"
+  #   topic: "<long-random-topic-name>"   # your own: on ntfy.sh the topic is the password
+  #   title: Scale Measurement
+  #   priority: 3
+  #   token: "${NTFY_TOKEN}"               # Bearer token auth
+  #   # username: myuser                   # or Basic auth
+  #   # password: "${NTFY_PASSWORD}"
+
+  # -- Telegram (bot notifications) --
+  # - type: telegram
+  #   bot_token: "${TELEGRAM_BOT_TOKEN}"   # token from @BotFather
+  #   chat_id: "987654321"                 # numeric ID or @channelusername
+  #   title: Scale Measurement
+  #   silent: false                        # true = no notification sound
+
+  # -- File (CSV/JSONL) --
+  # - type: file
+  #   file_path: "./measurements.csv"      # path to output file
+  #   format: csv                          # "csv" or "jsonl"
+
+# --- Runtime Settings ---
+
+runtime:
+  continuous_mode: false    # true = keep scanning in a loop (ideal for Raspberry Pi)
+  scan_cooldown: 30         # seconds between scans in continuous mode (5–3600)
+  idle_rescan_delay: 5      # seconds before rescanning when no scale was found (0-3600)
+  retry_failed_exports: true # keep a reading whose export failed and retry it later
+  dry_run: false            # true = read scale + compute body comp, skip all exports
+  debug: false              # true = verbose BLE logging
+
+# --- Update Check ---
+# On each successful measurement (max once per 24h), the app sends a lightweight
+# GET request to check for newer versions. Only the app version, OS, and architecture
+# are sent via the User-Agent header. No personal data is collected.
+# Disable with: update_check: false
+update_check: true

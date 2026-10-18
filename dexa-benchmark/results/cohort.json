@@ -1,0 +1,216 @@
+[
+  {
+    "cycle": "1999",
+    "flow": [
+      {
+        "stage": "one-to-one merged unique participants",
+        "n": 4079
+      },
+      {
+        "stage": "adults 18\u201349",
+        "n": 2820,
+        "excluded": 1259
+      },
+      {
+        "stage": "not known pregnant",
+        "n": 2540,
+        "excluded": 280
+      },
+      {
+        "stage": "DXA complete and no region imputed",
+        "n": 2047,
+        "excluded": 493
+      },
+      {
+        "stage": "all target components present",
+        "n": 2047,
+        "excluded": 0
+      },
+      {
+        "stage": "BIA complete, excellent/good Cole fit",
+        "n": 1816,
+        "excluded": 231
+      },
+      {
+        "stage": "all 100 raw channels finite, resistance positive",
+        "n": 1816,
+        "excluded": 0
+      },
+      {
+        "stage": "complete positive expanded anthropometry",
+        "n": 1802,
+        "excluded": 14
+      },
+      {
+        "stage": "recorded sex present",
+        "n": 1802,
+        "excluded": 0
+      }
+    ],
+    "tiny_zero_corrections": {
+      "DEMO": 57018,
+      "BMX": 56,
+      "BIX": 4001,
+      "DXX": 608245
+    },
+    "n": 1802,
+    "recorded_sex": {
+      "1.0": 936,
+      "2.0": 866
+    },
+    "age_min": 18.0,
+    "age_max": 49.0,
+    "bmi_min": 15.1644261404317,
+    "bmi_max": 47.58812784365137,
+    "negative_reactance_values": 0,
+    "targets": {
+      "fat_pct": {
+        "count": 1802.0,
+        "mean": 31.661986681465034,
+        "std": 9.292659366091847,
+        "min": 11.6,
+        "25%": 24.8,
+        "50%": 31.3,
+        "75%": 39.075,
+        "max": 55.5
+      },
+      "fat_kg": {
+        "count": 1802.0,
+        "mean": 24.77796381798002,
+        "std": 10.494101992319191,
+        "min": 6.4403999999999995,
+        "25%": 16.9402,
+        "50%": 23.3217,
+        "75%": 31.093075,
+        "max": 71.5978
+      },
+      "lean_kg": {
+        "count": 1802.0,
+        "mean": 49.55505588235294,
+        "std": 11.24774306905452,
+        "min": 25.241799999999998,
+        "25%": 40.67815,
+        "50%": 48.60705,
+        "75%": 57.10575,
+        "max": 90.6582
+      },
+      "alm_kg": {
+        "count": 1802.0,
+        "mean": 22.268846725860158,
+        "std": 5.899549660565825,
+        "min": 10.4705,
+        "25%": 17.6269,
+        "50%": 21.86605,
+        "75%": 26.42065,
+        "max": 45.343
+      }
+    }
+  },
+  {
+    "cycle": "2001",
+    "flow": [
+      {
+        "stage": "one-to-one merged unique participants",
+        "n": 5949
+      },
+      {
+        "stage": "adults 18\u201349",
+        "n": 3299,
+        "excluded": 2650
+      },
+      {
+        "stage": "not known pregnant",
+        "n": 2973,
+        "excluded": 326
+      },
+      {
+        "stage": "DXA complete and no region imputed",
+        "n": 2406,
+        "excluded": 567
+      },
+      {
+        "stage": "all target components present",
+        "n": 2406,
+        "excluded": 0
+      },
+      {
+        "stage": "BIA complete, excellent/good Cole fit",
+        "n": 2089,
+        "excluded": 317
+      },
+      {
+        "stage": "all 100 raw channels finite, resistance positive",
+        "n": 2089,
+        "excluded": 0
+      },
+      {
+        "stage": "complete positive expanded anthropometry",
+        "n": 2066,
+        "excluded": 23
+      },
+      {
+        "stage": "recorded sex present",
+        "n": 2066,
+        "excluded": 0
+      }
+    ],
+    "tiny_zero_corrections": {
+      "DEMO": 2123,
+      "BMX": 0,
+      "BIX": 4380,
+      "DXX": 824255
+    },
+    "n": 2066,
+    "recorded_sex": {
+      "1.0": 1077,
+      "2.0": 989
+    },
+    "age_min": 18.0,
+    "age_max": 49.0,
+    "bmi_min": 15.800598402869001,
+    "bmi_max": 52.085528081578374,
+    "negative_reactance_values": 0,
+    "targets": {
+      "fat_pct": {
+        "count": 2066.0,
+        "mean": 30.957163601161664,
+        "std": 8.865312848541755,
+        "min": 11.8,
+        "25%": 24.6,
+        "50%": 30.4,
+        "75%": 37.8,
+        "max": 53.8
+      },
+      "fat_kg": {
+        "count": 2066.0,
+        "mean": 23.941269748305906,
+        "std": 9.842846318185043,
+        "min": 6.940600000000001,
+        "25%": 16.596125,
+        "50%": 22.47965,
+        "75%": 29.6833,
+        "max": 70.68430000000001
+      },
+      "lean_kg": {
+        "count": 2066.0,
+        "mean": 49.69480464666022,
+        "std": 11.06396929590874,
+        "min": 23.9693,
+        "25%": 40.686525,
+        "50%": 49.06975,
+        "75%": 57.652825,
+        "max": 87.9761
+      },
+      "alm_kg": {
+        "count": 2066.0,
+        "mean": 22.21784288480155,
+        "std": 5.839276327575385,
+        "min": 9.848,
+        "25%": 17.431825,
+        "50%": 21.92365,
+        "75%": 26.4952,
+        "max": 43.7462
+      }
+    }
+  }
+]

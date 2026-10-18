@@ -1,0 +1,38 @@
+{
+  "warning_count_total_two_profiles": 26,
+  "warnings": [
+    "source/examples/ad5940lib/ad5940.c:1167:13: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]",
+    "source/examples/ad5940lib/ad5940.c:2998:14: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]",
+    "source/examples/ad5940lib/ad5940.c:3416:54: warning: unused parameter 'pHSTIAOffsetCal' [-Wunused-parameter]",
+    "source/examples/ad5940lib/ad5940.c:3253:31: warning: 'HSDACCode' may be used uninitialized [-Wmaybe-uninitialized]",
+    "source/examples/AD5940_BIA/BodyImpedance.c:104:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]",
+    "source/examples/AD5940_BIA/BodyImpedance.c:589:32: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]",
+    "source/examples/AD5940_BIA/BodyImpedance.c:584:50: warning: unused parameter 'pData' [-Wunused-parameter]",
+    "source/examples/AD5940_BIA/BenchLog.inc:24:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]",
+    "source/examples/AD5940_BIA/BenchLog.inc:54:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]",
+    "source/examples/AD5940_BIA/ADICUP3029/main.c:31:32: warning: unused parameter 'pCfg' [-Wunused-parameter]",
+    "source/examples/AD5940_BIA/ADICUP3029/main.c:144:24: warning: unused parameter 'f' [-Wunused-parameter]",
+    "source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c:22:1: warning: 'static' is not at beginning of declaration [-Wold-style-declaration]",
+    "source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c:117:39: warning: unused parameter 'pCfg' [-Wunused-parameter]",
+    "source/examples/ad5940lib/ad5940.c:1167:13: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]",
+    "source/examples/ad5940lib/ad5940.c:2998:14: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]",
+    "source/examples/ad5940lib/ad5940.c:3416:54: warning: unused parameter 'pHSTIAOffsetCal' [-Wunused-parameter]",
+    "source/examples/ad5940lib/ad5940.c:3253:31: warning: 'HSDACCode' may be used uninitialized [-Wmaybe-uninitialized]",
+    "source/examples/AD5940_BIA/BodyImpedance.c:104:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]",
+    "source/examples/AD5940_BIA/BodyImpedance.c:589:32: warning: comparison of integer expressions of different signedness: 'uint32_t' {aka 'long unsigned int'} and 'int32_t' {aka 'long int'} [-Wsign-compare]",
+    "source/examples/AD5940_BIA/BodyImpedance.c:584:50: warning: unused parameter 'pData' [-Wunused-parameter]",
+    "source/examples/AD5940_BIA/BenchLog.inc:24:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]",
+    "source/examples/AD5940_BIA/BenchLog.inc:54:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]",
+    "source/examples/AD5940_BIA/ADICUP3029/main.c:31:32: warning: unused parameter 'pCfg' [-Wunused-parameter]",
+    "source/examples/AD5940_BIA/ADICUP3029/main.c:144:24: warning: unused parameter 'f' [-Wunused-parameter]",
+    "source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c:22:1: warning: 'static' is not at beginning of declaration [-Wold-style-declaration]",
+    "source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c:117:39: warning: unused parameter 'pCfg' [-Wunused-parameter]"
+  ],
+  "triage": {
+    "HSDACCode may be used uninitialized": "Existing AD5940_ADCPGACal code, not selected by BIA. Function absent from BOTH linked ELFs. Not fixed or claimed qualified.",
+    "sign compare": "Existing positive-range comparisons; BIA NumOfData guarded >0; WakeUp TryCount<=0 branches before comparison; register initialization loop small constant table. No all-library input qualification.",
+    "misleading indentation": "Compressed hardening code; unconditional return statements are intentional. No new semantic change for this build.",
+    "unused parameter and declaration order": "Inherited port/stub conventions; not runtime proof."
+  },
+  "warning_free_build": false
+}

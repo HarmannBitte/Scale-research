@@ -1,0 +1,4 @@
+reg17=133 reg20=160 raw_mdiv=512 gain=10 current_uA=45.2488687783 coeff_ohm_per_count=0.00662128426021
+interval_seconds=0.00389863547758 sample_interval_us_assigned_as_upstream=0 samples_per_second=256.5
+low_frequency_Hz=4104
+high_frequency_Hz=131328

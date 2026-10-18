@@ -1,0 +1,6 @@
+  seq10 bioz=1010.0
+intact file -> samples read: 30
+  seq10 bioz=1010.000001899898
+one corrupted byte in block 2 (CRC not checked) -> samples read: 30
+  seq10 bioz=1010.000001899898
+truncated by 200 bytes -> samples read: 26

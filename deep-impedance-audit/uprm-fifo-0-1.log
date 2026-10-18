@@ -1,0 +1,43 @@
+=================================================================
+==1912==ERROR: AddressSanitizer: dynamic-stack-buffer-overflow on address 0x7ffe4f32e321 at pc 0x00000040163e bp 0x7ffe4f32e270 sp 0x7ffe4f32e268
+WRITE of size 1 at 0x7ffe4f32e321 thread T0
+    #0 0x40163d in spiBurst /home/user/deep-impedance-audit/generated/uprm-fifo.c:35
+    #1 0x40190c in main /home/user/deep-impedance-audit/generated/uprm-fifo.c:81
+    #2 0x7fa902035ca7  (/lib/x86_64-linux-gnu/libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)
+    #3 0x7fa902035d64 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x29d64) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)
+    #4 0x401160 in _start (/home/user/.cache/open-projects/deep-audit/native/uprm-fifo+0x401160) (BuildId: 6b632b5d355387552faf7d037b95bbce674fdf00)
+
+Address 0x7ffe4f32e321 is located in stack of thread T0
+SUMMARY: AddressSanitizer: dynamic-stack-buffer-overflow /home/user/deep-impedance-audit/generated/uprm-fifo.c:35 in spiBurst
+Shadow bytes around the buggy address:
+  0x7ffe4f32e080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7ffe4f32e100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7ffe4f32e180: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7ffe4f32e200: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7ffe4f32e280: ca ca ca ca 01 cb cb cb cb cb cb cb 00 00 00 00
+=>0x7ffe4f32e300: ca ca ca ca[01]cb cb cb cb cb cb cb 00 00 00 00
+  0x7ffe4f32e380: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7ffe4f32e400: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7ffe4f32e480: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7ffe4f32e500: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7ffe4f32e580: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==1912==ABORTING

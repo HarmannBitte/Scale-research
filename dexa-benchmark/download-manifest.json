@@ -1,0 +1,38 @@
+[
+  {
+    "name": "DEMO",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/DEMO.xpt",
+    "sha256": "a17bd1ebfd6007b8dc93f16259cb090678eb6c467a39363b7e932bba15febf89",
+    "rows": 9965
+  },
+  {
+    "name": "BMX",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BMX.xpt",
+    "sha256": "6b9bc4d998c0004fc42b213cc7f5bf347df937707f46d6d25fab926723a60500",
+    "rows": 9282
+  },
+  {
+    "name": "DEMO_B",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DEMO_B.xpt",
+    "bytes": 3273520,
+    "sha256": "6458dc2307cee244ab6ba26f70ec78c7b842ffc68e668bc43f0ab6b9737937d9"
+  },
+  {
+    "name": "BMX_B",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BMX_B.xpt",
+    "bytes": 2183680,
+    "sha256": "55715d4387960f88e48a2adf44da0b270a83290b1edf7c8e4ecc0eb2c29c59cf"
+  },
+  {
+    "name": "BIX_B",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/BIX_B.xpt",
+    "bytes": 5490000,
+    "sha256": "09465cfb496006799b9a0430a42137a59ceaa16ea7b81a0ebde49242ecbffcf7"
+  },
+  {
+    "name": "DXX_B",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2001/DataFiles/DXX_B.xpt",
+    "bytes": 32695200,
+    "sha256": "6eeb2dabff1fc4a33df2dfe2b46e86eb6f0986319f238f1cb8066e7d695852f6"
+  }
+]

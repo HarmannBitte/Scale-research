@@ -1,0 +1,25 @@
+{
+  "name": "pyimpspec-upstream-unittest-selected",
+  "status": "pass",
+  "detail": "139 tests passed using upstream runner style; four modules only",
+  "log": "pyimpspec-upstream-unittest-selected.log",
+  "log_sha256": "d7250af6d0c38ed1f23192201d091ddb4b0e7c2182cb6f6508544060dc829400",
+  "command": [
+    "/home/user/.cache/open-projects/analysis-env/bin/python",
+    "-m",
+    "unittest",
+    "-v",
+    "test_circuit",
+    "test_connection",
+    "test_element",
+    "test_data"
+  ],
+  "cwd": "/home/user/.cache/open-projects/full/vyrjana__pyimpspec/pyimpspec-c822717c7f1c942cb707c5bcd74d3ad034f8166c/tests",
+  "environment_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg"
+  },
+  "upstream_runner_evidence": "tests/run_tests.sh invokes python -m unittest discover . -v -f; only four modules executed here",
+  "duration_seconds_reported_by_unittest": 9.002
+}

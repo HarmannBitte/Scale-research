@@ -1,0 +1,1114 @@
+import { describe, it, expect } from 'vitest';
+import {
+  AppConfigSchema,
+  BleSchema,
+  ScaleSchema,
+  UserSchema,
+  ExporterEntrySchema,
+  RuntimeSchema,
+  DockerSchema,
+  formatConfigError,
+} from '../../src/config/schema.js';
+import { ZodError } from 'zod';
+
+// --- Valid full config (matches Section 1 of the plan) ---
+
+const VALID_USER = {
+  name: 'Dad',
+  slug: 'dad',
+  height: 183,
+  birth_date: '1990-06-15',
+  gender: 'male' as const,
+  is_athlete: true,
+  weight_range: { min: 75, max: 95 },
+  last_known_weight: null,
+  exporters: [
+    {
+      type: 'garmin',
+      email: 'dad@example.com',
+      password: '${GARMIN_PASSWORD_DAD}',
+      token_dir: './garmin-tokens/dad',
+    },
+  ],
+};
+
+const VALID_CONFIG = {
+  version: 1 as const,
+  ble: {
+    scale_mac: 'FF:03:00:13:A1:04',
+    noble_driver: null,
+  },
+  scale: {
+    weight_unit: 'kg' as const,
+    height_unit: 'cm' as const,
+  },
+  unknown_user: 'nearest' as const,
+  users: [VALID_USER],
+  global_exporters: [
+    {
+      type: 'mqtt',
+      broker_url: 'mqtts://broker.hivemq.com:8883',
+      topic: 'scale/body-composition',
+    },
+  ],
+  runtime: {
+    continuous_mode: false,
+    scan_cooldown: 30,
+    dry_run: false,
+    debug: false,
+  },
+};
+
+// ─── AppConfigSchema ───────────────────────────────────────────────────────
+
+describe('AppConfigSchema', () => {
+  it('validates a full valid config', () => {
+    const result = AppConfigSchema.safeParse(VALID_CONFIG);
+    expect(result.success).toBe(true);
+  });
+
+  it('validates minimal config (required fields only)', () => {
+    const minimal = {
+      version: 1,
+      users: [
+        {
+          name: 'Me',
+          slug: 'me',
+          height: 170,
+          birth_date: '1995-01-01',
+          gender: 'female',
+          is_athlete: false,
+          weight_range: { min: 50, max: 80 },
+        },
+      ],
+    };
+    const result = AppConfigSchema.safeParse(minimal);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.scale.weight_unit).toBe('kg');
+      expect(result.data.scale.height_unit).toBe('cm');
+      expect(result.data.scale.display_unit).toBe('weight_unit');
+      expect(result.data.unknown_user).toBe('nearest');
+      // Absent out_of_range means today's behaviour: warn and export anyway.
+      // Changing this default would silently start discarding readings on
+      // every existing install (#395).
+      expect(result.data.out_of_range).toBe('warn');
+      expect(result.data.users[0].last_known_weight).toBeNull();
+    }
+  });
+
+  it('rejects missing version', () => {
+    const { version: _, ...noVersion } = VALID_CONFIG;
+    const result = AppConfigSchema.safeParse(noVersion);
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects wrong version', () => {
+    const result = AppConfigSchema.safeParse({ ...VALID_CONFIG, version: 2 });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects empty users array', () => {
+    const result = AppConfigSchema.safeParse({ ...VALID_CONFIG, users: [] });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects missing users', () => {
+    const { users: _, ...noUsers } = VALID_CONFIG;
+    const result = AppConfigSchema.safeParse(noUsers);
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts config with docker section', () => {
+    const result = AppConfigSchema.safeParse({
+      ...VALID_CONFIG,
+      docker: { mode: 'build' },
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it('applies defaults for unknown_user', () => {
+    const { unknown_user: _, ...noUnknown } = VALID_CONFIG;
+    const result = AppConfigSchema.safeParse(noUnknown);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.unknown_user).toBe('nearest');
+    }
+  });
+
+  it('validates all three unknown_user strategies', () => {
+    for (const strategy of ['nearest', 'log', 'ignore'] as const) {
+      const result = AppConfigSchema.safeParse({ ...VALID_CONFIG, unknown_user: strategy });
+      expect(result.success).toBe(true);
+    }
+  });
+
+  it('rejects invalid unknown_user', () => {
+    const result = AppConfigSchema.safeParse({ ...VALID_CONFIG, unknown_user: 'skip' });
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts a 32-hex ble.bind_key', () => {
+    const r = AppConfigSchema.safeParse({
+      ...VALID_CONFIG,
+      ble: { bind_key: '0123456789abcdef0123456789abcdef' },
+    });
+    expect(r.success).toBe(true);
+  });
+
+  it('rejects a malformed ble.bind_key', () => {
+    const r = AppConfigSchema.safeParse({ ...VALID_CONFIG, ble: { bind_key: 'not-hex' } });
+    expect(r.success).toBe(false);
+  });
+});
+
+// ─── UserSchema ────────────────────────────────────────────────────────────
+
+describe('UserSchema', () => {
+  it('validates a complete user', () => {
+    const result = UserSchema.safeParse(VALID_USER);
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects empty name', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, name: '' });
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts an optional beurer_pin and coerces a string (env ref) (#168)', () => {
+    const numeric = UserSchema.safeParse({ ...VALID_USER, beurer_pin: 3752 });
+    expect(numeric.success).toBe(true);
+    const fromEnv = UserSchema.safeParse({ ...VALID_USER, beurer_pin: '3752' });
+    expect(fromEnv.success && fromEnv.data.beurer_pin).toBe(3752);
+  });
+
+  it('leaves beurer_pin undefined when absent (no coerce to 0) (#168)', () => {
+    const result = UserSchema.safeParse(VALID_USER);
+    expect(result.success && result.data.beurer_pin).toBeUndefined();
+  });
+
+  it('rejects an out-of-range beurer_pin (#168)', () => {
+    expect(UserSchema.safeParse({ ...VALID_USER, beurer_pin: 99999 }).success).toBe(false);
+  });
+
+  it('rejects invalid slug (uppercase)', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, slug: 'Dad' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects invalid slug (spaces)', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, slug: 'my dad' });
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts valid slug with numbers and hyphens', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, slug: 'user-1' });
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects negative height', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, height: -5 });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects zero height', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, height: 0 });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects invalid birth_date format', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, birth_date: 'March 20' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects birth_date without leading zeros', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, birth_date: '1990-6-15' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects invalid gender', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, gender: 'other' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects non-boolean is_athlete', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, is_athlete: 'yes' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects weight_range where min >= max', () => {
+    const result = UserSchema.safeParse({
+      ...VALID_USER,
+      weight_range: { min: 95, max: 75 },
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects weight_range where min === max', () => {
+    const result = UserSchema.safeParse({
+      ...VALID_USER,
+      weight_range: { min: 80, max: 80 },
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('defaults last_known_weight to null', () => {
+    const { last_known_weight: _, ...noLKW } = VALID_USER;
+    const result = UserSchema.safeParse(noLKW);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.last_known_weight).toBeNull();
+    }
+  });
+
+  it('accepts numeric last_known_weight', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, last_known_weight: 82.3 });
+    expect(result.success).toBe(true);
+  });
+
+  it('allows missing exporters', () => {
+    const { exporters: _, ...noExporters } = VALID_USER;
+    const result = UserSchema.safeParse(noExporters);
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts height as decimal', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, height: 183.5 });
+    expect(result.success).toBe(true);
+  });
+});
+
+// ─── BleSchema ─────────────────────────────────────────────────────────────
+
+describe('BleSchema', () => {
+  it('accepts valid MAC address', () => {
+    const result = BleSchema.safeParse({ scale_mac: 'FF:03:00:13:A1:04' });
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts CoreBluetooth UUID', () => {
+    const result = BleSchema.safeParse({
+      scale_mac: '12345678-1234-1234-1234-123456789ABC',
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts a bare 32-hex CoreBluetooth UUID (macOS, #212)', () => {
+    const result = BleSchema.safeParse({ scale_mac: '360c96baf290475b14ce7c28aa3b8e81' });
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects invalid MAC', () => {
+    const result = BleSchema.safeParse({ scale_mac: 'not-a-mac' });
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts null scale_mac', () => {
+    const result = BleSchema.safeParse({ scale_mac: null });
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts omitted scale_mac', () => {
+    const result = BleSchema.safeParse({});
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts valid noble_driver values', () => {
+    for (const driver of ['abandonware', 'stoprocent'] as const) {
+      const result = BleSchema.safeParse({ noble_driver: driver });
+      expect(result.success).toBe(true);
+    }
+  });
+
+  it('accepts null noble_driver', () => {
+    const result = BleSchema.safeParse({ noble_driver: null });
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects invalid noble_driver', () => {
+    const result = BleSchema.safeParse({ noble_driver: 'invalid' });
+    expect(result.success).toBe(false);
+  });
+
+  it('defaults handler to auto', () => {
+    const result = BleSchema.safeParse({});
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.handler).toBe('auto');
+    }
+  });
+
+  it('accepts handler mqtt-proxy with mqtt_proxy config', () => {
+    const result = BleSchema.safeParse({
+      handler: 'mqtt-proxy',
+      mqtt_proxy: {
+        broker_url: 'mqtt://localhost:1883',
+      },
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.handler).toBe('mqtt-proxy');
+      expect(result.data.mqtt_proxy?.broker_url).toBe('mqtt://localhost:1883');
+      expect(result.data.mqtt_proxy?.device_id).toBe('esp32-ble-proxy');
+      expect(result.data.mqtt_proxy?.topic_prefix).toBe('ble-proxy');
+    }
+  });
+
+  // #318/#319: the escape hatch for a device auto-detection routes to the wrong
+  // protocol adapter. It matches every device it is shown, so scale_mac is what
+  // keeps it aimed at one scale.
+  it('accepts force_scale_adapter together with scale_mac', () => {
+    const result = BleSchema.safeParse({
+      scale_mac: 'AA:BB:CC:DD:EE:FF',
+      force_scale_adapter: 'Hutbit',
+    });
+    expect(result.success).toBe(true);
+    if (result.success) expect(result.data.force_scale_adapter).toBe('Hutbit');
+  });
+
+  // The scale_mac pairing is enforced in src/run.ts, not here: schema
+  // validation runs before env overrides, so rejecting it at parse time would
+  // break the documented `docker run -e SCALE_MAC=...` setup.
+  it('accepts force_scale_adapter without scale_mac at schema level', () => {
+    const result = BleSchema.safeParse({ force_scale_adapter: 'Hutbit' });
+    expect(result.success).toBe(true);
+  });
+
+  // #83: the Beurer BF500 will not run a standalone weigh-in while our session
+  // holds the user context, so a shorter session frees the scale sooner.
+  it('accepts ble.session_timeout_sec within 5 to 600', () => {
+    for (const secs of [5, 20, 600]) {
+      const result = BleSchema.safeParse({ session_timeout_sec: secs });
+      expect(result.success).toBe(true);
+    }
+  });
+
+  it('accepts ble.qn_protocol_byte across the whole byte range', () => {
+    for (const byte of [0, 1, 255]) {
+      expect(BleSchema.safeParse({ qn_protocol_byte: byte }).success).toBe(true);
+    }
+  });
+
+  it('rejects a ble.qn_protocol_byte that is not a byte', () => {
+    for (const byte of [-1, 256, 1.5]) {
+      expect(BleSchema.safeParse({ qn_protocol_byte: byte }).success).toBe(false);
+    }
+  });
+
+  it('accepts ble.qn_report_byte across the whole byte range', () => {
+    for (const byte of [0, 0xfc, 0xfe, 255]) {
+      expect(BleSchema.safeParse({ qn_report_byte: byte }).success).toBe(true);
+    }
+  });
+
+  it('rejects a ble.qn_report_byte that is not a byte', () => {
+    for (const byte of [-1, 256, 1.5]) {
+      expect(BleSchema.safeParse({ qn_report_byte: byte }).success).toBe(false);
+    }
+  });
+
+  // BleSchema drops an unknown key without failing, so success alone would not
+  // show the key is declared: the parsed value has to come through (#463).
+  it('accepts ble.qn_user_key from 1 to 9999 and keeps the value', () => {
+    for (const key of [1, 1000, 9999, null]) {
+      const result = BleSchema.safeParse({ qn_user_key: key });
+      expect(result.success).toBe(true);
+      expect(result.data?.qn_user_key).toBe(key);
+    }
+  });
+
+  it('rejects a ble.qn_user_key outside 1 to 9999 or not an integer', () => {
+    for (const key of [0, 10000, 1.5, -1, '1000']) {
+      expect(BleSchema.safeParse({ qn_user_key: key }).success).toBe(false);
+    }
+  });
+
+  it('rejects ble.session_timeout_sec outside 5 to 600', () => {
+    for (const secs of [4, 601]) {
+      expect(BleSchema.safeParse({ session_timeout_sec: secs }).success).toBe(false);
+    }
+  });
+
+  it('accepts ble.preemptive_adapter_reset as true, false, null or omitted (#417)', () => {
+    for (const value of [true, false, null]) {
+      expect(BleSchema.safeParse({ preemptive_adapter_reset: value }).success).toBe(true);
+    }
+    const omitted = BleSchema.safeParse({});
+    expect(omitted.success).toBe(true);
+    if (omitted.success) expect(omitted.data.preemptive_adapter_reset).toBeUndefined();
+  });
+
+  it('keeps an explicit ble.preemptive_adapter_reset: false, which is the only value that acts', () => {
+    const result = BleSchema.safeParse({ preemptive_adapter_reset: false });
+    expect(result.success).toBe(true);
+    if (result.success) expect(result.data.preemptive_adapter_reset).toBe(false);
+  });
+
+  it('rejects a ble.preemptive_adapter_reset that is not a boolean', () => {
+    for (const value of ['false', 0, 1]) {
+      expect(BleSchema.safeParse({ preemptive_adapter_reset: value }).success).toBe(false);
+    }
+  });
+
+  it('keeps ble.adapter_privacy (#417) and accepts only a boolean, null or nothing', () => {
+    const on = BleSchema.safeParse({ adapter_privacy: true });
+    expect(on.success).toBe(true);
+    if (on.success) expect(on.data.adapter_privacy).toBe(true);
+    for (const value of [false, null]) {
+      expect(BleSchema.safeParse({ adapter_privacy: value }).success).toBe(true);
+    }
+    for (const value of ['true', 1]) {
+      expect(BleSchema.safeParse({ adapter_privacy: value }).success).toBe(false);
+    }
+  });
+
+  // Documents why src/config/unknown-keys.ts exists: a key this build does not
+  // know is dropped without a word, which is how #318 read as "the option does
+  // nothing" rather than "your build is older than that option".
+  it('silently strips unknown keys under ble, which is why unknown-keys.ts exists', () => {
+    const result = BleSchema.safeParse({ scale_mac: 'AA:BB:CC:DD:EE:FF', not_a_real_key: 1 });
+    expect(result.success).toBe(true);
+    if (result.success) expect('not_a_real_key' in result.data).toBe(false);
+  });
+
+  it('rejects handler mqtt-proxy without mqtt_proxy config', () => {
+    const result = BleSchema.safeParse({ handler: 'mqtt-proxy' });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues[0].message).toContain('mqtt_proxy config is required');
+    }
+  });
+
+  it('accepts handler mqtt-proxy with mqtt_proxy config omitting broker_url when bind is loopback', () => {
+    const result = BleSchema.safeParse({
+      handler: 'mqtt-proxy',
+      mqtt_proxy: { embedded_broker_bind: '127.0.0.1' },
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.mqtt_proxy?.broker_url).toBeUndefined();
+      expect(result.data.mqtt_proxy?.embedded_broker_port).toBe(1883);
+      expect(result.data.mqtt_proxy?.embedded_broker_bind).toBe('127.0.0.1');
+    }
+  });
+
+  it('accepts embedded broker on non-loopback bind when username is set', () => {
+    const result = BleSchema.safeParse({
+      handler: 'mqtt-proxy',
+      mqtt_proxy: { username: 'esp32', password: 'secret' },
+    });
+    expect(result.success).toBe(true);
+  });
+
+  // The refine checked only !!username, so a username with no password (or a
+  // ${VAR} that resolved to '') passed. The broker then expected '' and let
+  // in any LAN client that sent that username with an empty password.
+  it.each([
+    ['without a password', { username: 'esp32' }],
+    ['with an empty password', { username: 'esp32', password: '' }],
+  ])('rejects embedded broker on non-loopback bind %s', (_label, auth) => {
+    const result = BleSchema.safeParse({ handler: 'mqtt-proxy', mqtt_proxy: auth });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues[0].message).toContain('password');
+      expect(result.error.issues[0].path).toEqual(['mqtt_proxy', 'password']);
+    }
+  });
+
+  it('accepts a username without password on a loopback bind', () => {
+    const result = BleSchema.safeParse({
+      handler: 'mqtt-proxy',
+      mqtt_proxy: { username: 'esp32', embedded_broker_bind: '127.0.0.1' },
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects embedded broker on non-loopback bind without auth', () => {
+    const result = BleSchema.safeParse({
+      handler: 'mqtt-proxy',
+      mqtt_proxy: {},
+    });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues[0].message).toContain('non-loopback');
+    }
+  });
+
+  it('accepts custom embedded_broker_port and embedded_broker_bind', () => {
+    const result = BleSchema.safeParse({
+      handler: 'mqtt-proxy',
+      mqtt_proxy: {
+        embedded_broker_port: 1884,
+        embedded_broker_bind: '127.0.0.1',
+      },
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.mqtt_proxy?.embedded_broker_port).toBe(1884);
+      expect(result.data.mqtt_proxy?.embedded_broker_bind).toBe('127.0.0.1');
+    }
+  });
+
+  it('rejects embedded_broker_port outside 1-65535', () => {
+    const result = BleSchema.safeParse({
+      handler: 'mqtt-proxy',
+      mqtt_proxy: { embedded_broker_port: 70000 },
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects embedded_broker_bind with whitespace', () => {
+    const result = BleSchema.safeParse({
+      handler: 'mqtt-proxy',
+      mqtt_proxy: { embedded_broker_bind: '0.0.0.0 injection' },
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects empty embedded_broker_bind', () => {
+    const result = BleSchema.safeParse({
+      handler: 'mqtt-proxy',
+      mqtt_proxy: { embedded_broker_bind: '' },
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts handler esphome-proxy with esphome_proxy config', () => {
+    const result = BleSchema.safeParse({
+      handler: 'esphome-proxy',
+      esphome_proxy: {
+        host: 'ble-proxy.local',
+      },
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.esphome_proxy?.host).toBe('ble-proxy.local');
+      expect(result.data.esphome_proxy?.port).toBe(6053);
+      expect(result.data.esphome_proxy?.client_info).toBe('ble-scale-sync');
+    }
+  });
+
+  it('rejects handler esphome-proxy without esphome_proxy config', () => {
+    const result = BleSchema.safeParse({ handler: 'esphome-proxy' });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues[0].message).toContain('esphome_proxy config is required');
+    }
+  });
+
+  it('rejects esphome_proxy with empty host', () => {
+    const result = BleSchema.safeParse({
+      handler: 'esphome-proxy',
+      esphome_proxy: { host: '' },
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts esphome_proxy with encryption_key and custom port', () => {
+    const result = BleSchema.safeParse({
+      handler: 'esphome-proxy',
+      esphome_proxy: {
+        host: '192.168.1.42',
+        port: 6053,
+        encryption_key: 'Lw1vKZ+BASE64KEYxxxxx==',
+        client_info: 'pi-zero',
+      },
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.esphome_proxy?.encryption_key).toBe('Lw1vKZ+BASE64KEYxxxxx==');
+      expect(result.data.esphome_proxy?.client_info).toBe('pi-zero');
+    }
+  });
+
+  it('rejects esphome_proxy with both encryption_key and password set', () => {
+    const result = BleSchema.safeParse({
+      handler: 'esphome-proxy',
+      esphome_proxy: {
+        host: 'ble-proxy.local',
+        encryption_key: 'Lw1vKZ+BASE64KEYxxxxx==',
+        password: 'legacy-plaintext',
+      },
+    });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues[0].message).toContain('not both');
+    }
+  });
+
+  it('accepts handler ha-bluetooth with ha_bluetooth config', () => {
+    const result = BleSchema.safeParse({
+      handler: 'ha-bluetooth',
+      ha_bluetooth: { url: 'http://homeassistant.local:8123', token: 'tok' },
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.ha_bluetooth?.url).toBe('http://homeassistant.local:8123');
+      expect(result.data.ha_bluetooth?.source).toBeUndefined();
+    }
+  });
+
+  it('rejects handler ha-bluetooth without ha_bluetooth config', () => {
+    const result = BleSchema.safeParse({ handler: 'ha-bluetooth' });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues[0].message).toContain('ha_bluetooth config is required');
+    }
+  });
+
+  it('rejects ha_bluetooth with a non-http(s)/ws(s) url or an empty token', () => {
+    expect(
+      BleSchema.safeParse({
+        handler: 'ha-bluetooth',
+        ha_bluetooth: { url: 'ha.local', token: 't' },
+      }).success,
+    ).toBe(false);
+    expect(
+      BleSchema.safeParse({
+        handler: 'ha-bluetooth',
+        ha_bluetooth: { url: 'http://ha.local:8123', token: '' },
+      }).success,
+    ).toBe(false);
+  });
+
+  it('accepts handler auto without mqtt_proxy', () => {
+    const result = BleSchema.safeParse({ handler: 'auto' });
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects invalid handler value', () => {
+    const result = BleSchema.safeParse({ handler: 'noble' });
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts valid adapter name hci0', () => {
+    const result = BleSchema.safeParse({ adapter: 'hci0' });
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts valid adapter name hci1', () => {
+    const result = BleSchema.safeParse({ adapter: 'hci1' });
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts multi-digit adapter hci12', () => {
+    const result = BleSchema.safeParse({ adapter: 'hci12' });
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts null adapter', () => {
+    const result = BleSchema.safeParse({ adapter: null });
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts omitted adapter', () => {
+    const result = BleSchema.safeParse({});
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.adapter).toBeUndefined();
+    }
+  });
+
+  it('rejects invalid adapter name (eth0)', () => {
+    const result = BleSchema.safeParse({ adapter: 'eth0' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects adapter without hci prefix', () => {
+    const result = BleSchema.safeParse({ adapter: '1' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects adapter with uppercase HCI', () => {
+    const result = BleSchema.safeParse({ adapter: 'HCI0' });
+    expect(result.success).toBe(false);
+  });
+});
+
+// ─── ScaleSchema ───────────────────────────────────────────────────────────
+
+describe('ScaleSchema', () => {
+  it('applies defaults when empty', () => {
+    const result = ScaleSchema.safeParse({});
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.weight_unit).toBe('kg');
+      expect(result.data.height_unit).toBe('cm');
+      expect(result.data.display_unit).toBe('weight_unit');
+    }
+  });
+
+  it('accepts an independent stone display unit', () => {
+    const result = ScaleSchema.safeParse({
+      weight_unit: 'kg',
+      height_unit: 'in',
+      display_unit: 'st',
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects invalid weight_unit', () => {
+    const result = ScaleSchema.safeParse({ weight_unit: 'stones' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects invalid display_unit', () => {
+    const result = ScaleSchema.safeParse({ display_unit: 'stones' });
+    expect(result.success).toBe(false);
+  });
+});
+
+// ─── ExporterEntrySchema ───────────────────────────────────────────────────
+
+describe('ExporterEntrySchema', () => {
+  it('validates entry with type and extra fields', () => {
+    const result = ExporterEntrySchema.safeParse({
+      type: 'mqtt',
+      broker_url: 'mqtts://host:8883',
+      topic: 'scale/data',
+    });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.type).toBe('mqtt');
+      expect(result.data.broker_url).toBe('mqtts://host:8883');
+    }
+  });
+
+  it('rejects missing type', () => {
+    const result = ExporterEntrySchema.safeParse({ broker_url: 'mqtts://host:8883' });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects empty type', () => {
+    const result = ExporterEntrySchema.safeParse({ type: '' });
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts any string type (lenient — validated per-exporter later)', () => {
+    const result = ExporterEntrySchema.safeParse({ type: 'custom-exporter' });
+    expect(result.success).toBe(true);
+  });
+});
+
+// ─── RuntimeSchema ─────────────────────────────────────────────────────────
+
+describe('RuntimeSchema', () => {
+  it('applies defaults when empty', () => {
+    const result = RuntimeSchema.safeParse({});
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.continuous_mode).toBe(false);
+      expect(result.data.scan_cooldown).toBe(30);
+      expect(result.data.dry_run).toBe(false);
+      expect(result.data.debug).toBe(false);
+    }
+  });
+
+  it('rejects scan_cooldown below 5', () => {
+    const result = RuntimeSchema.safeParse({ scan_cooldown: 1 });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects scan_cooldown above 3600', () => {
+    const result = RuntimeSchema.safeParse({ scan_cooldown: 9999 });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects non-integer scan_cooldown', () => {
+    const result = RuntimeSchema.safeParse({ scan_cooldown: 30.5 });
+    expect(result.success).toBe(false);
+  });
+});
+
+// ─── DockerSchema ──────────────────────────────────────────────────────────
+
+describe('DockerSchema', () => {
+  it('defaults to pull', () => {
+    const result = DockerSchema.safeParse({});
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.mode).toBe('pull');
+    }
+  });
+
+  it('accepts build mode', () => {
+    const result = DockerSchema.safeParse({ mode: 'build' });
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects invalid mode', () => {
+    const result = DockerSchema.safeParse({ mode: 'compose' });
+    expect(result.success).toBe(false);
+  });
+});
+
+// ─── formatConfigError() ───────────────────────────────────────────────────
+
+describe('formatConfigError()', () => {
+  it('formats a single error with path', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, height: 'tall' });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      const msg = formatConfigError(result.error);
+      expect(msg).toContain('Configuration error in config.yaml:');
+      expect(msg).toContain('height');
+      // The hint names whichever shape the reader can actually type, so assert
+      // the command words rather than one invocation style: the suite is green
+      // under `npm test` and under `npx vitest run`, which differ here.
+      expect(msg).toContain('validate');
+      expect(msg).toContain('setup');
+    }
+  });
+
+  it('formats multiple errors', () => {
+    const result = UserSchema.safeParse({
+      name: '',
+      slug: 'INVALID SLUG',
+      height: -1,
+      birth_date: 'nope',
+      gender: 'x',
+      is_athlete: 'yes',
+      weight_range: { min: -1, max: -2 },
+    });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      const msg = formatConfigError(result.error);
+      expect(msg).toContain('name');
+      expect(msg).toContain('slug');
+      expect(msg).toContain('height');
+      expect(msg).toContain('birth_date');
+    }
+  });
+
+  it('handles root-level errors', () => {
+    const error = new ZodError([
+      {
+        code: 'invalid_type',
+        expected: 'object',
+        received: 'string',
+        path: [],
+        message: 'Expected object, received string',
+      },
+    ]);
+    const msg = formatConfigError(error);
+    expect(msg).toContain('(root)');
+  });
+
+  it('includes actionable hints', () => {
+    const result = UserSchema.safeParse({ ...VALID_USER, height: 'tall' });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      const msg = formatConfigError(result.error);
+      expect(msg).toMatch(/Run '(npm run validate|ble-scale-sync validate)'/);
+      expect(msg).toMatch(/'(npm run setup|ble-scale-sync setup)'/);
+    }
+  });
+});
+
+describe('out_of_range (#395)', () => {
+  it('accepts skip and keeps it', () => {
+    // The `success` assertion alone would pass with the key deleted from the
+    // schema entirely, because Zod strips what it does not know about.
+    const result = AppConfigSchema.safeParse({ ...VALID_CONFIG, out_of_range: 'skip' });
+    expect(result.success).toBe(true);
+    if (result.success) expect(result.data.out_of_range).toBe('skip');
+  });
+
+  it('rejects a value that is neither warn nor skip', () => {
+    const result = AppConfigSchema.safeParse({ ...VALID_CONFIG, out_of_range: 'export' });
+    expect(result.success).toBe(false);
+  });
+});
+
+describe('runtime.idle_rescan_delay (#398)', () => {
+  it('defaults to 5 seconds when runtime is present without it', () => {
+    const result = AppConfigSchema.safeParse({
+      ...VALID_CONFIG,
+      runtime: { continuous_mode: true },
+    });
+    expect(result.success).toBe(true);
+    if (result.success) expect(result.data.runtime?.idle_rescan_delay).toBe(5);
+  });
+
+  it('keeps a configured value', () => {
+    // Asserting only `success` would pass with the key removed from the schema,
+    // since Zod strips what it does not know about.
+    const result = AppConfigSchema.safeParse({
+      ...VALID_CONFIG,
+      runtime: { continuous_mode: true, idle_rescan_delay: 2 },
+    });
+    expect(result.success).toBe(true);
+    if (result.success) expect(result.data.runtime?.idle_rescan_delay).toBe(2);
+  });
+
+  it('accepts 0, which means rescan immediately', () => {
+    const result = AppConfigSchema.safeParse({
+      ...VALID_CONFIG,
+      runtime: { idle_rescan_delay: 0 },
+    });
+    expect(result.success).toBe(true);
+    if (result.success) expect(result.data.runtime?.idle_rescan_delay).toBe(0);
+  });
+
+  it('rejects a negative delay and a non-integer', () => {
+    expect(
+      AppConfigSchema.safeParse({ ...VALID_CONFIG, runtime: { idle_rescan_delay: -1 } }).success,
+    ).toBe(false);
+    expect(
+      AppConfigSchema.safeParse({ ...VALID_CONFIG, runtime: { idle_rescan_delay: 1.5 } }).success,
+    ).toBe(false);
+  });
+});
+
+describe('runtime.retry_failed_exports (#412)', () => {
+  it('defaults to on', () => {
+    const result = AppConfigSchema.safeParse({ ...VALID_CONFIG, runtime: {} });
+    expect(result.success).toBe(true);
+    if (result.success) expect(result.data.runtime?.retry_failed_exports).toBe(true);
+  });
+
+  it('keeps an explicit false, which is what turns the disk writes off', () => {
+    const result = AppConfigSchema.safeParse({
+      ...VALID_CONFIG,
+      runtime: { retry_failed_exports: false },
+    });
+    expect(result.success).toBe(true);
+    if (result.success) expect(result.data.runtime?.retry_failed_exports).toBe(false);
+  });
+
+  it('rejects a non-boolean', () => {
+    expect(
+      AppConfigSchema.safeParse({ ...VALID_CONFIG, runtime: { retry_failed_exports: 'yes' } })
+        .success,
+    ).toBe(false);
+  });
+});
+
+describe('user slug uniqueness', () => {
+  // The slug is an identity, not a label: getExportersForUser caches by it and
+  // resolves the user with users.find, so a duplicate silently handed the
+  // second user the first one's exporters - and the first one's Garmin
+  // account. Nothing downstream can detect that, so it has to fail here.
+  it('rejects two users sharing a slug', () => {
+    const result = AppConfigSchema.safeParse({
+      ...VALID_CONFIG,
+      users: [VALID_USER, { ...VALID_USER, name: 'Mum' }],
+    });
+    expect(result.success).toBe(false);
+    expect(JSON.stringify(result.error?.issues)).toContain('Duplicate user slug');
+  });
+
+  it('names the offending slug and points at the second user', () => {
+    const result = AppConfigSchema.safeParse({
+      ...VALID_CONFIG,
+      users: [VALID_USER, { ...VALID_USER, slug: 'mum', name: 'Mum' }, { ...VALID_USER }],
+    });
+    expect(result.success).toBe(false);
+    const issue = result.error?.issues.find((i) => i.message.includes('Duplicate user slug'));
+    expect(issue?.message).toContain("'dad'");
+    expect(issue?.path).toEqual(['users', 2, 'slug']);
+  });
+
+  it('still accepts distinct slugs', () => {
+    const result = AppConfigSchema.safeParse({
+      ...VALID_CONFIG,
+      users: [VALID_USER, { ...VALID_USER, slug: 'mum', name: 'Mum' }],
+    });
+    expect(result.success).toBe(true);
+  });
+});
+
+describe('birth_date is a real date, not just a shape', () => {
+  // The regex only fixed the format, so these went straight into the age
+  // arithmetic behind every body-composition estimate.
+  it.each(['2024-02-31', '9999-99-99', '2023-13-01', '2023-00-10'])('rejects %s', (value) => {
+    expect(UserSchema.safeParse({ ...VALID_USER, birth_date: value }).success).toBe(false);
+  });
+
+  it('rejects a birth date in the future', () => {
+    const nextYear = new Date(Date.now() + 400 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+    expect(UserSchema.safeParse({ ...VALID_USER, birth_date: nextYear }).success).toBe(false);
+  });
+
+  it('accepts a real leap day', () => {
+    expect(UserSchema.safeParse({ ...VALID_USER, birth_date: '2024-02-29' }).success).toBe(true);
+  });
+
+  it('rejects a leap day in a non-leap year', () => {
+    // Discriminates against a `new Date(...)` NaN check alone: JS normalises
+    // this to 2023-03-01 instead of failing.
+    expect(UserSchema.safeParse({ ...VALID_USER, birth_date: '2023-02-29' }).success).toBe(false);
+  });
+});
+
+describe('token directories are not shared between accounts', () => {
+  // Without token_dir every garmin entry falls back to the same default, so
+  // the last account to authenticate owns the token file and every other
+  // user's readings upload into it. docs/multi-user.md showed exactly that.
+  const alice = { ...VALID_USER, name: 'Alice', slug: 'alice' };
+  const bob = { ...VALID_USER, name: 'Bob', slug: 'bob' };
+  const garmin = (email: string, extra: Record<string, unknown> = {}) => ({
+    type: 'garmin',
+    email,
+    password: 'x',
+    ...extra,
+  });
+
+  function parse(users: unknown[], global_exporters: unknown[] = []) {
+    return AppConfigSchema.safeParse({ ...VALID_CONFIG, users, global_exporters });
+  }
+
+  it('rejects two users whose garmin entries both rely on the default', () => {
+    const result = parse([
+      { ...alice, exporters: [garmin('alice@example.com')] },
+      { ...bob, exporters: [garmin('bob@example.com')] },
+    ]);
+    expect(result.success).toBe(false);
+    const issue = result.error?.issues.find((i) => i.message.includes('same token directory'));
+    expect(issue?.message).toContain("user 'Alice'");
+    expect(issue?.message).toContain("user 'Bob'");
+    expect(issue?.path).toEqual(['users', 1, 'exporters', 0, 'token_dir']);
+  });
+
+  it('rejects the same explicit garmin token_dir for two accounts', () => {
+    const dir = { token_dir: './garmin-tokens' };
+    const result = parse([
+      { ...alice, exporters: [garmin('alice@example.com', dir)] },
+      { ...bob, exporters: [garmin('bob@example.com', dir)] },
+    ]);
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts a separate token_dir per user', () => {
+    const result = parse([
+      {
+        ...alice,
+        exporters: [garmin('alice@example.com', { token_dir: './garmin-tokens/alice' })],
+      },
+      { ...bob, exporters: [garmin('bob@example.com', { token_dir: './garmin-tokens/bob' })] },
+    ]);
+    expect(result.success).toBe(true);
+  });
+
+  it('accepts a shared directory for the same garmin account', () => {
+    const result = parse([
+      { ...alice, exporters: [garmin('Family@example.com')] },
+      { ...bob, exporters: [garmin('family@example.com')] },
+    ]);
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects two strava entries on the default directory', () => {
+    const strava = { type: 'strava', client_id: '1', client_secret: 's' };
+    const result = parse([
+      { ...alice, exporters: [strava] },
+      { ...bob, exporters: [strava] },
+    ]);
+    expect(result.success).toBe(false);
+  });
+
+  it('accepts a single garmin entry and a global entry shared by every user', () => {
+    expect(parse([{ ...alice, exporters: [garmin('alice@example.com')] }, bob]).success).toBe(true);
+    expect(parse([alice, bob], [garmin('family@example.com')]).success).toBe(true);
+  });
+});

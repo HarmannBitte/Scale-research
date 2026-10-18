@@ -1,0 +1,128 @@
+[
+  {
+    "name": "iscd-positions",
+    "url": "https://iscd.org/official-positions-2023/",
+    "final_url": "https://iscd.org/official-positions-2023/",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "1f395861d7f8b9caa9a032687090eb61f4d80a36f104dde6ee6e80970f1dc2b3",
+    "file": "iscd-positions.txt"
+  },
+  {
+    "name": "iscd-precision",
+    "url": "https://iscd.org/resources/precision-assessment-calculator-faqs/",
+    "final_url": "https://iscd.org/resources/precision-assessment-calculator-faqs/",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "d6f452e0427824251c35dfa0704d622c505f9e531eae2dac094c08bd8359f42a",
+    "file": "iscd-precision.txt"
+  },
+  {
+    "name": "nhanes-imputation",
+    "url": "https://wwwn.cdc.gov/nchs/nhanes/dxa/dxa.aspx",
+    "final_url": "https://wwwn.cdc.gov/nchs/nhanes/dxa/dxa.aspx",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "53a8f31604932aa5d4ce4ceba1791274cf0145cbc5aa0dee01f3ac7bdf71a51c",
+    "file": "nhanes-imputation.txt"
+  },
+  {
+    "name": "nhanes-bix-1999",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BIX.htm",
+    "final_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/1999/DataFiles/BIX.htm",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "57bc07478733310291dec916795b4b08d502c60995c9e3cdac8ca297bb00434b",
+    "file": "nhanes-bix-1999.txt"
+  },
+  {
+    "name": "nhanes-dxx-2017",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DXX_J.htm",
+    "final_url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/DXX_J.htm",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "f04d40a8ce9421cb5c3755abd01bf3643d61cb97a3aca64ac5373865aaeddf28",
+    "file": "nhanes-dxx-2017.txt"
+  },
+  {
+    "name": "bodym-registry",
+    "url": "https://registry.opendata.aws/bodym/",
+    "final_url": "https://registry.opendata.aws/bodym/",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "f68a66f4ed2522c95649a6b6c22f430e50e9427da1f8ae1a54591007dc56e649",
+    "file": "bodym-registry.txt"
+  },
+  {
+    "name": "styku-pricing",
+    "url": "https://help.styku.com/what-are-styku-s-business-pricing-plans/",
+    "final_url": "https://help.styku.com/what-are-styku-s-business-pricing-plans/",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "a428c3445ffcb7ead57c23f9c38205ea3c6bd439259d7f11599192360080f522",
+    "file": "styku-pricing.txt"
+  },
+  {
+    "name": "bodymetrix-faq",
+    "url": "https://bodymetrix.com/pages/faqs",
+    "final_url": "https://bodymetrix.com/pages/faqs",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "a31e68648ca8a60b83d58c802ec6a8460438f861fd038b015f6ca71db0b05499",
+    "file": "bodymetrix-faq.txt"
+  },
+  {
+    "name": "bodycomposition-models-638d8e2",
+    "url": "https://raw.githubusercontent.com/fohofmann/BodyComposition/638d8e28dcb80aba25233569a1c4786b51221ea4/docs/models.md",
+    "final_url": "https://raw.githubusercontent.com/fohofmann/BodyComposition/638d8e28dcb80aba25233569a1c4786b51221ea4/docs/models.md",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "3fdc4dbace217368e46511bc362729fa995506c96ba28916df44fe925f709e13",
+    "file": "bodycomposition-models-638d8e2.txt"
+  },
+  {
+    "name": "bodycomposition-readme-638d8e2",
+    "url": "https://raw.githubusercontent.com/fohofmann/BodyComposition/638d8e28dcb80aba25233569a1c4786b51221ea4/README.md",
+    "final_url": "https://raw.githubusercontent.com/fohofmann/BodyComposition/638d8e28dcb80aba25233569a1c4786b51221ea4/README.md",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "47a5c61f92e32de3252b47547192bd796227e83d3dc7a8a86f5a48850e5e7d0c",
+    "file": "bodycomposition-readme-638d8e2.txt"
+  },
+  {
+    "name": "totalsegmentator-readme",
+    "url": "https://raw.githubusercontent.com/wasserth/TotalSegmentator/master/README.md",
+    "final_url": "https://raw.githubusercontent.com/wasserth/TotalSegmentator/master/README.md",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "9a2dca23145ecc84b2f839c4d4610f48e8d7e756f1a0e75e20c0f6e6b53476bf",
+    "file": "totalsegmentator-readme.txt"
+  },
+  {
+    "name": "clarius-cast-readme",
+    "url": "https://raw.githubusercontent.com/clariusdev/cast/master/README.md",
+    "final_url": "https://raw.githubusercontent.com/clariusdev/cast/master/README.md",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "8e7f6034be992f0a798e88755496ecfcaf6a0dbb7e24050cb67c001f627d185d",
+    "file": "clarius-cast-readme.txt"
+  },
+  {
+    "name": "deepacsa-zenodo-code",
+    "url": "https://zenodo.org/api/records/19130694",
+    "final_url": "https://zenodo.org/api/records/19130694",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "bc1576698b8a1910da44e6eb656c6a7e6de35d1ef9e57fb71ce0d6876f54067d",
+    "file": "deepacsa-zenodo-code.txt"
+  },
+  {
+    "name": "deepacsa-zenodo-assets",
+    "url": "https://zenodo.org/api/records/7568384",
+    "final_url": "https://zenodo.org/api/records/7568384",
+    "access_date": "2026-10-17",
+    "status": 200,
+    "text_sha256": "4b02822983feda32fbde8e382c072eea5208ec2333e4caa0647bb70ebb592892",
+    "file": "deepacsa-zenodo-assets.txt"
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "research_date": "2026-10-17",
+  "evidence_type": "Concise observations transcribed from tool outputs, not original full-page captures",
+  "no_supplier_contact": true,
+  "no_purchase": true,
+  "no_hardware_testing": true,
+  "priority_rule": "Detailed page retrieval supersedes differing search snippets, but neither is a binding quote",
+  "observations_csv": "vendor-observations.csv",
+  "additional_findings": [
+    {
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/MAX30009.pdf",
+      "method": "fetch_page chunk 0",
+      "finding": "Uppercase PDF extracted first page also says 16 Hz-500 kHz transmitter and 1-500 kHz BIA/BIS; 806 kHz not verified"
+    },
+    {
+      "url": "https://www.analog.com/en/resources/evaluation-hardware-and-software/evaluation-boards-kits/max30009evkit.html",
+      "method": "fetch_page chunk 0",
+      "finding": "Two-board kit, Rev 2 guide, ODB design files, GUI 1.0.2 links; no actual shipment revision/order confirmed"
+    },
+    {
+      "url": "https://www.analog.com/en/resources/evaluation-hardware-and-software/evaluation-boards-kits/eval-ad5940bioz.html",
+      "method": "fetch_page chunk 0",
+      "finding": "Manufacturer includes ADICUP3029 in bundle; links SensorPal installer"
+    },
+    {
+      "url": "https://wiki.analog.com/resources/eval/user-guides/eval-ad5940",
+      "method": "fetch_page chunk 0",
+      "finding": "Page-not-found response, despite tool status success"
+    },
+    {
+      "url": "https://wiki.analog.com/resources/eval/user-guides/ad5940",
+      "method": "fetch_page chunk 0",
+      "finding": "Correct main guide retrieved with hardware/tools/software example links"
+    },
+    {
+      "url": "https://wiki.analog.com/resources/eval/user-guides/eval-ad5940/hardware/eval-ad5940bioz",
+      "method": "fetch_page chunk 0",
+      "finding": "Lists four-/two-wire applications; Rev B design-file links; P6 measurement connector restricted to supplied Z-Test board/cables"
+    },
+    {
+      "url": "https://wiki.analog.com/resources/eval/user-guides/eval-ad5940/software_examples/ad5940_bia",
+      "method": "fetch_page chunk 0",
+      "finding": "Z-Test board described as provided; UART route and hardware requirements; human-use wording conflicts with stricter AN-1557"
+    },
+    {
+      "url": "https://wiki.analog.com/resources/eval/user-guides/eval-ad5940/tools/sensorpal_setup_guide",
+      "method": "fetch_page chunk 0",
+      "finding": "Firmware-loading and GUI workflow documented; not installed/tested here"
+    },
+    {
+      "url": "https://www.transcat.com/calibration-lab-boston",
+      "method": "web_search; detailed fetch failed",
+      "finding": "Boston-area page identifies Wilmington; specific fixture work/scope and local routing unconfirmed"
+    }
+  ],
+  "not_verified": [
+    "Checkout stock and delivered price",
+    "Physical board/silicon revision",
+    "806 kHz MAX30009 support",
+    "Current GUI installation/licensing/offline export",
+    "Raw AD5940 log schema",
+    "Accreditation scope for requested fixture work",
+    "Load-specific phase/X uncertainties",
+    "Fixture service/rental prices"
+  ],
+  "planning_grid": "36 analytical nominal cells, no physical standards; actual frequencies and measured values must set final limits"
+}

@@ -1,0 +1,18 @@
+{
+  "copied_objects_or_binaries": false,
+  "method": "Separate source-only checkout; same installed compiler/libraries; full rebuild, ELF checks and both native suites repeated; debug checkout paths normalized",
+  "common_regressions_passed": 78,
+  "integration_host_tests_passed": 10,
+  "profiles": {
+    "unarmed": {
+      "first_sha256": "2134e425c75bf2dead332622c6ef9692b902e1b77bda557012cbe556118da28d",
+      "clean_stage_sha256": "2134e425c75bf2dead332622c6ef9692b902e1b77bda557012cbe556118da28d",
+      "byte_identical": true
+    },
+    "fullpath-linkcheck": {
+      "first_sha256": "ca12f7afdddd8eea69a4038c2e3cf252af155b4fedbcfa69731625136847ed4d",
+      "clean_stage_sha256": "ca12f7afdddd8eea69a4038c2e3cf252af155b4fedbcfa69731625136847ed4d",
+      "byte_identical": true
+    }
+  }
+}

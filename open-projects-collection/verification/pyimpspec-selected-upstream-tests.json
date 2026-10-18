@@ -1,0 +1,21 @@
+{
+  "name": "pyimpspec-selected-upstream-tests",
+  "status": "failed",
+  "command": [
+    "/home/user/.cache/open-projects/analysis-env/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "test_circuit.py",
+    "test_connection.py",
+    "test_element.py",
+    "test_data.py",
+    "--disable-warnings"
+  ],
+  "cwd": "/home/user/.cache/open-projects/full/vyrjana__pyimpspec/pyimpspec-c822717c7f1c942cb707c5bcd74d3ad034f8166c/tests",
+  "timeout_seconds": 180,
+  "duration_seconds": 10.97613959299997,
+  "exit_code": 1,
+  "log": "pyimpspec-selected-upstream-tests.log",
+  "log_sha256": "23416a4a538f1d822b0be635332a75040a5f8b3b19bf87d6752c77d359a44de0"
+}

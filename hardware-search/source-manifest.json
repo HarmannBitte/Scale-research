@@ -1,0 +1,18 @@
+[
+  {
+    "repository": "protocentral_max86150_ecg_ppg",
+    "commit": "361ec56d97554b961bd26448a01e825e62b64da5"
+  },
+  {
+    "repository": "OpenCardiographySignalMeasuringDevice",
+    "commit": "5493a566030ed0c20bd5d2fabfd093e0d71ce67b"
+  },
+  {
+    "repository": "wulpus",
+    "commit": "d052666902aea8f33dc5baef47c861b189aa9a16"
+  },
+  {
+    "repository": "BioGAP",
+    "commit": "3cfb6719ab780f094fc892f25de727bb86341fa8"
+  }
+]

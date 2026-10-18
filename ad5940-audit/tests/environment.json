@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-17",
+  "python": "Python 3.13.16",
+  "gcc": "gcc (Debian 14.2.0-19) 14.2.0",
+  "no_embedded_build": true,
+  "no_hardware_tests": true,
+  "host_probes": "Mocked for ADI-targeted firmware development, not a device simulator"
+}

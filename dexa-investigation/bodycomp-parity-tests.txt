@@ -1,0 +1,17 @@
+Stage 1
+  waist                    max |JS - Python| = 0.00e+0
+  bicep                    max |JS - Python| = 0.00e+0
+  hip                      max |JS - Python| = 0.00e+0
+  chest                    max |JS - Python| = 0.00e+0
+  thigh                    max |JS - Python| = 0.00e+0
+Stage 2
+  bodyfat_pct/point        max |JS - Python| = 0.00e+0
+  bodyfat_pct/lo           max |JS - Python| = 0.00e+0
+  bodyfat_pct/hi           max |JS - Python| = 0.00e+0
+  alm_kg/point             max |JS - Python| = 0.00e+0
+  alm_kg/lo                max |JS - Python| = 0.00e+0
+  alm_kg/hi                max |JS - Python| = 0.00e+0
+
+440 predictions compared
+worst disagreement: 0.00e+0 ()
+PASS - JS inference matches LightGBM exactly

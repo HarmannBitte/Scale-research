@@ -1,0 +1,19 @@
+test_actual_frequency_mismatch_rejected (test_phantom_check.Tests.test_actual_frequency_mismatch_rejected) ... ok
+test_dc_limit_and_high_frequency (test_phantom_check.Tests.test_dc_limit_and_high_frequency) ... ok
+test_demo_not_hardware (test_phantom_check.Tests.test_demo_not_hardware) ... ok
+test_duplicate_rejected (test_phantom_check.Tests.test_duplicate_rejected) ... ok
+test_flag_fails (test_phantom_check.Tests.test_flag_fails) ... ok
+test_large_gain_bias_fails (test_phantom_check.Tests.test_large_gain_bias_fails) ... ok
+test_missing_cell_rejected (test_phantom_check.Tests.test_missing_cell_rejected) ... ok
+test_negative_uncertainty_rejected (test_phantom_check.Tests.test_negative_uncertainty_rejected) ... ok
+test_nonfinite_rejected (test_phantom_check.Tests.test_nonfinite_rejected) ... ok
+test_phase_wrap (test_phantom_check.Tests.test_phase_wrap) ... ok
+test_primary_only (test_phantom_check.Tests.test_primary_only) ... ok
+test_rc_sign_and_corner (test_phantom_check.Tests.test_rc_sign_and_corner) ... ok
+test_reference_uncertainty_fails (test_phantom_check.Tests.test_reference_uncertainty_fails) ... ok
+test_sign_inversion_fails (test_phantom_check.Tests.test_sign_inversion_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.151s
+
+OK

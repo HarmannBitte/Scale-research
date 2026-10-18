@@ -1,0 +1,21 @@
+{
+  "name": "ad5940-build-time-series-bioz-2wire",
+  "repo": "melazab/AD5940-BIOZ",
+  "commit": "dcd50963aba362ebcfdb090548d099d047451394",
+  "command": [
+    "make",
+    "-j2"
+  ],
+  "cwd": "/home/user/.cache/open-projects/full/melazab__AD5940-BIOZ/AD5940-BIOZ-dcd50963aba362ebcfdb090548d099d047451394/time-series-bioz-2wire",
+  "timeout_seconds": 90,
+  "environment_overrides": {
+    "MPLBACKEND": "Agg",
+    "PYTHONPATH": "/home/user/.cache/open-projects/full/melazab__AD5940-BIOZ/AD5940-BIOZ-dcd50963aba362ebcfdb090548d099d047451394",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+  },
+  "exit_code": 0,
+  "status": "pass",
+  "duration_seconds": 1.465,
+  "log": "ad5940-build-time-series-bioz-2wire.log",
+  "log_sha256": "85748a9c2521ba966249f86864773cf97b2d2f88205f80bc2e8e27d98090b134"
+}

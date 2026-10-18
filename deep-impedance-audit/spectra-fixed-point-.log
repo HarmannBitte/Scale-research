@@ -1,0 +1,4 @@
+numerator=1000 denominator=1000 raw=16 displayed_ohm_equivalent=1.000000
+numerator=1000 denominator=0 raw=0 displayed_ohm_equivalent=0.000000
+numerator=134217728 denominator=1 raw=-2147483648 displayed_ohm_equivalent=-134217728.000000
+numerator=268435456 denominator=1 raw=2147483647 displayed_ohm_equivalent=134217727.937500

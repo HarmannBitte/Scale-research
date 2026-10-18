@@ -1,0 +1,1029 @@
+{
+  "profile": "spectral",
+  "source_kind": "synthetic",
+  "numerical_acceptance": true,
+  "reference_eligibility_for_hardware_review": false,
+  "status": "SIMULATED_NUMERIC_PASS",
+  "device_qualified": false,
+  "human_connection_authorized": false,
+  "limitations": [
+    "No metadata authentication or hardware driver",
+    "No drift/contact/fault-injection verification",
+    "No proof of calibration traceability or electrical safety"
+  ],
+  "input_sha256": {
+    "run.json": "c1d8e4cd83f6cf40391797fa99fb804e56e49f422aa8aab70efe244462ee15bb",
+    "references.csv": "da1658eca68065a1bd29dde8df0434e48ab58e942f657c93e2e8249aed43464a",
+    "samples.csv": "a7dbbe03364e7cc3772d33e657f4352ba7a08d2a1404df50796ec6962a85b6ad"
+  },
+  "cells": [
+    {
+      "fixture_id": "R100",
+      "frequency_hz": 5000.0,
+      "n": 30,
+      "expected_r_ohm": 100.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 99.99212411635251,
+      "mean_x_ohm": 0.0012163854286025865,
+      "absolute_errors": {
+        "mag": 0.00787587624893149,
+        "r": 0.007875883647486148,
+        "x": 0.0012163854286025865,
+        "phase": 0.0006969924074837763
+      },
+      "limits": {
+        "mag": 0.5,
+        "r": 0.5,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.0312934352248968,
+      "sd_x_ohm": 0.03240391576189253,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R100",
+      "frequency_hz": 10000.0,
+      "n": 30,
+      "expected_r_ohm": 100.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 100.0003893537751,
+      "mean_x_ohm": 0.0027713607093331916,
+      "absolute_errors": {
+        "mag": 0.0003893921771549458,
+        "r": 0.0003893537751054055,
+        "x": 0.0027713607093331916,
+        "phase": 0.0015878665386992452
+      },
+      "limits": {
+        "mag": 0.5,
+        "r": 0.5,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.031234678284741826,
+      "sd_x_ohm": 0.021102560427216466,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R100",
+      "frequency_hz": 20000.0,
+      "n": 30,
+      "expected_r_ohm": 100.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 99.99242190286252,
+      "mean_x_ohm": 0.0007912200296857642,
+      "absolute_errors": {
+        "mag": 0.007578094007101299,
+        "r": 0.007578097137482587,
+        "x": 0.0007912200296857642,
+        "phase": 0.0004533700404749652
+      },
+      "limits": {
+        "mag": 0.5,
+        "r": 0.5,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.030679416005191182,
+      "sd_x_ohm": 0.029204533115588387,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R100",
+      "frequency_hz": 50000.0,
+      "n": 30,
+      "expected_r_ohm": 100.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 99.99674567558115,
+      "mean_x_ohm": -0.00012415117925051577,
+      "absolute_errors": {
+        "mag": 0.0032543243417819667,
+        "r": 0.003254324418847432,
+        "x": 0.00012415117925051577,
+        "phase": 7.113570092087684e-05
+      },
+      "limits": {
+        "mag": 0.5,
+        "r": 0.5,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.030605206118428745,
+      "sd_x_ohm": 0.02946024709790285,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R100",
+      "frequency_hz": 100000.0,
+      "n": 30,
+      "expected_r_ohm": 100.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 99.99837610643833,
+      "mean_x_ohm": 0.0034598252731230586,
+      "absolute_errors": {
+        "mag": 0.0016238337087486343,
+        "r": 0.0016238935616712524,
+        "x": 0.0034598252731230586,
+        "phase": 0.001982366050754081
+      },
+      "limits": {
+        "mag": 0.5,
+        "r": 0.5,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.03464506969653556,
+      "sd_x_ohm": 0.03192141543726784,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R100",
+      "frequency_hz": 200000.0,
+      "n": 30,
+      "expected_r_ohm": 100.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 100.00187249345602,
+      "mean_x_ohm": -0.0036069581937449072,
+      "absolute_errors": {
+        "mag": 0.0018725585055392457,
+        "r": 0.001872493456019697,
+        "x": 0.0036069581937449072,
+        "phase": 0.0020665961160375446
+      },
+      "limits": {
+        "mag": 0.5,
+        "r": 0.5,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.02617540198751438,
+      "sd_x_ohm": 0.032866046453526344,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R220",
+      "frequency_hz": 5000.0,
+      "n": 30,
+      "expected_r_ohm": 220.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 219.9970522438897,
+      "mean_x_ohm": 0.004557324594012924,
+      "absolute_errors": {
+        "mag": 0.002947708906930302,
+        "r": 0.00294775611030218,
+        "x": 0.004557324594012924,
+        "phase": 0.0011869043808019342
+      },
+      "limits": {
+        "mag": 1.1,
+        "r": 1.1,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.02166653971734708,
+      "sd_x_ohm": 0.03213698786097314,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R220",
+      "frequency_hz": 10000.0,
+      "n": 30,
+      "expected_r_ohm": 220.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 220.00170694360477,
+      "mean_x_ohm": -0.0025791851418150453,
+      "absolute_errors": {
+        "mag": 0.0017069587232754202,
+        "r": 0.0017069436047734143,
+        "x": 0.0025791851418150453,
+        "phase": 0.0006717058028868905
+      },
+      "limits": {
+        "mag": 1.1,
+        "r": 1.1,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.04139377708970458,
+      "sd_x_ohm": 0.030714961752130693,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R220",
+      "frequency_hz": 20000.0,
+      "n": 30,
+      "expected_r_ohm": 220.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 219.9955332824779,
+      "mean_x_ohm": -0.0033775333023909836,
+      "absolute_errors": {
+        "mag": 0.00446669159489943,
+        "r": 0.004466717522092267,
+        "x": 0.0033775333023909836,
+        "phase": 0.0008796469659557715
+      },
+      "limits": {
+        "mag": 1.1,
+        "r": 1.1,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.027293522343145502,
+      "sd_x_ohm": 0.02969632479143939,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R220",
+      "frequency_hz": 50000.0,
+      "n": 30,
+      "expected_r_ohm": 220.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 220.0095008084416,
+      "mean_x_ohm": -0.001152883606113779,
+      "absolute_errors": {
+        "mag": 0.009500811462231695,
+        "r": 0.009500808441600839,
+        "x": 0.001152883606113779,
+        "phase": 0.0003002386926880263
+      },
+      "limits": {
+        "mag": 1.1,
+        "r": 1.1,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.032840014567914536,
+      "sd_x_ohm": 0.027070444960848882,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R220",
+      "frequency_hz": 100000.0,
+      "n": 30,
+      "expected_r_ohm": 220.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 220.00419880400645,
+      "mean_x_ohm": -0.0022254203238295618,
+      "absolute_errors": {
+        "mag": 0.004198815261901245,
+        "r": 0.0041988040064495635,
+        "x": 0.0022254203238295618,
+        "phase": 0.0005795670850261558
+      },
+      "limits": {
+        "mag": 1.1,
+        "r": 1.1,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.027912915351494354,
+      "sd_x_ohm": 0.030993882369836218,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R220",
+      "frequency_hz": 200000.0,
+      "n": 30,
+      "expected_r_ohm": 220.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 219.99513056039962,
+      "mean_x_ohm": -0.008727160732173722,
+      "absolute_errors": {
+        "mag": 0.004869266498076286,
+        "r": 0.004869439600383885,
+        "x": 0.008727160732173722,
+        "phase": 0.0022729115665072186
+      },
+      "limits": {
+        "mag": 1.1,
+        "r": 1.1,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.0308350829415046,
+      "sd_x_ohm": 0.026894540563841034,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R470",
+      "frequency_hz": 5000.0,
+      "n": 30,
+      "expected_r_ohm": 470.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 470.0030786386249,
+      "mean_x_ohm": 0.003947689896263711,
+      "absolute_errors": {
+        "mag": 0.0030786552038080117,
+        "r": 0.00307863862491331,
+        "x": 0.003947689896263711,
+        "phase": 0.000481243592133751
+      },
+      "limits": {
+        "mag": 2.35,
+        "r": 2.35,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.035322748192059196,
+      "sd_x_ohm": 0.030990103733345403,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R470",
+      "frequency_hz": 10000.0,
+      "n": 30,
+      "expected_r_ohm": 470.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 470.0095207470487,
+      "mean_x_ohm": 0.0016967604387016376,
+      "absolute_errors": {
+        "mag": 0.009520750111448706,
+        "r": 0.009520747048725298,
+        "x": 0.0016967604387016376,
+        "phase": 0.0002068409419280215
+      },
+      "limits": {
+        "mag": 2.35,
+        "r": 2.35,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.02660503294649019,
+      "sd_x_ohm": 0.027521658804484286,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R470",
+      "frequency_hz": 20000.0,
+      "n": 30,
+      "expected_r_ohm": 470.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 469.9963473796469,
+      "mean_x_ohm": -0.003179550575709613,
+      "absolute_errors": {
+        "mag": 0.0036526095981912476,
+        "r": 0.003652620353079783,
+        "x": 0.003179550575709613,
+        "phase": 0.00038760903089496423
+      },
+      "limits": {
+        "mag": 2.35,
+        "r": 2.35,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.028682706815335544,
+      "sd_x_ohm": 0.036609968582854535,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R470",
+      "frequency_hz": 50000.0,
+      "n": 30,
+      "expected_r_ohm": 470.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 469.99734552366806,
+      "mean_x_ohm": 0.0007388493721032589,
+      "absolute_errors": {
+        "mag": 0.0026544757511715034,
+        "r": 0.002654476331940714,
+        "x": 0.0007388493721032589,
+        "phase": 9.007061660781801e-05
+      },
+      "limits": {
+        "mag": 2.35,
+        "r": 2.35,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.0277308998455396,
+      "sd_x_ohm": 0.033446845463291575,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R470",
+      "frequency_hz": 100000.0,
+      "n": 30,
+      "expected_r_ohm": 470.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 469.9929051317288,
+      "mean_x_ohm": -0.0028763738482074437,
+      "absolute_errors": {
+        "mag": 0.007094859469475523,
+        "r": 0.007094868271224186,
+        "x": 0.0028763738482074437,
+        "phase": 0.0003506522758129904
+      },
+      "limits": {
+        "mag": 2.35,
+        "r": 2.35,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.03682843732871063,
+      "sd_x_ohm": 0.02397019997451529,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R470",
+      "frequency_hz": 200000.0,
+      "n": 30,
+      "expected_r_ohm": 470.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 470.00252306844163,
+      "mean_x_ohm": 0.00017155099625161841,
+      "absolute_errors": {
+        "mag": 0.0025230684729535824,
+        "r": 0.0025230684416328586,
+        "x": 0.00017155099625161841,
+        "phase": 2.091296869366488e-05
+      },
+      "limits": {
+        "mag": 2.35,
+        "r": 2.35,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.02647395295279352,
+      "sd_x_ohm": 0.02923822750439116,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R1000",
+      "frequency_hz": 5000.0,
+      "n": 30,
+      "expected_r_ohm": 1000.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 999.9976417659088,
+      "mean_x_ohm": -0.008109218849283827,
+      "absolute_errors": {
+        "mag": 0.0023582012113365636,
+        "r": 0.0023582340911616484,
+        "x": 0.008109218849283827,
+        "phase": 0.0004646251109079458
+      },
+      "limits": {
+        "mag": 5.0,
+        "r": 5.0,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.029903449734047054,
+      "sd_x_ohm": 0.032327789505861355,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R1000",
+      "frequency_hz": 10000.0,
+      "n": 30,
+      "expected_r_ohm": 1000.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 1000.0014750626577,
+      "mean_x_ohm": 0.005022576106783182,
+      "absolute_errors": {
+        "mag": 0.001475075270832349,
+        "r": 0.001475062657732451,
+        "x": 0.005022576106783182,
+        "phase": 0.00028777198872376175
+      },
+      "limits": {
+        "mag": 5.0,
+        "r": 5.0,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.034772916281782786,
+      "sd_x_ohm": 0.032727314516105374,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R1000",
+      "frequency_hz": 20000.0,
+      "n": 30,
+      "expected_r_ohm": 1000.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 1000.0034465864712,
+      "mean_x_ohm": -0.002118854502839601,
+      "absolute_errors": {
+        "mag": 0.0034465887159740305,
+        "r": 0.0034465864712274197,
+        "x": 0.002118854502839601,
+        "phase": 0.00012140100199076187
+      },
+      "limits": {
+        "mag": 5.0,
+        "r": 5.0,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.02157226842440559,
+      "sd_x_ohm": 0.025605792016209446,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R1000",
+      "frequency_hz": 50000.0,
+      "n": 30,
+      "expected_r_ohm": 1000.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 1000.0007304414223,
+      "mean_x_ohm": -0.0034080521507483925,
+      "absolute_errors": {
+        "mag": 0.0007304472296709719,
+        "r": 0.0007304414223199274,
+        "x": 0.0034080521507483925,
+        "phase": 0.00019526686196513765
+      },
+      "limits": {
+        "mag": 5.0,
+        "r": 5.0,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.026339099411684812,
+      "sd_x_ohm": 0.02688169627910597,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R1000",
+      "frequency_hz": 100000.0,
+      "n": 30,
+      "expected_r_ohm": 1000.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 999.9902536965132,
+      "mean_x_ohm": -0.006329841782972277,
+      "absolute_errors": {
+        "mag": 0.009746283453182514,
+        "r": 0.009746303486849683,
+        "x": 0.006329841782972277,
+        "phase": 0.00036267675389467513
+      },
+      "limits": {
+        "mag": 5.0,
+        "r": 5.0,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.04103262784066004,
+      "sd_x_ohm": 0.03306272658345239,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "R1000",
+      "frequency_hz": 200000.0,
+      "n": 30,
+      "expected_r_ohm": 1000.0,
+      "expected_x_ohm": 0.0,
+      "mean_r_ohm": 1000.0038104118565,
+      "mean_x_ohm": -0.003723895422376004,
+      "absolute_errors": {
+        "mag": 0.0038104187901808473,
+        "r": 0.0038104118565343015,
+        "x": 0.003723895422376004,
+        "phase": 0.00021336267803917508
+      },
+      "limits": {
+        "mag": 5.0,
+        "r": 5.0,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.0340242214354307,
+      "sd_x_ohm": 0.03500199628296167,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "RC_A",
+      "frequency_hz": 5000.0,
+      "n": 30,
+      "expected_r_ohm": 677.9633906068639,
+      "expected_x_ohm": -20.580092194603658,
+      "mean_r_ohm": 677.9704627637618,
+      "mean_x_ohm": -20.58010683080733,
+      "absolute_errors": {
+        "mag": 0.007069344868682492,
+        "r": 0.007072156897947934,
+        "x": 1.4636203673035197e-05,
+        "phase": 1.6890341044017987e-05
+      },
+      "limits": {
+        "mag": 3.3913784041223325,
+        "r": 3.3898169530343196,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.03303734017975249,
+      "sd_x_ohm": 0.027451306432295146,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "RC_A",
+      "frequency_hz": 10000.0,
+      "n": 30,
+      "expected_r_ohm": 672.0838774217424,
+      "expected_x_ohm": -39.996509157176426,
+      "mean_r_ohm": 672.0883705239195,
+      "mean_x_ohm": -40.00051447151974,
+      "absolute_errors": {
+        "mag": 0.004723117284811451,
+        "r": 0.004493102177093533,
+        "x": 0.004005314343316968,
+        "phase": 0.00031753475116147456
+      },
+      "limits": {
+        "mag": 3.366364727101788,
+        "r": 3.360419387108712,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.03872173519901467,
+      "sd_x_ohm": 0.032375793142326414,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "RC_A",
+      "frequency_hz": 20000.0,
+      "n": 30,
+      "expected_r_ohm": 651.5525587186926,
+      "expected_x_ohm": -71.86588727359536,
+      "mean_r_ohm": 651.5512798742977,
+      "mean_x_ohm": -71.871647658061,
+      "absolute_errors": {
+        "mag": 0.0006395720207592603,
+        "r": 0.001278844394846601,
+        "x": 0.0057603844656313186,
+        "phase": 0.0005127195628347181
+      },
+      "limits": {
+        "mag": 3.2775198036262743,
+        "r": 3.257762793593463,
+        "x": 1.4373177454719073,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.031635907671034344,
+      "sd_x_ohm": 0.030907546761201617,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "RC_A",
+      "frequency_hz": 50000.0,
+      "n": 30,
+      "expected_r_ohm": 576.0974992315885,
+      "expected_x_ohm": -104.99426410731523,
+      "mean_r_ohm": 576.1030000864987,
+      "mean_x_ohm": -105.00449332638986,
+      "absolute_errors": {
+        "mag": 0.0072458564623048005,
+        "r": 0.005500854910224007,
+        "x": 0.010229219074631146,
+        "phase": 0.0008881289638225098
+      },
+      "limits": {
+        "mag": 2.927934955375233,
+        "r": 2.8804874961579423,
+        "x": 2.0998852821463045,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.03318553891860332,
+      "sd_x_ohm": 0.03263795106693501,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "RC_A",
+      "frequency_hz": 100000.0,
+      "n": 30,
+      "expected_r_ohm": 512.7068323537314,
+      "expected_x_ohm": -84.52550659176124,
+      "mean_r_ohm": 512.7023795177732,
+      "mean_x_ohm": -84.52314013501206,
+      "absolute_errors": {
+        "mag": 0.0047784682931251155,
+        "r": 0.00445283595820456,
+        "x": 0.002366456749186341,
+        "phase": 0.00017759318606636043
+      },
+      "limits": {
+        "mag": 2.598138069881926,
+        "r": 2.5635341617686573,
+        "x": 1.690510131835225,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.03180342961016534,
+      "sd_x_ohm": 0.031409049015565356,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "RC_A",
+      "frequency_hz": 200000.0,
+      "n": 30,
+      "expected_r_ohm": 482.5982483794796,
+      "expected_x_ohm": -49.86899134191171,
+      "mean_r_ohm": 482.60967462802,
+      "mean_x_ohm": -49.878677322650695,
+      "absolute_errors": {
+        "mag": 0.01236139531124536,
+        "r": 0.011426248540374218,
+        "x": 0.009685980738986188,
+        "phase": 0.0009990803735320242
+      },
+      "limits": {
+        "mag": 2.425839986666482,
+        "r": 2.412991241897398,
+        "x": 1.0,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.028049118531458653,
+      "sd_x_ohm": 0.028293557794314608,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "RC_B",
+      "frequency_hz": 5000.0,
+      "n": 30,
+      "expected_r_ohm": 994.3597200912808,
+      "expected_x_ohm": -52.80461340556213,
+      "mean_r_ohm": 994.3623584497349,
+      "mean_x_ohm": -52.81148914271162,
+      "absolute_errors": {
+        "mag": 0.0029992851921178953,
+        "r": 0.0026383584540781158,
+        "x": 0.006875737149492522,
+        "phase": 0.00038701961528886386
+      },
+      "limits": {
+        "mag": 4.9788040233999,
+        "r": 4.971798600456404,
+        "x": 1.0560922681112426,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.024368339879922096,
+      "sd_x_ohm": 0.02916994105779394,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "RC_B",
+      "frequency_hz": 10000.0,
+      "n": 30,
+      "expected_r_ohm": 978.1773940021179,
+      "expected_x_ohm": -102.15222399146407,
+      "mean_r_ohm": 978.1812793644156,
+      "mean_x_ohm": -102.14858086353411,
+      "absolute_errors": {
+        "mag": 0.003485957264956596,
+        "r": 0.0038853622976375846,
+        "x": 0.00364312792996202,
+        "phase": 0.0002345998637736102
+      },
+      "limits": {
+        "mag": 4.917484344162107,
+        "r": 4.89088697001059,
+        "x": 2.0430444798292813,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.029128192928656368,
+      "sd_x_ohm": 0.03112491203202722,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "RC_B",
+      "frequency_hz": 20000.0,
+      "n": 30,
+      "expected_r_ohm": 922.8157454643076,
+      "expected_x_ohm": -180.65081820909546,
+      "mean_r_ohm": 922.8116845641914,
+      "mean_x_ohm": -180.65311373233536,
+      "absolute_errors": {
+        "mag": 0.0035442493141317755,
+        "r": 0.004060900116201083,
+        "x": 0.002295523239894237,
+        "phase": 0.00018480088775163495
+      },
+      "limits": {
+        "mag": 4.701658266496145,
+        "r": 4.614078727321538,
+        "x": 3.6130163641819095,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.02284217054656986,
+      "sd_x_ohm": 0.0328489086830764,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "RC_B",
+      "frequency_hz": 50000.0,
+      "n": 30,
+      "expected_r_ohm": 733.5437736901652,
+      "expected_x_ohm": -249.45779726366442,
+      "mean_r_ohm": 733.552627498886,
+      "mean_x_ohm": -249.4574829775897,
+      "absolute_errors": {
+        "mag": 0.00828117809487594,
+        "r": 0.008853808720800771,
+        "x": 0.0003142860747118448,
+        "phase": 0.0002328009235270656
+      },
+      "limits": {
+        "mag": 3.874002002242796,
+        "r": 3.6677188684508257,
+        "x": 4.989155945273288,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.03144926653050084,
+      "sd_x_ohm": 0.025060503541144218,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "RC_B",
+      "frequency_hz": 100000.0,
+      "n": 30,
+      "expected_r_ohm": 589.8681711654664,
+      "expected_x_ohm": -191.9838467009858,
+      "mean_r_ohm": 589.8692527874917,
+      "mean_x_ohm": -191.97751752908752,
+      "absolute_errors": {
+        "mag": 0.0009302620666176153,
+        "r": 0.0010816220253673237,
+        "x": 0.006329171898272534,
+        "phase": 0.0005868073236570126
+      },
+      "limits": {
+        "mag": 3.101621578901106,
+        "r": 2.949340855827332,
+        "x": 3.839676934019716,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.02846256273720204,
+      "sd_x_ohm": 0.026622508991238955,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    },
+    {
+      "fixture_id": "RC_B",
+      "frequency_hz": 200000.0,
+      "n": 30,
+      "expected_r_ohm": 525.9675235708838,
+      "expected_x_ohm": -110.94795854380325,
+      "mean_r_ohm": 525.968927670546,
+      "mean_x_ohm": -110.94613236482411,
+      "absolute_errors": {
+        "mag": 0.000996949553154991,
+        "r": 0.0014040996621815793,
+        "x": 0.0018261789791438332,
+        "phase": 0.0002213478612986819
+      },
+      "limits": {
+        "mag": 2.687709458611206,
+        "r": 2.6298376178544194,
+        "x": 2.218959170876065,
+        "phase": 0.2
+      },
+      "sd_r_ohm": 0.02664758457436433,
+      "sd_x_ohm": 0.026529387834373645,
+      "accuracy_ok": true,
+      "reference_uncertainty_ok": true,
+      "independent_reference": false,
+      "no_faults": true,
+      "numeric_pass": true
+    }
+  ]
+}

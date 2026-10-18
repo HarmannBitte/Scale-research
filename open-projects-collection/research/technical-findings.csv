@@ -1,0 +1,129 @@
+repo,commit,path,line,topic,observation,evidence_kind,source_url,excerpt
+OpenEIT/EIT_Firmware,38a181367ba83a05442d6fc695213be0d3f29f9f,modes.h,62,frequency configuration,"Inspected spectroscopy array has 15 requested frequencies, 200 Hz–70 kHz.",source inspection,https://github.com/OpenEIT/EIT_Firmware/blob/38a181367ba83a05442d6fc695213be0d3f29f9f/modes.h#L62,"/***************************************************************************/
+#define MULTIFREQUENCY_ARRAY_SIZE   (15)
+#define MSG_MAXLEN_M2               (50)
+const uint64_t multifrequency[] = {200,500,800,1000,2000,5000,8000,10000,15000,20000,30000,40000,50000,60000,70000};
+const char *stringfreqs[MULTIFREQUENCY_ARRAY_SIZE] = {""200"",""500"",""800"",""1000"",""2000"",""5000"",""8000"",""10000"",""15000"",""20000"",""30000"",""40000"",""50000"",""60000"",""70000""};  "
+OpenEIT/EIT_Firmware,38a181367ba83a05442d6fc695213be0d3f29f9f,modes.h,18,frequency configuration,Common FREQ macro is 25 kHz; not a measured frequency or a guarantee for all sequences.,source inspection,https://github.com/OpenEIT/EIT_Firmware/blob/38a181367ba83a05442d6fc695213be0d3f29f9f/modes.h#L18,"  /* Excitation frequency in Hz */
+#define FREQ                        (25000)
+/* Peak voltage in mV */
+#define VPEAK                       (599)
+/* RCAL value in Ohms */"
+OpenEIT/EIT_Firmware,38a181367ba83a05442d6fc695213be0d3f29f9f,modes.h,74,excitation review,Bipolar amplitude macro references VPEAK * 40 rather than VPEAK_BIPOLAR; reconcile with sequence/registers before passive testing.,source inspection,https://github.com/OpenEIT/EIT_Firmware/blob/38a181367ba83a05442d6fc695213be0d3f29f9f/modes.h#L74,"/* Sine amplitude in DAC codes */
+#define SINE_AMPLITUDE_BIPOLAR              ((uint16_t)((VPEAK * 40) / DAC_LSB_SIZE + 0.5))
+
+/* If both real and imaginary result are within the interval (DFT_RESULTS_OPEN_MIN_THR, DFT_RESULTS_OPEN_MAX_THR),  */
+/* it is considered an open circuit and results for both magnitude and phase will be 0.                             */"
+OpenEIT/EIT_Firmware,38a181367ba83a05442d6fc695213be0d3f29f9f,OpenEIT.c,667,complex export,Inspected spectroscopy path computes/prints magnitude; phase helper existence does not prove R/X export.,source inspection,https://github.com/OpenEIT/EIT_Firmware/blob/38a181367ba83a05442d6fc695213be0d3f29f9f/OpenEIT.c#L667,"*****************************************************************************/
+void bioimpedance_spectroscopy(ADI_AFE_DEV_HANDLE  hDevice, const uint32_t *const seq) {
+  
+  int16_t             dft_results[DFT_RESULTS_COUNT];
+  q15_t               dft_results_q15[DFT_RESULTS_COUNT];"
+OpenEIT/OpenEIT,418b5e1fdf99366a83a2f46e06fdc3c91a89db0c,OpenEIT/backend/serialhandler.py,40,input quality,"Exact function probed: nonfinite values, empty records and missing fields accepted without shape/quality enforcement.",source + seven AST-isolated probes,https://github.com/OpenEIT/OpenEIT/blob/418b5e1fdf99366a83a2f46e06fdc3c91a89db0c/OpenEIT/backend/serialhandler.py#L40,"
+def parse_any_line(line, mode):  
+
+    items = []
+    if 'a' in mode:"
+OpenEIT/OpenEIT,418b5e1fdf99366a83a2f46e06fdc3c91a89db0c,setup.py,25,dependency consistency,setup.py dependency pins differ substantially from requirements.txt.,source inspection,https://github.com/OpenEIT/OpenEIT/blob/418b5e1fdf99366a83a2f46e06fdc3c91a89db0c/setup.py#L25,"    'matplotlib==2.1.1',
+    'numpy==1.16.2',
+    'pyserial==3.4',
+    'scikit-image==0.14.2',
+    'scipy==1.2.1',"
+OpenEIT/OpenEIT,418b5e1fdf99366a83a2f46e06fdc3c91a89db0c,app.py,14,BLE maintenance,Source explicitly disables old macOS BLE route with a nonstandard platform string.,source inspection,https://github.com/OpenEIT/OpenEIT/blob/418b5e1fdf99366a83a2f46e06fdc3c91a89db0c/app.py#L14,"
+# NOTE: darwin_xx should be just darwin. I've done this as a hack to stop the currently out of date adafruit ble library. More work needs to be done on bluetooth to update. Would appreciate a contribution. Thanks.
+if platform == ""darwin_xx"":
+    # OS X
+    from OpenEIT.backend.bluetooth import Adafruit_BluefruitLE"
+OpenEIT/OpenEIT,418b5e1fdf99366a83a2f46e06fdc3c91a89db0c,OpenEIT/reconstruction/pyeit/eit/fem.py,84,dependency compatibility,Bundled older solver contains removed NumPy alias; selected source not a clean current-runtime validation.,source inspection,https://github.com/OpenEIT/OpenEIT/blob/418b5e1fdf99366a83a2f46e06fdc3c91a89db0c/OpenEIT/reconstruction/pyeit/eit/fem.py#L84,"        elif np.isscalar(perm):
+            perm0 = np.ones(self.n_tri, dtype=np.float)
+        else:
+            assert perm.shape == (self.n_tri,)
+            perm0 = perm"
+openebi/software,c3176707f5011934e5208b77cea331c006173edb,main.c,97,raw units and validity,Averaged AD5933 register counts and polling; nonzero average/timeout must be validated externally.,source inspection,https://github.com/openebi/software/blob/c3176707f5011934e5208b77cea331c006173edb/main.c#L97,"
+void take_measurement(uint8_t avg, double *rdata, double *idata)
+{
+    int i;
+    int32_t rdata_raw = 0, idata_raw = 0;"
+openebi/software,c3176707f5011934e5208b77cea331c006173edb,main.c,202,parameter validation,Configuration sscanf return count not checked here; not a demonstrated safe command parser.,source inspection,https://github.com/openebi/software/blob/c3176707f5011934e5208b77cea331c006173edb/main.c#L202,"            case 'p':
+                sscanf(&cmdbuf[1], ""%lf %lf %u %u %hhu %hhu %hhu %hhu"", &opts.fstart, &opts.fincr,
+                    &opts.nincr, &opts.tsettle, &opts.xtsettle, &opts.nrange, &opts.pgagain, &opts.average);
+                if (opts.tsettle > 511)
+                    opts.tsettle = 511;"
+melazab/AD5940-BIOZ,dcd50963aba362ebcfdb090548d099d047451394,measure-4wire-bioz/main.c,192,sweep defaults,"40-point linear requested sweep, not verified hardware bandwidth.",source inspection,https://github.com/melazab/AD5940-BIOZ/blob/dcd50963aba362ebcfdb090548d099d047451394/measure-4wire-bioz/main.c#L192,"  cfg->SweepCfg.SweepStop = 200000.0f; /* 200kHz */
+  cfg->SweepCfg.SweepPoints = 40;
+  cfg->SweepCfg.SweepLog = bFALSE;
+
+  cfg->BiaODR = 5.0f; /* 5Hz output data rate */"
+melazab/AD5940-BIOZ,dcd50963aba362ebcfdb090548d099d047451394,gui/main.py,700,recording,GUI CSV streams to file independently of bounded plot buffers; no transport integrity test claimed.,source inspection,https://github.com/melazab/AD5940-BIOZ/blob/dcd50963aba362ebcfdb090548d099d047451394/gui/main.py#L700,"        self.record_writer = csv.writer(self.record_file)
+        self.record_writer.writerow(self.RECORD_HEADER)
+        self.record_btn.config(text=""Stop Recording"")
+        self._log(f""Recording to {path}"")
+"
+oscaroflores/UPRM-Multi_Frq-BioZ-Research,b3a8844a511c87d28e6929e658218d85c8097f8f,src/bioZ.c,309,frequency scope,"Two frequency selections documented, approximately 4 kHz and 131 kHz.",source inspection,https://github.com/oscaroflores/UPRM-Multi_Frq-BioZ-Research/blob/b3a8844a511c87d28e6929e658218d85c8097f8f/src/bioZ.c#L309," */
+void setFreq(int freq)
+{
+
+  switch (freq)"
+oscaroflores/UPRM-Multi_Frq-BioZ-Research,b3a8844a511c87d28e6929e658218d85c8097f8f,main.c,589,settling,Seven samples discarded between accepted outputs; adequacy not characterized here.,source inspection,https://github.com/oscaroflores/UPRM-Multi_Frq-BioZ-Research/blob/b3a8844a511c87d28e6929e658218d85c8097f8f/main.c#L589,"        spiBurstnoPrint();
+        if (samples_discarded == 7)
+        {
+          sample_ready = 1;
+          samples_discarded = 0;"
+oscaroflores/UPRM-Multi_Frq-BioZ-Research,b3a8844a511c87d28e6929e658218d85c8097f8f,src/bioZ.c,584,bounds and data path,"BLE send precedes snprintf-length validation; review bounded error behavior, no exploitation/hardware failure established.",source inspection,https://github.com/oscaroflores/UPRM-Multi_Frq-BioZ-Research/blob/b3a8844a511c87d28e6929e658218d85c8097f8f/src/bioZ.c#L584,"  // Send log entry via BLE
+  datsSendData(AppConnIsOpen(), log_entry, log_len);
+
+  if (log_len < 0 || log_len >= sizeof(log_entry))
+  {"
+dyarleniber/AD5933-arduino-bioimpedance,6ad93945a9201dac8b95a1d9b9755f3de364d80f,AD5933.ino,129,physiological assumption,Fixed hydration conversion; formula validity is separate from electrical validity.,source inspection,https://github.com/dyarleniber/AD5933-arduino-bioimpedance/blob/6ad93945a9201dac8b95a1d9b9755f3de364d80f/AD5933.ino#L129,"      TBW = 6.69 + (0.34573 * (pow(user_data[2].toFloat(), 2) / impedance_100khz)) + (0.17065 * user_data[3].toFloat()) - (0.11 * user_data[0].toInt()) + (2.66 * user_data[1].toInt());
+      FFM = TBW / 0.73;
+      FM = user_data[3].toFloat() - FFM;
+
+      FM = abs(FM);"
+dyarleniber/AD5933-arduino-bioimpedance,6ad93945a9201dac8b95a1d9b9755f3de364d80f,AD5933.ino,132,invalid outputs,Absolute values can hide impossible negative physiological estimates.,source inspection,https://github.com/dyarleniber/AD5933-arduino-bioimpedance/blob/6ad93945a9201dac8b95a1d9b9755f3de364d80f/AD5933.ino#L132,"
+      FM = abs(FM);
+      FFM = abs(FFM);
+      TBW = abs(TBW);
+"
+oliexdev/openScale,8ef93b2092745ea84ddd677eac1871452c27b3d5,android_app/app/src/main/java/com/health/openscale/core/bluetooth/scales/CustomOpenScaleHandler.kt,140,record lifecycle,Custom handler clears instrument EEPROM on completion message; bridge must preserve independent raw archive.,source inspection,https://github.com/oliexdev/openScale/blob/8ef93b2092745ea84ddd677eac1871452c27b3d5/android_app/app/src/main/java/com/health/openscale/core/bluetooth/scales/CustomOpenScaleHandler.kt#L140,"            'S' -> logD(""MCU stored size: $payload"")
+            'F' -> {
+                logD(""MCU finished transmission -> clear EEPROM & disconnect"")
+                clearEeprom()
+                requestDisconnect()"
+oliexdev/openScale,8ef93b2092745ea84ddd677eac1871452c27b3d5,android_app/app/src/main/java/com/health/openscale/core/bluetooth/scales/CustomOpenScaleHandler.kt,121,consumer schema,"Legacy custom payload contains consumer metrics, not a complete raw BioZ spectrum/calibration schema.",source inspection,https://github.com/oliexdev/openScale/blob/8ef93b2092745ea84ddd677eac1871452c27b3d5/android_app/app/src/main/java/com/health/openscale/core/bluetooth/scales/CustomOpenScaleHandler.kt#L121,"     * CSV for $D$ is:
+     *  idx,year,month,day,hour,minute,weight,fat,water,muscle,checksum
+     */
+    private fun parseLine(raw: String) {
+        val line = raw.trimEnd('\r') // defensive (some modules send \r\n)"
+oliexdev/openScale,8ef93b2092745ea84ddd677eac1871452c27b3d5,android_app/app/build.gradle.kts,26,build requirements,Inspected app uses SDK 37; min SDK31 and Java21 also specified.,source inspection,https://github.com/oliexdev/openScale/blob/8ef93b2092745ea84ddd677eac1871452c27b3d5/android_app/app/build.gradle.kts#L26,"    namespace = ""com.health.openscale""
+    compileSdk = 37
+
+    defaultConfig {
+        applicationId = ""com.health.openscale"""
+eayrenk/bioscale-okok-alternative,2b8beb6229c8480e60e6682fce0ca1e2da162024,calculations/body_composition.py,160,physiological claim,Visceral-fat implementation describes itself as empirical/unvalidated; not direct imaging.,source inspection,https://github.com/eayrenk/bioscale-okok-alternative/blob/2b8beb6229c8480e60e6682fce0ca1e2da162024/calculations/body_composition.py#L160,"    """"""Empirical estimate. Scale 1-59 follows Omron/Tanita convention.
+    1-9 healthy, 10-14 high, 15+ dangerous. No published validated formula exists.""""""
+    bmi = calculate_bmi(weight_kg, height_cm)
+    fat_pct = calculate_body_fat_percent(weight_kg, height_cm, age, sex, impedance)
+    if sex == 'M':"
+eayrenk/bioscale-okok-alternative,2b8beb6229c8480e60e6682fce0ca1e2da162024,calculations/body_composition.py,123,physiological claim,Bone helper contains numerical accuracy assertion without a device-level validation established in this investigation.,source inspection,https://github.com/eayrenk/bioscale-okok-alternative/blob/2b8beb6229c8480e60e6682fce0ca1e2da162024/calculations/body_composition.py#L123,"def calculate_bone_mass_kg(weight_kg, height_cm, age, sex, impedance=None):
+    """"""Empirical consumer BIA formula (OKOK/Tanita-style). Results ±0.3 kg vs DEXA.""""""
+    fat_pct = calculate_body_fat_percent(weight_kg, height_cm, age, sex, impedance)
+    lean_kg = weight_kg * (1 - fat_pct / 100.0)
+    if sex == 'M':"
+eayrenk/bioscale-okok-alternative,2b8beb6229c8480e60e6682fce0ca1e2da162024,tests/test_calculations.py,28,test/API mismatch,Upstream call misses current height_cm argument; reproduced as one failure among five tests.,source + upstream test execution,https://github.com/eayrenk/bioscale-okok-alternative/blob/2b8beb6229c8480e60e6682fce0ca1e2da162024/tests/test_calculations.py#L28,"    metrics = get_all_metrics(80, 175, 35, 'M', impedance=500)
+    classes = get_classifications(metrics, 'M', 35)
+    assert classes[""bmi""][""label""] == ""Sobrepeso"""
+TAMU-ESP/BioZPulse-Sim-Platform,91fc24b3cb0bb7b980d46821459005958aca3e42,v2.0/spice_netlist_3d_run_fn.m,62,simulation execution,External simulator retry loop requires bounds/environment checks before unattended use.,source inspection,https://github.com/TAMU-ESP/BioZPulse-Sim-Platform/blob/91fc24b3cb0bb7b980d46821459005958aca3e42/v2.0/spice_netlist_3d_run_fn.m#L62,"    status=1;
+    while status~=0
+        fprintf('... Spice Running')
+        cmd=strcat({'""'},net.param.ltspice_path,{'"" -b -ascii '},net.param.circuit_file);
+        status=system(cmd{1});"
+Protocentral/protocentral_openview,326935b743582c51a045076e1ae25eed1434dfb9,README.md,5,stale documentation correction,"Current OpenView is Flutter-based, not the old Processing viewer referenced by hardware README.",source inspection,https://github.com/Protocentral/protocentral_openview/blob/326935b743582c51a045076e1ae25eed1434dfb9/README.md#L5,"
+# OpenView 3
+
+**The companion app for ProtoCentral biosignal and sensor boards.**
+Stream live data over USB, BLE or Wi-Fi · visualize it in real time · record it to `.hpd` · replay it later."
+Protocentral/protocentral_openview,326935b743582c51a045076e1ae25eed1434dfb9,docs/ARCHITECTURE.md,35,documentation drift,"Architecture document says one test, but collected tree contains additional test files; do not infer test coverage from this sentence.",source inspection,https://github.com/Protocentral/protocentral_openview/blob/326935b743582c51a045076e1ae25eed1434dfb9/docs/ARCHITECTURE.md#L35,"
+There is currently only one test (`test/widget_test.dart`). Test coverage is
+minimal — do not assume a test exists for a given unit.
+
+## Architecture"

@@ -1,0 +1,24 @@
+# Internal tools
+pbr
+click
+
+# Image processing
+simpleitk
+numpy<2.0
+matplotlib
+netCDF4
+nibabel
+Pillow
+
+# Statistics
+scipy>=1.7,<1.13
+
+# Machine learning
+batchgenerators
+
+# Documentation
+Sphinx
+
+# Testings
+nose
+flake8

@@ -1,0 +1,19 @@
+{
+  "name": "deareis-selected-upstream-tests",
+  "status": "pass",
+  "command": [
+    "/home/user/.cache/open-projects/analysis-env/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "test_project.py",
+    "test_utility.py",
+    "--disable-warnings"
+  ],
+  "cwd": "/home/user/.cache/open-projects/full/vyrjana__DearEIS/DearEIS-0c683ba5708774cc9590f8923dd8ed1c1e67c3e2/tests",
+  "timeout_seconds": 120,
+  "duration_seconds": 2.4289018310000756,
+  "exit_code": 0,
+  "log": "deareis-selected-upstream-tests.log",
+  "log_sha256": "d9cee4658044bf137f4bcc7f234b06a5e7c1fd41110144781295d7399316d3ac"
+}

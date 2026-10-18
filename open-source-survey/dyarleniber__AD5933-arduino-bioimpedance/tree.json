@@ -1,0 +1,39 @@
+{
+  "sha": "6ad93945a9201dac8b95a1d9b9755f3de364d80f",
+  "url": "https://api.github.com/repos/dyarleniber/AD5933-arduino-bioimpedance/git/trees/6ad93945a9201dac8b95a1d9b9755f3de364d80f",
+  "tree": [
+    {
+      "path": "AD5933.ino",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7506ccdded104c680fcb397d765a112b5169e46",
+      "size": 6954,
+      "url": "https://api.github.com/repos/dyarleniber/AD5933-arduino-bioimpedance/git/blobs/e7506ccdded104c680fcb397d765a112b5169e46"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94a9ed024d3859793618152ea559a168bbcbb5e2",
+      "size": 35147,
+      "url": "https://api.github.com/repos/dyarleniber/AD5933-arduino-bioimpedance/git/blobs/94a9ed024d3859793618152ea559a168bbcbb5e2"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f5015e1890e66d1fb9f7a7dea3c64a9f45b795b",
+      "size": 2019,
+      "url": "https://api.github.com/repos/dyarleniber/AD5933-arduino-bioimpedance/git/blobs/9f5015e1890e66d1fb9f7a7dea3c64a9f45b795b"
+    },
+    {
+      "path": "final-paper-dyarleniber.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fe02d16a97f1ce11f3506c2062c3f8285ef027e",
+      "size": 1911710,
+      "url": "https://api.github.com/repos/dyarleniber/AD5933-arduino-bioimpedance/git/blobs/7fe02d16a97f1ce11f3506c2062c3f8285ef027e"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,402 @@
+import type { BleChar, BleDevice } from '../shared.js';
+import { bleLog, errMsg, normalizeUuid } from '../types.js';
+import type { EsphomeClient, EsphomeConnection } from './client.js';
+import { macToInt } from './advert.js';
+import {
+  cccdValueFor,
+  esphomeGattPayload,
+  esphomeUuidToString,
+  findCccdHandle,
+  type EsphomeGattServicesResponse,
+  type EsphomeNotifyData,
+  type EsphomeDeviceConnection,
+} from './esphome-gatt-proto.js';
+
+const NOTIFY_EVENT = 'message.BluetoothGATTNotifyDataResponse';
+const CONNECTION_EVENT = 'message.BluetoothDeviceConnectionResponse';
+const GATT_ERROR_EVENT = 'message.BluetoothGATTErrorResponse';
+
+export interface EsphomeBleDevice extends BleDevice {
+  /**
+   * Abandon this session locally, as if the proxy had reported a disconnect.
+   *
+   * waitForRawReading() only settles on a reading, a subscribe failure, or this
+   * disconnect callback, and the callback is driven purely by the proxy's
+   * connection frames. When the ESP32 drops off Wi-Fi mid-session no such frame
+   * ever arrives, so a caller that gives up on a timeout leaves the abandoned
+   * wait holding its notify unsubscribers and its unlock interval forever, and
+   * never runs the adapter's onSessionEnd. Firing this lets it tear itself
+   * down. Harmless after a completed reading: the callback returns immediately
+   * once resolved.
+   *
+   * Call it before close(), though the order is not load-bearing and two
+   * earlier versions of this comment claimed reasons that were not real. It
+   * does not depend on the CONNECTION_EVENT listener close() removes (the
+   * callback is invoked directly), and the cleanup it triggers - clearInterval,
+   * listener removal, and onSessionEnd, which the contract forbids from doing
+   * I/O - issues no GATT call, so `closed` cannot cut it short either. Kept
+   * first simply so the wait is finished with the session before the session
+   * goes away.
+   */
+  fireDisconnect(): void;
+}
+
+export interface GattSession {
+  /** Normalized-UUID -> BleChar, the shape waitForRawReading() consumes. */
+  charMap: Map<string, BleChar>;
+  device: EsphomeBleDevice;
+  close(): Promise<void>;
+}
+
+interface ConnectResponse extends EsphomeDeviceConnection {
+  mtu?: number;
+}
+
+/**
+ * Tail of the request queue for each proxy connection.
+ *
+ * The library's sendMessageAwaitResponse() resolves on the FIRST response event
+ * of the awaited type and does not correlate by address or handle, so two
+ * requests in flight at once can swap replies (a descriptor write and a
+ * characteristic write both await BluetoothGATTWriteResponse). That holds
+ * across sessions as much as within one: the watcher only keeps a second
+ * session off the same ADDRESS, so two scales behind one proxy run at the same
+ * time on the same connection, and one scale's GetServicesDone would end the
+ * other's discovery (B-04). Every request on a connection therefore goes
+ * through one queue, keyed by the connection object itself so a rebuilt client
+ * starts with a fresh one. Each library request carries its own 5 or 10 s
+ * timeout, so a stuck peer delays the queue but cannot wedge it.
+ */
+const connectionQueues = new WeakMap<EsphomeConnection, Promise<unknown>>();
+
+function serialOnConnection<T>(conn: EsphomeConnection, fn: () => Promise<T>): Promise<T> {
+  const tail = connectionQueues.get(conn) ?? Promise.resolve();
+  const next = tail.then(fn, fn);
+  connectionQueues.set(
+    conn,
+    next.then(
+      () => undefined,
+      () => undefined,
+    ),
+  );
+  return next;
+}
+
+/**
+ * Best-effort disconnect of `addr` on the proxy, for paths that give up on a
+ * session the proxy may still be holding (B-03). ESPHome answers a disconnect
+ * for an address it has no link to with a plain "disconnected", so sending one
+ * when nothing is open is harmless.
+ */
+async function releaseProxyLink(conn: EsphomeConnection, addr: number, mac: string): Promise<void> {
+  try {
+    await serialOnConnection(conn, () => conn.disconnectBluetoothDeviceService(addr));
+  } catch (e) {
+    bleLog.debug(`ESPHome GATT disconnect for ${mac} ignored: ${errMsg(e)}`);
+  }
+}
+
+/**
+ * Connect to `mac` through an ESPHome proxy client, discover its GATT table,
+ * and expose it as the UUID-keyed BleChar map + BleDevice that the shared
+ * waitForRawReading() seam expects. ESPHome speaks numeric handles and a uint64
+ * address; the translation is contained here so adapters stay UUID-based and
+ * unchanged.
+ *
+ * ESPHome's V3 connect request requires the BLE `address_type`; omitting it makes
+ * newer firmware reject the connect with "Missing address type" (#215). When the
+ * type is known (captured from the advertisement) we try it first; otherwise, and
+ * as a fallback when the first attempt fails, we try the other type (public = 0,
+ * random = 1).
+ */
+export async function openGattSession(
+  client: EsphomeClient,
+  mac: string,
+  addressType?: number,
+): Promise<GattSession> {
+  const conn: EsphomeConnection = client.connection;
+  const addr = macToInt(mac);
+
+  const candidates = addressType === undefined ? [0, 1] : [addressType, addressType === 0 ? 1 : 0];
+  let connResp: ConnectResponse | undefined;
+  let lastErr = 'no connect attempt made';
+  for (const type of candidates) {
+    let resp: ConnectResponse | undefined;
+    try {
+      resp = (await serialOnConnection(conn, () =>
+        conn.connectBluetoothDeviceService(addr, type),
+      )) as ConnectResponse;
+    } catch (e) {
+      lastErr = `${errMsg(e)} (addr_type=${type})`;
+      // No answer within the library's 10 s does not mean the proxy gave up:
+      // ESPHome keeps the attempt running, and ignores another connect request
+      // for the same address while it does. Cancel it, so the next candidate
+      // gets a clean start and no slot is left holding a link nobody owns.
+      await releaseProxyLink(conn, addr, mac);
+      continue;
+    }
+    if (resp && typeof resp.address === 'number' && resp.address !== addr) {
+      // The library's uncorrelated wait was settled by a connection frame for a
+      // different device on this proxy (B-04). Our own attempt is in an
+      // unknown state, so treat it like an unanswered one.
+      lastErr = `connection response for another device (addr_type=${type})`;
+      await releaseProxyLink(conn, addr, mac);
+      continue;
+    }
+    if (resp && resp.connected === true) {
+      connResp = resp;
+      break;
+    }
+    lastErr = `connected=false (addr_type=${type})`;
+  }
+  if (!connResp) {
+    throw new Error(`ESPHome proxy could not connect to ${mac}: ${lastErr}`);
+  }
+  let services: EsphomeGattServicesResponse;
+  try {
+    services = (await serialOnConnection(conn, () =>
+      conn.listBluetoothGATTServicesService(addr),
+    )) as EsphomeGattServicesResponse;
+  } catch (e) {
+    // The proxy reported the link as up, so it keeps the scale connected and
+    // one of its few connection slots busy until told otherwise. A connected
+    // scale usually stops advertising, so leaving it there also fails the
+    // fallback to the next proxy (B-03).
+    await releaseProxyLink(conn, addr, mac);
+    throw e;
+  }
+
+  bleLog.debug(`ESPHome connected to ${mac} (mtu=${connResp.mtu ?? 'unknown'})`);
+
+  let closed = false;
+
+  // Every request goes through the connection-wide queue (see
+  // connectionQueues), which also covers adapters running concurrently with
+  // subscribe during startInit inside this session (#252).
+  const serial = <T>(fn: () => Promise<T>): Promise<T> => {
+    // `closed` is checked when the unit actually runs, not when it is queued:
+    // close() does not drain the backlog, so anything still queued would
+    // otherwise be issued against a handle the session already disconnected,
+    // costing a 5 s library timeout each and stealing response events from the
+    // next session on the same shared connection.
+    const run = (): Promise<T> =>
+      closed ? Promise.reject(new Error('ESPHome GATT session closed')) : fn();
+    return serialOnConnection(conn, run);
+  };
+
+  const registered: Array<{ event: string; fn: (m: unknown) => void }> = [];
+  const track = (event: string, fn: (m: unknown) => void): (() => void) => {
+    conn.on(event, fn);
+    registered.push({ event, fn });
+    return () => {
+      conn.removeListener(event, fn);
+      const i = registered.findIndex((r) => r.fn === fn);
+      if (i >= 0) registered.splice(i, 1);
+    };
+  };
+
+  // A rejected GATT request is answered with BluetoothGATTErrorResponse, which
+  // the library never wires to the response it is awaiting, so the request only
+  // settles on its 5 s timeout. Waiters here turn that into an immediate
+  // rejection: five notify bindings on an unbonded proxy would otherwise be 25 s
+  // of dead air before the adapter handshake even starts.
+  const errorWaiters = new Map<number, (e: Error) => void>();
+  track(GATT_ERROR_EVENT, (raw: unknown) => {
+    const m = raw as { address: number; handle: number; error: number };
+    if (m.address !== addr) return;
+    bleLog.debug(`ESPHome GATT error: handle 0x${m.handle.toString(16)} status=${m.error}`);
+    errorWaiters.get(m.handle)?.(new Error(`ESPHome GATT status=${m.error}`));
+  });
+
+  // One log line per unexpected peer address for the whole session: every
+  // listener sees every notify event, so a per-listener guard would multiply it
+  // by the number of subscribed characteristics.
+  const loggedForeignAddresses = new Set<number>();
+
+  // Every listener sees every notify event, so with two subscribed
+  // characteristics each one used to log the other's notifications as a
+  // mismatch (#331). Only a handle no listener in this session owns is worth a
+  // line. A count, not a set: two listeners on one handle (#75) must not hide
+  // it from each other when one unsubscribes.
+  const subscribedHandles = new Map<number, number>();
+  const loggedUnownedHandles = new Set<unknown>();
+  const own = (h: number): (() => void) => {
+    subscribedHandles.set(h, (subscribedHandles.get(h) ?? 0) + 1);
+    let released = false;
+    return () => {
+      if (released) return;
+      released = true;
+      const n = (subscribedHandles.get(h) ?? 1) - 1;
+      if (n > 0) subscribedHandles.set(h, n);
+      else subscribedHandles.delete(h);
+    };
+  };
+
+  const charMap = new Map<string, BleChar>();
+  for (const svc of services.servicesList ?? []) {
+    for (const ch of svc.characteristicsList ?? []) {
+      // The library hands us a pre-decoded `uuid` string; `uuidList` is the
+      // raw-shape fallback. Skip entries we cannot identify rather than letting
+      // one malformed characteristic throw and abort the whole session (#229).
+      const uuid = ch.uuid ? normalizeUuid(ch.uuid) : esphomeUuidToString(ch.uuidList);
+      if (!uuid) continue;
+      const handle = ch.handle;
+      const props = ch.properties;
+      const cccdHandle = findCccdHandle(ch);
+      bleLog.debug(
+        `ESPHome GATT char ${uuid} handle=0x${handle.toString(16)} props=0x${(props ?? 0).toString(16)} cccd=${
+          cccdHandle === undefined ? 'none' : `0x${cccdHandle.toString(16)}`
+        }`,
+      );
+
+      const char: BleChar = {
+        async read(): Promise<Buffer> {
+          const r = (await serial(() =>
+            conn.readBluetoothGATTCharacteristicService(addr, handle),
+          )) as {
+            data?: string | Uint8Array;
+            dataList?: number[];
+          };
+          return esphomeGattPayload(r);
+        },
+        async write(data: Buffer, withResponse: boolean): Promise<void> {
+          if (closed) return;
+          // One atomic characteristic write, matching the native node-ble
+          // handler. ESPHome's bluetooth_proxy handles ATT-level fragmentation;
+          // splitting here would send N distinct values, not a long write.
+          await serial(() =>
+            conn.writeBluetoothGATTCharacteristicService(
+              addr,
+              handle,
+              Uint8Array.from(data),
+              withResponse,
+            ),
+          );
+        },
+        async subscribe(onData: (data: Buffer) => void): Promise<() => void> {
+          const listener = (raw: unknown): void => {
+            if (closed) return;
+            const m = raw as EsphomeNotifyData;
+            if (m.address !== addr) {
+              if (!loggedForeignAddresses.has(m.address)) {
+                loggedForeignAddresses.add(m.address);
+                bleLog.debug(
+                  `ESPHome notify for another device (address ${m.address}), ignored for ${mac}`,
+                );
+              }
+              return;
+            }
+            if (m.handle === handle) {
+              const buf = esphomeGattPayload(m);
+              bleLog.debug(
+                `ESPHome notify handle 0x${handle.toString(16)} (${buf.length}B): ${buf.toString('hex')}`,
+              );
+              onData(buf);
+            } else if (
+              !(typeof m.handle === 'number' && subscribedHandles.has(m.handle)) &&
+              !loggedUnownedHandles.has(m.handle)
+            ) {
+              // A notify for this device on a handle no listener in this session
+              // subscribed to: the discovered characteristic handle and the
+              // notify-event handle disagree, so these notifications are dropped
+              // (#291). A handle another listener owns is delivered by that
+              // listener and is not logged.
+              loggedUnownedHandles.add(m.handle);
+              const evtHandle =
+                typeof m.handle === 'number' ? `0x${m.handle.toString(16)}` : String(m.handle);
+              bleLog.debug(
+                `ESPHome notify on handle ${evtHandle} that this session did not subscribe to, dropped (#291)`,
+              );
+            }
+          };
+          // Register BEFORE anything that can make the peer notify. The library
+          // drains a whole TCP read synchronously, so a notification that shares
+          // a read with the CCCD write response is emitted before this function
+          // could resume: a scale that fires the instant its CCCD is written
+          // (QN 0x12, Robi S9, R-MSC04) would lose that first frame.
+          const release = own(handle);
+          const untrackListener = track(NOTIFY_EVENT, listener);
+          const untrack = (): void => {
+            untrackListener();
+            release();
+          };
+          try {
+            await serial(() => conn.notifyBluetoothGATTCharacteristicService(addr, handle));
+          } catch (e) {
+            untrack();
+            throw e;
+          }
+          // Registering with the proxy only routes notifications the ESP32
+          // receives; ESP-IDF requires the client to write the CCC descriptor
+          // before the peripheral sends any (#252).
+          const cccdValue = cccdValueFor(props);
+          if (cccdHandle !== undefined && cccdValue !== undefined) {
+            try {
+              await serial(() =>
+                Promise.race([
+                  conn.writeBluetoothGATTDescriptorService(addr, cccdHandle, cccdValue),
+                  new Promise<never>((_resolve, reject) => errorWaiters.set(cccdHandle, reject)),
+                ]).finally(() => errorWaiters.delete(cccdHandle)),
+              );
+              bleLog.debug(
+                `ESPHome CCCD write handle 0x${cccdHandle.toString(16)} = ${Buffer.from(
+                  cccdValue,
+                ).toString('hex')} for char 0x${handle.toString(16)}`,
+              );
+            } catch (e) {
+              // A scale that rejects or ignores the CCCD still gets the old
+              // behaviour: the proxy registration alone.
+              bleLog.debug(
+                `ESPHome CCCD write failed for char 0x${handle.toString(16)}: ${errMsg(e)}`,
+              );
+            }
+          } else if (cccdHandle === undefined) {
+            bleLog.debug(
+              `ESPHome: no CCCD descriptor reported for char 0x${handle.toString(16)}; relying on the proxy registration alone`,
+            );
+          }
+          return untrack;
+        },
+      };
+      charMap.set(uuid, char);
+    }
+  }
+
+  let disconnectCb: (() => void) | undefined;
+  let disconnectFired = false;
+  const fireDisconnect = (): void => {
+    // Latch only once there is something to latch. Setting the flag with no
+    // callback registered would silently swallow the REAL disconnect frame for
+    // a caller that registers afterwards. Not reachable through today's two
+    // callers, but it is the kind of thing the next one would inherit.
+    if (disconnectFired || !disconnectCb) return;
+    disconnectFired = true;
+    disconnectCb();
+  };
+
+  const device: EsphomeBleDevice = {
+    onDisconnect(cb: () => void): void {
+      disconnectCb = cb;
+      track(CONNECTION_EVENT, (raw: unknown) => {
+        const m = raw as EsphomeDeviceConnection;
+        if (m.address === addr && m.connected === false) fireDisconnect();
+      });
+    },
+    fireDisconnect,
+  };
+
+  const close = async (): Promise<void> => {
+    if (closed) return;
+    closed = true;
+    for (const { event, fn } of registered.splice(0)) {
+      conn.removeListener(event, fn);
+    }
+    // Queued like every other request: its BluetoothDeviceConnectionResponse
+    // would otherwise settle another session's pending connect on this proxy.
+    // This session's own backlog rejects at once (closed is set), so it only
+    // waits behind requests already issued, each bounded by a library timeout.
+    await releaseProxyLink(conn, addr, mac);
+  };
+
+  return { charMap, device, close };
+}

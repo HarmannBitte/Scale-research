@@ -1,0 +1,2876 @@
+{
+  "sha": "38a181367ba83a05442d6fc695213be0d3f29f9f",
+  "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/38a181367ba83a05442d6fc695213be0d3f29f9f",
+  "tree": [
+    {
+      "path": "ADuCM350_ASH",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36b032f889873023fa6478d22952c0265c826986",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/36b032f889873023fa6478d22952c0265c826986"
+    },
+    {
+      "path": "ADuCM350_ASH/ADuCM350_ASH.exe.manifest",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "214506018a11cc080f9051371e987898a0c00d25",
+      "size": 724,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/214506018a11cc080f9051371e987898a0c00d25"
+    },
+    {
+      "path": "ADuCM350_ASH/PySide.QtCore.pyd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e9947c42be9f5a1163bd83e6968917a49235ec8",
+      "size": 1852928,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8e9947c42be9f5a1163bd83e6968917a49235ec8"
+    },
+    {
+      "path": "ADuCM350_ASH/PySide.QtGui.pyd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b10935207dc36e3895f26401fe1208d080cb714a",
+      "size": 6947328,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b10935207dc36e3895f26401fe1208d080cb714a"
+    },
+    {
+      "path": "ADuCM350_ASH/PySide.QtNetwork.pyd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23b20d850195ec64b4141f896c1542a7a3c6d401",
+      "size": 533504,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/23b20d850195ec64b4141f896c1542a7a3c6d401"
+    },
+    {
+      "path": "ADuCM350_ASH/PySide.QtWebKit.pyd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1de2bd2325b2302299685b82c3b9d44433dc6a4e",
+      "size": 402944,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/1de2bd2325b2302299685b82c3b9d44433dc6a4e"
+    },
+    {
+      "path": "ADuCM350_ASH/doc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f230fb78533221a69f18cd4189bb670f92b58eba",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/f230fb78533221a69f18cd4189bb670f92b58eba"
+    },
+    {
+      "path": "ADuCM350_ASH/doc/Changelog.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d761f3927d57192a1602e2ded12f1a7c305e358",
+      "size": 80,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/2d761f3927d57192a1602e2ded12f1a7c305e358"
+    },
+    {
+      "path": "ADuCM350_ASH/doc/Third Party License.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9a9faa0f400db3a103979f03416eac04f8de8f5",
+      "size": 1114,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a9a9faa0f400db3a103979f03416eac04f8de8f5"
+    },
+    {
+      "path": "ADuCM350_ASH/doc/img",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0757f9c9ec20e5637712d8eddd71462913242cb",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/c0757f9c9ec20e5637712d8eddd71462913242cb"
+    },
+    {
+      "path": "ADuCM350_ASH/doc/img/default_input.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "879cae84d44f6cc964d5d4a22da1bf4d591f9994",
+      "size": 22840,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/879cae84d44f6cc964d5d4a22da1bf4d591f9994"
+    },
+    {
+      "path": "ADuCM350_ASH/doc/img/frequency_input.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8217995c2faaa076caba0f8e1686863310b1b23a",
+      "size": 24924,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8217995c2faaa076caba0f8e1686863310b1b23a"
+    },
+    {
+      "path": "ADuCM350_ASH/doc/img/phase_input.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1287f41663dc8c25e5363c10c7f627022d9df2a7",
+      "size": 25211,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/1287f41663dc8c25e5363c10c7f627022d9df2a7"
+    },
+    {
+      "path": "ADuCM350_ASH/doc/img/time_input.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a483644fd52dcd7c902c387cb468bc3598866e1a",
+      "size": 27320,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a483644fd52dcd7c902c387cb468bc3598866e1a"
+    },
+    {
+      "path": "ADuCM350_ASH/doc/img/voltage_input.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04f2bc2df1791cd2be6172fb168ee0374143f88d",
+      "size": 25119,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/04f2bc2df1791cd2be6172fb168ee0374143f88d"
+    },
+    {
+      "path": "ADuCM350_ASH/doc/img/window_annotated.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbe26ac6f3148b0a39a962abf3b55aacb7847882",
+      "size": 81130,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/cbe26ac6f3148b0a39a962abf3b55aacb7847882"
+    },
+    {
+      "path": "ADuCM350_ASH/doc/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "626bbb0a4f5aaff0a1a9917517f9005a712a62d9",
+      "size": 22780,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/626bbb0a4f5aaff0a1a9917517f9005a712a62d9"
+    },
+    {
+      "path": "LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42d614e5c086b89525e94ff72a10175ff5805645",
+      "size": 14885,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/42d614e5c086b89525e94ff72a10175ff5805645"
+    },
+    {
+      "path": "OpenEIT.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d1194e7b7152cd6e70eaf585bcb74e1f679be7b",
+      "size": 51883,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/6d1194e7b7152cd6e70eaf585bcb74e1f679be7b"
+    },
+    {
+      "path": "PinMux.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e49c5fd75ecc22c0b52265639f55069c7b73dd49",
+      "size": 1149,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e49c5fd75ecc22c0b52265639f55069c7b73dd49"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4650b759f563114470b13754f446acb198653fc",
+      "size": 7489,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/f4650b759f563114470b13754f446acb198653fc"
+    },
+    {
+      "path": "README_old.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1e06188b5f8355d0204939f483bc9d51bb0bdc6",
+      "size": 5563,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/d1e06188b5f8355d0204939f483bc9d51bb0bdc6"
+    },
+    {
+      "path": "Uart_CharEcho.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26f8f8ad5ab80b55745dff7790990b12e0220dae",
+      "size": 4760,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/26f8f8ad5ab80b55745dff7790990b12e0220dae"
+    },
+    {
+      "path": "hex_files",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f1bcae4d99213bfd4778c907e72ce0474c35a8cc",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/f1bcae4d99213bfd4778c907e72ce0474c35a8cc"
+    },
+    {
+      "path": "hex_files/Basic_FW_ImpedanceMeasurement_2Wire.hex",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "415027efd55d1d07757b468c70ad068422ce1234",
+      "size": 72031,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/415027efd55d1d07757b468c70ad068422ce1234"
+    },
+    {
+      "path": "hex_files/EIT32_4wirebioisolated.hex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fe4c3d3f155aa953ab06fbd17b510783e66308b",
+      "size": 93728,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8fe4c3d3f155aa953ab06fbd17b510783e66308b"
+    },
+    {
+      "path": "hex_files/ImpedanceMeasurement_timeseries.hex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a13e768be0978a2f2126d4c0d1668e04aead6d1c",
+      "size": 71986,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a13e768be0978a2f2126d4c0d1668e04aead6d1c"
+    },
+    {
+      "path": "hex_files/Multifrequency_ImpedanceMeasurement_2Wire.hex",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8a02bc171e10d98f1b534e8f636b0e687ad075b8",
+      "size": 74297,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8a02bc171e10d98f1b534e8f636b0e687ad075b8"
+    },
+    {
+      "path": "hex_files/openeit.hex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4578a8eb2580892fe84058cc848ccd86a2da1f54",
+      "size": 118676,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/4578a8eb2580892fe84058cc848ccd86a2da1f54"
+    },
+    {
+      "path": "iar",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7de1054205a6da9ffcc3631cd877df32c06e27ff",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/7de1054205a6da9ffcc3631cd877df32c06e27ff"
+    },
+    {
+      "path": "iar/Debug",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9add6268ae8fc65da6e96993b7932c216a2b31c4",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/9add6268ae8fc65da6e96993b7932c216a2b31c4"
+    },
+    {
+      "path": "iar/Debug/Exe",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3fd0fd939d4342856113617fe6a24e1cf4d76020",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/3fd0fd939d4342856113617fe6a24e1cf4d76020"
+    },
+    {
+      "path": "iar/Debug/Exe/JLinkCommandFile.jlink",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e1084080ae578511ac62cd360529e0d133f144d",
+      "size": 105,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/5e1084080ae578511ac62cd360529e0d133f144d"
+    },
+    {
+      "path": "iar/Debug/Exe/openeit.hex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7116568c745baf4e0acc6cf66b287953db1361e",
+      "size": 137236,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/d7116568c745baf4e0acc6cf66b287953db1361e"
+    },
+    {
+      "path": "iar/Debug/Exe/openeit.out",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb282a33582cd82ea55d8095047d5cbe409f7754",
+      "size": 444852,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/cb282a33582cd82ea55d8095047d5cbe409f7754"
+    },
+    {
+      "path": "iar/Debug/Exe/runit.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2d2db6ae0800a61e649f1b11a2645d81b4bd808",
+      "size": 184,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b2d2db6ae0800a61e649f1b11a2645d81b4bd808"
+    },
+    {
+      "path": "iar/Debug/Exe/runitslow.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efcbf59ef4378a8943857c5802136e3bdbb1364e",
+      "size": 171,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/efcbf59ef4378a8943857c5802136e3bdbb1364e"
+    },
+    {
+      "path": "iar/Debug/List",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39e125dbb8d3aa1d13ae07e2fda26be0a589efa3",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/39e125dbb8d3aa1d13ae07e2fda26be0a589efa3"
+    },
+    {
+      "path": "iar/Debug/List/ImpedanceMeasurement_2Wire.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8304d09f1b8947d840b741f3e7e213da394409a",
+      "size": 734218,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a8304d09f1b8947d840b741f3e7e213da394409a"
+    },
+    {
+      "path": "iar/Debug/List/ImpedanceMeasurement_2Wire.map",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "250ab8d9f42105b470c2ebd1cb012b2d95fd063f",
+      "size": 40991,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/250ab8d9f42105b470c2ebd1cb012b2d95fd063f"
+    },
+    {
+      "path": "iar/Debug/Obj",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "90e5a6aaa034793053bae5db3bad2a09782002b2",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/90e5a6aaa034793053bae5db3bad2a09782002b2"
+    },
+    {
+      "path": "iar/Debug/Obj/ImpedanceMeasurement_4Wire.pbd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23c72fa984ffee1533e4f9cb274d45f44393946a",
+      "size": 1519496,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/23c72fa984ffee1533e4f9cb274d45f44393946a"
+    },
+    {
+      "path": "iar/Debug/Obj/ImpedanceMeasurement_4Wire.pbd.browse",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23c72fa984ffee1533e4f9cb274d45f44393946a",
+      "size": 1519496,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/23c72fa984ffee1533e4f9cb274d45f44393946a"
+    },
+    {
+      "path": "iar/Debug/Obj/OpenEIT.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "675da438f57e52632ceebd88550d000d3179e24b",
+      "size": 133568,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/675da438f57e52632ceebd88550d000d3179e24b"
+    },
+    {
+      "path": "iar/Debug/Obj/OpenEIT.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9909f3e81faa3db16285aaab91b887c751d91bc8",
+      "size": 1166435,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9909f3e81faa3db16285aaab91b887c751d91bc8"
+    },
+    {
+      "path": "iar/Debug/Obj/OpenEIT.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06d2fad5e56769df93891becb05c79a6f81343bd",
+      "size": 9974,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/06d2fad5e56769df93891becb05c79a6f81343bd"
+    },
+    {
+      "path": "iar/Debug/Obj/PinMux.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c744339d63fc6eecb7ea456145316c4847b11ebf",
+      "size": 5256,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/c744339d63fc6eecb7ea456145316c4847b11ebf"
+    },
+    {
+      "path": "iar/Debug/Obj/PinMux.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f5299f27042cdb2f04c94423f7e79eed0fedf9c",
+      "size": 699217,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/4f5299f27042cdb2f04c94423f7e79eed0fedf9c"
+    },
+    {
+      "path": "iar/Debug/Obj/PinMux.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "783c6fbc8d11a6e18737debca5ba51c2ad559a68",
+      "size": 10257,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/783c6fbc8d11a6e18737debca5ba51c2ad559a68"
+    },
+    {
+      "path": "iar/Debug/Obj/Uart_CharEcho.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5aaa8687dd4594564efa5cd78bfcdc7fe4781a0e",
+      "size": 15568,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/5aaa8687dd4594564efa5cd78bfcdc7fe4781a0e"
+    },
+    {
+      "path": "iar/Debug/Obj/Uart_CharEcho.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e99de26364bfc79f9459cdd6b6876efee38826fe",
+      "size": 9980,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e99de26364bfc79f9459cdd6b6876efee38826fe"
+    },
+    {
+      "path": "iar/Debug/Obj/afe.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b97ab174f088a6f22afd817a804ad9d55082513",
+      "size": 151072,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/4b97ab174f088a6f22afd817a804ad9d55082513"
+    },
+    {
+      "path": "iar/Debug/Obj/afe.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad9186c7adbf7a68b2093d0a72057cb6319f2fdc",
+      "size": 853491,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/ad9186c7adbf7a68b2093d0a72057cb6319f2fdc"
+    },
+    {
+      "path": "iar/Debug/Obj/afe.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcbdc49cf2629eeb3054e1cd84c41a2a2f96b961",
+      "size": 10258,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/dcbdc49cf2629eeb3054e1cd84c41a2a2f96b961"
+    },
+    {
+      "path": "iar/Debug/Obj/afe_lib.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "547599eab8506eb3b3f776e130cae54524fcd169",
+      "size": 65592,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/547599eab8506eb3b3f776e130cae54524fcd169"
+    },
+    {
+      "path": "iar/Debug/Obj/afe_lib.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f49b5166a64bbd50becef474a6d09f9158dc5549",
+      "size": 812851,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/f49b5166a64bbd50becef474a6d09f9158dc5549"
+    },
+    {
+      "path": "iar/Debug/Obj/afe_lib.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6919925be925f4af1fb3eb0c4ea1ca6f17f5e618",
+      "size": 10262,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/6919925be925f4af1fb3eb0c4ea1ca6f17f5e618"
+    },
+    {
+      "path": "iar/Debug/Obj/dma.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "719358b8df9e4bc0a85b84d2d8e88a3b5f7bdaf5",
+      "size": 39164,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/719358b8df9e4bc0a85b84d2d8e88a3b5f7bdaf5"
+    },
+    {
+      "path": "iar/Debug/Obj/dma.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b67c09afc41186197c71411651240babe70f529e",
+      "size": 737307,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b67c09afc41186197c71411651240babe70f529e"
+    },
+    {
+      "path": "iar/Debug/Obj/dma.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6160054c543994b92867beee43586656221ae37",
+      "size": 10258,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b6160054c543994b92867beee43586656221ae37"
+    },
+    {
+      "path": "iar/Debug/Obj/gpio.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82c61f2c22496812ca8a5d224d3d31b9ffe34e10",
+      "size": 89888,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/82c61f2c22496812ca8a5d224d3d31b9ffe34e10"
+    },
+    {
+      "path": "iar/Debug/Obj/gpio.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bce74389b27c83f15f1577109b3e55a9b11aa5d3",
+      "size": 732629,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/bce74389b27c83f15f1577109b3e55a9b11aa5d3"
+    },
+    {
+      "path": "iar/Debug/Obj/gpio.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f86272ee703bf32ae35a2e9a1d3200c53325669a",
+      "size": 10259,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/f86272ee703bf32ae35a2e9a1d3200c53325669a"
+    },
+    {
+      "path": "iar/Debug/Obj/rtc.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "567c1aa448d7343fb73a5f312021c303cc6a2e04",
+      "size": 69344,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/567c1aa448d7343fb73a5f312021c303cc6a2e04"
+    },
+    {
+      "path": "iar/Debug/Obj/rtc.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b43e61411d94475f0718ab8282195f69dc39ea8e",
+      "size": 771145,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b43e61411d94475f0718ab8282195f69dc39ea8e"
+    },
+    {
+      "path": "iar/Debug/Obj/rtc.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e79682b4e22ae8903dfc6de9946240c5a08c43cb",
+      "size": 9974,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e79682b4e22ae8903dfc6de9946240c5a08c43cb"
+    },
+    {
+      "path": "iar/Debug/Obj/startup.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fbf003d647d2fdf50a639385ae0f944b953f823",
+      "size": 101660,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/4fbf003d647d2fdf50a639385ae0f944b953f823"
+    },
+    {
+      "path": "iar/Debug/Obj/startup.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79864b4c47d849a93c6c8a08737fff95bf10c210",
+      "size": 715707,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/79864b4c47d849a93c6c8a08737fff95bf10c210"
+    },
+    {
+      "path": "iar/Debug/Obj/startup.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e8ac27f53f3f8c4b24c2197f0713ad0a1e84768",
+      "size": 10262,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8e8ac27f53f3f8c4b24c2197f0713ad0a1e84768"
+    },
+    {
+      "path": "iar/Debug/Obj/system.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a5355f97d9b0c0a8ec3d861eb343e79cb09bc45",
+      "size": 82556,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/1a5355f97d9b0c0a8ec3d861eb343e79cb09bc45"
+    },
+    {
+      "path": "iar/Debug/Obj/system.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac22382303c40123b270f2c46930fda3d3b83c56",
+      "size": 753424,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/ac22382303c40123b270f2c46930fda3d3b83c56"
+    },
+    {
+      "path": "iar/Debug/Obj/system.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abc4da0dfaba13e8fc0506cd5de267e4d8e08894",
+      "size": 10261,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/abc4da0dfaba13e8fc0506cd5de267e4d8e08894"
+    },
+    {
+      "path": "iar/Debug/Obj/test_common.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef7d74c008a20f9b299fd5a40c35dbd451a93dbc",
+      "size": 14040,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/ef7d74c008a20f9b299fd5a40c35dbd451a93dbc"
+    },
+    {
+      "path": "iar/Debug/Obj/test_common.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f616d16750755ee8f9622758bb01c1260ea3dc2",
+      "size": 742582,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/4f616d16750755ee8f9622758bb01c1260ea3dc2"
+    },
+    {
+      "path": "iar/Debug/Obj/test_common.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a4ef6b453e3ad1c5ac22a27d6fa0f4c5c3c5714",
+      "size": 10262,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/7a4ef6b453e3ad1c5ac22a27d6fa0f4c5c3c5714"
+    },
+    {
+      "path": "iar/Debug/Obj/uart.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "447a18c8f03cd4a268bbddbdc110fed0ba430ba4",
+      "size": 89316,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/447a18c8f03cd4a268bbddbdc110fed0ba430ba4"
+    },
+    {
+      "path": "iar/Debug/Obj/uart.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29e02875c63c7fed3b61e19cc03404ca910ba5c2",
+      "size": 769968,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/29e02875c63c7fed3b61e19cc03404ca910ba5c2"
+    },
+    {
+      "path": "iar/Debug/Obj/uart.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d02a80288a2e1bf92cb7588bf27263996f4c5e4",
+      "size": 10259,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/5d02a80288a2e1bf92cb7588bf27263996f4c5e4"
+    },
+    {
+      "path": "iar/Debug/Obj/wdt.o",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e4108b54eac868dd577d17dffb77f4523c54cb7",
+      "size": 47908,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9e4108b54eac868dd577d17dffb77f4523c54cb7"
+    },
+    {
+      "path": "iar/Debug/Obj/wdt.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef5837de570d9ccb3d6929786e850dff6413c41b",
+      "size": 732915,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/ef5837de570d9ccb3d6929786e850dff6413c41b"
+    },
+    {
+      "path": "iar/Debug/Obj/wdt.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "794c5f78cfa673254807a1050ca6c59327cd68f9",
+      "size": 10258,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/794c5f78cfa673254807a1050ca6c59327cd68f9"
+    },
+    {
+      "path": "iar/Debug/iar_cortexM3b_math.a",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a006c28832efc754676491f1042c27f503ea127b",
+      "size": 1297812,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a006c28832efc754676491f1042c27f503ea127b"
+    },
+    {
+      "path": "iar/Debug/iar_cortexM3l_math.a",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "723e35c8366327e16bf07cdcda0aa5ccd8f79923",
+      "size": 1291672,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/723e35c8366327e16bf07cdcda0aa5ccd8f79923"
+    },
+    {
+      "path": "iar/EW89B9.tmp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f0f36f6d9b9ce631d2657919413bcc0248248f7",
+      "size": 10898,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/7f0f36f6d9b9ce631d2657919413bcc0248248f7"
+    },
+    {
+      "path": "iar/ImpedanceMeasurement_4Wire.dep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04d4658a9a60b05967721fd91f6688810efc9cf6",
+      "size": 15365,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/04d4658a9a60b05967721fd91f6688810efc9cf6"
+    },
+    {
+      "path": "iar/ImpedanceMeasurement_4Wire.ewd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8ba4d3e28ca971972cdb974e40fb49dd96c3efc",
+      "size": 68328,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a8ba4d3e28ca971972cdb974e40fb49dd96c3efc"
+    },
+    {
+      "path": "iar/ImpedanceMeasurement_4Wire.ewp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f54dff74a285164e9e7ad948ba71f7a253dd2eb8",
+      "size": 50010,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/f54dff74a285164e9e7ad948ba71f7a253dd2eb8"
+    },
+    {
+      "path": "iar/OpenEIT.eww",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d19f1d9e33a8971af0f973efd1832e5b636e76dd",
+      "size": 170,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/d19f1d9e33a8971af0f973efd1832e5b636e76dd"
+    },
+    {
+      "path": "iar/Release",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2a6af5c21a2fc47b9f7b4c47d9e5f8dd234c5f29",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/2a6af5c21a2fc47b9f7b4c47d9e5f8dd234c5f29"
+    },
+    {
+      "path": "iar/Release/Obj",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c8cb2f52e678753bee4a820b68d983fa2c8f8a30",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/c8cb2f52e678753bee4a820b68d983fa2c8f8a30"
+    },
+    {
+      "path": "iar/Release/Obj/ImpedanceMeasurement_2Wire.pbd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7786f989c966948b55bebd84cfe4fc5d4bb1acb",
+      "size": 106997,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e7786f989c966948b55bebd84cfe4fc5d4bb1acb"
+    },
+    {
+      "path": "iar/Release/Obj/ImpedanceMeasurement_2Wire.pbd.browse",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7786f989c966948b55bebd84cfe4fc5d4bb1acb",
+      "size": 106997,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e7786f989c966948b55bebd84cfe4fc5d4bb1acb"
+    },
+    {
+      "path": "iar/Release/Obj/ImpedanceMeasurement_2Wire.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0366771c9f3faa8d181e858dd7e5024db9b18dff",
+      "size": 41303,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/0366771c9f3faa8d181e858dd7e5024db9b18dff"
+    },
+    {
+      "path": "iar/Release/Obj/ImpedanceMeasurement_2Wire.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a38bb44308b6b00f00acfc4452452db4c8af6554",
+      "size": 9183,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a38bb44308b6b00f00acfc4452452db4c8af6554"
+    },
+    {
+      "path": "iar/Release/Obj/PinMux.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0aaa27862e898bd8c07f7cdfefcbf36c750d0a07",
+      "size": 391,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/0aaa27862e898bd8c07f7cdfefcbf36c750d0a07"
+    },
+    {
+      "path": "iar/Release/Obj/PinMux.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a2f25b0c4cf7f3eaadb52414669beb921187f02",
+      "size": 9163,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/5a2f25b0c4cf7f3eaadb52414669beb921187f02"
+    },
+    {
+      "path": "iar/Release/Obj/afe.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbb826905746b35e7a89d9752c59ecbe88119b2d",
+      "size": 47364,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/bbb826905746b35e7a89d9752c59ecbe88119b2d"
+    },
+    {
+      "path": "iar/Release/Obj/afe.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a761de6260349cc5666c2c3156d07b7d291311dd",
+      "size": 9164,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a761de6260349cc5666c2c3156d07b7d291311dd"
+    },
+    {
+      "path": "iar/Release/Obj/afe_lib.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9c65d72459aba88daef6c702ac4a73bccd076e3",
+      "size": 44290,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b9c65d72459aba88daef6c702ac4a73bccd076e3"
+    },
+    {
+      "path": "iar/Release/Obj/afe_lib.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a70a84e0eecf42e2d34c5ab5ae52f87120f70b67",
+      "size": 9168,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a70a84e0eecf42e2d34c5ab5ae52f87120f70b67"
+    },
+    {
+      "path": "iar/Release/Obj/dma.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01385b4241be3e4cae7320643945251d7247f767",
+      "size": 3151,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/01385b4241be3e4cae7320643945251d7247f767"
+    },
+    {
+      "path": "iar/Release/Obj/dma.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88f29491fad9dc061e8eeb90a7f379901d72c673",
+      "size": 9164,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/88f29491fad9dc061e8eeb90a7f379901d72c673"
+    },
+    {
+      "path": "iar/Release/Obj/gpio.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52f07590de25fc61e666e8d935e3b24129bfe076",
+      "size": 4558,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/52f07590de25fc61e666e8d935e3b24129bfe076"
+    },
+    {
+      "path": "iar/Release/Obj/gpio.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a57af45e231f78713e2580b9f862f4f495f579a",
+      "size": 9165,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/0a57af45e231f78713e2580b9f862f4f495f579a"
+    },
+    {
+      "path": "iar/Release/Obj/startup.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a9e0850fe8320f4666421d0ef007b607eee2cec",
+      "size": 1348,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/3a9e0850fe8320f4666421d0ef007b607eee2cec"
+    },
+    {
+      "path": "iar/Release/Obj/startup.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95e9bd5bca1bbbe317e8e7b3df8be303f6cc7a06",
+      "size": 9168,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/95e9bd5bca1bbbe317e8e7b3df8be303f6cc7a06"
+    },
+    {
+      "path": "iar/Release/Obj/system.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b68de046a424dd4ccfe6af8a5dcf6270509e21b",
+      "size": 45123,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/6b68de046a424dd4ccfe6af8a5dcf6270509e21b"
+    },
+    {
+      "path": "iar/Release/Obj/system.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cef4168154d1090b26a5e8f9f14035284d293e7d",
+      "size": 9167,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/cef4168154d1090b26a5e8f9f14035284d293e7d"
+    },
+    {
+      "path": "iar/Release/Obj/test_common.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d50059c35ddfc17cbbebfe11a50efb67c9d9353",
+      "size": 69990,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/6d50059c35ddfc17cbbebfe11a50efb67c9d9353"
+    },
+    {
+      "path": "iar/Release/Obj/test_common.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "140caff251c8f994bc3dff1057c54cb04639ef7e",
+      "size": 9168,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/140caff251c8f994bc3dff1057c54cb04639ef7e"
+    },
+    {
+      "path": "iar/Release/Obj/uart.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "109ef5bde4a02855a8cfea8ea33bc55e23075d96",
+      "size": 42572,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/109ef5bde4a02855a8cfea8ea33bc55e23075d96"
+    },
+    {
+      "path": "iar/Release/Obj/uart.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9653d683b656b61e61b4e9ce8688579d1b1db7a4",
+      "size": 9165,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9653d683b656b61e61b4e9ce8688579d1b1db7a4"
+    },
+    {
+      "path": "iar/Release/Obj/wdt.pbi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9508177970cec6407686f3f1aa11db0af0d677d",
+      "size": 30742,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b9508177970cec6407686f3f1aa11db0af0d677d"
+    },
+    {
+      "path": "iar/Release/Obj/wdt.pbi.cout",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a88bd391dde41ba6be613ff75b753af94908d2a1",
+      "size": 9164,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a88bd391dde41ba6be613ff75b753af94908d2a1"
+    },
+    {
+      "path": "iar/real",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eae176a63207ce66cfb37c42c32bcbd7d81ca760",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/eae176a63207ce66cfb37c42c32bcbd7d81ca760"
+    },
+    {
+      "path": "iar/real/ImpedanceMeasurement_2Wire.ewd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b246d6a3ece0be22dd63ebbca565c1b3d29089ed",
+      "size": 68327,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b246d6a3ece0be22dd63ebbca565c1b3d29089ed"
+    },
+    {
+      "path": "iar/real/ImpedanceMeasurement_2Wire.ewp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2571fd47b2105f93aaa3ba8a199f9caa7daa440",
+      "size": 49509,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b2571fd47b2105f93aaa3ba8a199f9caa7daa440"
+    },
+    {
+      "path": "iar/settings",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "491e13400db911fe9c0831bae89d22bb1c93eff4",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/491e13400db911fe9c0831bae89d22bb1c93eff4"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_2Wire.Debug.cspy.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "faf66c3f024ec7b61b14b309eae8c674ea28f38f",
+      "size": 1694,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/faf66c3f024ec7b61b14b309eae8c674ea28f38f"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_2Wire.Debug.driver.xcl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dd266c4b4a054aecdb94b4adb0c2feae81bfd3f",
+      "size": 512,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9dd266c4b4a054aecdb94b4adb0c2feae81bfd3f"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_2Wire.Debug.general.xcl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90af0b68181e28a59dc9625e378c369e35ec64d7",
+      "size": 491,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/90af0b68181e28a59dc9625e378c369e35ec64d7"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_2Wire.crun",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bb5acca4f02dbe45fb58c1092f43ae10e466cf6",
+      "size": 351,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/5bb5acca4f02dbe45fb58c1092f43ae10e466cf6"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_2Wire.cspy.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af1875299e707accfa2177cf769d8589e3ba37a6",
+      "size": 1604,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/af1875299e707accfa2177cf769d8589e3ba37a6"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_2Wire.dbgdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92026451e9191389372f3a8efd398cdeace25c02",
+      "size": 7854,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/92026451e9191389372f3a8efd398cdeace25c02"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_2Wire.dni",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d0022b070e192225eb60f751c46386107092ce6",
+      "size": 2151,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/0d0022b070e192225eb60f751c46386107092ce6"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_2Wire.wsdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ebe6654be347d1f357d71144e3aca5c20f7bc5c",
+      "size": 6959,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9ebe6654be347d1f357d71144e3aca5c20f7bc5c"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_2Wire.wspos",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8b4b9c4956028e3e33d6af6fff6f7108624b8b7",
+      "size": 50,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e8b4b9c4956028e3e33d6af6fff6f7108624b8b7"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_2Wire_Debug.jlink",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34ec9485772dbbe490aa12b99274d588be31bbd3",
+      "size": 759,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/34ec9485772dbbe490aa12b99274d588be31bbd3"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_4Wire.cspy.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f6201f536524cfa9c20f81c93c853a6be712d07",
+      "size": 1571,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9f6201f536524cfa9c20f81c93c853a6be712d07"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_4Wire.dbgdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cf4f0bbf064830732f47f4b1b30b4ea2dc34d45",
+      "size": 5310,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/3cf4f0bbf064830732f47f4b1b30b4ea2dc34d45"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_4Wire.dni",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32054b0e956b543e04f30e32863af18e68e33528",
+      "size": 1928,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/32054b0e956b543e04f30e32863af18e68e33528"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_4Wire.wsdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48b42fa41d19afc2455efe905dc40592169dbd73",
+      "size": 7764,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/48b42fa41d19afc2455efe905dc40592169dbd73"
+    },
+    {
+      "path": "iar/settings/ImpedanceMeasurement_4Wire_Debug.jlink",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a494c7146a94815545c028680cad459ed2a59762",
+      "size": 720,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a494c7146a94815545c028680cad459ed2a59762"
+    },
+    {
+      "path": "iar/settings/OpenEIT.wsdt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "458f4b46eb29c2a60155b5952d1151d95d57d0a1",
+      "size": 6369,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/458f4b46eb29c2a60155b5952d1151d95d57d0a1"
+    },
+    {
+      "path": "images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "52ffbf1e9d4203eb52372118de5342a6494eaf34",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/52ffbf1e9d4203eb52372118de5342a6494eaf34"
+    },
+    {
+      "path": "images/LungscomparedtoCTScan.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90c44e1a801727d5bc7ebc662f2908682635804c",
+      "size": 204610,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/90c44e1a801727d5bc7ebc662f2908682635804c"
+    },
+    {
+      "path": "images/PCB.jpeg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c4fb81556064898a476db03d623092706a2b723",
+      "size": 990271,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/6c4fb81556064898a476db03d623092706a2b723"
+    },
+    {
+      "path": "images/multifrequency_material_separation.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99537698bdf938cd08ae2578bb7a773b8e442bfc",
+      "size": 893571,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/99537698bdf938cd08ae2578bb7a773b8e442bfc"
+    },
+    {
+      "path": "images/picturegrid.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49dd83ce26f475129a117a99f49fd70da351dcac",
+      "size": 384656,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/49dd83ce26f475129a117a99f49fd70da351dcac"
+    },
+    {
+      "path": "images/spectrums.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3e6a8d3d0f0752b6461b7362ffc61e337f6904b",
+      "size": 135586,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b3e6a8d3d0f0752b6461b7362ffc61e337f6904b"
+    },
+    {
+      "path": "images/timeseriesexample.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da1e3bafe0fb21e465c60146664faf4436ae6927",
+      "size": 121292,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/da1e3bafe0fb21e465c60146664faf4436ae6927"
+    },
+    {
+      "path": "inc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9fd644a32ee6f0bb3322bb1af27c7704c2599377",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/9fd644a32ee6f0bb3322bb1af27c7704c2599377"
+    },
+    {
+      "path": "inc/ADuCM350_device.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ea2287b236ade16bf7d942e526aaaf34a0345e1",
+      "size": 63024,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/5ea2287b236ade16bf7d942e526aaaf34a0345e1"
+    },
+    {
+      "path": "inc/adi_int.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36d744e8319b4a29dd6fd8a9f613c7c23ac2699e",
+      "size": 2654,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/36d744e8319b4a29dd6fd8a9f613c7c23ac2699e"
+    },
+    {
+      "path": "inc/adi_int_id.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39f441a00d072d96e5d9830723c54845f0dd474e",
+      "size": 1060,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/39f441a00d072d96e5d9830723c54845f0dd474e"
+    },
+    {
+      "path": "inc/adi_nvic.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "163a0baf28fc76853dfe6aee66658a7dab4c387c",
+      "size": 2094,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/163a0baf28fc76853dfe6aee66658a7dab4c387c"
+    },
+    {
+      "path": "inc/adi_rtos.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee6bbac92d98abe5974f00fa1a4be5aff9af72d2",
+      "size": 2741,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/ee6bbac92d98abe5974f00fa1a4be5aff9af72d2"
+    },
+    {
+      "path": "inc/adi_sid_cm350.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "066f80359dedbd33001cace67358e13368d83820",
+      "size": 7136,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/066f80359dedbd33001cace67358e13368d83820"
+    },
+    {
+      "path": "inc/adi_types.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45916a2f93dcf2e4ba2ce228481e79d90521230d",
+      "size": 810,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/45916a2f93dcf2e4ba2ce228481e79d90521230d"
+    },
+    {
+      "path": "inc/adi_version.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bad9769506dbeb0f9534d2049081c15da37a832d",
+      "size": 2360,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/bad9769506dbeb0f9534d2049081c15da37a832d"
+    },
+    {
+      "path": "inc/afe.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3599e359a7a24517fa12a718908983cc108042f",
+      "size": 22363,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/d3599e359a7a24517fa12a718908983cc108042f"
+    },
+    {
+      "path": "inc/afe_lib.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e89509bbd14ededa2f2032c68b4d5a4ae8143c5c",
+      "size": 3790,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e89509bbd14ededa2f2032c68b4d5a4ae8143c5c"
+    },
+    {
+      "path": "inc/afe_sequences.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dae21856c9ff2de5cf37ac4601b9d188fce10646",
+      "size": 27994,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/dae21856c9ff2de5cf37ac4601b9d188fce10646"
+    },
+    {
+      "path": "inc/arm_common_tables.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c35ef2bd516c3002ebfc44e1542f5dd0e44bbcb",
+      "size": 1216,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8c35ef2bd516c3002ebfc44e1542f5dd0e44bbcb"
+    },
+    {
+      "path": "inc/arm_math.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6372358eef12d311743809c9e20cc1a81c01c743",
+      "size": 248249,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/6372358eef12d311743809c9e20cc1a81c01c743"
+    },
+    {
+      "path": "inc/beep.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45928d976978bef896f9079217b686345b4df082",
+      "size": 14244,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/45928d976978bef896f9079217b686345b4df082"
+    },
+    {
+      "path": "inc/captouch.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "592ba27dad52ca5536e60b8572d5ec2722454d9f",
+      "size": 53502,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/592ba27dad52ca5536e60b8572d5ec2722454d9f"
+    },
+    {
+      "path": "inc/captouch_lib.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "714a9d5233b9cb7a7201118c7a3359ce38a26a14",
+      "size": 1956,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/714a9d5233b9cb7a7201118c7a3359ce38a26a14"
+    },
+    {
+      "path": "inc/cdefADuCM350.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bdde2686b738903d34fe15a338c94bfd9077976",
+      "size": 94244,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/7bdde2686b738903d34fe15a338c94bfd9077976"
+    },
+    {
+      "path": "inc/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b2ca969e0740112f820854b7cbc4ae16440ffaa",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/7b2ca969e0740112f820854b7cbc4ae16440ffaa"
+    },
+    {
+      "path": "inc/config/adi_afe_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c00fa3ca7f4c5b5d45f05b164805fc5166991eb",
+      "size": 2066,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9c00fa3ca7f4c5b5d45f05b164805fc5166991eb"
+    },
+    {
+      "path": "inc/config/adi_beep_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "564917f35de381d1c77edc949b24d0f81d75523c",
+      "size": 6792,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/564917f35de381d1c77edc949b24d0f81d75523c"
+    },
+    {
+      "path": "inc/config/adi_crc_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cc3e24f5e6e0dc443c404366c3a3d095cac187c",
+      "size": 1894,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/1cc3e24f5e6e0dc443c404366c3a3d095cac187c"
+    },
+    {
+      "path": "inc/config/adi_ct_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb3b136351511f203e6a450ef3c4767f16c04b9e",
+      "size": 52806,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/eb3b136351511f203e6a450ef3c4767f16c04b9e"
+    },
+    {
+      "path": "inc/config/adi_fee_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbeb0335894d5a2ed5055babde25fcd66343b7ce",
+      "size": 964,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/dbeb0335894d5a2ed5055babde25fcd66343b7ce"
+    },
+    {
+      "path": "inc/config/adi_global_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0009488d70c80d24bfcdccab9feec20904ecfaab",
+      "size": 1094,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/0009488d70c80d24bfcdccab9feec20904ecfaab"
+    },
+    {
+      "path": "inc/config/adi_gpt_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a85ecfcbb371e9e70035c677cd67a8fcbb1c9452",
+      "size": 16160,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a85ecfcbb371e9e70035c677cd67a8fcbb1c9452"
+    },
+    {
+      "path": "inc/config/adi_i2c_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52fa2c5bde0bb33439eb933fee015550def60681",
+      "size": 10953,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/52fa2c5bde0bb33439eb933fee015550def60681"
+    },
+    {
+      "path": "inc/config/adi_i2s_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "689651886c909dbd72518ab81f35f5fd745d77ff",
+      "size": 9216,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/689651886c909dbd72518ab81f35f5fd745d77ff"
+    },
+    {
+      "path": "inc/config/adi_lcd_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05b9bdd021a04b7a4ebb823be7fa66d16176e05c",
+      "size": 6260,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/05b9bdd021a04b7a4ebb823be7fa66d16176e05c"
+    },
+    {
+      "path": "inc/config/adi_pdi_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b647b5af46a309c3040a69b66d19bdea3f75504",
+      "size": 7295,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/0b647b5af46a309c3040a69b66d19bdea3f75504"
+    },
+    {
+      "path": "inc/config/adi_rng_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d76f3800c85aa546f54a257e7fdb048ac0186e79",
+      "size": 2649,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/d76f3800c85aa546f54a257e7fdb048ac0186e79"
+    },
+    {
+      "path": "inc/config/adi_spi_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4d0b015e5da44a20b74c13821888505fcd1fdcb",
+      "size": 12464,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/c4d0b015e5da44a20b74c13821888505fcd1fdcb"
+    },
+    {
+      "path": "inc/config/adi_uart_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0686134a90eb7f49f01d9adc1e96e433b0ed8161",
+      "size": 1560,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/0686134a90eb7f49f01d9adc1e96e433b0ed8161"
+    },
+    {
+      "path": "inc/config/adi_wdt_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "058843e222e65789ad9f575e0fdf5ffa2cfdef70",
+      "size": 3625,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/058843e222e65789ad9f575e0fdf5ffa2cfdef70"
+    },
+    {
+      "path": "inc/config/adi_wut_config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "151fedbaecd621dcb792d57e5574d642d234579d",
+      "size": 7261,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/151fedbaecd621dcb792d57e5574d642d234579d"
+    },
+    {
+      "path": "inc/core_cm0.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19bad5ebeb941aa75498c6db77e4240aadd2e2dc",
+      "size": 31372,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/19bad5ebeb941aa75498c6db77e4240aadd2e2dc"
+    },
+    {
+      "path": "inc/core_cm0plus.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa20e6879f203e09efdeefe12d96f3dfb07901c0",
+      "size": 38650,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/aa20e6879f203e09efdeefe12d96f3dfb07901c0"
+    },
+    {
+      "path": "inc/core_cm3.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0173893fbd201ecdfe2a1d5bd18dc0118834dd01",
+      "size": 97338,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/0173893fbd201ecdfe2a1d5bd18dc0118834dd01"
+    },
+    {
+      "path": "inc/core_cm4.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9655374020c91e791fa60249f1e333616b709aa",
+      "size": 106503,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a9655374020c91e791fa60249f1e333616b709aa"
+    },
+    {
+      "path": "inc/core_cm4_simd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bc7906152bdc3f578006cfe678ce1a60705c6e9",
+      "size": 20674,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/3bc7906152bdc3f578006cfe678ce1a60705c6e9"
+    },
+    {
+      "path": "inc/core_cmFunc.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c932e0d6e9dc47a0b5a06c4130ae4dccf4144c0",
+      "size": 15212,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/3c932e0d6e9dc47a0b5a06c4130ae4dccf4144c0"
+    },
+    {
+      "path": "inc/core_cmInstr.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "597e64df04408c0085d031977eaa574648f8cf9c",
+      "size": 16587,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/597e64df04408c0085d031977eaa574648f8cf9c"
+    },
+    {
+      "path": "inc/core_sc000.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39ee60c5e526e2f01c525e1065b3afe774f3430c",
+      "size": 39939,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/39ee60c5e526e2f01c525e1065b3afe774f3430c"
+    },
+    {
+      "path": "inc/core_sc300.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e56b0f3322a7136ed47ee38ad024d08787703d3",
+      "size": 95746,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/7e56b0f3322a7136ed47ee38ad024d08787703d3"
+    },
+    {
+      "path": "inc/crc.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29e930d5eac83b3633de38570861482f076361a4",
+      "size": 7114,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/29e930d5eac83b3633de38570861482f076361a4"
+    },
+    {
+      "path": "inc/defADuCM350.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bcd98e187d568c4974a910fadd6b2f4e4bb6933",
+      "size": 647679,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/6bcd98e187d568c4974a910fadd6b2f4e4bb6933"
+    },
+    {
+      "path": "inc/device.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "840cce3945a7a65e31bfdd4635624a18f0faa63a",
+      "size": 23711,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/840cce3945a7a65e31bfdd4635624a18f0faa63a"
+    },
+    {
+      "path": "inc/dma.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b67a435a536fe23091612d6765efa99a203eb34",
+      "size": 11314,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8b67a435a536fe23091612d6765efa99a203eb34"
+    },
+    {
+      "path": "inc/flash.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acc0a812967d53d6bac83ae221690338ae5fe466",
+      "size": 8273,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/acc0a812967d53d6bac83ae221690338ae5fe466"
+    },
+    {
+      "path": "inc/gpio.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "582869d0e5cc573321abee7ce6c67b06b9624e5e",
+      "size": 45073,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/582869d0e5cc573321abee7ce6c67b06b9624e5e"
+    },
+    {
+      "path": "inc/gpt.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0892b50ae08c5b3f3c64d61d7a455c7bc827fa64",
+      "size": 13939,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/0892b50ae08c5b3f3c64d61d7a455c7bc827fa64"
+    },
+    {
+      "path": "inc/i2c.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05a2e4962f8761f718a6f4625ea7ff5535a9f692",
+      "size": 10699,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/05a2e4962f8761f718a6f4625ea7ff5535a9f692"
+    },
+    {
+      "path": "inc/i2s.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fb7141da8406e5525de26b7a25d1ea3992c8fbe",
+      "size": 18143,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/7fb7141da8406e5525de26b7a25d1ea3992c8fbe"
+    },
+    {
+      "path": "inc/lcd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b70e3b31b5ac66b6879d10d84f9ef4ca51d14a55",
+      "size": 10822,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b70e3b31b5ac66b6879d10d84f9ef4ca51d14a55"
+    },
+    {
+      "path": "inc/lcd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cd5369fba3ea9b197d1991b31b21c4083774bcb3",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/cd5369fba3ea9b197d1991b31b21c4083774bcb3"
+    },
+    {
+      "path": "inc/lcd/lcd_VIM828.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29e020bb3215c3972afeeb01c357d4a0a5e00bde",
+      "size": 3199,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/29e020bb3215c3972afeeb01c357d4a0a5e00bde"
+    },
+    {
+      "path": "inc/macros.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d541c787e1647ac8aa70cdf046cb6eb604e00e23",
+      "size": 19015,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/d541c787e1647ac8aa70cdf046cb6eb604e00e23"
+    },
+    {
+      "path": "inc/mipi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "97edd790bea3c516494858578fa306a7437fc3d2",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/97edd790bea3c516494858578fa306a7437fc3d2"
+    },
+    {
+      "path": "inc/mipi/ssd1963.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d49445aea81e1bcf396e15b954e251aa21a2dd6",
+      "size": 13428,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/3d49445aea81e1bcf396e15b954e251aa21a2dd6"
+    },
+    {
+      "path": "inc/misra.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99c40fb1f80fac301d1a2b4eae114f231f1ca61d",
+      "size": 3228,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/99c40fb1f80fac301d1a2b4eae114f231f1ca61d"
+    },
+    {
+      "path": "inc/pdi.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d40ee30a67e124b7f6e8cf407a9607a489caa2d",
+      "size": 19670,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/6d40ee30a67e124b7f6e8cf407a9607a489caa2d"
+    },
+    {
+      "path": "inc/rng.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cfdd09b3d9c383215f7c0ab81a9e5c062923387",
+      "size": 4776,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8cfdd09b3d9c383215f7c0ab81a9e5c062923387"
+    },
+    {
+      "path": "inc/rtc.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52e2366a1ef16286191e11397b61d0ffa4043d1b",
+      "size": 12428,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/52e2366a1ef16286191e11397b61d0ffa4043d1b"
+    },
+    {
+      "path": "inc/spi.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51049d964b4d70d8337973df11354044164c6242",
+      "size": 18543,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/51049d964b4d70d8337973df11354044164c6242"
+    },
+    {
+      "path": "inc/startup.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65042fd0d72b690f9b78c62fa8790fcf801be5f9",
+      "size": 10620,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/65042fd0d72b690f9b78c62fa8790fcf801be5f9"
+    },
+    {
+      "path": "inc/system.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "811b6a6f5a6abcec6062eb370c1dc22deeb98bf6",
+      "size": 16171,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/811b6a6f5a6abcec6062eb370c1dc22deeb98bf6"
+    },
+    {
+      "path": "inc/uart.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "040a43c09648a62c587870731a2c5beaccb75926",
+      "size": 10358,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/040a43c09648a62c587870731a2c5beaccb75926"
+    },
+    {
+      "path": "inc/wdt.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ecb4a0de49501e9570765414933abe1685b9fdf",
+      "size": 6207,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9ecb4a0de49501e9570765414933abe1685b9fdf"
+    },
+    {
+      "path": "inc/wut.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af4325b91e746d0bd3480d40f1615d115e2d3a5c",
+      "size": 7539,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/af4325b91e746d0bd3480d40f1615d115e2d3a5c"
+    },
+    {
+      "path": "lookup.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32906e49a642ce0a6f70f414682c0d24bb2c6d91",
+      "size": 30054,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/32906e49a642ce0a6f70f414682c0d24bb2c6d91"
+    },
+    {
+      "path": "modes.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "587a5924352e7c96d46ec8f23dc6ce98c9219d3b",
+      "size": 3901,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/587a5924352e7c96d46ec8f23dc6ce98c9219d3b"
+    },
+    {
+      "path": "programming_helper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e1eee5ceb99bc724f857bc159d092762a7198d0",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/1e1eee5ceb99bc724f857bc159d092762a7198d0"
+    },
+    {
+      "path": "programming_helper/hex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2da88fa9ad26b21e53f31632e84e74fff4f961a4",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/2da88fa9ad26b21e53f31632e84e74fff4f961a4"
+    },
+    {
+      "path": "programming_helper/hex/JLinkCommandFile.jlink",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c2ece77dc6fd41f6f4699cef0ad12de092137a45",
+      "size": 72,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/c2ece77dc6fd41f6f4699cef0ad12de092137a45"
+    },
+    {
+      "path": "programming_helper/hex/ble_app_uart_pca10040_s132.elf",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "18fd160dbe12bebbb4df4c97891865c2b51efdd9",
+      "size": 2424144,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/18fd160dbe12bebbb4df4c97891865c2b51efdd9"
+    },
+    {
+      "path": "programming_helper/hex/ble_app_uart_pca10040_s132.hex",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4b28954a30c8297b8b6fe75f0fd5dc0d102747c5",
+      "size": 173754,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/4b28954a30c8297b8b6fe75f0fd5dc0d102747c5"
+    },
+    {
+      "path": "programming_helper/hex/ble_app_uart_pca10040_s132.map",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "367229fd8c368e2e879bbde42e6abe311e149c40",
+      "size": 1308184,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/367229fd8c368e2e879bbde42e6abe311e149c40"
+    },
+    {
+      "path": "programming_helper/hex/openeit.hex",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "50048a708546ec5fe32fd5000df733872815dfa4",
+      "size": 140357,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/50048a708546ec5fe32fd5000df733872815dfa4"
+    },
+    {
+      "path": "programming_helper/hex/openeit.out",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6811e3c966f8a7242baaeb5419e0fe5a12a36060",
+      "size": 444856,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/6811e3c966f8a7242baaeb5419e0fe5a12a36060"
+    },
+    {
+      "path": "programming_helper/hex/runit",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "size": 1,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8b137891791fe96927ad78e64b0aad7bded08bdc"
+    },
+    {
+      "path": "programming_helper/hex/runit.bat",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "766bfbe9797caf567e74ac431d92f74e7231472d",
+      "size": 189,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/766bfbe9797caf567e74ac431d92f74e7231472d"
+    },
+    {
+      "path": "programming_helper/hex/runit.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8dda347505b0bcb4da15f8447ec853304a3f4b10",
+      "size": 158,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8dda347505b0bcb4da15f8447ec853304a3f4b10"
+    },
+    {
+      "path": "programming_helper/hex/runitslow.bat",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "40a422ebbb05c8892b82bf9f98ba5b547858734c",
+      "size": 176,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/40a422ebbb05c8892b82bf9f98ba5b547858734c"
+    },
+    {
+      "path": "programming_helper/hex/s132_nrf52_6.1.0_softdevice.hex",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "02054b8d131891f9343ff685ba94a24f3370591c",
+      "size": 424030,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/02054b8d131891f9343ff685ba94a24f3370591c"
+    },
+    {
+      "path": "programming_helper/spectratest.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e809ac31a9394f66d6011894f2f3bdd2ffcda5e0",
+      "size": 8839,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e809ac31a9394f66d6011894f2f3bdd2ffcda5e0"
+    },
+    {
+      "path": "sequences.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0086e7fb623c918f32936af38dd5dcd2bc22c67",
+      "size": 26369,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b0086e7fb623c918f32936af38dd5dcd2bc22c67"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d03ab1b0e0e17cacbf9baf2e874534c5ec879c74",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/d03ab1b0e0e17cacbf9baf2e874534c5ec879c74"
+    },
+    {
+      "path": "src/adi_int.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ad8eff527fe79298d73e12c5b1b7187677f58dd",
+      "size": 5241,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9ad8eff527fe79298d73e12c5b1b7187677f58dd"
+    },
+    {
+      "path": "src/adi_nvic.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48cf99ed7c7b7ac58f107d8a6d507a57e2e34fcf",
+      "size": 4190,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/48cf99ed7c7b7ac58f107d8a6d507a57e2e34fcf"
+    },
+    {
+      "path": "src/afe.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c811461aaf32098d244d58f1f7a4422a0e00b096",
+      "size": 124757,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/c811461aaf32098d244d58f1f7a4422a0e00b096"
+    },
+    {
+      "path": "src/afe_lib.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f59c12e52090bac17ad89449366a6fd6fd48f10",
+      "size": 39911,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/7f59c12e52090bac17ad89449366a6fd6fd48f10"
+    },
+    {
+      "path": "src/beep.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "843ac66eeb90a5fde5e44bddfc0399cc081ef113",
+      "size": 38958,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/843ac66eeb90a5fde5e44bddfc0399cc081ef113"
+    },
+    {
+      "path": "src/captouch.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd41caef8105a48e54b7473d41cdea95d2369a42",
+      "size": 164125,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/bd41caef8105a48e54b7473d41cdea95d2369a42"
+    },
+    {
+      "path": "src/captouch_lib.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec622e1f6ca397434f8bb64ddb7134790d64ef8e",
+      "size": 17271,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/ec622e1f6ca397434f8bb64ddb7134790d64ef8e"
+    },
+    {
+      "path": "src/core_cm3.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d32c0aff0cc32ff193a0be34272d8a7a623c51b",
+      "size": 12339,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/5d32c0aff0cc32ff193a0be34272d8a7a623c51b"
+    },
+    {
+      "path": "src/crc.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fec29ef487b39df4d4e705b80685fc5ad40768d",
+      "size": 37334,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/1fec29ef487b39df4d4e705b80685fc5ad40768d"
+    },
+    {
+      "path": "src/dma.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "525d618d1709df33fecc93a4b80d263b7bca154d",
+      "size": 34099,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/525d618d1709df33fecc93a4b80d263b7bca154d"
+    },
+    {
+      "path": "src/flash.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9d290e7eb50640d5a807782a2b869af63690b3f",
+      "size": 54689,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a9d290e7eb50640d5a807782a2b869af63690b3f"
+    },
+    {
+      "path": "src/gpio.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13fb1759aba3819987243bd41fa494c0cd68e981",
+      "size": 68994,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/13fb1759aba3819987243bd41fa494c0cd68e981"
+    },
+    {
+      "path": "src/gpt.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4746aae6ca63636fb045865ca8ecaafa682d39e9",
+      "size": 30217,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/4746aae6ca63636fb045865ca8ecaafa682d39e9"
+    },
+    {
+      "path": "src/i2c.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a7ffeee74605678ab80ebba92b9abbedec368a6",
+      "size": 120945,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8a7ffeee74605678ab80ebba92b9abbedec368a6"
+    },
+    {
+      "path": "src/i2s.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fa5b8b309fd58aacf4d0d7d7c77c15f5854234d",
+      "size": 75681,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/7fa5b8b309fd58aacf4d0d7d7c77c15f5854234d"
+    },
+    {
+      "path": "src/iar_cortexM3b_math.a",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a006c28832efc754676491f1042c27f503ea127b",
+      "size": 1297812,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a006c28832efc754676491f1042c27f503ea127b"
+    },
+    {
+      "path": "src/iar_cortexM3l_math.a",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "723e35c8366327e16bf07cdcda0aa5ccd8f79923",
+      "size": 1291672,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/723e35c8366327e16bf07cdcda0aa5ccd8f79923"
+    },
+    {
+      "path": "src/lcd.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64dcddb4f16ba49f9d04a3fbca462e4f0c231840",
+      "size": 50073,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/64dcddb4f16ba49f9d04a3fbca462e4f0c231840"
+    },
+    {
+      "path": "src/lcd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a67532d81f3f54cb501cba7ecb528e7d22d0aa6",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/1a67532d81f3f54cb501cba7ecb528e7d22d0aa6"
+    },
+    {
+      "path": "src/lcd/lcd_VIM828.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77854d09f35f07c71d0af132089d3e0b75c49541",
+      "size": 19922,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/77854d09f35f07c71d0af132089d3e0b75c49541"
+    },
+    {
+      "path": "src/metrics.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3779b527e116bc2c8434bd55cd93575b4d974202",
+      "size": 8589,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/3779b527e116bc2c8434bd55cd93575b4d974202"
+    },
+    {
+      "path": "src/mipi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0bc7d7ef90c384cc3f4c65df65f8f5f7ce6fffa",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/a0bc7d7ef90c384cc3f4c65df65f8f5f7ce6fffa"
+    },
+    {
+      "path": "src/mipi/ssd1963.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e517dbbb30b6813bad9ff0088e8cf6aa6e4e37b8",
+      "size": 53943,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e517dbbb30b6813bad9ff0088e8cf6aa6e4e37b8"
+    },
+    {
+      "path": "src/pdi.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffb7b34cc81f552a3d4c75cc4e034722345c896e",
+      "size": 30563,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/ffb7b34cc81f552a3d4c75cc4e034722345c896e"
+    },
+    {
+      "path": "src/rng.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4de4a30a0c58c8b3a1e74b5089ddddb00c29fc1",
+      "size": 30392,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e4de4a30a0c58c8b3a1e74b5089ddddb00c29fc1"
+    },
+    {
+      "path": "src/rtc.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b68cf3628a21804032480d878bc8bb7502519e3b",
+      "size": 79294,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b68cf3628a21804032480d878bc8bb7502519e3b"
+    },
+    {
+      "path": "src/spi.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc54d3b3a07ad8bbf0e07e2f247578830af950f8",
+      "size": 135297,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/dc54d3b3a07ad8bbf0e07e2f247578830af950f8"
+    },
+    {
+      "path": "src/startup.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33203b9cd571310d0de1ad6fd450d5d1fd995d7a",
+      "size": 15487,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/33203b9cd571310d0de1ad6fd450d5d1fd995d7a"
+    },
+    {
+      "path": "src/system.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb9aca63d82e4986a670ddfdb6f1bae8b6c9689a",
+      "size": 91429,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/eb9aca63d82e4986a670ddfdb6f1bae8b6c9689a"
+    },
+    {
+      "path": "src/uart.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "915af2d9241485d770f898f9d12752ab0e9a5d5b",
+      "size": 91850,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/915af2d9241485d770f898f9d12752ab0e9a5d5b"
+    },
+    {
+      "path": "src/wdt.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa7be90f5747dbc41feca32e44f171d74dd98366",
+      "size": 36607,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/fa7be90f5747dbc41feca32e44f171d74dd98366"
+    },
+    {
+      "path": "src/wut.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35b1bd0a4a2644d11d57d3a4ef2617d1e7b64893",
+      "size": 40475,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/35b1bd0a4a2644d11d57d3a4ef2617d1e7b64893"
+    },
+    {
+      "path": "test_common.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7af082270ad93ce02f7b9ccd77a7b2539dd83446",
+      "size": 2664,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/7af082270ad93ce02f7b9ccd77a7b2539dd83446"
+    },
+    {
+      "path": "test_common.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2047c5315de9c9456965833ec00a7edd7c0887e9",
+      "size": 1371,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/2047c5315de9c9456965833ec00a7edd7c0887e9"
+    },
+    {
+      "path": "tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f088d0108b28766995cf7cff738c99582fbeea6a",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/f088d0108b28766995cf7cff738c99582fbeea6a"
+    },
+    {
+      "path": "tools/IElfTool",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c9cba8088ff21f3b852fe7c8a475b310aefd5d3",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/7c9cba8088ff21f3b852fe7c8a475b310aefd5d3"
+    },
+    {
+      "path": "tools/IElfTool/Debug_Win32_9",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8b72ed41557961e03c388ad3fa8d737473e5f193",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/8b72ed41557961e03c388ad3fa8d737473e5f193"
+    },
+    {
+      "path": "tools/IElfTool/Debug_Win32_9/ielftool.exe",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d3a8beb61bf5ef528d84af16f18cda310ecd21c",
+      "size": 1311744,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/1d3a8beb61bf5ef528d84af16f18cda310ecd21c"
+    },
+    {
+      "path": "tools/IElfTool/ielftool_9.sln",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3b5ad99c54f459c9a7930d99a4a9a6c6201f5b5",
+      "size": 889,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/c3b5ad99c54f459c9a7930d99a4a9a6c6201f5b5"
+    },
+    {
+      "path": "tools/IElfTool/ielftool_9.vcproj",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e0031c9d5abb967a71a2d10a547c76ff291cc66",
+      "size": 6579,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/4e0031c9d5abb967a71a2d10a547c76ff291cc66"
+    },
+    {
+      "path": "tools/IElfTool/ielftool_9.vcxproj",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9343700e0733bd701194347fa62f3a27d035dafc",
+      "size": 7034,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9343700e0733bd701194347fa62f3a27d035dafc"
+    },
+    {
+      "path": "tools/IElfTool/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9078b64f510daa263c8baaf2ee224c7759d677ff",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/9078b64f510daa263c8baaf2ee224c7759d677ff"
+    },
+    {
+      "path": "tools/IElfTool/src/BuildTxt.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8253d05a1c7711d40360a6b9e1207e7b3649f499",
+      "size": 70,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8253d05a1c7711d40360a6b9e1207e7b3649f499"
+    },
+    {
+      "path": "tools/IElfTool/src/BuildTxtRel.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "570268a14a018687feccc1ae5fe8a5ff8914c0ba",
+      "size": 69,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/570268a14a018687feccc1ae5fe8a5ff8914c0ba"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfChecksumCmd.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cc2a1130a1b6c9ab00e53735c057959952579e3",
+      "size": 38513,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/3cc2a1130a1b6c9ab00e53735c057959952579e3"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfChecksumCmd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdd477464d918d59f86801d9defc0347f510b028",
+      "size": 3326,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/fdd477464d918d59f86801d9defc0347f510b028"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfCmd.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56aeeb1eba1485f9a0270a8be9fc127fe8d4966f",
+      "size": 893,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/56aeeb1eba1485f9a0270a8be9fc127fe8d4966f"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfCmd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b3e1762094d37c139d854a016e81541f6bae9f5",
+      "size": 1210,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8b3e1762094d37c139d854a016e81541f6bae9f5"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfCmdFactory.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f990b3f323a648368439adc26f56c4fc004ab68a",
+      "size": 4769,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/f990b3f323a648368439adc26f56c4fc004ab68a"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfCmdFactory.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1914f3f96a21cd4c52281f237f6be0703f70799",
+      "size": 3302,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a1914f3f96a21cd4c52281f237f6be0703f70799"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfDataBuffer.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed5c0763de4888bc098490788cec20292488da9e",
+      "size": 9982,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/ed5c0763de4888bc098490788cec20292488da9e"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfDataBuffer.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1074f1cafa00960553b5fa27e001bd424bc1577",
+      "size": 3896,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e1074f1cafa00960553b5fa27e001bd424bc1577"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfException.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a621059e23518334e72fdd663d4b0fc42039555c",
+      "size": 4241,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a621059e23518334e72fdd663d4b0fc42039555c"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfException.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dea33f2dc46cdf9c0ee39a2a28b8594377b4011c",
+      "size": 2739,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/dea33f2dc46cdf9c0ee39a2a28b8594377b4011c"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfFile.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "901bf60a28749aca461cd5c69db76885c0d8632d",
+      "size": 39385,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/901bf60a28749aca461cd5c69db76885c0d8632d"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfFile.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13bfb22b92f24e796198e772f16db9fb0e5c8dbc",
+      "size": 11005,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/13bfb22b92f24e796198e772f16db9fb0e5c8dbc"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfFillCmd.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7669b615e8cfda736e3dd3615b98989784da05dc",
+      "size": 5411,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/7669b615e8cfda736e3dd3615b98989784da05dc"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfFillCmd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66e04c59aaa947ff42ca8ef19c8948c76a118377",
+      "size": 2049,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/66e04c59aaa947ff42ca8ef19c8948c76a118377"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfParityCmd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b62f8361ce1f0588c634b90b0600a34ffb1cc5f",
+      "size": 2365,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/6b62f8361ce1f0588c634b90b0600a34ffb1cc5f"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfRelocCmd.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f128a4c35ff77b8a21180d86c934a0dc3fd4c36d",
+      "size": 16202,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/f128a4c35ff77b8a21180d86c934a0dc3fd4c36d"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfRelocCmd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1533b396b93b5d08cbb68ddfa4ef1c8bcd170c9b",
+      "size": 1354,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/1533b396b93b5d08cbb68ddfa4ef1c8bcd170c9b"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveBinCmd.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5870ea1ac16f36e1c8979477a502e4020fc6d42",
+      "size": 2894,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/d5870ea1ac16f36e1c8979477a502e4020fc6d42"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveBinCmd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d40420c7cea3f8a3d59418405df3ff566e17c0c",
+      "size": 1682,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/5d40420c7cea3f8a3d59418405df3ff566e17c0c"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveCmd.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37f84fc1021dae82b6cdc1ab30b7a7f879b0af30",
+      "size": 6375,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/37f84fc1021dae82b6cdc1ab30b7a7f879b0af30"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveCmd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9659c518aa47880fa94b035d109c2051e4bc92e",
+      "size": 1223,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/c9659c518aa47880fa94b035d109c2051e4bc92e"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveCmdBase.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c55150c8c7da638af1b5ecbfad5abb2d57c098f7",
+      "size": 2202,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/c55150c8c7da638af1b5ecbfad5abb2d57c098f7"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveCmdBase.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0d94fdca2ac26c435c58f162c0916520b71b40c",
+      "size": 1959,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e0d94fdca2ac26c435c58f162c0916520b71b40c"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveIHexCmd.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d38109e3d6f7f137230472d6ec344725130d9b5a",
+      "size": 5985,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/d38109e3d6f7f137230472d6ec344725130d9b5a"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveIHexCmd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "130363c225936aeed459f5e80e4ca113b9bd3f2d",
+      "size": 1773,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/130363c225936aeed459f5e80e4ca113b9bd3f2d"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveSRecCmd.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44702576489d83cb16b4bc1f6ee2d34b4a5a77f6",
+      "size": 6823,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/44702576489d83cb16b4bc1f6ee2d34b4a5a77f6"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveSRecCmd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf92841e815a196821f0a84d9c10543f1ff9bea4",
+      "size": 1981,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/bf92841e815a196821f0a84d9c10543f1ff9bea4"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveSimpleCode.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a7dcf3695c2b78fdc7806aef9877b6e9a572958",
+      "size": 5059,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/2a7dcf3695c2b78fdc7806aef9877b6e9a572958"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveSimpleCode.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc4aea1c77ed0de31f93b22ec51afb49e6cc8518",
+      "size": 2421,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/cc4aea1c77ed0de31f93b22ec51afb49e6cc8518"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveTiTxtCmd.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d27bf84ab6fed0771c3ce0df12a9e7c05f643c0",
+      "size": 3546,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/5d27bf84ab6fed0771c3ce0df12a9e7c05f643c0"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfSaveTiTxtCmd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19b6f1d5b92f47b78958b0394a2c219355ea581b",
+      "size": 2426,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/19b6f1d5b92f47b78958b0394a2c219355ea581b"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfStripCmd.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "696ab39ad3e2bb1641499be62c5e0ba2fa6a8e96",
+      "size": 1931,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/696ab39ad3e2bb1641499be62c5e0ba2fa6a8e96"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfStripCmd.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03ba3a538aec43c7c2abe2dbf7ebbd7c3f9f81da",
+      "size": 1318,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/03ba3a538aec43c7c2abe2dbf7ebbd7c3f9f81da"
+    },
+    {
+      "path": "tools/IElfTool/src/LxElfTypes.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b88120557183eb1bbed93a45a4e883e7bfea20d1",
+      "size": 14012,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/b88120557183eb1bbed93a45a4e883e7bfea20d1"
+    },
+    {
+      "path": "tools/IElfTool/src/LxMain.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36d64f7a6fbca76b2bd6969ec2a014e521f97a10",
+      "size": 30084,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/36d64f7a6fbca76b2bd6969ec2a014e521f97a10"
+    },
+    {
+      "path": "tools/IElfTool/src/LxMain.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fbfa93c2b528f021ecb798f571e8bbc64a05960",
+      "size": 2613,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8fbfa93c2b528f021ecb798f571e8bbc64a05960"
+    },
+    {
+      "path": "tools/IElfTool/src/Version.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "085f52c45c9dfdf6b7c77acba52c39babd473d69",
+      "size": 396,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/085f52c45c9dfdf6b7c77acba52c39babd473d69"
+    },
+    {
+      "path": "tools/IElfTool/src/Version.rc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8b1fe4642f96e3bd46e505fd8db437d85ced7d7",
+      "size": 924,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/d8b1fe4642f96e3bd46e505fd8db437d85ced7d7"
+    },
+    {
+      "path": "tools/PinMuxUI",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "407902f079006c3ebc5a6bf8b9de8973f3fbf68e",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/407902f079006c3ebc5a6bf8b9de8973f3fbf68e"
+    },
+    {
+      "path": "tools/PinMuxUI/PinMux64.jar",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94aa0e045d829dafd497a909c7f121a6cdfc0db0",
+      "size": 9976491,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/94aa0e045d829dafd497a909c7f121a6cdfc0db0"
+    },
+    {
+      "path": "tools/PinMuxUI/PinMuxToolConfig.JPG",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ddba23e74201886a7f86d2407f1f1f30cbcf229",
+      "size": 41362,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9ddba23e74201886a7f86d2407f1f1f30cbcf229"
+    },
+    {
+      "path": "tools/PinMuxUI/Readme_PinMuxTool.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7dc673c8b3549bc9530121f18dc1cc45b0be604e",
+      "size": 2542,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/7dc673c8b3549bc9530121f18dc1cc45b0be604e"
+    },
+    {
+      "path": "tools/SerialDownloader",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25bf99335deba6cb6bbb88df515af6819b7531c3",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/25bf99335deba6cb6bbb88df515af6819b7531c3"
+    },
+    {
+      "path": "tools/SerialDownloader/CM3WSD",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b76e9a4bf4610c6e0e5a27cc7da9cdad66e4446",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/2b76e9a4bf4610c6e0e5a27cc7da9cdad66e4446"
+    },
+    {
+      "path": "tools/SerialDownloader/CM3WSD/ADIChip.ini",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58b74a35124eb4b1800b117c17987b612320366d",
+      "size": 747,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/58b74a35124eb4b1800b117c17987b612320366d"
+    },
+    {
+      "path": "tools/SerialDownloader/CM3WSD/Basic_FW_ImpedanceMeasurement_2Wire.hex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54cf2a4a275eea7171befb7d9b7efc0d46b7be6d",
+      "size": 70428,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/54cf2a4a275eea7171befb7d9b7efc0d46b7be6d"
+    },
+    {
+      "path": "tools/SerialDownloader/CM3WSD/ImpedanceMeasurement_2Wire.out",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d5646729ad6af5a7142b1be6440a08382525bc4",
+      "size": 367048,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9d5646729ad6af5a7142b1be6440a08382525bc4"
+    },
+    {
+      "path": "tools/SerialDownloader/CM3WSD/ImpedanceMeasurement_bioisolated.hex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e07f3f34240e618aabfe4cc9c61e2dc41e5df58e",
+      "size": 74088,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e07f3f34240e618aabfe4cc9c61e2dc41e5df58e"
+    },
+    {
+      "path": "tools/SerialDownloader/CM3WSD/Multifrequency_ImpedanceMeasurement_2Wire.hex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0f8fa5cdcdd6fb8c4e3445b5990fd0b796bf458",
+      "size": 72644,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/a0f8fa5cdcdd6fb8c4e3445b5990fd0b796bf458"
+    },
+    {
+      "path": "tools/SerialDownloader/CM3WSD/Sample.hex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae73858e1280e3b30f77b48a3cb20e125f136973",
+      "size": 8041,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/ae73858e1280e3b30f77b48a3cb20e125f136973"
+    },
+    {
+      "path": "tools/SerialDownloader/CM3WSD/aducm350_eksp.hex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22320a7f371937d062ee3af997500c08d051bfa3",
+      "size": 77275,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/22320a7f371937d062ee3af997500c08d051bfa3"
+    },
+    {
+      "path": "tools/SerialDownloader/CM3WSD/cm3wsd.exe",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83e34673bd4d009e3f411190ce219d3ca0b25854",
+      "size": 1787904,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/83e34673bd4d009e3f411190ce219d3ca0b25854"
+    },
+    {
+      "path": "tools/SerialDownloader/CM3WSD/cm3wsd.ini",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d42151967ca28ffff8c6941fe78f7edccd589789",
+      "size": 229,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/d42151967ca28ffff8c6941fe78f7edccd589789"
+    },
+    {
+      "path": "usb",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d41149b62c06384b5cd613645bcd9fc5bcc8a92e",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/d41149b62c06384b5cd613645bcd9fc5bcc8a92e"
+    },
+    {
+      "path": "usb/inc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7faf0300f7a4e234801c9af9a94981957e4a9c94",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/7faf0300f7a4e234801c9af9a94981957e4a9c94"
+    },
+    {
+      "path": "usb/inc/drivers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "30c366eed294ab43f2c3d1b8b0bd38e1fd404e69",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/30c366eed294ab43f2c3d1b8b0bd38e1fd404e69"
+    },
+    {
+      "path": "usb/inc/drivers/usb",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "438ca139be20e594df763bc4562126ef95168c82",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/438ca139be20e594df763bc4562126ef95168c82"
+    },
+    {
+      "path": "usb/inc/drivers/usb/controller",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6bf7a31b92fd5b0875dcabeb67959135ece634bd",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/6bf7a31b92fd5b0875dcabeb67959135ece634bd"
+    },
+    {
+      "path": "usb/inc/drivers/usb/controller/device",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "570d58050d8adb04b1ea9a680a499419683ff54a",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/570d58050d8adb04b1ea9a680a499419683ff54a"
+    },
+    {
+      "path": "usb/inc/drivers/usb/controller/device/adi_usbd_dev.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55c780bc5f858d3beae4c55d41800456d30a9ea5",
+      "size": 866,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/55c780bc5f858d3beae4c55d41800456d30a9ea5"
+    },
+    {
+      "path": "usb/inc/drivers/usb/controller/device/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17888441a047c3f85751c767a370cae21172a46e",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/17888441a047c3f85751c767a370cae21172a46e"
+    },
+    {
+      "path": "usb/inc/drivers/usb/controller/device/config/adi_usbd_dev_cfg.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9df2515c6f2a591b453d0ebce4e5d5e82904cf0a",
+      "size": 1710,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9df2515c6f2a591b453d0ebce4e5d5e82904cf0a"
+    },
+    {
+      "path": "usb/inc/drivers/usb/controller/device/config/musbhdrc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e79a8174bcfcd1f57f564fc3ded47ec55780b48a",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/e79a8174bcfcd1f57f564fc3ded47ec55780b48a"
+    },
+    {
+      "path": "usb/inc/drivers/usb/controller/device/config/musbhdrc/adi_usbd_dev_musbhdrc_cfg.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5683d3a583dc9ed307acd8778843323429006bc6",
+      "size": 2941,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/5683d3a583dc9ed307acd8778843323429006bc6"
+    },
+    {
+      "path": "usb/inc/drivers/usb/controller/device/config/musbmhdrc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d15bf684aefa0fbe558d48d05d5d3fb3f773a95",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/4d15bf684aefa0fbe558d48d05d5d3fb3f773a95"
+    },
+    {
+      "path": "usb/inc/drivers/usb/controller/device/config/musbmhdrc/adi_usbd_dev_musbmhdrc_cfg.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e947e765b90078cae029e4acad3eee1cc9528da",
+      "size": 2277,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/5e947e765b90078cae029e4acad3eee1cc9528da"
+    },
+    {
+      "path": "usb/inc/drivers/usb/controller/musbmhdrc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a20d52174448d2ffff886f9b9513a81f7196b5c7",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/a20d52174448d2ffff886f9b9513a81f7196b5c7"
+    },
+    {
+      "path": "usb/inc/drivers/usb/controller/musbmhdrc/adi_usb_dev_musbmhdrc.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e99457f1ffc8c6b51e434856dd9f3ac8b9e06a5",
+      "size": 16664,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/4e99457f1ffc8c6b51e434856dd9f3ac8b9e06a5"
+    },
+    {
+      "path": "usb/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dcc7f0e79085401948d6eeaacc80ebe56f0b2447",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/dcc7f0e79085401948d6eeaacc80ebe56f0b2447"
+    },
+    {
+      "path": "usb/src/drivers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "267de064e600d7c18c6948686f7a2f4b844307e6",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/267de064e600d7c18c6948686f7a2f4b844307e6"
+    },
+    {
+      "path": "usb/src/drivers/usb",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73f795e1f119d99b38be53b776226e3521d1a42a",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/73f795e1f119d99b38be53b776226e3521d1a42a"
+    },
+    {
+      "path": "usb/src/drivers/usb/controller",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "daf9b98d00b9e3fbf659ce957e80e6e1d4c89c72",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/daf9b98d00b9e3fbf659ce957e80e6e1d4c89c72"
+    },
+    {
+      "path": "usb/src/drivers/usb/controller/musbmhdrc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f84d39424846a3a3a4f93d27eba4351fc3e7e3e2",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/f84d39424846a3a3a4f93d27eba4351fc3e7e3e2"
+    },
+    {
+      "path": "usb/src/drivers/usb/controller/musbmhdrc/adi_usb_dev_common.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52053bf3112a9e7057269cf2cbffd0be693422d0",
+      "size": 5628,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/52053bf3112a9e7057269cf2cbffd0be693422d0"
+    },
+    {
+      "path": "usb/src/drivers/usb/controller/musbmhdrc/adi_usb_dev_musbmhdrc.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd0e48d57a90b59fa98b9edd24c003ce208f9e32",
+      "size": 97814,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/bd0e48d57a90b59fa98b9edd24c003ce208f9e32"
+    },
+    {
+      "path": "usb/src/drivers/usb/controller/musbmhdrc/adi_usb_dev_musbmhdrc_intrpt.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d1c883b3fd876e0e338393920e539d8155a1b49",
+      "size": 49958,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/2d1c883b3fd876e0e338393920e539d8155a1b49"
+    },
+    {
+      "path": "usb/src/drivers/usb/controller/musbmhdrc/adi_usb_dev_musbmhdrc_local.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0df5cf3797f25df0df6673572f2db3327af7e572",
+      "size": 60454,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/0df5cf3797f25df0df6673572f2db3327af7e572"
+    },
+    {
+      "path": "usb/src/drivers/usb/controller/musbmhdrc/adi_usb_dev_musbmhdrc_platform.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16c9facabc17e2a7e2dd9b0a59148fa765edc80f",
+      "size": 16180,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/16c9facabc17e2a7e2dd9b0a59148fa765edc80f"
+    },
+    {
+      "path": "usb/src/drivers/usb/controller/musbmhdrc/adi_usb_dev_musbmhdrc_platform.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b54d14f29b6cf7cafefad7eb9f03f716eeba2a9",
+      "size": 176471,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/9b54d14f29b6cf7cafefad7eb9f03f716eeba2a9"
+    },
+    {
+      "path": "usb/src/drivers/usb/controller/musbmhdrc/adi_usbd_musbmhdrc.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "021dc69b4611cf9ddd9d6e1eeaaf3ef59290a3b0",
+      "size": 1138,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/021dc69b4611cf9ddd9d6e1eeaaf3ef59290a3b0"
+    },
+    {
+      "path": "usb/src/drivers/usb/controller/musbmhdrc/adi_usbh_musbmhdrc.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e46e9217be880c52117c1edb026a84779622e1c1",
+      "size": 1097,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e46e9217be880c52117c1edb026a84779622e1c1"
+    },
+    {
+      "path": "usb/ucusb",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d6ee106759beb352c1b7de577d74dc880a42c6e5",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/d6ee106759beb352c1b7de577d74dc880a42c6e5"
+    },
+    {
+      "path": "usb/ucusb/Ports",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6bea2db7643248b1b2d9acece0aa01a7d88cb095",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/6bea2db7643248b1b2d9acece0aa01a7d88cb095"
+    },
+    {
+      "path": "usb/ucusb/Ports/Drivers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "942511b1a519cdf415db105ddf2f2aaa9b93f20b",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/942511b1a519cdf415db105ddf2f2aaa9b93f20b"
+    },
+    {
+      "path": "usb/ucusb/Ports/Drivers/ADI",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "565740867734c3da4c402032599131cb90f8f8eb",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/565740867734c3da4c402032599131cb90f8f8eb"
+    },
+    {
+      "path": "usb/ucusb/Ports/Drivers/ADI/BSP",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63768ba2d63430d60acaad0d444639f835615351",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/63768ba2d63430d60acaad0d444639f835615351"
+    },
+    {
+      "path": "usb/ucusb/Ports/Drivers/ADI/BSP/musbmhdrc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ba84c3e81a8ca222684702aabe8c16dcd22de16",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/trees/5ba84c3e81a8ca222684702aabe8c16dcd22de16"
+    },
+    {
+      "path": "usb/ucusb/Ports/Drivers/ADI/BSP/musbmhdrc/usbd_bsp_aducm350.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e97cf8669a1cc9ffbdea7557e940d8e5cbdbeea7",
+      "size": 8140,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/e97cf8669a1cc9ffbdea7557e940d8e5cbdbeea7"
+    },
+    {
+      "path": "usb/ucusb/Ports/Drivers/ADI/BSP/musbmhdrc/usbd_bsp_musbmhdrc.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db6c3b853a8c14bc37aa3af51f8058143fdd6974",
+      "size": 2063,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/db6c3b853a8c14bc37aa3af51f8058143fdd6974"
+    },
+    {
+      "path": "usb/ucusb/Ports/Drivers/ADI/BSP/usbd_bsp_dev.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c04aae1708b7480f40f0a3bfdce98f733305a59",
+      "size": 2616,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/8c04aae1708b7480f40f0a3bfdce98f733305a59"
+    },
+    {
+      "path": "usb/ucusb/Ports/Drivers/ADI/BSP/usbd_bsp_dev.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71e30e563923d77b711e4e7b787ecc19993554a6",
+      "size": 2562,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/71e30e563923d77b711e4e7b787ecc19993554a6"
+    },
+    {
+      "path": "usb/ucusb/Ports/Drivers/ADI/usbd_drv_adi.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbf5f382c22247449b934358f927d1a198adc678",
+      "size": 25191,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/bbf5f382c22247449b934358f927d1a198adc678"
+    },
+    {
+      "path": "usb/ucusb/Ports/Drivers/ADI/usbd_drv_adi.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd127ad509b2194665b9f34ba56872f1268e6377",
+      "size": 3953,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_Firmware/git/blobs/bd127ad509b2194665b9f34ba56872f1268e6377"
+    }
+  ],
+  "truncated": false
+}

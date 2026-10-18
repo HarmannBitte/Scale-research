@@ -1,0 +1,307 @@
+import { describe, it, expect, vi } from 'vitest';
+import { RenphoEs26bbAdapter } from '../../src/scales/renpho-es26bb.js';
+import type { ConnectionContext } from '../../src/interfaces/scale-adapter.js';
+import {
+  mockPeripheral,
+  defaultProfile,
+  assertPayloadRanges,
+} from '../helpers/scale-test-utils.js';
+import { WEIGHT_ONLY_HOLD_MS } from '../../src/scales/body-comp-helpers.js';
+
+function makeAdapter() {
+  return new RenphoEs26bbAdapter();
+}
+
+/** Append sum-checksum to a buffer at its last byte. */
+function withChecksum(buf: Buffer): Buffer {
+  let sum = 0;
+  for (let i = 0; i < buf.length - 1; i++) sum = (sum + buf[i]) & 0xff;
+  buf[buf.length - 1] = sum;
+  return buf;
+}
+
+/** Build a valid live (0x14) final-frame: 12 bytes, type 0x01, weight & impedance, trailing checksum. */
+function makeLiveFrame(weightX100: number, impedance: number, type = 0x01): Buffer {
+  const buf = Buffer.alloc(13);
+  buf[2] = 0x14;
+  buf[5] = type;
+  buf.writeUInt32BE(weightX100, 6);
+  buf.writeUInt16BE(impedance, 10);
+  return withChecksum(buf);
+}
+
+/** Build a valid offline (0x15) frame: 16 bytes incl. checksum, weight & impedance & secondsAgo. */
+function makeOfflineFrame(weightX100: number, impedance: number, secondsAgo = 0): Buffer {
+  const buf = Buffer.alloc(16);
+  buf[2] = 0x15;
+  buf.writeUInt32BE(weightX100, 5);
+  buf.writeUInt16BE(impedance, 9);
+  buf.writeUInt32BE(secondsAgo, 11);
+  return withChecksum(buf);
+}
+
+function makeMockCtx(): { ctx: ConnectionContext; write: ReturnType<typeof vi.fn> } {
+  const write = vi.fn().mockResolvedValue(undefined);
+  return {
+    ctx: {
+      write,
+      read: vi.fn().mockResolvedValue(Buffer.alloc(0)),
+      subscribe: vi.fn().mockResolvedValue(undefined),
+      profile: defaultProfile(),
+      deviceAddress: 'AA:BB:CC:DD:EE:FF',
+    },
+    write,
+  };
+}
+
+describe('RenphoEs26bbAdapter', () => {
+  describe('matches()', () => {
+    it('matches "es-26bb-b" exact', () => {
+      expect(makeAdapter().matches(mockPeripheral('es-26bb-b'))).toBe(true);
+    });
+
+    it('matches case-insensitive', () => {
+      expect(makeAdapter().matches(mockPeripheral('ES-26BB-B'))).toBe(true);
+    });
+
+    it('does not match "es-26bb" without "-b"', () => {
+      expect(makeAdapter().matches(mockPeripheral('es-26bb'))).toBe(false);
+    });
+
+    it('does not match unrelated name', () => {
+      expect(makeAdapter().matches(mockPeripheral('Random Scale'))).toBe(false);
+    });
+  });
+
+  describe('parseNotification()', () => {
+    it('parses 0x14 final live frame (type 0x01)', () => {
+      const reading = makeAdapter().parseNotification(makeLiveFrame(8000, 500, 0x01));
+      expect(reading).toEqual({ weight: 80, impedance: 500 });
+    });
+
+    it('parses 0x14 final live frame (type 0x11)', () => {
+      const reading = makeAdapter().parseNotification(makeLiveFrame(7500, 480, 0x11));
+      expect(reading).toEqual({ weight: 75, impedance: 480 });
+    });
+
+    it('drops 0x14 non-final live frame', () => {
+      const reading = makeAdapter().parseNotification(makeLiveFrame(8000, 500, 0x00));
+      expect(reading).toBeNull();
+    });
+
+    it('parses 0x15 offline frame', () => {
+      const reading = makeAdapter().parseNotification(makeOfflineFrame(7500, 480, 3600));
+      expect(reading).toMatchObject({ weight: 75, impedance: 480 });
+    });
+
+    it('drops frame with invalid checksum', () => {
+      const buf = makeLiveFrame(8000, 500);
+      buf[buf.length - 1] = 0x00; // corrupt checksum
+      expect(makeAdapter().parseNotification(buf)).toBeNull();
+    });
+
+    it('returns null for unknown action', () => {
+      const buf = Buffer.alloc(12);
+      buf[2] = 0x20;
+      withChecksum(buf);
+      expect(makeAdapter().parseNotification(buf)).toBeNull();
+    });
+
+    it('returns null for too-short buffer', () => {
+      expect(makeAdapter().parseNotification(Buffer.alloc(5))).toBeNull();
+    });
+
+    it('returns null when weight is zero on live frame', () => {
+      expect(makeAdapter().parseNotification(makeLiveFrame(0, 500))).toBeNull();
+    });
+
+    it('returns null when weight is zero on offline frame', () => {
+      expect(makeAdapter().parseNotification(makeOfflineFrame(0, 480))).toBeNull();
+    });
+  });
+
+  describe('parseNotification() historical timestamp', () => {
+    it('fills timestamp on 0x15 offline frame from secondsAgo', () => {
+      const reading = makeAdapter().parseNotification(makeOfflineFrame(7500, 480, 3600));
+      expect(reading).not.toBeNull();
+      expect(reading!.timestamp).toBeInstanceOf(Date);
+      const ageMs = Date.now() - reading!.timestamp!.getTime();
+      expect(ageMs).toBeGreaterThanOrEqual(3_600_000 - 2_000);
+      expect(ageMs).toBeLessThanOrEqual(3_600_000 + 2_000);
+    });
+
+    it('leaves timestamp undefined on 0x14 live final frame', () => {
+      const reading = makeAdapter().parseNotification(makeLiveFrame(8000, 500, 0x01));
+      expect(reading).not.toBeNull();
+      expect(reading!.timestamp).toBeUndefined();
+    });
+
+    it('returns null when 0x15 frame is too short to read secondsAgo', () => {
+      const buf = Buffer.alloc(14);
+      buf[2] = 0x15;
+      buf.writeUInt32BE(7500, 5);
+      buf.writeUInt16BE(480, 9);
+      withChecksum(buf);
+      expect(makeAdapter().parseNotification(buf)).toBeNull();
+    });
+  });
+
+  describe('onConnected() + offline ack', () => {
+    it('sends START_CMD on connect via control char', async () => {
+      const adapter = makeAdapter();
+      const { ctx, write } = makeMockCtx();
+      await adapter.onConnected(ctx);
+      expect(write).toHaveBeenCalledTimes(1);
+      const [charUuid, data, withResponse] = write.mock.calls[0];
+      expect(charUuid).toBe(adapter.charWriteUuid);
+      expect(Array.from(data as number[])).toEqual([
+        0x55, 0xaa, 0x90, 0x00, 0x04, 0x01, 0x00, 0x00, 0x00, 0x94,
+      ]);
+      expect(withResponse).toBe(false);
+    });
+
+    it('fires offline ack when 0x15 frame is parsed', async () => {
+      const adapter = makeAdapter();
+      const { ctx, write } = makeMockCtx();
+      await adapter.onConnected(ctx);
+      write.mockClear();
+
+      const reading = adapter.parseNotification(makeOfflineFrame(7500, 480, 60));
+      expect(reading).toMatchObject({ weight: 75, impedance: 480 });
+
+      // Ack is fire-and-forget; flush microtasks.
+      await Promise.resolve();
+      expect(write).toHaveBeenCalledTimes(1);
+      const [charUuid, data, withResponse] = write.mock.calls[0];
+      expect(charUuid).toBe(adapter.charWriteUuid);
+      expect(Array.from(data as number[])).toEqual([0x55, 0xaa, 0x95, 0x00, 0x01, 0x01, 0x96]);
+      expect(withResponse).toBe(true);
+    });
+
+    it('does NOT fire ack on 0x14 live frame', async () => {
+      const adapter = makeAdapter();
+      const { ctx, write } = makeMockCtx();
+      await adapter.onConnected(ctx);
+      write.mockClear();
+
+      adapter.parseNotification(makeLiveFrame(8000, 500));
+      await Promise.resolve();
+      expect(write).not.toHaveBeenCalled();
+    });
+
+    it('survives ack write failure without throwing', async () => {
+      const adapter = makeAdapter();
+      const write = vi.fn().mockRejectedValue(new Error('disconnected'));
+      const ctx: ConnectionContext = {
+        write,
+        read: vi.fn().mockResolvedValue(Buffer.alloc(0)),
+        subscribe: vi.fn().mockResolvedValue(undefined),
+        profile: defaultProfile(),
+        deviceAddress: 'AA:BB:CC:DD:EE:FF',
+      };
+      // First call (start cmd) also rejects but onConnected swallows it.
+      await expect(adapter.onConnected(ctx)).resolves.toBeUndefined();
+      write.mockClear();
+
+      const reading = adapter.parseNotification(makeOfflineFrame(7500, 480));
+      expect(reading).toMatchObject({ weight: 75, impedance: 480 });
+      await Promise.resolve();
+      await Promise.resolve();
+      expect(write).toHaveBeenCalledTimes(1);
+    });
+
+    it('does not write ack when no ctx (parser called without onConnected)', async () => {
+      const adapter = makeAdapter();
+      // parseNotification before onConnected: must not throw, must return reading.
+      const reading = adapter.parseNotification(makeOfflineFrame(7500, 480));
+      expect(reading).toMatchObject({ weight: 75, impedance: 480 });
+    });
+  });
+
+  describe('isComplete()', () => {
+    it('returns true when weight > 10 and impedance > 0', () => {
+      expect(makeAdapter().isComplete({ weight: 80, impedance: 500 })).toBe(true);
+    });
+
+    it('returns false when weight <= 10', () => {
+      expect(makeAdapter().isComplete({ weight: 10, impedance: 500 })).toBe(false);
+    });
+
+    it('completes a final weight without impedance after a short hold (D-07, D028)', () => {
+      // The final 0x14 frame of a weigh-in the scale could not analyse (socks,
+      // a child) carries impedance 0. It used to be refused for good, so the
+      // session ended in "disconnected before reading completed" and the
+      // weight was lost.
+      const adapter = makeAdapter();
+      const reading = adapter.parseNotification(makeLiveFrame(8000, 0))!;
+      expect(adapter.isComplete(reading)).toBe(true);
+      expect(adapter.isFinal(reading)).toBe(false);
+      expect(adapter.completionHoldMs).toBe(WEIGHT_ONLY_HOLD_MS);
+    });
+
+    it('resolves at once on a final frame with impedance', () => {
+      const adapter = makeAdapter();
+      const reading = adapter.parseNotification(makeLiveFrame(8000, 500))!;
+      expect(adapter.isComplete(reading)).toBe(true);
+      expect(adapter.isFinal(reading)).toBe(true);
+    });
+  });
+
+  describe('computeMetrics()', () => {
+    it('returns valid BodyComposition', () => {
+      const payload = makeAdapter().computeMetrics(
+        { weight: 80, impedance: 500 },
+        defaultProfile(),
+      );
+      expect(payload.weight).toBe(80);
+      expect(payload.impedance).toBe(500);
+      assertPayloadRanges(payload);
+    });
+
+    it('returns zero weight in payload for zero weight input', () => {
+      const payload = makeAdapter().computeMetrics({ weight: 0, impedance: 0 }, defaultProfile());
+      expect(payload.weight).toBe(0);
+    });
+  });
+});
+
+// #386: this adapter parses an impedance out of the scale's frames and used to
+// hand buildPayload an empty comp, so the exported body fat was the Deurenberg
+// BMI estimate and the impedance was published but ignored.
+//
+// At 80 kg / 183 cm / 30 / male the two answers are far apart, which is the
+// point: 19.37 % from BMI alone, 25.06 % from a 500 ohm BIA reading. Anyone
+// comparing against their vendor app sees the difference immediately.
+describe('Renpho ES-26BB BIA from the parsed impedance (#386)', () => {
+  const BMI_ONLY_FAT = 19.37;
+  const BIA_FAT_AT_500 = 25.06;
+
+  it('computes body fat from a plausible impedance instead of from BMI', () => {
+    const payload = makeAdapter().computeMetrics({ weight: 80, impedance: 500 }, defaultProfile());
+    expect(payload.bodyFatPercent).toBeCloseTo(BIA_FAT_AT_500, 1);
+    expect(payload.impedance).toBe(500);
+  });
+
+  it('moves every derived field with it, not just the fat percentage', () => {
+    // Worth pinning: the physique rating crosses a threshold here, so a user
+    // watching that number sees it drop from 5 to 2 on the same body.
+    const payload = makeAdapter().computeMetrics({ weight: 80, impedance: 500 }, defaultProfile());
+    expect(payload.physiqueRating).toBe(2);
+    expect(payload.visceralFat).toBe(12);
+    expect(payload.waterPercent).toBeCloseTo(54.7, 2);
+  });
+
+  it('falls back to the BMI estimate when the impedance is not a body', () => {
+    // A bad resistance is worse than none. Out of band it is refused and the
+    // reading lands on exactly the number this adapter published before.
+    for (const impedance of [1, 149, 1201, 65535]) {
+      const payload = makeAdapter().computeMetrics({ weight: 80, impedance }, defaultProfile());
+      expect(payload.bodyFatPercent).toBeCloseTo(BMI_ONLY_FAT, 1);
+    }
+  });
+
+  it('still falls back when no impedance was measured at all', () => {
+    const payload = makeAdapter().computeMetrics({ weight: 80, impedance: 0 }, defaultProfile());
+    expect(payload.bodyFatPercent).toBeCloseTo(BMI_ONLY_FAT, 1);
+  });
+});

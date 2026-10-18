@@ -1,0 +1,394 @@
+{
+  "sha": "c3d40a1e08c13728ee8e9ce2fa1d02b52685fb5e",
+  "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/trees/c3d40a1e08c13728ee8e9ce2fa1d02b52685fb5e",
+  "tree": [
+    {
+      "path": "8_electrode_flex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5101f41f83f09242ecf84deddd694ebd3757e37d",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/trees/5101f41f83f09242ecf84deddd694ebd3757e37d"
+    },
+    {
+      "path": "8_electrode_flex/eit-flex-gerbers.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c87e182e16a7ee7c27f9e97820f6729a84351eeb",
+      "size": 2548,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/c87e182e16a7ee7c27f9e97820f6729a84351eeb"
+    },
+    {
+      "path": "8_electrode_flex/eit-flex.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32f44ae1b03ad4e99639a152d0c37fda10260917",
+      "size": 11831,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/32f44ae1b03ad4e99639a152d0c37fda10260917"
+    },
+    {
+      "path": "8_electrode_flex/eit.kicad_pcb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4f3d7de90e2dee5391670bdc84a1adce8be8e83",
+      "size": 13570,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/b4f3d7de90e2dee5391670bdc84a1adce8be8e83"
+    },
+    {
+      "path": "BiomedicalImagingLibrary.lbr",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb81d9b5e00c100df5f142d8a8a51d63c31777c8",
+      "size": 375131,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/fb81d9b5e00c100df5f142d8a8a51d63c31777c8"
+    },
+    {
+      "path": "EIT.brd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61cff1e429329c29a172f0145320f29a7bb37f11",
+      "size": 230931,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/61cff1e429329c29a172f0145320f29a7bb37f11"
+    },
+    {
+      "path": "EIT.sch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd15845e93f2b16710c94c8e70785a80a3e54cf8",
+      "size": 351562,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/fd15845e93f2b16710c94c8e70785a80a3e54cf8"
+    },
+    {
+      "path": "EIT_UpdatePartNumAttributes.scr",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6436a78ee1e1fa3c8b8af8084b0ef2512ae14552",
+      "size": 650,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/6436a78ee1e1fa3c8b8af8084b0ef2512ae14552"
+    },
+    {
+      "path": "EIT_schematic.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e2d0d1a03f6ccdbfa9e966e4eb5624aa21b1733",
+      "size": 60819,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/5e2d0d1a03f6ccdbfa9e966e4eb5624aa21b1733"
+    },
+    {
+      "path": "Gerbers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c6226a9cdad6cd97745ddde2102d4ea179c962c3",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/trees/c6226a9cdad6cd97745ddde2102d4ea179c962c3"
+    },
+    {
+      "path": "Gerbers/EIT.G2L",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fbcc1394b7754f84eff2286c2dc09189ea67522",
+      "size": 351491,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/2fbcc1394b7754f84eff2286c2dc09189ea67522"
+    },
+    {
+      "path": "Gerbers/EIT.G3L",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "803845c1ed97e5834b611987717542def242777c",
+      "size": 166704,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/803845c1ed97e5834b611987717542def242777c"
+    },
+    {
+      "path": "Gerbers/EIT.GBC",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7754c8cde49e386ac9a91ac8248a8f21c9a59067",
+      "size": 95,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/7754c8cde49e386ac9a91ac8248a8f21c9a59067"
+    },
+    {
+      "path": "Gerbers/EIT.GBL",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5c82560de3ab60d612ff415320abf6be02b5ca9",
+      "size": 257944,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/d5c82560de3ab60d612ff415320abf6be02b5ca9"
+    },
+    {
+      "path": "Gerbers/EIT.GBS",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32963105ac8e33d848d14a4a4315ab541b4483bd",
+      "size": 8834,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/32963105ac8e33d848d14a4a4315ab541b4483bd"
+    },
+    {
+      "path": "Gerbers/EIT.GKO",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d879dfbb5382a417c41d86267cedb8b2de5543a",
+      "size": 20635,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/8d879dfbb5382a417c41d86267cedb8b2de5543a"
+    },
+    {
+      "path": "Gerbers/EIT.GTC",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ca6c102b1681a2f59b2b3d0ca207c826a2843c5",
+      "size": 7334,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/8ca6c102b1681a2f59b2b3d0ca207c826a2843c5"
+    },
+    {
+      "path": "Gerbers/EIT.GTL",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51f0280673081f79d4b0e0599f01995556588926",
+      "size": 422246,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/51f0280673081f79d4b0e0599f01995556588926"
+    },
+    {
+      "path": "Gerbers/EIT.GTO",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f02a6a793775b8b82b11dc2bfe2852ac2ab0c4a5",
+      "size": 168996,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/f02a6a793775b8b82b11dc2bfe2852ac2ab0c4a5"
+    },
+    {
+      "path": "Gerbers/EIT.GTS",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa635b7918faa589e5b54b9bd1de010a44e1a49b",
+      "size": 23257,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/fa635b7918faa589e5b54b9bd1de010a44e1a49b"
+    },
+    {
+      "path": "Gerbers/EIT.drd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "338b6799fa94472075fbde5f0f8c8263ab83584e",
+      "size": 6044,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/338b6799fa94472075fbde5f0f8c8263ab83584e"
+    },
+    {
+      "path": "Gerbers/EIT.dri",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e365405b6b23bf42c3a871990c6d58201e5326ab",
+      "size": 978,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/e365405b6b23bf42c3a871990c6d58201e5326ab"
+    },
+    {
+      "path": "Gerbers/EIT.gpi",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3c7454da69ec5a2519a756676ba8bc58df2877c",
+      "size": 957,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/d3c7454da69ec5a2519a756676ba8bc58df2877c"
+    },
+    {
+      "path": "Gerbers/EIT.mnb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "Gerbers/EIT.mnt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85a30ccf4f7509630418744b4d47ff94a6a27dc1",
+      "size": 2002,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/85a30ccf4f7509630418744b4d47ff94a6a27dc1"
+    },
+    {
+      "path": "Gerbers/EIT.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c2afa2eb4d9eea00794170bd83777065418c6ed",
+      "size": 79275,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/0c2afa2eb4d9eea00794170bd83777065418c6ed"
+    },
+    {
+      "path": "Gerbers/EIT_BOM.xls",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c82b04e929486f1d1ad1432346a41501dac6a05",
+      "size": 39424,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/1c82b04e929486f1d1ad1432346a41501dac6a05"
+    },
+    {
+      "path": "Gerbers/EIT_REV1A_FINAL.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7f5da40c7012368698742dcc2e15f7097d26688",
+      "size": 439763,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/b7f5da40c7012368698742dcc2e15f7097d26688"
+    },
+    {
+      "path": "Gerbers/board fab.txt",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "44adc68fde70e5f813df4d31ce301e38d31e41cd",
+      "size": 295,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/44adc68fde70e5f813df4d31ce301e38d31e41cd"
+    },
+    {
+      "path": "Gerbers/readme.txt",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b036b0f3b95d9bf478a05960878353ea5309338f",
+      "size": 401,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/b036b0f3b95d9bf478a05960878353ea5309338f"
+    },
+    {
+      "path": "LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42d614e5c086b89525e94ff72a10175ff5805645",
+      "size": 14885,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/42d614e5c086b89525e94ff72a10175ff5805645"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71f568d85309cb81258953dc66d0246028a65576",
+      "size": 3710,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/71f568d85309cb81258953dc66d0246028a65576"
+    },
+    {
+      "path": "Spectra.PDF",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f823751d05d5df37b6a26d006422b945398ddf60",
+      "size": 1139263,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/f823751d05d5df37b6a26d006422b945398ddf60"
+    },
+    {
+      "path": "eagleaids",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4cf0f71319cfe30e36de1049c277e84025854e49",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/trees/4cf0f71319cfe30e36de1049c277e84025854e49"
+    },
+    {
+      "path": "eagleaids/EIT_UpdatePartNumAttributes.scr",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5266ec0274b669e1505d0e2634ec064dfabef290",
+      "size": 610,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/5266ec0274b669e1505d0e2634ec064dfabef290"
+    },
+    {
+      "path": "eagleaids/bom-ex.cfg",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8e06b421e9946e0eeb5be40c1bb0385fc4908e0c",
+      "size": 65,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/8e06b421e9946e0eeb5be40c1bb0385fc4908e0c"
+    },
+    {
+      "path": "eagleaids/bom-ex.doc",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b20a21bf4f73d91761ed889e778d6714740117d",
+      "size": 733696,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/7b20a21bf4f73d91761ed889e778d6714740117d"
+    },
+    {
+      "path": "eagleaids/bom-ex.pdf",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4e8a2acf1e79668b79aeea3d4a1d3697ad0c4fd7",
+      "size": 693438,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/4e8a2acf1e79668b79aeea3d4a1d3697ad0c4fd7"
+    },
+    {
+      "path": "eagleaids/bom-ex.ulp",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ee5116b9d32e875070417c3ac6d6a5ca90c9904c",
+      "size": 120802,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/ee5116b9d32e875070417c3ac6d6a5ca90c9904c"
+    },
+    {
+      "path": "eagleaids/dru",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70e6b4c9a2ee4554126bdb4f6ee5ffeea8f7f2c7",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/trees/70e6b4c9a2ee4554126bdb4f6ee5ffeea8f7f2c7"
+    },
+    {
+      "path": "eagleaids/dru/drcsettings.dru",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f16ebdc648dd6fb0b027d290dd5e17d0c0470c35",
+      "size": 2179,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/f16ebdc648dd6fb0b027d290dd5e17d0c0470c35"
+    },
+    {
+      "path": "eagleaids/excellon.cam",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4787dc45902fe8cd26d4e72a573c4fb4837195a",
+      "size": 1478,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/d4787dc45902fe8cd26d4e72a573c4fb4837195a"
+    },
+    {
+      "path": "eagleaids/gerb274x-4layer.cam",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbfd2faf8358077856fd046bdf57b64564c7acd0",
+      "size": 10333,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/dbfd2faf8358077856fd046bdf57b64564c7acd0"
+    },
+    {
+      "path": "eagleaids/mountsmd.ulp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9eef35410984e440a3440dbcdec2300154f6730",
+      "size": 2528,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/c9eef35410984e440a3440dbcdec2300154f6730"
+    },
+    {
+      "path": "eagleaids/statistic-brd.ulp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "309449b4aa4a9816712b65544370b30cb7a47394",
+      "size": 87767,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/309449b4aa4a9816712b65544370b30cb7a47394"
+    },
+    {
+      "path": "images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3e56e1cf2224ec1914c3ecde01429e1d0225c1c2",
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/trees/3e56e1cf2224ec1914c3ecde01429e1d0225c1c2"
+    },
+    {
+      "path": "images/PCB.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1e83d7dc2e20bb0cfd2b0cbdf3eb33d48798a0d",
+      "size": 363770,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/d1e83d7dc2e20bb0cfd2b0cbdf3eb33d48798a0d"
+    },
+    {
+      "path": "images/eit_anti-clockwise_motion.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a363626efad8ca5bdded06a08e0f711a5515f52",
+      "size": 334858,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/8a363626efad8ca5bdded06a08e0f711a5515f52"
+    },
+    {
+      "path": "partsdb.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d208d9152beec0fbafe8fe25bf31eda2a4ad4a29",
+      "size": 5282,
+      "url": "https://api.github.com/repos/OpenEIT/EIT_EE/git/blobs/d208d9152beec0fbafe8fe25bf31eda2a4ad4a29"
+    }
+  ],
+  "truncated": false
+}

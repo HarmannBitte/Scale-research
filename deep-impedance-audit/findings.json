@@ -1,0 +1,436 @@
+{
+ "generated": "2026-10-18 pass4 2026-10-17",
+ "evidence_levels": {
+  "S": "source observation at a pinned file/line",
+  "H": "host probe: upstream C function run with stubbed peripherals (GCC, not target silicon)",
+  "D": "Dart probe: upstream Dart file run with synthetic data (Dart 3.13.5)",
+  "DS": "vendor datasheet read (MAX30009 PDF, analog.com), cited chunk",
+  "T": "upstream test run in this sandbox",
+  "U": "unverified: needs hardware, producer firmware, or a register map not retrieved"
+ },
+ "findings": [
+  {
+   "id": "F01",
+   "repo": "oscaroflores/UPRM-Multi_Frq-BioZ-Research",
+   "claim": "spiBurst writes out of bounds when fifoCount is 0 or 1 (tx_buf[1]) and reads past the buffer for a truncated trailing word (rx_buf[i+1]).",
+   "levels": [
+    "S",
+    "H"
+   ],
+   "evidence": [
+    "src/spiFunctions.c lines 35 and 60 (generated/uprm-fifo.c)",
+    "native-probe-results.json: uprm-fifo-0-0, 0-1, 128-0 (ASan write overflow), 0-3 (ASan read overflow); 0-2, 0-8, 1-0 clean"
+   ],
+   "status": "confirmed in host probe; reachability on hardware U",
+   "severity": "memory-safety defect in firmware path; hardware reachability unknown"
+  },
+  {
+   "id": "F02",
+   "repo": "oscaroflores/UPRM-Multi_Frq-BioZ-Research",
+   "claim": "FIFO count formula disagrees with the vendor drivers. UPRM: (counter1 & 0x7F)*2 + counter2. ADI MAX32655_MAX30009 MAX30009.h/.c and no-OS max30009: count = ((counter1 & 0x80) << 1) + counter2 (MSB bit 7 of 0x0A, LSB 0x0B), clamped to 256. UPRM also burst-reads fifoCount BYTES and parses 3-byte samples from them, so it reads 1/3 of the samples the count describes.",
+   "levels": [
+    "S",
+    "DS",
+    "H"
+   ],
+   "evidence": [
+    "UPRM src/spiFunctions.c lines 245-261 and 275-291 (spiBurst)",
+    "analogdevicesinc/MAX32655_MAX30009 MAX30009.h (OVF_COUNTER mask 0x7F in 0x0A; LSB 0x0B) and MAX30009.c ((b0&0x80)<<1)|b1",
+    "analogdevicesinc/no-OS drivers/afe/max30009 max30009_fifo_get_count",
+    "web_search of ADI header, 2026-10-17 (excerpt, not full file fetch)"
+   ],
+   "status": "RESOLVED against vendor headers and driver. The 3x byte-count reading is a vendor-driver inference, not tested on hardware.",
+   "severity": "Firmware requests the wrong number of bytes for any FIFO count. Not yet a measured data loss on hardware."
+  },
+  {
+   "id": "F03",
+   "repo": "oscaroflores/UPRM-Multi_Frq-BioZ-Research",
+   "claim": "Excitation: VDRV_MAG 250 mV with IDRV_RGE 5.525 kOhm gives 45.25 uA. The code labels this a current in uA, but it is a peak value (250 mV peak / 5.525 kOhm). The datasheet's equivalent setting (5.525 kOhm, 177 mVrms) is 32.0 uARMS.",
+   "levels": [
+    "S",
+    "H",
+    "DS"
+   ],
+   "evidence": [
+    "native-probe-results.json: uprm-clock-scale (current_uA=45.2488687783)",
+    "MAX30009 datasheet BIOZ drive current vs load, chunk 5 (177 mVrms -> 32.0 uA)"
+   ],
+   "status": "unit convention to document; 2/pi factor in convertCountsToOhms not verified against DFT normalisation",
+   "severity": "calibration-scale risk; not a safety finding"
+  },
+  {
+   "id": "F04",
+   "repo": "oscaroflores/UPRM-Multi_Frq-BioZ-Research",
+   "claim": "Sample-rate and excitation-frequency formulas match the datasheet: PLL=REF*(MDIV+1); F_BIOZ=PLL/(KDIV*DAC_OSR); SR=PLL/(NDIV*ADC_OSR). Results: 4104 Hz, 131 328 Hz, 256.5 sps.",
+   "levels": [
+    "H",
+    "DS"
+   ],
+   "evidence": [
+    "native-probe-results.json: uprm-clock-scale",
+    "MAX30009 datasheet chunk 8-9 (BioZ sample rate and stimulus frequency; Table 2)"
+   ],
+   "status": "consistent",
+   "severity": "none found"
+  },
+  {
+   "id": "F05",
+   "repo": "oscaroflores/UPRM-Multi_Frq-BioZ-Research",
+   "claim": "Comment says ADC_OSR = 5 (256); the register value 0xA0 decodes to index 4, which the firmware's own table maps to 128. The reported 256.5 sps uses 128.",
+   "levels": [
+    "S",
+    "H",
+    "DS"
+   ],
+   "evidence": [
+    "src/bioZ.c BIAsettings comment and getSampleInterval table"
+   ],
+   "status": "MAX30009: chunks 0-3 and 6-11 read in pass 4 (chunk 10 holds a timing-example table with no column headers in the fetched text, so the BIOZ_ADC_OSR bit table was not decoded). The ADC OSR register table is still not confirmed. Open.",
+   "severity": "documentation"
+  },
+  {
+   "id": "F06",
+   "repo": "oscaroflores/UPRM-Multi_Frq-BioZ-Research",
+   "claim": "Comment says the frequency is set to 150 kHz; computed high frequency is 131 328 Hz.",
+   "levels": [
+    "S",
+    "H"
+   ],
+   "evidence": [
+    "src/bioZ.c setFreq comments and the uprm-clock-scale probe"
+   ],
+   "status": "comment stale",
+   "severity": "documentation"
+  },
+  {
+   "id": "F07",
+   "repo": "oscaroflores/UPRM-Multi_Frq-BioZ-Research",
+   "claim": "sample_interval_us is assigned a value in seconds (~0.0039) and truncated to 0 by uint32_t. The timing actually uses sample_index*(1/sr).",
+   "levels": [
+    "S",
+    "H"
+   ],
+   "evidence": [
+    "src/bioZ.c getSampleInterval; uprm-clock-scale probe output"
+   ],
+   "status": "confirmed",
+   "severity": "low (misleading variable)"
+  },
+  {
+   "id": "F08",
+   "repo": "openebi/software",
+   "claim": "OpenEBI take_measurement(average=0) divides 0 by 0 and prints NaN. The 'p' command does not range-check average.",
+   "levels": [
+    "S",
+    "H"
+   ],
+   "evidence": [
+    "openebi main.c / take_measurement; native-probe-results.json openebi-averaging-0-1000 (real=-nan)"
+   ],
+   "status": "confirmed in host probe",
+   "severity": "firmware output validity"
+  },
+  {
+   "id": "F09",
+   "repo": "openebi/software",
+   "claim": "Valid-data wait loop has no timeout (while(!ad5933_has_valid_impedance());). Hang behaviour on silicon is unverified.",
+   "levels": [
+    "S",
+    "H"
+   ],
+   "evidence": [
+    "take_measurement source; probe exit 42 needed a stub budget (openebi-averaging-1-50)"
+   ],
+   "status": "confirmed as source behaviour; silicon hang U",
+   "severity": "liveness"
+  },
+  {
+   "id": "F10",
+   "repo": "OpenEIT/OpenEIT (Spectra firmware path)",
+   "claim": "calculate_magnitude returns 0 when the denominator is 0. Combined with the open-circuit override in convert_dft_results, an open electrode reads as magnitude 0, not as an error.",
+   "levels": [
+    "S",
+    "H"
+   ],
+   "evidence": [
+    "OpenEIT.c calculate_magnitude and convert_dft_results; native-probe-results.json spectra-fixed-point line 2"
+   ],
+   "status": "confirmed in host probe (flat 32-bit model)",
+   "severity": "data-quality: open circuit indistinguishable from 0 ohm"
+  },
+  {
+   "id": "F11",
+   "repo": "OpenEIT/OpenEIT (Spectra firmware path)",
+   "claim": "Magnitude saturation check only detects results >= 2^32, so values in [2^31, 2^32) wrap negative in the 32-bit field (raw -2147483648 for numerator 134217728).",
+   "levels": [
+    "S",
+    "H"
+   ],
+   "evidence": [
+    "calculate_magnitude; spectra-fixed-point probe line 3"
+   ],
+   "status": "confirmed in host probe; practically outside EIT range",
+   "severity": "low"
+  },
+  {
+   "id": "F12",
+   "repo": "OpenEIT/EIT_Firmware (bipolar path)",
+   "claim": "Bipolar sine amplitude macro SINE_AMPLITUDE_BIPOLAR = VPEAK*40/DAC_LSB = 61 323 codes, written by SEQ_MMR_WRITE into the sequence word (0x9E00EF8B). The AD5940-family amplitude field is 11 bits (BITM 0x7FF; ADI header comment: 0 to 2047, 0 to 800 mV), so the hardware keeps 1931 codes (about 754 mV equivalent) rather than the 23 960 mV the macro implies. The unused VPEAK_BIPOLAR=12.73 mV constant gives 33 codes.",
+   "levels": [
+    "S",
+    "H",
+    "DS"
+   ],
+   "evidence": [
+    "OpenEIT modes.h lines 68-74 (SINE_AMPLITUDE_BIPOLAR); OpenEIT.c line 1148 (bipolar sequence write); inc/defADuCM350.h BITM_AFE_AFE_WG_AMPLITUDE_SINE_AMPLITUDE 0x7FF; analogdevicesinc ad5940.h BITM_AFE_WGAMPLITUDE_SINEAMPLITUDE 0x7FF; native-probe-results.json openeit-bipolar-amplitude"
+   ],
+   "status": "Source and arithmetic confirmed. The ADuCM350 Hardware Reference Manual (UG-587 Rev. E, AFE_WG_AMPLITUDE at 0x4008003C) lists bits [31:11] as RESERVED, read-only, and SINE_AMPLITUDE as bits [10:0], unsigned. The manual's general rule for unused bits is that writes have no effect (stated for another register; the exact sentence was seen in a manual excerpt, not the full table). So the 61,323 written value is most likely masked to 1,931 codes. Not measured on hardware.",
+   "severity": "HIGH review priority for any future hardware work. No hazard claim is made; no electrode-level output was measured."
+  },
+  {
+   "id": "F13",
+   "repo": "protocentral/max30001_arduino_library",
+   "claim": "BioZ FIFO sample is the upper 20 bits of the 24-bit word, sign-extended. ECG is 18 bits.",
+   "levels": [
+    "S"
+   ],
+   "evidence": [
+    "src/protocentral_max30001.cpp getBioZSamples and _max30001ReadBIOZFIFO; getECGSamples"
+   ],
+   "status": "source observation; MAX30001 datasheet not retrieved",
+   "severity": "documentation consistency"
+  },
+  {
+   "id": "F14",
+   "repo": "protocentral/max30001_openview",
+   "claim": "max30001_decoders.dart describes BioZ as a 19-bit sample. The Arduino library in the same family extracts 20 bits. The OpenView decoder reads int32 and does not truncate.",
+   "levels": [
+    "S"
+   ],
+   "evidence": [
+    "lib/boards/decoders/max30001_decoders.dart header comment; Arduino library F13"
+   ],
+   "status": "documentation conflict; neither resolved by the MAX30009 datasheet (different part)",
+   "severity": "low"
+  },
+  {
+   "id": "F15",
+   "repo": "protocentral/max30001_openview",
+   "claim": "The packet type 2 producer IS in the collection: protocentral_max30001_arduino_library examples/Example01_BasicECGBioZ.ino sends header 0x0A 0xFA, LEN 0x0C 0x00, type 0x02, a 12-byte payload (ECG int32 LE, BioZ int32 LE, one skip flag byte 0xFF/0x00 toggling per sample, three zero bytes), footer 0x00 0x0B. It sends no heart rate and no RR.",
+   "levels": [
+    "S",
+    "D"
+   ],
+   "evidence": [
+    "Protocentral__protocentral_max30001_arduino_library Example01_BasicECGBioZ.ino",
+    "producer-probe/lib/producer_probe.dart (Dart 3.13.5 run on the real packet_framer_v3.dart and max30001_decoders.dart; output producer-probe.log)"
+   ],
+   "status": "Producer frame layout confirmed. Decoder bytes 8-11 read the skip flag and zeros as heart rate and RR, see F20.",
+   "severity": "Units and any HR/RR consumer are meaningless for this producer."
+  },
+  {
+   "id": "F16",
+   "repo": "protocentral/max30001_openview",
+   "claim": "Packet framer accepts the documented frame with no 0x00 pad and also the padded frame. The 0x00 pad is not required.",
+   "levels": [
+    "D"
+   ],
+   "evidence": [
+    "deep-impedance-audit/dart-probe/lib/probe.dart output (both frames: packet type=2 len=12 known=true)"
+   ],
+   "status": "confirmed for synthetic frames",
+   "severity": "none"
+  },
+  {
+   "id": "F17",
+   "repo": "protocentral/max30001_openview",
+   "claim": "The .hpd reader does not verify the CRC-32 that the writer adds to each DATA block, and readSamples() catches all exceptions and returns silently. A single corrupted byte changed a sample's value (1010.0 -> 1010.0000019) with no error, and truncation by 200 bytes dropped 4 of 30 samples with no error.",
+   "levels": [
+    "S",
+    "D"
+   ],
+   "evidence": [
+    "biosignal_file_reader.dart readSamples (CRC bytes read and discarded; catch (_) { break; }); biosignal_file_writer.dart _crc32; deep-impedance-audit/biosig-crc-probe.log"
+   ],
+   "status": "confirmed by Dart probe",
+   "severity": "data-integrity: corrupted or truncated recordings are not flagged"
+  },
+  {
+   "id": "F18",
+   "repo": "MAX30009 datasheet (applies to UPRM and no-OS MAX30009 code)",
+   "claim": "Vendor datasheet confirms: 20-bit BioZ sigma-delta ADC; 256-word FIFO; F_BIOZ and SR formulas; 60601-1 lockout for high-current, low-frequency drive; calibration uses a 680 Ohm external resistor (Note 2); vendor reports Cole-model error figures measured with a Zurich MFIA, which is a vendor claim, not an independent validation.",
+   "levels": [
+    "DS"
+   ],
+   "evidence": [
+    "MAX30009 datasheet via fetch_page (chunks 0, 4, 5, 8, 9 of 10 read)"
+   ],
+   "status": "vendor-stated",
+   "severity": "context"
+  },
+  {
+   "id": "F19",
+   "repo": "ECSHackWeek/impedance.py",
+   "claim": "test_circuit_fit passes on its own with BLAS/OMP caps: 1 passed in 158.86 s. The earlier 90 s attempt timed out, so it was a time limit, not a failure.",
+   "levels": [
+    "T"
+   ],
+   "evidence": [
+    "verification/impedance-py-test_circuit_fit-long-timeout.json and .log"
+   ],
+   "status": "confirmed",
+   "severity": "none (time-limit issue only)"
+  },
+  {
+   "id": "F20",
+   "repo": "protocentral/max30001_openview",
+   "claim": "With the Arduino example producer's frames, the OpenView packet-type-2 decoder reports heartRate 0 and 255 alternating, and rr 0 for every sample. The decoder reads the skip flag (0x00/0xFF) as heart rate, because the producer sends no HR or RR.",
+   "levels": [
+    "D",
+    "S"
+   ],
+   "evidence": [
+    "producer-probe.log (6 frames; heartRate=0,255,0,255,0,255; rr=0)",
+    "lib/boards/decoders/max30001_decoders.dart as collected"
+   ],
+   "status": "Reproduced with the real decoder and framer (Dart 3.13.5). Hardware not used.",
+   "severity": "High for any display of HR/RR fed by this producer. Mismatch between producer and decoder; which one is intended is not known from the collection."
+  },
+  {
+   "id": "F21",
+   "repo": "protocentral/max30001_openview",
+   "claim": "The OpenView decoder labels BioZ at 128 samples/s, but the example producer changes BioZ on every other frame (skip flag toggles per sample and the BioZ values repeat in the decoder output at the producer's half rate). Effective BioZ change rate is about half the labelled rate.",
+   "levels": [
+    "S",
+    "D"
+   ],
+   "evidence": [
+    "Example01_BasicECGBioZ.ino comments and skip-flag logic",
+    "producer-probe.log"
+   ],
+   "status": "Source-level observation; the BioZ-every-other-frame behaviour is from the producer code, not measured on hardware.",
+   "severity": "Medium: a 2x timing error would affect any BioZ time base or spectral analysis built on the descriptor rate."
+  },
+  {
+   "id": "F22",
+   "repo": "oscaroflores/UPRM-Multi_Frq-BioZ-Research",
+   "claim": "UPRM burst-reads FIFO data using the byte count fifoCount (txLen = rxLen = fifoCount) and then parses 3-byte samples from it. Per the vendor driver the count is in samples, so a full read needs count*3 bytes.",
+   "levels": [
+    "S",
+    "DS",
+    "H",
+    "U"
+   ],
+   "evidence": [
+    "UPRM spiFunctions.c lines 245-261 and 275-291",
+    "F02 vendor sources"
+   ],
+   "status": "Inference from the vendor driver. Hardware not tested. Datasheet chunks 2-3 read in pass 4 (no FIFO count layout in them).",
+   "severity": "High if correct: the firmware under-reads every FIFO burst, so data are lost or misaligned."
+  },
+  {
+   "id": "F23",
+   "repo": "protocentral/max30001_openview",
+   "claim": "Reproducibility: the native probes (run_native_probes.py) reproduce from the archived sources (20 provenance entries identical; only ASan process IDs and stack addresses differ).",
+   "levels": [
+    "T"
+   ],
+   "evidence": [
+    "native-source-provenance.json",
+    "native-run.log"
+   ],
+   "status": "Verified in this session",
+   "severity": "none"
+  },
+  {
+   "id": "F24",
+   "repo": "protocentral/max30001_openview",
+   "claim": "The collected OpenView snapshot has no pubspec.lock and no assets/ fonts or branding files, even though pubspec.yaml declares them. A plain 'flutter pub get' therefore resolves fresh versions (150 dependencies changed in the working copy), and 'flutter test' fails with 'Failed to build asset bundle' until the asset declarations are removed.",
+   "levels": [
+    "T",
+    "S"
+   ],
+   "evidence": [
+    "Collection listing: no pubspec.lock; flutter test output in avr-check/openview-flutter-test.log",
+    "avr-check/openview_strip_assets.py and STRIPPED-FOR-TEST.json (working copy only)"
+   ],
+   "status": "Verified in this session. The test result below applies only to the stripped, freshly resolved working copy.",
+   "severity": "Reproducibility: the collected snapshot cannot be built or tested as-is."
+  },
+  {
+   "id": "F25",
+   "repo": "Protocentral/MAX30001 Arduino library; dyarleniber/AD5933-arduino-bioimpedance",
+   "claim": "Both Arduino sources compile for ATmega328P (avr-g++ 14.2, -Os, -Wall) against minimal stub headers: protocentral_max30001.cpp with 0 errors and 13 warnings (4,886 bytes of text), and the AD5933.ino sketch with 0 errors and 0 warnings (540 bytes). The sketch needed Arduino-IDE-style prototypes, added by a script.",
+   "levels": [
+    "T"
+   ],
+   "evidence": [
+    "avr-check/build_avr.sh, avr-check/make_and_build_ad5933.py, avr-check/max30001-build.log, avr-check/ad5933-build.log"
+   ],
+   "status": "Compile-only evidence. The stub headers are not the Arduino core, so the build is not an Arduino IDE build and nothing ran on an AVR. Does not show the code works on hardware.",
+   "severity": "Low: confirms the sources compile; does not confirm behaviour."
+  },
+  {
+   "id": "F26",
+   "repo": "melazab/AD5940-BIOZ",
+   "claim": "No licence file exists at the repository root, and the GitHub licence API returns 404 (no detected licence). The four vendored ad5940lib/LICENSE copies are the ADI licence: redistribution is permitted only for use with ADI products, and the code may not be combined 'in any manner that would cause the software to become subject to terms... which differ'. The melazab-authored code therefore has no stated licence, while its vendored ADI library carries restrictive terms.",
+   "levels": [
+    "S",
+    "T"
+   ],
+   "evidence": [
+    "sources/melazab__AD5940-BIOZ/*/ad5940lib/LICENSE (4 copies, identical licence text)",
+    "GitHub API licence endpoint: 404 (fetch 2026-10-18)"
+   ],
+   "status": "Verified. Recorded as a licence difference only; the project is not excluded.",
+   "severity": "Licence: the root project has no grant of rights; the vendored ADI licence limits redistribution and combination."
+  },
+  {
+   "id": "F27",
+   "repo": "ADI MAX30009 datasheet",
+   "claim": "MAX30009 facts read in pass 4: ADC resolution 20 bits; ENOB 16.3 bits at BIOZ_ADC_OSR=128 and 9.6 bits at OSR=8; phase accuracy +/-0.15 deg at 50 kHz for a Cole load after calibration; magnitude accuracy +/-0.1 % at 50 kHz for the same load; current-drive ranges 16 nARMS to 1.28 mARMS; 16 Hz to 500 kHz drive; ADC sample rate 16 to 4546 sps; full-scale lead-off current options 5.5 to 110 nA; PLL 14-28 MHz; FCLK accuracy requirement 347 ppm for IEC 60601-2-47.",
+   "levels": [
+    "DS"
+   ],
+   "evidence": [
+    "analog.com MAX30009.pdf, fetch chunks 1, 2, 3, 6, 7 (pass 4)"
+   ],
+   "status": "Vendor-stated characteristics under the datasheet's test conditions (manufacturer test load). Not independent validation.",
+   "severity": "Context for the F03 and F04 unit checks. Not a device claim."
+  },
+  {
+   "id": "F28",
+   "repo": "protocentral/max30001_openview",
+   "claim": "OpenView Flutter test suite: 42 tests in 5 files pass (settings 4, update banner 6, update controller 26, widget 2, board decoders 4), on the working copy with asset declarations removed and freshly resolved dependencies. The Linux debug build (flutter build linux --debug) also succeeds.",
+   "levels": [
+    "T"
+   ],
+   "evidence": [
+    "deep-impedance-audit/pass4/final-*.log",
+    "deep-impedance-audit/pass4/PASS4-RECEIPT.json"
+   ],
+   "status": "Verified in this session. Not a release build, not a GUI run, not a hardware run.",
+   "severity": "Positive result, with the reproducibility caveat in F24."
+  },
+  {
+   "id": "F29",
+   "repo": "Protocentral/MAX30001 Arduino library; dyarleniber AD5933",
+   "claim": "AVR compile-only checks (F25) and OpenView tests and build (F28) are the only executed builds in pass 4. Zephyr, Android, MATLAB, and AVR runtime were not run.",
+   "levels": [
+    "T"
+   ],
+   "evidence": [
+    "deep-impedance-audit/pass4/PASS4-RECEIPT.json"
+   ],
+   "status": "Zephyr: not attempted (multi-GB SDK on a 2 GB machine). Android: not built (SDK not installed). MATLAB: no licence in this sandbox. AVR runtime and hardware: not authorised.",
+   "severity": "Coverage gap, not a defect."
+  }
+ ],
+ "open_items": [
+  "F05 MAX30009 BIOZ_ADC_OSR bit table: the register map and the table were not in the fetched chunks (chunk 10 has no headers). Needs the full PDF register section.",
+  "F20 intended HR/RR contract for OpenView packet type 2 (maintainer question; no contact authorised).",
+  "F22 hardware FIFO semantics (count in samples or bytes) on a real MAX30009; needs a bench (not authorised).",
+  "F01, F08, F09 hardware reachability (not authorised).",
+  "F24/F26 upstream-level fixes: pubspec.lock and assets missing from the collection; melazab licence unstated (maintainer or repo owner question)."
+ ]
+}

@@ -1,0 +1,131 @@
+import { createLogger } from '../logger.js';
+import type { BodyComposition } from '../interfaces/scale-adapter.js';
+import type { Exporter, ExportContext, ExportResult } from '../interfaces/exporter.js';
+import type { ExporterSchema } from '../interfaces/exporter-schema.js';
+import type { NtfyConfig } from './config.js';
+import { formatNotification } from './notification-message.js';
+import { withRetry, httpError, httpHealthcheck } from '../utils/retry.js';
+
+const log = createLogger('Ntfy');
+
+export const ntfySchema: ExporterSchema = {
+  name: 'ntfy',
+  displayName: 'Ntfy',
+  description: 'Send push notifications via ntfy.sh or self-hosted ntfy server',
+  fields: [
+    {
+      key: 'topic',
+      label: 'Topic',
+      type: 'string',
+      required: true,
+      description:
+        'Ntfy topic name. On ntfy.sh anyone who knows the topic can read it, so use a long ' +
+        'random name',
+    },
+    {
+      key: 'url',
+      label: 'Server URL',
+      type: 'string',
+      required: false,
+      default: 'https://ntfy.sh',
+    },
+    { key: 'title', label: 'Title', type: 'string', required: false, default: 'Scale Measurement' },
+    {
+      key: 'priority',
+      label: 'Priority',
+      type: 'select',
+      required: false,
+      default: 3,
+      choices: [
+        { label: '1 (Min)', value: 1 },
+        { label: '2 (Low)', value: 2 },
+        { label: '3 (Default)', value: 3 },
+        { label: '4 (High)', value: 4 },
+      ],
+    },
+    { key: 'token', label: 'Bearer Token', type: 'password', required: false },
+    { key: 'username', label: 'Username', type: 'string', required: false },
+    { key: 'password', label: 'Password', type: 'password', required: false },
+    {
+      key: 'report_exports',
+      label: 'Report export results (waits for the other exporters)',
+      type: 'boolean',
+      required: false,
+      default: false,
+      description: 'Wait for the other exporters and append their results to the message',
+    },
+  ],
+  supportsGlobal: true,
+  supportsPerUser: false,
+};
+
+/**
+ * Make a header value safe to hand to fetch.
+ *
+ * Node's fetch (undici) rejects any header value that is not a ByteString, so
+ * a title like "Vážení" or one with an emoji threw a TypeError before the
+ * request left, on every attempt. Latin-1 text passes that check but is sent
+ * as raw ISO-8859-1 bytes, which ntfy reads as broken UTF-8. ntfy documents
+ * RFC 2047 encoded words as the way to send a UTF-8 header
+ * (https://docs.ntfy.sh/publish/, "Message title"), so anything outside
+ * printable ASCII goes out as one base64 encoded word. Plain ASCII is left
+ * alone so existing titles reach older servers exactly as before.
+ */
+function encodeHeaderValue(value: string): string {
+  if (/^[\x20-\x7e]*$/.test(value)) return value;
+  return `=?UTF-8?B?${Buffer.from(value, 'utf8').toString('base64')}?=`;
+}
+
+export class NtfyExporter implements Exporter {
+  readonly name = 'ntfy';
+  readonly reportsExports: boolean;
+  private readonly config: NtfyConfig;
+
+  constructor(config: NtfyConfig) {
+    this.config = config;
+    this.reportsExports = config.reportExports;
+  }
+
+  async healthcheck(): Promise<ExportResult> {
+    const healthUrl = `${this.config.url.replace(/\/+$/, '')}/v1/health`;
+    return httpHealthcheck(() => fetch(healthUrl, { signal: AbortSignal.timeout(5000) }));
+  }
+
+  async export(data: BodyComposition, context?: ExportContext): Promise<ExportResult> {
+    const { url, topic, title, priority, token, username, password } = this.config;
+    const targetUrl = `${url.replace(/\/+$/, '')}/${topic}`;
+
+    const headers: Record<string, string> = {
+      Title: encodeHeaderValue(title),
+      Priority: String(priority),
+      Tags: 'scales',
+    };
+
+    if (token) {
+      headers['Authorization'] = `Bearer ${token}`;
+    } else if (username && password) {
+      headers['Authorization'] = `Basic ${btoa(username + ':' + password)}`;
+    }
+
+    const body = formatNotification(data, context);
+
+    return withRetry(
+      async () => {
+        const response = await fetch(targetUrl, {
+          method: 'POST',
+          headers,
+          body,
+          signal: AbortSignal.timeout(10_000),
+        });
+
+        if (!response.ok) {
+          throw httpError(response.status);
+        }
+
+        log.info('Ntfy notification sent.');
+        return { success: true };
+      },
+      { log, label: 'ntfy notification' },
+    );
+  }
+}

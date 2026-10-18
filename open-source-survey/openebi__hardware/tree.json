@@ -1,0 +1,102 @@
+{
+  "sha": "eea2bfcff9cc57593f408999d6d2caf6c62d8968",
+  "url": "https://api.github.com/repos/openebi/hardware/git/trees/eea2bfcff9cc57593f408999d6d2caf6c62d8968",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a23f1c03c2bc117ebeadcca11d18c88f6e88769",
+      "size": 50,
+      "url": "https://api.github.com/repos/openebi/hardware/git/blobs/9a23f1c03c2bc117ebeadcca11d18c88f6e88769"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f881329332302adc5f10e46d4c9de8ac0ca94fc4",
+      "size": 2766,
+      "url": "https://api.github.com/repos/openebi/hardware/git/blobs/f881329332302adc5f10e46d4c9de8ac0ca94fc4"
+    },
+    {
+      "path": "exports",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a5c459117670897188f004476a78ef95f3476e3",
+      "url": "https://api.github.com/repos/openebi/hardware/git/trees/6a5c459117670897188f004476a78ef95f3476e3"
+    },
+    {
+      "path": "exports/assembled_openebi_board.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "427a907d96d9e7882abbf22432a28938d172840d",
+      "size": 979078,
+      "url": "https://api.github.com/repos/openebi/hardware/git/blobs/427a907d96d9e7882abbf22432a28938d172840d"
+    },
+    {
+      "path": "exports/assembly-bottom.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c9761554a74e4e9958fcd02df7cafbcc722f02a",
+      "size": 2559,
+      "url": "https://api.github.com/repos/openebi/hardware/git/blobs/1c9761554a74e4e9958fcd02df7cafbcc722f02a"
+    },
+    {
+      "path": "exports/assembly-top.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50958ce4e05cd8ed66e0ac6de8cd1ff430f4c626",
+      "size": 20357,
+      "url": "https://api.github.com/repos/openebi/hardware/git/blobs/50958ce4e05cd8ed66e0ac6de8cd1ff430f4c626"
+    },
+    {
+      "path": "exports/bill-of-materials.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f144fc58ebec37178ccc81017e4c00be30a0c73",
+      "size": 9513,
+      "url": "https://api.github.com/repos/openebi/hardware/git/blobs/0f144fc58ebec37178ccc81017e4c00be30a0c73"
+    },
+    {
+      "path": "exports/board-image.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1bc96e60fe98113b961e0dfe41b2cfc5853c462",
+      "size": 1234762,
+      "url": "https://api.github.com/repos/openebi/hardware/git/blobs/c1bc96e60fe98113b961e0dfe41b2cfc5853c462"
+    },
+    {
+      "path": "exports/schematics.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afc62664f560f4026f7374b685041b61fad99940",
+      "size": 79970,
+      "url": "https://api.github.com/repos/openebi/hardware/git/blobs/afc62664f560f4026f7374b685041b61fad99940"
+    },
+    {
+      "path": "openebi.brd",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a72de1f09d103d7d059ed80f3781c0251292ebe6",
+      "size": 46781,
+      "url": "https://api.github.com/repos/openebi/hardware/git/blobs/a72de1f09d103d7d059ed80f3781c0251292ebe6"
+    },
+    {
+      "path": "openebi.cam",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91de96bfe179d640088298fd9809593a61288f22",
+      "size": 10443,
+      "url": "https://api.github.com/repos/openebi/hardware/git/blobs/91de96bfe179d640088298fd9809593a61288f22"
+    },
+    {
+      "path": "openebi.sch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e89bbab7bea9fb41e2115857a7e0cc23b57610af",
+      "size": 300447,
+      "url": "https://api.github.com/repos/openebi/hardware/git/blobs/e89bbab7bea9fb41e2115857a7e0cc23b57610af"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,929 @@
+{
+  "sha": "91fc24b3cb0bb7b980d46821459005958aca3e42",
+  "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/trees/91fc24b3cb0bb7b980d46821459005958aca3e42",
+  "tree": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "size": 35149,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb9bcce66a278e771776a5792ce71257144a8ef2",
+      "size": 3804,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/cb9bcce66a278e771776a5792ce71257144a8ef2"
+    },
+    {
+      "path": "figures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "04cdb9a7da37f501c582e1e497e51ed4186d9b97",
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/trees/04cdb9a7da37f501c582e1e497e51ed4186d9b97"
+    },
+    {
+      "path": "figures/delta.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "214ac823c591201e17e25433804f33f708724a4f",
+      "size": 1255863,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/214ac823c591201e17e25433804f33f708724a4f"
+    },
+    {
+      "path": "figures/delta_old.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db39dd703a12199739ca0cc89460366157ba9e0a",
+      "size": 636383,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/db39dd703a12199739ca0cc89460366157ba9e0a"
+    },
+    {
+      "path": "figures/grid.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1099f483a117085814427c64e205ccbe9dada138",
+      "size": 2314912,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/1099f483a117085814427c64e205ccbe9dada138"
+    },
+    {
+      "path": "figures/grid_old.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "102920904a9fa38301b0acbe97d3b313458ebd20",
+      "size": 797223,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/102920904a9fa38301b0acbe97d3b313458ebd20"
+    },
+    {
+      "path": "figures/model.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62aea37db0946c4f05cd4d3e13d36a2531d4bd54",
+      "size": 2117967,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/62aea37db0946c4f05cd4d3e13d36a2531d4bd54"
+    },
+    {
+      "path": "v1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9806734803e279ebadc5709838f38120f36d1a26",
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/trees/9806734803e279ebadc5709838f38120f36d1a26"
+    },
+    {
+      "path": "v1.0/find_delay_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47d0d5f0c765b1e862de173cea41b89dd02b5089",
+      "size": 958,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/47d0d5f0c765b1e862de173cea41b89dd02b5089"
+    },
+    {
+      "path": "v1.0/imp_image_gen_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bf465fea3ec009dc905a5d6918dc50f9a046515",
+      "size": 1786,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/4bf465fea3ec009dc905a5d6918dc50f9a046515"
+    },
+    {
+      "path": "v1.0/importfile_ltspice_header.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fca4ef992b122f83ec3ce80590f61b620b1c33f",
+      "size": 2016,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/6fca4ef992b122f83ec3ce80590f61b620b1c33f"
+    },
+    {
+      "path": "v1.0/importfile_ltspice_raw_fast_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9133157800f0b677490a7e0ce2db20d3b17bc50",
+      "size": 2164,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/e9133157800f0b677490a7e0ce2db20d3b17bc50"
+    },
+    {
+      "path": "v1.0/ltspice_3d_model_dc_Y.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c79cc5e9c4128c0d95ebd743309353847e6c75d6",
+      "size": 8693,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/c79cc5e9c4128c0d95ebd743309353847e6c75d6"
+    },
+    {
+      "path": "v1.0/ltspice_3d_model_dc_spacing.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1780feb4037189eb7457b0bf53832ce9eedbbde9",
+      "size": 8565,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/1780feb4037189eb7457b0bf53832ce9eedbbde9"
+    },
+    {
+      "path": "v1.0/ltspice_3d_model_deltaR1.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1847026c7bc6028ff442cc3148c0b0100fb724be",
+      "size": 8246,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/1847026c7bc6028ff442cc3148c0b0100fb724be"
+    },
+    {
+      "path": "v1.0/ltspice_3d_model_deltaR2.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "763a3da47c85bd84775e7238b4a80df2f2c8ea17",
+      "size": 8571,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/763a3da47c85bd84775e7238b4a80df2f2c8ea17"
+    },
+    {
+      "path": "v1.0/ltspice_3d_model_freq.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2f95cad224542ca383dcd3a4f3953dfbb8195bb",
+      "size": 14939,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/c2f95cad224542ca383dcd3a4f3953dfbb8195bb"
+    },
+    {
+      "path": "v1.0/ltspice_3d_model_pene.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "545feed7d5bc99d36e83cd2037cf9c1260e68324",
+      "size": 8738,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/545feed7d5bc99d36e83cd2037cf9c1260e68324"
+    },
+    {
+      "path": "v1.0/ltspice_3d_model_ptt.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eea5e32b2c2c4bebcc43b7015535cd20d7620f20",
+      "size": 10550,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/eea5e32b2c2c4bebcc43b7015535cd20d7620f20"
+    },
+    {
+      "path": "v1.0/read_spice_out_fast_gnd_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93009d5a194bf7f69c9f20923afb630a49d447fb",
+      "size": 4187,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/93009d5a194bf7f69c9f20923afb630a49d447fb"
+    },
+    {
+      "path": "v1.0/sinefit_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbd5c4c8aa78b1ff809e4af2574382760991768d",
+      "size": 1106,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/cbd5c4c8aa78b1ff809e4af2574382760991768d"
+    },
+    {
+      "path": "v1.0/spice_netlist_3d_gen_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01d01ea3b02eaa639ab02828bfd2c6d8efe13ba2",
+      "size": 25985,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/01d01ea3b02eaa639ab02828bfd2c6d8efe13ba2"
+    },
+    {
+      "path": "v1.0/spice_netlist_3d_plot_ac_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "186105c10674a164958e0705f68fd5c476a7086e",
+      "size": 9707,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/186105c10674a164958e0705f68fd5c476a7086e"
+    },
+    {
+      "path": "v1.0/spice_netlist_3d_plot_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c8442fcd88e0b9517372c1d3a557d3cfb133f0d",
+      "size": 23223,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/7c8442fcd88e0b9517372c1d3a557d3cfb133f0d"
+    },
+    {
+      "path": "v1.0/spice_netlist_3d_pp_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ddc7403daf5d2ebee190d1cc9257f63dfd81dfd",
+      "size": 8618,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/7ddc7403daf5d2ebee190d1cc9257f63dfd81dfd"
+    },
+    {
+      "path": "v1.0/spice_netlist_3d_run_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d20655f1d46356e7055a74ef07b40b786bfb7d25",
+      "size": 3073,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/d20655f1d46356e7055a74ef07b40b786bfb7d25"
+    },
+    {
+      "path": "v1.0/xyz2node_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74a97d17e7783d2d67767a1984d595f6799ad848",
+      "size": 777,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/74a97d17e7783d2d67767a1984d595f6799ad848"
+    },
+    {
+      "path": "v1.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad2c9162a6d47f0ac9fcd57a6cc00c41927fb519",
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/trees/ad2c9162a6d47f0ac9fcd57a6cc00c41927fb519"
+    },
+    {
+      "path": "v1.1/find_delay_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39f74e528019e2c73186a807a78c187b4fe185e2",
+      "size": 1096,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/39f74e528019e2c73186a807a78c187b4fe185e2"
+    },
+    {
+      "path": "v1.1/imp_image_gen_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bf465fea3ec009dc905a5d6918dc50f9a046515",
+      "size": 1786,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/4bf465fea3ec009dc905a5d6918dc50f9a046515"
+    },
+    {
+      "path": "v1.1/importfile_ltspice_header.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fca4ef992b122f83ec3ce80590f61b620b1c33f",
+      "size": 2016,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/6fca4ef992b122f83ec3ce80590f61b620b1c33f"
+    },
+    {
+      "path": "v1.1/importfile_ltspice_raw_fast_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9133157800f0b677490a7e0ce2db20d3b17bc50",
+      "size": 2164,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/e9133157800f0b677490a7e0ce2db20d3b17bc50"
+    },
+    {
+      "path": "v1.1/ltspice_3d_model_example.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf945dc418d522d6cfbfa4c3219bdc54545ea64e",
+      "size": 8597,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/bf945dc418d522d6cfbfa4c3219bdc54545ea64e"
+    },
+    {
+      "path": "v1.1/read_spice_out_fast_gnd_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93009d5a194bf7f69c9f20923afb630a49d447fb",
+      "size": 4187,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/93009d5a194bf7f69c9f20923afb630a49d447fb"
+    },
+    {
+      "path": "v1.1/sinefit_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbd5c4c8aa78b1ff809e4af2574382760991768d",
+      "size": 1106,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/cbd5c4c8aa78b1ff809e4af2574382760991768d"
+    },
+    {
+      "path": "v1.1/spice_netlist_3d_gen_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f86cdc40ae9b4ac2a24f5aa83e657102972bbc7",
+      "size": 27563,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/4f86cdc40ae9b4ac2a24f5aa83e657102972bbc7"
+    },
+    {
+      "path": "v1.1/spice_netlist_3d_plot_ac_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06708bdca6d427a8352e85cdc437e9ba8ff52357",
+      "size": 9747,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/06708bdca6d427a8352e85cdc437e9ba8ff52357"
+    },
+    {
+      "path": "v1.1/spice_netlist_3d_plot_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99c2f13fb5b62ef89f768c30d8c8f0e248c874c7",
+      "size": 23668,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/99c2f13fb5b62ef89f768c30d8c8f0e248c874c7"
+    },
+    {
+      "path": "v1.1/spice_netlist_3d_pp_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93180ad42c0595334e9816cbf6334a98a9f5665e",
+      "size": 9263,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/93180ad42c0595334e9816cbf6334a98a9f5665e"
+    },
+    {
+      "path": "v1.1/spice_netlist_3d_run_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d024a69a6ea75640970b7097d2fad8fce99e10d6",
+      "size": 3342,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/d024a69a6ea75640970b7097d2fad8fce99e10d6"
+    },
+    {
+      "path": "v1.1/xyz2node_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74a97d17e7783d2d67767a1984d595f6799ad848",
+      "size": 777,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/74a97d17e7783d2d67767a1984d595f6799ad848"
+    },
+    {
+      "path": "v2.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7e94a2f5d23ded13322b9c666011cd3e0713434",
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/trees/b7e94a2f5d23ded13322b9c666011cd3e0713434"
+    },
+    {
+      "path": "v2.0/Pulse_spice.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab540f1804cdd34d736ade72622dc059c239f7d5",
+      "size": 2865,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/ab540f1804cdd34d736ade72622dc059c239f7d5"
+    },
+    {
+      "path": "v2.0/V_node.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "v2.0/Vs_arrow_plot_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cbb74d32abb0dd19234ddaa5529e2353e3981a0",
+      "size": 776,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/8cbb74d32abb0dd19234ddaa5529e2353e3981a0"
+    },
+    {
+      "path": "v2.0/Wrist_model_example.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bb5e3540cc66a108c9a34439cd310712739c349",
+      "size": 4807,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/0bb5e3540cc66a108c9a34439cd310712739c349"
+    },
+    {
+      "path": "v2.0/cole_v4.mat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec669fcc80ac1ed919b51f923697faf0688492e9",
+      "size": 400449,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/ec669fcc80ac1ed919b51f923697faf0688492e9"
+    },
+    {
+      "path": "v2.0/current_vec_calc_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77fb5dcadb74c957246149098e3fd9daf8ad4e93",
+      "size": 15331,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/77fb5dcadb74c957246149098e3fd9daf8ad4e93"
+    },
+    {
+      "path": "v2.0/data_out.mat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e54c359eb62ed4b23ed365fceb60dc9f53026218",
+      "size": 1450,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/e54c359eb62ed4b23ed365fceb60dc9f53026218"
+    },
+    {
+      "path": "v2.0/eit_elec_array_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2328ab23f0ade2458f871131d38a0d2504fef5b",
+      "size": 7998,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/b2328ab23f0ade2458f871131d38a0d2504fef5b"
+    },
+    {
+      "path": "v2.0/find_delay_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39f74e528019e2c73186a807a78c187b4fe185e2",
+      "size": 1096,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/39f74e528019e2c73186a807a78c187b4fe185e2"
+    },
+    {
+      "path": "v2.0/grid_gen_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c0a77ce0e38ab253703016277d8d4010e15b565",
+      "size": 1974,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/9c0a77ce0e38ab253703016277d8d4010e15b565"
+    },
+    {
+      "path": "v2.0/img_gen_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e93d369e2ed21e2893d59d08b4c4d2b44ed2616",
+      "size": 5031,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/7e93d369e2ed21e2893d59d08b4c4d2b44ed2616"
+    },
+    {
+      "path": "v2.0/img_update_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cee8711ca188d7964f2fc2dd85a1edf4760f145",
+      "size": 714,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/0cee8711ca188d7964f2fc2dd85a1edf4760f145"
+    },
+    {
+      "path": "v2.0/importfile_ltspice_header.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fca4ef992b122f83ec3ce80590f61b620b1c33f",
+      "size": 2016,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/6fca4ef992b122f83ec3ce80590f61b620b1c33f"
+    },
+    {
+      "path": "v2.0/importfile_ltspice_raw_fast_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9133157800f0b677490a7e0ce2db20d3b17bc50",
+      "size": 2164,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/e9133157800f0b677490a7e0ce2db20d3b17bc50"
+    },
+    {
+      "path": "v2.0/mesh_3d_plot_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6ea8eee673d0dd4cda103599fc253296933dfd4",
+      "size": 1718,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/c6ea8eee673d0dd4cda103599fc253296933dfd4"
+    },
+    {
+      "path": "v2.0/mesh_plot_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12dbb80ec80d21114b51c0fe2904db4813d0ca80",
+      "size": 3033,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/12dbb80ec80d21114b51c0fe2904db4813d0ca80"
+    },
+    {
+      "path": "v2.0/myupdatefcn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b9fddb5cd544d7c71afa00a0d411f2cb7771e05",
+      "size": 246,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/2b9fddb5cd544d7c71afa00a0d411f2cb7771e05"
+    },
+    {
+      "path": "v2.0/net_plot_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fc583770b083a03ac5d929f4d9fbf2253765974",
+      "size": 612,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/5fc583770b083a03ac5d929f4d9fbf2253765974"
+    },
+    {
+      "path": "v2.0/netlist",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db11607aa8a61e4ca19d0106f38b5c7192f649b8",
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/trees/db11607aa8a61e4ca19d0106f38b5c7192f649b8"
+    },
+    {
+      "path": "v2.0/netlist/Example",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9eb935aa3db6e2b70a09780875603ccad632e393",
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/trees/9eb935aa3db6e2b70a09780875603ccad632e393"
+    },
+    {
+      "path": "v2.0/netlist/Example/netlist.cir",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "467862534a3efc68be52baf5466f072c13f77ad1",
+      "size": 8991621,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/467862534a3efc68be52baf5466f072c13f77ad1"
+    },
+    {
+      "path": "v2.0/netlist/Example/netlist.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2002d695850f57ba19b68c3d450c9f4cf58c4720",
+      "size": 46,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/2002d695850f57ba19b68c3d450c9f4cf58c4720"
+    },
+    {
+      "path": "v2.0/netlist/Example/netlist.mat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2881909dfd8d4a6457db89378edf957798d8b35",
+      "size": 9777612,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/a2881909dfd8d4a6457db89378edf957798d8b35"
+    },
+    {
+      "path": "v2.0/netlist/Example/netlist.raw",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "v2.0/plot_3d_grid_sides_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c29a7e179411d3005130428e7558d1d01275f92d",
+      "size": 3446,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/c29a7e179411d3005130428e7558d1d01275f92d"
+    },
+    {
+      "path": "v2.0/plot_core_3d_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a40bc2b755b738a97d946ad2e110e3c793e2d763",
+      "size": 9658,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/a40bc2b755b738a97d946ad2e110e3c793e2d763"
+    },
+    {
+      "path": "v2.0/plot_freq_compact_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "484172f48e478854937a8d74d3a34a8d711c7101",
+      "size": 5371,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/484172f48e478854937a8d74d3a34a8d711c7101"
+    },
+    {
+      "path": "v2.0/plot_freq_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a188d7e8b6d726adbf79d5b06fc82c49aea467b4",
+      "size": 3523,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/a188d7e8b6d726adbf79d5b06fc82c49aea467b4"
+    },
+    {
+      "path": "v2.0/plot_grid_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d7719bf1ce914fec4c15734681d31439bb92e49",
+      "size": 175,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/7d7719bf1ce914fec4c15734681d31439bb92e49"
+    },
+    {
+      "path": "v2.0/plot_img_arr_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d2b4ba6b01926424cd0e2231d67553a265bc9bb",
+      "size": 1076,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/2d2b4ba6b01926424cd0e2231d67553a265bc9bb"
+    },
+    {
+      "path": "v2.0/plot_img_filt_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "570c682857c331f398bb5938b2c340a2f337ba08",
+      "size": 4699,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/570c682857c331f398bb5938b2c340a2f337ba08"
+    },
+    {
+      "path": "v2.0/plot_img_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff2a3d61352ca29fa09cc59657eda8b7e9386495",
+      "size": 2063,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/ff2a3d61352ca29fa09cc59657eda8b7e9386495"
+    },
+    {
+      "path": "v2.0/plot_inv_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e13b8a6fd96f7f09d5a8f9cecb9f0c50809534f7",
+      "size": 4646,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/e13b8a6fd96f7f09d5a8f9cecb9f0c50809534f7"
+    },
+    {
+      "path": "v2.0/plot_ptt_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0f17c082a69f9ff753790c77b73379875302f16",
+      "size": 2414,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/f0f17c082a69f9ff753790c77b73379875302f16"
+    },
+    {
+      "path": "v2.0/plot_pulse_time_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a12221d1df963664169ff0b28fb27e1309657af9",
+      "size": 1777,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/a12221d1df963664169ff0b28fb27e1309657af9"
+    },
+    {
+      "path": "v2.0/plot_pulse_time_real_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01178349231fe3654daca409ee2777f2668d25ca",
+      "size": 1409,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/01178349231fe3654daca409ee2777f2668d25ca"
+    },
+    {
+      "path": "v2.0/plot_single_iamp3d_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d541eff6be3604eec79ed33f52ba388ff0f6b651",
+      "size": 5070,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/d541eff6be3604eec79ed33f52ba388ff0f6b651"
+    },
+    {
+      "path": "v2.0/plot_single_img3d_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9826846a19bcefe3f91e2b8810b7a7f584a3333",
+      "size": 5184,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/c9826846a19bcefe3f91e2b8810b7a7f584a3333"
+    },
+    {
+      "path": "v2.0/plot_single_img_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6497233b5215f27ba19d2296ac5b86e7f3d52232",
+      "size": 4091,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/6497233b5215f27ba19d2296ac5b86e7f3d52232"
+    },
+    {
+      "path": "v2.0/plot_single_v3d_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cd27a2b381d99a3903246b1cda8ca66150577a6",
+      "size": 5052,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/5cd27a2b381d99a3903246b1cda8ca66150577a6"
+    },
+    {
+      "path": "v2.0/plot_skin_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3350ec0c65134865b1f617e8f63a854817b25807",
+      "size": 2526,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/3350ec0c65134865b1f617e8f63a854817b25807"
+    },
+    {
+      "path": "v2.0/plot_spice_arr_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adaca72a2d5c97a551883310e1802940ff532f3c",
+      "size": 2757,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/adaca72a2d5c97a551883310e1802940ff532f3c"
+    },
+    {
+      "path": "v2.0/plot_spice_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a16c326fafbd8380da6d0f21098e91320b90e898",
+      "size": 7155,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/a16c326fafbd8380da6d0f21098e91320b90e898"
+    },
+    {
+      "path": "v2.0/plot_spice_pulse_amp_arr_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc92061ad07d0221ea1f884e1e875821da7cd272",
+      "size": 2600,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/dc92061ad07d0221ea1f884e1e875821da7cd272"
+    },
+    {
+      "path": "v2.0/plot_spice_pulse_arr_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cb77ca982b2803c7f7dcc40dc5d3e8aebe0268f",
+      "size": 3545,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/9cb77ca982b2803c7f7dcc40dc5d3e8aebe0268f"
+    },
+    {
+      "path": "v2.0/plot_spice_pulse_v_i_2d_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe9959c8cffb4ad92ddf40e52314ded6dec5affc",
+      "size": 3753,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/fe9959c8cffb4ad92ddf40e52314ded6dec5affc"
+    },
+    {
+      "path": "v2.0/plot_spice_v_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "825d010c7f937c0594867223dabef3dc2ad5cd07",
+      "size": 1302,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/825d010c7f937c0594867223dabef3dc2ad5cd07"
+    },
+    {
+      "path": "v2.0/plot_spice_v_i_2d_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "866bbf6926ef08b0b09f73fe97390a65411a9ac5",
+      "size": 1462,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/866bbf6926ef08b0b09f73fe97390a65411a9ac5"
+    },
+    {
+      "path": "v2.0/plot_spice_v_i_3d_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b580fb1c2d951bf39d79dfada2fca9322a75a822",
+      "size": 2300,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/b580fb1c2d951bf39d79dfada2fca9322a75a822"
+    },
+    {
+      "path": "v2.0/plot_spice_v_i_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76648496deb21249c0d84a5961fb2d33338e85ee",
+      "size": 1304,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/76648496deb21249c0d84a5961fb2d33338e85ee"
+    },
+    {
+      "path": "v2.0/plot_v_vector_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13a9aa09c5f7b1a69e10c46a5754b9401c076436",
+      "size": 1456,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/13a9aa09c5f7b1a69e10c46a5754b9401c076436"
+    },
+    {
+      "path": "v2.0/plot_velec_filt_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c6f2235068cd36c943935b5d13469aa5713dc1d",
+      "size": 2582,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/7c6f2235068cd36c943935b5d13469aa5713dc1d"
+    },
+    {
+      "path": "v2.0/plot_velec_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "696e2ed6c4c81d9e4dec540cc8e768c127041247",
+      "size": 1057,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/696e2ed6c4c81d9e4dec540cc8e768c127041247"
+    },
+    {
+      "path": "v2.0/pulse_art_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd94492600c785e87e2a056d459de0ad6d812d6e",
+      "size": 1727,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/fd94492600c785e87e2a056d459de0ad6d812d6e"
+    },
+    {
+      "path": "v2.0/pulse_elec_array_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14097417b81ed2e4c673f214f75c619a7b609c34",
+      "size": 1812,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/14097417b81ed2e4c673f214f75c619a7b609c34"
+    },
+    {
+      "path": "v2.0/pulse_elec_array_single_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00157092750a3dc0b85a088cb9d4df1347bfe21f",
+      "size": 1353,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/00157092750a3dc0b85a088cb9d4df1347bfe21f"
+    },
+    {
+      "path": "v2.0/pulse_spice_3D_test.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12e05a7f18caab8932662817f6190e57493560a5",
+      "size": 7369,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/12e05a7f18caab8932662817f6190e57493560a5"
+    },
+    {
+      "path": "v2.0/rcr_model.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "366dd9bfce33414ccaec80d35f668ba7a085fd58",
+      "size": 739,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/366dd9bfce33414ccaec80d35f668ba7a085fd58"
+    },
+    {
+      "path": "v2.0/read_spice_out_fast_gnd_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d77cdab9368c7b4cfa7daff451b82a9d9e2c7bb",
+      "size": 18368,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/8d77cdab9368c7b4cfa7daff451b82a9d9e2c7bb"
+    },
+    {
+      "path": "v2.0/readme.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa9e1ea569b1ad8f8714324032e345cc89c8dfca",
+      "size": 2158,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/aa9e1ea569b1ad8f8714324032e345cc89c8dfca"
+    },
+    {
+      "path": "v2.0/rgb_edit_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f09dcc3e2d2d911d74d272ee323f5cd5fd62e4a0",
+      "size": 434,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/f09dcc3e2d2d911d74d272ee323f5cd5fd62e4a0"
+    },
+    {
+      "path": "v2.0/run_sim_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a64ed53e6181b3eaf3f91d29093697a4f1a274e1",
+      "size": 7720,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/a64ed53e6181b3eaf3f91d29093697a4f1a274e1"
+    },
+    {
+      "path": "v2.0/sens_calc_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccc770ad75a785c0865091a16123403e33cc35c9",
+      "size": 668,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/ccc770ad75a785c0865091a16123403e33cc35c9"
+    },
+    {
+      "path": "v2.0/shift_elec_dia_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e64424c23edd904d664770ac8b30152935222d9a",
+      "size": 276,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/e64424c23edd904d664770ac8b30152935222d9a"
+    },
+    {
+      "path": "v2.0/sinefit_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbd5c4c8aa78b1ff809e4af2574382760991768d",
+      "size": 1106,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/cbd5c4c8aa78b1ff809e4af2574382760991768d"
+    },
+    {
+      "path": "v2.0/spice_netlist_3d_gen_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e5a97aa82288bbd5b83574546f86b10523005a3",
+      "size": 37656,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/4e5a97aa82288bbd5b83574546f86b10523005a3"
+    },
+    {
+      "path": "v2.0/spice_netlist_3d_plot_ac_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddf2278ed63269cef7738dcad84ebf5cafdffa6a",
+      "size": 9755,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/ddf2278ed63269cef7738dcad84ebf5cafdffa6a"
+    },
+    {
+      "path": "v2.0/spice_netlist_3d_plot_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b383fed3114d3125b20a601ab390bcbfdc79ca9",
+      "size": 25532,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/0b383fed3114d3125b20a601ab390bcbfdc79ca9"
+    },
+    {
+      "path": "v2.0/spice_netlist_3d_pp_elec_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33510b5cd90ff3bd07e25493f8f84613aa7a4561",
+      "size": 3265,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/33510b5cd90ff3bd07e25493f8f84613aa7a4561"
+    },
+    {
+      "path": "v2.0/spice_netlist_3d_pp_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eae028814b5279205bf344b2bb1f752ae8dce31f",
+      "size": 8207,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/eae028814b5279205bf344b2bb1f752ae8dce31f"
+    },
+    {
+      "path": "v2.0/spice_netlist_3d_run_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3412d554bad0c60edfa3a6070d9c2d4bc926f520",
+      "size": 3126,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/3412d554bad0c60edfa3a6070d9c2d4bc926f520"
+    },
+    {
+      "path": "v2.0/startup.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d232d178a9b1568924d6d89fc2b99ab7fdee4b6b",
+      "size": 42,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/d232d178a9b1568924d6d89fc2b99ab7fdee4b6b"
+    },
+    {
+      "path": "v2.0/xyz2node_fn.m",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74a97d17e7783d2d67767a1984d595f6799ad848",
+      "size": 777,
+      "url": "https://api.github.com/repos/TAMU-ESP/BioZPulse-Sim-Platform/git/blobs/74a97d17e7783d2d67767a1984d595f6799ad848"
+    }
+  ],
+  "truncated": false
+}

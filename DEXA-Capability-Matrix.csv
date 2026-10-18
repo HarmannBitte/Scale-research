@@ -1,0 +1,19 @@
+Capability,Reference/acquisition,Reusable open route,Evidence strength,Remaining work / non-equivalence
+Body weight,Calibrated scale,Load cells + local logging; existing local scale integrations,Established measurement,"Traceable calibration, load position, drift, resolution vs accuracy"
+Total fat and FFM,Specified 4C or DXA comparator,NHANES-trained anthropometry/BIS; `bodycomp` regressor,Research/proxy,"External paired testing; hydration, population shift; not direct tissue imaging"
+Regional fat and lean,Whole-body DXA; anatomical MRI/CT,Segmental impedance + shape; image segmentation when real scans exist,Imaging strong; home inference proxy,Region alignment; independent limb validation; no presumed equivalence
+Appendicular lean mass/ALMI,DXA appendicular lean; MRI for actual muscle,NHANES limb labels; `bodycomp`; segmental impedance,Research/proxy,Correct target naming; external validation; strength/function separate
+Left/right asymmetry,Standardized DXA/MRI or ultrasound,Bilateral ultrasound; segmental raw impedance; shape,Research,Positioning/electrode asymmetry and segmentation error may mimic biology
+"Waist, circumference, surface volume",Standardized anthropometry/validated 3D scan,Tape; camera/depth capture; mesh processing,Direct geometry + research automation,"Clothing, pose, camera scale, occlusion, breathing and tracking repeatability"
+VAT and SAT,Defined abdominal MRI/CT region,FatSegNet; Comp2Comp; BodyComposition; licensed TotalSegmentator tasks,Established imaging + research software,Real internal imaging required; ROI/protocol validation and model rights
+Local fat-layer thickness,Standardized ultrasound,Image export + manual/open analysis,Established technique,"Pressure, landmark, fascia identification; local layer ≠ whole-body FM"
+Local muscle ACSA/thickness,Ultrasound/MRI,DeepACSA; DL_Track_US; manual 3D Slicer analysis,Published research,Operator/acquisition precision; no automatic whole-body mass conversion
+Muscle architecture,Longitudinal ultrasound,DL_Track_US,Research,"Probe angle, fascicle extrapolation, scanner/domain differences"
+BMC,Appropriate DXA,Import/report extraction; CT bone analysis is a different construct,Gap for home equivalent,Impedance/camera “bone mass” is not measured mineral
+Diagnostic hip/spine aBMD,Dedicated clinical DXA,Preserve clinical results; Ogo for properly calibrated CT research,Clinical modality; open CT research,"Site-specific validation, calibration, reference norms, clinical interpretation"
+Bone volumetric density/geometry,QCT/pQCT,"Ogo, segmentation/FEA toolchains",Established modality + research implementation,"Ionizing acquisition, protocol/phantom dependence; not home screening"
+Ultrasound bone-risk alternatives,Validated heel QUS / REMS equipment,No complete unrestricted substitute verified,Commercial clinical/research routes,Generic ultrasound images or RF access alone do not recreate a validated model
+"TBS, VFA, fracture adjuncts",Appropriate spine DXA/lateral imaging,Research analysis possible; no validated open equivalent established here,Gap for interchangeable clinical output,"Proprietary models, acquisition and interpretation; not supplied by a scale"
+Longitudinal change,Local precision + suitable repeated reference,Open QC/LSC/trend software,Established statistics,Need actual repeated acquisitions; cross-sectional correlation insufficient
+Images/raw ownership,Scanner archive + export,DICOM/NIfTI tools; PDF/CSV ingestion,"Technically feasible, access variable",DICOM/PDF export may not contain dual-energy detector data or analysis archive
+Cardiac/nerve/metabolic scores,Separate reference instruments,Earlier hardware dossier,Outside DXA,Do not infer them from composition images or generated DXA previews

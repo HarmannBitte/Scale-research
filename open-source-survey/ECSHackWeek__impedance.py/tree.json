@@ -1,0 +1,714 @@
+{
+  "sha": "e175ad2b2ce66006423038480cc8ce4d899d7886",
+  "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/e175ad2b2ce66006423038480cc8ce4d899d7886",
+  "tree": [
+    {
+      "path": ".all-contributorsrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63e8f2d6f73ab5b866f28a375d1eac5a9579f46a",
+      "size": 7144,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/63e8f2d6f73ab5b866f28a375d1eac5a9579f46a"
+    },
+    {
+      "path": ".coveragerc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e5be9c82c1d266d9b0fa0af5a177721ef8d72c7",
+      "size": 30,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/7e5be9c82c1d266d9b0fa0af5a177721ef8d72c7"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0cc1d16f49ed761fe434b306dd96a6bef3113e6f",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/0cc1d16f49ed761fe434b306dd96a6bef3113e6f"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c15c48edcd0dde54aeee30d90065d2d05c3a1858",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/c15c48edcd0dde54aeee30d90065d2d05c3a1858"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91ca872bc974496b9a50728be343fd8ecc3d697e",
+      "size": 450,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/91ca872bc974496b9a50728be343fd8ecc3d697e"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/data-file-support-request.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cf3e12f651c22d10b7fd2a25878061d7de7e386",
+      "size": 313,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/1cf3e12f651c22d10b7fd2a25878061d7de7e386"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/equivalent-circuit-element-request.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "068df2ef62e50b00b14fcc5483e4ca7b021cf503",
+      "size": 279,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/068df2ef62e50b00b14fcc5483e4ca7b021cf503"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11fc491ef1dae316f2b06bbb40eaba9c757fdfd1",
+      "size": 604,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/11fc491ef1dae316f2b06bbb40eaba9c757fdfd1"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05868364c7f49cea85ed7bbfcfe7ddac967b7c8b",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/05868364c7f49cea85ed7bbfcfe7ddac967b7c8b"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8ebe999a88d53eb9cbbd09017a719b4b2237d4f",
+      "size": 2244,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/a8ebe999a88d53eb9cbbd09017a719b4b2237d4f"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a511eec8d9826ec0f462df777f5ed3fbb0aa23a0",
+      "size": 1327,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/a511eec8d9826ec0f462df777f5ed3fbb0aa23a0"
+    },
+    {
+      "path": ".readthedocs.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be78c6822feff96f23891eca01837cbd908e726f",
+      "size": 1074,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/be78c6822feff96f23891eca01837cbd908e726f"
+    },
+    {
+      "path": "CITATION.cff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69820acd19384890400f9e31957561dd248c7fb5",
+      "size": 898,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/69820acd19384890400f9e31957561dd248c7fb5"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84729c766a44ad010be5866405fa25edda845be5",
+      "size": 3219,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/84729c766a44ad010be5866405fa25edda845be5"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1905c703db7551728d35b97eff7c17c4c82ac8e9",
+      "size": 2991,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/1905c703db7551728d35b97eff7c17c4c82ac8e9"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2baf91c37f19b52c7780294ec27b8b08578d4617",
+      "size": 1081,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/2baf91c37f19b52c7780294ec27b8b08578d4617"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e8c29c951ed1fc15be02ca509cf764f92765f05",
+      "size": 15667,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/6e8c29c951ed1fc15be02ca509cf764f92765f05"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "83ac1a1e6a08f407e2c7ef8a156cf39e88dfe27a",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/83ac1a1e6a08f407e2c7ef8a156cf39e88dfe27a"
+    },
+    {
+      "path": "data/Circuit1_EIS_1.z",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce315a6e00f6fbfb22debd9652918ad5acb3db76",
+      "size": 8195,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/ce315a6e00f6fbfb22debd9652918ad5acb3db76"
+    },
+    {
+      "path": "data/Circuit1_EIS_2.z",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc5d8866acfc196e9877048d03adf5e06378a504",
+      "size": 8195,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/fc5d8866acfc196e9877048d03adf5e06378a504"
+    },
+    {
+      "path": "data/Circuit2_EIS_1.z",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebe52519fe73ca766ab896ed67b63e3d9a94f346",
+      "size": 8882,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/ebe52519fe73ca766ab896ed67b63e3d9a94f346"
+    },
+    {
+      "path": "data/Circuit2_EIS_2.z",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3fc185c25a35cd8d010afb0ef8de4cc6cec1dcc",
+      "size": 8881,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/c3fc185c25a35cd8d010afb0ef8de4cc6cec1dcc"
+    },
+    {
+      "path": "data/Circuit3_EIS_1.z",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6283a90e2638aa9484ee8a145058cbdc2d1d5de3",
+      "size": 8628,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/6283a90e2638aa9484ee8a145058cbdc2d1d5de3"
+    },
+    {
+      "path": "data/Circuit3_EIS_2.z",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a72fbb37d4479d0589515c0a552fea0462c2cca7",
+      "size": 8628,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/a72fbb37d4479d0589515c0a552fea0462c2cca7"
+    },
+    {
+      "path": "data/exampleData.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c408763ef27912dcf4f50e974c719aeb0ef682f",
+      "size": 5007,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/4c408763ef27912dcf4f50e974c719aeb0ef682f"
+    },
+    {
+      "path": "data/exampleDataAutolab.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55e574a201cff1986d5866c4a1b1b05242fc3df9",
+      "size": 2545,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/55e574a201cff1986d5866c4a1b1b05242fc3df9"
+    },
+    {
+      "path": "data/exampleDataBioLogic.mpt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23eae4114af9050a3147bd682c4ec04bded9167f",
+      "size": 14142,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/23eae4114af9050a3147bd682c4ec04bded9167f"
+    },
+    {
+      "path": "data/exampleDataBioLogic_MissingFreq.mpt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8879aca2728db4ef772d73d7ae41ce0fcaa4941b",
+      "size": 14135,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/8879aca2728db4ef772d73d7ae41ce0fcaa4941b"
+    },
+    {
+      "path": "data/exampleDataCHInstruments.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30c73d52b94d5e3d3290b045603161db47e4f265",
+      "size": 3717,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/30c73d52b94d5e3d3290b045603161db47e4f265"
+    },
+    {
+      "path": "data/exampleDataGamry.DTA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e5d85262b989610fff03e3cc48953efc60541cb",
+      "size": 36889,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/0e5d85262b989610fff03e3cc48953efc60541cb"
+    },
+    {
+      "path": "data/exampleDataGamryABORT.DTA",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98adc45bf12087cb021c381401ca780bf94d69bc",
+      "size": 19126,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/98adc45bf12087cb021c381401ca780bf94d69bc"
+    },
+    {
+      "path": "data/exampleDataParstat.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd9d3538da642a9b4bb24aa6c2c4671d5ac08bdd",
+      "size": 44670,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/dd9d3538da642a9b4bb24aa6c2c4671d5ac08bdd"
+    },
+    {
+      "path": "data/exampleDataPowersuite.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5190d08b7e1e914338ae647c478fb3f725556182",
+      "size": 1057,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/5190d08b7e1e914338ae647c478fb3f725556182"
+    },
+    {
+      "path": "data/exampleDataVersaStudio.par",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4221b59238b07d395615df0e92ae7cc901ff3fdb",
+      "size": 19465,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/4221b59238b07d395615df0e92ae7cc901ff3fdb"
+    },
+    {
+      "path": "data/exampleDataZPlot.z",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a08b7ceaa13022ec2b4c4cfdef8f4d10c1a89ee",
+      "size": 5878,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/6a08b7ceaa13022ec2b4c4cfdef8f4d10c1a89ee"
+    },
+    {
+      "path": "data/exampleDataZPlot_noComments.z",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c739365e528df67ee34e4a33f1002774d00d2ab0",
+      "size": 3212,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/c739365e528df67ee34e4a33f1002774d00d2ab0"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "64704f949ec505df810c9dab3b1818dcf7077d61",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/64704f949ec505df810c9dab3b1818dcf7077d61"
+    },
+    {
+      "path": "docs/Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a9ffc05f4f114dc063a73ce6ffbdba529f9eb95",
+      "size": 613,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/1a9ffc05f4f114dc063a73ce6ffbdba529f9eb95"
+    },
+    {
+      "path": "docs/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68cfe982633bf19ceee0db88525528943e60cf3c",
+      "size": 781,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/68cfe982633bf19ceee0db88525528943e60cf3c"
+    },
+    {
+      "path": "docs/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "080c52084767adf24939397dbe9730b52d810a62",
+      "size": 35,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/080c52084767adf24939397dbe9730b52d810a62"
+    },
+    {
+      "path": "docs/source",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9d9a8265ba34df41eed876947e94d2447415aa0",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/a9d9a8265ba34df41eed876947e94d2447415aa0"
+    },
+    {
+      "path": "docs/source/_static",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d8356e02e877f6d13798c1b2b8f79668d843f94",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/7d8356e02e877f6d13798c1b2b8f79668d843f94"
+    },
+    {
+      "path": "docs/source/_static/exampleData.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c408763ef27912dcf4f50e974c719aeb0ef682f",
+      "size": 5007,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/4c408763ef27912dcf4f50e974c719aeb0ef682f"
+    },
+    {
+      "path": "docs/source/_static/example_fit_fig.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cb83a2a2c7dcab90a1fb4fe16404b9957b180ef",
+      "size": 121781,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/3cb83a2a2c7dcab90a1fb4fe16404b9957b180ef"
+    },
+    {
+      "path": "docs/source/_static/getting-started.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cb77350cf64b7efa8abfdc2e7fef85f3290527d",
+      "size": 26161,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/3cb77350cf64b7efa8abfdc2e7fef85f3290527d"
+    },
+    {
+      "path": "docs/source/_static/two_time_constants.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d2124abcb86e047b4e7fbb2aae1380c0b1ac84c",
+      "size": 6656,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/9d2124abcb86e047b4e7fbb2aae1380c0b1ac84c"
+    },
+    {
+      "path": "docs/source/circuit-elements.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6346be8ca05e35eaf101660844729555bf27d9c3",
+      "size": 99,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/6346be8ca05e35eaf101660844729555bf27d9c3"
+    },
+    {
+      "path": "docs/source/circuits.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0c68d7f0981da817244aa550119347cf05271a8",
+      "size": 83,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/a0c68d7f0981da817244aa550119347cf05271a8"
+    },
+    {
+      "path": "docs/source/conf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d92f0f5a3802a8a2674e0085f40b212e35a40f10",
+      "size": 6083,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/d92f0f5a3802a8a2674e0085f40b212e35a40f10"
+    },
+    {
+      "path": "docs/source/examples.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1342e8f34e95467f7716560b638abce0660ab527",
+      "size": 248,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/1342e8f34e95467f7716560b638abce0660ab527"
+    },
+    {
+      "path": "docs/source/examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d7a2fc4140378d934924d991369151eb64f33cc2",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/d7a2fc4140378d934924d991369151eb64f33cc2"
+    },
+    {
+      "path": "docs/source/examples/fitting_example.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe2a577747a3727f3fb0a4b767938b01b88a94ba",
+      "size": 142477,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/fe2a577747a3727f3fb0a4b767938b01b88a94ba"
+    },
+    {
+      "path": "docs/source/examples/looping_files_example.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e13b74afa00ebbcd4e1907d20e1bb390e4d0d0a0",
+      "size": 155356,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/e13b74afa00ebbcd4e1907d20e1bb390e4d0d0a0"
+    },
+    {
+      "path": "docs/source/examples/model_io_example.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "763aecc976792f263c402e4efbb7e3d731b93dc4",
+      "size": 77202,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/763aecc976792f263c402e4efbb7e3d731b93dc4"
+    },
+    {
+      "path": "docs/source/examples/plotting_example.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa953e7e23335f5ac3dff4df976f0a4dfb2bb2d4",
+      "size": 99872,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/fa953e7e23335f5ac3dff4df976f0a4dfb2bb2d4"
+    },
+    {
+      "path": "docs/source/examples/validation_example.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "568f4dd7d470ded54f859810ccb4612e249bd515",
+      "size": 89125,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/568f4dd7d470ded54f859810ccb4612e249bd515"
+    },
+    {
+      "path": "docs/source/faq.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "031889b09da1c3d4b070cbb58584fce62ac07797",
+      "size": 4199,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/031889b09da1c3d4b070cbb58584fce62ac07797"
+    },
+    {
+      "path": "docs/source/fitting.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "120dda29d3f4d9b97c92b8d77f3449ef5289ccbc",
+      "size": 80,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/120dda29d3f4d9b97c92b8d77f3449ef5289ccbc"
+    },
+    {
+      "path": "docs/source/getting-started.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07d42a0cc7f677f4ae39e9a35bb5caf437fb794e",
+      "size": 7379,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/07d42a0cc7f677f4ae39e9a35bb5caf437fb794e"
+    },
+    {
+      "path": "docs/source/index.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e3c6ab5cb37dca5e902e23f6eb40df1204bc702",
+      "size": 2221,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/4e3c6ab5cb37dca5e902e23f6eb40df1204bc702"
+    },
+    {
+      "path": "docs/source/preprocessing.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00cb48dac6cf46c47ddb4863c6bc4b0ab5790a0b",
+      "size": 82,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/00cb48dac6cf46c47ddb4863c6bc4b0ab5790a0b"
+    },
+    {
+      "path": "docs/source/validation.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54765f46cf2a3b6c890eace116eae72173a8ca47",
+      "size": 512,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/54765f46cf2a3b6c890eace116eae72173a8ca47"
+    },
+    {
+      "path": "impedance",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "db6d0ab4bdde50f9754b922238b130010a0800cf",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/db6d0ab4bdde50f9754b922238b130010a0800cf"
+    },
+    {
+      "path": "impedance/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29654eec0a4ce1dc3455b65536f1fdc82f1c42eb",
+      "size": 22,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/29654eec0a4ce1dc3455b65536f1fdc82f1c42eb"
+    },
+    {
+      "path": "impedance/models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1779acc9e3711f762ca1fece2c81006eff3df9a1",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/1779acc9e3711f762ca1fece2c81006eff3df9a1"
+    },
+    {
+      "path": "impedance/models/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "impedance/models/circuits",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "64927d6e298ec9986e4c367efb52b38cfbe683b5",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/64927d6e298ec9986e4c367efb52b38cfbe683b5"
+    },
+    {
+      "path": "impedance/models/circuits/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48c1fff93d58f00ab4c09cd17f2701dd1fdc73db",
+      "size": 100,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/48c1fff93d58f00ab4c09cd17f2701dd1fdc73db"
+    },
+    {
+      "path": "impedance/models/circuits/circuits.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b670d198f65647207160d91273f0a84a0ff25a34",
+      "size": 15946,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/b670d198f65647207160d91273f0a84a0ff25a34"
+    },
+    {
+      "path": "impedance/models/circuits/elements.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa067407651ff25736b63e939608f9e1a7521efe",
+      "size": 10107,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/fa067407651ff25736b63e939608f9e1a7521efe"
+    },
+    {
+      "path": "impedance/models/circuits/fitting.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fe1c30065c8b84c30b26e1a5a72187182c2085a",
+      "size": 14154,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/5fe1c30065c8b84c30b26e1a5a72187182c2085a"
+    },
+    {
+      "path": "impedance/preprocessing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbf0af6d78861f578250a3d995ba2319ea6bcf1d",
+      "size": 13613,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/dbf0af6d78861f578250a3d995ba2319ea6bcf1d"
+    },
+    {
+      "path": "impedance/tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f6e04767ca5b53a39123cffdd088bf63b3ee687",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/4f6e04767ca5b53a39123cffdd088bf63b3ee687"
+    },
+    {
+      "path": "impedance/tests/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bac4edbcf985ed612ae3920e39c257ff62e86349",
+      "size": 180,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/bac4edbcf985ed612ae3920e39c257ff62e86349"
+    },
+    {
+      "path": "impedance/tests/test_circuit_elements.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5276c44ed263dc890c085a32ac63bf90a0ed518e",
+      "size": 6329,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/5276c44ed263dc890c085a32ac63bf90a0ed518e"
+    },
+    {
+      "path": "impedance/tests/test_circuits.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec0e5c32e3bd4e837a8dd2165d0a4eb3d15e622f",
+      "size": 7147,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/ec0e5c32e3bd4e837a8dd2165d0a4eb3d15e622f"
+    },
+    {
+      "path": "impedance/tests/test_fitting.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bf9ca953a266e0ec4077ab82e690c23f4b9802a",
+      "size": 8482,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/4bf9ca953a266e0ec4077ab82e690c23f4b9802a"
+    },
+    {
+      "path": "impedance/tests/test_model_io.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bdddd240124c5f9c33f36ac9f637f6b982ce411",
+      "size": 1027,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/7bdddd240124c5f9c33f36ac9f637f6b982ce411"
+    },
+    {
+      "path": "impedance/tests/test_preprocessing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a96a9a155491567ffc41091629d4c60a747b5dc",
+      "size": 29742,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/8a96a9a155491567ffc41091629d4c60a747b5dc"
+    },
+    {
+      "path": "impedance/tests/test_validation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "970ff315680c30273213edd0b2f7cb82e2f91257",
+      "size": 12348,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/970ff315680c30273213edd0b2f7cb82e2f91257"
+    },
+    {
+      "path": "impedance/tests/test_visualization.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb71dc24c3a542123e2db7385cc70ffb0f10c1dd",
+      "size": 2166,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/fb71dc24c3a542123e2db7385cc70ffb0f10c1dd"
+    },
+    {
+      "path": "impedance/validation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad9d2e688a1986c97637f7cf8ac5c6465ab4024d",
+      "size": 10817,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/ad9d2e688a1986c97637f7cf8ac5c6465ab4024d"
+    },
+    {
+      "path": "impedance/visualization.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6839ca1cf152ab54a17fd599506f0cfd75d9caa",
+      "size": 11029,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/a6839ca1cf152ab54a17fd599506f0cfd75d9caa"
+    },
+    {
+      "path": "joss-paper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "de4cb39dc463c3a27edb47e788a58d4739a2ed84",
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/trees/de4cb39dc463c3a27edb47e788a58d4739a2ed84"
+    },
+    {
+      "path": "joss-paper/example.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67ded83202381c1decbf3cff3f4921f9435ad2d8",
+      "size": 251079,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/67ded83202381c1decbf3cff3f4921f9435ad2d8"
+    },
+    {
+      "path": "joss-paper/paper.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53303be5729bd3c6e249d00e4c24ba16b3f05b9d",
+      "size": 15965,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/53303be5729bd3c6e249d00e4c24ba16b3f05b9d"
+    },
+    {
+      "path": "joss-paper/paper.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "198eb8b3226723f78d7339817b3d4d11431dda98",
+      "size": 9295,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/198eb8b3226723f78d7339817b3d4d11431dda98"
+    },
+    {
+      "path": "pylama.ini",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7933e27d854f057cdde6901cc2cef06e03145c9b",
+      "size": 91,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/7933e27d854f057cdde6901cc2cef06e03145c9b"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a0bdaa2d74a8447c0b7258554f0d72a2e4a31d5",
+      "size": 100,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/3a0bdaa2d74a8447c0b7258554f0d72a2e4a31d5"
+    },
+    {
+      "path": "setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b4d807848685d1ed093897e2e78f6ec02960e1e",
+      "size": 889,
+      "url": "https://api.github.com/repos/ECSHackWeek/impedance.py/git/blobs/2b4d807848685d1ed093897e2e78f6ec02960e1e"
+    }
+  ],
+  "truncated": false
+}

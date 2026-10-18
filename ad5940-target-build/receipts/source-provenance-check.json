@@ -1,0 +1,9 @@
+{
+  "previous_host_fork_manifest_unchanged": true,
+  "target_source_changes_relative_to_host_fork": [
+    "source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c",
+    "source/examples/AD5940_BIA/ADICUP3029/main.c",
+    "source/examples/AD5940_BIA/BodyImpedance.c"
+  ],
+  "review_patch": "integration-source.patch; source and GNU additions only; vendor and tests supplied separately by full package"
+}

@@ -1,0 +1,15 @@
+test_fstat_does_not_return_uninitialized_fields (__main__.TargetIO.test_fstat_does_not_return_uninitialized_fields) ... ok
+test_invalid_divider_rejected_before_divide (__main__.TargetIO.test_invalid_divider_rejected_before_divide) ... ok
+test_invalid_writes_do_not_touch_uart (__main__.TargetIO.test_invalid_writes_do_not_touch_uart) ... ok
+test_mcu_crystal_wait_is_bounded (__main__.TargetIO.test_mcu_crystal_wait_is_bounded) ... ok
+test_newlib_write_reaches_uart (__main__.TargetIO.test_newlib_write_reaches_uart) ... ok
+test_reserved_heap_boundaries (__main__.TargetIO.test_reserved_heap_boundaries) ... ok
+test_resource_init_keeps_afe_reset_asserted (__main__.TargetIO.test_resource_init_keeps_afe_reset_asserted) ... ok
+test_stalled_uart_reports_error_and_stops (__main__.TargetIO.test_stalled_uart_reports_error_and_stops) ... ok
+test_tx_only_uart_has_no_unhandled_receive_interrupt (__main__.TargetIO.test_tx_only_uart_has_no_unhandled_receive_interrupt) ... ok
+test_unsupported_baud_rejected (__main__.TargetIO.test_unsupported_baud_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.070s
+
+OK

@@ -1,0 +1,92 @@
+[
+  {
+    "item": "EVAL-AD5940BIOZ",
+    "amount_usd": 497.15,
+    "evidence": "Detailed page fetched",
+    "availability": "14 displayed; distributor will stop carrying after stock depleted",
+    "caveat": "Possible 8% US tariff; kit packing list/support must be confirmed",
+    "url": "https://www.mouser.com/ProductDetail/Analog-Devices/EVAL-AD5940BIOZ?qs=w%2Fv1CP2dgqozY%2F%2FPHNLAZQ%3D%3D",
+    "observed_date": "2026-10-17",
+    "quote_confirmed": false
+  },
+  {
+    "item": "Hioki IM3536",
+    "amount_usd": 5186,
+    "evidence": "Detailed page chunk 1 fetched",
+    "availability": "Backordered; stock expected Oct 21",
+    "caveat": "Probe/fixture separately purchased; search stock snippet disagreed with detailed page",
+    "url": "https://www.tequipment.net/Hioki/IM3536/LCR-Meters/",
+    "observed_date": "2026-10-17",
+    "quote_confirmed": false
+  },
+  {
+    "item": "Hioki IM3536 rental",
+    "amount_usd": 649,
+    "evidence": "Search-only rate; NOT substantiated by detailed fetch",
+    "availability": "Unconfirmed",
+    "caveat": "Do not treat as confirmed monthly quotation; accessories/shipping/insurance/calibration unknown",
+    "url": "https://www.atecorp.com/products/hioki/im3536",
+    "observed_date": "2026-10-17",
+    "quote_confirmed": false
+  },
+  {
+    "item": "Keysight E4980BL 300kHz configuration",
+    "amount_usd": 7391,
+    "evidence": "Detailed US manufacturer page fetched",
+    "availability": "Quote required",
+    "caveat": "List price; exact configuration/interfaces/fixtures must be quoted",
+    "url": "https://www.keysight.com/us/en/product/E4980BL/precision-lcr-meter-20-hz-1-mhz.html",
+    "observed_date": "2026-10-17",
+    "quote_confirmed": false
+  },
+  {
+    "item": "Keysight E4980BL 500kHz configuration",
+    "amount_usd": 10839,
+    "evidence": "Detailed US manufacturer page fetched",
+    "availability": "Quote required",
+    "caveat": "List price; configuration dependent",
+    "url": "https://www.keysight.com/us/en/product/E4980BL/precision-lcr-meter-20-hz-1-mhz.html",
+    "observed_date": "2026-10-17",
+    "quote_confirmed": false
+  },
+  {
+    "item": "Keysight E4980BL 1MHz configuration",
+    "amount_usd": 14264,
+    "evidence": "Detailed US manufacturer page fetched",
+    "availability": "Quote required",
+    "caveat": "List price; configuration dependent",
+    "url": "https://www.keysight.com/us/en/product/E4980BL/precision-lcr-meter-20-hz-1-mhz.html",
+    "observed_date": "2026-10-17",
+    "quote_confirmed": false
+  },
+  {
+    "item": "Keysight E4980AL",
+    "amount_usd": null,
+    "evidence": "Manufacturer search result",
+    "availability": "Discontinued / currently supported; E4980BL replacement",
+    "caveat": "Used/rental option only after support/configuration/calibration verification; not default current-new recommendation",
+    "url": "https://www.keysight.com/us/en/product/E4980AL/precision-lcr-meter-20-hz-300-khz-500-khz-1-mhz.html",
+    "observed_date": "2026-10-17",
+    "quote_confirmed": false
+  },
+  {
+    "item": "MFIA manufacturer displayed price",
+    "amount_usd": 14490,
+    "evidence": "Detailed manufacturer page fetched",
+    "availability": "Region/configuration-specific; quote required",
+    "caveat": "Ex-works; do not assume displayed price is upgraded 5MHz all-options bundle; MFITF and LabOne/API inclusion described by manufacturer",
+    "url": "https://www.zhinst.com/en/products/mfia-impedance-analyzer/",
+    "observed_date": "2026-10-17",
+    "quote_confirmed": false
+  },
+  {
+    "item": "Tanita MC-780U PLUS S",
+    "amount_usd": 6999.99,
+    "evidence": "Detailed manufacturer page fetched",
+    "availability": "Add to Cart displayed; actual shipment unconfirmed",
+    "caveat": "Raw fields, export/licensing/support and intended use require confirmation; no adopted DXA-equivalence claim",
+    "url": "https://tanita.com/products/mc-780u-plus-s-multi-frequency-segmental-body-composition-analyzer",
+    "observed_date": "2026-10-17",
+    "quote_confirmed": false
+  }
+]

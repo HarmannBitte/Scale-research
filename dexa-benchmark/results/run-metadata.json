@@ -1,0 +1,12 @@
+{
+  "python": "3.13.16",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "sklearn": "1.6.1",
+  "seed": 20261017,
+  "script_sha256": "cd1357d8e754b3fe22bf28ae89bf7721f64ee35f4b5d26f8f0121b20e49949cf",
+  "protocol_sha256": "2ce692b2e79745ebe6854b1a6e784e45a3e54cd01876ea303997bfc73dd7dd5d",
+  "no_hyperparameter_selection": true,
+  "survey_weighted": false,
+  "extra_trees_multioutput": true
+}

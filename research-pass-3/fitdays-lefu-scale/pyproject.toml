@@ -1,0 +1,24 @@
+[project]
+name = "fitdays-lefu-scale"
+version = "0.1.0"
+description = "Reverse-engineered BLE protocol and codec for Fitdays/Lefu 8-electrode body-composition scales"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+ble = ["bleak>=0.22"]
+engine = ["unicorn>=2.1", "pyelftools>=0.31"]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["fitdays_scale"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

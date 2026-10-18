@@ -1,0 +1,167 @@
+What are Styku's business pricing plans? | Styku Help
+Skip to content
+Styku Help
+Search
+Ctrl
+K
+Cancel
+Styku
+Select theme
+Dark
+Light
+Auto
+What are Styku's business pricing plans?
+Styku sells two software plans for businesses,
+Access
+and
+Elite
+, plus three specialty modules that can be added to Access individually. Every plan requires a Styku scanner and includes unlimited standard body scans and unlimited staff accounts. Both plans run the same scanner and the same client experience; the difference is which specialty modules are switched on.
+Plan summary (current list pricing)
+Section titled “Plan summary (current list pricing)”
+Access
+Elite
+Enterprise
+Monthly price
+$199/mo
+$499/mo list ·
+$349/mo for a limited time
+($150/mo off)
+Custom, priced per rollout
+Dashboard module
+(150+ biometrics, 3D viewer)
+Included
+Included
+Included
+Aesthetics & Sculpting module
++$100/mo
+Included
+Included
+Fitness & Weight-Loss module
++$100/mo
+Included
+Included
+Posture & Alignment module
++$100/mo
+Included
+Included
+Health Screen module
+(rolling out to all clients — see note below)
+Per-scan credit
+Per-scan credit
+Per-scan credit
+Styku API
+Standard tier
+Standard + Pro tier
+All three tiers
+Styku Leaderboard analytics
+—
+—
+Included
+Legacy customer migration pricing
+—
+$499/mo list · legacy customer discount · most pay $299/mo ($499 − $200)
+—
+Added on their own, each specialty module is $100/mo, so Access plus all three comes to $499/mo, the same as Elite at list. At the introductory rate, Elite gives you all three for $150/mo more than Access instead of $300.
+Prices are monthly. Annual prepay is available on request.
+Existing customers on a legacy plan:
+different rates apply when you move to the current plans. See
+Styku plan migration: what is changing, when it takes effect, and your options
+.
+Who each plan is for
+Section titled “Who each plan is for”
+Access ($199/mo)
+— Best if you run one core program and want to add specialty modules only as your services grow. Everything you need to scan, track progress, and grow: Dashboard with 150+ biometrics, body composition, 3D before/after comparison, goal setting, PDF reports, CSV and OBJ export, the Styku Mobile App and AI Guided Review for your clients, the payment gateway, Business Portal, Styku Academy and support.
+Elite ($499/mo list price for new customers; migrated legacy customers see the $499/mo list price with a permanent legacy customer discount — most pay $299/mo ($499 − $200); $349/mo limited-time introductory rate for new customers)
+— Best if you serve more than one audience (aesthetics, weight loss, and performance under one roof). Everything in Access plus all three specialty modules (Aesthetics & Sculpting, Fitness & Weight-Loss, and Posture & Alignment) and the Styku API Pro tier (webhooks, asynchronous tasks, response caching, ID-based secure profile lookup). The Health Screen module is available on every plan — see the note below.
+Enterprise (custom)
+— For regional or national brands running many locations (typically 50+) that need scan data inside their own systems: everything in Elite plus the Enterprise API tier (batch profile retrieval, Create Profile API, high-throughput custom SLAs), Styku Leaderboard analytics, and a dedicated support channel. Enterprise is scoped and priced per rollout with the sales team; it is not a self-serve step up from Elite.
+The Health Screen module — rolling out to all clients
+Section titled “The Health Screen module — rolling out to all clients”
+The Health Screen is rolling out to every Styku client, on every plan (Access, Elite, and Enterprise), in every country.
+HealthPass providers already have access today.
+For everyone else the rollout is being prepared; no date has been announced yet. Every plan starts with promotional Health Screen credits.
+The Health Screen runs on scan credits — there is no monthly fee for the module. Clients perform and sell Health Screens (the Preventive Body Scan: the 3D scan plus a Health Screen), setting their own consumer price, taking payment through Styku’s built-in payment gateway (card, FSA, and HSA), and keeping 100% of what they charge. Every Health Screen comes with an AI Guided Review for the person scanned. Credits are purchased in advance: $60 for a single credit, or wholesale packs of 25 credits ($40 each, $1,000), 50 credits ($37.50 each, $1,875), or 100 credits ($35 each, $3,500). See
+How much does the Health Screen cost and how do scan credits work?
+HealthPass is optional and separate.
+Every plan is HealthPass-ready, and activating as a HealthPass Partner costs nothing. Partner status adds revenue share and consumers sent from the HealthPass marketplace. HealthPass is a US-only program: once the rollout reaches clients outside the US, they can use the Health Screen and buy credits, but cannot become HealthPass Partners.
+All other Elite and Enterprise features — including the three specialty modules — are fully available today.
+Legacy plan migration — who is affected and what changes
+Section titled “Legacy plan migration — who is affected and what changes”
+Who is affected
+Section titled “Who is affected”
+Customers on any legacy software plan — including Growth, Basic, Service Fee, Start Up, Styku Dashboard, Pro, Styku Studio, Unlimited, Professional, and the legacy Enterprise Plan, whether billed monthly or annually — are being migrated to the current plans, unless they are already on Access or Elite.
+Which plan a customer moves to depends on the plan they were on and the specialty modules they originally purchased:
+Growth, Basic, Service Fee, Start Up, and Styku Dashboard
+→
+Access
+Pro, Styku Studio, Unlimited, and Professional
+→
+Elite
+Legacy Enterprise
+→
+Elite
+with a legacy discount
+The notice each customer receives states their new plan and price.
+Exceptions:
+Some accounts have individually agreed terms. If your migration notice shows a different plan or price from the standard path, those are your agreed terms.
+When does the change take effect?
+Section titled “When does the change take effect?”
+For customers who are being migrated, the new plan takes effect on the
+first billing date that falls 30 or more days after the notice is sent
+. The change is not prorated — it applies from that billing date forward.
+Any earlier discount on the software plan is replaced by the migration pricing.
+What your invoice will show
+Section titled “What your invoice will show”
+Migrated customers placed on
+Elite
+will see the $499/month list price with a permanent legacy customer discount applied:
+Elite — $499/month
+Legacy customer discount — −$200/month
+Amount charged — $299/month
+If you do not see the discount line or believe there is an error, contact support through the Business Portal.
+Specialty modules
+Section titled “Specialty modules”
+Migrated customers keep every specialty module they originally purchased at no additional fee, with no time limit. If you did not originally purchase a module (for example, Posture & Alignment) and want to add it after migration, it can be added for
+$50/month
+— discounted from the $100/month list price. For example, Access plus one module not originally purchased would be $249/month.
+For full details on the migration, your options, and what is included in each plan, see
+Styku plan migration: what is changing, when it takes effect, and your options
+.
+Common questions
+Section titled “Common questions”
+Can I move between plans?
+Yes, in either direction. Nothing about your scanner or your data changes; moving from Access to Elite simply switches the specialty modules on. Contact support through the Business Portal to change plans.
+Can I add just one module instead of all three?
+Yes. Any of the three specialty modules (Aesthetics & Sculpting, Fitness & Weight-Loss, Posture & Alignment) can be added to Access for $100/mo. If you want two or more, Elite is the better value.
+How long does the Elite intro price last?
+Elite is $349/mo instead of $499/mo for a limited introductory period. Access at $199/mo is a standard rate and is not part of the promotion. The sales team can confirm current terms and how long the rate is held on a new agreement.
+Does the plan I pick change how I make money?
+No. Every plan includes the payment gateway and wholesale credit packs. The Health Screen is rolling out to all plans, with HealthPass providers having access today and all other clients receiving access very soon. HealthPass revenue share opportunities are available on every plan and activating as a HealthPass Partner costs nothing.
+Full comparison:
+https://www.styku.com/plans
+· Pricing:
+https://www.styku.com/pricing
+· Modules:
+https://www.styku.com/modules
+If this resolves your issue, no further action is needed.
+If the problem persists, contact support and include: your business name, whether you are a new or existing customer, and which modules your team uses.
+Related Resources
+Section titled “Related Resources”
+What features are included in each Styku pricing plan?
+What modules are available in Styku Studio and which plans include them?
+Styku plan migration: what is changing, when it takes effect, and your options
+How much does the Health Screen cost and how do scan credits work?
+What is HealthPass and is it available outside the United States?
+How do I change my Styku subscription plan?
+Still need help?
+Submit a service ticket in the
+Styku Business Portal
+.
+Last updated:
+Oct 15, 2026
+Previous
+What are my options if my Styku subscription costs more than I want to pay?
+Next
+What are the billing and payment details for the Styku consignment program?
+© 2026 Styku. All rights reserved.
+styku.com

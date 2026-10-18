@@ -1,0 +1,110 @@
+{
+  "reason": "Preserve source and audit evidence within workspace snapshot budget; removed large documentation photos only. See pinned commits in original reports and openScale-preservation-manifest.json for full upstream tree.",
+  "removed": [
+    {
+      "path": "docs/custom_scale/scale_overview_raw.jpg",
+      "bytes": 1805543,
+      "sha256": "0e226802712da51d91d711b1261b3875fbb1bd9b0175be354109482394c2e57f"
+    },
+    {
+      "path": "docs/custom_scale/oscilloscope.JPG",
+      "bytes": 1480124,
+      "sha256": "d79aeaf07b657a7f9557dcedf3b7c9a50054badbd50c0621fa0a4f1b2f1186bc"
+    },
+    {
+      "path": "docs/custom_scale/circuit_board_front_raw.JPG",
+      "bytes": 2042829,
+      "sha256": "0772d0cb3cd7bccf54f79892f6d77a804002c26f15dd27eb9c35e4906bd6e170"
+    },
+    {
+      "path": "docs/custom_scale/circuit_board_back_wired_unorderd.JPG",
+      "bytes": 1927271,
+      "sha256": "a886731a3cf9306207947ad28fcfc91672a690de1ee1d51708e94c40ddbd3e99"
+    },
+    {
+      "path": "docs/custom_scale/scale_overview_front_wired.JPG",
+      "bytes": 1362066,
+      "sha256": "4919ba14cca34cc932c476f7272df1168e5f390d7c3a46a8456252635d3d3c30"
+    },
+    {
+      "path": "docs/custom_scale/circuit_board_back_wired_ordered.JPG",
+      "bytes": 1975309,
+      "sha256": "b356431f4b0f91b42070390f14db11f04b9ba707b98f0b948b4a26298aa0ebed"
+    },
+    {
+      "path": "docs/custom_scale/scale_overview_back_wired.JPG",
+      "bytes": 1722830,
+      "sha256": "bb8126980f3ecd8e11d2e26f4336e2f30f138218249541775c56b7faafa30ee0"
+    },
+    {
+      "path": "docs/custom_scale/wired_with_notes.JPG",
+      "bytes": 1782992,
+      "sha256": "c61b8a10a62ce13d58d8ed9f50af5c963280d9ddb0450db3d550572f9b29a347"
+    },
+    {
+      "path": "docs/custom_scale/package.JPG",
+      "bytes": 1437323,
+      "sha256": "61140f3bccf711356cfca4dd76cf92f2ee14bf2bd84d5a0372fedaf9c1513e3a"
+    },
+    {
+      "path": "docs/custom_scale/circuit_board_back_raw.JPG",
+      "bytes": 1798999,
+      "sha256": "f9357c5f31edcea62dd464a1378298de87d2d8914a18727e05df862d794cbff5"
+    },
+    {
+      "path": "docs/custom_scale/parts/eeprom_front.JPG",
+      "bytes": 1284733,
+      "sha256": "897bc68c8e93cf22e75b8043c4b60676459e6d50320e014a495b1fb8655b4246"
+    },
+    {
+      "path": "docs/custom_scale/parts/eeprom_back.JPG",
+      "bytes": 1425289,
+      "sha256": "7365ba870e5e7171aed840bbb6fc91140b97d683fa6d15a06d0cee79683f1db5"
+    },
+    {
+      "path": "docs/custom_scale/parts/cp2102_front.JPG",
+      "bytes": 1368866,
+      "sha256": "65c73890a94cbb339f8c7f01185b96c912f6d552e73e45d2bba84d1f7757c49d"
+    },
+    {
+      "path": "docs/custom_scale/parts/cp2102_back.JPG",
+      "bytes": 1318466,
+      "sha256": "fbd738f2661b00aed54587c497c0c201afa802448cafcedfcc61df0c31065c23"
+    },
+    {
+      "path": "docs/custom_scale/parts/scale_hacked_front.JPG",
+      "bytes": 1518584,
+      "sha256": "f1ada2fe65cf4796cb5f2b3b876fa349ded1834cd4f252740ad09f706a73c79e"
+    },
+    {
+      "path": "docs/custom_scale/parts/rtc_front.JPG",
+      "bytes": 1348291,
+      "sha256": "f70de73c4ef5bf48cb6dae600c1ce459c304d5406cac75d7296a777e9e80497c"
+    },
+    {
+      "path": "docs/custom_scale/parts/arduino_front.JPG",
+      "bytes": 1356043,
+      "sha256": "d8abbb0809f04b4638e85da477683a61fe586dc1b6b17010aa1bff1ebc4f38d3"
+    },
+    {
+      "path": "docs/custom_scale/parts/bluetooth_front.JPG",
+      "bytes": 1379332,
+      "sha256": "4fa3121224a42001651c87822ee5936270fc6a6138bcf71cb485684a001bbd65"
+    },
+    {
+      "path": "docs/custom_scale/parts/bluetooth_back.JPG",
+      "bytes": 1493324,
+      "sha256": "3e416e5587bc582bb0f5044bc34ce21db37c331231155f999663d459e6427bc6"
+    },
+    {
+      "path": "docs/custom_scale/parts/rtc_back.JPG",
+      "bytes": 1403427,
+      "sha256": "226bae6fbb2ee6658bc6b8f70a13fc950207bc7449673b9cce76de187fe1e045"
+    },
+    {
+      "path": "docs/custom_scale/parts/scale_hacked_back.JPG",
+      "bytes": 1954835,
+      "sha256": "1598ceb523b528dec33d1b52bb93e7dbc1678748a49ac9d27442f1ccb82d7e29"
+    }
+  ]
+}

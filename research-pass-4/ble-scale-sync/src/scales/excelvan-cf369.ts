@@ -1,0 +1,162 @@
+import type {
+  BleDeviceInfo,
+  ConnectionContext,
+  ScaleAdapterCore,
+  GattWiring,
+  HoldForComposition,
+  ScaleReading,
+  UserProfile,
+  BodyComposition,
+} from '../interfaces/scale-adapter.js';
+import {
+  uuid16,
+  buildPayload,
+  xorChecksum,
+  ReadingComposition,
+  WEIGHT_ONLY_HOLD_MS,
+  type ScaleBodyComp,
+} from './body-comp-helpers.js';
+import { matchesDescriptor, type MatchDescriptor } from './match-descriptor.js';
+
+const CHR_NOTIFY = uuid16(0xfff4);
+const CHR_WRITE = uuid16(0xfff1);
+
+/**
+ * Adapter for Excelvan CF369 / "Electronic Scale" BLE body-fat scales.
+ *
+ * Protocol ported from openScale's ExcelvanCF369 handler:
+ *   - Service 0xFFF0, notify 0xFFF4, write 0xFFF1
+ *   - Frames start with 0xCF, 16-17 bytes long
+ *   - Weight at bytes [4-5] big-endian / 10 (kg)
+ *   - Fat at [6-7] BE / 10, bone at [8] / 10, muscle at [9-10] BE / 10
+ *   - Visceral fat at [11], water at [12-13] BE / 10
+ *   - Composition present when the fat byte at [6] is not 0xFF; a frame without it
+ *     completes weight-only after WEIGHT_ONLY_HOLD_MS (D028)
+ */
+export class ExcelvanCF369Adapter implements ScaleAdapterCore, GattWiring, HoldForComposition {
+  readonly name = 'Excelvan CF369';
+  readonly match: MatchDescriptor = { priority: 110, names: { exact: ['electronic scale'] } };
+  readonly charNotifyUuid = CHR_NOTIFY;
+  readonly charWriteUuid = CHR_WRITE;
+
+  readonly normalizesWeight = true;
+
+  /** Cached body-composition values from the most recent parsed frame. */
+  private cachedComp: ScaleBodyComp = {};
+  /**
+   * Composition pinned to the reading it was measured with (#394): this adapter
+   * is a shared singleton and `computeMetrics()` runs later than the parse, so
+   * on the watcher transports the live cache can already belong to the next
+   * weigh-in. See ReadingComposition.
+   */
+  private readonly comp = new ReadingComposition<ScaleBodyComp>();
+
+  /**
+   * Send user-config command with real profile data:
+   *   [0] = 0xFE (command marker)
+   *   [1] = userId (1)
+   *   [2] = sex (0x01 = male, 0x00 = female)
+   *   [3] = activity level (1)
+   *   [4] = height in cm
+   *   [5] = age
+   *   [6] = unit (0x01 = kg)
+   *   [7] = XOR checksum of bytes 1..6
+   */
+  async onConnected(ctx: ConnectionContext): Promise<void> {
+    const { profile } = ctx;
+    const sex = profile.gender === 'male' ? 0x01 : 0x00;
+    const height = Math.min(0xff, Math.max(0, Math.round(profile.height)));
+    const age = Math.min(0xff, Math.max(0, profile.age));
+    const cmd = [0xfe, 0x01, sex, 0x01, height, age, 0x01];
+    cmd.push(xorChecksum(cmd, 1, 7));
+    await ctx.write(this.charWriteUuid, cmd, false);
+  }
+
+  matches(device: BleDeviceInfo): boolean {
+    return matchesDescriptor(device, this.match);
+  }
+
+  /**
+   * Parse an Excelvan CF369 notification frame.
+   *
+   * Layout (16-17 bytes, starts with 0xCF):
+   *   [0]      0xCF marker
+   *   [1-3]    header / flags
+   *   [4-5]    weight, big-endian uint16 / 10 (kg)
+   *   [6-7]    body fat %, big-endian uint16 / 10
+   *   [8]      bone mass / 10
+   *   [9-10]   muscle %, big-endian uint16 / 10
+   *   [11]     visceral fat rating
+   *   [12-13]  water %, big-endian uint16 / 10
+   */
+  parseNotification(data: Buffer): ScaleReading | null {
+    if (data.length < 14 || data[0] !== 0xcf) return null;
+
+    const weight = data.readUInt16BE(4) / 10;
+    if (weight <= 0 || !Number.isFinite(weight)) return null;
+
+    const fatRaw = data.readUInt16BE(6);
+    const fat = fatRaw / 10;
+    const bone = data[8] / 10;
+    const muscle = data.readUInt16BE(9) / 10;
+    const visceral = data[11];
+    const water = data.readUInt16BE(12) / 10;
+
+    // Cache body-comp for use in computeMetrics
+    this.cachedComp = {
+      fat: data[6] !== 0xff ? fat : undefined,
+      bone: data[6] !== 0xff ? bone : undefined,
+      muscle: data[6] !== 0xff ? muscle : undefined,
+      visceralFat: data[6] !== 0xff ? visceral : undefined,
+      water: data[6] !== 0xff ? water : undefined,
+    };
+
+    const reading: ScaleReading = { weight, impedance: 0 };
+    this.comp.pin(reading, this.cachedComp);
+    return reading;
+  }
+
+  /**
+   * The weight completes the reading; the composition makes it final (ADR D028,
+   * review D-07).
+   *
+   * Requiring a fat value here meant a weigh-in the scale could not analyse
+   * (socks, a child, a short step-on) never produced a reading at all: the
+   * session ran into its timeout and the weight was lost. Now such a reading
+   * holds the link for `WEIGHT_ONLY_HOLD_MS`, resolves at once if a frame with
+   * composition arrives, and otherwise completes with the weight alone.
+   */
+  isComplete(reading: ScaleReading): boolean {
+    return reading.weight > 0;
+  }
+
+  readonly completionHoldMs = WEIGHT_ONLY_HOLD_MS;
+
+  isFinal(reading: ScaleReading): boolean {
+    const fat = this.comp.of(reading, this.cachedComp).fat;
+    return fat != null && fat > 0;
+  }
+
+  /**
+   * Clear the previous weigh-in before anything is subscribed (#394).
+   *
+   * The pin above is what fixes the real leak. This reset covers the OTHER
+   * path: a reading built outside parseNotification (a direct caller, a test)
+   * has nothing pinned, so computeMetrics falls back to the live cache - and
+   * that must not still hold the previous person's numbers. It is also what
+   * the ScaleAdapter contract requires of every adapter, so a sibling added
+   * later inherits a correct example rather than this one's peculiarity.
+   */
+  onSessionStart(): void {
+    this.cachedComp = {};
+  }
+
+  computeMetrics(reading: ScaleReading, profile: UserProfile): BodyComposition {
+    return buildPayload(
+      reading.weight,
+      reading.impedance,
+      this.comp.of(reading, this.cachedComp),
+      profile,
+    );
+  }
+}

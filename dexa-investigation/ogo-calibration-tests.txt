@@ -1,0 +1,36 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.0.3, pluggy-1.6.0
+rootdir: /home/user/dexa-investigation/Ogo
+configfile: pytest.ini
+plugins: anyio-4.15.1, platformdirs-4.12.3
+collected 5 items
+
+tests/calib/test_calibration.py .s                                       [ 40%]
+tests/calib/test_internal_calibration.py s                               [ 60%]
+tests/calib/test_mindways_calibration.py s                               [ 80%]
+tests/calib/test_standard_calibration.py s                               [100%]
+
+=============================== warnings summary ===============================
+ogo/calib/internal_calibration.py:25
+  /home/user/dexa-investigation/Ogo/ogo/calib/internal_calibration.py:25: SyntaxWarning: invalid escape sequence '\ '
+    minimum area of 10 mm\ :sup:`2`.
+
+ogo/calib/internal_calibration.py:84
+  /home/user/dexa-investigation/Ogo/ogo/calib/internal_calibration.py:84: SyntaxWarning: invalid escape sequence '\ '
+    :param voxel_volume: Voxel volume in  mm\ :sup:`3`
+
+ogo/calib/standard_calibration.py:24
+  /home/user/dexa-investigation/Ogo/ogo/calib/standard_calibration.py:24: SyntaxWarning: invalid escape sequence '\c'
+    \\rho = m \cdot HU + b
+
+ogo/calib/mindways_calibration.py:32
+  /home/user/dexa-investigation/Ogo/ogo/calib/mindways_calibration.py:32: SyntaxWarning: invalid escape sequence '\c'
+    \\mu_{ROI} = \\rho_{water} + \\sigma_{ref} \cdot \\rho_{K_2HPO_4} +
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [1] tests/calib/test_calibration.py:21: Placeholder - add more tests here
+SKIPPED [1] tests/calib/test_internal_calibration.py:16: Placeholder - add more tests here
+SKIPPED [1] tests/calib/test_mindways_calibration.py:16: Placeholder - add more tests here
+SKIPPED [1] tests/calib/test_standard_calibration.py:16: Placeholder - add more tests here
+=================== 1 passed, 4 skipped, 4 warnings in 2.34s ===================

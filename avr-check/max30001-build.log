@@ -1,0 +1,51 @@
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp: In member function 'void MAX30001::_max30001RegRead24(uint8_t, uint32_t*)':
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:105:27: warning: left shift count >= width of type [-Wshift-count-overflow]
+  105 |     *read_data = (buff[0] << 16) | (buff[1] << 8) | buff[2];
+      |                   ~~~~~~~~^~~~~
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp: In member function 'max30001_error_t MAX30001::startBioZ(max30001_sample_rate_t)':
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:311:27: warning: conversion from 'uint32_t' {aka 'long unsigned int'} to 'unsigned char:4' changes value from '17' to '1' [-Woverflow]
+  311 |     cnfg_bioz.bit.phoff = 0x0011;
+      |                           ^~~~~~
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp: In member function 'max30001_error_t MAX30001::setECGGain(max30001_ecg_gain_t)':
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:535:47: warning: left shift count >= width of type [-Wshift-count-overflow]
+  535 |     cnfg_ecg.all = (uint32_t)((regReadBuff[0] << 16) | (regReadBuff[1] << 8) | regReadBuff[2]);
+      |                                ~~~~~~~~~~~~~~~^~~~~
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp: In member function 'max30001_error_t MAX30001::enableECG()':
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:564:47: warning: left shift count >= width of type [-Wshift-count-overflow]
+  564 |     cnfg_gen.all = (uint32_t)((regReadBuff[0] << 16) | (regReadBuff[1] << 8) | regReadBuff[2]);
+      |                                ~~~~~~~~~~~~~~~^~~~~
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp: In member function 'max30001_error_t MAX30001::disableECG()':
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:591:47: warning: left shift count >= width of type [-Wshift-count-overflow]
+  591 |     cnfg_gen.all = (uint32_t)((regReadBuff[0] << 16) | (regReadBuff[1] << 8) | regReadBuff[2]);
+      |                                ~~~~~~~~~~~~~~~^~~~~
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp: In member function 'max30001_error_t MAX30001::enableBioZ()':
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:618:47: warning: left shift count >= width of type [-Wshift-count-overflow]
+  618 |     cnfg_gen.all = (uint32_t)((regReadBuff[0] << 16) | (regReadBuff[1] << 8) | regReadBuff[2]);
+      |                                ~~~~~~~~~~~~~~~^~~~~
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp: In member function 'max30001_error_t MAX30001::disableBioZ()':
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:645:47: warning: left shift count >= width of type [-Wshift-count-overflow]
+  645 |     cnfg_gen.all = (uint32_t)((regReadBuff[0] << 16) | (regReadBuff[1] << 8) | regReadBuff[2]);
+      |                                ~~~~~~~~~~~~~~~^~~~~
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp: In member function 'max30001_error_t MAX30001::setECGHighPassFilter(float)':
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:681:47: warning: left shift count >= width of type [-Wshift-count-overflow]
+  681 |     cnfg_ecg.all = (uint32_t)((regReadBuff[0] << 16) | (regReadBuff[1] << 8) | regReadBuff[2]);
+      |                                ~~~~~~~~~~~~~~~^~~~~
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp: In member function 'max30001_error_t MAX30001::setECGLowPassFilter(float)':
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:716:47: warning: left shift count >= width of type [-Wshift-count-overflow]
+  716 |     cnfg_ecg.all = (uint32_t)((regReadBuff[0] << 16) | (regReadBuff[1] << 8) | regReadBuff[2]);
+      |                                ~~~~~~~~~~~~~~~^~~~~
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp: In member function 'max30001_error_t MAX30001::enableInterrupt()':
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:783:47: warning: left shift count >= width of type [-Wshift-count-overflow]
+  783 |     cnfg_gen.all = (uint32_t)((regReadBuff[0] << 16) | (regReadBuff[1] << 8) | regReadBuff[2]);
+      |                                ~~~~~~~~~~~~~~~^~~~~
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp: In member function 'void MAX30001::BeginECGBioZ()':
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:942:27: warning: conversion from 'uint32_t' {aka 'long unsigned int'} to 'unsigned char:4' changes value from '17' to '1' [-Woverflow]
+  942 |     cnfg_bioz.bit.phoff = 0x0011;
+      |                           ^~~~~~
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:903:26: warning: variable 'cnfg_bmux' set but not used [-Wunused-but-set-variable]
+  903 |     max30001_cnfg_bmux_t cnfg_bmux;
+      |                          ^~~~~~~~~
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp: In member function 'void MAX30001::max30001ServiceAllInterrupts()':
+/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_max30001_arduino_library/src/protocentral_max30001.cpp:1226:21: warning: unused variable 'InitReset' [-Wunused-variable]
+ 1226 |     static uint32_t InitReset = 0;
+      |                     ^~~~~~~~~

@@ -1,0 +1,307 @@
+[  +29 ms] Unable to locate an Android SDK.
+[  +14 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[  +17 ms] Found 1 files which will be executed as Widget Tests.
+[  +10 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[   +3 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[  +77 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[  +21 ms] executing: [/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/] /home/user/.cache/open-projects/flutter/flutter/bin/cache/dart-sdk/bin/dart pub --suppress-analytics --directory . get --example
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 103.0.0 (109.0.0 available)
+  analyzer 13.3.0 (14.5.0 available)
+  bluez 0.8.3 (0.9.0 available)
+  cli_util 0.4.2 (0.6.0 available)
+  coverage 1.15.1 (1.16.0 available)
+  cross_file 0.3.5+5 (0.4.0 available)
+! csv 5.1.1 (overridden) (8.0.0 available)
+  cupertino_icons 1.0.9 (2.0.0 available)
+  dbus 0.7.15 (0.8.0 available)
+  equatable 2.1.0 (3.0.0 available)
+  fl_chart 0.71.0 (1.2.0 available)
+  flutter_form_builder 10.3.0+2 (11.0.0 available)
+  flutter_lints 5.0.0 (6.0.0 available)
+  go_router 14.8.1 (18.1.0 available)
+! intl 0.18.1 (overridden) (0.20.3 available)
+  lints 5.1.1 (6.1.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  mcumgr_dart 0.1.0 (0.4.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  package_info_plus 9.0.1 (10.2.2 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  permission_handler 12.0.3 (13.0.2 available)
+  permission_handler_android 13.0.1 (14.1.0 available)
+  screen_retriever 0.2.2 (0.3.0 available)
+  signal_strength_indicator 0.4.1 (0.5.0 available)
+  sn_progress_dialog 1.2.0 (2.0.0 available)
+  test 1.31.1 (1.33.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  test_core 0.6.18 (0.6.21 available)
+  universal_ble 2.3.0 (3.1.0 available)
+  win32 5.15.0 (6.4.0 available)
+  window_manager 0.4.3 (0.5.2 available)
+  xml 6.6.1 (7.1.0 available)
+Got dependencies!
+33 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+[ +516 ms] Found plugin window_manager at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/window_manager-0.4.3/
+[   +5 ms] Found plugin screen_retriever at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/screen_retriever-0.2.2/
+[   +1 ms] Found plugin screen_retriever_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/screen_retriever_windows-0.2.2/
+[   +3 ms] Found plugin screen_retriever_macos at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/screen_retriever_macos-0.2.2/
+[        ] Found plugin screen_retriever_linux at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/screen_retriever_linux-0.2.2/
+[   +1 ms] Found plugin url_launcher at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher-6.3.3/
+[   +1 ms] Found plugin url_launcher_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_windows-3.1.6/
+[   +2 ms] Found plugin url_launcher_web at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_web-2.4.3/
+[   +8 ms] Found plugin url_launcher_macos at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_macos-3.2.6/
+[   +1 ms] Found plugin url_launcher_linux at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_linux-3.2.3/
+[   +1 ms] Found plugin url_launcher_ios at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_ios-6.4.2/
+[   +2 ms] Found plugin url_launcher_android at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_android-6.3.33/
+[   +1 ms] Found plugin universal_ble at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/universal_ble-2.3.0/
+[  +10 ms] Found plugin permission_handler at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler-12.0.3/
+[   +1 ms] Found plugin permission_handler_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler_windows-0.2.2/
+[   +1 ms] Found plugin permission_handler_html at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler_html-0.1.4+1/
+[   +1 ms] Found plugin permission_handler_apple at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler_apple-9.6.2/
+[   +1 ms] Found plugin permission_handler_android at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler_android-13.0.1/
+[   +1 ms] Found plugin path_provider at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider-2.1.6/
+[   +1 ms] Found plugin path_provider_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+[   +3 ms] Found plugin path_provider_linux at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider_linux-2.2.2/
+[   +2 ms] Found plugin path_provider_foundation at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider_foundation-2.6.0/
+[   +3 ms] Found plugin path_provider_android at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider_android-2.3.1/
+[   +1 ms] Found plugin jni_flutter at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/jni_flutter-1.0.4+1/
+[   +1 ms] Found plugin jni at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/jni-1.1.0/
+[   +1 ms] Found plugin package_info_plus at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/package_info_plus-9.0.1/
+[  +10 ms] Found plugin flutter_libserialport at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/flutter_libserialport-0.6.0/
+[  +14 ms] Found plugin file_selector at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector-1.1.0/
+[   +1 ms] Found plugin file_selector_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+6/
+[   +3 ms] Found plugin file_selector_web at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_web-0.9.5/
+[   +1 ms] Found plugin file_selector_macos at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_macos-0.9.5+1/
+[   +1 ms] Found plugin file_selector_linux at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_linux-0.9.4+1/
+[        ] Found plugin file_selector_ios at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_ios-0.5.3+7/
+[   +1 ms] Found plugin file_selector_android at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_android-0.5.2+11/
+[   +1 ms] Found plugin desktop_window at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/desktop_window-0.4.4/
+[  +64 ms] Found plugin window_manager at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/window_manager-0.4.3/
+[        ] Found plugin screen_retriever at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/screen_retriever-0.2.2/
+[        ] Found plugin screen_retriever_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/screen_retriever_windows-0.2.2/
+[   +2 ms] Found plugin screen_retriever_macos at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/screen_retriever_macos-0.2.2/
+[        ] Found plugin screen_retriever_linux at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/screen_retriever_linux-0.2.2/
+[        ] Found plugin url_launcher at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher-6.3.3/
+[        ] Found plugin url_launcher_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_windows-3.1.6/
+[   +1 ms] Found plugin url_launcher_web at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_web-2.4.3/
+[        ] Found plugin url_launcher_macos at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_macos-3.2.6/
+[        ] Found plugin url_launcher_linux at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_linux-3.2.3/
+[        ] Found plugin url_launcher_ios at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_ios-6.4.2/
+[        ] Found plugin url_launcher_android at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_android-6.3.33/
+[        ] Found plugin universal_ble at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/universal_ble-2.3.0/
+[  +10 ms] Found plugin permission_handler at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler-12.0.3/
+[   +1 ms] Found plugin permission_handler_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler_windows-0.2.2/
+[   +1 ms] Found plugin permission_handler_html at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler_html-0.1.4+1/
+[        ] Found plugin permission_handler_apple at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler_apple-9.6.2/
+[        ] Found plugin permission_handler_android at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler_android-13.0.1/
+[        ] Found plugin path_provider at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider-2.1.6/
+[   +1 ms] Found plugin path_provider_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+[   +2 ms] Found plugin path_provider_linux at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider_linux-2.2.2/
+[   +1 ms] Found plugin path_provider_foundation at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider_foundation-2.6.0/
+[   +3 ms] Found plugin path_provider_android at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider_android-2.3.1/
+[   +1 ms] Found plugin jni_flutter at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/jni_flutter-1.0.4+1/
+[   +1 ms] Found plugin jni at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/jni-1.1.0/
+[   +1 ms] Found plugin package_info_plus at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/package_info_plus-9.0.1/
+[   +7 ms] Found plugin flutter_libserialport at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/flutter_libserialport-0.6.0/
+[  +10 ms] Found plugin file_selector at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector-1.1.0/
+[        ] Found plugin file_selector_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+6/
+[   +1 ms] Found plugin file_selector_web at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_web-0.9.5/
+[        ] Found plugin file_selector_macos at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_macos-0.9.5+1/
+[        ] Found plugin file_selector_linux at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_linux-0.9.4+1/
+[   +1 ms] Found plugin file_selector_ios at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_ios-0.5.3+7/
+[        ] Found plugin file_selector_android at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_android-0.5.2+11/
+[        ] Found plugin desktop_window at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/desktop_window-0.4.4/
+[   +8 ms] Generating /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+[  +11 ms] Skipping generating GeneratedPluginRegistrant.java because it is up-to-date.
+[   +3 ms] Skipping generating generated_plugin_registrant.h because it is up-to-date.
+[   +1 ms] Skipping generating generated_plugin_registrant.cc because it is up-to-date.
+[   +1 ms] Skipping generating generated_plugins.cmake because it is up-to-date.
+[   +2 ms] Skipping generating generated_plugin_registrant.h because it is up-to-date.
+[   +1 ms] Skipping generating generated_plugin_registrant.cc because it is up-to-date.
+[   +1 ms] Skipping generating generated_plugins.cmake because it is up-to-date.
+[   +2 ms] Skipping generating GeneratedPluginRegistrant.h because it is up-to-date.
+[   +1 ms] Skipping generating GeneratedPluginRegistrant.m because it is up-to-date.
+[   +1 ms] Skipping generating GeneratedPluginRegistrant.swift because it is up-to-date.
+[  +72 ms] Running build hooks for linux_x64.
+[  +67 ms] input.json contents:
+           {
+             "assets": {},
+             "config": {
+               "build_asset_types": [
+                 "code_assets/code"
+               ],
+               "extensions": {
+                 "code_assets": {
+                   "link_mode_preference": "dynamic",
+                   "target_architecture": "x64",
+                   "target_os": "linux"
+                 }
+               },
+               "linking_enabled": false
+             },
+             "out_dir_shared": "/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/.dart_tool/hooks_runner/shared/objective_c/build/",
+             "out_file": "/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/.dart_tool/hooks_runner/objective_c/6b4ebf10e7/output.json",
+             "package_name": "objective_c",
+             "package_root": "/home/user/.cache/open-projects/pub-cache/hosted/pub.dev/objective_c-9.6.2/",
+             "user_defines": {}
+           }
+[   +5 ms] output.json contents:
+           {
+             "assets_for_linking": {},
+             "status": "success",
+             "timestamp": "2026-10-18 08:16:39.000"
+           }
+[   +6 ms] Skipping build for objective_c in /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/.dart_tool/hooks_runner/objective_c/6b4ebf10e7/. Last build on 2026-10-18 08:16:39.000.
+[   +5 ms] Running build hooks for linux_x64 done.
+[   +8 ms] Writing native assets json to file:///home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/build/native_assets/linux/native_assets.json.
+[   +1 ms] Writing /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/build/native_assets/linux/native_assets.json done.
+[ +165 ms] running test package with arguments: [--no-color, --chain-stack-traces, --, file:///home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_banner_test.dart?]
+00:00 +0: loading /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_banner_test.dart
+[ +153 ms] test 0: starting test /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/test/update_banner_test.dart
+[   +3 ms] Stopping scan for flutter_test_config.dart; found project root at /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview
+[   +3 ms] Compiler will use the following file as its incremental dill file: /tmp/flutter_tools.PWSVRE/flutter_test_compiler.YTEUZD/output.dill
+[        ] Listening to compiler controller...
+[   +9 ms] Compiling file:///tmp/flutter_tools.PWSVRE/flutter_test_listener.ANKPOT/listener.dart
+[  +73 ms] Found plugin window_manager at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/window_manager-0.4.3/
+[   +2 ms] Found plugin screen_retriever at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/screen_retriever-0.2.2/
+[        ] Found plugin screen_retriever_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/screen_retriever_windows-0.2.2/
+[   +2 ms] Found plugin screen_retriever_macos at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/screen_retriever_macos-0.2.2/
+[        ] Found plugin screen_retriever_linux at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/screen_retriever_linux-0.2.2/
+[        ] Found plugin url_launcher at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher-6.3.3/
+[        ] Found plugin url_launcher_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_windows-3.1.6/
+[   +1 ms] Found plugin url_launcher_web at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_web-2.4.3/
+[   +1 ms] Found plugin url_launcher_macos at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_macos-3.2.6/
+[        ] Found plugin url_launcher_linux at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_linux-3.2.3/
+[        ] Found plugin url_launcher_ios at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_ios-6.4.2/
+[        ] Found plugin url_launcher_android at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/url_launcher_android-6.3.33/
+[        ] Found plugin universal_ble at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/universal_ble-2.3.0/
+[   +7 ms] Found plugin permission_handler at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler-12.0.3/
+[        ] Found plugin permission_handler_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler_windows-0.2.2/
+[   +1 ms] Found plugin permission_handler_html at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler_html-0.1.4+1/
+[        ] Found plugin permission_handler_apple at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler_apple-9.6.2/
+[        ] Found plugin permission_handler_android at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/permission_handler_android-13.0.1/
+[        ] Found plugin path_provider at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider-2.1.6/
+[        ] Found plugin path_provider_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+[   +1 ms] Found plugin path_provider_linux at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider_linux-2.2.2/
+[   +1 ms] Found plugin path_provider_foundation at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider_foundation-2.6.0/
+[   +3 ms] Found plugin path_provider_android at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/path_provider_android-2.3.1/
+[        ] Found plugin jni_flutter at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/jni_flutter-1.0.4+1/
+[   +1 ms] Found plugin jni at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/jni-1.1.0/
+[   +1 ms] Found plugin package_info_plus at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/package_info_plus-9.0.1/
+[   +7 ms] Found plugin flutter_libserialport at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/flutter_libserialport-0.6.0/
+[   +9 ms] Found plugin file_selector at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector-1.1.0/
+[        ] Found plugin file_selector_windows at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+6/
+[   +1 ms] Found plugin file_selector_web at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_web-0.9.5/
+[   +2 ms] Found plugin file_selector_macos at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_macos-0.9.5+1/
+[   +1 ms] Found plugin file_selector_linux at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_linux-0.9.4+1/
+[        ] Found plugin file_selector_ios at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_ios-0.5.3+7/
+[        ] Found plugin file_selector_android at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/file_selector_android-0.5.2+11/
+[        ] Found plugin desktop_window at /home/user/.cache/open-projects/pub-cache/hosted/pub.dev/desktop_window-0.4.4/
+[   +5 ms] Skipping generating dart_plugin_registrant.dart because it is up-to-date.
+[   +4 ms] /home/user/.cache/open-projects/flutter/flutter/bin/cache/dart-sdk/bin/dartaotruntime /home/user/.cache/open-projects/flutter/flutter/bin/cache/dart-sdk/bin/snapshots/frontend_server_aot.dart.snapshot --sdk-root /home/user/.cache/open-projects/flutter/flutter/bin/cache/artifacts/engine/common/flutter_patched_sdk/ --incremental --no-print-incremental-dependencies --target=flutter --experimental-emit-debug-metadata -DFLUTTER_BUILD_NAME=3.3.0 -DFLUTTER_BUILD_NUMBER=136 -DFLUTTER_VERSION=3.47.7 -DFLUTTER_CHANNEL=stable -DFLUTTER_GIT_URL=https://github.com/flutter/flutter.git -DFLUTTER_FRAMEWORK_REVISION=abaf9c5237 -DFLUTTER_ENGINE_REVISION=deb287481e -DFLUTTER_DART_VERSION=3.13.5 --output-dill /tmp/flutter_tools.PWSVRE/flutter_test_compiler.YTEUZD/output.dill --packages /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/.dart_tool/package_config.json -Ddart.vm.profile=false -Ddart.vm.product=false --enable-asserts --track-widget-creation --initialize-from-dill /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/build/test_cache/build/f83fe1989bd8dd3873fe27b099d26dda.cache.dill.track.dill --verbosity=error --enable-experiment=alternative-invalidation-strategy
+[  +17 ms] <- compile file:///tmp/flutter_tools.PWSVRE/flutter_test_listener.ANKPOT/listener.dart
+[+1981 ms] <- accept
+[   +2 ms] <- reset
+[        ] Compiling file:///tmp/flutter_tools.PWSVRE/flutter_test_listener.ANKPOT/listener.dart took 2148ms
+[   +2 ms] test 0: starting test device
+[  +10 ms] test 0: awaiting connection to test device
+[   +1 ms] test 0: VM Service uri is not available
+[   +7 ms] test 0: test harness socket server is running at port:46793
+[   +1 ms] Using this directory for fonts configuration: /tmp/flutter_tools.PWSVRE/flutter_test_fonts.RNHROG
+[   +1 ms] test 0: Starting flutter_tester process with command=[/home/user/.cache/open-projects/flutter/flutter/bin/cache/artifacts/engine/linux-x64/flutter_tester, --disable-vm-service, --enable-checked-mode, --verify-entry-points, --enable-software-rendering, --skia-deterministic-rendering, --enable-dart-profiling, --non-interactive, --use-test-fonts, --disable-asset-fonts, --packages=/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/.dart_tool/package_config.json, --flutter-assets-dir=/home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/build/unit_test_assets, /tmp/flutter_tools.PWSVRE/flutter_test_listener.ANKPOT/listener.dart.dill], environment={FLUTTER_TEST: true, FONTCONFIG_FILE: /tmp/flutter_tools.PWSVRE/flutter_test_fonts.RNHROG/fonts.conf, SERVER_PORT: 46793, APP_NAME: OpenView, UNIT_TEST_ASSETS: /home/user/.cache/open-projects/src/Open-Source-Projects-Collection/sources/Protocentral__protocentral_openview/build/unit_test_assets}
+[  +12 ms] test 0: Started flutter_tester process at pid 13223
+[+20265 ms] test 0: connected to test device, now awaiting test result
+[        ] test 0: Waiting for test harness or tests to finish
+00:00 +0: collapses to nothing when there is no update
+00:00 +1: shows the version and the current one when available
+00:00 +2: lays out without overflow on a narrow window
+00:00 +3: dismiss hides the banner for the session
+00:00 +4: details dialog renders flattened release notes
+00:01 +5: skip this version clears the banner
+[+1394 ms] test 0: Test harness is no longer needed by test process
+[        ] test 0: finished
+[   +1 ms] test 0: cleaning up...
+[        ] test 0: ensuring test device is terminated.
+[        ] test 0: Terminating flutter_tester process
+[        ] test 0: Shutting down DevTools server
+[        ] test 0: Test process is no longer needed by test harness
+[   +1 ms] test 0: Shutting down test harness socket server
+[  +11 ms] test 0: flutter_tester process at pid 13223 exited with code=-9
+[        ] test 0: deleting temporary directory
+[   +3 ms] test 0: finished
+00:01 +6: All tests passed!
+[   +6 ms] Deleting /tmp/flutter_tools.PWSVRE/flutter_test_compiler.YTEUZD...
+[   +5 ms] killing pid 13215
+[  +22 ms] Deleting /tmp/flutter_tools.PWSVRE/flutter_test_fonts.RNHROG...
+[   +3 ms] test package returned with exit code 0
+[   +1 ms] Runtime for phase TestRunner: Wall-clock: 0:00:24.086594; combined: 0:00:24.086621.
+[        ] Runtime for phase Compile: Wall-clock: 0:00:02.150314; combined: 0:00:02.150341.
+[        ] Runtime for phase Run: Wall-clock: 0:00:21.690856; combined: 0:00:21.690860.
+[        ] Runtime for phase CoverageTotal: Wall-clock: 0:00:00.000000; combined: 0:00:00.000000.
+[        ] Runtime for phase CoverageCollect: Wall-clock: 0:00:00.000000; combined: 0:00:00.000000.
+[        ] Runtime for phase CoverageParseJson: Wall-clock: 0:00:00.000000; combined: 0:00:00.000000.
+[        ] Runtime for phase CoverageAddHitmap: Wall-clock: 0:00:00.000000; combined: 0:00:00.000000.
+[        ] Runtime for phase CoverageDataCollect: Wall-clock: 0:00:00.000000; combined: 0:00:00.000000.
+[        ] Runtime for phase WatcherFinishedTest: Wall-clock: 0:00:00.000663; combined: 0:00:00.000664.
+[   +1 ms] "flutter test" took 25,319ms.
+[   +1 ms] Running 3 shutdown hooks
+[   +1 ms] Shutdown hooks complete
+[        ] exiting with code 0

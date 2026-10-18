@@ -1,0 +1,455 @@
+import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { runHealthchecks, dispatchExports } from '../src/orchestrator.js';
+import type { Exporter, ExportContext, ExportResult } from '../src/interfaces/exporter.js';
+import type { BodyComposition } from '../src/interfaces/scale-adapter.js';
+
+const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+beforeEach(() => {
+  consoleSpy.mockClear();
+});
+
+const SAMPLE_PAYLOAD: BodyComposition = {
+  weight: 75.5,
+  impedance: 500,
+  bmi: 22.5,
+  bodyFatPercent: 18.2,
+  waterPercent: 55.1,
+  boneMass: 3.1,
+  muscleMass: 58.4,
+  visceralFat: 5,
+  physiqueRating: 5,
+  bmr: 1650,
+  metabolicAge: 28,
+};
+
+function mockExporter(
+  name: string,
+  exportResult: ExportResult | Error = { success: true },
+  healthcheckResult?: ExportResult | Error,
+): Exporter {
+  const exporter: Exporter = {
+    name,
+    export: vi.fn<() => Promise<ExportResult>>().mockImplementation(async () => {
+      if (exportResult instanceof Error) throw exportResult;
+      return exportResult;
+    }),
+  };
+  if (healthcheckResult !== undefined) {
+    exporter.healthcheck = vi.fn<() => Promise<ExportResult>>().mockImplementation(async () => {
+      if (healthcheckResult instanceof Error) throw healthcheckResult;
+      return healthcheckResult;
+    });
+  }
+  return exporter;
+}
+
+// ─── runHealthchecks ────────────────────────────────────────────────────────
+
+describe('runHealthchecks()', () => {
+  it('does nothing when no exporters have healthcheck', async () => {
+    const e1 = mockExporter('garmin'); // no healthcheck
+    await runHealthchecks([e1]);
+    // No error — just returns
+  });
+
+  it('runs healthchecks on exporters that support them', async () => {
+    const e1 = mockExporter('mqtt', { success: true }, { success: true });
+    const e2 = mockExporter('webhook', { success: true }, { success: true });
+    await runHealthchecks([e1, e2]);
+    expect(e1.healthcheck).toHaveBeenCalledOnce();
+    expect(e2.healthcheck).toHaveBeenCalledOnce();
+  });
+
+  it('skips exporters without healthcheck', async () => {
+    const e1 = mockExporter('garmin'); // no healthcheck
+    const e2 = mockExporter('mqtt', { success: true }, { success: true });
+    await runHealthchecks([e1, e2]);
+    expect(e2.healthcheck).toHaveBeenCalledOnce();
+  });
+
+  it('logs warning on healthcheck failure (returned error)', async () => {
+    const e1 = mockExporter('mqtt', { success: true }, { success: false, error: 'timeout' });
+    await runHealthchecks([e1]);
+    expect(e1.healthcheck).toHaveBeenCalledOnce();
+    // Should not throw — healthcheck failures are non-fatal
+  });
+
+  it('logs warning on healthcheck exception', async () => {
+    const e1 = mockExporter('mqtt', { success: true }, new Error('connection refused'));
+    await runHealthchecks([e1]);
+    expect(e1.healthcheck).toHaveBeenCalledOnce();
+  });
+
+  it('runs healthchecks in parallel', async () => {
+    let concurrent = 0;
+    let maxConcurrent = 0;
+
+    const makeSlowHealthcheck = (name: string): Exporter => ({
+      name,
+      export: vi.fn(async () => ({ success: true })),
+      healthcheck: vi.fn(async () => {
+        concurrent++;
+        maxConcurrent = Math.max(maxConcurrent, concurrent);
+        await new Promise((r) => setTimeout(r, 50));
+        concurrent--;
+        return { success: true };
+      }),
+    });
+
+    await runHealthchecks([makeSlowHealthcheck('a'), makeSlowHealthcheck('b')]);
+    expect(maxConcurrent).toBe(2);
+  });
+});
+
+// ─── dispatchExports ────────────────────────────────────────────────────────
+
+describe('dispatchExports()', () => {
+  it('returns success true with details when all exports succeed', async () => {
+    const e1 = mockExporter('garmin');
+    const e2 = mockExporter('mqtt');
+    const result = await dispatchExports([e1, e2], SAMPLE_PAYLOAD);
+    expect(result.success).toBe(true);
+    expect(result.details).toEqual([
+      { name: 'garmin', ok: true },
+      { name: 'mqtt', ok: true },
+    ]);
+    expect(e1.export).toHaveBeenCalledWith(SAMPLE_PAYLOAD);
+    expect(e2.export).toHaveBeenCalledWith(SAMPLE_PAYLOAD);
+  });
+
+  it('returns success true when at least one export succeeds (partial failure)', async () => {
+    const e1 = mockExporter('garmin', { success: false, error: 'auth failed' });
+    const e2 = mockExporter('mqtt');
+    const result = await dispatchExports([e1, e2], SAMPLE_PAYLOAD);
+    expect(result.success).toBe(true);
+    expect(result.details).toEqual([
+      { name: 'garmin', ok: false, error: 'auth failed' },
+      { name: 'mqtt', ok: true },
+    ]);
+  });
+
+  it('returns success false when all exports fail (returned error)', async () => {
+    const e1 = mockExporter('garmin', { success: false, error: 'auth failed' });
+    const e2 = mockExporter('mqtt', { success: false, error: 'timeout' });
+    const result = await dispatchExports([e1, e2], SAMPLE_PAYLOAD);
+    expect(result.success).toBe(false);
+    expect(result.details).toHaveLength(2);
+    expect(result.details[0]).toEqual({ name: 'garmin', ok: false, error: 'auth failed' });
+    expect(result.details[1]).toEqual({ name: 'mqtt', ok: false, error: 'timeout' });
+  });
+
+  it('returns success false when all exports throw', async () => {
+    const e1 = mockExporter('garmin', new Error('crash'));
+    const e2 = mockExporter('mqtt', new Error('boom'));
+    const result = await dispatchExports([e1, e2], SAMPLE_PAYLOAD);
+    expect(result.success).toBe(false);
+    expect(result.details).toEqual([
+      { name: 'garmin', ok: false, error: 'crash' },
+      { name: 'mqtt', ok: false, error: 'boom' },
+    ]);
+  });
+
+  it('returns success true with mixed: one succeeds, one throws, one returns error', async () => {
+    const e1 = mockExporter('garmin', new Error('crash'));
+    const e2 = mockExporter('mqtt');
+    const e3 = mockExporter('webhook', { success: false, error: 'HTTP 500' });
+    const result = await dispatchExports([e1, e2, e3], SAMPLE_PAYLOAD);
+    expect(result.success).toBe(true);
+    expect(result.details).toEqual([
+      { name: 'garmin', ok: false, error: 'crash' },
+      { name: 'mqtt', ok: true },
+      { name: 'webhook', ok: false, error: 'HTTP 500' },
+    ]);
+  });
+
+  it('returns success true with single successful exporter', async () => {
+    const e1 = mockExporter('garmin');
+    const result = await dispatchExports([e1], SAMPLE_PAYLOAD);
+    expect(result.success).toBe(true);
+    expect(result.details).toEqual([{ name: 'garmin', ok: true }]);
+    expect(e1.export).toHaveBeenCalledOnce();
+  });
+
+  it('returns success false with single failing exporter', async () => {
+    const e1 = mockExporter('garmin', { success: false, error: 'fail' });
+    const result = await dispatchExports([e1], SAMPLE_PAYLOAD);
+    expect(result.success).toBe(false);
+    expect(result.details).toEqual([{ name: 'garmin', ok: false, error: 'fail' }]);
+  });
+
+  it('runs exports in parallel', async () => {
+    let concurrent = 0;
+    let maxConcurrent = 0;
+
+    const makeSlowExporter = (name: string): Exporter => ({
+      name,
+      export: vi.fn(async () => {
+        concurrent++;
+        maxConcurrent = Math.max(maxConcurrent, concurrent);
+        await new Promise((r) => setTimeout(r, 50));
+        concurrent--;
+        return { success: true };
+      }),
+    });
+
+    await dispatchExports([makeSlowExporter('a'), makeSlowExporter('b')], SAMPLE_PAYLOAD);
+    expect(maxConcurrent).toBe(2);
+  });
+
+  it('passes full BodyComposition payload to each exporter', async () => {
+    const e1 = mockExporter('garmin');
+    await dispatchExports([e1], SAMPLE_PAYLOAD);
+    expect(e1.export).toHaveBeenCalledWith(SAMPLE_PAYLOAD);
+    const arg = vi.mocked(e1.export).mock.calls[0][0];
+    expect(arg).toHaveProperty('weight', 75.5);
+    expect(arg).toHaveProperty('impedance', 500);
+    expect(arg).toHaveProperty('metabolicAge', 28);
+  });
+
+  it('returns success true with empty details when no exporters are configured', async () => {
+    const result = await dispatchExports([], SAMPLE_PAYLOAD);
+    expect(result.success).toBe(true);
+    expect(result.details).toEqual([]);
+  });
+});
+
+// ─── dispatchExports: reportsExports ────────────────────────────────────────
+
+describe('dispatchExports() reportsExports', () => {
+  const context: ExportContext = { userName: 'Dad', userSlug: 'dad' };
+
+  function reporter(
+    name: string,
+    exportResult: ExportResult | Error = { success: true },
+  ): Exporter {
+    return { ...mockExporter(name, exportResult), reportsExports: true };
+  }
+
+  it('runs reporting exporters after the others and hands them the outcomes', async () => {
+    const order: string[] = [];
+    const slow: Exporter = {
+      name: 'garmin',
+      export: vi.fn(async () => {
+        await new Promise((r) => setTimeout(r, 50));
+        order.push('garmin');
+        return { success: true };
+      }),
+    };
+    const failing = mockExporter('influxdb', { success: false, error: 'HTTP 401' });
+    const ntfy = reporter('ntfy');
+    vi.mocked(ntfy.export).mockImplementation(async () => {
+      order.push('ntfy');
+      return { success: true };
+    });
+
+    const result = await dispatchExports([ntfy, slow, failing], SAMPLE_PAYLOAD, context);
+
+    expect(order).toEqual(['garmin', 'ntfy']);
+    expect(ntfy.export).toHaveBeenCalledWith(SAMPLE_PAYLOAD, {
+      ...context,
+      exportResults: [
+        { name: 'garmin', ok: true },
+        { name: 'influxdb', ok: false, error: 'HTTP 401' },
+      ],
+    });
+    expect(result.success).toBe(true);
+    expect(result.details).toEqual([
+      { name: 'garmin', ok: true },
+      { name: 'influxdb', ok: false, error: 'HTTP 401' },
+      { name: 'ntfy', ok: true },
+    ]);
+  });
+
+  it('still notifies when every other exporter failed', async () => {
+    const garmin = mockExporter('garmin', new Error('timeout'));
+    const ntfy = reporter('ntfy');
+    const result = await dispatchExports([garmin, ntfy], SAMPLE_PAYLOAD, context);
+
+    expect(ntfy.export).toHaveBeenCalledWith(SAMPLE_PAYLOAD, {
+      ...context,
+      exportResults: [{ name: 'garmin', ok: false, error: 'timeout' }],
+    });
+    // The notification is not a delivered export: it must not mask the failure.
+    expect(result.success).toBe(false);
+  });
+
+  it('decides success from the reporters when nothing else is configured', async () => {
+    const ok = await dispatchExports([reporter('ntfy')], SAMPLE_PAYLOAD, context);
+    expect(ok.success).toBe(true);
+    const failed = await dispatchExports(
+      [reporter('ntfy', { success: false, error: 'HTTP 500' })],
+      SAMPLE_PAYLOAD,
+      context,
+    );
+    expect(failed.success).toBe(false);
+  });
+
+  it('returns success false when the others and the reporter all fail', async () => {
+    const garmin = mockExporter('garmin', { success: false, error: 'auth failed' });
+    const ntfy = reporter('ntfy', { success: false, error: 'HTTP 500' });
+    const result = await dispatchExports([garmin, ntfy], SAMPLE_PAYLOAD, context);
+    expect(result.success).toBe(false);
+  });
+
+  it('passes an empty outcome list when only reporting exporters are configured', async () => {
+    const ntfy = reporter('ntfy');
+    await dispatchExports([ntfy], SAMPLE_PAYLOAD, context);
+    expect(ntfy.export).toHaveBeenCalledWith(SAMPLE_PAYLOAD, { ...context, exportResults: [] });
+  });
+
+  it('does not expose the outcomes to exporters that do not report', async () => {
+    const garmin = mockExporter('garmin');
+    const ntfy = reporter('ntfy');
+    await dispatchExports([garmin, ntfy], SAMPLE_PAYLOAD, context);
+    expect(garmin.export).toHaveBeenCalledWith(SAMPLE_PAYLOAD, context);
+  });
+});
+
+// ─── dispatchExports: historical reading + supportsBackdate ─────────────────
+
+describe('dispatchExports() historical reading filter', () => {
+  // D027: `historical` marks a stored record. A timestamp alone no longer
+  // does, because the processor stamps live readings with their measurement
+  // time too.
+  const HIST_CTX: ExportContext = {
+    userName: 'Dad',
+    userSlug: 'dad',
+    timestamp: new Date('2025-07-01T07:15:00Z'),
+    historical: true,
+  };
+
+  it('skips exporters without supportsBackdate on historical reading', async () => {
+    const garmin: Exporter = {
+      name: 'garmin',
+      supportsBackdate: true,
+      export: vi.fn(async () => ({ success: true })),
+    };
+    const mqtt: Exporter = {
+      name: 'mqtt',
+      export: vi.fn(async () => ({ success: true })),
+    };
+
+    const result = await dispatchExports([garmin, mqtt], SAMPLE_PAYLOAD, HIST_CTX);
+
+    expect(garmin.export).toHaveBeenCalledOnce();
+    expect(mqtt.export).not.toHaveBeenCalled();
+    expect(result.success).toBe(true);
+    expect(result.details).toEqual([{ name: 'garmin', ok: true }]);
+    expect(result.skipped).toBe(1);
+  });
+
+  it('dispatches to all exporters on live reading regardless of supportsBackdate', async () => {
+    const garmin: Exporter = {
+      name: 'garmin',
+      supportsBackdate: true,
+      export: vi.fn(async () => ({ success: true })),
+    };
+    const mqtt: Exporter = {
+      name: 'mqtt',
+      export: vi.fn(async () => ({ success: true })),
+    };
+
+    const liveCtx: ExportContext = { userName: 'Dad', userSlug: 'dad' };
+    const result = await dispatchExports([garmin, mqtt], SAMPLE_PAYLOAD, liveCtx);
+
+    expect(garmin.export).toHaveBeenCalledOnce();
+    expect(mqtt.export).toHaveBeenCalledOnce();
+    expect(result.skipped).toBeUndefined();
+  });
+
+  it('returns success true with empty details when all exporters skip on historical', async () => {
+    const mqtt: Exporter = {
+      name: 'mqtt',
+      export: vi.fn(async () => ({ success: true })),
+    };
+    const ntfy: Exporter = {
+      name: 'ntfy',
+      export: vi.fn(async () => ({ success: true })),
+    };
+
+    const result = await dispatchExports([mqtt, ntfy], SAMPLE_PAYLOAD, HIST_CTX);
+
+    expect(mqtt.export).not.toHaveBeenCalled();
+    expect(ntfy.export).not.toHaveBeenCalled();
+    expect(result.success).toBe(true);
+    expect(result.details).toEqual([]);
+    expect(result.skipped).toBe(2);
+  });
+});
+
+// D027, F-04, F-06: the processor now sends the measurement time with EVERY
+// dispatch. The filter used to key on the mere presence of a timestamp, so
+// stamping a live reading would have silently stopped live MQTT and webhooks.
+describe('dispatchExports() live reading that carries its measurement time', () => {
+  it('does not treat a timestamp without `historical` as a stored record', async () => {
+    const garmin: Exporter = {
+      name: 'garmin',
+      supportsBackdate: true,
+      export: vi.fn(async () => ({ success: true as const })),
+    };
+    const mqtt: Exporter = {
+      name: 'mqtt',
+      export: vi.fn(async () => ({ success: true as const })),
+    };
+    const ctx: ExportContext = { userSlug: 'dad', timestamp: new Date('2026-10-04T07:00:00Z') };
+
+    const result = await dispatchExports([garmin, mqtt], SAMPLE_PAYLOAD, ctx);
+
+    expect(mqtt.export).toHaveBeenCalledWith(SAMPLE_PAYLOAD, ctx);
+    expect(garmin.export).toHaveBeenCalledWith(SAMPLE_PAYLOAD, ctx);
+    expect(result.skipped).toBeUndefined();
+  });
+});
+
+// D029: one list may hold two exporters of one type, so the queue needs to
+// know WHICH instance failed. Names cannot say it; the attempts can.
+describe('dispatchExports() attempts', () => {
+  it('pairs each outcome with the instance that produced it', async () => {
+    const first = mockExporter('webhook', { success: true });
+    const second = mockExporter('webhook', { success: false, error: 'HTTP 500' });
+
+    const result = await dispatchExports([first, second], SAMPLE_PAYLOAD, { userSlug: 'dad' });
+
+    expect(result.attempts.map((a) => a.exporter)).toEqual([first, second]);
+    expect(result.attempts[1].detail).toEqual({ name: 'webhook', ok: false, error: 'HTTP 500' });
+  });
+});
+
+// E-10: at-most-once stays (D014), but a shutdown during an export must say
+// which reading and which exports it may have cut off.
+describe('dispatchExports() shutdown during an export', () => {
+  it('names the reading and the exports still running when the app is told to stop', async () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const ac = new AbortController();
+    let release!: () => void;
+    const slow: Exporter = {
+      name: 'garmin',
+      export: vi.fn(
+        () =>
+          new Promise<ExportResult>((resolve) => {
+            release = () => resolve({ success: true });
+          }),
+      ),
+    };
+    const fast = mockExporter('mqtt', { success: true });
+
+    const pending = dispatchExports([fast, slow], SAMPLE_PAYLOAD, undefined, {
+      signal: ac.signal,
+      label: '82.40 kg for Dad measured at 2026-10-04T07:00:00.000Z',
+    });
+    await vi.waitFor(() => expect(slow.export).toHaveBeenCalled());
+    await Promise.resolve();
+    ac.abort();
+    release();
+    await pending;
+
+    const lines = warn.mock.calls.map((c) => c.map(String).join(' ')).join(' | ');
+    warn.mockRestore();
+    expect(lines).toMatch(
+      /Shutdown requested while exporting 82\.40 kg for Dad measured at 2026-10-04/,
+    );
+    expect(lines).toMatch(/\[garmin\] had not finished/);
+    expect(lines).not.toMatch(/mqtt/);
+  });
+});

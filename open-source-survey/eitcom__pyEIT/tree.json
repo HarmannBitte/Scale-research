@@ -1,0 +1,1132 @@
+{
+  "sha": "106863ab123e7763e6cdad0d43b338672731121c",
+  "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/106863ab123e7763e6cdad0d43b338672731121c",
+  "tree": [
+    {
+      "path": ".code2pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92802c451a27911859a92b6caf11b5dfec310081",
+      "size": 636,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/92802c451a27911859a92b6caf11b5dfec310081"
+    },
+    {
+      "path": ".flake8",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1629cadb20978ee54a79427af50c785d9813ea86",
+      "size": 126,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/1629cadb20978ee54a79427af50c785d9813ea86"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef3a2a513ae320995d1dd25b25015eb557ccc73c",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/ef3a2a513ae320995d1dd25b25015eb557ccc73c"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc38e380b2cd21d75362c3cc9e166cedc5a32e40",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/cc38e380b2cd21d75362c3cc9e166cedc5a32e40"
+    },
+    {
+      "path": ".github/workflows/black.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a821c77db7d0d24d4980c06b74154d60f963b6a",
+      "size": 257,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/0a821c77db7d0d24d4980c06b74154d60f963b6a"
+    },
+    {
+      "path": ".github/workflows/pyeit.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc62d3dfe135afc01b801b9bbe21a78f9f40c7a4",
+      "size": 1227,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/cc62d3dfe135afc01b801b9bbe21a78f9f40c7a4"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6801669c71cfa8200a739d57cd4ec13d261c8bd",
+      "size": 473,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/b6801669c71cfa8200a739d57cd4ec13d261c8bd"
+    },
+    {
+      "path": "LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57e7fa5c2c447a821fe2c9517fc1ef467648e93d",
+      "size": 1802,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/57e7fa5c2c447a821fe2c9517fc1ef467648e93d"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be555f3a560d93644198b0b2b2bf2744f3ee3680",
+      "size": 6240,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/be555f3a560d93644198b0b2b2bf2744f3ee3680"
+    },
+    {
+      "path": "doc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ff0d10d1e88108c352b75bb5abeebda32c4cba09",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/ff0d10d1e88108c352b75bb5abeebda32c4cba09"
+    },
+    {
+      "path": "doc/images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b9ac287675ba7f24161d5cc9acfc359ffb7c6b52",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/b9ac287675ba7f24161d5cc9acfc359ffb7c6b52"
+    },
+    {
+      "path": "doc/images/demo_bp.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c2ec5c418f8f62e4b48683d2ec76cb4ef0d0433",
+      "size": 25886,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/3c2ec5c418f8f62e4b48683d2ec76cb4ef0d0433"
+    },
+    {
+      "path": "doc/images/demo_greit.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cac09525198a5012928b2b75764b3affe7506bc",
+      "size": 22049,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/6cac09525198a5012928b2b75764b3affe7506bc"
+    },
+    {
+      "path": "doc/images/demo_jac.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6adbe05a6b0ad27e4e3b6d50ec8f474239eebe14",
+      "size": 24188,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/6adbe05a6b0ad27e4e3b6d50ec8f474239eebe14"
+    },
+    {
+      "path": "doc/images/demo_static.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3c2196c6cc044d30c75c7b98f1125591046f1ed",
+      "size": 31340,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/f3c2196c6cc044d30c75c7b98f1125591046f1ed"
+    },
+    {
+      "path": "doc/images/logo.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07a031ea1faf3128d596c6ac71f8054e354630b8",
+      "size": 7853,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/07a031ea1faf3128d596c6ac71f8054e354630b8"
+    },
+    {
+      "path": "doc/images/logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ddf06c4f47ce504285a84ff30e011d17ca5a341",
+      "size": 5563,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/0ddf06c4f47ce504285a84ff30e011d17ca5a341"
+    },
+    {
+      "path": "doc/images/template.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3cdb71ad22bf8d4bf93c5b901dd34738e3cc189",
+      "size": 13836,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/c3cdb71ad22bf8d4bf93c5b901dd34738e3cc189"
+    },
+    {
+      "path": "doc/images/template.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d76f3b303350417a643e23e86ebba9f150e87747",
+      "size": 54218,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/d76f3b303350417a643e23e86ebba9f150e87747"
+    },
+    {
+      "path": "doc/pyEIT-data_format.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed0be9c912d0b79702bd1f7c9dbbf95714f33294",
+      "size": 49910,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/ed0be9c912d0b79702bd1f7c9dbbf95714f33294"
+    },
+    {
+      "path": "environment.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c1b91effb8cd2a67ed64de71a1f46af4e45baec",
+      "size": 230,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/0c1b91effb8cd2a67ed64de71a1f46af4e45baec"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e442a0cd1ee652b520314d7969fb7f511e110053",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/e442a0cd1ee652b520314d7969fb7f511e110053"
+    },
+    {
+      "path": "examples/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "examples/eit_dynamic_bp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bce17d36dda7fc2507b32b67508f984b1fa06b4",
+      "size": 2154,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/9bce17d36dda7fc2507b32b67508f984b1fa06b4"
+    },
+    {
+      "path": "examples/eit_dynamic_greit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42372d5021129f9bee2f93dcedc2350e3e32e7f5",
+      "size": 2655,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/42372d5021129f9bee2f93dcedc2350e3e32e7f5"
+    },
+    {
+      "path": "examples/eit_dynamic_jac.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83ab2a427c35ba1a4b9a11c9e67df7fdc79b2563",
+      "size": 2549,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/83ab2a427c35ba1a4b9a11c9e67df7fdc79b2563"
+    },
+    {
+      "path": "examples/eit_dynamic_jac3d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "141daa8d49a97e1e8dc632e64993f07b63785883",
+      "size": 1914,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/141daa8d49a97e1e8dc632e64993f07b63785883"
+    },
+    {
+      "path": "examples/eit_dynamic_stack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f81d45adcc6f3c21afc6a5f4345d83b3857bcd77",
+      "size": 2192,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/f81d45adcc6f3c21afc6a5f4345d83b3857bcd77"
+    },
+    {
+      "path": "examples/eit_dynamic_svd.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28e55e5da2b15405fa922061db89bb138243652f",
+      "size": 2502,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/28e55e5da2b15405fa922061db89bb138243652f"
+    },
+    {
+      "path": "examples/eit_external_mesh.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b59e08017ade3c351621bb9c0dd3a98fc7847bd3",
+      "size": 1880,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/b59e08017ade3c351621bb9c0dd3a98fc7847bd3"
+    },
+    {
+      "path": "examples/eit_io_et3.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcaacc78fe5cf7cdd6532ca7fd4e03b6a3d760fe",
+      "size": 1289,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/bcaacc78fe5cf7cdd6532ca7fd4e03b6a3d760fe"
+    },
+    {
+      "path": "examples/eit_sensitivity2d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59a8f73fe7fcecc958756f88d7b2bc3a58ee769d",
+      "size": 2739,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/59a8f73fe7fcecc958756f88d7b2bc3a58ee769d"
+    },
+    {
+      "path": "examples/eit_static_GN_3D.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6903aca10621945d2f3875173167791d77a20d21",
+      "size": 1925,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/6903aca10621945d2f3875173167791d77a20d21"
+    },
+    {
+      "path": "examples/eit_static_jac.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f75ccb1f553d6a8b11961d01383e777be932abd1",
+      "size": 3043,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/f75ccb1f553d6a8b11961d01383e777be932abd1"
+    },
+    {
+      "path": "examples/eit_system_performance_simulated.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cdfeebb2141bedc2e26b08b4caaeba0a421962c",
+      "size": 8254,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/7cdfeebb2141bedc2e26b08b4caaeba0a421962c"
+    },
+    {
+      "path": "examples/example_data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8dacd73832ef7ae1855ac998373528223dd9a83",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/a8dacd73832ef7ae1855ac998373528223dd9a83"
+    },
+    {
+      "path": "examples/example_data/mesha06_bumpychestslice_radiological_view_both_lungs_1_0-3.ply",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b357917f76b31960b4f4d64cf3bfca7d6e04fd88",
+      "size": 246347,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/b357917f76b31960b4f4d64cf3bfca7d6e04fd88"
+    },
+    {
+      "path": "examples/fem_forward2d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca00277fe121b7db72f7a2a1c0ed1d0ad0c8d317",
+      "size": 2732,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/ca00277fe121b7db72f7a2a1c0ed1d0ad0c8d317"
+    },
+    {
+      "path": "examples/fem_forward3d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "099493ca22f9dcc2bd238a9736ef6453e865c452",
+      "size": 1537,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/099493ca22f9dcc2bd238a9736ef6453e865c452"
+    },
+    {
+      "path": "examples/figures_of_merit_range.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2e22cc71e14559aad43fc259f8b49c1ae19833d",
+      "size": 3552,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/f2e22cc71e14559aad43fc259f8b49c1ae19833d"
+    },
+    {
+      "path": "examples/figures_of_merit_single.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46e39cefc590872b9676a3442befedf5a9fe968e",
+      "size": 4089,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/46e39cefc590872b9676a3442befedf5a9fe968e"
+    },
+    {
+      "path": "examples/mesh_distmesh2d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a38913ca5e9f6817c2b8f01d7f1efbc8b9e0d9b5",
+      "size": 4515,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/a38913ca5e9f6817c2b8f01d7f1efbc8b9e0d9b5"
+    },
+    {
+      "path": "examples/mesh_distmesh3d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e815aa39152e4835387969a1eb1f9023b89372f6",
+      "size": 799,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/e815aa39152e4835387969a1eb1f9023b89372f6"
+    },
+    {
+      "path": "examples/mesh_intro2d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66fd36aefb00b0e33ac118971ea2e482baf3f056",
+      "size": 2272,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/66fd36aefb00b0e33ac118971ea2e482baf3f056"
+    },
+    {
+      "path": "examples/mesh_multi_shell.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b4563a0050fe90f6cd7957a803c19d212f847cb",
+      "size": 2432,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/4b4563a0050fe90f6cd7957a803c19d212f847cb"
+    },
+    {
+      "path": "examples/paper_eit2016b.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79c510df4e7f9c3e427123532ddd69061820c662",
+      "size": 3893,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/79c510df4e7f9c3e427123532ddd69061820c662"
+    },
+    {
+      "path": "examples/softx",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a67cded91304a660191ddee50628fbe05b78ab9c",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/a67cded91304a660191ddee50628fbe05b78ab9c"
+    },
+    {
+      "path": "examples/softx/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd98a737488c9fda4ec093dc91bd465599f6c5dd",
+      "size": 7,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/bd98a737488c9fda4ec093dc91bd465599f6c5dd"
+    },
+    {
+      "path": "examples/softx/figure01.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e55f51b10e257ca49137d360731d99b553abf40",
+      "size": 1314,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/9e55f51b10e257ca49137d360731d99b553abf40"
+    },
+    {
+      "path": "examples/softx/figure02.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7782872709a399a03a8761da2a990f7ecb59c739",
+      "size": 1765,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/7782872709a399a03a8761da2a990f7ecb59c739"
+    },
+    {
+      "path": "examples/softx/figure02b.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e08dec665b2537d5e2fc7be31a8f8b5180a3409",
+      "size": 2884,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/3e08dec665b2537d5e2fc7be31a8f8b5180a3409"
+    },
+    {
+      "path": "examples/softx/figure03.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58475a9f56bd88151140e64764316cc2f5118860",
+      "size": 3798,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/58475a9f56bd88151140e64764316cc2f5118860"
+    },
+    {
+      "path": "mypy.ini",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f703430061c5b756cbc9c071fc2528c570d8091",
+      "size": 138,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/3f703430061c5b756cbc9c071fc2528c570d8091"
+    },
+    {
+      "path": "pyeit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8771871bb63fda0bd91894903dc936277ccbc60d",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/8771871bb63fda0bd91894903dc936277ccbc60d"
+    },
+    {
+      "path": "pyeit/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e8b81a7e36db2bb5a7194498aa5c376a4e7b58e",
+      "size": 326,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/5e8b81a7e36db2bb5a7194498aa5c376a4e7b58e"
+    },
+    {
+      "path": "pyeit/app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b8d76bc8378818320eee5e112d0b738feebc6c11",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/b8d76bc8378818320eee5e112d0b738feebc6c11"
+    },
+    {
+      "path": "pyeit/app/Readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "pyeit/eit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aad72799e586d62d0470024225a1e1dac5bbc55e",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/aad72799e586d62d0470024225a1e1dac5bbc55e"
+    },
+    {
+      "path": "pyeit/eit/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10d89589404f5c5c6e898611b92902b0c7fcf2e8",
+      "size": 11,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/10d89589404f5c5c6e898611b92902b0c7fcf2e8"
+    },
+    {
+      "path": "pyeit/eit/Readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb07d9de6bbfed1cab9315ac75fdcb745547d45e",
+      "size": 2009,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/fb07d9de6bbfed1cab9315ac75fdcb745547d45e"
+    },
+    {
+      "path": "pyeit/eit/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "accd79725f0580ecf36abfec670b7cadc7b808f8",
+      "size": 443,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/accd79725f0580ecf36abfec670b7cadc7b808f8"
+    },
+    {
+      "path": "pyeit/eit/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "667e1f6a05e587a1716584f51debc93e7630456f",
+      "size": 5304,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/667e1f6a05e587a1716584f51debc93e7630456f"
+    },
+    {
+      "path": "pyeit/eit/bp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e67e453107a23aa8487b8f40739c9b8f629ba98",
+      "size": 3853,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/0e67e453107a23aa8487b8f40739c9b8f629ba98"
+    },
+    {
+      "path": "pyeit/eit/fem.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5399a789bb5900b1bacc37c43c96b968570b7d7e",
+      "size": 18834,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/5399a789bb5900b1bacc37c43c96b968570b7d7e"
+    },
+    {
+      "path": "pyeit/eit/greit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca5eadbf304dd7f1be53daaf279b5e69661afd08",
+      "size": 6405,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/ca5eadbf304dd7f1be53daaf279b5e69661afd08"
+    },
+    {
+      "path": "pyeit/eit/interp2d.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07584676844300a386c6fecee31eb75d4bd8e57f",
+      "size": 18023,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/07584676844300a386c6fecee31eb75d4bd8e57f"
+    },
+    {
+      "path": "pyeit/eit/jac.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31af22053a3a55eab0e9a47124aa5c06d56e1101",
+      "size": 11868,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/31af22053a3a55eab0e9a47124aa5c06d56e1101"
+    },
+    {
+      "path": "pyeit/eit/protocol.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79697e14e99bfb1f35139f5584ff19d39f667a2b",
+      "size": 10240,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/79697e14e99bfb1f35139f5584ff19d39f667a2b"
+    },
+    {
+      "path": "pyeit/eit/render.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be7ba108560d7d4933c48ee1363ad2549fc37ab7",
+      "size": 9028,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/be7ba108560d7d4933c48ee1363ad2549fc37ab7"
+    },
+    {
+      "path": "pyeit/eit/svd.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3133fbf1efe80f1ec3b57882df18f341cdade1a6",
+      "size": 2743,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/3133fbf1efe80f1ec3b57882df18f341cdade1a6"
+    },
+    {
+      "path": "pyeit/eit/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d1d85f44c2b0bcbd929a3145db5083a11a0cef0",
+      "size": 1811,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/7d1d85f44c2b0bcbd929a3145db5083a11a0cef0"
+    },
+    {
+      "path": "pyeit/feature_extraction",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c32e8312453d2cf1bdb38ebdb7d4101517991bc5",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/c32e8312453d2cf1bdb38ebdb7d4101517991bc5"
+    },
+    {
+      "path": "pyeit/feature_extraction/Readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "pyeit/feature_extraction/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5c7e86c4b876a1194cafd5b58e90abb36655124",
+      "size": 385,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/c5c7e86c4b876a1194cafd5b58e90abb36655124"
+    },
+    {
+      "path": "pyeit/feature_extraction/dynamic_eit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cf813ff0bd7825d04c36a40d8e1f6b8edabdf01",
+      "size": 1077,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/7cf813ff0bd7825d04c36a40d8e1f6b8edabdf01"
+    },
+    {
+      "path": "pyeit/feature_extraction/mesh_geometry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92d09c3fca2476e13b2f1f3a46f4afd0dc968b2e",
+      "size": 9909,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/92d09c3fca2476e13b2f1f3a46f4afd0dc968b2e"
+    },
+    {
+      "path": "pyeit/feature_extraction/transfer_impedance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82a0c8be95698db812e793234946b785efddd8a1",
+      "size": 2043,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/82a0c8be95698db812e793234946b785efddd8a1"
+    },
+    {
+      "path": "pyeit/io",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "550b7618634f4cbc20caed2db0b2e8368573a662",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/550b7618634f4cbc20caed2db0b2e8368573a662"
+    },
+    {
+      "path": "pyeit/io/Readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "pyeit/io/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc68d8e9c322fab96eb66a86536455704a428830",
+      "size": 504,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/fc68d8e9c322fab96eb66a86536455704a428830"
+    },
+    {
+      "path": "pyeit/io/daeger_eit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6b297a9dfbaf3ca270021dac570813f1b88f637",
+      "size": 3906,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/c6b297a9dfbaf3ca270021dac570813f1b88f637"
+    },
+    {
+      "path": "pyeit/io/et3.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1436ec44ae586381446b33bd0c443f71c435f8f2",
+      "size": 13958,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/1436ec44ae586381446b33bd0c443f71c435f8f2"
+    },
+    {
+      "path": "pyeit/io/et4.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aba72d6ba5e8bae779fde669049c4e00a6eaefe4",
+      "size": 6915,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/aba72d6ba5e8bae779fde669049c4e00a6eaefe4"
+    },
+    {
+      "path": "pyeit/io/ewd.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb64c5e1d7031513e7ba7e0404c8a38a96b3c395",
+      "size": 2590,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/bb64c5e1d7031513e7ba7e0404c8a38a96b3c395"
+    },
+    {
+      "path": "pyeit/io/icp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb73e2ab2173b59d2d1d306c7a32dd52a2603364",
+      "size": 3167,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/bb73e2ab2173b59d2d1d306c7a32dd52a2603364"
+    },
+    {
+      "path": "pyeit/io/mes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ff19080b0ede878340634bc778b32901c9fd54e",
+      "size": 6915,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/1ff19080b0ede878340634bc778b32901c9fd54e"
+    },
+    {
+      "path": "pyeit/io/oeit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a41edb49c1984735b885ca8d04fbcea2bd9e3290",
+      "size": 821,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/a41edb49c1984735b885ca8d04fbcea2bd9e3290"
+    },
+    {
+      "path": "pyeit/io/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ea99f3f6fca01c6fdd2567e4f7fc06e8119bdf9",
+      "size": 1328,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/7ea99f3f6fca01c6fdd2567e4f7fc06e8119bdf9"
+    },
+    {
+      "path": "pyeit/mesh",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e94f3751268fa4eda4efa55933910fba4929e1b",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/2e94f3751268fa4eda4efa55933910fba4929e1b"
+    },
+    {
+      "path": "pyeit/mesh/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d083c9941024432924c86331eef7cdae0822b88f",
+      "size": 396,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/d083c9941024432924c86331eef7cdae0822b88f"
+    },
+    {
+      "path": "pyeit/mesh/distmesh.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e03a5a50b4217c4af8b159ec370042649d5d55e1",
+      "size": 14447,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/e03a5a50b4217c4af8b159ec370042649d5d55e1"
+    },
+    {
+      "path": "pyeit/mesh/external.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3657d179e5063c8e5fcf4339011aacd44b2b7f85",
+      "size": 15143,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/3657d179e5063c8e5fcf4339011aacd44b2b7f85"
+    },
+    {
+      "path": "pyeit/mesh/mesh_circle.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccd425db9ec112e89f05e0f46f3c1be5a06e50c7",
+      "size": 6152,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/ccd425db9ec112e89f05e0f46f3c1be5a06e50c7"
+    },
+    {
+      "path": "pyeit/mesh/mesh_img.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aea750b231d543199480bffb3e549a2adf815bf4",
+      "size": 1234,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/aea750b231d543199480bffb3e549a2adf815bf4"
+    },
+    {
+      "path": "pyeit/mesh/plot",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "56d1e26000f0b1b8136d16c2875795bf9b954497",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/56d1e26000f0b1b8136d16c2875795bf9b954497"
+    },
+    {
+      "path": "pyeit/mesh/plot/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e43e7fe3f0e06717ebf3753fed165b17a251df17",
+      "size": 238,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/e43e7fe3f0e06717ebf3753fed165b17a251df17"
+    },
+    {
+      "path": "pyeit/mesh/plot/simconv.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3522ffb854f41f1bcb7d1337120d4f0e2c52c4e0",
+      "size": 733,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/3522ffb854f41f1bcb7d1337120d4f0e2c52c4e0"
+    },
+    {
+      "path": "pyeit/mesh/plot/tetplot.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3db01eeafddcf82d2def2cfbe62c83578db70b84",
+      "size": 6478,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/3db01eeafddcf82d2def2cfbe62c83578db70b84"
+    },
+    {
+      "path": "pyeit/mesh/plot/tetshade.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37f3ab4ccc0d163f4de5f078ec803a412e0714b6",
+      "size": 2066,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/37f3ab4ccc0d163f4de5f078ec803a412e0714b6"
+    },
+    {
+      "path": "pyeit/mesh/plot/voronoi_plot.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e7bf0b94b723a7896737a10c734ed17fc483847",
+      "size": 4859,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/6e7bf0b94b723a7896737a10c734ed17fc483847"
+    },
+    {
+      "path": "pyeit/mesh/plot_mesh.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c5148db7dbd5c04a0ffe6723739155d869ed570",
+      "size": 1886,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/9c5148db7dbd5c04a0ffe6723739155d869ed570"
+    },
+    {
+      "path": "pyeit/mesh/quality.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e18aca85139f832f7a664b9fe249471067ffaf1",
+      "size": 754,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/7e18aca85139f832f7a664b9fe249471067ffaf1"
+    },
+    {
+      "path": "pyeit/mesh/shape.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cad7508eb5f5fa67766312552f08bf1d79b39f6c",
+      "size": 11389,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/cad7508eb5f5fa67766312552f08bf1d79b39f6c"
+    },
+    {
+      "path": "pyeit/mesh/shell.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d11eec3685467afcfa1c0a6ab31264120c2bede",
+      "size": 4425,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/2d11eec3685467afcfa1c0a6ab31264120c2bede"
+    },
+    {
+      "path": "pyeit/mesh/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d98c06adf8043084eb955050fcfc8b43c9528ce3",
+      "size": 5828,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/d98c06adf8043084eb955050fcfc8b43c9528ce3"
+    },
+    {
+      "path": "pyeit/mesh/wrapper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0f6607d4e3e1be19ceb699a5615fd3988463413",
+      "size": 14181,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/b0f6607d4e3e1be19ceb699a5615fd3988463413"
+    },
+    {
+      "path": "pyeit/preprocess",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bfe82610b29c21ed7b4ad3fb682585b9684dc134",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/bfe82610b29c21ed7b4ad3fb682585b9684dc134"
+    },
+    {
+      "path": "pyeit/preprocess/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95a3e71b58a25347b0830ef694f7e6600a5119a7",
+      "size": 125,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/95a3e71b58a25347b0830ef694f7e6600a5119a7"
+    },
+    {
+      "path": "pyeit/quality",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67c668f67944a14ac5b1a52d9407692b58d95c5f",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/67c668f67944a14ac5b1a52d9407692b58d95c5f"
+    },
+    {
+      "path": "pyeit/quality/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "pyeit/quality/eit_system.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80b063b111b5a3383da8bda677165ad9835dc4da",
+      "size": 9435,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/80b063b111b5a3383da8bda677165ad9835dc4da"
+    },
+    {
+      "path": "pyeit/quality/merit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70cb26f7e8baf875337a7df5f3fc16af97ca4b9d",
+      "size": 21361,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/70cb26f7e8baf875337a7df5f3fc16af97ca4b9d"
+    },
+    {
+      "path": "pyeit/visual",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "026c99a4d31ca9bc6159fd36379d97a98c4dc334",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/026c99a4d31ca9bc6159fd36379d97a98c4dc334"
+    },
+    {
+      "path": "pyeit/visual/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "pyeit/visual/plot.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9c8baec76240c051a57221d6ed519c38b858722",
+      "size": 14324,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/e9c8baec76240c051a57221d6ed519c38b858722"
+    },
+    {
+      "path": "setup.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf7aeb45c19897c80dd27c1cade6bb8334c2f392",
+      "size": 1404,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/bf7aeb45c19897c80dd27c1cade6bb8334c2f392"
+    },
+    {
+      "path": "setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a3e6613d343b78abf181b1a7d62a0b873769627",
+      "size": 574,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/8a3e6613d343b78abf181b1a7d62a0b873769627"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c239a35f6b8b9e55a900b2d06958d999e8d65d6",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/4c239a35f6b8b9e55a900b2d06958d999e8d65d6"
+    },
+    {
+      "path": "tests/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "tests/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e0d7193379a03f86f4f0aa6d7aa3cba3ba3ed0d0",
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/trees/e0d7193379a03f86f4f0aa6d7aa3cba3ba3ed0d0"
+    },
+    {
+      "path": "tests/data/L_image.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24622774b50d10e72b014591c94a300942a96e4d",
+      "size": 80128,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/24622774b50d10e72b014591c94a300942a96e4d"
+    },
+    {
+      "path": "tests/data/L_mapped.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ea05e66c11cf2faab470861ac5f26f6b1abff4a",
+      "size": 80128,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/0ea05e66c11cf2faab470861ac5f26f6b1abff4a"
+    },
+    {
+      "path": "tests/data/L_shape.STL",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3caf2a85174ad950e5f29340c9adc9f71b8ba719",
+      "size": 284,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/3caf2a85174ad950e5f29340c9adc9f71b8ba719"
+    },
+    {
+      "path": "tests/data/Rectangle.STL",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd0f103d8c523b3a96c34ea70d52d7df79bea3e3",
+      "size": 184,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/dd0f103d8c523b3a96c34ea70d52d7df79bea3e3"
+    },
+    {
+      "path": "tests/data/Simple_Circle.ply",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bac0c86cee0cac2954a79e0049c4a170257dd3b",
+      "size": 7945,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/7bac0c86cee0cac2954a79e0049c4a170257dd3b"
+    },
+    {
+      "path": "tests/data/circle.STL",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ce63aad0cc691c8d5adf7992fe2152932370e18",
+      "size": 10285,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/8ce63aad0cc691c8d5adf7992fe2152932370e18"
+    },
+    {
+      "path": "tests/data/circle_image.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1804f30ebc69c1c5fb21327005e8ba6de1dbf017",
+      "size": 80128,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/1804f30ebc69c1c5fb21327005e8ba6de1dbf017"
+    },
+    {
+      "path": "tests/data/circle_image_mapped.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f8577df0a50e00c0509d5ef1f755a351040b1fc",
+      "size": 80128,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/3f8577df0a50e00c0509d5ef1f755a351040b1fc"
+    },
+    {
+      "path": "tests/data/mesha06_bumpychestslice_radiological_view_both_lungs_1_0-3.ply",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b357917f76b31960b4f4d64cf3bfca7d6e04fd88",
+      "size": 246347,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/b357917f76b31960b4f4d64cf3bfca7d6e04fd88"
+    },
+    {
+      "path": "tests/data/square_image.bmp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "989359f24a0914748382064995a4ed93999ec65b",
+      "size": 10146,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/989359f24a0914748382064995a4ed93999ec65b"
+    },
+    {
+      "path": "tests/data/triangle.STL",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adb23435748e78b1550629ec07ad4a4870b5ac40",
+      "size": 134,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/adb23435748e78b1550629ec07ad4a4870b5ac40"
+    },
+    {
+      "path": "tests/data/triangle.ply",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f19d3fb3eaf3785fcee7659fc3b2f910206bd5e6",
+      "size": 315,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/f19d3fb3eaf3785fcee7659fc3b2f910206bd5e6"
+    },
+    {
+      "path": "tests/run_examples.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "378035c1442868aba6ccd5da08a26602ab343d9c",
+      "size": 1362,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/378035c1442868aba6ccd5da08a26602ab343d9c"
+    },
+    {
+      "path": "tests/test_eit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e15662453a7f2705666e887a9f8268c51af40e6",
+      "size": 4130,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/4e15662453a7f2705666e887a9f8268c51af40e6"
+    },
+    {
+      "path": "tests/test_eit_system.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4d3d58f0b1d4825627ce1670f0ee05cf0a3e6aa",
+      "size": 7873,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/b4d3d58f0b1d4825627ce1670f0ee05cf0a3e6aa"
+    },
+    {
+      "path": "tests/test_fem.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbf1eb3701255c0cfd5e36ecb8e79f5f2fb393ba",
+      "size": 8473,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/bbf1eb3701255c0cfd5e36ecb8e79f5f2fb393ba"
+    },
+    {
+      "path": "tests/test_load_mesh.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c796354a13a1da13921785f4d196a670febe815b",
+      "size": 781,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/c796354a13a1da13921785f4d196a670febe815b"
+    },
+    {
+      "path": "tests/test_merit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eee9dc77d895e16cd483814ff1271c820300d545",
+      "size": 13620,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/eee9dc77d895e16cd483814ff1271c820300d545"
+    },
+    {
+      "path": "tests/test_mesh.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7bb8a9d061b61484171d3e4a63d2aea35de4e30",
+      "size": 1203,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/a7bb8a9d061b61484171d3e4a63d2aea35de4e30"
+    },
+    {
+      "path": "tests/test_render.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8e447fdc2c403fec55c2806164a37d14af1a6f4",
+      "size": 6170,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/d8e447fdc2c403fec55c2806164a37d14af1a6f4"
+    },
+    {
+      "path": "tests/test_set_electrodes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ba8bdc9a274e029a2163ac1ba65aef6d95add30",
+      "size": 10318,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/2ba8bdc9a274e029a2163ac1ba65aef6d95add30"
+    },
+    {
+      "path": "tests/test_simple.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4420dfdc1e3e7c17e11c11771aabc95d1fe22f0c",
+      "size": 281,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/4420dfdc1e3e7c17e11c11771aabc95d1fe22f0c"
+    },
+    {
+      "path": "tox.ini",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b12a7fe9e58df59ae4e00f0ad54480acdbbfc3b4",
+      "size": 109,
+      "url": "https://api.github.com/repos/eitcom/pyEIT/git/blobs/b12a7fe9e58df59ae4e00f0ad54480acdbbfc3b4"
+    }
+  ],
+  "truncated": false
+}

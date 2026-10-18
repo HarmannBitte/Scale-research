@@ -1,0 +1,205 @@
+import { dirname } from 'node:path';
+import { config as dotenvConfig } from 'dotenv';
+import type { AppConfig, ExporterEntry } from './schema.js';
+import { defaultEnvPath } from './paths.js';
+import { parseBleAdapterEnv } from './env-overrides.js';
+import { loadConfig as loadEnvVarConfig } from '../validate-env.js';
+import { loadExporterConfig } from '../exporters/config.js';
+import { resolveTokenDir } from './token-dirs.js';
+
+/**
+ * Load config from .env, wrapping existing loadConfig() + loadExporterConfig()
+ * into the unified AppConfig shape.
+ */
+/**
+ * NOBLE_DRIVER for the legacy .env mode. It used to be cast to the union
+ * unchecked, so a typo reached the driver selection as if it were valid (G-22).
+ */
+function parseNobleDriverEnv(): 'abandonware' | 'stoprocent' | null {
+  const raw = process.env.NOBLE_DRIVER?.trim().toLowerCase();
+  if (!raw) return null;
+  if (raw === 'abandonware' || raw === 'stoprocent') return raw;
+  throw new Error(
+    `NOBLE_DRIVER must be 'abandonware' or 'stoprocent', got '${process.env.NOBLE_DRIVER}'`,
+  );
+}
+
+export function loadEnvConfig(): AppConfig {
+  dotenvConfig({ path: defaultEnvPath(), quiet: true });
+
+  const envConfig = loadEnvVarConfig();
+  const exporterConfig = loadExporterConfig();
+
+  // Build exporter entries from env-var config
+  const globalExporters: ExporterEntry[] = exporterConfig.exporters.map((name) => {
+    const entry: Record<string, unknown> = { type: name };
+
+    if (name === 'garmin' && exporterConfig.garmin) {
+      Object.assign(entry, {
+        weight_only: exporterConfig.garmin.weightOnly,
+        // undefined when GARMIN_UPLOAD_TIMEOUT_SEC is unset, which the
+        // exporter reads as "use the default", same as an absent YAML key.
+        upload_timeout_sec: exporterConfig.garmin.uploadTimeoutSec,
+      });
+    }
+    if (name === 'file' && exporterConfig.file) {
+      const f = exporterConfig.file;
+      Object.assign(entry, {
+        file_path: f.filePath,
+        format: f.format,
+      });
+    }
+    if (name === 'strava' && exporterConfig.strava) {
+      const s = exporterConfig.strava;
+      Object.assign(entry, {
+        client_id: s.clientId,
+        client_secret: s.clientSecret,
+        // Relative to the directory the .env is in, like a token_dir in
+        // config.yaml (F-11).
+        token_dir: resolveTokenDir(s.tokenDir, dirname(defaultEnvPath())),
+      });
+    }
+    if (name === 'mqtt' && exporterConfig.mqtt) {
+      const m = exporterConfig.mqtt;
+      Object.assign(entry, {
+        broker_url: m.brokerUrl,
+        topic: m.topic,
+        qos: m.qos,
+        retain: m.retain,
+        username: m.username,
+        password: m.password,
+        client_id: m.clientId,
+        ha_discovery: m.haDiscovery,
+        ha_device_name: m.haDeviceName,
+      });
+    }
+    if (name === 'webhook' && exporterConfig.webhook) {
+      const w = exporterConfig.webhook;
+      Object.assign(entry, {
+        url: w.url,
+        method: w.method,
+        headers: w.headers,
+        timeout: w.timeout,
+      });
+    }
+    if (name === 'influxdb' && exporterConfig.influxdb) {
+      const i = exporterConfig.influxdb;
+      Object.assign(entry, {
+        url: i.url,
+        token: i.token,
+        org: i.org,
+        bucket: i.bucket,
+        measurement: i.measurement,
+      });
+    }
+    if (name === 'ntfy' && exporterConfig.ntfy) {
+      const n = exporterConfig.ntfy;
+      Object.assign(entry, {
+        url: n.url,
+        topic: n.topic,
+        title: n.title,
+        priority: n.priority,
+        token: n.token,
+        username: n.username,
+        password: n.password,
+        report_exports: n.reportExports,
+      });
+    }
+    if (name === 'telegram' && exporterConfig.telegram) {
+      const t = exporterConfig.telegram;
+      Object.assign(entry, {
+        bot_token: t.botToken,
+        chat_id: t.chatId,
+        title: t.title,
+        silent: t.silent,
+        report_exports: t.reportExports,
+      });
+    }
+    if (name === 'intervals' && exporterConfig.intervals) {
+      const i = exporterConfig.intervals;
+      Object.assign(entry, {
+        athlete_id: i.athleteId,
+        api_key: i.apiKey,
+      });
+    }
+    if (name === 'runalyze' && exporterConfig.runalyze) {
+      Object.assign(entry, {
+        token: exporterConfig.runalyze.token,
+      });
+    }
+    if (name === 'wger' && exporterConfig.wger) {
+      const w = exporterConfig.wger;
+      Object.assign(entry, {
+        base_url: w.baseUrl,
+        token: w.token,
+        sync_measurements: w.syncMeasurements,
+      });
+    }
+    if (name === 'healthlog' && exporterConfig.healthlog) {
+      const h = exporterConfig.healthlog;
+      Object.assign(entry, {
+        base_url: h.baseUrl,
+        token: h.token,
+        sync_measurements: h.syncMeasurements,
+      });
+    }
+    if (name === 'dreeve' && exporterConfig.dreeve) {
+      const d = exporterConfig.dreeve;
+      Object.assign(entry, {
+        base_url: d.baseUrl,
+        token: d.token,
+        unit_system: d.unitSystem,
+      });
+    }
+
+    return entry as ExporterEntry;
+  });
+
+  // Use the actual birth date from env vars (already loaded by dotenvConfig above)
+  const birthDate = process.env.USER_BIRTH_DATE ?? '2000-01-01';
+
+  return {
+    version: 1,
+    ble: {
+      handler: 'auto' as const,
+      scale_mac: envConfig.scaleMac ?? null,
+      noble_driver: parseNobleDriverEnv(),
+      adapter: parseBleAdapterEnv() ?? null,
+    },
+    scale: {
+      weight_unit: envConfig.weightUnit,
+      height_unit: 'cm', // env-var config already converts to cm
+      display_unit: 'weight_unit',
+    },
+    unknown_user: 'nearest',
+    // Env-var config has one synthetic user with a 0-999 kg range, so the guard
+    // can never fire; the field is here because AppConfig requires it.
+    out_of_range: 'warn',
+    users: [
+      {
+        name: 'Default',
+        slug: 'default',
+        height: envConfig.profile.height,
+        birth_date: birthDate,
+        gender: envConfig.profile.gender,
+        is_athlete: envConfig.profile.isAthlete,
+        weight_range: { min: 0, max: 999 },
+        last_known_weight: null,
+      },
+    ],
+    global_exporters: globalExporters,
+    runtime: {
+      continuous_mode: envConfig.continuousMode,
+      scan_cooldown: envConfig.scanCooldownSec,
+      dry_run: envConfig.dryRun,
+      // Same TRUE words as the logger and the yaml override, so DEBUG=1 does
+      // not mean debug logs on but runtime.debug off.
+      debug: ['true', 'yes', 'on', '1'].includes((process.env.DEBUG ?? '').trim().toLowerCase()),
+      watchdog_max_consecutive_failures: 10,
+      watch_config: true,
+      idle_rescan_delay: 5,
+      retry_failed_exports: true,
+    },
+    update_check: true,
+  };
+}

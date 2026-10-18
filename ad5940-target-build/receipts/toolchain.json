@@ -1,0 +1,9 @@
+{
+  "report_date": "2026-10-17",
+  "gcc": "arm-none-eabi-gcc (15:14.2.rel1-1) 14.2.1 20241119\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "packages": "binutils-arm-none-eabi\t2.44-3+23+b1\ngcc-arm-none-eabi\t15:14.2.rel1-1\nlibnewlib-arm-none-eabi\t4.5.0.20241231-1\nlibnewlib-dev\t4.5.0.20241231-1\n",
+  "newlib_nano_used": false,
+  "fpu": "software floating point, Cortex-M3 Thumb",
+  "keil_armcc_build_performed": false,
+  "target_execution_performed": false
+}

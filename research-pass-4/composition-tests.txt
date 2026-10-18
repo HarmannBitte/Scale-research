@@ -1,0 +1,143 @@
+
+> ble-scale-sync@1.33.0 test
+> vitest run tests/body-comp-helpers.test.ts tests/scales/qn-va-eight.test.ts tests/scales/qn-scale.test.ts tests/scales/xiaomi-s400.test.ts
+
+[33mTesting types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.[39m
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.0.3 [39m[90m/home/user/research-pass-4/ble-scale-sync[39m
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mQnScaleAdapter[2m > [22m[2mparseNotification()[2m > [22m[2mweight divisor in doubt (C-06)[2m > [22m[2mdrops 3.00 kg / 30.0 kg when it fits no user, instead of exporting 30 kg
+[22m[39m2026-10-17 14:24:13.817 [BLE] QN: dropping a weight that reads 3 kg or 30 kg: its scale-info frame (0x12), which names the divisor, never arrived, and neither fits a configured user's weight_range or last_known_weight. Check weight_range in config.yaml; if this repeats with the scale-info frame missing, please report the log.
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mQnScaleAdapter[2m > [22m[2mparseNotification()[2m > [22m[2mweight divisor in doubt (C-06)[2m > [22m[2mdrops it with no user configured at all
+[22m[39m2026-10-17 14:24:13.819 [BLE] QN: dropping a weight that reads 8.32 kg or 83.2 kg: its scale-info frame (0x12), which names the divisor, never arrived, and neither fits a configured user's weight_range or last_known_weight. Check weight_range in config.yaml; if this repeats with the scale-info frame missing, please report the log.
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2m0xA4 prelude (ble.qn_a4_prelude, #331)[2m > [22m[2msends nothing extra by default, so the rest of the QN family is untouched
+[22m[39m2026-10-17 14:24:14.256 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2m0xA4 prelude (ble.qn_a4_prelude, #331)[2m > [22m[2msends both frames after START when the flag is on
+[22m[39m2026-10-17 14:24:14.459 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2m0xA4 prelude (ble.qn_a4_prelude, #331)[2m > [22m[2mkeeps the extended order, A4 frames before the trigger burst
+[22m[39m2026-10-17 14:24:14.463 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2m20B 0x12 frame echoes the protocol type into the 0x13 config
+[22m[39m2026-10-17 14:24:14.264 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2mA00D user-delete frame (#461)[2m > [22m[2msends none on the extended 20-byte dialect by default
+[22m[39m2026-10-17 14:24:14.267 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2mA00D user-delete frame (#461)[2m > [22m[2mkeeps the profile frame 200 ms after the 0x21, where it was
+[22m[39m2026-10-17 14:24:14.268 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2mapplies ble.qn_report_byte to the A00D payload byte and recomputes the checksum
+[22m[39m2026-10-17 14:24:13.871 [BLE] QN: ble.qn_report_byte is set (252), so every QN session sends the frame that deletes the user slots its bits select on the scale. Remove the setting unless your scale stopped reporting without it (#461).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2mapplies ble.qn_report_byte to the A00D payload byte and recomputes the checksum
+[22m[39m2026-10-17 14:24:14.271 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2mleaves the second A00D frame alone when the report byte is overridden
+[22m[39m2026-10-17 14:24:13.872 [BLE] QN: ble.qn_report_byte is set (252), so every QN session sends the frame that deletes the user slots its bits select on the scale. Remove the setting unless your scale stopped reporting without it (#461).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2mleaves the second A00D frame alone when the report byte is overridden
+[22m[39m2026-10-17 14:24:14.272 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2m20B 0x12 frame makes the 0x22 START byte identical to the vendor app
+[22m[39m2026-10-17 14:24:14.273 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2m20B 0x12 frame echoes the protocol type into the 0x20 time sync
+[22m[39m2026-10-17 14:24:14.274 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2msends the measurement trigger twice after START on the extended dialect
+[22m[39m2026-10-17 14:24:14.282 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2msends capture 2a from the first A00D frame on, given the same profile
+[22m[39m2026-10-17 14:24:13.888 [BLE] QN: ble.qn_report_byte is set (254), so every QN session sends the frame that deletes the user slots its bits select on the scale. Remove the setting unless your scale stopped reporting without it (#461).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2msends the first user's sex in the profile frame (#331)
+[22m[39m2026-10-17 14:24:13.889 [BLE] QN: ble.qn_report_byte is set (254), so every QN session sends the frame that deletes the user slots its bits select on the scale. Remove the setting unless your scale stopped reporting without it (#461).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2mkeeps both openScale frames when the 19-byte 0x12 arrives after a fallback ready
+[22m[39m2026-10-17 14:24:17.492 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2mtakes both frames from one decision when 0x21 comes before 0x14
+[22m[39m2026-10-17 14:24:14.293 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2mkeeps openScale frames for a 19-byte classic 0x12
+[22m[39m2026-10-17 14:24:14.294 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2mstarts the extended burst straight after START, without the es26m delay
+[22m[39m2026-10-17 14:24:14.316 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2msuppresses the echo on the extended dialect when forced off
+[22m[39m2026-10-17 14:24:14.337 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2mdoes not answer a real 20-byte live frame with an A2 on the extended default
+[22m[39m2026-10-17 14:24:14.340 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstdout[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2m19-byte dialect weigh-in stream (#331, D037)[2m > [22m[2mpublishes the held weight on 0x16, final, and nothing else of the weigh-in
+[22m[39m2026-10-17 14:24:15.944 [BLE] QN: the scale sent no body composition for this weigh-in (#331)
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2m19-byte dialect weigh-in stream (#331, D037)[2m > [22m[2mother dialects are untouched[2m > [22m[2mextended: a GE-shaped stable 20-byte frame is still not read or answered
+[22m[39m2026-10-17 14:24:14.361 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+[90mstderr[2m | tests/scales/qn-scale.test.ts[2m > [22m[2mAE02 dispatch (#75, #235)[2m > [22m[2mGE CS 10 G extended long frame (#235)[2m > [22m[2mkeeps the ready-time A2 user profile distinct from the trigger
+[22m[39m2026-10-17 14:24:14.366 [BLE] QN: no usable weight anchor in config, falling back to 77.15 kg, which is a value from a capture and not yours. This scale can refuse to finish a weigh-in when that number is far from the real weight. Set users[].last_known_weight, or narrow users[].weight_range so its midpoint is close to you (a range wider than 100 kg is ignored because it locates nobody).
+
+ [32m✓[39m tests/scales/qn-scale.test.ts [2m([22m[2m249 tests[22m[2m)[22m[32m 187[2mms[22m[39m
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte stored records (#331)[2m > [22m[2mdrops a stored record that is the live result reported just before
+[22m[39m2026-10-07 19:57:55.000 [BLE] QN: the scale sent its own body composition for this weigh-in (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte stored records (#331)[2m > [22m[2mdoes not publish a repeated result block a second time
+[22m[39m2026-10-07 20:00:46.000 [BLE] QN: the scale sent its own body composition for this weigh-in (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte stored records (#331)[2m > [22m[2mdoes not publish a repeated result block a second time
+[22m[39m2026-10-07 20:04:46.000 [BLE] QN: the scale sent its own body composition for this weigh-in (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte stored records (#331)[2m > [22m[2mdoes not publish a repeated result block a second time
+[22m[39m2026-10-07 20:06:46.000 [BLE] QN: the scale sent its own body composition for this weigh-in (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte: the scale's own body composition (#331)[2m > [22m[2mestimates when the matched user is a year older, unlike the profile sent
+[22m[39m2026-10-06 15:10:54.000 [BLE] QN: the scale sent its own body composition for this weigh-in (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte: the scale's own body composition (#331)[2m > [22m[2mestimates when the matched user is a year older, unlike the profile sent
+[22m[39m2026-10-06 15:10:54.000 [BLE] QN: the scale's own body composition is not used for this weigh-in: the matched user's age, height or sex is not the profile sent to the scale; estimating instead (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte: the scale's own body composition (#331)[2m > [22m[2mestimates when the matched user is a woman, unlike the profile sent
+[22m[39m2026-10-06 15:10:54.000 [BLE] QN: the scale sent its own body composition for this weigh-in (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte: the scale's own body composition (#331)[2m > [22m[2mestimates when the matched user is a woman, unlike the profile sent
+[22m[39m2026-10-06 15:10:54.000 [BLE] QN: the scale's own body composition is not used for this weigh-in: the matched user's age, height or sex is not the profile sent to the scale; estimating instead (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte: the scale's own body composition (#331)[2m > [22m[2mestimates in a session that sent the qn_a4_prelude frames
+[22m[39m2026-10-06 15:10:54.000 [BLE] QN: the scale sent its own body composition for this weigh-in (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte: the scale's own body composition (#331)[2m > [22m[2mestimates in a session that sent the qn_a4_prelude frames
+[22m[39m2026-10-06 15:10:54.000 [BLE] QN: the scale's own body composition is not used for this weigh-in: ble.qn_a4_prelude overwrote the scale's segment values in this session; estimating instead (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte: the scale's own body composition (#331)[2m > [22m[2mestimates everything, visceral fat included, when one value is not a measurement
+[22m[39m2026-10-06 15:10:54.000 [BLE] QN: the scale sent its own body composition for this weigh-in (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte: the scale's own body composition (#331)[2m > [22m[2mestimates everything, visceral fat included, when one value is not a measurement
+[22m[39m2026-10-06 15:10:54.000 [BLE] QN: the scale's own body composition is not used for this weigh-in: its values are not plausible (water 0 % is outside 0-80 %); estimating instead (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte: the scale's own body composition (#331)[2m > [22m[2mkeeps the composition with the reading it was measured with
+[22m[39m2026-10-06 15:10:54.000 [BLE] QN: the scale sent its own body composition for this weigh-in (#331)
+
+[90mstdout[2m | tests/scales/qn-va-eight.test.ts[2m > [22m[2mQN 19-byte: the scale's own body composition (#331)[2m > [22m[2mkeeps the composition with the reading it was measured with
+[22m[39m2026-10-06 15:12:02.000 [BLE] QN: using the scale's own body composition for this weigh-in (#331)
+
+ [32m✓[39m tests/scales/qn-va-eight.test.ts [2m([22m[2m52 tests[22m[2m)[22m[32m 110[2mms[22m[39m
+ [32m✓[39m tests/body-comp-helpers.test.ts [2m([22m[2m54 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/scales/xiaomi-s400.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[32m382 passed[39m[22m[90m (382)[39m
+[2mType Errors [22m [2mno errors[22m
+[2m   Start at [22m 14:24:13
+[2m   Duration [22m 1.64s[2m (transform 49%, tests 33%, import 16%, worker 2%)[22m
+
+[2m    Isolate [22m [33m4 workers spawned[39m[2m · ~131ms startup each (spawn + environment, per file)[22m
+[2m            [22m [2mat least ~392ms faster with [22m[33misolate: false[39m[2m — reuses workers across files instead of one per file[22m
+

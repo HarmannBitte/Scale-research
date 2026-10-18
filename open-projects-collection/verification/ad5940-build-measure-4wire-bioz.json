@@ -1,0 +1,21 @@
+{
+  "name": "ad5940-build-measure-4wire-bioz",
+  "repo": "melazab/AD5940-BIOZ",
+  "commit": "dcd50963aba362ebcfdb090548d099d047451394",
+  "command": [
+    "make",
+    "-j2"
+  ],
+  "cwd": "/home/user/.cache/open-projects/full/melazab__AD5940-BIOZ/AD5940-BIOZ-dcd50963aba362ebcfdb090548d099d047451394/measure-4wire-bioz",
+  "timeout_seconds": 90,
+  "environment_overrides": {
+    "MPLBACKEND": "Agg",
+    "PYTHONPATH": "/home/user/.cache/open-projects/full/melazab__AD5940-BIOZ/AD5940-BIOZ-dcd50963aba362ebcfdb090548d099d047451394",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+  },
+  "exit_code": 0,
+  "status": "pass",
+  "duration_seconds": 2.179,
+  "log": "ad5940-build-measure-4wire-bioz.log",
+  "log_sha256": "cff8b9f16b8be4c3bff1b3abe0df700f992d0f811251a9892bf2cc9c187e4882"
+}

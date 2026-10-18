@@ -1,0 +1,3 @@
+{"experiment": "high_frequency_changed", "outputs": 39, "changed_outputs": {}}
+{"experiment": "arm_asymmetry_changed_same_sum", "outputs": 39, "changed_outputs": {}}
+Two counterfactual invariance checks passed. Software dependency checks only; no physical measurement or clinical validation.

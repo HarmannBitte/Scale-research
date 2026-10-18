@@ -1,0 +1,293 @@
+--- a/source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c
++++ b/source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c
+@@ -1,4 +1,4 @@
+-/* MODIFIED 2026-10-17: experimental passive-bench hardening fork. NOT qualified firmware. Original ADI licenses apply. */
++/* MODIFIED again 2026-10-17 for experimental GNU target integration: experimental passive-bench hardening fork. NOT qualified firmware. Original ADI licenses apply. */
+ /*!
+  *****************************************************************************
+  @file:    ADICUP3029Port.c
+@@ -120,8 +120,10 @@
+   pADI_GPIO0->PE = 0xFFFF;
+   pADI_GPIO1->PE = 0xFFFF;
+   pADI_GPIO2->PE = 0xFFFF;
++  /* Clear latch BEFORE enabling output. Keep AFE reset asserted until the
++     gated application calls AD5940_HWReset; startup alone must not release it. */
++  pADI_GPIO2->CLR = 1<<6;
+   pADI_GPIO2->OEN |= (1<<6); //P2.6-ADC3-A3-AD5940_Reset
+-  pADI_GPIO2->SET = 1<<6; //Pull high this pin.
+ 
+   /*Setup Pins P0.0-->SCLK P0.1-->MOSI P0.2-->MISO P1.10-->CS*/
+   pADI_GPIO0->CFG = (1<<0)|(1<<2)|(1<<4)|(pADI_GPIO0->CFG&(~((3<<0)|(3<<2)|(3<<4))));
+@@ -146,7 +148,7 @@
+   NVIC_EnableIRQ(XINT_EVT0_IRQn);		  //Enable External Interrupt 0 source.
+   
+   AD5940_CsSet();
+-  AD5940_RstSet();
++  AD5940_RstClr();
+   return 0;
+ }
+ 
+--- a/source/examples/AD5940_BIA/ADICUP3029/main.c
++++ b/source/examples/AD5940_BIA/ADICUP3029/main.c
+@@ -1,4 +1,4 @@
+-/* MODIFIED 2026-10-17: experimental passive-bench hardening fork. NOT qualified firmware. Original ADI licenses apply. */
++/* MODIFIED again 2026-10-17 for experimental GNU target integration: experimental passive-bench hardening fork. NOT qualified firmware. Original ADI licenses apply. */
+ /*
+ 
+ Copyright (c) 2017-2019 Analog Devices, Inc. All Rights Reserved.
+@@ -21,6 +21,8 @@
+   void AD5940_Main(void);
+   if(!MCUPlatformInit(0)||AD5940_BenchIoFault)return 1;
+   AD5940_MCUResourceInit(0);
++  /* GNU/newlib stdout must be unbuffered; every frame still checks writes/flush. */
++  if(setvbuf(stdout,0,_IONBF,0)||setvbuf(stderr,0,_IONBF,0))return 1;
+   /* No unframed boot/debug text in the bench stream. */
+   AD5940_Main();
+ }
+@@ -45,7 +47,7 @@
+   pADI_CLKG0_CLK->CTL1 = 0;                   // ACLK,PCLK,HCLK divided by 1
+   pADI_CLKG0_CLK->CTL5 = 0x00;                 // Enable clock to all peripherals - no clock gating
+ 
+-  UrtCfg(230400);/*Baud rate: 230400*/
++  if(UrtCfg(230400)<0)return 0; /* Supported TX-only framed-stream baud. */
+   return 1;
+ }
+ 
+@@ -66,6 +68,7 @@
+ 
+ int UrtCfg(int iBaud)
+ {
++  if(iBaud!=230400){AD5940_BenchIoFault=AD5940ERR_PARA;return -1;}
+   int iBits = 3;//8bits, 
+   int iFormat = 0;//, int iBits, int iFormat
+   int i1;
+@@ -117,6 +120,7 @@
+   iOSR = 32;
+   //i1 = (ullRtClk/(iOSR*iDiv))/iBaud;	              // UART baud rate clock source is PCLK divided by OSR
+   i1 = (ullRtClk/(iOSR*iDiv))/iBaud-1;   //for bigger M and N value
++  if(i1<=0){AD5940_BenchIoFault=AD5940ERR_PARA;return -1;}
+   pADI_UART0->COMDIV = i1;
+ 
+   pADI_UART0->COMFBR = 0x8800|(((((2048/(iOSR*iDiv))*ullRtClk)/i1)/iBaud)-2048);
+@@ -128,8 +132,9 @@
+   pADI_UART0->COMFCR |= BITM_UART_COMFCR_RFCLR|BITM_UART_COMFCR_TFCLR;                                   // Clear the UART FIFOs
+   pADI_UART0->COMFCR &= ~(BITM_UART_COMFCR_RFCLR|BITM_UART_COMFCR_TFCLR);                                // Disable clearing mechanism
+ 
+-  NVIC_EnableIRQ(UART_EVT_IRQn);              // Enable UART interrupt source in NVIC
+-  pADI_UART0->COMIEN = BITM_UART_COMIEN_ERBFI|BITM_UART_COMIEN_ELSI; /* Rx Interrupt */
++  /* TX-only logger: no receive handler/protocol; never enable an unhandled RX IRQ. */
++  pADI_UART0->COMIEN = 0;
++  NVIC_DisableIRQ(UART_EVT_IRQn);
+   return pADI_UART0->COMLSR;
+ }
+ #include "stdio.h"
+--- a/source/examples/AD5940_BIA/BodyImpedance.c
++++ b/source/examples/AD5940_BIA/BodyImpedance.c
+@@ -1,4 +1,4 @@
+-/* MODIFIED 2026-10-17: experimental passive-bench hardening fork. NOT qualified firmware. Original ADI licenses apply. */
++/* MODIFIED again 2026-10-17: fail-stop sequence-generation errors; experimental passive-bench hardening fork. NOT qualified firmware. Original ADI licenses apply. */
+ /*!
+  *****************************************************************************
+  @file:    BodyComposition.c
+@@ -128,6 +128,8 @@
+ }
+ static AD5940Err bench_stop(AD5940Err error) {
+  AppBIABenchInvalidate();AppBIACfg.BIAInited=bFALSE;
++ /* Disable software recording first: shutdown writes must reach hardware. */
++ AD5940_SEQGenCtrl(bFALSE);
+  if(AD5940_BenchIoFault){AD5940_RstClr();return error;}
+  AD5940_WUPTCtrl(bFALSE);
+  AD5940_AFECtrlS(AFECTRL_ADCCNV|AFECTRL_DFT|AFECTRL_WG|AFECTRL_ADCPWR,bFALSE);
+@@ -542,11 +544,11 @@
+ 
+     /* Generate initialize sequence */
+     error = AppBIASeqCfgGen(); /* Application initialization sequence using either MCU or sequencer */
+-    if(error != AD5940ERR_OK) return error;
++    if(error != AD5940ERR_OK) return bench_stop(error);
+ 
+     /* Generate measurement sequence */
+     error = AppBIASeqMeasureGen();
+-    if(error != AD5940ERR_OK) return error;
++    if(error != AD5940ERR_OK) return bench_stop(error);
+ 
+     AppBIACfg.bParaChanged = bFALSE; /* Clear this flag as we already implemented the new configuration */
+   }
+--- /dev/null
++++ b/gnu/build.sh
+@@ -0,0 +1,37 @@
++#!/bin/sh
++set -eu
++cd "$(dirname "$0")/.."
++CC=${CC:-arm-none-eabi-gcc}
++DFP=vendor/ADuCM302x_DFP-3.2.1
++CORE=vendor/CMSIS-5.2.0/Include
++COMMON="-std=c99 -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -Os -g3 -ffile-prefix-map=$(pwd)=. -ffunction-sections -fdata-sections -fstack-usage -fno-common -Wall -Wextra -Werror=implicit-function-declaration -Werror=incompatible-pointer-types -Werror=return-type -D_DEFAULT_SOURCE -DCHIPSEL_594X -D__ADUCM3029__ -D__STACK_SIZE=8192 -D__HEAP_SIZE=4096 -D__STARTUP_CLEAR_BSS -I$DFP/Include -I$DFP/Include/config -I$CORE -Isource/examples/ad5940lib -Isource/examples/AD5940_BIA"
++for PROFILE in unarmed fullpath-linkcheck; do
++  DEST="build/$PROFILE"
++  mkdir -p "$DEST"
++  rm -f "$DEST"/*.o "$DEST"/*.d "$DEST"/*.su "$DEST/firmware.elf"
++  if [ "$PROFILE" = unarmed ]; then ARM=0; else ARM=1; fi
++  FLAGS="$COMMON -DBIA_BENCH_ARMED=$ARM"
++  printf '#include "BenchLog.h"\n' | $CC $FLAGS -dM -E -x c - > "$DEST/compiled-macros.txt"
++  # RUN_ID stays UNSET and both characterization inputs stay zero in BOTH profiles.
++  for SOURCE in \
++    source/examples/ad5940lib/ad5940.c \
++    source/examples/AD5940_BIA/BodyImpedance.c \
++    source/examples/AD5940_BIA/AD5940Main.c \
++    source/examples/AD5940_BIA/ADICUP3029/main.c \
++    source/examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c \
++    "$DFP/Source/GCC/startup_ADuCM3029.c" \
++    "$DFP/Source/system_ADuCM3029.c" \
++    gnu/newlib_io.c; do
++    NAME=$(basename "$SOURCE" .c)
++    echo "$CC [$PROFILE] $SOURCE"
++    $CC $FLAGS -MMD -MP -c "$SOURCE" -o "$DEST/$NAME.o"
++  done
++  $CC -mcpu=cortex-m3 -mthumb -mfloat-abi=soft \
++    -T"$DFP/Source/GCC/ADuCM3029.ld" \
++    -Wl,--gc-sections,-Map="$DEST/firmware.map",--cref,--print-memory-usage \
++    "$DEST"/*.o -lm -o "$DEST/firmware.elf"
++  arm-none-eabi-size "$DEST/firmware.elf"
++  arm-none-eabi-readelf -h -A "$DEST/firmware.elf" > "$DEST/elf-header.txt"
++  arm-none-eabi-nm -n -S "$DEST/firmware.elf" > "$DEST/symbols.txt"
++  arm-none-eabi-objdump -d "$DEST/firmware.elf" > "$DEST/disassembly.txt"
++done
+--- /dev/null
++++ b/gnu/check_artifacts.py
+@@ -0,0 +1,63 @@
++"""Inspect linked ARM ELFs, real-header dependencies and startup/memory wiring. No execution."""
++from pathlib import Path
++import csv,json,re,struct,subprocess
++ROOT=Path(__file__).resolve().parents[1]
++if not __debug__:raise SystemExit('Checks require normal Python mode, not -O/PYTHONOPTIMIZE.')
++summary={}
++for profile,armed in [('unarmed','0'),('fullpath-linkcheck','1')]:
++    folder=ROOT/'build'/profile;elf=folder/'firmware.elf';data=elf.read_bytes()
++    assert data[:7]==b'\x7fELF\x01\x01\x01'
++    assert struct.unpack_from('<H',data,18)[0]==40 # EM_ARM
++    entry=struct.unpack_from('<I',data,24)[0]
++    phoff,shoff=struct.unpack_from('<II',data,28)
++    phsize,phnum,shsize,shnum,shstr=struct.unpack_from('<HHHHH',data,42)
++    sections=[struct.unpack_from('<IIIIIIIIII',data,shoff+i*shsize) for i in range(shnum)]
++    names=sections[shstr];strings=data[names[4]:names[4]+names[5]]
++    sections={strings[s[0]:].split(b'\0',1)[0].decode():s for s in sections}
++    v=sections['.vectors'];sp,reset=struct.unpack_from('<II',data,v[4])
++    nm=subprocess.check_output(['arm-none-eabi-nm','-n',str(elf)],text=True)
++    symbols={parts[2]:int(parts[0],16) for line in nm.splitlines() if len(parts:=line.split())==3}
++    assert sp==symbols['__StackTop']==0x20004000
++    assert reset==(symbols['Reset_Handler']|1)==entry
++    assert symbols['__StackTop']-symbols['__StackLimit']==8192
++    assert symbols['__HeapLimit']-symbols['__HeapBase']==4096
++    assert symbols['__HeapLimit']<=symbols['__StackLimit']
++    assert sections['.security_options'][3]==0x180
++    assert symbols['Ext_Int0_Handler']!=symbols['Default_Handler']
++    assert symbols['UART_Int_Handler']==symbols['Default_Handler'] # Deliberately disabled TX-only IRQ.
++    undefined=subprocess.check_output(['arm-none-eabi-nm','-u',str(elf)],text=True)
++    assert not undefined.strip(),undefined
++    for function in ['_write','_sbrk','_exit','fputc','AD5940_ReadWriteNBytes']:
++        assert function in symbols,function
++    if armed=='1':
++        for function in ['AppBIADecodeFrame','AppBIAISR','AD5940_HSRtiaCal']:assert function in symbols,function
++    assert 'AD5940_ADCPGACal' not in symbols # Known uninitialized-code warning is outside linked BIA path.
++    for dep in folder.glob('*.d'):assert 'mockhardware' not in dep.read_text()
++    deps=(folder/'main.d').read_text()+(folder/'ADICUP3029Port.d').read_text()
++    assert 'vendor/ADuCM302x_DFP-3.2.1/Include/ADuCM3029.h' in deps
++    assert 'vendor/CMSIS-5.2.0/Include/core_cm3.h' in deps
++    macros=dict(re.findall(r'^#define (\w+) (.+)$',(folder/'compiled-macros.txt').read_text(),re.M))
++    for name,expected in [('BIA_BENCH_ARMED',armed),('BIA_BENCH_RUN_ID','"UNSET"'),('BIA_BENCH_MIN_CURRENT_COUNTS','0'),('BIA_BENCH_RCAL_OHM','0')]:assert macros[name]==expected,(name,macros[name])
++    loads=[]
++    for i in range(phnum):
++        p=struct.unpack_from('<IIIIIIII',data,phoff+i*phsize)
++        if p[0]==1:
++            _,offset,vaddr,paddr,filesz,memsz,flags,align=p
++            assert 0<=paddr<0x40000 and paddr+filesz<=0x40000
++            loads.append(dict(vaddr=vaddr,paddr=paddr,flash_load_bytes=filesz,memory_bytes=memsz))
++    assert symbols['__data_start__']==0x20040000
++    assert symbols['__bss_end__']<=0x20044000
++    dis=(folder/'disassembly.txt').read_text()
++    assert not re.search(r'\bbkpt\s+(?:0x00ab|0xab|171)\b',dis,re.I)
++    assert not any(x in symbols for x in ['initialise_monitor_handles','do_AngelSWI','_swiwrite'])
++    frames=[]
++    for p in folder.glob('*.su'):
++        for line in p.read_text().splitlines():
++            where,amount,kind=line.split('\t');frames.append(dict(function=where.rsplit(':',1)[-1],bytes=int(amount),kind=kind,source=where))
++    frames.sort(key=lambda r:r['bytes'],reverse=True)
++    with (folder/'stack-frames.csv').open('w') as f:
++        w=csv.DictWriter(f,fieldnames=['function','bytes','kind','source']);w.writeheader();w.writerows(frames)
++    summary[profile]=dict(arm_elf=True,entry=entry,initial_stack_pointer=sp,vector_reset_matches_entry=True,stack_reserved_bytes=8192,heap_reserved_bytes=4096,unallocated_bank_a_gap_bytes=symbols['__StackLimit']-symbols['__HeapLimit'],static_bank_b_bytes=symbols['__bss_end__']-symbols['__data_start__'],static_bank_b_remaining_bytes=0x20044000-symbols['__bss_end__'],flash_load_bytes=sum(p['flash_load_bytes'] for p in loads),flash_address_high_water=max(p['paddr']+p['flash_load_bytes'] for p in loads),largest_compiled_c_frame=frames[0],target_executed=False,semihosting_backend_detected=False,complete_stack_bound_proven=False,acquisition_gates=dict(armed=int(armed),run_id='UNSET',current_floor=0,rcal_ohm=0),loads=loads)
++(ROOT/'receipts/artifact-checks.json').write_text(json.dumps(summary,indent=2)+'\n')
++print('PASS: both ARM ELFs, vectors, reservations, real-header dependencies, gates, symbol resolution and selected backend checks.')
++print('Not a target execution, runtime stack proof, flash authorization or electrical test.')
+--- /dev/null
++++ b/gnu/newlib_io.c
+@@ -0,0 +1,70 @@
++/* NEW 2026-10-17: experimental ADuCM3029 GNU/newlib integration.
++ * No semihosting. No receive protocol. Not hardware-qualified firmware.
++ * This file does not relicense any ADI or third-party source.
++ */
++#include <errno.h>
++#include <limits.h>
++#include <string.h>
++#include <stddef.h>
++#include <stdint.h>
++#include <stdio.h>
++#include <sys/stat.h>
++#include <sys/types.h>
++#include "ADuCM3029.h"
++#include "ad5940.h"
++
++extern unsigned char __HeapBase[], __HeapLimit[];
++static ptrdiff_t heap_used;
++
++/* The selected vendor linker script reserves heap and stack in DSRAM_A. */
++void *_sbrk(ptrdiff_t increment)
++{
++    ptrdiff_t capacity = (ptrdiff_t)((uintptr_t)__HeapLimit - (uintptr_t)__HeapBase);
++    unsigned char *previous = __HeapBase + heap_used;
++    if (increment > capacity - heap_used || increment < -heap_used) {
++        errno = ENOMEM;
++        return (void *)-1;
++    }
++    heap_used += increment;
++    return previous;
++}
++
++/* Route newlib's actual write backend to the bounded vendor-port transmitter.
++ * Merely overriding fputc is insufficient to retarget newlib fwrite/printf. */
++int _write(int fd, const void *buffer, size_t length)
++{
++    const unsigned char *p = buffer;
++    size_t i;
++    if (fd != 1 && fd != 2) { errno = EBADF; return -1; }
++    if (length > INT_MAX) { errno = EINVAL; return -1; }
++    if (length && !buffer) { errno = EFAULT; return -1; }
++    for (i = 0; i < length; ++i) {
++        if (fputc(p[i], stdout) == EOF) { errno = EIO; return -1; }
++    }
++    return (int)length;
++}
++int _read(int fd, void *p, size_t n)
++{ (void)fd; (void)p; (void)n; errno = ENOSYS; return -1; }
++int _close(int fd) { (void)fd; errno = EBADF; return -1; }
++int _isatty(int fd) { return fd == 1 || fd == 2; }
++int _fstat(int fd, struct stat *st)
++{
++    if ((fd != 1 && fd != 2) || !st) { errno = EBADF; return -1; }
++    memset(st, 0, sizeof(*st));
++    st->st_mode = S_IFCHR;
++    return 0;
++}
++int _lseek(int fd, int position, int whence)
++{ (void)fd; (void)position; (void)whence; errno = ESPIPE; return -1; }
++int _getpid(void) { return 1; }
++int _kill(int pid, int signal)
++{ (void)pid; (void)signal; errno = ENOSYS; return -1; }
++void _exit(int status) __attribute__((noreturn));
++void _exit(int status)
++{
++    (void)status;
++    /* Best-effort latch clear; not proof of electrical shutdown. */
++    AD5940_RstClr();
++    __disable_irq();
++    for (;;) { __WFI(); }
++}

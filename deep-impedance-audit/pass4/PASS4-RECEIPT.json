@@ -1,0 +1,75 @@
+{
+ "date": "2026-10-17",
+ "toolchains": {
+  "avr-gcc": "14.2 (Debian trixie)",
+  "arm-none-eabi-gcc": "installed, not used this pass",
+  "flutter": "3.47.7 stable",
+  "dart": "3.13.5 (Flutter-bundled)"
+ },
+ "avr_compile_only_against_stub_headers": [
+  {
+   "source": "Protocentral MAX30001 Arduino library src/protocentral_max30001.cpp",
+   "flags": "-std=gnu++17 -Os -mmcu=atmega328p -Wall",
+   "rc": 0,
+   "errors": 0,
+   "warnings": 13,
+   "text_bytes": 4886
+  },
+  {
+   "source": "dyarleniber AD5933.ino (IDE-style prototypes added)",
+   "flags": "-std=gnu++17 -Os -mmcu=atmega328p -Wall",
+   "rc": 0,
+   "errors": 0,
+   "warnings": 0,
+   "text_bytes": 540
+  }
+ ],
+ "openview_flutter_tests_stripped_working_copy": [
+  {
+   "file": "settings_updates_test.dart",
+   "log": "final-settings_updates_test.log",
+   "passed": 4,
+   "all_passed_line": true,
+   "rc": 0
+  },
+  {
+   "file": "update_banner_test.dart",
+   "log": "final-update_banner_test.log",
+   "passed": 6,
+   "all_passed_line": true,
+   "rc": 0
+  },
+  {
+   "file": "update_controller_test.dart",
+   "log": "final-update_controller_test.log",
+   "passed": 26,
+   "all_passed_line": true,
+   "rc": 0
+  },
+  {
+   "file": "widget_test.dart",
+   "log": "final-widget_test.log",
+   "passed": 2,
+   "all_passed_line": true,
+   "rc": 0
+  },
+  {
+   "file": "test/boards/st1vafe3bx_decoders_test.dart",
+   "log": "final-st1vafe3bx_decoders_test.log",
+   "passed": 4,
+   "all_passed_line": true,
+   "rc": 0
+  }
+ ],
+ "openview_linux_debug_build": {
+  "command": "flutter build linux --debug",
+  "rc": 0,
+  "output": "build/linux/x64/debug/bundle/OpenView"
+ },
+ "caveats": [
+  "AVR results are compile-only against minimal stub headers; they are not Arduino core builds and nothing ran on a microcontroller.",
+  "OpenView tests ran on a working copy with the asset and font declarations removed (the collected snapshot omits those files) and with freshly resolved dependencies (the snapshot has no pubspec.lock).",
+  "settings_updates_test and update_banner_test first failed with the Dart compiler killed by the kernel OOM killer (the sandbox has 2 GB RAM and /tmp is RAM-backed). Re-run after moving the Dart SDK off tmpfs; both pass.",
+  "The Linux bundle was built but not launched (no display)."
+ ]
+}

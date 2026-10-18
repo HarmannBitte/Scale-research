@@ -1,0 +1,12 @@
+[
+  {
+    "file": "documentation/bix.txt",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/BIX_C.htm",
+    "text_sha256": "08bd0e29cde656ece3471db08ec5eb06e5d2b8f23604b001841391bff4a4a332"
+  },
+  {
+    "file": "documentation/demo.txt",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEMO_C.htm",
+    "text_sha256": "3aef8dbf1692fa717893fca9f07d5f2fcd57d60822bbe7df660840eb19255222"
+  }
+]

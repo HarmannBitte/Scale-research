@@ -1,0 +1,2071 @@
+{
+  "sha": "0c683ba5708774cc9590f8923dd8ed1c1e67c3e2",
+  "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/0c683ba5708774cc9590f8923dd8ed1c1e67c3e2",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2c0efe0c8cbac126e1355864a7bfaea2f2f7552",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/e2c0efe0c8cbac126e1355864a7bfaea2f2f7552"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0eeae790a5ddfc281b6c75fb91e3d5a7e018540",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/a0eeae790a5ddfc281b6c75fb91e3d5a7e018540"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5c799ad595718b98c44989cd4b213688634a8a4",
+      "size": 726,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f5c799ad595718b98c44989cd4b213688634a8a4"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11fc491ef1dae316f2b06bbb40eaba9c757fdfd1",
+      "size": 604,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/11fc491ef1dae316f2b06bbb40eaba9c757fdfd1"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6db2f550852217ef5c9606d293cc71e5c1ba1e9a",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/6db2f550852217ef5c9606d293cc71e5c1ba1e9a"
+    },
+    {
+      "path": ".github/workflows/test-package.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e9416e44c6c01107ff0368e66d0ba8a5e2ae03d",
+      "size": 1355,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/7e9416e44c6c01107ff0368e66d0ba8a5e2ae03d"
+    },
+    {
+      "path": ".github/workflows/test-wheel.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "136f725f4c672e9d4ca66456c25ac84a856f1e1e",
+      "size": 2904,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/136f725f4c672e9d4ca66456c25ac84a856f1e1e"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c9a2ffd0e10193fe826ef493ac9a6159cd4e820",
+      "size": 2077,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/4c9a2ffd0e10193fe826ef493ac9a6159cd4e820"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b54d07fc4c7c7cf1104d2a171e6595b886e2fef",
+      "size": 31513,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/4b54d07fc4c7c7cf1104d2a171e6595b886e2fef"
+    },
+    {
+      "path": "CITATION.cff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03e6651f71039a48e3329573c2ab4f8551a9cda4",
+      "size": 828,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/03e6651f71039a48e3329573c2ab4f8551a9cda4"
+    },
+    {
+      "path": "CONTRIBUTORS",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11bce8cc5e785e1fb3996535a95d3975c044b567",
+      "size": 43,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/11bce8cc5e785e1fb3996535a95d3975c044b567"
+    },
+    {
+      "path": "COPYRIGHT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "852629746bc502a300a19a3003856ed7e35cfc08",
+      "size": 881,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/852629746bc502a300a19a3003856ed7e35cfc08"
+    },
+    {
+      "path": "DEV-LICENSES",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b595e625c1c2d8c3d31db856ed0b7c5583a2212",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/2b595e625c1c2d8c3d31db856ed0b7c5583a2212"
+    },
+    {
+      "path": "DEV-LICENSES/LICENSE-build.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3713cdcc9b5df70576fb1d5d010c7a17e02e038",
+      "size": 1113,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c3713cdcc9b5df70576fb1d5d010c7a17e02e038"
+    },
+    {
+      "path": "DEV-LICENSES/LICENSE-flake8.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5e3d6f94008a5b394c0ec3fc3d873dc13cf07f0",
+      "size": 1172,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/e5e3d6f94008a5b394c0ec3fc3d873dc13cf07f0"
+    },
+    {
+      "path": "DEV-LICENSES/LICENSE-setuptools.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "353924be0e59b9ad7e6c22848c2189398481821d",
+      "size": 1050,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/353924be0e59b9ad7e6c22848c2189398481821d"
+    },
+    {
+      "path": "DEV-LICENSES/LICENSE-sphinx-rtd-theme.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "211dd9ccc530f5a3cee0598e097833040495347a",
+      "size": 1119,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/211dd9ccc530f5a3cee0598e097833040495347a"
+    },
+    {
+      "path": "DEV-LICENSES/LICENSE-sphinx.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12779b21370e522be293bf21d5cdbd45ed1c381a",
+      "size": 3135,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/12779b21370e522be293bf21d5cdbd45ed1c381a"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "size": 35149,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+    },
+    {
+      "path": "LICENSES",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "45d6460c36b09c3125ed56f473c7b8c8d833e077",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/45d6460c36b09c3125ed56f473c7b8c8d833e077"
+    },
+    {
+      "path": "LICENSES/LICENSE-DRT-from-Loewner-framework.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d339679c66f3ca27346e8f42125d0383d8fa0d93",
+      "size": 1075,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d339679c66f3ca27346e8f42125d0383d8fa0d93"
+    },
+    {
+      "path": "LICENSES/LICENSE-DRT-python-code.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "size": 35149,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+    },
+    {
+      "path": "LICENSES/LICENSE-DearPyGui.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4ee2c2e135ab7c501ccc02e66a6899afa6c3836",
+      "size": 1072,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f4ee2c2e135ab7c501ccc02e66a6899afa6c3836"
+    },
+    {
+      "path": "LICENSES/LICENSE-Elchemea Analytical.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "size": 35149,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+    },
+    {
+      "path": "LICENSES/LICENSE-Jinja.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c37cae49ec77ad6ebb25568c1605f1fee5313cfb",
+      "size": 1475,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c37cae49ec77ad6ebb25568c1605f1fee5313cfb"
+    },
+    {
+      "path": "LICENSES/LICENSE-circuitikz.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "size": 35149,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+    },
+    {
+      "path": "LICENSES/LICENSE-cvxopt.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "011e5254e1935300f6e18065a2f5a787ee84439b",
+      "size": 35996,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/011e5254e1935300f6e18065a2f5a787ee84439b"
+    },
+    {
+      "path": "LICENSES/LICENSE-impedance.py.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2baf91c37f19b52c7780294ec27b8b08578d4617",
+      "size": 1081,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/2baf91c37f19b52c7780294ec27b8b08578d4617"
+    },
+    {
+      "path": "LICENSES/LICENSE-kvxopt.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "011e5254e1935300f6e18065a2f5a787ee84439b",
+      "size": 35996,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/011e5254e1935300f6e18065a2f5a787ee84439b"
+    },
+    {
+      "path": "LICENSES/LICENSE-lmfit.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "401e039058779c7737c745771474efc085dd646f",
+      "size": 3670,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/401e039058779c7737c745771474efc085dd646f"
+    },
+    {
+      "path": "LICENSES/LICENSE-matplotlib.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0752df48ef02678b5746ccc034a72a99ce8e5f90",
+      "size": 4831,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/0752df48ef02678b5746ccc034a72a99ce8e5f90"
+    },
+    {
+      "path": "LICENSES/LICENSE-nearestSPD.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "222805c039ef5fca4f3f922cc31378bd0683ef14",
+      "size": 1294,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/222805c039ef5fca4f3f922cc31378bd0683ef14"
+    },
+    {
+      "path": "LICENSES/LICENSE-numdifftools.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46f390fa4ef9744eefadc77e2ba5e3e0feb16282",
+      "size": 1515,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/46f390fa4ef9744eefadc77e2ba5e3e0feb16282"
+    },
+    {
+      "path": "LICENSES/LICENSE-numpy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1fb614d66522ff388149827fa34563a4b885efa",
+      "size": 1543,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/e1fb614d66522ff388149827fa34563a4b885efa"
+    },
+    {
+      "path": "LICENSES/LICENSE-odfpy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d511905c1647a1e311e8b20d5930a37a9c2531cd",
+      "size": 17987,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d511905c1647a1e311e8b20d5930a37a9c2531cd"
+    },
+    {
+      "path": "LICENSES/LICENSE-openpyxl.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c85fa1d5a7f2b3a404558f1c7fe4325ab4c05f4",
+      "size": 1132,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/9c85fa1d5a7f2b3a404558f1c7fe4325ab4c05f4"
+    },
+    {
+      "path": "LICENSES/LICENSE-pandas.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4e49a140f1cb4a7fbaac686d491d1ee6f8d544c",
+      "size": 1634,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d4e49a140f1cb4a7fbaac686d491d1ee6f8d544c"
+    },
+    {
+      "path": "LICENSES/LICENSE-pyDRTtools.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaf4f606518fb3f8cf19ca96696cfcfa0fedd48d",
+      "size": 1067,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/aaf4f606518fb3f8cf19ca96696cfcfa0fedd48d"
+    },
+    {
+      "path": "LICENSES/LICENSE-pyimpspec.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "size": 35149,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+    },
+    {
+      "path": "LICENSES/LICENSE-requests.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67db8588217f266eb561f75fae738656325deac9",
+      "size": 10142,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/67db8588217f266eb561f75fae738656325deac9"
+    },
+    {
+      "path": "LICENSES/LICENSE-schemdraw.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abf4ac9e3dcd6185f3bcf868b2d7e7fa1f45c5aa",
+      "size": 1065,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/abf4ac9e3dcd6185f3bcf868b2d7e7fa1f45c5aa"
+    },
+    {
+      "path": "LICENSES/LICENSE-scipy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7901622d8f2e5d6053a2d530639b12b864ad318e",
+      "size": 1536,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/7901622d8f2e5d6053a2d530639b12b864ad318e"
+    },
+    {
+      "path": "LICENSES/LICENSE-statsmodels.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47cd54eec489af242da0e1a9fe00f1ed15cf2e69",
+      "size": 1636,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/47cd54eec489af242da0e1a9fe00f1ed15cf2e69"
+    },
+    {
+      "path": "LICENSES/LICENSE-sympy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d61068576cf1a198f0ae2e44849d85006f30e95",
+      "size": 7885,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/6d61068576cf1a198f0ae2e44849d85006f30e95"
+    },
+    {
+      "path": "LICENSES/LICENSE-tabulate.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81241eca637574fb696620b54200d28a0ff53524",
+      "size": 1080,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/81241eca637574fb696620b54200d28a0ff53524"
+    },
+    {
+      "path": "LICENSES/LICENSE-tol_colors.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ebe0d054097493bd401d3c9f69754411385eeb8",
+      "size": 1453,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/7ebe0d054097493bd401d3c9f69754411385eeb8"
+    },
+    {
+      "path": "LICENSES/LICENSE-xdg-base-dirs.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a4a361848f4c3428ca0d7e9a07c0558e1c2605b",
+      "size": 749,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/5a4a361848f4c3428ca0d7e9a07c0558e1c2605b"
+    },
+    {
+      "path": "LICENSES/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ce775ffdb0ae72b50a5ee44143df491b3a8b9da",
+      "size": 3112,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/4ce775ffdb0ae72b50a5ee44143df491b3a8b9da"
+    },
+    {
+      "path": "MANIFEST.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01e40155a1d2cfc55cb72d47836610de81725786",
+      "size": 271,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/01e40155a1d2cfc55cb72d47836610de81725786"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa9ae0c74a52ae9c8da7cb361725e61c44c39a01",
+      "size": 4135,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/fa9ae0c74a52ae9c8da7cb361725e61c44c39a01"
+    },
+    {
+      "path": "build.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "524ada5d371394aa17270a15bc1f485d2478451c",
+      "size": 4588,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/524ada5d371394aa17270a15bc1f485d2478451c"
+    },
+    {
+      "path": "create_venv.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff19ce2861625a4146c77b618a1cab9fc906ca82",
+      "size": 1716,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/ff19ce2861625a4146c77b618a1cab9fc906ca82"
+    },
+    {
+      "path": "dev-requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb8ef45e74766836e74be5199e36e44081fac985",
+      "size": 73,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/bb8ef45e74766836e74be5199e36e44081fac985"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9657d344991ef20b76bed2624db71d271a6f5d9",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/a9657d344991ef20b76bed2624db71d271a6f5d9"
+    },
+    {
+      "path": "docs/Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0c3cbf1020d5c292abdedf27627c6abe25e2293",
+      "size": 638,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d0c3cbf1020d5c292abdedf27627c6abe25e2293"
+    },
+    {
+      "path": "docs/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6002334eef51182dcc874860eb8f65250205ff2",
+      "size": 180,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/a6002334eef51182dcc874860eb8f65250205ff2"
+    },
+    {
+      "path": "docs/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc1312ab09ca6fb0267dee6b28a38e69c253631a",
+      "size": 769,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/dc1312ab09ca6fb0267dee6b28a38e69c253631a"
+    },
+    {
+      "path": "docs/source",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e418ff0115e4df6fe04f2cd0aebc362c28e350a4",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/e418ff0115e4df6fe04f2cd0aebc362c28e350a4"
+    },
+    {
+      "path": "docs/source/apidocs.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea0229d848a7e35e51afb48f6b94b99b69ba78bd",
+      "size": 2965,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/ea0229d848a7e35e51afb48f6b94b99b69ba78bd"
+    },
+    {
+      "path": "docs/source/apidocs_circuit.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e5eda22c1beab20acbe9991b17e68fce461a33b",
+      "size": 808,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/6e5eda22c1beab20acbe9991b17e68fce461a33b"
+    },
+    {
+      "path": "docs/source/apidocs_data.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c02f42221bf30be29d95067c1f3a290459cdea2e",
+      "size": 197,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c02f42221bf30be29d95067c1f3a290459cdea2e"
+    },
+    {
+      "path": "docs/source/apidocs_drt.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e587f3a4fde9717c4a2e329cd63229de497f7a3",
+      "size": 368,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/5e587f3a4fde9717c4a2e329cd63229de497f7a3"
+    },
+    {
+      "path": "docs/source/apidocs_exceptions.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b940f6094fe22bacbd44469a83f63156b1b070e3",
+      "size": 160,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/b940f6094fe22bacbd44469a83f63156b1b070e3"
+    },
+    {
+      "path": "docs/source/apidocs_fitting.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd0511a629b20c3d7fe1be13089451c33f561801",
+      "size": 295,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/bd0511a629b20c3d7fe1be13089451c33f561801"
+    },
+    {
+      "path": "docs/source/apidocs_kramers_kronig.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b478336ec3f38271f89a6362fc23f1d10dbe769c",
+      "size": 449,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/b478336ec3f38271f89a6362fc23f1d10dbe769c"
+    },
+    {
+      "path": "docs/source/apidocs_plot_mpl.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7730199ff0f4b110a68bb48e6038064933ec871",
+      "size": 7522,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c7730199ff0f4b110a68bb48e6038064933ec871"
+    },
+    {
+      "path": "docs/source/apidocs_project.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24d075aa748a2b32fc44f9d474014d48a2b148a3",
+      "size": 131,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/24d075aa748a2b32fc44f9d474014d48a2b148a3"
+    },
+    {
+      "path": "docs/source/apidocs_typing.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44ec6a8cd9bd44680af51c28abd32d66cc839061",
+      "size": 745,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/44ec6a8cd9bd44680af51c28abd32d66cc839061"
+    },
+    {
+      "path": "docs/source/apidocs_zhit.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de9c2449a4bba4c446a14249cba597f7a48aa1af",
+      "size": 322,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/de9c2449a4bba4c446a14249cba597f7a48aa1af"
+    },
+    {
+      "path": "docs/source/conf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2461f947e0681e8472fc160e195458fa5dd0fde",
+      "size": 3076,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f2461f947e0681e8472fc160e195458fa5dd0fde"
+    },
+    {
+      "path": "docs/source/guide.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3f3d18a90681bb7a0b475902d6354a53eea1934",
+      "size": 513,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c3f3d18a90681bb7a0b475902d6354a53eea1934"
+    },
+    {
+      "path": "docs/source/guide_api.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "124ff4ef978dedfbdcbbf35ada846b9a0b88bace",
+      "size": 16485,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/124ff4ef978dedfbdcbbf35ada846b9a0b88bace"
+    },
+    {
+      "path": "docs/source/guide_batch.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f9a657a67cb4689e73bb85425dcbae31b32b3b4",
+      "size": 966,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/1f9a657a67cb4689e73bb85425dcbae31b32b3b4"
+    },
+    {
+      "path": "docs/source/guide_data.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ff7f0f69233d5b505e67d8681b5bc28140a08ec",
+      "size": 10715,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/0ff7f0f69233d5b505e67d8681b5bc28140a08ec"
+    },
+    {
+      "path": "docs/source/guide_drt.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf962ac52ed77a03ab5a3e7ab04365b5835726ca",
+      "size": 6072,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/cf962ac52ed77a03ab5a3e7ab04365b5835726ca"
+    },
+    {
+      "path": "docs/source/guide_fitting.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "faa5f552b937fd068ce29752d0d33f383fa2b409",
+      "size": 11103,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/faa5f552b937fd068ce29752d0d33f383fa2b409"
+    },
+    {
+      "path": "docs/source/guide_installing.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c758f719b31d38827216e1911636b14fb6dbfd43",
+      "size": 4487,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c758f719b31d38827216e1911636b14fb6dbfd43"
+    },
+    {
+      "path": "docs/source/guide_palettes.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d967cb311c5bfa893c13ffd6190b5702b3a3f6c8",
+      "size": 2217,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d967cb311c5bfa893c13ffd6190b5702b3a3f6c8"
+    },
+    {
+      "path": "docs/source/guide_plotting.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba5e845745d084cbf3b1a2073afe9914ab7f8795",
+      "size": 6715,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/ba5e845745d084cbf3b1a2073afe9914ab7f8795"
+    },
+    {
+      "path": "docs/source/guide_projects.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64b583331ec2b7f13bf0a58fc198804e40482359",
+      "size": 2741,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/64b583331ec2b7f13bf0a58fc198804e40482359"
+    },
+    {
+      "path": "docs/source/guide_settings.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d41476facb13a767e0f217d751b3ba722ec82d01",
+      "size": 4857,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d41476facb13a767e0f217d751b3ba722ec82d01"
+    },
+    {
+      "path": "docs/source/guide_simulation.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c2579b0a45c8a4f96af15bf9980a7d09b857229",
+      "size": 1209,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/9c2579b0a45c8a4f96af15bf9980a7d09b857229"
+    },
+    {
+      "path": "docs/source/guide_validation.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "007fe4b0cb4bb2c5eabf70c6b91f9bb17d3a2d4c",
+      "size": 11457,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/007fe4b0cb4bb2c5eabf70c6b91f9bb17d3a2d4c"
+    },
+    {
+      "path": "docs/source/index.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1531ca84649186754157c822018d2aa18c7878d",
+      "size": 2912,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/b1531ca84649186754157c822018d2aa18c7878d"
+    },
+    {
+      "path": "docs/source/substitutions.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c44c619f52c0c9827a0e503088824d524e26db3",
+      "size": 2504,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/5c44c619f52c0c9827a0e503088824d524e26db3"
+    },
+    {
+      "path": "post-build.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "976cfb41f29cd73c9389099d03579bcdf2873c55",
+      "size": 5336,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/976cfb41f29cd73c9389099d03579bcdf2873c55"
+    },
+    {
+      "path": "pre-build.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08fe9ed6fcd1e3f255698c2d672f3c8394a1d198",
+      "size": 3375,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/08fe9ed6fcd1e3f255698c2d672f3c8394a1d198"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc94bfcc92e7dc2deb70e13d764fda847af6d72e",
+      "size": 106,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/bc94bfcc92e7dc2deb70e13d764fda847af6d72e"
+    },
+    {
+      "path": "setup.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78371a8d3d2d04c5848b4755585cf962e3f3b08e",
+      "size": 69,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/78371a8d3d2d04c5848b4755585cf962e3f3b08e"
+    },
+    {
+      "path": "setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fbf7fbea1f8c39660cec19e8e0b0c18b2d03fa7",
+      "size": 3385,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/7fbf7fbea1f8c39660cec19e8e0b0c18b2d03fa7"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "91c85bec63b0ca872e46e87f3f2eec96b3a757e4",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/91c85bec63b0ca872e46e87f3f2eec96b3a757e4"
+    },
+    {
+      "path": "src/deareis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00b950faae1a370413b0bb8afa3a3f4b5e4a2953",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/00b950faae1a370413b0bb8afa3a3f4b5e4a2953"
+    },
+    {
+      "path": "src/deareis/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1680d3701472f3d8b21a3e03bba10339818c3f9b",
+      "size": 2441,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/1680d3701472f3d8b21a3e03bba10339818c3f9b"
+    },
+    {
+      "path": "src/deareis/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "978f9952b41d5f96dddb88642309bd5a22c8ed36",
+      "size": 954,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/978f9952b41d5f96dddb88642309bd5a22c8ed36"
+    },
+    {
+      "path": "src/deareis/api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a8a3dca82da77b1b803594ebd10495b3b7f9c72",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/3a8a3dca82da77b1b803594ebd10495b3b7f9c72"
+    },
+    {
+      "path": "src/deareis/api/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "852629746bc502a300a19a3003856ed7e35cfc08",
+      "size": 881,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/852629746bc502a300a19a3003856ed7e35cfc08"
+    },
+    {
+      "path": "src/deareis/api/_utility.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6552c3eae787677b68928a039eda3a92034ca40",
+      "size": 1182,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c6552c3eae787677b68928a039eda3a92034ca40"
+    },
+    {
+      "path": "src/deareis/api/circuit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fbea500ffd7e3d5577603a27f7097df62f8606cf",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/fbea500ffd7e3d5577603a27f7097df62f8606cf"
+    },
+    {
+      "path": "src/deareis/api/circuit/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a55d497297acefc73597df4710e0dea3e854fe3e",
+      "size": 1289,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/a55d497297acefc73597df4710e0dea3e854fe3e"
+    },
+    {
+      "path": "src/deareis/api/circuit/elements.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6b56ad91e733cf31c4535e2ee8cdc586a148e16",
+      "size": 923,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d6b56ad91e733cf31c4535e2ee8cdc586a148e16"
+    },
+    {
+      "path": "src/deareis/api/data.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0129a9cc6a868c52fb782d5a86860f689c22cd77",
+      "size": 1311,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/0129a9cc6a868c52fb782d5a86860f689c22cd77"
+    },
+    {
+      "path": "src/deareis/api/drt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bacf051cb50c048cebeee6fcdea68e7249d395c",
+      "size": 5753,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/7bacf051cb50c048cebeee6fcdea68e7249d395c"
+    },
+    {
+      "path": "src/deareis/api/fitting.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10b982a5f0b8a2a8fe3425387817dc23a954c54e",
+      "size": 4272,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/10b982a5f0b8a2a8fe3425387817dc23a954c54e"
+    },
+    {
+      "path": "src/deareis/api/kramers_kronig.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e41b18279114bc0803a0f9d51175206236679efb",
+      "size": 13585,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/e41b18279114bc0803a0f9d51175206236679efb"
+    },
+    {
+      "path": "src/deareis/api/plot",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1db0d863cbd3181e294258137ec78caa11c0cdf",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/e1db0d863cbd3181e294258137ec78caa11c0cdf"
+    },
+    {
+      "path": "src/deareis/api/plot/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "852629746bc502a300a19a3003856ed7e35cfc08",
+      "size": 881,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/852629746bc502a300a19a3003856ed7e35cfc08"
+    },
+    {
+      "path": "src/deareis/api/plot/mpl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "418dba77069d695c4ff8be3e0b56895d3ac3a7b0",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/418dba77069d695c4ff8be3e0b56895d3ac3a7b0"
+    },
+    {
+      "path": "src/deareis/api/plot/mpl/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1e3dafdc1fef2c7eeb55414890af62319f84db8",
+      "size": 1030,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/b1e3dafdc1fef2c7eeb55414890af62319f84db8"
+    },
+    {
+      "path": "src/deareis/api/plot/mpl/mpl.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34117975aa60a846257d80241a95aa06e9371366",
+      "size": 14000,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/34117975aa60a846257d80241a95aa06e9371366"
+    },
+    {
+      "path": "src/deareis/api/plotting.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6056092186ca21550bb8521918aa6ac1e10946d3",
+      "size": 989,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/6056092186ca21550bb8521918aa6ac1e10946d3"
+    },
+    {
+      "path": "src/deareis/api/simulation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "045f22fd68b798d282080cf9e0f641eeec685c00",
+      "size": 1765,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/045f22fd68b798d282080cf9e0f641eeec685c00"
+    },
+    {
+      "path": "src/deareis/api/zhit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "276331185ed94e2b01c1d8daae5b146720e5e17b",
+      "size": 4822,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/276331185ed94e2b01c1d8daae5b146720e5e17b"
+    },
+    {
+      "path": "src/deareis/arguments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b2512426d2e8ef408a92df6d381adff40144864",
+      "size": 3227,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/0b2512426d2e8ef408a92df6d381adff40144864"
+    },
+    {
+      "path": "src/deareis/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01d79a0adb66507fc5abb0a2e21583a3a389a87c",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/01d79a0adb66507fc5abb0a2e21583a3a389a87c"
+    },
+    {
+      "path": "src/deareis/config/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba18d0bae9eca6d043264d9d6a076e975d2a17bf",
+      "size": 22051,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/ba18d0bae9eca6d043264d9d6a076e975d2a17bf"
+    },
+    {
+      "path": "src/deareis/config/defaults.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7eb8563c6a3dab13556a8c4e757c927e3f1566ae",
+      "size": 18199,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/7eb8563c6a3dab13556a8c4e757c927e3f1566ae"
+    },
+    {
+      "path": "src/deareis/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0afac520c1a4622f6d1ed00a3cadab98b8ccb633",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/0afac520c1a4622f6d1ed00a3cadab98b8ccb633"
+    },
+    {
+      "path": "src/deareis/data/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "436455445550a345b02875d4cac180cde4213f64",
+      "size": 1421,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/436455445550a345b02875d4cac180cde4213f64"
+    },
+    {
+      "path": "src/deareis/data/data_sets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d209afcd3e42425053fab27e2df08d0363ad3e90",
+      "size": 4773,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d209afcd3e42425053fab27e2df08d0363ad3e90"
+    },
+    {
+      "path": "src/deareis/data/drt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f7cf94160f86f33778ebe7daa0e386e177393c8",
+      "size": 31461,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/8f7cf94160f86f33778ebe7daa0e386e177393c8"
+    },
+    {
+      "path": "src/deareis/data/fitting.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "604e70a0c5e6888d9d4da3a07f0fad3c6059a1e1",
+      "size": 25006,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/604e70a0c5e6888d9d4da3a07f0fad3c6059a1e1"
+    },
+    {
+      "path": "src/deareis/data/kramers_kronig.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a51e4dc44cf4f8a4b23594334e686a5d987b109d",
+      "size": 29560,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/a51e4dc44cf4f8a4b23594334e686a5d987b109d"
+    },
+    {
+      "path": "src/deareis/data/plotting.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba3b433791557e4fcf10a80c77be3a94ec517787",
+      "size": 18549,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/ba3b433791557e4fcf10a80c77be3a94ec517787"
+    },
+    {
+      "path": "src/deareis/data/project.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2be0bc67a29988c1b39cdf5f3a9e92c548ebb762",
+      "size": 38015,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/2be0bc67a29988c1b39cdf5f3a9e92c548ebb762"
+    },
+    {
+      "path": "src/deareis/data/simulation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31258821ceaffc9937c606f264f2e44e6b46a6d5",
+      "size": 13665,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/31258821ceaffc9937c606f264f2e44e6b46a6d5"
+    },
+    {
+      "path": "src/deareis/data/zhit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81749ce08f89000774a8795388b7a16a3a081cec",
+      "size": 14997,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/81749ce08f89000774a8795388b7a16a3a081cec"
+    },
+    {
+      "path": "src/deareis/enums.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cfee896ed11e55d98f1a9ddf08045004af233a2",
+      "size": 53899,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/7cfee896ed11e55d98f1a9ddf08045004af233a2"
+    },
+    {
+      "path": "src/deareis/exceptions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d9ae4b5e8b73fc434190c815e92f98cbbaceef6",
+      "size": 917,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/2d9ae4b5e8b73fc434190c815e92f98cbbaceef6"
+    },
+    {
+      "path": "src/deareis/gui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3228982da8f10d4e640277607efbad977aca6e63",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/3228982da8f10d4e640277607efbad977aca6e63"
+    },
+    {
+      "path": "src/deareis/gui/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08d844b8bdd2c7ddab05f78de696d7e21b090af6",
+      "size": 949,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/08d844b8bdd2c7ddab05f78de696d7e21b090af6"
+    },
+    {
+      "path": "src/deareis/gui/about.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a56bbecb0de010c1fb3cde3f414631557c146583",
+      "size": 3338,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/a56bbecb0de010c1fb3cde3f414631557c146583"
+    },
+    {
+      "path": "src/deareis/gui/batch_analysis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e27529afb215750feea625d64e85da92239b50c",
+      "size": 9977,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/4e27529afb215750feea625d64e85da92239b50c"
+    },
+    {
+      "path": "src/deareis/gui/busy_message.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cf798b33ad39a2940d0342cb3984941bbe09061",
+      "size": 3905,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/4cf798b33ad39a2940d0342cb3984941bbe09061"
+    },
+    {
+      "path": "src/deareis/gui/changelog",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b01de08be6819ab1b397135993ee06bfbe3a062b",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/b01de08be6819ab1b397135993ee06bfbe3a062b"
+    },
+    {
+      "path": "src/deareis/gui/changelog/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c13cc14c4ef443ca5f50a4f89e82aaf1e6ccc1a",
+      "size": 5816,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/9c13cc14c4ef443ca5f50a4f89e82aaf1e6ccc1a"
+    },
+    {
+      "path": "src/deareis/gui/circuit_editor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84b484e7c8479f769dd95233187a45254635cfee",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/84b484e7c8479f769dd95233187a45254635cfee"
+    },
+    {
+      "path": "src/deareis/gui/circuit_editor/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb516c72572e79c5868b406f4c97b77ca798d742",
+      "size": 985,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/bb516c72572e79c5868b406f4c97b77ca798d742"
+    },
+    {
+      "path": "src/deareis/gui/circuit_editor/editor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "726358271f31e4bcbc498fb553a1262071453667",
+      "size": 45702,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/726358271f31e4bcbc498fb553a1262071453667"
+    },
+    {
+      "path": "src/deareis/gui/circuit_editor/parameters.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a82446e1417b0393da50dd28faa0eb6f2bc3c94",
+      "size": 32048,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/8a82446e1417b0393da50dd28faa0eb6f2bc3c94"
+    },
+    {
+      "path": "src/deareis/gui/circuit_editor/parser.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f6a9393be65292a2c142ea2cc8bbc2a4ee40ad9",
+      "size": 36906,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/2f6a9393be65292a2c142ea2cc8bbc2a4ee40ad9"
+    },
+    {
+      "path": "src/deareis/gui/circuit_editor/preview.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "076eb8349b7e3ac613b4dfe4084d9df856437d9f",
+      "size": 2167,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/076eb8349b7e3ac613b4dfe4084d9df856437d9f"
+    },
+    {
+      "path": "src/deareis/gui/data_sets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2699239b8a0b5985312b8c0fb5d5cec876b14be",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/f2699239b8a0b5985312b8c0fb5d5cec876b14be"
+    },
+    {
+      "path": "src/deareis/gui/data_sets/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75b2d1ee299ff9ea1f63f937f01c4b96175ea1e2",
+      "size": 35607,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/75b2d1ee299ff9ea1f63f937f01c4b96175ea1e2"
+    },
+    {
+      "path": "src/deareis/gui/data_sets/average_data_sets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d267379713678fba9ad5592b468033f036676c58",
+      "size": 18481,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d267379713678fba9ad5592b468033f036676c58"
+    },
+    {
+      "path": "src/deareis/gui/data_sets/copy_mask.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97c8d2fa84ebdf1d8c8ee489fe7534fe0bae35d3",
+      "size": 12394,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/97c8d2fa84ebdf1d8c8ee489fe7534fe0bae35d3"
+    },
+    {
+      "path": "src/deareis/gui/data_sets/interpolate_points.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dadf2596144eb329666450ae13fce843fb30c94",
+      "size": 28596,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/9dadf2596144eb329666450ae13fce843fb30c94"
+    },
+    {
+      "path": "src/deareis/gui/data_sets/parallel_impedance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05f202621eee47d6d0f5e671a4dd174b25381cfb",
+      "size": 21481,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/05f202621eee47d6d0f5e671a4dd174b25381cfb"
+    },
+    {
+      "path": "src/deareis/gui/data_sets/subtract_impedance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8aaeab3bed4ef5b5fb2fcf20294ef0912baabb10",
+      "size": 26632,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/8aaeab3bed4ef5b5fb2fcf20294ef0912baabb10"
+    },
+    {
+      "path": "src/deareis/gui/data_sets/toggle_data_points.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e7ad7221ebe58d6cc95164d8aa612272e6af1e8",
+      "size": 21285,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/9e7ad7221ebe58d6cc95164d8aa612272e6af1e8"
+    },
+    {
+      "path": "src/deareis/gui/drt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1bd46cbb6bdaeedfd92723028a8d72e40addb98",
+      "size": 81542,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c1bd46cbb6bdaeedfd92723028a8d72e40addb98"
+    },
+    {
+      "path": "src/deareis/gui/error_message.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b885656ab639c49269d17c7f4d0137cf2344e006",
+      "size": 4560,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/b885656ab639c49269d17c7f4d0137cf2344e006"
+    },
+    {
+      "path": "src/deareis/gui/file_dialog.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf28082ebe3456a7c392c652ac3539cde8f0e19e",
+      "size": 24715,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/cf28082ebe3456a7c392c652ac3539cde8f0e19e"
+    },
+    {
+      "path": "src/deareis/gui/fitting.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69eb9f560a4a697cfb062fd967b57f70e1dad6e1",
+      "size": 62219,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/69eb9f560a4a697cfb062fd967b57f70e1dad6e1"
+    },
+    {
+      "path": "src/deareis/gui/kramers_kronig",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f25d4039ba2a88ebd4e1cfd6652c0ad901af9fdc",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/f25d4039ba2a88ebd4e1cfd6652c0ad901af9fdc"
+    },
+    {
+      "path": "src/deareis/gui/kramers_kronig/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a65f24bd95482d1e69a06a1ca0e49191f9640cd",
+      "size": 61881,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/6a65f24bd95482d1e69a06a1ca0e49191f9640cd"
+    },
+    {
+      "path": "src/deareis/gui/kramers_kronig/exploratory_results.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5181755a160531891a8f279439ce46c9d3764fb6",
+      "size": 78759,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/5181755a160531891a8f279439ce46c9d3764fb6"
+    },
+    {
+      "path": "src/deareis/gui/licenses",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17f2ebc64f2cad6d3f4d2f0b84b119289b8a1838",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/17f2ebc64f2cad6d3f4d2f0b84b119289b8a1838"
+    },
+    {
+      "path": "src/deareis/gui/licenses/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ff63ac293c765e6916173681e4122845e44d79f",
+      "size": 7377,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/1ff63ac293c765e6916173681e4122845e44d79f"
+    },
+    {
+      "path": "src/deareis/gui/overview.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e1f05d426e8e8419126b26b0cccce177b64237a",
+      "size": 2651,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/9e1f05d426e8e8419126b26b0cccce177b64237a"
+    },
+    {
+      "path": "src/deareis/gui/palettes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c1a725b84219bc1f39e08085e47d354ad5693fa",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/4c1a725b84219bc1f39e08085e47d354ad5693fa"
+    },
+    {
+      "path": "src/deareis/gui/palettes/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c75114f3e94cb8d0832c2f7b74faeb617fd05a47",
+      "size": 989,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c75114f3e94cb8d0832c2f7b74faeb617fd05a47"
+    },
+    {
+      "path": "src/deareis/gui/palettes/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3442117ca94fe3558bd0a687ec1dc27b06188f13",
+      "size": 12002,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/3442117ca94fe3558bd0a687ec1dc27b06188f13"
+    },
+    {
+      "path": "src/deareis/gui/palettes/command.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1a33e2a9c128ef072856a72cccb8c652b576f9d",
+      "size": 3454,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d1a33e2a9c128ef072856a72cccb8c652b576f9d"
+    },
+    {
+      "path": "src/deareis/gui/palettes/data_set.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b529c49559e16b9a2160f927710292521d2a43b2",
+      "size": 3494,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/b529c49559e16b9a2160f927710292521d2a43b2"
+    },
+    {
+      "path": "src/deareis/gui/palettes/result.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6052d62f56224392914a60c77edfb2d6745e6e38",
+      "size": 5758,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/6052d62f56224392914a60c77edfb2d6745e6e38"
+    },
+    {
+      "path": "src/deareis/gui/plots",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d97813d4cafbab6c5179e5b19c04c8d89f144cc0",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/d97813d4cafbab6c5179e5b19c04c8d89f144cc0"
+    },
+    {
+      "path": "src/deareis/gui/plots/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1adc3964d0fdf92a337e5e3ce0c6e5f4e9e2d16b",
+      "size": 4178,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/1adc3964d0fdf92a337e5e3ce0c6e5f4e9e2d16b"
+    },
+    {
+      "path": "src/deareis/gui/plots/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29d4b650a13e56df5da097302df19b82dee7c6a9",
+      "size": 4876,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/29d4b650a13e56df5da097302df19b82dee7c6a9"
+    },
+    {
+      "path": "src/deareis/gui/plots/bode.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9094186f607176c375c1ab94d904ac5bfb8b2dfa",
+      "size": 26416,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/9094186f607176c375c1ab94d904ac5bfb8b2dfa"
+    },
+    {
+      "path": "src/deareis/gui/plots/drt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e351d8baedd3d31f4052f25ce488cde1f5fa7b7",
+      "size": 11075,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/2e351d8baedd3d31f4052f25ce488cde1f5fa7b7"
+    },
+    {
+      "path": "src/deareis/gui/plots/image.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bde69cba578933d623cb5f4c3c7040850d6e295c",
+      "size": 4141,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/bde69cba578933d623cb5f4c3c7040850d6e295c"
+    },
+    {
+      "path": "src/deareis/gui/plots/impedance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6eac810ecb81cbe70574113f0c67dee2545dcd2",
+      "size": 20357,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/e6eac810ecb81cbe70574113f0c67dee2545dcd2"
+    },
+    {
+      "path": "src/deareis/gui/plots/kramers_kronig_methods.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e048ab4692623e280356d3f93f13493118685e90",
+      "size": 36692,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/e048ab4692623e280356d3f93f13493118685e90"
+    },
+    {
+      "path": "src/deareis/gui/plots/log_F_ext.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ab9715a5795a5a935089cb7f52b4d6edeb9c667",
+      "size": 14853,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/2ab9715a5795a5a935089cb7f52b4d6edeb9c667"
+    },
+    {
+      "path": "src/deareis/gui/plots/nyquist.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68b8c2615b3c17f1b6268e11dce71e2c528e0a19",
+      "size": 8459,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/68b8c2615b3c17f1b6268e11dce71e2c528e0a19"
+    },
+    {
+      "path": "src/deareis/gui/plots/pseudo_chisqr.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca42fe931ecc717685839629bbdad6c5bd5ec42a",
+      "size": 8819,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/ca42fe931ecc717685839629bbdad6c5bd5ec42a"
+    },
+    {
+      "path": "src/deareis/gui/plots/residuals.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ac3c29af77ee1d638bcc1494ffb1211cbc24a54",
+      "size": 9300,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/2ac3c29af77ee1d638bcc1494ffb1211cbc24a54"
+    },
+    {
+      "path": "src/deareis/gui/plots/zhit_weights.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3962a33ff7f397a565333fae1e4bf898ecc372c5",
+      "size": 11137,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/3962a33ff7f397a565333fae1e4bf898ecc372c5"
+    },
+    {
+      "path": "src/deareis/gui/plotting",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5c2a55569770dffe7fac4ec28670ee3dadfa5556",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/5c2a55569770dffe7fac4ec28670ee3dadfa5556"
+    },
+    {
+      "path": "src/deareis/gui/plotting/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3de61c80ece90d1a94aeb3f38d7ae897397fc1f7",
+      "size": 118209,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/3de61c80ece90d1a94aeb3f38d7ae897397fc1f7"
+    },
+    {
+      "path": "src/deareis/gui/plotting/copy_appearance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81a8f8463f37b1f45313bc2973173a0f2af51ef2",
+      "size": 17705,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/81a8f8463f37b1f45313bc2973173a0f2af51ef2"
+    },
+    {
+      "path": "src/deareis/gui/plotting/export.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "873e9c81611ff344146819e40591b6e43efcdc02",
+      "size": 29883,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/873e9c81611ff344146819e40591b6e43efcdc02"
+    },
+    {
+      "path": "src/deareis/gui/program.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f1a32f46d789e120592f745d79c3dadf4bf38bd",
+      "size": 14299,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/2f1a32f46d789e120592f745d79c3dadf4bf38bd"
+    },
+    {
+      "path": "src/deareis/gui/project.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76604ada307d8b08cc7512ce374844fcdd372bf6",
+      "size": 29487,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/76604ada307d8b08cc7512ce374844fcdd372bf6"
+    },
+    {
+      "path": "src/deareis/gui/settings",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a894ba261e8c943467ec46657b073d7843922ad2",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/a894ba261e8c943467ec46657b073d7843922ad2"
+    },
+    {
+      "path": "src/deareis/gui/settings/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6edd855f61571d40e1e86d5b39a578f670dd4db",
+      "size": 1146,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f6edd855f61571d40e1e86d5b39a578f670dd4db"
+    },
+    {
+      "path": "src/deareis/gui/settings/appearance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "031bafec56656ca0c15d1c0ee40ffa687a190ae5",
+      "size": 51348,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/031bafec56656ca0c15d1c0ee40ffa687a190ae5"
+    },
+    {
+      "path": "src/deareis/gui/settings/defaults.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c31e31f689463275ffb5224642019451e5f79ac5",
+      "size": 17519,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c31e31f689463275ffb5224642019451e5f79ac5"
+    },
+    {
+      "path": "src/deareis/gui/settings/keybindings.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1051f48a486f6a967a260b990b810b02e1c5fab2",
+      "size": 14446,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/1051f48a486f6a967a260b990b810b02e1c5fab2"
+    },
+    {
+      "path": "src/deareis/gui/settings/user_defined_elements.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1ae32fb9ee8e501fe6842a3a00e17d0a5ccf934",
+      "size": 9561,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f1ae32fb9ee8e501fe6842a3a00e17d0a5ccf934"
+    },
+    {
+      "path": "src/deareis/gui/shared.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3eb5e90556a31f427f1a3931dd171a971708337",
+      "size": 5568,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/b3eb5e90556a31f427f1a3931dd171a971708337"
+    },
+    {
+      "path": "src/deareis/gui/simulation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b49338211fc5837b5a5a1c3b97384c64333e79b",
+      "size": 50961,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/8b49338211fc5837b5a5a1c3b97384c64333e79b"
+    },
+    {
+      "path": "src/deareis/gui/widgets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7024ed2582db1387908f356e1480a64fdf55d15",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/b7024ed2582db1387908f356e1480a64fdf55d15"
+    },
+    {
+      "path": "src/deareis/gui/widgets/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0732314327eb2aa8112db5081f075b550141c7b",
+      "size": 882,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/b0732314327eb2aa8112db5081f075b550141c7b"
+    },
+    {
+      "path": "src/deareis/gui/widgets/combo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0482742b7b1b4cd8a2b19f6dafdf0485022fdf1b",
+      "size": 4632,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/0482742b7b1b4cd8a2b19f6dafdf0485022fdf1b"
+    },
+    {
+      "path": "src/deareis/gui/zhit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f5c8bafdaf6e5f9405ec519d92b2d305acf444c",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/0f5c8bafdaf6e5f9405ec519d92b2d305acf444c"
+    },
+    {
+      "path": "src/deareis/gui/zhit/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "177bae71e17aec85d5c089612fc45c392897cd26",
+      "size": 45623,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/177bae71e17aec85d5c089612fc45c392897cd26"
+    },
+    {
+      "path": "src/deareis/gui/zhit/weights_preview.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee437ae7db854f0259e58b5bb856ba16c0352fc5",
+      "size": 8717,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/ee437ae7db854f0259e58b5bb856ba16c0352fc5"
+    },
+    {
+      "path": "src/deareis/keybindings",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad72c63a8d028c1cdbcc64c85ef0cebcb21b060b",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/ad72c63a8d028c1cdbcc64c85ef0cebcb21b060b"
+    },
+    {
+      "path": "src/deareis/keybindings/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52a1c78c9493224fe8cfa916f2484367ae931c2c",
+      "size": 36267,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/52a1c78c9493224fe8cfa916f2484367ae931c2c"
+    },
+    {
+      "path": "src/deareis/keybindings/keybinding.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c52f75ccd641579e49bc76ce5bcc5bfefde33289",
+      "size": 7678,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c52f75ccd641579e49bc76ce5bcc5bfefde33289"
+    },
+    {
+      "path": "src/deareis/program",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bec5a5e5a383ca425e040de5d5a67a0ad809b8d6",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/bec5a5e5a383ca425e040de5d5a67a0ad809b8d6"
+    },
+    {
+      "path": "src/deareis/program/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3295953b0a566add920f610a45508483e1cd7f7",
+      "size": 41417,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d3295953b0a566add920f610a45508483e1cd7f7"
+    },
+    {
+      "path": "src/deareis/program/batch_analysis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9db69d4a0c07d79f21220ab6d95c41c4653afb75",
+      "size": 4194,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/9db69d4a0c07d79f21220ab6d95c41c4653afb75"
+    },
+    {
+      "path": "src/deareis/program/check_updates.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e939c141d0c5a8d6e7010ef91b04223dbf00a727",
+      "size": 2930,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/e939c141d0c5a8d6e7010ef91b04223dbf00a727"
+    },
+    {
+      "path": "src/deareis/program/data_sets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af5b62d7f9403d823738d46a67fbedaf4b1cff75",
+      "size": 20539,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/af5b62d7f9403d823738d46a67fbedaf4b1cff75"
+    },
+    {
+      "path": "src/deareis/program/drt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2cb5f792bb17eef260922644496f37c5fa5e7f6",
+      "size": 4502,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/a2cb5f792bb17eef260922644496f37c5fa5e7f6"
+    },
+    {
+      "path": "src/deareis/program/fitting.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8aa6fc3eb8e5971fd7713e961d0a729f113a4cd",
+      "size": 4592,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c8aa6fc3eb8e5971fd7713e961d0a729f113a4cd"
+    },
+    {
+      "path": "src/deareis/program/kramers_kronig.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb5ddfb7d46cfec1291c82b29f6a127ba394e245",
+      "size": 10809,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/eb5ddfb7d46cfec1291c82b29f6a127ba394e245"
+    },
+    {
+      "path": "src/deareis/program/overview.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7685f594ae61f65c93bd5b4fe626a9ef2e8d6f0a",
+      "size": 2312,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/7685f594ae61f65c93bd5b4fe626a9ef2e8d6f0a"
+    },
+    {
+      "path": "src/deareis/program/plotting.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7253db286a5045bdaefd8d6963f4973ce01de09a",
+      "size": 18907,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/7253db286a5045bdaefd8d6963f4973ce01de09a"
+    },
+    {
+      "path": "src/deareis/program/project.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "072613c51b98c8b3d7eae6c112a1aa914754ff62",
+      "size": 14985,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/072613c51b98c8b3d7eae6c112a1aa914754ff62"
+    },
+    {
+      "path": "src/deareis/program/simulation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9db035b54df40055f59376c6e458fdd1710820c9",
+      "size": 4638,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/9db035b54df40055f59376c6e458fdd1710820c9"
+    },
+    {
+      "path": "src/deareis/program/zhit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "563297c66700fadf7114a694a1a31c9dec43b478",
+      "size": 5518,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/563297c66700fadf7114a694a1a31c9dec43b478"
+    },
+    {
+      "path": "src/deareis/signals.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6f9b75b0d0e3647c7450236f243c4aac0d4f285",
+      "size": 8330,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f6f9b75b0d0e3647c7450236f243c4aac0d4f285"
+    },
+    {
+      "path": "src/deareis/state.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f4dc25202dcff6a04d42cd16d0d49a383f7af1f",
+      "size": 15149,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/6f4dc25202dcff6a04d42cd16d0d49a383f7af1f"
+    },
+    {
+      "path": "src/deareis/themes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7dd25d20d35b37ef38b5fe840395b20ecc57480",
+      "size": 37990,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/a7dd25d20d35b37ef38b5fe840395b20ecc57480"
+    },
+    {
+      "path": "src/deareis/tooltips",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4051b305b15d5ac11b3fe9ee2e483a124dc55be2",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/4051b305b15d5ac11b3fe9ee2e483a124dc55be2"
+    },
+    {
+      "path": "src/deareis/tooltips/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "811452ed398e6b2f404d14732b1310ce71a659f9",
+      "size": 2352,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/811452ed398e6b2f404d14732b1310ce71a659f9"
+    },
+    {
+      "path": "src/deareis/tooltips/batch_analysis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3b82a9d88cf91c4123a8490d6be6d363c7f7dba",
+      "size": 1466,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f3b82a9d88cf91c4123a8490d6be6d363c7f7dba"
+    },
+    {
+      "path": "src/deareis/tooltips/circuit_editor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b314fc7d90c80c8c3f73df06bf8d10d6bcb9ec89",
+      "size": 7739,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/b314fc7d90c80c8c3f73df06bf8d10d6bcb9ec89"
+    },
+    {
+      "path": "src/deareis/tooltips/data_sets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9f712748a2656c5ed98d03d2b0775493b51e048",
+      "size": 3182,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f9f712748a2656c5ed98d03d2b0775493b51e048"
+    },
+    {
+      "path": "src/deareis/tooltips/drt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64811015707120174fb3e6294aa1cb9614c32a03",
+      "size": 7911,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/64811015707120174fb3e6294aa1cb9614c32a03"
+    },
+    {
+      "path": "src/deareis/tooltips/fitting.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b8331c4d380a36be69b4b94e58f8fda36bc4dc3",
+      "size": 5976,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/9b8331c4d380a36be69b4b94e58f8fda36bc4dc3"
+    },
+    {
+      "path": "src/deareis/tooltips/general.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5199713e48aaf96b4b7d2de49f654a6eab4d0b7",
+      "size": 3601,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f5199713e48aaf96b4b7d2de49f654a6eab4d0b7"
+    },
+    {
+      "path": "src/deareis/tooltips/home.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b103675f1b7f8052ac7690b3e022fd22ae887c3",
+      "size": 1900,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/2b103675f1b7f8052ac7690b3e022fd22ae887c3"
+    },
+    {
+      "path": "src/deareis/tooltips/kramers_kronig.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fcd8d619181bdcd4c77c53aff75340c538cc6be",
+      "size": 20880,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/4fcd8d619181bdcd4c77c53aff75340c538cc6be"
+    },
+    {
+      "path": "src/deareis/tooltips/plotting.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d0d59b4a8ef89e7339db646795882c2bdff724f",
+      "size": 6529,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/4d0d59b4a8ef89e7339db646795882c2bdff724f"
+    },
+    {
+      "path": "src/deareis/tooltips/recent_projects.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef2bfd6e387ff15eb572effd33e9de45536a1194",
+      "size": 1106,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/ef2bfd6e387ff15eb572effd33e9de45536a1194"
+    },
+    {
+      "path": "src/deareis/tooltips/simulation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d066be68ab180d1b360bd70477a2fcc85293cf14",
+      "size": 2434,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d066be68ab180d1b360bd70477a2fcc85293cf14"
+    },
+    {
+      "path": "src/deareis/tooltips/zhit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "446622cee070ff08e5371374b1943edb88db9b5d",
+      "size": 5062,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/446622cee070ff08e5371374b1943edb88db9b5d"
+    },
+    {
+      "path": "src/deareis/typing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "880449c502f5ff299f3066a6cf8fa38c9ee383df",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/880449c502f5ff299f3066a6cf8fa38c9ee383df"
+    },
+    {
+      "path": "src/deareis/typing/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b86b2ac95bc62fa3c302293eac0227ccd2a4c5e6",
+      "size": 913,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/b86b2ac95bc62fa3c302293eac0227ccd2a4c5e6"
+    },
+    {
+      "path": "src/deareis/typing/helpers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c77d6be5f9b9b80bad2b1f3ad894fcbfc5ddfe5",
+      "size": 951,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/6c77d6be5f9b9b80bad2b1f3ad894fcbfc5ddfe5"
+    },
+    {
+      "path": "src/deareis/utility.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5443bb82765965c32e0870ae5dc6abba43e62a4d",
+      "size": 14859,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/5443bb82765965c32e0870ae5dc6abba43e62a4d"
+    },
+    {
+      "path": "src/deareis/version.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea92068728ec1665e205340306603f8267ff5dae",
+      "size": 912,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/ea92068728ec1665e205340306603f8267ff5dae"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "372629a0750e621065b92f0b49e93248721c3e1c",
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/trees/372629a0750e621065b92f0b49e93248721c3e1c"
+    },
+    {
+      "path": "tests/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec9101e1b006dc9ec1f6c25a0fcfd6a828053471",
+      "size": 914,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/ec9101e1b006dc9ec1f6c25a0fcfd6a828053471"
+    },
+    {
+      "path": "tests/data-1.idf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a04515faa020ad876e9b2a3d87190342f01dde70",
+      "size": 43850,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/a04515faa020ad876e9b2a3d87190342f01dde70"
+    },
+    {
+      "path": "tests/data-2.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "814e074205f42b48cf6692c6e76263b3c8372427",
+      "size": 1574,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/814e074205f42b48cf6692c6e76263b3c8372427"
+    },
+    {
+      "path": "tests/example-config-v2-1_0_0.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2369cfc7b418337835e907fec94081c90bbc6ce1",
+      "size": 9027,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/2369cfc7b418337835e907fec94081c90bbc6ce1"
+    },
+    {
+      "path": "tests/example-config-v3-2_0_0.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7f000cb4245bc1ba73c7fc31f04fe081d74156e",
+      "size": 9554,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/a7f000cb4245bc1ba73c7fc31f04fe081d74156e"
+    },
+    {
+      "path": "tests/example-config-v4-3_0_0.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4042e3989fe117e728a3fa9da05554ed1d65887",
+      "size": 11296,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c4042e3989fe117e728a3fa9da05554ed1d65887"
+    },
+    {
+      "path": "tests/example-config-v4-4_0_0.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "debe9391402b99429feac59a88fcf7460f0118dc",
+      "size": 13247,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/debe9391402b99429feac59a88fcf7460f0118dc"
+    },
+    {
+      "path": "tests/example-config-v5-5_0_0.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91c0588e321130b42bc168d83b0b687436f7f144",
+      "size": 13991,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/91c0588e321130b42bc168d83b0b687436f7f144"
+    },
+    {
+      "path": "tests/example-project-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d86153bac47cd9c1b8df47c800db4ee60e9801d",
+      "size": 37419,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/8d86153bac47cd9c1b8df47c800db4ee60e9801d"
+    },
+    {
+      "path": "tests/example-project-v2.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76b218baf40f9820c3142dee5a7e825b8275abcd",
+      "size": 46253,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/76b218baf40f9820c3142dee5a7e825b8275abcd"
+    },
+    {
+      "path": "tests/example-project-v3.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "303cae6a8328c8ab7bef8fa109605ac8193dd737",
+      "size": 29868,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/303cae6a8328c8ab7bef8fa109605ac8193dd737"
+    },
+    {
+      "path": "tests/example-project-v4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ceabef75e5250ff93a76fb66207cd22f167e471",
+      "size": 222371,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/5ceabef75e5250ff93a76fb66207cd22f167e471"
+    },
+    {
+      "path": "tests/example-project-v5.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24adfc5c18c6b6b53896fda73a0291681fa13af1",
+      "size": 649227,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/24adfc5c18c6b6b53896fda73a0291681fa13af1"
+    },
+    {
+      "path": "tests/example-project-v6.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c38de9d316e3253a6ef015553a450af49fc42e88",
+      "size": 653682,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/c38de9d316e3253a6ef015553a450af49fc42e88"
+    },
+    {
+      "path": "tests/run_api_tests.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf3ed4ac51285afa5752f31f406113480f8440fd",
+      "size": 932,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/bf3ed4ac51285afa5752f31f406113480f8440fd"
+    },
+    {
+      "path": "tests/run_gui_tests.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d90a6ad4a5f141b34f67b87b7a153b1f15f91267",
+      "size": 999,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/d90a6ad4a5f141b34f67b87b7a153b1f15f91267"
+    },
+    {
+      "path": "tests/run_tests.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b626eb57833a227161e7ced2c83fcf44fa99f163",
+      "size": 1370,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/b626eb57833a227161e7ced2c83fcf44fa99f163"
+    },
+    {
+      "path": "tests/test_api.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1858ef3578a29f2aa3093ed5d0678461c6958095",
+      "size": 36083,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/1858ef3578a29f2aa3093ed5d0678461c6958095"
+    },
+    {
+      "path": "tests/test_gui.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff3045f7b6a3f16b476973ce2f93adab8a55e04d",
+      "size": 109382,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/ff3045f7b6a3f16b476973ce2f93adab8a55e04d"
+    },
+    {
+      "path": "tests/test_project.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e457d56ff658f50fd90e5d88f726ad4411e3fa89",
+      "size": 19203,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/e457d56ff658f50fd90e5d88f726ad4411e3fa89"
+    },
+    {
+      "path": "tests/test_utility.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "583fdf1f2ce2a02df2e6c048dc98f2a57dcecfad",
+      "size": 6368,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/583fdf1f2ce2a02df2e6c048dc98f2a57dcecfad"
+    },
+    {
+      "path": "tests/user_defined_elements.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2991cfff868c62d2f877b39cc59106ecf788704d",
+      "size": 1834,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/2991cfff868c62d2f877b39cc59106ecf788704d"
+    },
+    {
+      "path": "upload.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8905350362491ed48c0c5c1048ea9600376c536a",
+      "size": 78,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/8905350362491ed48c0c5c1048ea9600376c536a"
+    },
+    {
+      "path": "version.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "935851a14388f93c16180c986ed2cc8143b190d4",
+      "size": 5,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/935851a14388f93c16180c986ed2cc8143b190d4"
+    },
+    {
+      "path": "windows-installer.iss",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f8e64ec8a371d54488d37a8edc2e4d55cc4804a9",
+      "size": 2192,
+      "url": "https://api.github.com/repos/vyrjana/DearEIS/git/blobs/f8e64ec8a371d54488d37a8edc2e4d55cc4804a9"
+    }
+  ],
+  "truncated": false
+}

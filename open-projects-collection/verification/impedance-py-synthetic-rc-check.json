@@ -1,0 +1,20 @@
+{
+  "name": "impedance-py-synthetic-rc-check",
+  "command": [
+    "/home/user/.cache/open-projects/test-env/bin/python",
+    "/home/user/open-projects-collection/verification/synthetic-rc-check.py"
+  ],
+  "cwd": "/home/user/.cache/open-projects/full/ECSHackWeek__impedance.py/impedance.py-e175ad2b2ce66006423038480cc8ce4d899d7886",
+  "environment_overrides": {
+    "MPLBACKEND": "Agg",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "timeout_seconds": 60,
+  "status": "pass",
+  "exit_code": 0,
+  "duration_seconds": 4.268,
+  "log": "impedance-py-synthetic-rc-check.log",
+  "log_sha256": "966ebcad22fd73aefa4507de1e15fa243fcc33c0f51e23dd70a970151ef6be90"
+}

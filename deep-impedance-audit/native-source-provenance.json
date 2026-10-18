@@ -1,0 +1,162 @@
+[
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/spiFunctions.c",
+    "function": "spiBurst",
+    "line": 238,
+    "full_file_sha256": "62320ae383baa9be390300dc06eda7697daeeddd1ccf2d80d55f0cd4a8ca0a65",
+    "function_sha256": "e4a40640201e2524b614d0c252409ae86abe3c5e806e34908ff9956efde4b01f"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/spiFunctions.c",
+    "function": "changeReg",
+    "line": 210,
+    "full_file_sha256": "62320ae383baa9be390300dc06eda7697daeeddd1ccf2d80d55f0cd4a8ca0a65",
+    "function_sha256": "97e7f3b3160ec0aad3083e7b7a788dfe8605f9e5026b0e843db133a58bc63d15"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "setMdiv",
+    "line": 42,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "92e6b4abf39a35eec661f658a6528a93695b58fde6346fabca16fa697af589de"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "BIAsettings",
+    "line": 66,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "963a3427f47ec41c13fec85a1dd7cd33509f21e329b0f6f9b4e4414179945e63"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "getRefClkHz",
+    "line": 126,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "8aa0a3a37d108e51d27552ebfd81017ae2d133bd5ed49381cae2ca5c23079b63"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "getSampleInterval",
+    "line": 154,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "0499deccf0d20aec2bdcd937f6d5477804edb15d3287470400377cba0b3bd0af"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "getDACOSR",
+    "line": 190,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "56fb212738f431d290a72d5abca79bef5e151dc6fb307fc6fd4266bafddb7f8a"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "getKDiv",
+    "line": 216,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "b58a56d744d0769c66f1c52550ed656c0cfdd82e98dcbb5cd44d7dd990f16bbe"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "getBiozGain",
+    "line": 240,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "6670b84b2802a517f95272ab4c233cdb5af018d285fc6c0009dd3bc1276e32c3"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "getBiozCurrent_uA",
+    "line": 269,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "20cb170b0a0abed074d745f3d521bd920d73d7098808e13ec18a9b0cb253d926"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "setFreq",
+    "line": 297,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "19ee695adb20b327281f052ae5ff82fb0595d8ecea6c67501ad3a1a9580c016d"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "getMdiv",
+    "line": 329,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "d0376400e68d88b33622c1ca9de757ab7e09e599aec5803b9d6a46370dc5dc54"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "getPllClk",
+    "line": 343,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "64b6fa8ddd473a8371ad665d2c4ab3dbd9e06984fc0d2dae1b27a7f14e4891c8"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "getBiozFreq",
+    "line": 358,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "029d55c1e6ed9f9ff4dbda6b3d8574a1cd7a12a190db27ebd6d8508547bfae56"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "convertCountsToOhms",
+    "line": 374,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "e4ca2f98e2a67a8a9532aaf077abf82d3257e03e1b66f2fc209e6853ae7ba808"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "getBiozOhmCoeff",
+    "line": 404,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "f019509119b7fc179d006477159cd4a9352f3fee5ff80a58e4eba9b6e0f45719"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "setBiozOhmCoeff",
+    "line": 419,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "3a2acf69cb28efa788831fe9b203739d685c5a814a509028df1b9979432684ae"
+  },
+  {
+    "repo_directory": "oscaroflores__UPRM-Multi_Frq-BioZ-Research",
+    "path": "src/bioZ.c",
+    "function": "getBiozOhmCoeffCached",
+    "line": 427,
+    "full_file_sha256": "dd68ecf0f7504f095a557bb08eadc31ffa90bce3e85a6a978a442f2d28b33aee",
+    "function_sha256": "5c222e10d3f6528e5b5b0f8803d7ec7b35da3a06f23847280272d38796e14e1c"
+  },
+  {
+    "repo_directory": "openebi__software",
+    "path": "main.c",
+    "function": "take_measurement",
+    "line": 96,
+    "full_file_sha256": "e3ef9824dc08509881acb8231633bbc45a1ddc69603925e56e5bc99cf403f468",
+    "function_sha256": "c5a58bc13d72eb7d4829db880dafe0bdd72df2f688ad0c8cb74cbad8243bc31a"
+  },
+  {
+    "repo_directory": "OpenEIT__EIT_Firmware",
+    "path": "OpenEIT.c",
+    "function": "calculate_magnitude",
+    "line": 435,
+    "full_file_sha256": "ae5568bddac4d8e1d790ff6d5292e48138c0f9e6b5c71468e6ae14f57779d60f",
+    "function_sha256": "cf5f37356d4cf1136638ec63c086611298c74720d729628f2b5a42490814bdc9"
+  }
+]

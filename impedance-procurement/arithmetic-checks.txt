@@ -1,0 +1,4 @@
+36 nominal planning cells generated. No physical measurements.
+R1000 phase-dominated U(X)=0.25 ohm equivalent: 0.014323944878270581 degrees
+Mouser hypothetical 8% tariff subtotal: 536.92
+Illustrative reserve subtotal: 1687.21

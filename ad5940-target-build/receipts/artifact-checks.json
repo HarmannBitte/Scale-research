@@ -1,0 +1,98 @@
+{
+  "unarmed": {
+    "arm_elf": true,
+    "entry": 5741,
+    "initial_stack_pointer": 536887296,
+    "vector_reset_matches_entry": true,
+    "stack_reserved_bytes": 8192,
+    "heap_reserved_bytes": 4096,
+    "unallocated_bank_a_gap_bytes": 4096,
+    "static_bank_b_bytes": 8068,
+    "static_bank_b_remaining_bytes": 8316,
+    "flash_load_bytes": 39280,
+    "flash_address_high_water": 39344,
+    "largest_compiled_c_frame": {
+      "function": "AppBIABenchExportFrames",
+      "bytes": 2416,
+      "kind": "static",
+      "source": "source/examples/AD5940_BIA/BenchLog.inc:56:11:AppBIABenchExportFrames"
+    },
+    "target_executed": false,
+    "semihosting_backend_detected": false,
+    "complete_stack_bound_proven": false,
+    "acquisition_gates": {
+      "armed": 0,
+      "run_id": "UNSET",
+      "current_floor": 0,
+      "rcal_ohm": 0
+    },
+    "loads": [
+      {
+        "vaddr": 0,
+        "paddr": 0,
+        "flash_load_bytes": 320,
+        "memory_bytes": 320
+      },
+      {
+        "vaddr": 384,
+        "paddr": 384,
+        "flash_load_bytes": 36184,
+        "memory_bytes": 36184
+      },
+      {
+        "vaddr": 537133056,
+        "paddr": 36568,
+        "flash_load_bytes": 2776,
+        "memory_bytes": 8068
+      }
+    ]
+  },
+  "fullpath-linkcheck": {
+    "arm_elf": true,
+    "entry": 14873,
+    "initial_stack_pointer": 536887296,
+    "vector_reset_matches_entry": true,
+    "stack_reserved_bytes": 8192,
+    "heap_reserved_bytes": 4096,
+    "unallocated_bank_a_gap_bytes": 4096,
+    "static_bank_b_bytes": 8172,
+    "static_bank_b_remaining_bytes": 8212,
+    "flash_load_bytes": 63216,
+    "flash_address_high_water": 63280,
+    "largest_compiled_c_frame": {
+      "function": "AppBIABenchExportFrames",
+      "bytes": 2416,
+      "kind": "static",
+      "source": "source/examples/AD5940_BIA/BenchLog.inc:56:11:AppBIABenchExportFrames"
+    },
+    "target_executed": false,
+    "semihosting_backend_detected": false,
+    "complete_stack_bound_proven": false,
+    "acquisition_gates": {
+      "armed": 1,
+      "run_id": "UNSET",
+      "current_floor": 0,
+      "rcal_ohm": 0
+    },
+    "loads": [
+      {
+        "vaddr": 0,
+        "paddr": 0,
+        "flash_load_bytes": 320,
+        "memory_bytes": 320
+      },
+      {
+        "vaddr": 384,
+        "paddr": 384,
+        "flash_load_bytes": 60120,
+        "memory_bytes": 60120
+      },
+      {
+        "vaddr": 537133056,
+        "paddr": 60504,
+        "flash_load_bytes": 2776,
+        "memory_bytes": 8172
+      }
+    ]
+  }
+}

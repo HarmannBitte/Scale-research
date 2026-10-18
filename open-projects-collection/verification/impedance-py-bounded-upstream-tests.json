@@ -1,0 +1,26 @@
+{
+  "name": "impedance-py-bounded-upstream-tests",
+  "command": [
+    "/home/user/.cache/open-projects/test-env/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "impedance/tests",
+    "-k",
+    "not test_circuit_fit",
+    "--disable-warnings"
+  ],
+  "cwd": "/home/user/.cache/open-projects/full/ECSHackWeek__impedance.py/impedance.py-e175ad2b2ce66006423038480cc8ce4d899d7886",
+  "environment_overrides": {
+    "MPLBACKEND": "Agg",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "timeout_seconds": 90,
+  "status": "failed",
+  "exit_code": 1,
+  "duration_seconds": 7.136,
+  "log": "impedance-py-bounded-upstream-tests.log",
+  "log_sha256": "743160bbfe4f2943649b9f97ffb4c61435983331ac781e3f431ed0c8a22872c6"
+}

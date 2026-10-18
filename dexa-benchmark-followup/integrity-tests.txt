@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.0.3, pluggy-1.6.0
+rootdir: /home/user/dexa-benchmark-followup
+plugins: anyio-4.15.1, platformdirs-4.12.3
+collected 8 items
+
+test_followup.py ........                                                [100%]
+
+============================== 8 passed in 8.30s ===============================

@@ -1,0 +1,738 @@
+Official Adult Positions - ISCD
+Skip to content
+1.860.259.1000
+iscd@iscd.org
+About ISCD
+Alliances
+Awards
+Support ISCD
+President’s Message
+Board of Directors
+Committees
+Bylaws
+Staff Directory
+Bone Clubs
+International
+Regional Panels
+Local Organizing Committee (LOC)
+Calendar Of Events
+Contact
+Login
+No Account - Create
+Education
+Learning Activities
+ACCME Credit
+ASRT Credit
+On-Demand
+Non-Credit (Free)
+Full Catalog
+Courses
+Quality Bone Densitometry for Clinicians
+Quality Bone Densitometry for Technologists
+Orthopedic Osteoporosis and Densitometry
+Vertebral Fracture Recognition
+Pediatric Bone Densitometry
+DXA Body Composition Analysis
+Events
+2027 Position Development & ISCD Conference
+Calendar of Events
+Official Positions
+Adult Positions
+Pediatric Positions
+FRAX Positions
+Certification
+Certifications
+Certified Bone Densitometry Technologist (CBDT®)
+Certified Clinical Densitometry (CCD®)
+Recertification Options
+Maintenance of Certification
+Certification Resources
+Appeals Form
+Certification Annual Reports
+Certification Registry
+Test Locations
+Membership
+Membership Types
+Individual Memberships
+Corporate Memberships
+2027 Member Model
+Member Benefits
+On Demand Courses
+Ask an Expert
+DXA Atlas
+Journal of Clinical Densitometry
+Membership Directory
+JOIN NOW
+Accreditation
+Application
+Accredited Facilities
+Program Requirements
+RESOURCES
+Calculators
+Official Positions
+Patient Resources
+View All
+Login
+No Account - Create
+Official Positons
+These are the Adult Official Positions of the ISCD as updated in 2023.
+The Official Positions that are new or revised since 2019 are in
+bold type.
+© Copyright ISCD, August 2023. Supersedes all prior “Official Positions” publications.
+Approved and Accepted by the ISCD Board on August 24, 2023
+Citation
+:
+International Society for Clinical Densitometry
+. (2023).
+Official positions 2023
+. ISCD.
+https://iscd.org/official-positions-2023/
+Download PDF
+Chinese Translation
+Searchable Text
+Indications for Bone Mineral Density (BMD) Testing
+Reference Database for T-Scores
+Central DXA for Diagnosis
+Fracture Risk Assessment
+Use of the Term “Osteopenia”
+BMD Reporting
+Z-Score Reference Database
+Follow-Up BMD Measurements
+Phantom Scanning and Calibration
+Precision Assessment
+Cross-Calibration of DXA
+BMD Comparison Between Facilities
+Vertebral Fracture Assessment Nomenclature
+Indications for VFA
+Methods for Defining and Reporting Fractures on VFA
+Indications for Following VFA with Another Imaging Modality
+Follow-up Lateral Imaging
+DXA to Detect Abnormalities in the Spectrum of AFF
+DXA Reporting
+Components of a VFA Report
+Trabecular Bone Score (TBS)
+Hip Geometry
+Non-Central DXA Devices: QCT, pQCT, QUS, and pDXA
+Body Composition
+DXA in Patients with Spinal Cord Injury
+DXA in Transgender and Gender Non-conforming Individuals
+Peri-prosthetic and Orthopedic Uses of DXA
+DXA Nomenclature
+DXA Decimal Digits Preferred number of decimal digits for DXA reporting:
+Glossary
+Reference Papers
+Indications for Bone Mineral Density (BMD) Testing
+Women aged 65 and older
+For post-menopausal women younger than age 65 a bone density test is indicated if they have a risk factor for low bone mass such as:
+Low body weight
+Prior fracture
+High risk medication use
+Disease or condition associated with bone loss
+Women during the menopausal transition with clinical risk factors for fracture, such as low body weight, prior fracture, or high-risk medication use
+Men aged 70 and older
+For men < 70 years of age a bone density test is indicated if they have a risk factor for low bone mass such as:
+Low body weight
+Prior fracture
+High risk medication use
+Disease or condition associated with bone loss
+Adults with a fragility fracture
+Adults with a disease or condition associated with low bone mass or bone loss
+Adults taking medications associated with low bone mass or bone loss
+Anyone being considered for pharmacologic therapy
+Anyone being treated, to monitor treatment effect
+Anyone not receiving therapy in whom evidence of bone loss would lead to treatment
+Women discontinuing estrogen should be considered for bone density testing according to the indications listed above.
+Reference Database for T-Scores
+Use a uniform White (non-race
+/ethnicity
+adjusted) female normative database for women of all ethnic groups.*
+Use a uniform White (non-race
+/ethnicity
+adjusted) female reference for men of all ethnic groups.*
+Manufacturers should continue to use NHANES III data as the reference standard for femoral neck and total hip T-scores.
+Manufacturers should continue to use their own databases for the lumbar spine as the reference standard for T-scores.
+If local reference data are available they should be used to calculate only Z-scores but not T-scores.
+*Note: Application of recommendation may vary according to local requirements.
+Central DXA for Diagnosis
+The WHO international reference standard for osteoporosis diagnosis is a T-score of -2.5 or less at the femoral neck.
+The reference standard from which the T-score is calculated is the female, white, age 20-29 years, NHANES III database.
+Osteoporosis may be diagnosed in postmenopausal women and in men age 50 and older if the T-score of the lumbar spine, total hip, or femoral neck is -2.5 or less:*
+In certain circumstances the 33% radius (also called 1/3 radius) may be utilized.
+*Note: Other hip regions of interest, including Ward’s area and the greater trochanter, should not be used for diagnosis. Application of recommendation may vary according to local requirements.
+Skeletal sites to measure
+Measure BMD at both the PA spine and hip in all patients.
+Forearm BMD should be measured under the following circumstances:
+Hip and/or spine cannot be measured or interpreted.
+Hyperparathyroidism
+Very obese patients (over the weight limit for DXA table)
+Spine Region of Interest (ROI)
+Use PA L1-L4 for spine BMD measurement.
+Use all evaluable vertebrae and only exclude vertebrae that are affected by local structural change or artifact. Use three vertebrae if four cannot be used and two if three cannot be used.
+If only one evaluable vertebra remains after excluding other vertebrae, diagnosis should be based on a different valid skeletal site.
+Anatomically abnormal vertebrae may be excluded from analysis if:
+They are clearly abnormal and non-assessable within the resolution of the system; or
+There is more than a 1.0 T-score difference between the vertebra in question and adjacent vertebrae.
+When vertebrae are excluded, the BMD of the remaining vertebrae is used to derive the T-score.
+The lateral spine should not be used for diagnosis, but may have a role in monitoring.
+Hip ROI
+Use femoral neck or total hip, whichever is lowest.
+BMD may be measured at either hip.
+Forearm ROI
+Use 33% radius (sometimes called one-third radius) of the non-dominant forearm for diagnosis. Other forearm ROI are not recommended.
+Fracture Risk Assessment
+A distinction is made between diagnostic classification and the use of BMD for fracture risk assessment.
+For fracture risk assessment, any well-validated technique can be used, including measurements of more than one site where this has been shown to improve the assessment of risk.
+Use of the Term “Osteopenia”
+The term “osteopenia” is retained, but “low bone mass” or “low bone density” is preferred.
+People with low bone mass or density are not necessarily at high fracture risk.
+BMD Reporting in Postmenopausal Women and in Men Age 50 and Older
+T-scores are preferred.
+The WHO densitometric classification is applicable.
+BMD Reporting in Females Prior to Menopause and in Males Younger Than Age 50
+Z-scores, not T-scores, are preferred. This is particularly important in children.
+A Z-score of -2.0 or lower is defined as “below the expected range for age” and a Z-score above -2.0 is “within the expected range for age.”
+Osteoporosis cannot be diagnosed in men under age 50 on the basis of BMD alone.
+The WHO diagnostic criteria may be applied to women in the menopausal transition.
+Z-Score Reference Database
+Z-scores should be population specific where adequate reference data exist. For the purpose of Z-score calculation, the patient’s self-reported ethnicity should be used.
+Follow-Up BMD Measurements
+Serial BMD testing in combination with clinical assessment of fracture risk, bone turnover markers, and other factors including height loss and trabecular bone score, can be used to determine whether treatment should be initiated in untreated patients, according to locally applicable guidelines.
+Follow-up
+BMD testing can aid in monitoring response to therapy.
+Follow-up
+BMD testing should be undertaken with clearly defined objectives and when the results are likely to influence patient management.
+Follow-up BMD testing should be performed if a fracture has occurred or new risk factors have developed, but should not delay treatment for secondary fracture prevention.
+Repeat BMD testing should be used to monitor individuals prior
+to a temporary cessation of bisphosphonate therapy and during the period of planned interruption of treatment.
+Repeat BMD testing intervals must be individualized considering an individual’s age, baseline BMD, the type of pharmacological treatment, and the presence of clinical factors which are associated with bone loss.
+Shorter intervals between BMD testing may be indicated in the presence of factors associated with rapid change in bone mineral density. Examples include the use of certain medications such as glucocorticoids, aromatase inhibitors, androgen deprivation therapy, and osteoanabolic therapies, medical disorders such as malabsorption and severe systemic inflammatory diseases, and other conditions such as prolonged immobilization, bariatric surgery, and surgical menopause.
+If changes in BMD are outside the expected range for an individual patient and adequate scan quality has been confirmed, this should prompt consideration for a re-evaluation of the patient and plan of care.
+Phantom Scanning and Calibration
+The Quality Control (QC) program at a DXA facility should include adherence to manufacturer guidelines for system maintenance. In addition, if not recommended in the manufacturer protocol, the following QC procedures are advised:
+Perform periodic (at least once per week) phantom scans for any DXA system as an independent assessment of system calibration.
+Plot and review data from calibration and phantom scans.
+Verify the phantom mean BMD after any service performed on the densitometer.
+Establish and enforce corrective action thresholds that trigger a call for service.
+Maintain service logs.
+Comply with government inspections, radiation surveys and regulatory requirements.
+Precision Assessment
+Each DXA facility should determine its precision error and calculate the LSC.
+The precision error supplied by the manufacturer should not be used.
+If a DXA facility has more than one technologist, an average precision error combining data from all technologists should be used to establish precision error and LSC for the facility, provided the precision error for each technologist is within a pre-established range of acceptable performance.
+Every technologist should perform an in vivo precision assessment using patients representative of the clinic’s patient population.
+Each technologist should do one complete precision assessment after basic scanning skills have been learned (e.g., manufacturer training) and after having performed approximately 100 patient-scans.
+A repeat precision assessment should be done if a new DXA system is installed.
+A repeat precision assessment should be done if a technologist’s skill level has changed.
+To perform a precision analysis:
+Measure 15 patients 3 times, or 30 patients 2 times, repositioning the patient after each scan.
+Calculate the root mean square standard deviation (RMS-SD) for the group.
+Calculate LSC for the group at 95% confidence interval.
+The minimum acceptable precision for an individual technologist is:
+Lumbar Spine: 1.9% (LSC=5.3%)
+Total Hip: 1.8% (LSC=5.0%)
+Femoral Neck: 2.5% (LSC=6.9%)
+Retraining is required if a technologist’s precision is worse than these values.
+Precision assessment should be standard clinical practice. Precision assessment is not research and may potentially benefit patients. It should not require approval of an institutional review board. Adherence to local radiologic safety regulations is necessary. Performance of a precision assessment requires the consent of participating patients.
+Cross-Calibration of DXA: Changing Hardware or Systems
+When changing hardware, but not the entire system, or when replacing a system with the same technology (manufacturer and model), cross-calibration should be performed by having one technologist do 10 phantom scans, with repositioning, before and after a hardware change.
+If a greater than 1% difference in mean BMD is observed, contact the manufacturer for service/correction.
+When changing an entire system to one made by the same manufacturer using a different technology, or when changing to a system made by a different manufacturer, one approach to cross-calibration is:
+Scan 30 patients representative of the facility’s patient population once on the initial system and then twice on the new system within 60 days.
+Measure those anatomic sites commonly measured in clinical practice, typically spine and proximal femur.
+Facilities must comply with locally applicable regulations regarding DXA.
+Calculate the average BMD relationship and LSC between the initial and new machine using the ISCD DXA Machine Cross-Calibration Tool (www.ISCD.org).
+Use this LSC for comparison between the previous and new system. Inter-system quantitative comparisons can only be made if cross-calibration is performed on each skeletal site commonly measured.
+Once a new precision assessment has been performed on the new system, all future scans should be compared to scans performed on the new system using the newly established intra-system LSC.
+Cross-Calibration of DXA: Adding Hardware or Systems
+When adding a DXA scanner with the same technology (manufacturer and model) of the original (index) scanner, for the purpose of allowing patients to be scanned across devices, cross-calibration should be performed by scanning one spine phantom on both the index scanner, and on the additional scanner(s) on 20 different days to establish the respective mean BMD values. If a greater than 0.5% difference in mean BMD is observed between devices, contact the manufacturer for service/correction to return the additional machines to match the index scanner calibration and verify the new calibration with the same process.
+Certain additional conditions that may apply are:
+When the DXA scanners are installed in the same building or campus and using the same technologists, then the original LSC of the index scanner can be used for inter-scanner comparisons; or
+When the systems are installed in geographically distinct locations, or using different technologists, or seeing a different patient population, then precision studies must be done at each site and an average LSC of all the individual technologist precision assessments can be calculated. Use the ISCD positions on calculating an LSC when multiple technologists are using a single scanner.
+When adding a DXA system or systems made by either the same or different manufacturer using different technologies, while maintaining the original scanner in service, the preferred approach to cross-calibration is:
+One scanner should be designated the index (gold standard) device. Each additional different technology device should be cross-calibrated to the index device.
+Scan a minimum of 30 patients, representative of the facility’s patient population twice on the index system and twice on the new system within 60 days. Individual patients may be measured on both scanners the same day, or ideally on different days, but no more than 30 days apart for any one patient.
+Measure those anatomic sites commonly measured in clinical practice, typically spine and proximal femur(s).
+Calculate the average LSC between the index and new machine using the ISCD DXA Machine Cross-Calibration Tool
+Use the average LSC for comparison between the two systems. Inter-system quantitative comparisons can only be made if cross-calibration is performed for each skeletal site commonly measured for monitoring.
+Once the in vivo cross-calibration equivalence is established, the long term-stability of all the systems must be carefully monitored with frequent scanning of a suitable external phantom on all cross-calibrated devices. Stability of a running average of phantom BMD on each system should be within 0.5% of the value established at the time of the cross-calibration.
+Inter-machine LSC should not be applied to patients who have both scans done on a single device. A separate intra-machine LSC, established using the duplicate scans on the second device during the generalized LSC (gLSC) process should be used for any patient having both scans on a single device.
+Facilities must comply with locally applicable regulations regarding DXA.
+If a cross-calibration assessment is not performed, no quantitative comparison to the prior machine can be made. Consequently, a new baseline BMD and intra-system LSC should be established.
+BMD Comparison Between Facilities
+Do not apply an LSC or report BMD change between instruments that are not cross-calibrated.
+Patients should return to the same DXA device that was used to perform their most recent prior study, provided that the facility in vivo precision and LSC values are known and do not exceed established maximum values.
+Vertebral Fracture Assessment Nomenclature
+Vertebral Fracture Assessment (VFA) is the correct term to denote densitometric spine imaging performed for the purpose of detecting vertebral fractures.
+Indications for VFA
+Lateral Spine imaging with Standard Radiography or Densitometric VFA is indicated when T-score is < -1.0 and of one or more of the following is present:
+Women age ≥ 70 years or men ≥ age 80 years
+Historical height loss > 4 cm (>1.5 inches)
+Self-reported but undocumented prior vertebral fracture
+Glucocorticoid therapy equivalent to ≥ 5 mg of prednisone or equivalent per day for ≥ 3 months
+Methods for Defining and Reporting Fractures on VFA
+The methodology utilized for vertebral fracture identification should be similar to standard radiological approaches and be provided in the report.
+Fracture diagnosis should be based on visual evaluation and include assessment of grade/severity. Morphometry alone is not recommended because it is unreliable for diagnosis.
+The Genant visual semi-quantitative method is the current clinical technique of choice for diagnosing vertebral fracture with VFA.
+Severity of deformity may be confirmed by morphometric measurement if desired.
+Indications for Following VFA with Another Imaging Modality
+The decision to perform additional imaging must be based on each patient’s overall clinical picture, including the VFA result.
+Indications for follow-up imaging studies include:
+Lesions in vertebrae that cannot be attributed to benign causes.
+Vertebral deformities in a patient with a known history of a relevant malignancy
+Equivocal fractures
+Unidentifiable vertebrae between T7-L4
+Sclerotic or lytic changes, or findings suggestive of conditions other than osteoporosis
+Note: VFA is designed to detect vertebral fractures and not other abnormalities.
+Follow-up Lateral Imaging
+Use Follow-up VFA or radiographic lateral spine imaging in patients with continued high risk (e.g., historical height loss > 4 cm (>1.5 inches), self-reported but undocumented vertebral fracture, or glucocorticoid therapy equivalent to ≥ 5 mg of prednisone or equivalent per day for greater than or equal to three months).
+DXA to Detect Abnormalities in the Spectrum of AFF
+Femur DXA images should be reviewed for localized cortical abnormalities in the spectrum of AFF.
+When using DXA systems to detect abnormalities in the spectrum of AFF, scanning methods that generate bilateral full-length femur images (FFI) should be used. The FFI report should state the absence or presence of abnormalities in the spectrum of AFF.
+Consider bilateral FFI for detecting abnormalities in the spectrum of AFF in patients who are receiving bisphosphonate or denosumab therapy or discontinued it within the last year, with a cumulative exposure of 3 or more years, especially those on glucocorticoid therapy.
+Baseline DXA Report: Minimum Requirements
+Demographics (name, medical record identifying number, date of birth, sex)
+Requesting provider
+Indications for the test
+Manufacturer and model of instrument used
+BMD in g/cm2 for each site
+The skeletal sites, ROI, and, if appropriate, the side, that were scanned
+The T-score and/or Z-score where appropriate
+Identify the fracture risk calculator used. Include positive fracture risk components that were included in the calculation.
+Recommendations for the necessity and timing of the next BMD study
+Reports should contain a statement describing why acquired exams were not reported or when a technically acceptable DXA exam has aspects that might confound BMD results.
+Diagnostic classification is an essential component of the report, with application of the WHO diagnostic criteria when appropriate.
+When reporting or referring to race, “White” is preferred to “Caucasian”.
+Follow-Up DXA Report
+A DXA report (baseline and follow-up) should state that a follow-up exam is recommended as long as a valid comparison is available, and the precise timing depends on particular clinical circumstances.
+Statement regarding which previous or baseline study and ROI is being used for comparison
+Statement about the LSC at your facility and the statistical significance of the comparison
+Report significant change, if any, between the current and previous study or studies in g/cm2 and percentage.
+Comments on any outside study including manufacturer and model on which previous studies were performed and the appropriateness of the comparison
+Recommendations for the necessity and timing of the next BMD study
+If the DXA interpreter has adequate clinical information, a precise timing for next bone mineral density (BMD) should be recommended; otherwise, a general recommendation about repeat testing should still be part of the report.
+DXA Reporting: Reporting of Bilateral Hip Exams
+The acquisition of bilateral hip BMD measurements is appropriate to generate data for reporting T-scores (or Z-scores)
+When both hips have been scanned, the lowest T-score (or Z-score) of the right or left femoral neck or total hip should be used for diagnostic classification, but not the mean T-score (or Z-score).
+When both hips have been scanned on repeat tests, mean bilateral total hip BMD should be used for monitoring.
+Preferred terminology is to use “hip” when describing the site instead of ” femur” or “total proximal femur”. Use ”bilateral hips” when referring to both hips.
+DXA Reporting: Reporting Less Than Four Vertebrae
+We do not recommend using a single vertebral body for diagnostic classification or for monitoring.
+Precision worsens progressively with fewer than 4 vertebral bodies included, whether contiguous or non-contiguous. The LSC should be modified according to the precision assessment for corresponding combinations of fewer than 4 vertebrae.
+DXA Reporting: Reporting Results from Full-Femur Imaging (FFI)
+FFI is considered a screening tool for iAFFs.
+Clinical assessment of prodromal symptoms (pain) is not required for assessment of FFI.
+Focal lateral cortical thickening and transverse lucencies should be reported when identified on FFI.
+When both focal lateral cortical thickening and a transverse lucent line are present, there is a high likelihood for an iAFF.
+Diffuse cortical thickening alone is non-specific for an iAFF.
+Suggestions for Reporting of FFI (based on features):
+NONDIAGNOSTIC: Images are inadequate either due to acquisition issues, artifact or other patient factors. Consider dedicated radiographs to evaluate patient if necessary.
+LOW likelihood features: Isolated diffuse cortical thickening, or no findings.
+Clinical correlation to decide if dedicated radiographs are necessary.
+MODERATE likelihood features: Questionable focal lateral cortical thickening without a transverse lucent line. Clinical correlation and dedicated radiographs for clarification.
+HIGH likelihood features: Definite focal lateral cortical thickening and a transverse lucent line. Urgent consultation and further imaging are recommended.
+DXA Reporting: Quality Assurance
+Implement an internal program of peer-learning, following accepted radiologic practice, to facilitate quality reporting.
+DXA Report: Optional Items
+Recommendation for further non-BMD testing, such as X-ray, magnetic resonance imaging, computed tomography, etc
+Recommendations for pharmacological and non-pharmacological interventions
+Addition of the percentage compared to a reference population
+Specific recommendations for evaluation of secondary osteoporosis
+A general statement that a medical evaluation for secondary causes of low BMD may be appropriate
+WHO criteria for diagnosis in postmenopausal females and in men age 50 and over
+DXA Report: Items That Should Not Be Included
+A statement that there is bone loss without knowledge of previous bone density
+Mention of “mild”,” moderate”, or “marked” osteopenia or osteoporosis
+Separate diagnoses for different ROI (e.g., osteopenia at the hip and osteoporosis at the spine)
+Expressions such as “She has the bones of an 80-year-old,” if the patient is not 80 years old
+Results from skeletal sites that are not technically valid
+The change in BMD if it is not a significant change based on the precision error and LSC
+Components of a VFA Report
+Patient identification, referring physician, indication(s) for study, technical quality, and interpretation
+A follow-up VFA report should also include comparability of studies and clinical significance of changes, if any.
+VFA reports should comment on the following:
+Unevaluable vertebrae
+Deformed vertebrae, and whether or not the deformities are consistent with vertebral fracture
+Unexplained vertebral and extra-vertebral pathology
+Optional components include fracture risk and recommendations for additional studies.
+Trabecular Bone Score (TBS)
+TBS is appropriate in adults aged ≥ 40 years.
+TBS results are most likely to alter clinical management in individuals who are close to a specific pharmacologic intervention threshold.
+TBS should be performed only within BMI range recommended by the manufacturer and can be used regardless of sex, race/ethnicity and prior or current osteoporosis treatment.
+L1-L4 vertebral levels, without exclusions, should be used for TBS measurement and to calculate TBS-adjusted FRAX probabilities even in the presence of moderate degenerative changes and chronic lumbar compression fractures. It is recommended not to report TBS if there is severe structural or pathological artifact (e.g., vertebra plana, laminectomy, hardware, metastatic lesions).
+TBS is associated with vertebral, hip and major osteoporotic fracture risk in postmenopausal women.
+TBS is associated with hip fracture risk in men over the age of 50 years.
+TBS is associated with major osteoporotic fracture risk in men over the age of 50 years.
+TBS is associated with major osteoporotic fracture risk in postmenopausal women with type II diabetes.
+TBS should not be used alone to determine treatment recommendations in clinical practice.
+When available, use the TBS value for adjusting and reporting fracture risk.
+In routine clinical practice, monitoring and reporting TBS change is not recommended.
+Hip Geometry
+Hip axis length (HAL) derived from DXA is associated with hip fracture risk in postmenopausal women.
+The following hip geometry parameters derived from DXA (CSA, OD, SM, BR, CSMI, NSA) should not be used to assess hip fracture risk.
+Hip geometry parameters derived from DXA (CSA, OD, SM, BR, CSMI, HAL, NSA) should not be used to initiate treatment.
+Hip geometry parameters derived from DXA (CSA, OD, SM, BR, CSMI, HAL, NSA) should not be used for monitoring.
+General Recommendations for Non-Central DXA Devices: QCT, pQCT, QUS, and pDXA
+General Recommendations for Non-Central DXA Devices: QCT, pQCT, QUS, and pDXA
+The following general recommendations for QCT, pQCT, QUS, and pDXA are analogous to those defined for central DXA technologies. Examples of technical differences amongst devices, fracture prediction ability for current manufacturers and equivalence study requirements are provided in the full-text documents printed in the
+Journal of Clinical Densitometry
+.
+Bone density measurements from different devices cannot be directly compared.
+Different devices should be independently validated for fracture risk prediction by prospective trials, or by demonstration of equivalence to a clinically validated device.
+T-scores from measurements other than DXA at the femur neck, total femur, lumbar spine, or one-third (33%) radius cannot be used according to the WHO diagnostic classification because those T-scores are not equivalent to T-scores derived by DXA.
+Device-specific education and training should be provided to the operators and interpreters prior to clinical use.
+Quality control procedures should be performed regularly.
+Baseline Non Central DXA Devices (QCT, pQCT, QUS, pDXA) Report: Minimum Requirements
+Date of test
+Demographics (name, date of birth or age, sex)
+Requesting provider
+Names of those receiving copy of report
+Indications for test
+Manufacturer, and model of instrument and software version
+Measurement value(s)
+Reference database
+Skeletal site/ROI
+Quality of test
+Limitations of the test including a statement that the WHO diagnostic classification cannot be applied to T-scores obtained from QCT, pQCT, QUS, and pDXA (other than one-third (33%) radius) measurements
+Clinical risk factors
+Fracture risk estimation
+A general statement that a medical evaluation for secondary causes of low BMD may be appropriate
+Recommendations for follow-up imaging
+Note: A list of appropriate technical items is provided in the QCT and pQCT sections of the full text documents printed in the
+Journal of Clinical Densitometry
+.
+Non Central DXA Devices (QCT, pQCT, QUS, pDXA) Report: Optional Items
+Report may include the following optional item:
+Recommendations for pharmacological and non-pharmacological interventions
+QCT and pQCT
+QCT and pQCT
+Acquisition
+With single-slice QCT, L1-L3 should be scanned; with 3D QCT, L1-L2 should be scanned.
+QCT acquisition of the proximal femur should extend from the femoral head to the proximal shaft.
+For density-based QCT measurements the in-scan calibration phantom can be replaced by asynchronous calibration if scanner stability is maintained.
+Opportunistic CT to screen for patients with low BMD or low bone strength of the spine or proximal femur is possible only if validated machine-specific cutoff values and scanner stability have been established.
+Diagnosis
+Femoral neck and total hip T-scores calculated from 2D projections of QCT data are equivalent to the corresponding DXA T-scores for diagnosis of osteoporosis in accordance with the WHO criteria.
+Fracture Prediction
+Spinal trabecular BMD as measured by QCT has at least the same ability to predict vertebral fractures as AP spinal BMD measured by central DXA in postmenopausal women. There is lack of sufficient evidence to support this position for men.
+There is lack of sufficient evidence to recommend spine QCT for hip fracture prediction in either women or men.
+Total femur trabecular BMD measured by QCT predicts hip fractures as well as hip BMD measured by DXA in postmenopausal women and older men.
+pQCT of the forearm at the ultra-distal radius predicts hip, but not spine, fragility fractures in postmenopausal women.  There is lack of sufficient evidence to support this position for men.
+Therapeutic Decisions
+Central DXA measurements at the spine and femur are the preferred method for making therapeutic decisions and should be used if possible. Where QCT and DXA are both available and provide comparable information, DXA is preferred to limit radiation exposure.
+However, if central DXA cannot be done, pharmacologic treatment can be initiated if the fracture probability, as assessed by QCT of the spine or pQCT of the radius using device specific thresholds, and in conjunction with clinical risk factors, is sufficiently high.
+Monitoring
+Trabecular BMD of the lumbar spine measured by QCT can be used to monitor age-, disease-, and treatment-related BMD changes.
+Integral and trabecular BMD of the proximal femur measured by QCT can be used to monitor age- and treatment-related BMD changes.
+Trabecular and total BMD of the ultra-distal radius measured by pQCT can be used to monitor age-related BMD changes.
+Finite Element Analysis (FEA)
+Vertebral strength as estimated by QCT-based FEA predicts vertebral fracture in postmenopausal women.
+Vertebral strength as estimated by QCT-based FEA is comparable to spine DXA for prediction of vertebral fractures in older men.
+Femoral strength as estimated by QCT-based FEA is comparable to hip DXA for prediction of hip fractures in postmenopausal women and older men.
+FEA cannot be used to diagnose osteoporosis using the current WHO T-score definition.
+Vertebral or femoral strength as estimated by QCT-based FEA can be used to initiate pharmacologic treatment using validated thresholds and in conjunction with clinical risk factors.
+Vertebral or femoral strength as estimated by QCT-based FEA can be used to monitor age- and treatment-related changes.
+Reporting
+For QCT using whole body CT scanners the following additional technical items should be reported:
+Tomographic acquisition and reconstruction parameters
+kV, mAs
+Collimation during acquisition
+Table increment per rotation
+Table height
+Reconstructed slice thickness, reconstruction increment
+Reconstruction kernel
+For pQCT using dedicated pQCT scanners, the following additional technical items should be reported:
+Tomographic acquisition and reconstruction parameters
+Reconstructed slice thickness
+Single / multi-slice acquisition mode
+Length of scan range in multi-slice acquisition mode
+QUS
+QUS
+Acquisition
+The only validated skeletal site for the clinical use of QUS in osteoporosis management is the heel.
+Fracture Prediction
+Validated heel QUS devices predict fragility fracture in postmenopausal women (hip, vertebral, and global fracture risk) and men over the age of 65 (hip and all non-vertebral fractures), independently of central DXA BMD.
+Discordant results between heel QUS and central DXA are not infrequent and are not necessarily an indication of methodological error.
+Heel QUS in conjunction with clinical risk factors can be used to identify a population at very low fracture probability in which no further diagnostic evaluation may be necessary. (Examples of device-specific thresholds and case findings strategy are provided in the full text documents printed in the
+Journal of Clinical Densitometry
+.)
+Therapeutic Decisions
+Central DXA measurements at the spine and femur are preferred for making therapeutic decisions and should be used if possible.  However, if central DXA cannot be done, pharmacologic treatment can be initiated if the fracture probability, as assessed by heel QUS, using device-specific thresholds and in conjunction with clinical risk factors, is sufficiently high. (Examples of device-specific thresholds are provided in the full-text documents printed in the
+Journal of Clinical Densitometry
+.)
+Monitoring
+QUS cannot be used to monitor the skeletal effects of treatments for osteoporosis.
+pDXA
+pDXA
+Fracture Prediction
+Measurement by validated pDXA devices can be used to assess vertebral and global fragility fracture risk in postmenopausal women, however, its vertebral fracture predictive ability is weaker than central DXA and heel QUS. There is lack of sufficient evidence to support this position for men.
+Radius pDXA in conjunction with clinical risk factors can be used to identify a population at very low fracture probability in which no further diagnostic evaluation may be necessary. (Examples of device-specific thresholds and case findings strategy are provided in the full-text documents printed in the
+Journal of Clinical Densitometry
+.)
+Diagnosis
+The WHO diagnostic classification can only be applied to DXA at the femur neck, total femur, lumbar spine and the one-third (33%) radius ROI measured by DXA or pDXA devices utilizing a validated young-adult reference database.
+Therapeutic Decisions
+Central DXA measurements at the spine and femur are the preferred method for making therapeutic decisions and should be used if possible.  However, if central DXA cannot be done, pharmacologic treatment can be initiated if the fracture probability, as assessed by radius pDXA (or DXA) using device specific thresholds and in conjunction with clinical risk factors, is sufficiently high. (Examples of device-specific thresholds are provided in the full text documents printed in the
+Journal of Clinical Densitometry
+.)
+Monitoring
+pDXA devices are not clinically useful in monitoring the skeletal effects of  presently available medical treatments for osteoporosis.
+Body Composition
+Indications
+DXA total body composition with regional analysis can be used in the following conditions:
+In patients living with HIV to assess fat distribution in those using anti-retroviral agents associated with a risk of lipoatrophy (currently stavudine [d4T] and zidovudine [ZDV, AZT])
+In obese patients undergoing bariatric surgery (or medical, diet, or weight loss regimens with anticipated large weight loss) to assess fat and lean mass changes when weight loss exceeds approximately 10%. The impact on clinical outcomes is uncertain.
+In patients with muscle weakness or poor physical functioning to assess fat and lean mass. The impact on clinical outcomes is uncertain.
+Pregnancy is a contraindication to DXA body composition. Limitations in the use of clinical DXA for total body composition or bone mineral density are weight over the table limit, recent administration of contrast material and/or artifact. Radiopharmaceutical agents may interfere with accuracy of results using systems from some DXA manufacturers.
+Acquisition
+No phantom has been identified to remove systematic differences in body composition when comparing in-vivo results across manufacturers.
+An in vivo cross-calibration study is necessary when comparing in vivo results across manufacturers.
+Cross-calibrating systems of the same make and model can be performed with an appropriate whole body phantom.
+Changes in body composition measures can be evaluated between two different systems of the same make and model if the systems have been cross-calibrated with an appropriate total body phantom.
+When changing hardware, but not the entire system, or when replacing a system with the same technology (make and model), cross-calibration should be performed by having one technologist do 10 whole body phantom scans, with repositioning, before and after a hardware change. If a greater than 2% difference in mean percent fat mass, fat mass or lean mass is observed, contact the manufacturer for service/correction.
+No total body phantoms are available at this time that can be used as absolute reference standards for soft-tissue composition or bone mineral mass.
+The Quality Control (QC) program at a DXA body composition facility should include adherence to manufacturer guidelines for system maintenance. In addition, if not recommended in the manufacturer protocol, the following QC procedures are advised:
+Perform periodic (at least once per week) body composition phantom scans for any DXA system as an independent assessment of system calibration.
+Plot and review data from calibration and body composition phantom scans.
+Verify the body composition phantom mean percent fat mass and tissue mass after any service performed on the densitometer.
+Establish and enforce corrective action thresholds that trigger a call for service.
+Maintain service logs.
+Comply with radiation surveys and regulatory government inspections, radiation surveys and regulatory requirements.
+Consistent positioning and preparation (e.g. fasting state, clothing, time of day, physical activity, empty bladder) of the patient is important for precise measures.
+Positioning of the arms, hands, legs and feet whenever possible should be according to the NHANES method (palms down isolated from the body, feet neutral, ankles strapped, arms straight or slightly angled, face up with neutral chin).
+“Offset-scanning” should be used in patients who are too wide to fit within the scan boundaries, using a validated procedure for a specific scanner model.
+Every technologist should perform an in vivo precision assessment for all body composition measures of interest using patients who are representative of the clinic’s patient population.
+The minimum acceptable precision for an individual technologist is 3%, 2% and 2% for total fat mass, total lean mass, and percent fat mass, respectively.
+Consistently use manufacturer’s recommendations for ROI placement.
+Consistently use manufacturer’s recommendations for artifact removal.
+Analysis and Reporting
+For adults total body (with head) values of BMI, BMD, BMC, total mass, total lean mass, total fat mass, and percent fat mass should appear on all reports.
+Total Body BMC as represented in the NHANES 1999-2004 reference data should be used when using DXA in 4-compartment models.
+DXA measures of adiposity and lean mass include visceral adipose tissue (VAT), appendicular lean mass index (ALMI: appendicular lean mass/ht2), android/gynoid percent fat mass ratio, trunk to leg fat mass ratio, lean mass index (LMI: total lean mass/ht2), fat mass index (FMI: fat mass/ht2) are optional. The clinical utility of these measures is currently uncertain.
+When comparing to the US population, the NHANES 1999-2004 body composition data are most appropriate for different races, both sexes, and for ages from 8 to 85 years. [Note: Reference to a population does not imply health status.]
+Both Z-scores and percentiles are appropriate to report if derived using methods to adjust for non-normality.
+The use of DXA adiposity measures (percent fat mass or fat mass index) may be useful in risk-stratifying patients for cardio-metabolic outcomes. Specific thresholds to define obesity have not been established.
+“Low lean mass” could be defined using appendicular lean mass divided by height squared (ALM/height2) with Z-scores derived from a young adult, race, and sex-matched population. Thresholds for low lean mass from consensus guidelines for sarcopenia await confirmation.
+DXA in Patients with Spinal Cord Injury
+All adults with spinal cord injury resulting in permanent motor or sensory dysfunction should have a DXA scan of the total hip, proximal tibia and distal femur, as soon as medically stable.
+In adults with SCI, total hip, proximal tibia and distal femur bone density should be used to diagnose osteoporosis, predict lower extremity fracture risk and monitor response to therapy when normative data are available.
+Serial DXA assessment of treatment effectiveness among individuals with SCI should include evaluation at the total hip, distal femur, and proximal tibia, following a minimum of 12 months of therapy at 1- to 2-year intervals. Segmental analysis of total hip, distal femur and proximal tibia sub-regions from a whole-body scan should not be used for monitoring treatment.
+There is no established threshold BMD value below which weight-bearing activities are absolutely contraindicated. BMD and clinical risk factors should be used to assess fracture risk prior to engaging
+in weight-bearing activities.
+DXA in Transgender and Gender Non-conforming Individuals
+Baseline BMD testing is indicated for Transgender and Gender Non-Conforming (TGNC) individuals if they have any of the following conditions:
+History of gonadectomy or therapy that lowers endogenous gonadal steroid levels prior to initiation of hormone therapy.
+Hypogonadism with no plan to take gender-affirming hormone therapy.
+Existing ISCD indications for BMD testing, such as glucocorticoid use and hyperparathyroidism, apply.
+Follow-up BMD testing in TGNC individuals should be done when the results are likely to influence patient management. Examples include:
+Low bone density as defined by current ISCD guidelines.
+Individuals taking treatment to suppress puberty, such as GnRH analogs.
+Non-adherence with or inadequate doses of gender-affirming hormone therapy.
+Plan to discontinue gender-affirming hormone therapy.
+Presence of other risks for bone loss or fragility fracture.
+Bone mineral density testing intervals should be individualized based on each patient’s clinical status: typically, every one to two years until BMD is stable or improved is appropriate, with longer intervals thereafter.
+T- and Z-Score Calculation in TGNC Individuals
+T-scores should be calculated using a uniform White (non-race
+/ethnicity
+adjusted) female normative database for all transgender individuals of all ethnic groups; we recommend using a T-score of <-2.5 or less for diagnosis of osteoporosis in all TGNC individuals age 50 years or older, regardless of hormonal status.
+Calculate Z-scores using the normative database that matches the gender identity of the individual.
+If requested by the ordering provider, Z-scores may also be calculated using the normative database that matches the sex recorded at birth.
+In gender-nonbinary individuals, the normative database that matches the sex recorded at birth should be used.
+Gender data should be obtained on the intake questionnaire.
+The parameters to be included in the DXA report for transgender individuals are the same as are included in reports for the general population, but when specially requested, the report should include Z-scores calculated according to both male and female databases
+Peri-prosthetic and Orthopedic Uses of DXA
+Bone health assessment should be considered in patients prior to elective orthopedic and spine surgery. BMD should be measured in those meeting ISCD or regional indications for DXA testing.
+Routine DXA scans should include PA lumbar spine and hip.
+Forearm DXA should be considered in patients having upper limb surgery.
+VFA should be considered in patients having spine surgery.
+Elective orthopedic and spine surgery patients with the following conditions are at greater risk for impaired bone health and should have DXA testing:
+Diabetes mellitus (long term duration of diabetes (>10yrs) and poor control)
+Trabecular bone score measurement should be obtained in patients with diabetes, if available.
+Inflammatory arthritis
+Exposed to chronic corticosteroids ( ≥ 5mg/day for three or more months of treatment)
+A low-trauma fracture after 50 years of age
+Chronic kidney disease stage 3, 4 and 5
+Limited mobility
+Smoking
+When poor bone quality is identified during surgery, bone health assessment including DXA testing is indicated.
+When assessing hip and knee arthroplasty, ROI should include periprosthetic metaphyseal and diaphyseal bone around and away from the implant:
+After total hip arthroplasty, Gruen zones are recommended at the femur and the DeLee / Charnley or Wilkinson method are recommended at the pelvis.
+Modifications of ROI based on patient conditions and implant geometry are acceptable.
+Indications for pre-operative DXA testing for patients having hip surgery include:
+A Dorr classification of B or C.
+A Cortical Index of less than 0.4 measured at 10 cm below the mid lesser trochanter.
+The Cortical Index and/or cortical thickness adjacent to the femoral hip implant can be used to monitor bone ingrowth or resorption, identify periprosthetic loosening, predict subsidence, and assess the effectiveness of medical and surgical methods to modulate BMD around the hip prostheses.
+Opportunistic CT-based attenuation using Hounsfield Units (HU) can be used to estimate the likelihood of osteoporosis (L1 HU < 100) and normal (L1 HU > 150) bone density to support decisions regarding bone health assessment.
+DXA Nomenclature
+DXA – not DEXA.
+T-score – not T score, t-score, or t score
+Z-score – not Z score, z-score, or z score
+DXA Decimal Digits
+Preferred number of decimal digits for DXA reporting:
+BMD: (example, 0.927 g/cm2)
+3 digits
+T-score: (example, -2.3)
+1 digit
+Z-score: (example, 1.7)
+1 digit
+BMC: (example, 31.76 g)
+2 digits
+Area: (example, 43.25 cm2)
+2 digits
+% reference database: (example, 82%)
+Integer
+Glossary
+AFF – atypical femur fracture
+ALMI – appendicular lean mass index
+BMC – bone mineral content
+BMD – bone mineral density (equivalent to areal BMD, aBMD)
+BMI – body mass index
+BR – buckling ratio
+CSA – Cross Sectional Area
+CSMI – cross-sectional moment of inertia
+DXA – dual-energy X-ray absorptiometry
+FEA – Finite element analysis
+FFI – full femur imaging (from DXA)
+FMI – fat mass index
+HAL – hip axis length
+iAFF – incomplete atypical femur fracture
+ISCD – International Society for Clinical Densitometry
+LMI – lean mass index
+LSC – least significant change
+NHANES III – National Health and Nutrition Examination Survey III
+NSA – neck shaft angle
+OD – outer diameter
+PA – posterior anterior
+pDXA – peripheral dual-energy x-ray absorptiometry
+pQCT – peripheral quantitative computed tomography
+QC – quality control
+QCT – quantitative Computed Tomography
+QUS – quantitative Ultrasound
+ROI – region(s) of interest
+SCI – spinal cord injury
+SM – section modulus
+SSI – strain strength index
+TBLH – total body less head
+TBS – trabecular bone score
+TGNC – transgender and gender non-conforming
+VAT – visceral adipose tissue
+VFA – Vertebral Fracture Assessment
+vBMD – volumetric BMD
+WHO – World Health Organization
+Reference Papers
+The papers supporting the updates to the ISCD Official Positions are published in the
+Journal of Clinical Densitometry
+.
+Krueger, D., Tanner, S.B., Szalat, A., Malabanan, A., Prout, T., Lau, A., Rosen, H. & Shuhart, C. (2023). DXA Reporting Updates: 2023 Official Positions of the International Society for Clinical Densitometry,
+Journal of Clinical Densitometry
+101437. doi: 10.1016/j.jocd.2023.101437
+Tanner, S.B., Krueger, D., Szalat, A., Prout, T., Lau, A., Malabanan, A., Rosen, H., & Shuhart, C. (2023). Bilateral Hip DXA Reporting: 2023 Official Positions of the International Society for Clinical Densitometry,
+Journal of Clinical Densitometry,
+101438. doi: 10.1016/j.jocd.2023.101438
+Lau, A., Prout, T., Malabanan, A., Szalat, A., Krueger, D., Tanner, S.B., Rosen, H. & Shuhart, C. (2023). Reporting of Full-Femur Length Images to Detect Incomplete Atypical Femoral Fracture: 2023 Official Positions of the International Society for Clinical Densitometry
+, Journal of Clinical Densitometry,
+101439, doi: 10.1016/j.jocd.2023.101439
+Shuhart, C., Cheung, A., Gill, R., Gani, L., Goel, H., & Szalat, A. (2023). Executive Summary of the 2023 Adult Position Development Conference of The International Society for Clinical Densitometry: DXA Reporting, Follow-up BMD Testing and Trabecular Bone Score Application and Reporting,
+Journal of Clinical Densitometry,
+101435. doi: 10.1016/j.jocd.2023.101435
+Gani, L., Sritara, C., Blank, R., Chen, W., Gilmour, J., Dhaliwal, R., Gill, R. (2023). Follow-up Bone Mineral Density Testing: 2023 Official Positions of the International Society for Clinical Densitometry,
+Journal of Clinical Densitometry,
+101440, doi: 10.1016/j.jocd.2023.101440
+Rosen, H., Lau, A., Szalat, A., Tanner, S.B., Krueger, D., Prout, T., Malabanan, A. & Shuhart, C. (2023). Reporting Fewer Than Four Vertebrae: 2023 Official Positions of the International Society for Clinical Densitometry,
+Journal of Clinical Densitometry,
+101436, doi: 10.1016/j.jocd.2023.101436
+Goel, H., Binkley, N., Boggild, M., Chan, W., Leslie, W., McCloskey, E., Morgan, S., Silva, B., Cheung, A., (2023). Clinical Use of Trabecular Bone Score: The 2023 ISCD Official Positions: Clinical Use of TBS,
+Journal of Clinical Densitometry,
+101452, doi: 10.1016/j.jocd.2023.101452
+Return to the Top
+ISCD Headquarters
+955 South Main St. B202 Middletown, CT 06457.
+EMAIL
+iscd@iscd.org
+PHONE
+1 (860) 259-1000
+ABOUT
+JOIN/MEMBERSHIP
+RESOURCES
+ONLINE STORE
+EDUCATION
+OFFICIAL POSITIONS
+CERTIFICATION
+ACCREDITATION
+Login
+No Account - Create
+ISCD Bylaws
+Policies
+Privacy Information
+Online Store
+Education
+Learning Activities
+ACCME Credit
+ASRT Credit
+On-Demand
+Non-Credit (Free)
+Full Catalog
+Courses
+Quality Bone Densitometry for Clinicians
+Quality Bone Densitometry for Technologists
+Orthopedic Osteoporosis and Densitometry
+Vertebral Fracture Recognition
+Pediatric Bone Densitometry
+DXA Body Composition Analysis
+Events
+2027 Position Development & ISCD Conference
+Calendar of Events
+Official Positions
+Adult Positions
+Pediatric Positions
+FRAX Positions
+Certification
+Certifications
+Certified Bone Densitometry Technologist (CBDT®)
+Certified Clinical Densitometry (CCD®)
+Recertification Options
+Maintenance of Certification
+Certification Resources
+Appeals Form
+Certification Annual Reports
+Certification Registry
+Test Locations
+Membership
+Membership Types
+Individual Memberships
+Corporate Memberships
+2027 Member Model
+Member Benefits
+On Demand Courses
+Ask an Expert
+DXA Atlas
+Journal of Clinical Densitometry
+Membership Directory
+JOIN NOW
+Accreditation
+Application
+Accredited Facilities
+Program Requirements
+RESOURCES
+Calculators
+Official Positions
+Patient Resources
+View All
+About ISCD
+Alliances
+Awards
+Support ISCD
+President’s Message
+Board of Directors
+Committees
+Bylaws
+Staff Directory
+Bone Clubs
+International
+Regional Panels
+Local Organizing Committee (LOC)
+Calendar Of Events
+Contact
+-
+We use necessary cookies to operate and secure our website. With your consent, we also use optional analytics cookies to understand site traffic and improve our services.
+Accept All
+Reject Non-Essential

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-18",
+  "distinct_repositories": 25,
+  "snapshots": 26,
+  "source_files": 2910,
+  "bundle_file_count_including_hash_inventory": 3010,
+  "archive": "Open-Source-Projects-Collection.tar.xz",
+  "archive_bytes": 7559120,
+  "archive_sha256": "4f0e9d4186553841e016b1160b2e25ab1c8093de8d898594af4da6841be49cb4",
+  "prepared_tree_verification": true,
+  "deliberate_corruption_detected": true,
+  "extracted_archive_verification": true,
+  "verification_output": "25 repositories; 26 snapshots; 2910 source/design/notice files checked.\nPASS: source manifests and 3009 bundled file hashes match.\nIntegrity only: not a signature, safety certification or measurement validation.\n"
+}

@@ -1,0 +1,46 @@
+
+> ble-scale-sync@1.33.0 test
+> vitest run tests/scales/renpho-msc04.test.ts
+
+[33mTesting types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.[39m
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.0.3 [39m[90m/home/user/research-pass-4/ble-scale-sync[39m
+
+[90mstdout[2m | tests/scales/renpho-msc04.test.ts[2m > [22m[2mRenphoMsc04Adapter[2m > [22m[2m0x25 composition record (#434)[2m > [22m[2mreassembles the three captured fragments into a final reading at the settled weight
+[22m[39m2026-10-17 14:24:39.816 [BLE] Renpho R-MSC04: body composition received (fat 23.7 %, visceral 8)
+
+[90mstdout[2m | tests/scales/renpho-msc04.test.ts[2m > [22m[2mRenphoMsc04Adapter[2m > [22m[2m0x25 composition record (#434)[2m > [22m[2mexports the scale's body fat and visceral fat, and muscle mass as lean minus bone
+[22m[39m2026-10-17 14:24:39.818 [BLE] Renpho R-MSC04: body composition received (fat 23.7 %, visceral 8)
+
+[90mstdout[2m | tests/scales/renpho-msc04.test.ts[2m > [22m[2mRenphoMsc04Adapter[2m > [22m[2m0x25 composition record (#434)[2m > [22m[2mlogs the segment impedances, BMI and skeletal muscle at debug level
+[22m[39m2026-10-17 14:24:39.820 [BLE] Renpho R-MSC04: body composition received (fat 23.7 %, visceral 8)
+
+[90mstdout[2m | tests/scales/renpho-msc04.test.ts[2m > [22m[2mRenphoMsc04Adapter[2m > [22m[2m0x25 composition record (#434)[2m > [22m[2mdrops a chain whose next fragment carries another seq (derived: seq 04 -> 05)
+[22m[39m2026-10-17 14:24:39.821 [BLE] Renpho R-MSC04: body composition received (fat 23.7 %, visceral 8)
+
+[90mstdout[2m | tests/scales/renpho-msc04.test.ts[2m > [22m[2mRenphoMsc04Adapter[2m > [22m[2m0x25 composition record (#434)[2m > [22m[2mtreats a record without body fat as final, but uses the estimate (derived)
+[22m[39m2026-10-17 14:24:39.822 [BLE] Renpho R-MSC04: body composition received (fat 0 %, visceral 8)
+2026-10-17 14:24:39.823 [BLE] Renpho R-MSC04: the scale reported no body fat, using the estimate
+
+[90mstdout[2m | tests/scales/renpho-msc04.test.ts[2m > [22m[2mRenphoMsc04Adapter[2m > [22m[2m0x25 composition record (#434)[2m > [22m[2muses the estimate when the scale's profile height is not the user's
+[22m[39m2026-10-17 14:24:39.825 [BLE] Renpho R-MSC04: body composition received (fat 23.7 %, visceral 8)
+2026-10-17 14:24:39.825 [BLE] Renpho R-MSC04: the scale's BMI implies a 187 cm profile, not the configured 183 cm, so its figures are not used. It is likely the profile last written to the scale by the Renpho app, which may be another user's.
+
+[90mstdout[2m | tests/scales/renpho-msc04.test.ts[2m > [22m[2mRenphoMsc04Adapter[2m > [22m[2m0x25 composition record (#434)[2m > [22m[2mkeeps the record pinned to its reading when the next session starts
+[22m[39m2026-10-17 14:24:39.826 [BLE] Renpho R-MSC04: body composition received (fat 23.7 %, visceral 8)
+
+[90mstdout[2m | tests/scales/renpho-msc04.test.ts[2m > [22m[2mRenphoMsc04Adapter handshake diagnostics (#434)[2m > [22m[2msays whether the record was computed for the height we sent, never the height
+[22m[39m2026-10-17 14:24:39.846 [BLE] Renpho R-MSC04: body composition received (fat 23.7 %, visceral 8)
+
+[90mstdout[2m | tests/scales/renpho-msc04.test.ts[2m > [22m[2mRenphoMsc04Adapter handshake diagnostics (#434)[2m > [22m[2msays whether the record was computed for the height we sent, never the height
+[22m[39m2026-10-17 14:24:39.846 [BLE] Renpho R-MSC04: body composition received (fat 23.7 %, visceral 8)
+
+ [32m✓[39m tests/scales/renpho-msc04.test.ts [2m([22m[2m85 tests[22m[2m)[22m[32m 54[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m85 passed[39m[22m[90m (85)[39m
+[2mType Errors [22m [2mno errors[22m
+[2m   Start at [22m 14:24:38
+[2m   Duration [22m 898ms[2m (transform 78%, import 14%, tests 7%, worker 1%)[22m
+

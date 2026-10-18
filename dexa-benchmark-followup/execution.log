@@ -1,0 +1,11 @@
+primary_1999_to_2003 ridge complete 1802 1858
+primary_1999_to_2003 extra_trees complete 1802 1858
+pooled_to_2003 ridge complete 3868 1858
+pooled_to_2003 extra_trees complete 3868 1858
+marginal_fit_sensitivity ridge complete 3904 1909
+marginal_fit_sensitivity extra_trees complete 3904 1909
+core_anthro_sensitivity ridge complete 3880 1865
+core_anthro_sensitivity extra_trees complete 3880 1865
+mec_weight_sensitivity ridge complete 3868 1858
+mec_weight_sensitivity extra_trees complete 3868 1858
+DONE 296 metrics 553512 predictions

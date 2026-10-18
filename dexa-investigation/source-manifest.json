@@ -1,0 +1,380 @@
+{
+  "audit_date": "2026-10-17",
+  "repositories": [
+    {
+      "name": "Comp2Comp",
+      "url": "https://github.com/StanfordMIMI/Comp2Comp.git",
+      "commit": "fa617e2d0d2d02f59c7d8322e4ffc5375213eb7b",
+      "last_commit_date": "2026-01-06T10:57:36-08:00",
+      "retained": "Selected source, licenses, configuration and small assets; not a complete build package. Git history removed.",
+      "removed_files": [
+        {
+          "path": "logo.png",
+          "bytes": 15282
+        },
+        {
+          "path": "figures/liver_spleen_pancreas_example.png",
+          "bytes": 7546828
+        },
+        {
+          "path": "figures/aortic_calcium_overview.png",
+          "bytes": 7995102
+        },
+        {
+          "path": "figures/aaa_segmentation_video.gif",
+          "bytes": 9557543
+        },
+        {
+          "path": "figures/spine_muscle_adipose_tissue_example.png",
+          "bytes": 922010
+        },
+        {
+          "path": "figures/aaa_diameter_graph.png",
+          "bytes": 154525
+        },
+        {
+          "path": "figures/muscle_adipose_tissue_example.png",
+          "bytes": 260770
+        },
+        {
+          "path": "figures/spine_example.png",
+          "bytes": 238152
+        },
+        {
+          "path": "figures/aortic_aneurysm_example.png",
+          "bytes": 360112
+        },
+        {
+          "path": "figures/hip_example.png",
+          "bytes": 133465
+        }
+      ]
+    },
+    {
+      "name": "DeepACSA",
+      "url": "https://github.com/PaulRitsche/DeepACSA.git",
+      "commit": "781cc471aa7197bc8cb32e8d36cfd41493781a12",
+      "last_commit_date": "2026-03-31T09:34:33+02:00",
+      "retained": "Selected source, licenses, configuration and small assets; not a complete build package. Git history removed.",
+      "removed_files": [
+        {
+          "path": "DeepACSA/gui_helpers/deep_acsa.jpg",
+          "bytes": 17956
+        },
+        {
+          "path": "DeepACSA/gui_helpers/gui_files/Info.png",
+          "bytes": 734
+        },
+        {
+          "path": "DeepACSA/gui_helpers/gui_files/gear.png",
+          "bytes": 6350
+        },
+        {
+          "path": "DeepACSA/gui_helpers/gui_files/Cite.png",
+          "bytes": 625
+        },
+        {
+          "path": "docs/source/remove_gui.png",
+          "bytes": 885052
+        },
+        {
+          "path": "docs/source/VL_without_inspection.png",
+          "bytes": 97474
+        },
+        {
+          "path": "docs/source/masked_image.png",
+          "bytes": 927651
+        },
+        {
+          "path": "docs/source/removed_parts.png",
+          "bytes": 2383737
+        },
+        {
+          "path": "docs/source/line_check.png",
+          "bytes": 176688
+        },
+        {
+          "path": "docs/source/RF_bar_scale.png",
+          "bytes": 815770
+        },
+        {
+          "path": "docs/source/RF_without_inspection.png",
+          "bytes": 97713
+        },
+        {
+          "path": "docs/source/check_bar.png",
+          "bytes": 102601
+        },
+        {
+          "path": "docs/source/inspect_masks.png",
+          "bytes": 15017
+        },
+        {
+          "path": "docs/source/create_masks.png",
+          "bytes": 14248
+        },
+        {
+          "path": "docs/source/outliers.png",
+          "bytes": 670438
+        },
+        {
+          "path": "docs/source/scale_result.png",
+          "bytes": 5911
+        },
+        {
+          "path": "docs/source/GUI_test_images.png",
+          "bytes": 38559
+        },
+        {
+          "path": "docs/source/main.png",
+          "bytes": 35989
+        },
+        {
+          "path": "docs/source/manual_scale.png",
+          "bytes": 317265
+        },
+        {
+          "path": "docs/source/inspect_gui.png",
+          "bytes": 1548711
+        },
+        {
+          "path": "docs/source/manual_scale_info.png",
+          "bytes": 6952
+        },
+        {
+          "path": "docs/source/image_overlay.png",
+          "bytes": 70177
+        },
+        {
+          "path": "docs/source/inspect_correct.png",
+          "bytes": 166659
+        },
+        {
+          "path": "docs/source/GUI_augmentation.png",
+          "bytes": 43308
+        },
+        {
+          "path": "docs/source/VL_with_inspection.png",
+          "bytes": 98407
+        },
+        {
+          "path": "docs/source/Inspect_incorrect.png",
+          "bytes": 189505
+        },
+        {
+          "path": "docs/source/volume_info.png",
+          "bytes": 96902
+        },
+        {
+          "path": "docs/source/deep_acsa.jpg",
+          "bytes": 17956
+        },
+        {
+          "path": "docs/source/scale_check.png",
+          "bytes": 2137695
+        },
+        {
+          "path": "docs/source/RF_line_scale.png",
+          "bytes": 495320
+        },
+        {
+          "path": "docs/source/RF_with_inspection.png",
+          "bytes": 98549
+        },
+        {
+          "path": "docs/source/GUI_test_training.png",
+          "bytes": 27778
+        },
+        {
+          "path": "docs/source/PT_reliability.png",
+          "bytes": 1156435
+        }
+      ]
+    },
+    {
+      "name": "FatSegNet",
+      "url": "https://github.com/Deep-MI/FatSegNet.git",
+      "commit": "720d36b0cffcc1be42417a538153fde99b2ad4f2",
+      "last_commit_date": "2022-04-07T12:13:54+02:00",
+      "retained": "Selected source, licenses, configuration and small assets; not a complete build package. Git history removed.",
+      "removed_files": [
+        {
+          "path": "FatSegNet_Variables.pdf",
+          "bytes": 105009
+        },
+        {
+          "path": "Images/DZNE.png",
+          "bytes": 74597
+        },
+        {
+          "path": "Images/RZ_UK_Logo_Rheinland Studie_sw.png",
+          "bytes": 37817
+        },
+        {
+          "path": "Images/QC_3.png",
+          "bytes": 202154
+        },
+        {
+          "path": "tool/Adipose_Seg_Models/Localization/Loc_CDFNet_Baseline_coronal/logs/CDFNet_Baseline_coronal_best_weights.h5",
+          "bytes": 20930320
+        },
+        {
+          "path": "tool/Adipose_Seg_Models/Localization/Loc_CDFNet_Baseline_sagittal/logs/CDFNet_Baseline_sagittal_best_weights.h5",
+          "bytes": 20930320
+        },
+        {
+          "path": "tool/Adipose_Seg_Models/Segmentation/CDFNet_Baseline_sagittal/logs/CDFNet_Baseline_sagital_best_weights.h5",
+          "bytes": 20938472
+        },
+        {
+          "path": "tool/Adipose_Seg_Models/Segmentation/CDFNet_Baseline_coronal/logs/CDFNet_Baseline_frontal_best_weights.h5",
+          "bytes": 20938472
+        },
+        {
+          "path": "tool/Adipose_Seg_Models/Segmentation/CDFNet_Baseline_axial/logs/CDFNet_Baseline_axial_best_weights.h5",
+          "bytes": 20938472
+        }
+      ]
+    },
+    {
+      "name": "Ogo",
+      "url": "https://github.com/Bonelab/Ogo.git",
+      "commit": "d5bec374608812b1c08a0d0da9cab3ea33cf720e",
+      "last_commit_date": "2026-10-14T16:15:30-06:00",
+      "retained": "Selected source, licenses, configuration and small assets; not a complete build package. Git history removed.",
+      "removed_files": [
+        {
+          "path": "ogo/dat/LT_FEMUR_SIDEWAYS_FALL_REF.vtk",
+          "bytes": 3150208
+        },
+        {
+          "path": "ogo/dat/L4_BODY_SPINE_COMPRESSION_REF.vtk",
+          "bytes": 814386
+        },
+        {
+          "path": "ogo/dat/L4_FULL_VERTEBRA_SPINE_COMPRESSION_REF.vtk",
+          "bytes": 1893947
+        },
+        {
+          "path": "ogo/dat/RT_FEMUR_SIDEWAYS_FALL_REF_old.vtk",
+          "bytes": 1727481
+        },
+        {
+          "path": "ogo/dat/LT_FEMUR_SIDEWAYS_FALL_REF_old.vtk",
+          "bytes": 2005257
+        },
+        {
+          "path": "ogo/util/graphcuts/bin/EndostealSegmentation",
+          "bytes": 16504848
+        },
+        {
+          "path": "ogo/util/graphcuts/bin/Sheetness",
+          "bytes": 22421144
+        },
+        {
+          "path": "ogo/util/graphcuts/bin/Sheetness2",
+          "bytes": 22421872
+        },
+        {
+          "path": "ogo/util/graphcuts/bin/HU",
+          "bytes": 17457728
+        },
+        {
+          "path": "ogo/util/graphcuts/bin/PeriostealSegmentation",
+          "bytes": 17457640
+        },
+        {
+          "path": "docs/images/ogo-logo.png",
+          "bytes": 235031
+        }
+      ]
+    },
+    {
+      "name": "Pseudo-DXA",
+      "url": "https://github.com/LambertLeong/Pseudo-DXA.git",
+      "commit": "196630285aaa3637b4990e0b5ff2d445c10c3544",
+      "last_commit_date": "2026-07-09T17:57:01-10:00",
+      "retained": "Selected source, licenses, configuration and small assets; not a complete build package. Git history removed.",
+      "removed_files": [
+        {
+          "path": "assets/figure_1_psdxa.png",
+          "bytes": 2714364
+        },
+        {
+          "path": "assets/supfig2_psdxa.png",
+          "bytes": 250510
+        },
+        {
+          "path": "assets/supfig3_psdxa.png",
+          "bytes": 3259141
+        }
+      ]
+    },
+    {
+      "name": "bodycomp",
+      "url": "https://github.com/rishabcv-eng/bodycomp.git",
+      "commit": "00474935fa562b06909cd6d51f1f5d256514788b",
+      "last_commit_date": "2026-10-08T23:50:07+05:30",
+      "retained": "Selected source, licenses, configuration and small assets; not a complete build package. Git history removed.",
+      "removed_files": [
+        {
+          "path": "docs/demo.gif",
+          "bytes": 611560
+        },
+        {
+          "path": "reports/segmentation_check.png",
+          "bytes": 942502
+        },
+        {
+          "path": "reports/mask_standing_front.png",
+          "bytes": 5601
+        },
+        {
+          "path": "reports/evaluation.png",
+          "bytes": 287116
+        },
+        {
+          "path": "app/public/test/side.png",
+          "bytes": 4661
+        },
+        {
+          "path": "app/public/test/front.png",
+          "bytes": 5170
+        },
+        {
+          "path": "app/public/test/photo.jpg",
+          "bytes": 225481
+        },
+        {
+          "path": "app/public/icons/icon-192.png",
+          "bytes": 875
+        },
+        {
+          "path": "app/public/icons/apple-touch-icon.png",
+          "bytes": 803
+        },
+        {
+          "path": "app/public/icons/icon-512.png",
+          "bytes": 2542
+        },
+        {
+          "path": "app/public/icons/icon-maskable-512.png",
+          "bytes": 2446
+        }
+      ]
+    },
+    {
+      "name": "dxa-extractor",
+      "url": "https://github.com/FSUcaplab/dxa-extractor.git",
+      "commit": "b90af0e48078ed1e1a65ea114b301d0a7295cf2e",
+      "last_commit_date": "2026-08-11T09:53:47-04:00",
+      "retained": "Selected source, licenses, configuration and small assets; not a complete build package. Git history removed.",
+      "removed_files": [
+        {
+          "path": "ImageGUI.png",
+          "bytes": 44375
+        }
+      ]
+    }
+  ]
+}

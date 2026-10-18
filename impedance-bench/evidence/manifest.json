@@ -1,0 +1,26 @@
+[
+  {
+    "name": "max30009-datasheet",
+    "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/max30009.pdf",
+    "error": "HTTPSConnectionPool(host='www.analog.com', port=443): Read timed out. (read timeout=45)"
+  },
+  {
+    "name": "max30009-evkit-rev2",
+    "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/max30009evkit-evk-rev2.pdf",
+    "error": "HTTPSConnectionPool(host='www.analog.com', port=443): Read timed out. (read timeout=45)"
+  },
+  {
+    "name": "ad5940-simulator-warning",
+    "url": "https://www.analog.com/en/resources/app-notes/an-1557.html",
+    "error": "HTTPSConnectionPool(host='www.analog.com', port=443): Read timed out. (read timeout=45)"
+  },
+  {
+    "name": "fixture-compensation",
+    "url": "https://helpfiles.keysight.com/csg/e5061b/measurement_with_options/option_005_impedance_analysis/setting_up_measurement/eliminating_error_factor_of_fixture/open_short_load_compensation.htm",
+    "retrieval_date": "2026-10-17",
+    "original_sha256": "5da8d2359ffae0888d6b4db6a4c2d5d4b0dc31930741581d6fa525fb13dde574",
+    "text_sha256": "0b44199b532c985ae3580ae3eaf2bcfcc4c5ba82a15e79cb6372654683ef8ccc",
+    "pdf_pages": null,
+    "saved_file": "fixture-compensation.txt"
+  }
+]

@@ -1,0 +1,1 @@
+PASS: integration-source.patch applied to a copy of the previous host-fork source; every delivered source/ and gnu/ file reconstructed byte-identically. Vendor and tests are separate package inputs.

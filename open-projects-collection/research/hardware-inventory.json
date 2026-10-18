@@ -1,0 +1,1031 @@
+[
+  {
+    "repo": "melazab/AD5940-BIOZ",
+    "commit": "dcd50963aba362ebcfdb090548d099d047451394",
+    "files": [
+      {
+        "path": "docs/Schematic_EVAL-AD5940BIOZ.pdf",
+        "bytes": 380428,
+        "pdf_pages": 3,
+        "text_characters": 8321,
+        "text_excerpt": "B 27NOV18PER ECR 083477\nMLAMBE\nMLAMBE\n05OCT18INITIAL RELEASEA\n27NOV18\n27NOV18\n27NOV18\n27NOV18\n27NOV18\nProduct(s): AD5940\nP SHEAHAN\n-\n<User Define>\n          : AD8233\n-\n<User Define>\n<User Define>\nTBD\nP SHEAHAN\nEVAL-AD5940BIOZ\nB\nP  SHEAHAN no_template\n02_049988\n1 3CodeID1:1\nM BATALLA\n-\nA AGENA\nM LAMBE\n-\n-\n-\nREV\n2\nREVISIONS\n1\nOWNED OR CONTROLLED BY ANALOG DEVICES.\nTHE EQUIPMENT SHOWN HEREON MAY BE PROTECTED BY PATENTS\nPURPOSE DETRIMENTAL TO THE INTERESTS OF ANALOG DEVICES. JP#\nUSED IN FURNISHING INFORMATION TO OTHERS, OR FOR ANY OTHER\n8\nCONNECTORFUNCTIONCODE DEVICE\n2\n2\n6\nJUMPER TABLE\n4\n7\n5\nA\n3\nDATE APPROVED\nD\nB\nDESCRIPTION\n34\nOFFON\n5\n57\nOEM PART# HANDLER\n6\nC\nB\n8\nSOCKET OEMBK/BD SPEC.P.O SPEC.\nA\n1\nRELAY CONTROL CHART\n3 14\nC\nNOT TO BE REPRODUCED OR COPIED, IN WHOLE OR IN PART, OR\nTHIS DRAWING IS THE PROPERTY OF ANALOG DEVICES INC. IT IS\nCHECKER\nDESIGNER\nPTD ENGINEER\nTEST ENGINEER\nDECIMALS\nX.XXX +-0.005\nX.XX +-0.010\nMASTER PROJECT TEMPLATE\nTOLERANCES\n+-1/32\nFRACTIONS\n+-2\nSIZE\nDDDD\nSCHEMATIC\nDRAWING NO.\nSCALE CODE ID NO.\nSHEET OF\nREV.\nD\nA A\nE\nN\nV C\nL G\nSE\nO\nDATE\nANGLES\nUNLESS OTHERWISE SPECIFIED DIMENSIONS ARE IN INCHES\nTESTER TEMPLATE\nTEMPLATE ENGINEER\nHARDWARE SERVICES\nHARDWARE SYSTEMS\nCOMPONENT ENGINEER\nTEST PROCESS\nHARDWARE RELEASE\n* SEE ASSEMBLY INSTRUCTIONS\nCONTROL\nD\nDECOUPLING EXTERNAL OSCILLATOR \nAVDD\nAD5940\nLDO_OUT_MAIN LDO_OUT_AUX\nDVDD\nVOUT = 1.2V X (R2 + R3)/R3 = 3.3V\nGPIOS\nRESET\nPUSH BUTTON\n(PLACE CLOSE TO AD5940)\nEVAL-AD5940BIOZ\nProduct(s): AD5940\n          : AD8233\n<DESIGN_VIEW>\n2 31:1\nB02_049988\nM LAMBE\nC0603\n0.47UF\n0.47UF\n0.47UF\n0.47UF\n0.1UF\nDNI\nC0603\nM20-9990245\n1UF\nC0603\n61300621121\n600OHM AT 100MEGHZ\n25.195.0253.0\n10K\nBLK\n2.2\n0.1UF\nB3U-1000P\nR0402\n10UF\nRED\nM22F2010305\n0\nDNI\nDNI\nBLK\nBLK\n0\nC0603\n25.195.0253.0\n6.8PF\nDNI\nDNI\n10UF\nC0603\nADP160AUJZ-3.3\n10UF\nC0603"
+      }
+    ]
+  },
+  {
+    "repo": "OpenEIT/EIT_EE",
+    "commit": "c3d40a1e08c13728ee8e9ce2fa1d02b52685fb5e",
+    "files": [
+      {
+        "path": "8_electrode_flex/eit.kicad_pcb",
+        "bytes": 13570
+      },
+      {
+        "path": "BiomedicalImagingLibrary.lbr",
+        "bytes": 375131,
+        "format": "XML",
+        "part_count": 0,
+        "element_count": 0,
+        "sheet_count": 0,
+        "part_values": []
+      },
+      {
+        "path": "EIT.brd",
+        "bytes": 230931,
+        "format": "XML",
+        "part_count": 0,
+        "element_count": 85,
+        "sheet_count": 0,
+        "part_values": []
+      },
+      {
+        "path": "EIT.sch",
+        "bytes": 351562,
+        "format": "XML",
+        "part_count": 129,
+        "element_count": 0,
+        "sheet_count": 8,
+        "part_values": [
+          {
+            "name": "U3",
+            "value": null,
+            "deviceset": "ADUCM350"
+          },
+          {
+            "name": "JP1",
+            "value": "VDDOUT",
+            "deviceset": "PINHD-2X4"
+          },
+          {
+            "name": "RESET",
+            "value": null,
+            "deviceset": "SWITCH-MOMENTARY-2"
+          },
+          {
+            "name": "DOWNLOAD",
+            "value": null,
+            "deviceset": "SWITCH-MOMENTARY-2"
+          },
+          {
+            "name": "DOWNLOAD_R",
+            "value": "10K",
+            "deviceset": "RESISTOR-US"
+          },
+          {
+            "name": "ADP3333",
+            "value": null,
+            "deviceset": "REGULATOR-ADP3333ARMZ-3.3-R7"
+          },
+          {
+            "name": "P_R2",
+            "value": "560",
+            "deviceset": "RESISTOR-US"
+          },
+          {
+            "name": "PWRLED",
+            "value": null,
+            "deviceset": "LED"
+          },
+          {
+            "name": "3.3V_BOARDC",
+            "value": "4.7uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "GND18",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "M_1",
+            "value": null,
+            "deviceset": "MULTIPLEXER-ADG1608BRUZ"
+          },
+          {
+            "name": "M_2",
+            "value": null,
+            "deviceset": "MULTIPLEXER-ADG1608BRUZ"
+          },
+          {
+            "name": "POWER",
+            "value": null,
+            "deviceset": "JUMPER-2"
+          },
+          {
+            "name": "VCCM_ANA",
+            "value": "TEST_POINT-TEST_POINTMINI",
+            "deviceset": "TEST_POINT"
+          },
+          {
+            "name": "3.3V_TP",
+            "value": "TEST_POINT-TEST_POINTMINI",
+            "deviceset": "TEST_POINT"
+          },
+          {
+            "name": "DOWNLOAD_TP",
+            "value": "TEST_POINT-TEST_POINTMINI",
+            "deviceset": "TEST_POINT"
+          },
+          {
+            "name": "RESET_TP",
+            "value": "TEST_POINT-TEST_POINTMINI",
+            "deviceset": "TEST_POINT"
+          },
+          {
+            "name": "UART_TX",
+            "value": "TEST_POINT-TEST_POINTMINI",
+            "deviceset": "TEST_POINT"
+          },
+          {
+            "name": "UART_RX",
+            "value": "TEST_POINT-TEST_POINTMINI",
+            "deviceset": "TEST_POINT"
+          },
+          {
+            "name": "SWIO",
+            "value": "TEST_POINT-TEST_POINTMINI",
+            "deviceset": "TEST_POINT"
+          },
+          {
+            "name": "SWCLK",
+            "value": "TEST_POINT-TEST_POINTMINI",
+            "deviceset": "TEST_POINT"
+          },
+          {
+            "name": "U$1",
+            "value": null,
+            "deviceset": "ESDPROTECTION-DSILC6-4XX"
+          },
+          {
+            "name": "U$2",
+            "value": null,
+            "deviceset": "ESDPROTECTION-DSILC6-4XX"
+          },
+          {
+            "name": "RESET_CAP",
+            "value": "0.1uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "C_VCCM1",
+            "value": "10uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "C_VCCM2",
+            "value": "0.1uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "AVDD_TXRX",
+            "value": "470nF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "DVDDC",
+            "value": "470nF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "VCCM_DIG",
+            "value": "0.1uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "VDDIO",
+            "value": "0.47uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "VREF",
+            "value": "4.7uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "VBIAS",
+            "value": "0.47uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "VDDIO_CONN",
+            "value": null,
+            "deviceset": "JUMPER-3"
+          },
+          {
+            "name": "GND2",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND3",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND4",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "U$20",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND5",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND6",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND9",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND10",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND12",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND13",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "FRAME6",
+            "value": null,
+            "deviceset": "FRAME_A_L"
+          },
+          {
+            "name": "FRAME7",
+            "value": null,
+            "deviceset": "FRAME_A_L"
+          },
+          {
+            "name": "FRAME1",
+            "value": null,
+            "deviceset": "FRAME_A_L"
+          },
+          {
+            "name": "FRAME2",
+            "value": null,
+            "deviceset": "FRAME_A_L"
+          },
+          {
+            "name": "FRAME3",
+            "value": null,
+            "deviceset": "FRAME_A_L"
+          },
+          {
+            "name": "FRAME4",
+            "value": null,
+            "deviceset": "FRAME_A_L"
+          },
+          {
+            "name": "FRAME5",
+            "value": null,
+            "deviceset": "FRAME_A_L"
+          },
+          {
+            "name": "GND15",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "USBPWR",
+            "value": null,
+            "deviceset": "JUMPER-2"
+          },
+          {
+            "name": "BATT",
+            "value": null,
+            "deviceset": "JUMPER-2"
+          },
+          {
+            "name": "CR2",
+            "value": null,
+            "deviceset": "XTAL-TSX-3225"
+          },
+          {
+            "name": "CR",
+            "value": null,
+            "deviceset": "XTAL-ECX-31B"
+          },
+          {
+            "name": "C_X32",
+            "value": "15pF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "X_X32_2",
+            "value": "15pF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "C_X162",
+            "value": "24pF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "C_X161",
+            "value": "24pF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "GND16",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND17",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "R1",
+            "value": "1K",
+            "deviceset": "RESISTOR"
+          },
+          {
+            "name": "J_RCAL",
+            "value": null,
+            "deviceset": "JUMPER-2"
+          },
+          {
+            "name": "3.3VJTAG",
+            "value": "TEST_POINT-TEST_POINTMINI",
+            "deviceset": "TEST_POINT"
+          },
+          {
+            "name": "TRST",
+            "value": "TEST_POINT-TEST_POINTMINI",
+            "deviceset": "TEST_POINT"
+          },
+          {
+            "name": "TRACECLK",
+            "value": "TEST_POINT-TEST_POINTMINI",
+            "deviceset": "TEST_POINT"
+          },
+          {
+            "name": "LED1",
+            "value": null,
+            "deviceset": "LED"
+          },
+          {
+            "name": "LED2",
+            "value": null,
+            "deviceset": "LED"
+          },
+          {
+            "name": "RL1",
+            "value": "560",
+            "deviceset": "RESISTOR-US"
+          },
+          {
+            "name": "RL2",
+            "value": "560",
+            "deviceset": "RESISTOR-US"
+          },
+          {
+            "name": "C1",
+            "value": "0.1uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "C2",
+            "value": "10uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "PWRSUPPLY",
+            "value": null,
+            "deviceset": "JUMPER-2"
+          },
+          {
+            "name": "GND19",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "H1",
+            "value": null,
+            "deviceset": "MOUNT-HOLE"
+          },
+          {
+            "name": "H2",
+            "value": null,
+            "deviceset": "MOUNT-HOLE"
+          },
+          {
+            "name": "H3",
+            "value": null,
+            "deviceset": "MOUNT-HOLE"
+          },
+          {
+            "name": "H4",
+            "value": null,
+            "deviceset": "MOUNT-HOLE"
+          },
+          {
+            "name": "C3",
+            "value": "10uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "C5",
+            "value": "1uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "U$14",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "F1",
+            "value": null,
+            "deviceset": "FIDUCIAL"
+          },
+          {
+            "name": "F2",
+            "value": null,
+            "deviceset": "FIDUCIAL"
+          },
+          {
+            "name": "F3",
+            "value": null,
+            "deviceset": "FIDUCIAL"
+          },
+          {
+            "name": "F4",
+            "value": null,
+            "deviceset": "FIDUCIAL"
+          },
+          {
+            "name": "AFE",
+            "value": null,
+            "deviceset": "PINHD-2X4"
+          },
+          {
+            "name": "RESETR",
+            "value": "10K",
+            "deviceset": "RESISTOR-US"
+          },
+          {
+            "name": "R2",
+            "value": "0",
+            "deviceset": "RESISTOR-US"
+          },
+          {
+            "name": "R3",
+            "value": "0",
+            "deviceset": "RESISTOR-US"
+          },
+          {
+            "name": "GND",
+            "value": null,
+            "deviceset": "TEST_POINT"
+          },
+          {
+            "name": "U$24",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "FRAME8",
+            "value": null,
+            "deviceset": "LETTER_L"
+          },
+          {
+            "name": "IC1",
+            "value": null,
+            "deviceset": "TY-EYSGJNAWY-1X"
+          },
+          {
+            "name": "XTAL1",
+            "value": null,
+            "deviceset": "XTAL_BLE"
+          },
+          {
+            "name": "C4",
+            "value": "15pF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "C6",
+            "value": "15pF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "ENABLE_BLE_RESET",
+            "value": null,
+            "deviceset": "JUMPER-2"
+          },
+          {
+            "name": "UART_SELECT",
+            "value": null,
+            "deviceset": "SWITCH-DPDT"
+          },
+          {
+            "name": "C7",
+            "value": "1uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          },
+          {
+            "name": "C8",
+            "value": "0.1uF",
+            "deviceset": "CAPACITOR-NON-POLAR"
+          }
+        ]
+      },
+      {
+        "path": "EIT_schematic.pdf",
+        "bytes": 60819,
+        "pdf_pages": 8,
+        "text_characters": 5579,
+        "text_excerpt": "ADUCM350\n470nF\n470nF\n0.1uF\n0.47uF\n4.7uF\n0.47uF\nGND\nGND\nGND\nGND\nGND\nGND\nGND\nGND\nAVDD_RX/AVDD_TXR4\nDVDDK1\nVLCDVDDD2\nV_LCD_13C2\nV_LCD_23B1\nVLCD_FLY1E2\nVLCD_FLY2F2\nVDD_IOH15\nVCCM_DIGH6\nVCCM_ANAP4\nVBACKM1\nVBIASP10\nVBUSG2\nVUSBE1\nUSB_DMF1\nUSB_DPG1\nVREFR10\nREF_EXCITER12\nAN_AP12\nAN_BP13\nAN_CR13\nAN_DR14\nAFE_1R6\nAFE_2P6\nAFE_3R7\nAFE_4P7\nAFE_5R8\nAFE_6P8\nAFE_7R9\nAFE_8P9\nP3.9/S30F9\nTRACE0 M14\nTRACE1 N15\nTRACE2 N14\nTRACE3 P15\nTRACECLK M15\nHF_XTAL1 D1\nHF_XTAL2 C1\nLF_XTAL1 P1\nLF_XTAL2 N1\nBOOT N2\nRCAL_1 P5\nRCAL_2 R5\nTIA_I P11\nTIA_O R11\nTRST R15\nRESETX K8\nAGND_CTOUCH P14\nAGND_REF K10\nAGND_RX/AGND_TX K9\nDGND2/LCD_GND F7\nDGND_USB F6\nDGND1 G6\nDGND H14\nDNC A1\nU3A\nAVDD_TXRX\nDVDDC\nVCCM_DIG\nVDDIO\nVREF\nVBIAS\nRESETX\nKERNEL_GPIOVCCM_ANA\nVDD_IO\nAVDD_TX/RX\nVCCM_DIG\nVBIAS\nVREF\nAFE1\nAFE3\nAFE4\nAFE5\nAFE6\nAFE7\nAFE8\nRCAL1\nRCAL2\nAFE2\nTRST\nTRACECLK\nTRACEDATA1\nTRACEDATA2\nTRACEDATA0\nHF_XTAL1\nHF_XTAL2\nLF_XTAL1\nTRACEDATA3\nLF_XTAL2\nA\nB\nC\nD\nE\nA\nB\nC\nD\nE\n1 2 3 4 5 6\nDate: 27/11/17 11:14 AM Sheet: 1/8\nREV:\nTITLE:\nDocument Number:\nEIT\nTO FUNCTION: 3 pin jumper vddio->vccm_ana\nvccm_ana jumper should be in place to obtain power through regulator from usb. \nADUCM350\nMOUNT-HOLE3.0 MOUNT-HOLE3.0 MOUNT-HOLE3.0 MOUNT-HOLE3.0\nP0.0/CAPT_AK15\nP0.1/CAPT_BJ15\nP0.2/CAPT_CL15\nP0.3/CAPT_DK14\nP0.4/CAPT_EJ14\nP0.5/CAPT_FL14\nTDO-SWO/P0.6/UTXJ1\nTDI/P0.7/URXJ2\nTMS-SWDIO/P0.8H1\nTCK-SWCLK/P0.9H2\nP0.10/TOUTCR2\nP0.11K2\nP0.12/SPIH_SCLKR3\nP0.13/SPIH_MISOP2\nP0.14/SPIH_MOSIP3\nP0.15/SPIH_CSM2\nP1.0/S3/D0/SCLA5\nP1.1/S4/D1/DOUTB5\nP1.2/S5/D2/DINA6\nP1.3/S6/D3B6\nP1.4/S7/D4A7\nP1.5/S8/D5B7\nP1.6/S9/D6A8\nP1.7/S10/D7B8\nP1.8/S11/D8A9\nP1.9/S12/D9B9\nP1.10/S13/D10A10\nP1.11/S14/D11B10\nP1.12/S15/D12A11\nP1.13/S16/D13B11\nP1.14/S17/D14A12\nP1.15/S18/D15B12 P2.0/COM0 B2P2.1/COM1/RESX A2P2.2/COM2/CSX B3P2.4/S1/RWX-RDX B4P2.3/COM3/DCX A3P2.5/S2/ECLOCK-WRX A4P2.6/S19/TE D1"
+      },
+      {
+        "path": "Gerbers/EIT_BOM.xls",
+        "bytes": 39424
+      },
+      {
+        "path": "Spectra.PDF",
+        "bytes": 1139263,
+        "pdf_pages": 11,
+        "text_characters": 23727,
+        "text_excerpt": "A\nB\nC\nD\nE\nA\nB\nC\nD\nE\n1 2 3 4 5 6\nDate: 11/21/2017 4:48:02 PM Sheet: 1\nREV:\nTITLE:\nDocument Number:\nEIT\nGND\nGND\nGND\nGND\nGND\nGND\nGND\nGND\nAFE7\nAFE8\nRESETX\nHF_XTAL1\nHF_XTAL2\nLF_XTAL1\nLF_XTAL2\nVCC_ANA\nVCC_DIG\nVCC_ANA\nAVDD_RX/AVDD_TXR4\nDVDDK1\nVLCDVDDD2\nV_LCD_13C2\nV_LCD_23B1\nVLCD_FLY1E2\nVLCD_FLY2F2\nVDD_IOH15\nVCCM_DIGH6\nVCCM_ANAP4\nVBACKM1\nVBIASP10\nVBUSG2\nVUSBE1\nUSB_DMF1\nUSB_DPG1\nVREFR10\nREF_EXCITER12\nAN_AP12\nAN_BP13\nAN_CR13\nAN_DR14\nAFE_1R6\nAFE_2P6\nAFE_3R7\nAFE_4P7\nAFE_5R8\nAFE_6P8\nAFE_7R9\nAFE_8P9\nP3.9/S30F9\nTRACE0 M14\nTRACE1 N15\nTRACE2 N14\nTRACE3 P15\nTRACECLK M15\nHF_XTAL1 D1\nHF_XTAL2 C1\nLF_XTAL1 P1\nLF_XTAL2 N1\nBOOT N2\nRCAL_1 P5\nRCAL_2 R5\nTIA_I P11\nTIA_O R11\nTRST R15\nRESETX K8\nAGND_CTOUCH P14\nAGND_REF K10\nAGND_RX/AGND_TX K9\nDGND2/LCD_GND F7\nDGND_USB F6\nDGND1 G6\nDGND H14\nDNC A1\nU3A\nADUCM350\nC7\n0.47UF\nC8\n0.47UF\nC10\n0.47UF\nC9\n0.1UF\nTIA_I\nTIA_O\nVBIAS_1\nR5\n1K\nC6\n0.47UF\nC11\n4.7UFREF_EXCITE\nAN_A\nPIC601PIC602\nCOC6\nPIC701PIC702\nCOC7\nPIC801PIC802\nCOC8\nPIC901PIC902\nCOC9 PIC1001PIC1002\nCOC10\nPIC1101PIC1102\nCOC11\nPIR501PIR502\nCOR5\nPIU30A1\nPIU30B1\nPIU30C1\nPIU30C2\nPIU30D1\nPIU30D2\nPIU30E1\nPIU30E2\nPIU30F1\nPIU30F2\nPIU30F6\nPIU30F7\nPIU30F9\nPIU30G1\nPIU30G2\nPIU30G6\nPIU30H6\nPIU30H14\nPIU30H15\nPIU30K1\nPIU30K8\nPIU30K9\nPIU30K10\nPIU30M1\nPIU30M14\nPIU30M15\nPIU30N1\nPIU30N2\nPIU30N14\nPIU30N15\nPIU30P1\nPIU30P4\nPIU30P5\nPIU30P6\nPIU30P7\nPIU30P8\nPIU30P9\nPIU30P10\nPIU30P11\nPIU30P12\nPIU30P13 PIU30P14\nPIU30P15\nPIU30R4\nPIU30R5\nPIU30R6\nPIU30R7\nPIU30R8\nPIU30R9\nPIU30R10\nPIU30R11\nPIU30R12\nPIU30R13\nPIU30R14\nPIU30R15\nCOU3A\nPIC601\nPIC701\nPIC801\nPIC901\nPIC1001\nPIC1101\nPIU30F6\nPIU30F7\nPIU30G6\nPIU30H14\nPIU30K10\nPIC602 PIU30R4\nPIC702 PIU30K1\nPIC1002 PIU30P10\nPOVBIAS01\nPIC1102 PIU30R10\nPIR501\nPIU30P5\nPIR502\nPIU30R5\nPIU30A1\nPIU30B1\nPIU30C1 POHF0XTAL2\nPIU30C2\nPIU30D1 POHF0XTAL1\nPIU30E1\nPIU30E2\nPIU30F1\nPIU30F2\nPIU30F9\nPIU30G1\nPIU30G2\nPIU30"
+      },
+      {
+        "path": "eagleaids/bom-ex.pdf",
+        "bytes": 693438,
+        "pdf_pages": 12,
+        "text_characters": 19352,
+        "text_excerpt": "BOM-EX \nv1.56 \n \n \nEnhanced Bill of Materials \n for Eagle \n \n  \n \n \nDocument Version 1.09 \n \nOctober 11, 2013 \n \n \n \n \n \n \n \n \n \nCopyright \u00a9 2010-2013, Robert E. Starr, Jr. \n \nhttp://www.bobstarr.net \n \nAtlanta, GA USA \n1 \nBOM-EX Part Management System \nIntroduction \nThis documentation describes the process of integrating BOM-EX as a new enhanced BOM management \nsystem for Cadsoft Eagle. The BOM-EX utility is an Eagle based ULP program derived from the original BOM \nsystem provided with Eagle. However, BOM-EX takes advantage of the new ATTRIBUTES feature available in \nEagle 5.0 for additional flexibility and greatly enhances the BOM system functionality. Note that BOM-EX also \nincludes options to generate part order upload files and edit part number attributes. Many suppliers allow \nuploading part order files to directly a website to automate the part ordering process and automatically pre-fill \npart order numbers. \n  \nThe BOM-EX package consists of several components and, like the original BOM system, requires a text \nformatted parts database file to fully implement a complete BOM management system. The details of the \ndatabase record structure are described in the next section of this document and should be followed carefully. \nThe database is not required to view a basic BOM, but the database is required to generate order uplo ad files \nand take advantage of the enhanced reporting and export features. The screenshots below show the basic \nBOM viewer interface with and without the database loaded.  \n \nFigure 1 - Viewer without database loaded \n \nFigure 2 - Viewer with database loaded \n \n2 \nBOM-EX Part Management System \nCreating a Parts Database File \nAlthough BOM-EX will show basic part information by default, a parts database text file is required to fully \nimplemen"
+      },
+      {
+        "path": "eagleaids/excellon.cam",
+        "bytes": 1478
+      },
+      {
+        "path": "eagleaids/gerb274x-4layer.cam",
+        "bytes": 10333
+      },
+      {
+        "path": "Gerbers/EIT.pdf",
+        "bytes": 79275,
+        "pdf_pages": 1,
+        "text_characters": 157,
+        "text_excerpt": "BLE\nUART\nTRACE\nD\nDOWNLOAD\nBATT\nPWRSUPPLY\nJ_RCAL\nUSBPWRPOWER\nRESET\n1\n*\nVDDIO_CONN\nENABLE_BLE_RESET\nBLE_PWR\n1\n1\n2\nJP1\nAFE\n* M_1\n* M_2\nU$1\nCR2\nCR\nU$2\nADP3333\nM1"
+      }
+    ]
+  },
+  {
+    "repo": "vyrjana/pyimpspec",
+    "commit": "c822717c7f1c942cb707c5bcd74d3ad034f8166c",
+    "files": [
+      {
+        "path": "tests/data.xlsx",
+        "bytes": 13276
+      }
+    ]
+  },
+  {
+    "repo": "Protocentral/protocentral_max30001",
+    "commit": "f7114c9406ffe2bdfbc66d45fa3b88225c88b3ec",
+    "files": [
+      {
+        "path": "hardware/pc_max30001_brk_v1.0.brd",
+        "bytes": 378522,
+        "format": "XML",
+        "part_count": 0,
+        "element_count": 40,
+        "sheet_count": 0,
+        "part_values": []
+      },
+      {
+        "path": "hardware/pc_max30001_brk_v1.0.sch",
+        "bytes": 1210510,
+        "format": "XML",
+        "part_count": 71,
+        "element_count": 0,
+        "sheet_count": 1,
+        "part_values": [
+          {
+            "name": "FRAME2",
+            "value": null,
+            "deviceset": "A4L-LOC"
+          },
+          {
+            "name": "GND6",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "C12",
+            "value": "10uF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C13",
+            "value": "1nF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "GND7",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND8",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "C14",
+            "value": "1uF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C15",
+            "value": "10uF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C16",
+            "value": "10uF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C17",
+            "value": "1uF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "U2",
+            "value": "TXB0108PWR",
+            "deviceset": "TXB0108PWR"
+          },
+          {
+            "name": "GND25",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "C18",
+            "value": "100n",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "GND28",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "C19",
+            "value": "100n",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "GND30",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "R1",
+            "value": "0R",
+            "deviceset": "RESISTOR"
+          },
+          {
+            "name": "R2",
+            "value": "10K",
+            "deviceset": "RESISTOR"
+          },
+          {
+            "name": "GND31",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND32",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND34",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "C20",
+            "value": "1uF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C21",
+            "value": "1uF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "GND35",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "U4",
+            "value": "AP2112K-1.8V",
+            "deviceset": "V_REG_LDO"
+          },
+          {
+            "name": "SV1",
+            "value": null,
+            "deviceset": "MA10-1"
+          },
+          {
+            "name": "VDD4",
+            "value": null,
+            "deviceset": "VDD"
+          },
+          {
+            "name": "VDD5",
+            "value": null,
+            "deviceset": "VDD"
+          },
+          {
+            "name": "GND9",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "R4",
+            "value": "51K",
+            "deviceset": "RESISTOR"
+          },
+          {
+            "name": "R5",
+            "value": "51K",
+            "deviceset": "RESISTOR"
+          },
+          {
+            "name": "C22",
+            "value": "47pF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C23",
+            "value": "47pF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C24",
+            "value": "DNP",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "GND10",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "JP3",
+            "value": null,
+            "deviceset": "AUDIO-JACK"
+          },
+          {
+            "name": "C25",
+            "value": "10uF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C26",
+            "value": "1uF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C27",
+            "value": "10uF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "GND13",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "U$3",
+            "value": null,
+            "deviceset": "PROTY-LOGO"
+          },
+          {
+            "name": "R3",
+            "value": "10K",
+            "deviceset": "RESISTOR"
+          },
+          {
+            "name": "U$4",
+            "value": null,
+            "deviceset": "PROTY_LOGO_WITH_TEXT"
+          },
+          {
+            "name": "U$6",
+            "value": null,
+            "deviceset": "OSHW-LOGO"
+          },
+          {
+            "name": "U$7",
+            "value": null,
+            "deviceset": "CERT"
+          },
+          {
+            "name": "VDD6",
+            "value": null,
+            "deviceset": "VDD"
+          },
+          {
+            "name": "VDD7",
+            "value": null,
+            "deviceset": "VDD"
+          },
+          {
+            "name": "U$1",
+            "value": null,
+            "deviceset": "MAX30001CWV+"
+          },
+          {
+            "name": "C1",
+            "value": "47nF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C2",
+            "value": "47nF",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C3",
+            "value": "DNP",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C4",
+            "value": "DNP",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "C5",
+            "value": "DNP",
+            "deviceset": "C-EU"
+          },
+          {
+            "name": "R7",
+            "value": "0R",
+            "deviceset": "RESISTOR"
+          },
+          {
+            "name": "R8",
+            "value": "0R",
+            "deviceset": "RESISTOR"
+          },
+          {
+            "name": "R9",
+            "value": "DNP",
+            "deviceset": "RESISTOR"
+          },
+          {
+            "name": "GND1",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "U$29",
+            "value": null,
+            "deviceset": "SIT1533"
+          },
+          {
+            "name": "C6",
+            "value": "1uF",
+            "deviceset": "CAP_CERAMIC"
+          },
+          {
+            "name": "U$30",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "U$31",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "U$12",
+            "value": null,
+            "deviceset": "+1.8V"
+          },
+          {
+            "name": "U$2",
+            "value": null,
+            "deviceset": "+1.8V"
+          },
+          {
+            "name": "U$5",
+            "value": null,
+            "deviceset": "+1.8V"
+          },
+          {
+            "name": "U$8",
+            "value": null,
+            "deviceset": "+1.8V"
+          },
+          {
+            "name": "U$9",
+            "value": null,
+            "deviceset": "+1.8V"
+          },
+          {
+            "name": "U$10",
+            "value": null,
+            "deviceset": "+1.8V"
+          },
+          {
+            "name": "U$11",
+            "value": null,
+            "deviceset": "+1.8V"
+          },
+          {
+            "name": "GND2",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND3",
+            "value": null,
+            "deviceset": "GND"
+          },
+          {
+            "name": "GND4",
+            "value": null,
+            "deviceset": "GND"
+          }
+        ]
+      },
+      {
+        "path": "hardware/pc_max30001_brk_v1.0_schematic.pdf",
+        "bytes": 55385,
+        "pdf_pages": 1,
+        "text_characters": 1189,
+        "text_excerpt": "1.2-3.6V 1.65-5.5V\nGND 10uF\n1nF\nGND\nGND\n1uF\n10uF\n10uF\n1uF\nTXB0108PWR\nGND\n100n\nGND\n100n\nGND\n0R\n10K\nGND\nGND\nGND\n1uF\n1uF GND AP2112K-1.8V\nVDD\nVDD\nGND\n51K\n51K\n47pF\n47pF\nDNP\nGND\n10uF1uF\n10uF\nGND10K\nVDD\nVDD\nMAX30001CWV+\n47nF\n47nF\nDNP\nDNP\nDNP\n0R 0R\nDNP\nGND\nSIT1533\nGND\nGND\n+1.8V\n+1.8V\n+1.8V\n+1.8V\n+1.8V\n+1.8V\n+1.8V\nGND\nGND\nGND\nC12\nC13\nC14\nC15\nC16\nC17\nVCCA2\nA11\nA23\nA34\nA45\nA56\nA67\nA78\nA89\nGND 11\nVCCB19\nB1 20\nB2 18\nB3 17\nB4 16\nB5 15\nB6 14\nB7 13\nB8 12\nOE10\nU2\nC18\nC19\nR1\nR2\nC20\nC21\nIN\nGND\nOUT\nEN BP\nU4\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nSV1\nR4\nR5\nC22\nC23\nC24\nJP3\nC25 C26\nC27\nR3\nDRVPA1\nDRVNA2\nBINA3\nBIPA4\nINPA5\nINNA6\nVBG B1\nRBIASB2\nAGND B3\nAGND B4\nCAPNB5 CAPPB6\nVCM C1\nAOUTC2\nAGND C3\nAGND C4\nDGNDC5\nCPLLC6\nVREFD1\nINTB D2\nOVDD D3\nAGND D4\nFCLKD5\nDVDDD6 AVDD E1\nINT2B E2\nSDO E3\nSDI E4\nSCLK E5\nCSB E6\nU$1\nC1\nC2\nC3\nC4\nC5\nR7\nR8\nR9\nNC1\nGND2 CLK 3VDD 4\nU$29\nECGP\nECGN\nFCLK\nFCLK\nMISO\nMISO\nMOSI\nMOSI\nSCLK\nSCLK\nCSB\nCSB\nINTB\nINTB\nINT2B\nINT2B\nVCM\nVCM\nCSB_OUT\nCSB_OUT\nMOSI_OUT\nMOSI_OUT\nSCLK_OUT\nSCLK_OUT\nMISO_OUT\nMISO_OUT\nINTB_OUT\nINTB_OUT\nINT2B_OUT\nINT2B_OUT\nECGN1\nECGN1\nECGN1\nECGP1\nECGP1\nECGP1\nPACE_OUT\nPACE_OUT\nPACE_OUT1\nPACE_OUT1\nSheet:\nA\nB\nC\nD\n1 2 3 4 5 6\nA\nB\nC\nD\n1 2 3 4 5 6\npc_max30001_brk_v1.0\n11-10-2022 18:56\n1/1\nL\nR"
+      }
+    ]
+  },
+  {
+    "repo": "openebi/hardware",
+    "commit": "eea2bfcff9cc57593f408999d6d2caf6c62d8968",
+    "files": [
+      {
+        "path": "exports/schematics.pdf",
+        "bytes": 79970,
+        "pdf_pages": 2,
+        "text_characters": 1,
+        "text_excerpt": "\n"
+      },
+      {
+        "path": "openebi.brd",
+        "bytes": 46781,
+        "format": "not parsed as XML; legacy/binary CAD possible"
+      },
+      {
+        "path": "openebi.cam",
+        "bytes": 10443
+      },
+      {
+        "path": "openebi.sch",
+        "bytes": 300447,
+        "format": "not parsed as XML; legacy/binary CAD possible"
+      },
+      {
+        "path": "exports/assembly-bottom.pdf",
+        "bytes": 2559,
+        "pdf_pages": 1,
+        "text_characters": 0,
+        "text_excerpt": ""
+      },
+      {
+        "path": "exports/assembly-top.pdf",
+        "bytes": 20357,
+        "pdf_pages": 1,
+        "text_characters": 0,
+        "text_excerpt": ""
+      }
+    ]
+  }
+]

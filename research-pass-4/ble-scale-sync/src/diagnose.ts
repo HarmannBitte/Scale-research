@@ -1,0 +1,315 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { loadBleConfig } from './config/load.js';
+import { createLogger } from './logger.js';
+import { sleep, withTimeout, errMsg } from './ble/types.js';
+import { rethrowAsTransportError } from './ble/transport-availability.js';
+import { safeName } from './ble/advertisement.js';
+import { waitForPoweredOn } from './ble/handler-noble-shared/state.js';
+import type { NobleApi } from './ble/handler-noble-shared/types.js';
+import { parseMfgData } from './ble/handler-noble-shared/peripheral.js';
+import { parseQnBroadcast } from './scales/qn-scale/broadcast.js';
+import type { HandlerKey } from './ble/transport-availability.js';
+import { diagnoseMacArg, toolConfigArg } from './cli-run-args.js';
+
+const log = createLogger('Diagnose');
+
+/**
+ * diagnose is the tool people run precisely when BLE is broken, so a missing
+ * optional stack must name itself here too, not only in the handler switch.
+ */
+async function loadNoble(driver: string): Promise<any> {
+  const key: HandlerKey = driver === 'stoprocent' ? 'noble' : 'noble-legacy';
+  try {
+    return driver === 'stoprocent'
+      ? (await import('@stoprocent/noble')).default
+      : (await import('@abandonware/noble')).default;
+  } catch (err) {
+    rethrowAsTransportError(key, err);
+  }
+}
+
+function hex(buf: Buffer | undefined): string {
+  if (!buf || buf.length === 0) return '(none)';
+  return buf.toString('hex').toUpperCase().match(/.{2}/g)!.join(' ');
+}
+
+function normalizeAddr(addr: string): string {
+  return addr.replace(/[:-]/g, '').toUpperCase();
+}
+
+function resolveDriver(configured?: string): string {
+  if (configured === 'abandonware' || configured === 'stoprocent') return configured;
+  return process.platform === 'darwin' ? 'stoprocent' : 'abandonware';
+}
+
+async function main(): Promise<void> {
+  // The config.yaml the app would run with, --config included, read with the
+  // same defaults, ${VAR} references and validation for the ble section (G-05).
+  const arg = toolConfigArg(process.argv.slice(2));
+  if (arg.kind === 'error') throw new Error(arg.message);
+  const bleConfig = loadBleConfig(arg.config);
+  // A leading dash is a flag, never a MAC: `diagnose --config x.yaml` used to
+  // scan forever for a device called "--CONFIG".
+  const positional = diagnoseMacArg(process.argv.slice(2));
+  const scaleMac = (positional ?? bleConfig.scaleMac)?.toUpperCase();
+
+  // This tool drives a local radio through Noble directly, on purpose: it
+  // exists to answer "is Bluetooth on THIS host working", which a proxy
+  // transport cannot answer for it. On a proxy-only setup the Noble import is
+  // the first thing to fail, and it fails as a node-gyp "No native build was
+  // found" error that reads like a broken install rather than a tool being
+  // pointed at the wrong thing (#376). Say which it is.
+  const PROXY_HANDLERS = ['mqtt-proxy', 'esphome-proxy', 'ha-bluetooth'];
+  const forceNative = process.argv.includes('--native');
+  if (bleConfig.bleHandler && PROXY_HANDLERS.includes(bleConfig.bleHandler) && !forceNative) {
+    log.info('BLE Diagnostic Tool');
+    log.info('');
+    log.info(`Configured transport: ${bleConfig.bleHandler}`);
+    log.info('');
+    log.info('This tool tests the local Bluetooth radio through Noble, and your');
+    log.info('config routes BLE through a proxy instead, so there is nothing here');
+    log.info('for it to check. `start` and `scan` both use the configured');
+    log.info('transport and are the right tools for a proxy setup.');
+    log.info('');
+    log.info("To test this host's own radio anyway, pass --native.");
+    return;
+  }
+
+  if (bleConfig.nobleDriver) {
+    process.env.NOBLE_DRIVER = bleConfig.nobleDriver;
+  }
+
+  const driver = resolveDriver(bleConfig.nobleDriver);
+  const driverLabel = driver === 'abandonware' ? '@abandonware/noble' : '@stoprocent/noble';
+
+  log.info('BLE Diagnostic Tool\n');
+  log.info(`Platform:     ${process.platform} (${process.arch})`);
+  log.info(`Noble driver: ${driverLabel}`);
+  if (bleConfig.bleAdapter) {
+    log.info(`BLE adapter:  ${bleConfig.bleAdapter} (note: diagnose uses Noble, not node-ble)`);
+  }
+  if (scaleMac) {
+    log.info(`Target MAC:   ${scaleMac}`);
+  } else {
+    log.info('Target MAC:   (none)');
+    log.info('');
+    log.info('Tip: ble-scale-sync diagnose MAC_ADDRESS');
+    log.info('  (from a git checkout: npm run diagnose -- MAC_ADDRESS)');
+    log.info('  or set scale_mac in config.yaml');
+  }
+  log.info('');
+
+  const noble = await loadNoble(driver);
+
+  // The shared one, not a copy: the copy that lived here was missing the
+  // btmgmt reset retry, so `npm run diagnose` failed with "adapter not
+  // poweredOn" on exactly the adapter state a normal run recovers from (#406).
+  //
+  // Two consequences worth knowing while reading the output: the wait is
+  // announced here because the shared function only logs at debug level, and a
+  // stuck adapter is power-cycled with btmgmt, which briefly disturbs other BLE
+  // clients on this host. Both match what a normal run does.
+  if (((noble.state ?? noble._state) as string) !== 'poweredOn') {
+    log.info('Waiting for the Bluetooth adapter (resetting it if it stays down)...');
+  }
+  await waitForPoweredOn(
+    noble as NobleApi,
+    () => (noble.state ?? noble._state ?? 'unknown') as string,
+  );
+  log.info('Bluetooth adapter: ready\n');
+
+  // ─── Phase 1: Scan ────────────────────────────────────────────────────────
+
+  log.info('Phase 1: Scanning (15 seconds)');
+  log.info('Step on the scale to wake it up.\n');
+
+  const seen = new Set<string>();
+  let targetPeripheral: any = null;
+  let targetConnectable = false;
+
+  const onDiscover = (peripheral: any): void => {
+    const rawAddr =
+      peripheral.address && !['', 'unknown', '<unknown>'].includes(peripheral.address)
+        ? peripheral.address.toUpperCase()
+        : peripheral.id;
+    const addr = normalizeAddr(rawAddr);
+    if (seen.has(addr)) return;
+    seen.add(addr);
+
+    const adv = peripheral.advertisement ?? {};
+    const name: string = adv.localName ?? '';
+    const rssi: number = peripheral.rssi ?? 0;
+    const connectable: boolean = peripheral.connectable ?? false;
+    const addrType: string = peripheral.addressType ?? '?';
+    const svcUuids: string[] = (adv.serviceUuids ?? []).map((u: string) => u.toUpperCase());
+    const mfgData: Buffer | undefined = adv.manufacturerData;
+    const svcData: Array<{ uuid: string; data: Buffer }> = adv.serviceData ?? [];
+
+    const isTarget = scaleMac ? normalizeAddr(scaleMac) === addr : false;
+    const marker = isTarget ? ' <<<' : '';
+
+    log.info(
+      `  ${rawAddr}  ${safeName(name) || '(no name)'}  RSSI=${rssi}  ` +
+        `${connectable ? 'connectable' : 'broadcast-only'}  type=${addrType}${marker}`,
+    );
+    if (svcUuids.length > 0) {
+      log.info(`    Service UUIDs: ${svcUuids.join(', ')}`);
+    }
+    if (mfgData && mfgData.length > 0) {
+      log.info(`    Manufacturer data: ${hex(mfgData)}`);
+
+      // QN broadcast weight, through the SAME decoder the read path uses.
+      //
+      // This block used to re-implement it and got it wrong: the production
+      // path is handed manufacturer data with the 2-byte company id already
+      // stripped, so its offsets are relative to that. This copy read the RAW
+      // buffer, correctly shifted the AABB magic to [2..3] and then read the
+      // status byte and the weight at the UNSHIFTED offsets, so the two
+      // disagreed by two bytes on every field but the header. This is the tool
+      // people are told to run when something is wrong (#406).
+      const parsed = parseMfgData(mfgData);
+      const qn = parsed ? parseQnBroadcast(parsed.data) : null;
+      if (qn) {
+        log.info(`    QN broadcast: ${qn.weight.toFixed(2)} kg (stable)`);
+      } else if (
+        parsed &&
+        parsed.data.length >= 2 &&
+        parsed.data[0] === 0xaa &&
+        parsed.data[1] === 0xbb
+      ) {
+        // The magic matches but the decoder refused the payload. Deliberately
+        // not called "measuring": that is only one of the reasons, the others
+        // being a payload shorter than 19 bytes or a zero weight, and this tool
+        // exists to show what is there rather than to guess.
+        log.info(
+          `    QN broadcast: AABB payload (${parsed.data.length}B) with no stable weight in it`,
+        );
+      }
+    }
+    for (const sd of svcData) {
+      log.info(`    Service data [${sd.uuid.toUpperCase()}]: ${hex(sd.data)}`);
+    }
+
+    if (isTarget) {
+      targetPeripheral = peripheral;
+      targetConnectable = connectable;
+    }
+  };
+
+  noble.on('discover', onDiscover);
+  await noble.startScanningAsync([], true);
+  await sleep(15_000);
+  noble.removeListener('discover', onDiscover);
+  try {
+    await noble.stopScanningAsync();
+  } catch {
+    /* ignore */
+  }
+
+  log.info(`\nScan complete. Found ${seen.size} device(s).\n`);
+
+  // ─── Phase 2: Connect ─────────────────────────────────────────────────────
+
+  if (!scaleMac) {
+    log.info('Set scale_mac or pass MAC as argument to test GATT connection.');
+    process.exit(0);
+  }
+
+  if (!targetPeripheral) {
+    log.error(`Target device ${scaleMac} was NOT found during scan.`);
+    log.info('Make sure the scale is awake (step on it right before scanning).');
+    process.exit(1);
+  }
+
+  log.info('Phase 2: GATT Connection\n');
+
+  if (!targetConnectable) {
+    log.warn('Device is advertising as broadcast-only (non-connectable).');
+    log.warn('GATT connections will fail. Attempting anyway...\n');
+  }
+
+  log.info(`Connecting to ${scaleMac}...`);
+
+  try {
+    await withTimeout(targetPeripheral.connectAsync(), 30_000, 'Connection timed out (30s)');
+  } catch (err: unknown) {
+    log.error(`Connection FAILED: ${errMsg(err)}\n`);
+
+    if (!targetConnectable) {
+      log.info('The device advertised as broadcast-only (ADV_NONCONN_IND).');
+      log.info('No BLE stack can connect to a non-connectable device.\n');
+      log.info('This usually means:');
+      log.info('  1. The scale is bonded to a phone and switched to passive broadcast mode');
+      log.info('     Factory reset the scale (pinhole button or remove batteries for 5+ min)');
+      log.info('     Then test BEFORE opening any scale app on any device');
+      log.info('  2. The scale firmware only broadcasts data in advertisements');
+      log.info('     If QN broadcast (AABB) data was shown above, ble-scale-sync can read');
+      log.info('     weight from advertisements automatically (no connection needed)');
+      log.info('     Body composition will use BMI-based estimation (no impedance in broadcast)');
+    } else {
+      log.info('Possible causes:');
+      log.info('  1. Scale is bonded to another phone/tablet');
+      log.info('     On ALL phones: Settings > Bluetooth > find scale > Forget/Unpair');
+      log.info('  2. ESPHome BT Proxy is occupying a connection slot');
+      log.info('     Temporarily disable ESPHome BT proxies');
+      log.info('  3. BLE adapter/driver issue');
+      log.info('     Update Bluetooth drivers or try a different adapter');
+    }
+
+    process.exit(1);
+  }
+
+  log.info('Connected!\n');
+
+  // ─── Phase 3: GATT Enumeration ────────────────────────────────────────────
+
+  log.info('Phase 3: GATT Services\n');
+  log.info('Discovering services...');
+
+  try {
+    const services: any[] = await withTimeout(
+      targetPeripheral.discoverServicesAsync(),
+      30_000,
+      'Service discovery timed out (30s)',
+    );
+
+    log.info(`Found ${services.length} service(s):\n`);
+
+    for (const svc of services) {
+      log.info(`  Service: 0x${svc.uuid.toUpperCase()}`);
+
+      try {
+        const chars: any[] = await withTimeout(
+          svc.discoverCharacteristicsAsync(),
+          15_000,
+          'Characteristic discovery timed out',
+        );
+
+        for (const char of chars) {
+          const props: string = char.properties?.join(', ') ?? '?';
+          log.info(`    Char: 0x${char.uuid.toUpperCase()}  [${props}]`);
+        }
+      } catch (charErr: unknown) {
+        log.warn(`    (characteristic discovery failed: ${errMsg(charErr)})`);
+      }
+    }
+  } catch (err: unknown) {
+    log.error(`Service discovery failed: ${errMsg(err)}`);
+  }
+
+  log.info('');
+
+  try {
+    await targetPeripheral.disconnectAsync();
+  } catch {
+    /* ignore */
+  }
+
+  log.info('Diagnostic complete. Share this output when reporting issues.');
+  process.exit(0);
+}
+
+main().catch((err: Error) => {
+  log.error(err.message);
+  process.exit(1);
+});

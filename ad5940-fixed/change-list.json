@@ -1,0 +1,17 @@
+{
+  "changed_or_added_source_files": [
+    "examples/AD5940_BIA/AD5940Main.c",
+    "examples/AD5940_BIA/ADICUP3029/AD5940_BIA.uvprojx",
+    "examples/AD5940_BIA/ADICUP3029/ADICUP3029Port.c",
+    "examples/AD5940_BIA/ADICUP3029/main.c",
+    "examples/AD5940_BIA/BenchLog.h",
+    "examples/AD5940_BIA/BenchLog.inc",
+    "examples/AD5940_BIA/BodyImpedance.c",
+    "examples/AD5940_BIA/BodyImpedance.h",
+    "examples/ad5940lib/ad5940.c",
+    "examples/ad5940lib/ad5940.h"
+  ],
+  "original_retained_files_verified": 22,
+  "patch_reproduction": "all delivered source files byte-identical",
+  "target_build": "not performed"
+}

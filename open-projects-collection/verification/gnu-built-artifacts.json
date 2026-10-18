@@ -1,0 +1,32 @@
+[
+  {
+    "program": "time-series-bioz-2wire",
+    "file": "time_series_bioz_2wire.elf",
+    "bytes": 880156,
+    "sha256": "f9ca73562a6c88fec1cf4eb1506c557ae1dcb606e1a0193f376fd4ddf6fed85a"
+  },
+  {
+    "program": "time-series-bioz",
+    "file": "time_series_bioz.elf",
+    "bytes": 903392,
+    "sha256": "b154577962853076f69aded3d7a7dee7348f2dfe999e1ef3292bf1c5dd924c1f"
+  },
+  {
+    "program": "measure-2wire-bioz",
+    "file": "measure_2wire_bioz.elf",
+    "bytes": 642096,
+    "sha256": "eea676453aecfa3314af81fed3799fc6de84bd5a323d435c8a8ae39b64ab43dc"
+  },
+  {
+    "program": "measure-4wire-bioz",
+    "file": "measure_4wire_bioz.elf",
+    "bytes": 676296,
+    "sha256": "a7a8b2d20b821720553984cdca7403fe74c20253009e7f8e5e4069cf5fd86ea7"
+  },
+  {
+    "program": "blink-led",
+    "file": "blink_led.elf",
+    "bytes": 70792,
+    "sha256": "07d044cc6dffaa77e137bc8da1f46fbd5fc872dd75e155da9bba37b666e6632d"
+  }
+]

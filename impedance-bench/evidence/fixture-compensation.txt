@@ -1,0 +1,55 @@
+Open/Short/Load Compensation
+Open/Short/Load Compensation
+Overview
+Defining Compensation Kit
+Open/Short/Load Compensation
+Other topics about Eliminating Error Factor of Fixture
+Overview
+The open/short/load compensation gives the same calibration result as the open/short/load calibration at the fixture. In the impedance measurement methods such as the Gain-phase series-thru method, which require the open/short/load calibration at the fixture, you can use the open/short/load compensation as an alternative method to the open/short/load calibration. Similarly to the open/short/load calibration at the fixture, you can use the SMD or leaded 50 Ω resistor as a load device.
+The difference from Impedance Calibration
+Open/Short/Load can be turn ON/OFF independently
+Definition of standard
+Method
+Standard Model
+Impedance Calibration
+Polynomial, Equivalent Circuit and Table
+Compensation
+Equivalent Circuit only
+In the fixture compensation, you can define the open Gs value by the Admittance.
+Defining Compensation Kit
+Press
+Cal
+>
+Fixture Compen
+>
+Compen STDs
+.
+Click the parameter which you want to define.
+Enter the value.
+Open/Short/Load Compensation
+Set the open state of the fixture.
+Press
+Cal
+>
+Fixture Compen
+>
+Compensate
+>
+Open
+.
+Set the short state of the fixture.
+Click
+Short
+.
+Set the load state of the fixture.
+Click
+Load
+.
+Click
+Done
+.
+Open/Short/Load compensations are turned ON automatically.
+Comp OSL
+is displayed at the
+Channel Window
+.

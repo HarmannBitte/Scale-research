@@ -1,0 +1,22 @@
+{
+  "name": "impedance-py-global-fit-isolated",
+  "command": [
+    "/home/user/.cache/open-projects/test-env/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "impedance/tests/test_fitting.py::test_circuit_fit",
+    "--disable-warnings"
+  ],
+  "timeout_seconds": 90,
+  "status": "timeout",
+  "exit_code": null,
+  "duration_seconds": 90.08612317999996,
+  "changed_from_initial_attempt": "single test isolated, BLAS/OMP thread caps set to 1",
+  "environment_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "MPLBACKEND": "Agg"
+  }
+}

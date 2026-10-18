@@ -1,0 +1,28 @@
+
+> ble-scale-sync@1.33.0 test
+> vitest run tests/scales/robi-s9.test.ts tests/scales/speediance.test.ts tests/scales/hutbit.test.ts tests/scales/renpho-morphoscan.test.ts tests/scales/body-comp-helpers.test.ts
+
+[33mTesting types with tsc and vue-tsc is an experimental feature.
+Breaking changes might not follow SemVer, please pin Vitest's version when using it.[39m
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.0.3 [39m[90m/home/user/research-pass-4/ble-scale-sync[39m
+
+ [32m✓[39m tests/scales/hutbit.test.ts [2m([22m[2m38 tests[22m[2m)[22m[33m 783[2mms[22m[39m
+   [32m✓[39m HutbitAdapter (#254) [2m(38)[22m
+     [32m✓[39m onConnected() handshake [2m(1)[22m
+       [33m[2m✓[22m[39m replays the captured 8-byte FFB1 handshake in order[33m 755[2mms[22m[39m
+ [32m✓[39m tests/scales/speediance.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 2422[2mms[22m[39m
+   [32m✓[39m SpeedianceAdapter [2m(9)[22m
+     [32m✓[39m onConnected() handshake [2m(1)[22m
+       [33m[2m✓[22m[39m replays the captured FFB1 handshake in order (16 frames, seq 00..06)[33m 2412[2mms[22m[39m
+ [32m✓[39m tests/scales/robi-s9.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 1669[2mms[22m[39m
+   [32m✓[39m RobiS9Adapter [2m(8)[22m
+     [32m✓[39m onConnected() handshake [2m(1)[22m
+       [33m[2m✓[22m[39m replays the captured FFB1 handshake in order (seq 00..0a)[33m 1660[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m55 passed[39m[22m[90m (55)[39m
+[2mType Errors [22m [2mno errors[22m
+[2m   Start at [22m 14:23:51
+[2m   Duration [22m 6.10s[2m (tests 85%, transform 10%, import 5%)[22m
+
