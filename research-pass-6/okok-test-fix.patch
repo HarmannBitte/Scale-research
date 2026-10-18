@@ -1,0 +1,9 @@
+--- a/tests/test_calculations.py
++++ b/tests/test_calculations.py
+@@ -25,5 +25,5 @@
+     
+ def test_classifications():
+     metrics = get_all_metrics(80, 175, 35, 'M', impedance=500)
+-    classes = get_classifications(metrics, 'M', 35)
++    classes = get_classifications(metrics, 'M', 35, 175)
+     assert classes["bmi"]["label"] == "Sobrepeso"
