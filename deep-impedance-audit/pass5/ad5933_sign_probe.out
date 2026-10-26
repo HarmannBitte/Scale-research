@@ -1,0 +1,6 @@
+positive +1000               raw=0x03E8  firmware=  1000  datasheet=  1000  ok
+negative -1000               raw=0xFC18  firmware= 64536  datasheet= -1000  WRONG
+negative -2                  raw=0xFFFE  firmware= 65534  datasheet=    -2  WRONG
+most negative -32768         raw=0x8000  firmware= 32768  datasheet=-32768  WRONG
+average of four -1000 readings: firmware=64536.0  datasheet=-1000.0
+I2C read failure             raw=0x1234  firmware=     0  datasheet=  4660  WRONG

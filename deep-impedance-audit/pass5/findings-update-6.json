@@ -1,0 +1,22 @@
+{
+  "generated": "2026-10-18",
+  "source_check": "Official MAX30001 datasheet Rev 3 (19-100133), pp. 57, 66-68; lib.cpp lines 405-439 (getBioZSample) and 1171-1213 (_max30001ReadBIOZFIFO)",
+  "updates": [
+    {
+      "id": "F31",
+      "status": "confirmed_against_datasheet_source_level",
+      "detail": "Streaming BioZ reader tests the valid tag at byte2 bits 5:3 (value 0) and the overflow tag at bits 5:3 (value 7). Datasheet BTAG is D[2:0] (000 valid, 111 overflow). The test reads BioZ data bits, not the tag. Hardware still untested; reachable only via max30001ServiceAllInterrupts."
+    },
+    {
+      "id": "F32",
+      "status": "confirmed_against_datasheet_source_level",
+      "detail": "Streaming reader masks byte2 with 0xC0, keeping D[23:22] only: 18 data bits (D[23:6]). Datasheet BioZ word is 20 bits in D[23:4]; D[5:4] are dropped. getBioZSample() masks 0xF0 and keeps D[23:4] (20 bits), so the new API is correct on this point."
+    },
+    {
+      "id": "F33",
+      "status": "unchanged",
+      "detail": "Datasheet p66 confirms ETAG 110 (empty) is not a valid sample. getBioZSample() and getECGSample() do not check tags. Not changed in this pass."
+    }
+  ],
+  "findings_json_edited": false
+}

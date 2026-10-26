@@ -1,0 +1,260 @@
+{
+  "sha": "343f427013f8f6401ded6c18af246e630110650c",
+  "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/trees/343f427013f8f6401ded6c18af246e630110650c",
+  "tree": [
+    {
+      "path": ".DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ac1280df76a5aedeacd4db06186f0133505b3d3",
+      "size": 14340,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/0ac1280df76a5aedeacd4db06186f0133505b3d3"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f4cb9feb8ddb3d293735b9327a7e3ecccefc267",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/trees/6f4cb9feb8ddb3d293735b9327a7e3ecccefc267"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e92a7ab503e7a17ffb34ff66f0167674b94812a",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/trees/1e92a7ab503e7a17ffb34ff66f0167674b94812a"
+    },
+    {
+      "path": ".github/workflows/compile-examples.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a3bf2effd20a5cc8dc45033bf7b79efb3681095",
+      "size": 6704,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/2a3bf2effd20a5cc8dc45033bf7b79efb3681095"
+    },
+    {
+      "path": ".github/workflows/main.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c8416d33d859fe96511b0848df78816fcc4e93d",
+      "size": 533,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/8c8416d33d859fe96511b0848df78816fcc4e93d"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "074f5003510c7bbc351b4d0cd680b5526e57a50a",
+      "size": 285,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/074f5003510c7bbc351b4d0cd680b5526e57a50a"
+    },
+    {
+      "path": ".vscode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "535bbbe66644870aaf2853ffaf1558875261a66a",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/trees/535bbbe66644870aaf2853ffaf1558875261a66a"
+    },
+    {
+      "path": ".vscode/arduino.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "133d2ab944583cb95144a952a3ba49b925376045",
+      "size": 187,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/133d2ab944583cb95144a952a3ba49b925376045"
+    },
+    {
+      "path": ".vscode/c_cpp_properties.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08fb666dc303700bf84ee7b6f08835c960fc207b",
+      "size": 23938,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/08fb666dc303700bf84ee7b6f08835c960fc207b"
+    },
+    {
+      "path": "LICENSE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33b6344f8479b7da6b994734975380424e4ac711",
+      "size": 2798,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/33b6344f8479b7da6b994734975380424e4ac711"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9e167a4105ddf131ed342370a2b66b2353f702e",
+      "size": 9876,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/a9e167a4105ddf131ed342370a2b66b2353f702e"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ea32b0fb60bee54974f4aeaf88e71b0622d6ac46",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/trees/ea32b0fb60bee54974f4aeaf88e71b0622d6ac46"
+    },
+    {
+      "path": "assets/body.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc80e2d9413b3d9501a5a1b34e35deabb170a2a7",
+      "size": 16944,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/cc80e2d9413b3d9501a5a1b34e35deabb170a2a7"
+    },
+    {
+      "path": "assets/max30001_brk.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "161f4aecb1a0c552cedc53d0937d37a2c1efb60b",
+      "size": 90848,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/161f4aecb1a0c552cedc53d0937d37a2c1efb60b"
+    },
+    {
+      "path": "assets/max30001_doc.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c19ef60c30e57aaf1d81cf972cdd964ca7da382",
+      "size": 4082106,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/6c19ef60c30e57aaf1d81cf972cdd964ca7da382"
+    },
+    {
+      "path": "compile_all_examples.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1042ff2a6cc6a2235a41e15c77b87596e20c6ffa",
+      "size": 2175,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/1042ff2a6cc6a2235a41e15c77b87596e20c6ffa"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "201b803e73d8ddcb1879c3a1906f9482f348dc2b",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/trees/201b803e73d8ddcb1879c3a1906f9482f348dc2b"
+    },
+    {
+      "path": "examples/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e463a5d14687ef30f27e2ff2acdc7596651d3be0",
+      "size": 10244,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/e463a5d14687ef30f27e2ff2acdc7596651d3be0"
+    },
+    {
+      "path": "examples/Example01_BasicECGBioZ",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "674522b5f5e0c81e0dfaf8ebf672596f744179c9",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/trees/674522b5f5e0c81e0dfaf8ebf672596f744179c9"
+    },
+    {
+      "path": "examples/Example01_BasicECGBioZ/Example01_BasicECGBioZ.ino",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52dd2d9fc9ab7a14bc45c369b2128e4fba4bfb71",
+      "size": 8045,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/52dd2d9fc9ab7a14bc45c369b2128e4fba4bfb71"
+    },
+    {
+      "path": "examples/Example02_RtoRDetection",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a0cc30dd2a350fa08c44c185decf872fdd8317c",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/trees/9a0cc30dd2a350fa08c44c185decf872fdd8317c"
+    },
+    {
+      "path": "examples/Example02_RtoRDetection/Example02_RtoRDetection.ino",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d2cae1a05a2e61830e31d067cb5480a2e38c9b4",
+      "size": 5989,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/8d2cae1a05a2e61830e31d067cb5480a2e38c9b4"
+    },
+    {
+      "path": "examples/Example03_LeadOff",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "447fcd3cd0c69cda3d87c8ab4a51248cc0bfe95f",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/trees/447fcd3cd0c69cda3d87c8ab4a51248cc0bfe95f"
+    },
+    {
+      "path": "examples/Example03_LeadOff/Example03_LeadOff.ino",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6c0efc61271233f952e9ce7a2d809457137e3ed",
+      "size": 6459,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/a6c0efc61271233f952e9ce7a2d809457137e3ed"
+    },
+    {
+      "path": "examples/Example04_InterruptDriven",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "65ec7d37ae0013b51aa1c14f0678775ccf3f4d80",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/trees/65ec7d37ae0013b51aa1c14f0678775ccf3f4d80"
+    },
+    {
+      "path": "examples/Example04_InterruptDriven/Example04_InterruptDriven.ino",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcb0a037c0b8488e2a4a9a63d81282f59798c989",
+      "size": 9320,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/fcb0a037c0b8488e2a4a9a63d81282f59798c989"
+    },
+    {
+      "path": "examples/Example05_AdvancedConfig",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7bd58af3647ede04bd827bddaf198c3d8204ac36",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/trees/7bd58af3647ede04bd827bddaf198c3d8204ac36"
+    },
+    {
+      "path": "examples/Example05_AdvancedConfig/Example05_AdvancedConfig.ino",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c10e0a0dfaa67e88891bb1296bdba1c4d398bd29",
+      "size": 8574,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/c10e0a0dfaa67e88891bb1296bdba1c4d398bd29"
+    },
+    {
+      "path": "library.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7a798b307c9497fed749567e61c1653c710636e",
+      "size": 722,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/a7a798b307c9497fed749567e61c1653c710636e"
+    },
+    {
+      "path": "license_mark.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "800cd99595569d568fdb8c8c054abd54ac41d803",
+      "size": 9032,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/800cd99595569d568fdb8c8c054abd54ac41d803"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7d86a7d783654fdec802ff45c28810f27d63960",
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/trees/b7d86a7d783654fdec802ff45c28810f27d63960"
+    },
+    {
+      "path": "src/protocentral_max30001.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5261dbef66d536aad9abfbea167a1d231786d0fc",
+      "size": 34576,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/5261dbef66d536aad9abfbea167a1d231786d0fc"
+    },
+    {
+      "path": "src/protocentral_max30001.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a0d7c4d709b624a9f1d9be39b15c23ba7b3606d",
+      "size": 21247,
+      "url": "https://api.github.com/repos/Protocentral/protocentral_max30001_arduino_library/git/blobs/1a0d7c4d709b624a9f1d9be39b15c23ba7b3606d"
+    }
+  ],
+  "truncated": false
+}

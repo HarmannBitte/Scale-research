@@ -1,0 +1,45 @@
+{
+  "generated": "2026-10-18 (pass 5c)",
+  "note": "Adds to findings-update.json. The original findings.json is unchanged.",
+  "updates": [
+    {
+      "id": "F21",
+      "change": "refined",
+      "claim_revised": "The BioZ value changes on every other frame because the producer holds the last value on skipped frames, matching the chip's 64 sps BioZ rate (CNFG_BIOZ RATE = 0 at FMSTR 32,768 Hz). The decoder's 128 sps label is the error.",
+      "severity": "Medium (decoder label; producer is intentional)"
+    },
+    {
+      "id": "F31",
+      "change": "new",
+      "repo": "Protocentral/protocentral_max30001_arduino_library",
+      "claim": "_max30001ReadBIOZFIFO uses ECG tag bits (etag = bits 5:3) on BioZ words, where bits 5:3 are data. Only words with bits 5:4 == 0 are kept (25% under uniform synthetic data). Reached only through max30001ServiceAllInterrupts / burst APIs, not the shipped examples.",
+      "levels": ["S", "A"],
+      "status": "Source-level; model in pass5/max30001_bioz_decode_model.py. Hardware untested.",
+      "severity": "High for the burst/interrupt API"
+    },
+    {
+      "id": "F32",
+      "change": "new",
+      "repo": "Protocentral/protocentral_max30001_arduino_library",
+      "claim": "Streaming BioZ decode returns values 16x the scale of the new API getBioZSample() (18 bits at 24-bit scale vs 20-bit value). Conversion constants are not interchangeable.",
+      "levels": ["S", "A"],
+      "status": "Source plus arithmetic (median ratio 16.0 in model).",
+      "severity": "Medium-High for users mixing APIs"
+    },
+    {
+      "id": "F33",
+      "change": "new",
+      "repo": "Protocentral/protocentral_max30001_arduino_library",
+      "claim": "getECGSample() and getBioZSample() read the FIFO on every call, set sample_valid = true unconditionally, and do not check readiness or ETAG/BTAG. Shipped Example01 uses this path each loop.",
+      "levels": ["S"],
+      "status": "Source-level. Effect on hardware not measured.",
+      "severity": "Medium"
+    }
+  ],
+  "open_items_after_pass5c": [
+    "F31/F33: confirm the BioZ word layout (D[3]) and tag handling against the full MAX30001 register section",
+    "F32: decide which scale is authoritative before any conversion is written",
+    "F20: maintainer question (not authorised)",
+    "Hardware: FIFO empty/ready behaviour, BioZ rate, and decode scale (bench, not authorised)"
+  ]
+}

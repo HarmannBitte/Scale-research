@@ -1,0 +1,34 @@
+{
+  "generated": "2026-10-18 (pass 5e)",
+  "note": "Adds to the pass 5 update files. The original findings.json is unchanged. Source: MAX30001 datasheet pages 57, 67 and 68 via the alldatasheet.com mirror (third-party text).",
+  "updates": [
+    {
+      "id": "F21",
+      "change": "confirmed on datasheet",
+      "status": "CNFG_BIOZ D[23] BIOZ_RATE = 0 gives 64 sps at fMSTR 32,768 Hz (page 57, Table 38). The OpenView 128 sps label is wrong. The producer's every-other-frame hold matches the chip."
+    },
+    {
+      "id": "F31",
+      "change": "precise",
+      "status": "Streaming BioZ decoder reads ETAG from D[5:3] (data bits). It keeps only BTAG 000 and drops valid time-step samples 001, 010 and 011. Overflow (111) is never detected on this path. Page 67 Table 50 is the reference.",
+      "severity": "High for the burst/interrupt API"
+    },
+    {
+      "id": "F33",
+      "change": "strengthened by datasheet",
+      "status": "Page 67: BTAG 110 = FIFO empty, discard without incrementing time base. getBioZSample() and getECGSample() store every word as valid, so empty words become samples. Matches the Nordic report (0x000037 read as zero).",
+      "severity": "Medium-High (shipped example path)"
+    },
+    {
+      "id": "BIOZ-FIFO-DEPTH",
+      "change": "new fact",
+      "status": "MAX30001 BioZ FIFO is 8 words x 24 bits (page 67). At 64 sps that is about 125 ms of buffer. Design risk for loops that stall; not measured."
+    }
+  ],
+  "open_items_after_pass5e": [
+    "ECG FIFO tag table (ETAG) page: read in full before relying on the ECG empty-tag mapping",
+    "Confirm datasheet text against the official PDF (mirror only so far)",
+    "F34/F35: bench (not authorised)",
+    "F20: maintainer question (not authorised)"
+  ]
+}

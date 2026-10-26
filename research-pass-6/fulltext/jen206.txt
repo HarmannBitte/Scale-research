@@ -1,0 +1,392 @@
+ 
+2025, Volume 8 (Issue 1): 17  Journal of Exercise and Nutrition 
+ 
+ 
+ 
+ 
+Agreement Between Six Bioelectrical 
+Impedance Analysis Devices and Dual-
+Energy X-Ray Absorptiometry   
+Original Research 
+Gena L. Irwin1*, Ariel J. Aguiar Bonfim Cruz 2*, Alexa J. Chandler  2, 
+C.J. Brush2,3, Ann F. Brown2 
+ 
+1University of Illinois, Urbana -Champaign, Department of Health and Kinesiology , Urbana, 
+Illinois/United States of America; 2University of Idaho, Department of Movement Sciences , 
+Moscow, Idaho/United States of America; 3Auburn University, School of Kinesiology, Auburn, 
+Alabama/United States of America *Co- first authors 
+ 
+Abstract 
+Introduction: Bioelectrical impedance analysis (BIA) is a low-cost, accessible method 
+to assess percent body fat (%BF). Rising recognition of the role of body composition 
+in overall health and disease prevention has led to an increased usage of at-home BIA 
+devices. The purpose of this study was to assess the level of agreement  between six 
+BIA devices and dual-energy x-ray absorptiometry (DXA). 
+Methods: Male (n=42) and female (n=35) participants completed body composition 
+testing on six different BIA device s and a DXA scan Agreement was assessed using 
+intraclass correlation coefficients (ICC) with 95% confidence intervals, Spearman’s 
+correlations, and Bland-Altman analyses to determine limits of agreement  (LoA) for 
+%BF.  
+Results: Four BIA devices demonstrated moderate reliability (ICC: 0.66 -0.73) and  
+two devices demonstrated poor reliability (ICC: 0.25 and 0.43). The most favorable 
+agreement profile from a BIA device was a mean bias of -2.21% and relatively narrow 
+LoA (-9.88% - 5.46%). The least favorable agreement profile from a BIA device was 
+a mean bias of 2.88% and LoA of –10.25% –16.01%.  
+Conclusions: The present study indicated that multi -frequency BIA devices 
+outperformed single-frequency BIA devices, and that the Omron had the highest LoA 
+with DXA. 
+ 
+Key Words: Body composition assessment, body fat percentage 
+ 
+Corresponding author: Ann F. Brown, afbrown@uidaho.edu  
+ 
+Introduction 
+Since 1980, overweight and obesity rates in the United States have continued to rise, 
+with the Centers for Disease Control and Prevention estimates indicating that 73.6% 
+of Americans are overweight or obese  1. Obesity , defined as a body mass index 
+(BMI) ≥30kg/m2 or percent body fat (%BF) of ≥30% in women and ≥25% in men 
+2, is strongly associated with numerous comorbidities, including cardiometabolic 
+diseases, certain cancers, and increased risk of all-cause mortality 3. Therefore, identifying obesity and monitoring %BF 
+is essential to mitigate health risks. Numerous validated body composition methods can be used to determine %BF, 
+such as underwater weighing, skinfolds, air -displacement plethysmography, and dual energy X -ray absorptiometry 
+(DXA) 4.  
+ 
+DXA is commonly used in research and has been indicated as a reliable and valid measure to assess body composition 
+5,6. DXA utilizes two low -dose X-ray beams sent through the body, creating a three -compartment model including 
+bone mineral content, lean mass (LM), and %BF 5. Prior research has used DXA to quantify regional and whole-body 
+ 
+ 
+Published: September 
+9, 2025 
+ 
+ 
+Copyright, 2025 by the 
+authors. Published by 
+Pinnacle Science  and 
+the work is licensed 
+under the Creative 
+Commons Attribution 
+4.0 International 
+License. To view a copy 
+of this  license, visit 
+http://creativecommons
+.org/licenses/by/4.0/ 
+ 
+Journal of Exercise and 
+Nutrition: 2025, Volume 
+8 (Issue 1): 17 
+ 
+ 
+ISSN: 2640-2572 
+Open Access 
+ 
+Journal of Exercise and Nutrition 2 
+adiposity and longitudinal body composition changes, and its precision and reproducibility make it a preferred method 
+for monitoring body composition changes in interventions and epidemiological studies 7,8. However, DXA is often 
+inaccessible and costly to the consumer and relies on specialized staff and facilities, and thus may not be a good, reliable 
+method for the average consu mer to assess body composition 4. Consequently, more convenient and accessible 
+methods, such as bioelectrical impedance analysis (BIA), may be an affordable, non-invasive, and user-friendly method 
+for the average consumer to assess body composition at  home 9. Traditiona l BIA devices use a single frequency 
+electrical current and utilize a two-compartment model, separating total body mass into BF and fat-free mass 10. Recent 
+developments in BIA research have improved raw impedance algorithms by deriving data from large and diverse 
+populations to improve the accuracy of BIA assessments 11. The accuracy of BIA devices can be affected by both user-
+related factors and device -specific factors. User-related factors that may contribute to variability or reduced accuracy 
+include recent fluid or nutrient intake, recent physical activity , alcohol or caffein e intake, and the time of day  of 
+assessment 12,13. Device-specific factors may consist of the type of BIA device used  (e.g., segmental vs. single-point), 
+electrode placement, limb positioning  during evaluation, and  the reference values embedded within each device ’s 
+algorithm, which is often proprietary information 11.  
+ 
+Several studies have examined how %BF assessed via BIA compares with other body composition methods, including 
+air displacement plethysmography , hydrostatic weighing, skinfolds , and DXA ; h owever, the findings have been  
+equivocal 14–16. Previously targeted toward the research sector, BIA devices have recently gained popularity among 
+consumers through the widespread availability of at -home BIA devices. In 2022, BIA devices emerged as a leading 
+product category, accounting for over 21.5% of total market revenue 17. While consumer BIA devices are a cost -
+effective and accessible solution, the accuracy of consumer and research -grade BIA devices compared to  standard 
+body composition methods , such as DXA, is unknown. Although prior studies have examined the accuracy of BIA 
+devices, none have simultaneously assessed multiple at -home BIA devices, which are widely available to consumers. 
+Therefore, the present study aimed to evaluate the  reliability of six BIA devices by assessing the level of agreement 
+with DXA.  
+ 
+Methods 
+Participants 
+College-aged men and women between the ages of 18 and 25 were recruited via flyers and word of mouth to participate 
+in this study. Participants were included if they fell within the age range and excluded if they had four DXA scans 
+within the last 12 months. Methods were approved by the Institutional Review Board of the University of Idaho (#22-
+209). This study was conducted in accordance with the Declaration of Helsinki.  
+ 
+Study Protocol 
+The study consisted of a single one-hour visit to the Human Performance Laboratory  at the University of Idaho. 
+Participant visits occurred in the morning (0500-1100), following an 8-hour fast. Participants were instructed to drink 
+water ad libitum to ensure euhydration prior to testing. Upon arrival at the laboratory, participants gave informed 
+consent. Before body composition assessments, participant hydration status was assessed using a urine sample and a 
+dip-style refractometer (ATAGOÒ, Tokyo, Japan). Participants were considered euhydrated if urine specific gravity 
+(USG) was between 1.002 and 1.025. If USG was >1.025 , the participant was instructed to consume 12 fl uid ounces 
+of water prior to a second hydration assessment. If USG was <1.002, the participant was rescheduled for a later date 
+due to hyperhydration.  Across all participants, one  participant was rescheduled due to hyperhydration. Participants 
+completed a demographics questionnaire via Qualtrics (Qualtrics XM, 2023). Height and weight were measured using 
+a stadiometer (InBody BSM170, Seoul, Republic of Korea) and digital clinical scale (DETECTO, Apex -SH, Webb 
+City, MO).  
+ 
+Body composition was assessed using six different BIA devices and DXA. Measurements were conducted in triplicate 
+for each BIA device. BIA device characteristics are included in Table 1. No user-performed calibration procedures 
+were required for any BIA devices. Each participant followed the same standard order of devices:  Renpho (Shezhen, 
+China), T anita (BF-679W, Tokyo, Japan), T riomph (Richmond, British Columbia, Canada). OMRON (Yangzhou, 
+Jiangu, China), and InBody H20 (Gangam-gu, Seoul, Republic of Korea). This standard order was selected to minimize 
+variability in testing procedures, reduce logistical complexity, and ensure that participants experienced identical testing 
+conditions. While use of a fixed order introduces the possibility of an order effect, the risk was considered minimal 
+because all assessments occurred within a single visit, time between devices was short, and measurements were non -
+invasive with negligible physiologi cal carryover. Moreover, the only postural change occurred at the end of testing, 
+ 
+Journal of Exercise and Nutrition 3 
+when participants transitioned from standing to supine for the DXA scan and InBody S10, further limiting the potential 
+for systematic biases related to order.  Following the InBody H 20, participants were asked to complete one 
+anteroposterior whole-body DXA scan (Hologic Inc. Horizon W QDR Series) administered by a trained research 
+assistant. After completing the DXA scan, participants were asked to remain supine for the InBody S10 (Gangam -gu, 
+Seoul, Republic of Korea). Averages over the  three trials were used in the analysis , and all testing was performed on 
+the same day.  
+ 
+Table 1. Bioelectrical impedance analysis device characteristics. 
+Device  Model Electrode Type Frequency Type Posture During Measurement Weight Capacity (kg) 
+Renpho ES-CS20M Single point Single-Frequency Standing 180 
+Tanita BF-679W Single point Single-Frequency Standing 135 
+Triomph EMSC91 Single point Single-Frequency Standing 180 
+Omron BF511CM-500 Segmental Multi-Frequency Standing 150 
+InBody H20 H20N Segmental Multi-Frequency Standing 150 
+InBody S10 S10 Segmental Multi-Frequency Supine 250 
+ 
+Dual energy X-ray Absorptiometry 
+Daily quality assurance was performed using a standard aluminum spine phantom (Hologic Phantom) provided by the 
+manufacturer. All phantom measurements remained within the manufacturer’s specified precision limits, with a 
+coefficient of variation (CV) of less than 0.5%. The test–retest CV for the DXA was 1.1% for LM and 0.69% for BF. 
+DXA results were analyzed with APEX software, version 4.5.2.1. 
+Statistical Analysis  
+All statistical analyses were conducted using R version 4.5.0, an open -source programming language, and statistical 
+significance was determined with a p -value <0.05. Two participants' data were excluded from analysis due to 
+missingness. Prior to analysis, the data were assessed for normality. Intraclass Correlation Coefficients (ICCs) and 95% 
+confidence intervals (CIs) were calculated to determine the degree of absolute agreement between DXA and each of 
+the six BIA devices. Analyses were based on the average of three repeated trials per device,  and ICCs were computed 
+using a two-way mixed effects model for absolute agreement, average measures [ICC(3,k)]. Spearman’s correlations (ρ) 
+were calculated for the rank-based association between BIA devices and DXA. Bland-Altman analyses were conducted 
+to assess the 95% limits of agreement (L oA) between DXA and each of the six BIA devices for %BF.  Assumptions 
+for Bland-Altman analysis, including constant variance of differences across the measurement range, were visually 
+inspected and verified prior to interpretations.  
+Figure 1: Participant exclusion and body mass index stratification.  
+Note: BMI = Body Mass Index 
+
+ 
+Journal of Exercise and Nutrition 4 
+Results  
+Data from 77 participants were analyzed, and participant characteristics are displayed in Table 2 . The majority of 
+participants were Caucasian (90.9%) and 60.5% were categorized as having a normal BMI (Figure 1).  
+Table 2. Participant characteristics. 
+  All n=77 Male n=42 Female n=35 
+Age 21.0 ± 1.9  21.2 ± 1.9 20.9 ± 1.8 
+Height (cm) 172.0 ± 9.8 175.5 ± 9.0 167.8 ± 9.2 
+Weight (kg) 74.5 ± 12.9 81.2 ± 10.7 66.3 ± 10.7 
+BMI (kg/m2) 24.7 ± 3.1 25.4 ± 3.4 23.6 ± 2.5 
+%BF 24.1 ± 7.7 19.3 ± 5.6 30.0 ± 5.6 
+Note: BMI = Body Mass Index, %BF = Percent Body Fat, derived from dual-
+energy x-ray absorptiometry 
+To assess the agreement between BIA- and DXA-derived %BF, Spearman’s rank correlation coefficients (ρ) were 
+used.   All BIA devices demonstrated significant positive correlations with DXA (p<0.001), indicating a strong rank -
+based association. Among them, InBody S10, InBody H20, and Tanita exhibited the strongest correlations (Table 3). 
+Triomph, the lowest-performing device, still maintained a statistically significant correlation with DXA, suggesting a 
+consistent trend despite weaker overall performance (Table 3). 
+Table 3. BIA devices vs. DXA %BF correlation and agreement.  
+ Device Means  SD Spearman’s ICC ICC CI 
+All 
+n=77 
+DXA 24.1  7.8      
+Renpho 21.7  5.7 0.72*** 0.66*** 0.46-0.78 
+Tanita 20.9  6.5 0.88*** 0.81*** 0.31-0.92 
+Triomph 21.2  4.7 0.51*** 0.41*** 0.19-0.58 
+Omron 26.3  8.3 0.88*** 0.85*** 0.68-0.92 
+InBody H20 21.4  8.7 0.86*** 0.82* 0.59-0.91 
+InBody S10 19.8  8.4 0.91*** 0.79*** 0.06-0.93 
+Male  
+n=42 
+DXA 19.3  5.6       
+Renpho 18.8  5.1 0.35* 0.51*** 0.25-0.70 
+Tanita 16.6  4.2 0.63*** 0.62** 0.22-0.81 
+Triomph 20.4  5.2 0.38* 0.46*** 0.18-0.67 
+Omron 20.6  5.4 0.71*** 0.73*** 0.54-0.85 
+InBody H20 16.9  7.3 0.81*** 0.70*** 0.44-0.84 
+InBody S10 14.8  6.7 0.79*** 0.65* -0.02-0.87 
+Female 
+n=35 
+DXA 29.9  5.6      
+Renpho 25.3  4.2 0.54*** 0.43* -0.05-0.73 
+Tanita 26.2  4.7 0.82*** 0.68* -0.04-0.89 
+Triomph 22.3  3.8 0.50** 0.25 -0.10-0.59 
+Omron 33.2  5.2 0.72*** 0.66* 0.10-0.86 
+InBody H20 26.8  7.0 0.84*** 0.73** 0.31-0.88 
+InBody S10 25.6  6.1 0.87*** 0.69* -0.05-0.90 
+ 
+Journal of Exercise and Nutrition 5 
+Note: DXA = Dual energy x-ray absorptiometry; ICC = Interclass correlation; CI = Confidence interval 
+*p<0.05 **p<0.01 ***p<0.001 
+To evaluate the agreement between BIA devices and DXA, ICCs were calculated using a two -way random-effects 
+model for absolute agreement (Table 3). Omron demonstrated the highest agreement, followed by InBody H 20 
+Tanita, and InBody S10. Notably, the CI for InBody S10 was wide (CI: 0.06-0.93), suggesting a high degree of 
+uncertainty despite a strong correlation. Triomph had the lowest agreement with DXA (ICC = 0.41, 95% CI: 0.19 -
+0.58), which reinforces the limitations observed in the correlation results. Renpho showed moderate agreement, 
+supporting its utility with caution. Taken together, the findings indicate that while most BIA devices demonstrate a 
+strong correlation with DXA, only Omron, InBody H20, and Tanita show both strong correlation and acceptable 
+agreement, making them more reliable for estimating %BF in comparison to DXA.  
+Bland-Altman plots were used to assess individual-level agreement between each BIA device and DXA for 
+estimating %BF (Figure 2). Omron (Figure 2D) had a mean bias of -2.21%, with narrow limits of agreement (-9.88% 
+to 5.46%), indicating minimal systematic over- or underestimation and acceptable precision. Moreover, Tanita 
+(Figure 2B) and Renpho (Figure 2A) demonstrated moderate positive biases of 3.18% and 2.38%, respectively. 
+Tanita exhibited tighter agreement (LoA: -3.46% to 9.81%), while Renpho showed greater variability (LoA: -7.95%-
+12.74%). InBody H20 (Figure 2E) and InBody S10 (Figure 2F) overestimated %BF compared to DXA, with a mean 
+bias of 2.72% and 4.36%, and LoA ranges of 5.73% to 11.17% and -2.25% to 11.07%, respectively. Alternatively, 
+Triomph (Figure 2C) displayed the widest LoA (-10.25% to 16.01%) and a mean bias of 2.88%, reflecting the 
+greatest individual-level variability and weakest with DXA. 
+Figure 2: Bland-Altman Plots Level of Agreement (LoA). DXA: Dual x-ray absorptiometry.  
+Discussion 
+This present study evaluated the agreement between DXA and several commercially available BIA devices in estimating 
+%BF. Although most devices showed statistically significant correlations with DXA, Bland-Altman analysis revealed 
+meaningful differences in agreement and precision, which have important implications for researchers, consumers, and 
+practitioners in terms of at-home and research body composition assessments.  
+ 
+
+ 
+Journal of Exercise and Nutrition 6 
+Among the devices tested, Omron demonstrated the most favorable agreement profile, with the smallest mean bias (-
+2.21%) and relatively narrow L oA (-9.88% - 5.46%). This suggests that Omron provided relatively stable estimates 
+across participants, making it a practical option for at-home longitudinal body composition tracking. This finding aligns 
+with previous research indicating that specific BIA devices can provide reliable estimates of fat mass when compared 
+to DXA. InBody H20 and InBody S10 also demonstrated moderate biases (2.72% and 4.36%, respectively), with LoA 
+ranges indicating reasonable agreement, supporting their potential utility for clinical body compositi on monitoring. 
+These findings support prior research 15,16,19 suggesting that multi-frequency or segmental BIA systems, such as those 
+used in both InBody devices and Omron, may offer improved accuracy over single-point BIA devices . Since multi-
+frequency and segmental BIA devices assess impedance across multiple frequencies and body segments, it is likely that 
+the greater number of measurements improved device accuracy.  
+ 
+Conversely, both Triomph and Renpho showed larger variability, with Triomph exhibiting the widest LoA (-10.25% - 
+16.01%) and the highest bias (2.88%). The magnitude and inconsistency of the disagreement raise concerns about the 
+validity of these devices for individual-level body composition assessment. Renpho, which has gained popularity in the 
+consumer market due to its affordability and app-based interface, demonstrated particularly wide LoA (20.71%), calling 
+into question its validity and utility despite ease of access.   
+ 
+Several factors may contribute to the observed discrepancies between BIA devices and DXA. BIA measurements are 
+influenced by hydration status, recent food intake, physical activity, and other phys iological variables. For instance, 
+dehydration can increase the body’s electrical resistance, leading to an overestimation of  %BF. Although hydration 
+status was measured, participants who were hypo- or hyper-hydrated were asked to consume water or reschedule. 
+Respectively, there could have been varying levels of hydration , which could have been confirmed if we collected 
+hydration markers, such as urine osmolality or specific gravity 20,21. Given the consistent conditions between 
+measurements, these findings suggest that device proprietary algorithms may have contributed to the variability within 
+%BF measurements. Each of the BIA devices required input of height and sex, and the scales independently measured 
+weight.  
+ 
+When the sample was analyzed as a whole, all ICC CI s were above zero, indicating a consistent degree of reliability 
+across all participants. However, when examined by sex, we observed wide ICC CI s, likely reflecting small subgroup 
+sample sizes, or greater within - compared to between-participant variability. Additionally, the proprietary algorithms 
+used by the BIA devices, along with the body composition reference data used to develop them, may contribute to 
+these wide CIs. Given these limitations, sex-based subgroup analysis should be interpreted with caution. Future studies 
+should ensure sufficient power for subgroup comparisons , such as age, sex, %BF, and ethnicity , to examine the 
+reliability across a more diverse sample.  
+ 
+The present study offers several strengths, including the evaluation of six different BIA devices, providing a 
+comprehensive comparison of commercially available devices, including those marketed for at -home tracking . 
+Standardization of hydration status, recent food intake (>8 hours), and testing occurring within the same time of day 
+enhances study validity for body composition testing  13. However, there are limitations to consider. The sample size 
+lacked ethnic diversity, and most participants were within a normal BMI range, limiting the generalizability of results 
+to those with different ethnic backgrounds or BMI categories. The cross-sectional design prevents assessment of device 
+reliability over time (i.e., test -retest reliability) or sensitivity to changes in b ody composition. An additional 
+consideration is that most of the BIA devices did not allow for user calibration, as their algorithms and reference 
+equations are proprietary. Measurements, therefore, reflect standard end -user conditions, which enhances ecological 
+validity but may also contribute to the observed variability compared with DXA. In contrast, research and clinic-grade 
+devices such as the InBody models include a manufacturer-driven quality control process, which may explain in part 
+their narrower LoAs. The lack of accessible calibration in consumer -grade devices underscores an essential limitation 
+for both researchers and consumers, as accuracy cannot be independe ntly verified or adjusted. The present study did 
+not evaluate test -retest reliability, and therefore , the results may not generalize to long -term device accuracy and 
+performance. Finally, the moderate sample size limits the ability to conduct detailed subgroup analyses, and findings 
+may not extend to populations with different ages and health statuses.  
+ 
+ 
+Journal of Exercise and Nutrition 7 
+Practical Implications 
+From a practical perspective, these findings highlight that not all commercially available BIA devices are equally 
+appropriate for tracking body composition. Segmental  or multi-frequency devices such as Omron, InBody H 20, and 
+InBody S10 demonstrated a narrower LoA, thus a more consistent bias compared with DXA. This suggests they may 
+be more suitable for consumers seeking to monitor general trends in %BF over time, or for practitioners interested in 
+tracking longitudinal changes in body composition within a clinical or fitn ess setting. In contrast, single -frequency 
+consumer-grade devices such as Triomph and Renpho exhibited wide variability and significant biases, limiting their 
+suitability for individual-level assessment or clinical application where accuracy is critical. The use of these devices may 
+be more appropriate for broad tracking or casual self-monitoring.  
+ 
+For females, the included BIA devices may be better for tracking trends or comparing differences, but less accurate 
+for absolute %BF values. For males, BIA devices appear to provide more accurate absolute values, making them more 
+reliable for estimating   
+ 
+Conclusions 
+While BIA devices offer a practical and affordable solution for monitoring body composition trends over time, the 
+variability in accuracy compared to DXA suggests BIA devices should be used with caution. Many BIA devices are 
+available to consumers and researchers to purchase, and our findings indicate that at -home, consumer -marketed 
+devices may be insufficient in terms of %BF estimation compared to DXA. Among the devices tested, Omron, InBody 
+H20, and InBody S10 demonstrated the most favorable agreement within DXA, indicating a greater promise for 
+consumer and research-grade multi-frequency BIA devices compared with single-frequency BIA devices.  
+ 
+Conflicts of Interest 
+The authors declare no conflicts of interest.  
+ 
+Acknowledgements 
+We wish to acknowledge the dedicated undergraduate students working in the Human Performance Laboratory for 
+the duration of this study who attended many early morning laboratory visits.  
+ 
+References 
+1. Fryar C, Carroll M, Afful J. Prevalence of Overweight, Obesity, and Severe Obesity among Adults Aged 20 and 
+over: United States, 1960 –1962 through 2017 –2018. Centers for Disease Control; 2020. 
+https://www.cdc.gov/nchs/data/hestat/obesity-adult-17-18/overweight-obesity-adults-H.pdf 
+2. American College of Sports Medicine, Liguori G, Feito Y, Fountaine CJ, Roy B, eds. ACSM’s Guidelines for 
+Exercise Testing and Prescription. Eleventh edition. Wolters Kluwer; 2022. 
+3. Kopelman P. Health risks associated with overweight and obesity. Obes Rev. 2007;8(s1):13 -17. 
+doi:10.1111/j.1467-789X.2007.00311.x 
+4. Fosbøl MØ, Zerahn B. Contemporary methods of body composition measurement. Clin Physiol Funct Imaging. 
+2015;35(2):81-97. doi:10.1111/cpf.12152 
+5. Prior BM, Cureton KJ, Modlesky CM, et al. In vivo validation of whole body composition estimates from dual -
+energy X-ray absorptiometry. J Appl Physiol. 1997;83(2):623-630. doi:10.1152/jappl.1997.83.2.623 
+6. Sun G, French CR, Martin GR, et al. Comparison of multifrequency bioelectrical impedance analysis with dual -
+energy X-ray absorptiometry for assessment of percentage body fat in a large, healthy population. Am J Clin Nutr. 
+2005;81(1):74-78. doi:10.1093/ajcn/81.1.74 
+7. Bazzocchi A, Ponti F, Albisinni U, Battista G, Guglielmi G. DXA: Technical aspects and application. Eur J Radiol. 
+2016;85(8):1481-1492. doi:10.1016/j.ejrad.2016.04.004 
+8. Kelly TL, Wilson KE, Heymsfield SB. Dual Energy X-Ray Absorptiometry Body Composition Reference Values 
+from NHANES. Vella A, ed. PLoS ONE. 2009;4(9):e7038. doi:10.1371/journal.pone.0007038  
+9. Mialich MS, Sicchieri JMF, Junior AAJ. Analysis of Body Composition: A Critical Review of the Use of 
+Bioelectrical Impedance Analysis. International Journal of Clinical Nutrition. 2014;2(1):1 -10. 
+10. Lukaski H, Johnson P, Bolonchuk W, Lykken G. Assessment of fat -free mass using bioelectrical impedance 
+measurements of the human body. Am J Clin Nutr. 1985;41(4):810-817. doi:10.1093/ajcn/41.4.810 
+11. Lukaski H. Biological indexes considered in the derivation of the bioelectrical impedance analysis. Am J Clin Nutr. 
+1996;64(3):397S-404S. doi:10.1093/ajcn/64.3.397S 
+ 
+Journal of Exercise and Nutrition 8 
+12. Dixon CB, Andreacci JL. Effect of Resistance Exercise on Percent Body Fat Using Leg -to-Leg and Segmental 
+Bioelectrical Impedance Analysis in Adults. J Strength Cond Res. 2009;23(7):2025 -2032. 
+doi:10.1519/JSC.0b013e3181b86735 
+13. Tinsley GM, Morales E, Forsse JS, Grandjean PW. Impact of Acute Dietary Manipulations on DXA and BIA 
+Body Composition Estimates. Med Sci Sports Exerc. 2017;49(4):823-832. doi:10.1249/MSS.0000000000001148 
+14. Feng Q, Bešević J, Conroy M, Omiyale W, Lacey B, Allen N. Comparison of body composition measures assessed 
+by bioelectrical impedance analysis versus dual -energy X-ray absorptiometry in UK Biobank. Published online 
+November 1, 2023. doi:10.1101/2023.11.01.23297916 
+15. Karelis AD, St-Pierre DH, Conus F, Rabasa -Lhoret R, Poehlman ET. Metabolic and body composition factors 
+in subgroups of obesity: what do we know? J Clin Endocrinol Metab. 2004;89(6):2569-2575. doi:10.1210/jc.2004-
+0165 
+16. Thajer A, Skacel G, Truschner K, et al. Comparison of Bioelectrical Impedance -Based Methods on Body 
+Composition in Young Patients with Obesity. Child Basel Switz. 2021;8(4):295. doi:10.3390/children8040295  
+17. Grand View Research. Body Fat Measurement Market Size, Share & Trends Analysis Report By Product Type 
+(BIA, DEXA), By End -User (Hospitals & Clinics, Fitness Centers & Gymnasiums), By Region, And Segment 
+Forecasts, 2023 - 2030.; 2023. https://www.grandview research.com/industry-analysis/body-fat-measurement-
+market 
+18. Johannessen E, Johansson J, Hartvigsen G, Horsch A, Årsand E, Henriksen A. Collecting health-related research 
+data using consumer -based wireless smart scales. Int J Med Inf. 2023;173:105043. 
+doi:10.1016/j.ijmedinf.2023.105043 
+19. Feng Q, Bešević J, Conroy M, Omiyale W, Lacey B, Allen N. Comparison of body composition measures assessed 
+by bioelectrical impedance analysis versus dual -energy X-ray absorptiometry in the United Kingdom Biobank. 
+Clin Nutr ESPEN. 2024;63:214-225. doi:10.1016/j.clnesp.2024.06.040 
+20. Kavouras SA. Assessing hydration status: Curr Opin Clin Nutr Metab Care. 2002;5(5):519 -524. 
+doi:10.1097/00075197-200209000-00010 
+21. Perrier E, Rondeau P, Poupin M, et al. Relation between urinary hydration biomarkers and total fluid intake in 
+healthy adults. Eur J Clin Nutr. 2013;67(9):939-943. doi:10.1038/ejcn.2013.93 
+ 

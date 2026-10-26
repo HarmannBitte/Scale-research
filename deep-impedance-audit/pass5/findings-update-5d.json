@@ -1,0 +1,44 @@
+{
+  "generated": "2026-10-18 (pass 5d)",
+  "note": "Adds to findings-update.json and findings-update-5c.json. The original findings.json is unchanged.",
+  "updates": [
+    {
+      "id": "F31",
+      "change": "confirmed layout; BTAG accept set added",
+      "status": "D[3] = 0 and BTAG = D[2:0] (MAX30002 datasheet Table 30 text; MAX30001 BTAG excerpt). Streaming decoder keeps about 25% of words under uniform data; reset path cannot occur. Source-level; hardware untested. MAX30001 PDF not reachable from fetch tool.",
+      "severity": "High for the burst/interrupt API"
+    },
+    {
+      "id": "F33",
+      "change": "external corroboration",
+      "status": "Nordic DevZone report: empty ECG FIFO read 0x000037 returned sample value 0 on every read. Matches the predicted failure. Not a test of the library.",
+      "severity": "Medium"
+    },
+    {
+      "id": "F34",
+      "change": "new",
+      "repo": "openebi/software",
+      "claim": "ad5933_get_real()/get_imaginary() cast a uint16_t to int, so negative 16-bit two's-complement results read as 32768-65535. take_measurement() averages them, so the error reaches the sweep output. AD5933 datasheet Rev F: registers are 16-bit two's complement.",
+      "levels": ["S", "DS", "H"],
+      "evidence": ["triage/software/ad5933.c lines 239-253", "triage/software/main.c lines 97-114", "pass5/ad5933_sign_probe.c and .out"],
+      "status": "Confirmed in host probe with the source expression. Instrument not tested. Contrast: dyarleniber/AD5933-arduino-bioimpedance uses short and is correct on AVR.",
+      "severity": "High"
+    },
+    {
+      "id": "F35",
+      "change": "new",
+      "repo": "openebi/software",
+      "claim": "I2C read failure in ad5933_get_real()/get_imaginary() returns 0 with no error. take_measurement() averages the 0 in, so a bus error becomes a valid-looking zero point.",
+      "levels": ["S", "H"],
+      "status": "Confirmed in host probe (stubbed failure path).",
+      "severity": "Medium"
+    }
+  ],
+  "open_items_after_pass5d": [
+    "MAX30001 register section (direct read): PDF not reachable from fetch tool",
+    "F34: confirm the sign on hardware (bench, not authorised)",
+    "F35: confirm bus failures are reachable (bench, not authorised)",
+    "F20: maintainer question (not authorised)",
+    "F08/F09: unchanged"
+  ]
+}

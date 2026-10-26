@@ -1,0 +1,39 @@
+{
+ "normal_state_formulas_agree": true,
+ "4_pairs": {
+  "vendor_words": 8,
+  "uprm_count_requested_bytes": 8,
+  "bytes_available": 24,
+  "bytes_read": 8,
+  "pairs_recovered": 1,
+  "pairs_actual": 4,
+  "fraction_recovered": 0.25
+ },
+ "8_pairs": {
+  "vendor_words": 16,
+  "uprm_count_requested_bytes": 16,
+  "bytes_available": 48,
+  "bytes_read": 16,
+  "pairs_recovered": 2,
+  "pairs_actual": 8,
+  "fraction_recovered": 0.25
+ },
+ "16_pairs": {
+  "vendor_words": 32,
+  "uprm_count_requested_bytes": 32,
+  "bytes_available": 96,
+  "bytes_read": 32,
+  "pairs_recovered": 5,
+  "pairs_actual": 16,
+  "fraction_recovered": 0.312
+ },
+ "32_pairs": {
+  "vendor_words": 64,
+  "uprm_count_requested_bytes": 64,
+  "bytes_available": 192,
+  "bytes_read": 64,
+  "pairs_recovered": 10,
+  "pairs_actual": 32,
+  "fraction_recovered": 0.312
+ }
+}

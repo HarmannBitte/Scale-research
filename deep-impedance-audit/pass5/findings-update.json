@@ -1,0 +1,42 @@
+{
+  "generated": "2026-10-18 (pass 5)",
+  "note": "Corrections and additions to findings.json. The original file is unchanged.",
+  "updates": [
+    {
+      "id": "F02",
+      "change": "narrowed",
+      "claim_revised": "UPRM computes fifoCount as (counter1 & 0x7F)*2 + counter2. Vendor: (counter1 bit7 << 8) | counter2, clamped to 256. The formulas agree in the normal state (overflow counter 0, count < 256) and disagree after an overflow or at count 256 (65,153 of 65,536 register pairs differ).",
+      "status": "resolved against vendor header max30009.h (chunk 0). Wrong-after-overflow behaviour is source-level; not measured on hardware.",
+      "severity": "Medium (was described as applying to any count)"
+    },
+    {
+      "id": "F05",
+      "change": "resolved",
+      "status": "BIOZ_ADC_OSR field (0x20 bits 5:3) mapped via driver enum (value = register field) and checked against datasheet SR examples. Bit-level table not read directly from the PDF (chunk 10 has no headers).",
+      "severity": "documentation"
+    },
+    {
+      "id": "F22",
+      "change": "strengthened, still unverified on hardware",
+      "status": "Datasheet describes a 256-word FIFO, so the count is in words. UPRM reads fifoCount bytes, so it recovers about 25-31% of pairs in a synthetic vendor-layout FIFO (pass5/uprm_fifo_yield.json). Hardware untested.",
+      "severity": "High if correct"
+    },
+    {
+      "id": "F30",
+      "change": "new",
+      "repo": "oscaroflores/UPRM-Multi_Frq-BioZ-Research",
+      "claim": "The UPRM burst parser finds samples by the first nonzero byte and does not check FIFO tag bits (0x1 I, 0x2 Q, 0xE marker, 0xF invalid). Pairing is positional, so markers, invalid words or single-channel FIFOs shift I/Q silently.",
+      "levels": ["S", "H"],
+      "status": "Source-level; host mirror of the loop in generated/uprm-fifo.c. Not tested on hardware.",
+      "severity": "Medium"
+    }
+  ],
+  "open_items_after_pass5": [
+    "F22 / F02-after-overflow: hardware FIFO semantics (bench, not authorised)",
+    "F30: confirm tag handling in full spiFunctions.c (file not in snapshot)",
+    "F20: maintainer question (not authorised)",
+    "F01, F08, F09: hardware reachability (not authorised)",
+    "F24/F26: pubspec.lock and assets missing; melazab licence",
+    "MAX30009 DAC_OSR bit width: driver uses 2 bits, datasheet table 3 bits; needs the register table"
+  ]
+}

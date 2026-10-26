@@ -1,0 +1,603 @@
+<?xml version="1.0"  ?><!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd"><pmc-articleset><article xml:lang="en" article-type="research-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">BMJ Nutr Prev Health</journal-id><journal-id journal-id-type="iso-abbrev">BMJ Nutr Prev Health</journal-id><journal-id journal-id-type="pmc-domain-id">3956</journal-id><journal-id journal-id-type="pmc-domain">bmjnph</journal-id><journal-id journal-id-type="nlm-id">101769223</journal-id><journal-id journal-id-type="publisher-id">bmjnph</journal-id><journal-title-group><journal-title>BMJ Nutrition, Prevention &amp; Health</journal-title></journal-title-group><issn pub-type="epub">2516-5542</issn><publisher><publisher-name>BMJ Publishing Group</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC9813632</article-id><article-id pub-id-type="pmcid-ver">PMC9813632.1</article-id><article-id pub-id-type="pmcaid">9813632</article-id><article-id pub-id-type="pmcaiid">9813632</article-id><article-id pub-id-type="pmid">36619314</article-id><article-id pub-id-type="doi">10.1136/bmjnph-2022-000512</article-id><article-id pub-id-type="publisher-id">bmjnph-2022-000512</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="heading"><subject>Original Research</subject></subj-group><subj-group subj-group-type="hwp-journal-coll"><subject>1506</subject></subj-group></article-categories><title-group><article-title>High precision but systematic offset in a standing bioelectrical impedance analysis (BIA) compared with dual-energy X-ray absorptiometry (DXA)</article-title></title-group><contrib-group><contrib id="author-99325804" contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid" authenticated="false">http://orcid.org/0000-0003-4980-8353</contrib-id><name name-style="western"><surname>Potter</surname><given-names initials="AW">Adam W</given-names></name><xref rid="aff1" ref-type="aff">1</xref></contrib><contrib id="author-99326608" contrib-type="author"><name name-style="western"><surname>Nindl</surname><given-names initials="LJ">Lyndsey J</given-names></name><xref rid="aff1" ref-type="aff">1</xref></contrib><contrib id="author-99326615" contrib-type="author"><name name-style="western"><surname>Soto</surname><given-names initials="LD">Lara D</given-names></name><xref rid="aff1" ref-type="aff">1</xref></contrib><contrib id="author-99326628" contrib-type="author"><name name-style="western"><surname>Pazmino</surname><given-names initials="A">Angie</given-names></name><xref rid="aff1" ref-type="aff">1</xref></contrib><contrib id="author-99326648" contrib-type="author"><name name-style="western"><surname>Looney</surname><given-names initials="DP">David P</given-names></name><xref rid="aff2" ref-type="aff">2</xref></contrib><contrib id="author-99326657" contrib-type="author"><name name-style="western"><surname>Tharion</surname><given-names initials="WJ">William J</given-names></name><xref rid="aff2" ref-type="aff">2</xref></contrib><contrib id="author-99326679" contrib-type="author"><name name-style="western"><surname>Robinson-Espinosa</surname><given-names initials="JA">Jasmine A</given-names></name><xref rid="aff3" ref-type="aff">3</xref></contrib><contrib id="author-99326695" contrib-type="author"><name name-style="western"><surname>Friedl</surname><given-names initials="KE">Karl E</given-names></name><xref rid="aff4" ref-type="aff">4</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>
+<institution content-type="department">Thermal and Mountain Medicine Division</institution>, <institution>US Army Research Institute of Environmental Medicine</institution>, <addr-line content-type="city">Natick</addr-line>, <addr-line content-type="state">Massachusetts</addr-line>, <country>USA</country>
+</aff><aff id="aff2">
+<label>2</label>
+<institution content-type="department">Military Performance Division</institution>, <institution>US Army Research Institute of Environmental Medicine</institution>, <addr-line content-type="city">Natick</addr-line>, <addr-line content-type="state">Massachusetts</addr-line>, <country>USA</country>
+</aff><aff id="aff3">
+<label>3</label>
+<institution content-type="department">Military Nutrition Division</institution>, <institution>US Army Research Institute of Environmental Medicine</institution>, <addr-line content-type="city">Natick</addr-line>, <addr-line content-type="state">Massachusetts</addr-line>, <country>USA</country>
+</aff><aff id="aff4">
+<label>4</label>
+<institution content-type="department">Office of the Senior Scientist</institution>, <institution>US Army Research Institute of Environmental Medicine</institution>, <addr-line content-type="city">Natick</addr-line>, <addr-line content-type="state">Massachusetts</addr-line>, <country>USA</country>
+</aff><author-notes><corresp>
+<label>Correspondence to</label> Dr Adam W Potter, Thermal and Mountain Medicine Division, US Army Research Institute of Environmental Medicine, Natick, MA 01760, USA; <email>adam.w.potter.civ@health.mil</email>
+</corresp></author-notes><pub-date pub-type="collection"><month>12</month><year>2022</year></pub-date><pub-date pub-type="epub"><day>1</day><month>11</month><year>2022</year></pub-date><volume>5</volume><issue>2</issue><issue-id pub-id-type="pmc-issue-id">425397</issue-id><fpage>254</fpage><lpage>262</lpage><history><date date-type="received"><day>24</day><month>6</month><year>2022</year></date><date date-type="accepted"><day>03</day><month>10</month><year>2022</year></date></history><pub-history><event event-type="pmc-release"><date><day>01</day><month>11</month><year>2022</year></date></event><event event-type="pmc-live"><date><day>06</day><month>01</month><year>2023</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2024-09-09 13:25:34.927"><day>09</day><month>09</month><year>2024</year></date></event></pub-history><permissions><copyright-statement>© Author(s) (or their employer(s)) 2022. Re-use permitted under CC BY-NC. No commercial re-use. See rights and permissions. Published by BMJ.</copyright-statement><copyright-year>2022</copyright-year><ali:free_to_read xmlns:ali="http://www.niso.org/schemas/ali/1.0/"/><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbynclicense" start_date="2022-11-01">https://creativecommons.org/licenses/by-nc/4.0/</ali:license_ref><license-p>This is an open access article distributed in accordance with the Creative Commons Attribution Non Commercial (CC BY-NC 4.0) license, which permits others to distribute, remix, adapt, build upon this work non-commercially, and license their derivative works on different terms, provided the original work is properly cited, appropriate credit is given, any changes made indicated, and the use is non-commercial. See: <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc/4.0/">http://creativecommons.org/licenses/by-nc/4.0/</ext-link>.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="bmjnph-2022-000512.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:title="pdf" xlink:href="bmjnph-2022-000512.pdf"/><abstract><p>Bioelectrical impedance analysis (BIA) provides a practical method of body composition estimation for field research and weight management programmes, with devices and algorithms that have improved in recent years. We compared suitability of a commercial BIA system that uses multi-frequency-based proprietary algorithms (InBody 770, Cerritos, California, USA) and a laboratory-based validated single-frequency system (Quantum IV, RJL Systems, Clinton Township, Michigan, USA) with dual-energy X-ray absorptiometry (DXA) (iDXA, GE Lunar, Madison, Wisconsin, USA). Volunteers included fit non-obese active duty US Marines (480 men; 315 women), assessed by DXA and the two BIA systems. Both RJL and InBody BIA devices predicted DXA-based fat-free mass (FFM) (mean absolute error (MAE) 2.8 and 3.1 kg, respectively) and per cent body fat (%BF) (MAE 3.4% and 3.9%, respectively), with higher correlations from the InBody device (r<sup>2</sup>=0.96 (%BF) and 0.84 (FFM)) versus the RJL (r<sup>2</sup>=0.92 (%BF) and 0.72 (FFM)). InBody overpredicted FFM (bias +2.7, MAE 3.1 kg) and underpredicted %BF (bias −3.4 and MAE 3.9%) versus the RJL. A 3% correction factor applied to the InBody device results provided values very close to the DXA measurements. These findings support the application of modern BIA systems to body composition goals of maximum %BF and minimum lean body mass for both men and women.</p></abstract><kwd-group><kwd>Nutrition assessment</kwd><kwd>Physical performance</kwd><kwd>Weight management</kwd></kwd-group><funding-group specific-use="FundRef"><award-group id="funding-1"><funding-source>
+<institution-wrap><institution>US Army Military Operational Medicine Research Program</institution></institution-wrap>
+</funding-source><award-id>N/A</award-id></award-group></funding-group><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC</meta-value></custom-meta><custom-meta><meta-name>special-feature</meta-name><meta-value>unlocked</meta-value></custom-meta></custom-meta-group></article-meta></front><body><boxed-text id="BX1" position="float" orientation="portrait"><sec><title>WHAT IS ALREADY KNOWN ON THIS TOPIC</title><list list-type="bullet"><list-item><p>Bioelectrical impedance analysis (BIA) provides a practical field assessment of nutritional status (per cent body fat, lean mass) that is more objective than anthropometric methods, and could replace surrogate estimates of body composition such as body mass index (BMI).</p></list-item></list></sec><sec><title>WHAT THIS STUDY ADDS</title><list list-type="bullet"><list-item><p>The BIA system evaluated in this study did not demonstrate the usual underestimation and overestimation at the ends of per cent body fat that have been observed in earlier BIA and anthropometric predictive equations, and there was a high precision (based on high linear correlation) compared with dual-energy X-ray absorptiometry assessment for a large sample of physically fit men and women tested without special instructions about hydration or fasting. A systematic ~3% underestimate of per cent body fat can be easily adjusted.</p></list-item></list></sec><sec><title>HOW THIS STUDY MIGHT AFFECT RESEARCH, PRACTICE OR POLICY</title><list list-type="bullet"><list-item><p>These findings suggest an affordable practical strategy to replace BMI-based assessments in epidemiological research and clinical practice with a valid estimate of per cent body fat and lean mass that can advance assessment and intervention of obesity-related disease risk and sarcopenia.</p></list-item></list></sec></boxed-text><sec sec-type="intro" id="s1"><title>Introduction</title><p>Bioelectrical impedance analysis (BIA) is a non-invasive method for estimating body water, and on this basis, provides a practical method to assess lean mass. The conceptual relationship between electrical impedance and body cell mass was originally developed by Thomasset, Nyboer, Hoffer <italic toggle="yes">et al</italic> and other researchers inspired by Francis Moore’s work on clinical monitoring of fluid compartment balances in health and disease.<xref rid="R1" ref-type="bibr">1–4</xref> William Mills expanded the application to physiological monitoring of hydration in extreme environments.<xref rid="R5" ref-type="bibr">5</xref> With support from the Navy, he commissioned Rudolph Liedtke to design a portable system that could work accurately in the field, demonstrating the use of the RJL Systems Model BIA 101 (Quantum IV, RJL Systems, Clinton Township, Michigan, USA) with climbers on Denali at 14 300 feet.<xref rid="R5" ref-type="bibr">5</xref> Mills hoped to expand the application to detection of high-altitude cerebral and pulmonary oedema and to explore the role of dehydration in cold injury. The strong association between electrical impedance and body water content also made this methodology useful in estimating body composition, based on earlier Navy research on the constancy of the normal hydration of the lean mass component.<xref rid="R6" ref-type="bibr">6</xref> Lukaski and others developed a variety of empirical equations, typically compared with hydrostatic weighing as the criterion measure of body density<xref rid="R7" ref-type="bibr">7–9</xref> James Hodgdon, at the Naval Health Research Center (San Diego, California, USA), explored its use for military body fat standards but concluded that it was still too technically challenging for large-scale use outside of the laboratory.<xref rid="R10" ref-type="bibr">10 11</xref> Lukaski summarised key sources of variability in BIA assessments including electrode placement, dehydration, recent exercise, ambient temperature and conductive surfaces.<xref rid="R12" ref-type="bibr">12</xref> Chumlea and Guo concluded in 1997 that ‘application of single-frequency and multiple-frequency impedance to body composition is not proven yet’ and highlighted the 1994 National Institutes of Health (NIH) Technology Assessment Conference findings on further research needs.<xref rid="R13" ref-type="bibr">13 14</xref> In 1995, Ki-Chul Cha patented a multisensory standing device that required no specialised training for BIA assessment and, in subsequent iterations, produced a commercially available system that has expanded the use of BIA in personal weight management programmes.<xref rid="R15" ref-type="bibr">15 16</xref> New algorithms were developed for 50 kHz data compared with four-compartment model body composition data and applied to the 1988–1994 National Health and Nutrition Examination Survey (NHANES) sample to provide an estimate of body composition of the US population for the first time.<xref rid="R17" ref-type="bibr">17 18</xref> Improved technologies and computational methods in the past decade make the current BIA a practical and accessible field means of body composition estimation which has expanded its use in research and weight management programmes. It was important to compare two BIA systems that are in common use that differ substantially in methodology and algorithms, and ask the question: is BIA now reliable enough for large-scale body composition monitoring with application to military standards and investigation of new health metrics surpassing body mass index?</p><p>The original approach was to use a single frequency (50 kHz) and measure whole body resistance between hand and foot, assuming a cylindrical model of the body, then applying empirically derived equations established against criterion measures of body composition or total body water. This is the approach tested here using the RJL device, with 50 kHz resistance, stature and body weight measurements, interpreted using equations previously established from four-compartment body composition data.<xref rid="R17" ref-type="bibr">17</xref> Other more sophisticated methods rely on the use of more than one current frequency (kHz) to measure three main values: resistance (<italic toggle="yes">R,</italic> Ω) (opposition of flow), reactance (<italic toggle="yes">Xc</italic>, Ω) (tissue capacity) and phase angle (directional trajectory between two points of reference), which are collectively combined to determine an impedance value (<italic toggle="yes">Z</italic>, Ω) (cylindrical geometrical distribution of these values).<xref rid="R19" ref-type="bibr">19 20</xref> Typically, low frequencies (&lt;5 kHz) do not penetrate cell membranes and therefore would only generally be used to measure the resistance of extracellular water, while higher-level frequencies (5–100 kHz) increasingly penetrate cell membranes allowing for measured resistance of various tissues.<xref rid="R20" ref-type="bibr">20–24</xref> With the octapolar electrode combinations in the InBody 770, it is possible to measure segmental body composition and these calculations are based on a sum of these segments rather than derived from one whole body assessment.<xref rid="R25" ref-type="bibr">25 26</xref> Comparative studies have not previously identified clear advantages of single-frequency, multi-frequency and segmental analytical approaches.</p><p>We compared the suitability of a commercial octapolar BIA system (InBody 770, Cerritos, California, USA) that uses a multi-frequency (at 1, 5, 50, 250, 500 and 1000 kHz) assessment method with proprietary algorithms which appear to be based on a sum of segments approach,<xref rid="R25" ref-type="bibr">25</xref> and a laboratory-based system that uses a single-frequency (50 kHz) method, interpreted with the equations developed for the NHANES BIA data interpretation,<xref rid="R17" ref-type="bibr">17</xref> with dual-energy X-ray absorptiometry (DXA) (iDXA, GE Lunar, Madison, Wisconsin, USA). Comparisons were made for predictions of two important health and performance-related body composition metrics: relative fat (per cent body fat, %BF) and absolute fat-free mass (FFM). Relative fat (%BF) is an important indicator of excess fat, expressing total fat mass in terms of total body mass. Absolute measures of FFM provide an important indicator of total body protein status and are associated with physical strength outcomes.</p></sec><sec sec-type="methods" id="s2"><title>Methods</title><sec id="s2-1"><title>Volunteers</title><p>Body composition was measured in 795 healthy volunteers (480 men and 315 women) (<xref rid="T1" ref-type="table">table 1</xref>). This included active duty Marine Corps participants from the National Capital Region (Virginia, Maryland; and Washington, DC) and from Camp Pendleton, California.</p><table-wrap position="float" id="T1" orientation="portrait"><label>Table 1</label><caption><p>Descriptive statistics of the volunteers</p></caption><table frame="hsides" rules="groups"><thead><tr><td align="left" valign="bottom" rowspan="1" colspan="1">Measure</td><td align="left" valign="bottom" rowspan="1" colspan="1">Men</td><td align="left" valign="bottom" rowspan="1" colspan="1">Women</td></tr></thead><tbody><tr><td align="left" valign="top" rowspan="1" colspan="1">n</td><td align="left" valign="top" rowspan="1" colspan="1">480</td><td align="left" valign="top" rowspan="1" colspan="1">315</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Age (years)</td><td align="left" valign="top" rowspan="1" colspan="1">30.4±7.8</td><td align="left" valign="top" rowspan="1" colspan="1">28.4±7.0</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Stature (cm)</td><td align="left" valign="top" rowspan="1" colspan="1">176.1±7.2</td><td align="left" valign="top" rowspan="1" colspan="1">163.2±6.7</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Body mass (kg)</td><td align="left" valign="top" rowspan="1" colspan="1">86.5±11.6</td><td align="left" valign="top" rowspan="1" colspan="1">68.3±9.4</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">BMI (kg/m<sup>2</sup>)</td><td align="left" valign="top" rowspan="1" colspan="1">27.9±3.2</td><td align="left" valign="top" rowspan="1" colspan="1">25.6±2.7</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Asian</td><td align="left" valign="top" rowspan="1" colspan="1">22</td><td align="left" valign="top" rowspan="1" colspan="1">12</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Black</td><td align="left" valign="top" rowspan="1" colspan="1">47</td><td align="left" valign="top" rowspan="1" colspan="1">28</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">White</td><td align="left" valign="top" rowspan="1" colspan="1">248</td><td align="left" valign="top" rowspan="1" colspan="1">146</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Hispanic</td><td align="left" valign="top" rowspan="1" colspan="1">120</td><td align="left" valign="top" rowspan="1" colspan="1">105</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Native American</td><td align="left" valign="top" rowspan="1" colspan="1">3</td><td align="left" valign="top" rowspan="1" colspan="1">2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">No answer or other</td><td align="left" valign="top" rowspan="1" colspan="1">5</td><td align="left" valign="top" rowspan="1" colspan="1">2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Multiple (2 or more)</td><td align="left" valign="top" rowspan="1" colspan="1">35</td><td align="left" valign="top" rowspan="1" colspan="1">20</td></tr></tbody></table><table-wrap-foot><fn id="T1_FN1"><p>BMI, body mass index.</p></fn></table-wrap-foot></table-wrap></sec><sec id="s2-2"><title>Study design</title><p>Participant body composition was assessed during a single-day visit (&lt;1 hour). Volunteers all wore properly fitted athletic clothing and were asked to remove all jewelery. Stature and body mass were measured using a calibrated stadiometer and electronic floor scale (Seca, Chino, California, USA). Measures of body composition were assessed by DXA and two BIA devices. Individuals were positioned supine within the outlined assessment area of the DXA table, and their whole body was scanned for approximately 10 min. Following the DXA scan, individuals remained supine on the non-conductive surface, and total body resistance was measured at 50 kHz between the left hand and left foot using a whole-body impedance device (Quantum IV, RJL Systems, Clinton Township, Michigan, USA). Electrodes were placed at the left wrist on a line bisecting the ulnar head and base of the middle finger, and on the left ankle on a line bisecting the medial malleolus and base of the middle toe. Body fat (%BF) and FFM were calculated from the 50 kHz resistance value using the equations of Sun <italic toggle="yes">et al</italic>.<xref rid="R17" ref-type="bibr">17</xref> The RJL device was periodically checked against a standard resistor provided by the manufacturer.</p><p>Individuals were then assessed on a direct segmental octapolar multi-frequency device (InBody, Model 770, Cerritos, California, USA), standing with feet apart and elbows extended to avoid body contact for approximately one min. The bare feet made positive contact with the base electrodes at the heels and forefeet and subjects grasped two handle electrodes for direct contact with two more electrodes for each hand at thumbs and forefingers. The segmental analysis was computed with proprietary algorithms. Measurements were obtained shortly after standing upright from the DXA scan and supine BIA measurements, minimising the artefacts that have been demonstrated from extended standing.<xref rid="R26" ref-type="bibr">26</xref>
+</p></sec><sec id="s2-3"><title>Statistical analyses</title><p>Data analyses were performed using a combination of Microsoft Excel (Microsoft Corporation, V.2016) and MATLAB (V.2019b, The MathWorks, Natick, Massachusetts, USA). Descriptive statistics are presented as means ± SD. A repeated measures analysis of variance (ANOVA) was used to compare method values of measurement devices. Significant differences (p&lt;0.05) identified in the ANOVA were subsequently analysed using the Least Significant Difference pairwise comparison method. Assessments of accuracy were based on comparisons with the DXA criterion measures for bias, mean absolute error (MAE) and calculated limits of agreement (LoA). Additionally, a non-parametric comparison method (similar to Bland-Altman<xref rid="R27" ref-type="bibr">27 28</xref>) was used for comparisons between observed and modelled data. Bias is used to indicate whether the model overpredicted or underpredicted, calculated as the mean difference between predictions and measurements. MAE is used to compare averages of the absolute prediction errors. LoA is calculated and used to show both range between the upper and lower 95th per cent agreement between the estimate and observations.</p></sec></sec><sec sec-type="results" id="s3"><title>Results</title><p>For %BF, the repeated measures ANOVA showed significant differences for all volunteers (p&lt;0.001), men (p&lt;0.001) and women (p&lt;0.001). Likewise, for FFM, the repeated measures ANOVA showed significant differences for all volunteers (p&lt;0.001), men (p&lt;0.001) and women (p&lt;0.001). Pairwise comparisons (<xref rid="T2" ref-type="table">table 2</xref>) showed all measures were significantly different from one another using least at the p&lt;0.001 level of significance.</p><table-wrap position="float" id="T2" orientation="portrait"><label>Table 2</label><caption><p>ANOVA between DXA, InBody (770) and RJL (Quantum IV) for body fat percent (%BF) and fat-free mass (FFM)</p></caption><table frame="hsides" rules="groups"><thead><tr><td align="left" valign="bottom" rowspan="2" colspan="1"/><td align="left" valign="bottom" rowspan="2" colspan="1">
+<break/>
+</td><td align="left" valign="bottom" rowspan="1" colspan="3">%BF</td><td align="left" valign="bottom" rowspan="1" colspan="3">FFM (kg)</td></tr><tr><td align="left" valign="bottom" rowspan="1" colspan="1">DXA</td><td align="left" valign="bottom" rowspan="1" colspan="1">InBody</td><td align="left" valign="bottom" rowspan="1" colspan="1">RJL</td><td align="left" valign="bottom" rowspan="1" colspan="1">DXA</td><td align="left" valign="bottom" rowspan="1" colspan="1">InBody</td><td align="left" valign="bottom" rowspan="1" colspan="1">RJL</td></tr></thead><tbody><tr><td align="left" valign="top" rowspan="1" colspan="1">All volunteers</td><td align="left" valign="top" rowspan="1" colspan="1">Mean±SD</td><td align="left" valign="top" rowspan="1" colspan="1">26.9±7.3<sup>1</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">23.4±7.9<sup>3</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">25.3±6.9<sup>2</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">58.1±11.9<sup>1</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">60.8±12.8<sup>3</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">59.4±12.2<sup>2</sup>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Men</td><td align="left" valign="top" rowspan="1" colspan="1">Mean±SD</td><td align="left" valign="top" rowspan="1" colspan="1">23.8±8.1<sup>1</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">19.7±6.2<sup>3</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">21.8±5.2<sup>2</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">65.8±8.1<sup>1</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">69.1±8.6<sup>3</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">67.4±8.3<sup>2</sup>
+</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">Women</td><td align="left" valign="top" rowspan="1" colspan="1">Mean±SD</td><td align="left" valign="top" rowspan="1" colspan="1">31.6±6.3<sup>1</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">30.5±6.3<sup>3</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">32.0±6.3<sup>2</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">46.4±5.5<sup>1</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">48.2±6.2<sup>3</sup>
+</td><td align="left" valign="top" rowspan="1" colspan="1">47.1±5.2<sup>2</sup>
+</td></tr></tbody></table><table-wrap-foot><fn id="T2_FN1"><p>Values with different superscript numbers across each row were significantly different from one another at the p&lt;0.001 level or less.</p></fn><fn id="T2_FN2"><p>ANOVA, analysis of variance; DXA, dual-energy X-ray absorptiometry.</p></fn></table-wrap-foot></table-wrap><p>Both the RJL and InBody BIA devices produced reasonable results for overall FFM (SD of error (SDE) 2.0–4.0 kg) and %BF (SDE 2.7%–4.3%) when compared with DXA values (<xref rid="F1" ref-type="fig">figure 1</xref> and <xref rid="T3" ref-type="table">table 3</xref>). Individually assessed values from the InBody were more highly correlated for both FFM and %BF (R<sup>2</sup>=0.96 and 0.84, respectively) (<xref rid="F2" ref-type="fig">figure 2</xref>) compared with those from the RJL (R<sup>2</sup>=0.92 and 0.72, respectively) for all volunteers (<xref rid="F3" ref-type="fig">figure 3</xref>). However, values from the InBody were systemically off, overpredicting FFM and underpredicting %BF (<xref rid="F2" ref-type="fig">figure 2</xref> and <xref rid="T3" ref-type="table">table 3</xref>), while RJL was more evenly distributed (<xref rid="F3" ref-type="fig">figure 3</xref> and <xref rid="T3" ref-type="table">table 3</xref>). Estimate errors from the InBody 770 were within a more narrow range compared with those of the RJL (with the algorithms developed for NHANES) (<xref rid="T3" ref-type="table">table 3</xref> and <xref rid="F2 F3" ref-type="fig">figures 2 and 3</xref>). Accuracy and error rates specific to men and women found that both methods (RJL and InBody) have more reliable accuracy (lower error and narrower LoA range) for women than men (<xref rid="T3" ref-type="table">table 3</xref>).</p><table-wrap position="float" id="T3" orientation="portrait"><label>Table 3</label><caption><p>Accuracy of InBody (770) and RJL (Quantum IV) to DXA body fat percent (%BF) and fat-free mass (FFM)</p></caption><table frame="hsides" rules="groups"><thead><tr><td align="left" valign="bottom" rowspan="2" colspan="1">Measure</td><td align="left" valign="bottom" rowspan="1" colspan="3">InBody 770</td><td align="left" valign="bottom" rowspan="1" colspan="3">RJL (Quantum IV)</td></tr><tr><td align="left" valign="bottom" rowspan="1" colspan="1">All</td><td align="left" valign="bottom" rowspan="1" colspan="1">Men</td><td align="left" valign="bottom" rowspan="1" colspan="1">Women</td><td align="left" valign="bottom" rowspan="1" colspan="1">All</td><td align="left" valign="bottom" rowspan="1" colspan="1">Men</td><td align="left" valign="bottom" rowspan="1" colspan="1">Women</td></tr></thead><tbody><tr><td align="left" valign="top" rowspan="1" colspan="1">%BF</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> Bias</td><td align="left" valign="top" rowspan="1" colspan="1">–3.4</td><td align="left" valign="top" rowspan="1" colspan="1">–4.1</td><td align="left" valign="top" rowspan="1" colspan="1">–2.5</td><td align="left" valign="top" rowspan="1" colspan="1">–1.1</td><td align="left" valign="top" rowspan="1" colspan="1">–2.0</td><td align="left" valign="top" rowspan="1" colspan="1">–1.6</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> MAE</td><td align="left" valign="top" rowspan="1" colspan="1">3.9</td><td align="left" valign="top" rowspan="1" colspan="1">4.4</td><td align="left" valign="top" rowspan="1" colspan="1">3.1</td><td align="left" valign="top" rowspan="1" colspan="1">2.7</td><td align="left" valign="top" rowspan="1" colspan="1">3.8</td><td align="left" valign="top" rowspan="1" colspan="1">3.4</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> SDE</td><td align="left" valign="top" rowspan="1" colspan="1">3.1</td><td align="left" valign="top" rowspan="1" colspan="1">3.2</td><td align="left" valign="top" rowspan="1" colspan="1">2.8</td><td align="left" valign="top" rowspan="1" colspan="1">3.3</td><td align="left" valign="top" rowspan="1" colspan="1">4.3</td><td align="left" valign="top" rowspan="1" colspan="1">3.9</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA upper</td><td align="left" valign="top" rowspan="1" colspan="1">2.7</td><td align="left" valign="top" rowspan="1" colspan="1">2.2</td><td align="left" valign="top" rowspan="1" colspan="1">2.9</td><td align="left" valign="top" rowspan="1" colspan="1">5.3</td><td align="left" valign="top" rowspan="1" colspan="1">6.4</td><td align="left" valign="top" rowspan="1" colspan="1">6.1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA lower</td><td align="left" valign="top" rowspan="1" colspan="1">–9.5</td><td align="left" valign="top" rowspan="1" colspan="1">–10.3</td><td align="left" valign="top" rowspan="1" colspan="1">–7.9</td><td align="left" valign="top" rowspan="1" colspan="1">–7.4</td><td align="left" valign="top" rowspan="1" colspan="1">–10.3</td><td align="left" valign="top" rowspan="1" colspan="1">–9.3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA absolute range</td><td align="left" valign="top" rowspan="1" colspan="1">12.2</td><td align="left" valign="top" rowspan="1" colspan="1">12.4</td><td align="left" valign="top" rowspan="1" colspan="1">10.9</td><td align="left" valign="top" rowspan="1" colspan="1">12.8</td><td align="left" valign="top" rowspan="1" colspan="1">16.7</td><td align="left" valign="top" rowspan="1" colspan="1">15.4</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">FFM (kg)</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> Bias</td><td align="left" valign="top" rowspan="1" colspan="1">–2.7</td><td align="left" valign="top" rowspan="1" colspan="1">3.3</td><td align="left" valign="top" rowspan="1" colspan="1">1.8</td><td align="left" valign="top" rowspan="1" colspan="1">0.7</td><td align="left" valign="top" rowspan="1" colspan="1">1.6</td><td align="left" valign="top" rowspan="1" colspan="1">1.2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> MAE</td><td align="left" valign="top" rowspan="1" colspan="1">3.1</td><td align="left" valign="top" rowspan="1" colspan="1">3.7</td><td align="left" valign="top" rowspan="1" colspan="1">2.1</td><td align="left" valign="top" rowspan="1" colspan="1">1.9</td><td align="left" valign="top" rowspan="1" colspan="1">3.4</td><td align="left" valign="top" rowspan="1" colspan="1">2.8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> SDE</td><td align="left" valign="top" rowspan="1" colspan="1">2.8</td><td align="left" valign="top" rowspan="1" colspan="1">3.0</td><td align="left" valign="top" rowspan="1" colspan="1">2.0</td><td align="left" valign="top" rowspan="1" colspan="1">2.3</td><td align="left" valign="top" rowspan="1" colspan="1">4.0</td><td align="left" valign="top" rowspan="1" colspan="1">3.5</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA upper</td><td align="left" valign="top" rowspan="1" colspan="1">8.2</td><td align="left" valign="top" rowspan="1" colspan="1">9.3</td><td align="left" valign="top" rowspan="1" colspan="1">5.7</td><td align="left" valign="top" rowspan="1" colspan="1">5.3</td><td align="left" valign="top" rowspan="1" colspan="1">9.4</td><td align="left" valign="top" rowspan="1" colspan="1">8.0</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA lower</td><td align="left" valign="top" rowspan="1" colspan="1">–2.6</td><td align="left" valign="top" rowspan="1" colspan="1">–2.6</td><td align="left" valign="top" rowspan="1" colspan="1">–2.2</td><td align="left" valign="top" rowspan="1" colspan="1">–3.9</td><td align="left" valign="top" rowspan="1" colspan="1">–6.3</td><td align="left" valign="top" rowspan="1" colspan="1">–5.6</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA absolute range</td><td align="left" valign="top" rowspan="1" colspan="1">10.9</td><td align="left" valign="top" rowspan="1" colspan="1">11.9</td><td align="left" valign="top" rowspan="1" colspan="1">7.9</td><td align="left" valign="top" rowspan="1" colspan="1">9.1</td><td align="left" valign="top" rowspan="1" colspan="1">15.7</td><td align="left" valign="top" rowspan="1" colspan="1">13.5</td></tr></tbody></table><table-wrap-foot><fn id="T3_FN1"><p>DXA, dual-energy X-ray absorptiometry; LoA, 95% limits of agreement; MAE, mean absolute error; SDE, SD of error.</p></fn></table-wrap-foot></table-wrap><fig position="float" id="F2" orientation="portrait"><label>Figure 2</label><caption><p>InBody body fat percent (%BF) (left panels) and fat-free mass (FFM) (right panels) compared with DXA and errors (bottom panels). BIA, bioelectrical impedance analysis; DXA, dual-energy X-ray absorptiometry.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bmjnph-2022-000512f01.jpg"/></fig><fig position="float" id="F3" orientation="portrait"><label>Figure 3</label><caption><p>RJL body fat percent (%BF) (left panels) and fat-free mass (FFM) (right panels) compared with DXA and errors (bottom panels). BIA, bioelectrical impedance analysis; DXA, dual-energy X-ray absorptiometry.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bmjnph-2022-000512f02.jpg"/></fig><fig position="float" id="F1" orientation="portrait"><label>Figure 1</label><caption><p>Compared overall values between DXA, InBody and RJL body fat percent (%BF) (left panel) and fat-free mass (FFM) (right panel). Error bars=minimum and maximum values. DXA, dual-energy X-ray absorptiometry.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bmjnph-2022-000512f03.jpg"/></fig><p>Given the highly correlated values (FFM and BF) and tightly ranged errors produced from the InBody, offsets to these values can be made to reasonably produce corrections to the estimates. From the data, two methods were developed to make systemic correction offsets based on %BF calculation. The first method solved for a zero bias for %BF and ±0.05 bias FFM using a linear fit equation to the original %BF calculation (corrected %BF=0.8502×InBody_%BF+6.951) (<xref rid="F4" ref-type="fig">figure 4</xref> and <xref rid="T4" ref-type="table">table 4</xref>). The second method optimised for lowest MAE and LoA absolute range using an increase of 2.99% to all %BF estimates (%BF +2.99) (<xref rid="F5" ref-type="fig">figure 5</xref> and <xref rid="T5" ref-type="table">table 5</xref>). Both of these methods improved the error and accuracy, while the second method produced the most notable improvements (bias, MAE, LoA) (<xref rid="T4 T5" ref-type="table">tables 4 and 5</xref>). Optimised corrections for the increased %BF offset were fit specifically for men and women separately but found minimal differences in the values (men, +2.84% and women, +2.98%). Therefore, the optimised solution based on the total data (+2.99%) was chosen as it provided improved accuracy for both men and women, on a population but not individual-level correction (<xref rid="T5" ref-type="table">table 5</xref>). Additionally, the error plot of %BF within the RJL system (<xref rid="F3" ref-type="fig">figure 3</xref>) shows a slight negative proportional bias (−0.2×+3.72, r<sup>2</sup>=0.13), while the error plot of %BF for the linear corrected InBody (<xref rid="F4" ref-type="fig">figure 4</xref>) shows a slight negative proportional bias (−0.2×+4.2, r<sup>2</sup>=0.16); both the unadjusted (<xref rid="F2" ref-type="fig">figure 2</xref>) and +2.99 InBody (<xref rid="F5" ref-type="fig">figure 5</xref>) %BF values showed no bias in their errors (0.0×–3.2, r<sup>2</sup>=0.00).</p><fig position="float" id="F4" orientation="portrait"><label>Figure 4</label><caption><p>InBody linear fit equation correction (corrected %BF=0.8502×InBody_%BF+6.951) for corrected %BF (left panels) and FFM (right panels) and errors (bottom panels). BIA, bioelectrical impedance analysis; DXA, dual-energy X-ray absorptiometry.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bmjnph-2022-000512f04.jpg"/></fig><table-wrap position="float" id="T4" orientation="portrait"><label>Table 4</label><caption><p>Accuracy of InBody (770) and linear correction to DXA body fat percent (%BF) and fat-free mass (FFM)</p></caption><table frame="hsides" rules="groups"><thead><tr><td align="left" valign="bottom" rowspan="2" colspan="1">
+<break/>Measure</td><td align="left" valign="bottom" rowspan="1" colspan="3">InBody 770</td><td align="left" valign="bottom" rowspan="1" colspan="3">InBody correction<break/>%BF=0.8502×InBody%BF+6.951</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">All</td><td align="left" valign="top" rowspan="1" colspan="1">Men</td><td align="left" valign="top" rowspan="1" colspan="1">Women</td><td align="left" valign="top" rowspan="1" colspan="1">All</td><td align="left" valign="top" rowspan="1" colspan="1">Men</td><td align="left" valign="top" rowspan="1" colspan="1">Women</td></tr></thead><tbody><tr><td align="char" char="." valign="top" rowspan="1" colspan="1">%BF</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> Bias</td><td align="left" valign="top" rowspan="1" colspan="1">−3.4</td><td align="left" valign="top" rowspan="1" colspan="1">−4.1</td><td align="left" valign="top" rowspan="1" colspan="1">−2.5</td><td align="left" valign="top" rowspan="1" colspan="1">0.0</td><td align="left" valign="top" rowspan="1" colspan="1">−0.1</td><td align="left" valign="top" rowspan="1" colspan="1">0.1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> MAE</td><td align="left" valign="top" rowspan="1" colspan="1">3.9</td><td align="left" valign="top" rowspan="1" colspan="1">4.4</td><td align="left" valign="top" rowspan="1" colspan="1">3.1</td><td align="left" valign="top" rowspan="1" colspan="1">2.2</td><td align="left" valign="top" rowspan="1" colspan="1">2.4</td><td align="left" valign="top" rowspan="1" colspan="1">2.0</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> SDE</td><td align="left" valign="top" rowspan="1" colspan="1">3.1</td><td align="left" valign="top" rowspan="1" colspan="1">3.2</td><td align="left" valign="top" rowspan="1" colspan="1">2.8</td><td align="left" valign="top" rowspan="1" colspan="1">2.9</td><td align="left" valign="top" rowspan="1" colspan="1">3.1</td><td align="left" valign="top" rowspan="1" colspan="1">2.6</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA upper</td><td align="left" valign="top" rowspan="1" colspan="1">2.7</td><td align="left" valign="top" rowspan="1" colspan="1">2.2</td><td align="left" valign="top" rowspan="1" colspan="1">2.9</td><td align="left" valign="top" rowspan="1" colspan="1">5.7</td><td align="left" valign="top" rowspan="1" colspan="1">5.9</td><td align="left" valign="top" rowspan="1" colspan="1">5.2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA lower</td><td align="left" valign="top" rowspan="1" colspan="1">−9.5</td><td align="left" valign="top" rowspan="1" colspan="1">−10.3</td><td align="left" valign="top" rowspan="1" colspan="1">−7.9</td><td align="left" valign="top" rowspan="1" colspan="1">−5.7</td><td align="left" valign="top" rowspan="1" colspan="1">−6.0</td><td align="left" valign="top" rowspan="1" colspan="1">−5.0</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA absolute range</td><td align="left" valign="top" rowspan="1" colspan="1">12.2</td><td align="left" valign="top" rowspan="1" colspan="1">12.4</td><td align="left" valign="top" rowspan="1" colspan="1">10.9</td><td align="left" valign="top" rowspan="1" colspan="1">11.3</td><td align="left" valign="top" rowspan="1" colspan="1">12.0</td><td align="left" valign="top" rowspan="1" colspan="1">10.2</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">FFM (kg)</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> Bias</td><td align="left" valign="top" rowspan="1" colspan="1">−2.7</td><td align="left" valign="top" rowspan="1" colspan="1">3.3</td><td align="left" valign="top" rowspan="1" colspan="1">1.8</td><td align="left" valign="top" rowspan="1" colspan="1">−0.1</td><td align="left" valign="top" rowspan="1" colspan="1">−0.1</td><td align="left" valign="top" rowspan="1" colspan="1">0.0</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> MAE</td><td align="left" valign="top" rowspan="1" colspan="1">3.1</td><td align="left" valign="top" rowspan="1" colspan="1">3.7</td><td align="left" valign="top" rowspan="1" colspan="1">2.1</td><td align="left" valign="top" rowspan="1" colspan="1">1.9</td><td align="left" valign="top" rowspan="1" colspan="1">2.2</td><td align="left" valign="top" rowspan="1" colspan="1">1.4</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> SDE</td><td align="left" valign="top" rowspan="1" colspan="1">2.8</td><td align="left" valign="top" rowspan="1" colspan="1">3.0</td><td align="left" valign="top" rowspan="1" colspan="1">2.0</td><td align="left" valign="top" rowspan="1" colspan="1">2.6</td><td align="left" valign="top" rowspan="1" colspan="1">2.9</td><td align="left" valign="top" rowspan="1" colspan="1">1.9</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA upper</td><td align="left" valign="top" rowspan="1" colspan="1">8.2</td><td align="left" valign="top" rowspan="1" colspan="1">9.3</td><td align="left" valign="top" rowspan="1" colspan="1">5.7</td><td align="left" valign="top" rowspan="1" colspan="1">5.0</td><td align="left" valign="top" rowspan="1" colspan="1">5.6</td><td align="left" valign="top" rowspan="1" colspan="1">3.8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA lower</td><td align="left" valign="top" rowspan="1" colspan="1">−2.8</td><td align="left" valign="top" rowspan="1" colspan="1">−2.6</td><td align="left" valign="top" rowspan="1" colspan="1">−2.2</td><td align="left" valign="top" rowspan="1" colspan="1">−5.1</td><td align="left" valign="top" rowspan="1" colspan="1">−5.8</td><td align="left" valign="top" rowspan="1" colspan="1">−3.8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA absolute range</td><td align="left" valign="top" rowspan="1" colspan="1">10.9</td><td align="left" valign="top" rowspan="1" colspan="1">11.9</td><td align="left" valign="top" rowspan="1" colspan="1">7.9</td><td align="left" valign="top" rowspan="1" colspan="1">10.1</td><td align="left" valign="top" rowspan="1" colspan="1">11.4</td><td align="left" valign="top" rowspan="1" colspan="1">7.6</td></tr></tbody></table><table-wrap-foot><fn id="T4_FN1"><p>DXA, dual-energy X-ray absorptiometry; LoA, 95% limits of agreement; MAE, mean absolute error; SDE, SD of error.</p></fn></table-wrap-foot></table-wrap><fig position="float" id="F5" orientation="portrait"><label>Figure 5</label><caption><p>InBody correction adding 2.99% to all %BF estimates for %BF (left panels) and FFM (right panels) and errors (bottom panels). BIA, bioelectrical impedance analysis; DXA, dual-energy X-ray absorptiometry.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="bmjnph-2022-000512f05.jpg"/></fig><table-wrap position="float" id="T5" orientation="portrait"><label>Table 5</label><caption><p>Accuracy of InBody (770) and correction of 2.99% for DXA body fat percent (%BF) and fat-free mass (FFM)</p></caption><table frame="hsides" rules="groups"><thead><tr><td align="left" valign="bottom" rowspan="2" colspan="1">
+<break/>Measure</td><td align="left" valign="bottom" rowspan="1" colspan="3">InBody 770</td><td align="left" valign="bottom" rowspan="1" colspan="3">InBody Correction+2.99%</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">All</td><td align="left" valign="top" rowspan="1" colspan="1">Men</td><td align="left" valign="top" rowspan="1" colspan="1">Women</td><td align="left" valign="top" rowspan="1" colspan="1">All</td><td align="left" valign="top" rowspan="1" colspan="1">Men</td><td align="left" valign="top" rowspan="1" colspan="1">Women</td></tr></thead><tbody><tr><td align="left" valign="top" rowspan="1" colspan="1">%BF</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> Bias</td><td align="left" valign="top" rowspan="1" colspan="1">−3.4</td><td align="left" valign="top" rowspan="1" colspan="1">−4.1</td><td align="left" valign="top" rowspan="1" colspan="1">−2.5</td><td align="left" valign="top" rowspan="1" colspan="1">−0.5</td><td align="left" valign="top" rowspan="1" colspan="1">−1.1</td><td align="left" valign="top" rowspan="1" colspan="1">0.5</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> MAE</td><td align="left" valign="top" rowspan="1" colspan="1">3.9</td><td align="left" valign="top" rowspan="1" colspan="1">4.4</td><td align="left" valign="top" rowspan="1" colspan="1">3.1</td><td align="left" valign="top" rowspan="1" colspan="1">2.4</td><td align="left" valign="top" rowspan="1" colspan="1">2.6</td><td align="left" valign="top" rowspan="1" colspan="1">2.0</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> SDE</td><td align="left" valign="top" rowspan="1" colspan="1">3.1</td><td align="left" valign="top" rowspan="1" colspan="1">3.2</td><td align="left" valign="top" rowspan="1" colspan="1">2.8</td><td align="left" valign="top" rowspan="1" colspan="1">3.1</td><td align="left" valign="top" rowspan="1" colspan="1">3.2</td><td align="left" valign="top" rowspan="1" colspan="1">2.8</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA upper</td><td align="left" valign="top" rowspan="1" colspan="1">2.7</td><td align="left" valign="top" rowspan="1" colspan="1">2.2</td><td align="left" valign="top" rowspan="1" colspan="1">2.9</td><td align="left" valign="top" rowspan="1" colspan="1">5.7</td><td align="left" valign="top" rowspan="1" colspan="1">5.2</td><td align="left" valign="top" rowspan="1" colspan="1">5.9</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA lower</td><td align="left" valign="top" rowspan="1" colspan="1">−9.5</td><td align="left" valign="top" rowspan="1" colspan="1">−10.3</td><td align="left" valign="top" rowspan="1" colspan="1">−7.9</td><td align="left" valign="top" rowspan="1" colspan="1">−6.6</td><td align="left" valign="top" rowspan="1" colspan="1">−7.3</td><td align="left" valign="top" rowspan="1" colspan="1">−4.9</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA absolute range</td><td align="left" valign="top" rowspan="1" colspan="1">12.2</td><td align="left" valign="top" rowspan="1" colspan="1">12.4</td><td align="left" valign="top" rowspan="1" colspan="1">10.9</td><td align="left" valign="top" rowspan="1" colspan="1">12.2</td><td align="left" valign="top" rowspan="1" colspan="1">12.4</td><td align="left" valign="top" rowspan="1" colspan="1">10.9</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">FFM (kg)</td><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/><td align="left" valign="top" rowspan="1" colspan="1"/></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> Bias</td><td align="left" valign="top" rowspan="1" colspan="1">−2.7</td><td align="left" valign="top" rowspan="1" colspan="1">3.3</td><td align="left" valign="top" rowspan="1" colspan="1">1.8</td><td align="left" valign="top" rowspan="1" colspan="1">0.3</td><td align="left" valign="top" rowspan="1" colspan="1">0.7</td><td align="left" valign="top" rowspan="1" colspan="1">−0.3</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> MAE</td><td align="left" valign="top" rowspan="1" colspan="1">3.1</td><td align="left" valign="top" rowspan="1" colspan="1">3.7</td><td align="left" valign="top" rowspan="1" colspan="1">2.1</td><td align="left" valign="top" rowspan="1" colspan="1">2.0</td><td align="left" valign="top" rowspan="1" colspan="1">2.3</td><td align="left" valign="top" rowspan="1" colspan="1">1.4</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> SDE</td><td align="left" valign="top" rowspan="1" colspan="1">2.8</td><td align="left" valign="top" rowspan="1" colspan="1">3.0</td><td align="left" valign="top" rowspan="1" colspan="1">2.0</td><td align="left" valign="top" rowspan="1" colspan="1">2.7</td><td align="left" valign="top" rowspan="1" colspan="1">3.0</td><td align="left" valign="top" rowspan="1" colspan="1">2.0</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA upper</td><td align="left" valign="top" rowspan="1" colspan="1">8.2</td><td align="left" valign="top" rowspan="1" colspan="1">9.3</td><td align="left" valign="top" rowspan="1" colspan="1">5.7</td><td align="left" valign="top" rowspan="1" colspan="1">5.5</td><td align="left" valign="top" rowspan="1" colspan="1">6.6</td><td align="left" valign="top" rowspan="1" colspan="1">3.5</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA lower</td><td align="left" valign="top" rowspan="1" colspan="1">−2.8</td><td align="left" valign="top" rowspan="1" colspan="1">−2.6</td><td align="left" valign="top" rowspan="1" colspan="1">−2.2</td><td align="left" valign="top" rowspan="1" colspan="1">−4.9</td><td align="left" valign="top" rowspan="1" colspan="1">−5.1</td><td align="left" valign="top" rowspan="1" colspan="1">−4.1</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1"> LoA absolute range</td><td align="left" valign="top" rowspan="1" colspan="1">10.9</td><td align="left" valign="top" rowspan="1" colspan="1">11.9</td><td align="left" valign="top" rowspan="1" colspan="1">7.9</td><td align="left" valign="top" rowspan="1" colspan="1">10.4</td><td align="left" valign="top" rowspan="1" colspan="1">11.6</td><td align="left" valign="top" rowspan="1" colspan="1">7.7</td></tr></tbody></table><table-wrap-foot><fn id="T5_FN1"><p>DXA, dual-energy X-ray absorptiometry; LoA, 95% limits of agreement; MAE, mean absolute error; SDE, SD of error.</p></fn></table-wrap-foot></table-wrap></sec><sec sec-type="discussion" id="s4"><title>Discussion</title><p>The %BF and FFM predictions by two commonly used but very different BIA systems were similar and proved suitable for applications involving healthy fit non-obese adults. This is based on our results from a comparison with values obtained using DXA in a large diverse sample including men and women, with data collected under uncontrolled real-life conditions (eg, hydration state, meal timing, recent exercise). The InBody 770 results in this study were similar to previously reported assessments of this device and other multi-frequency BIA devices, with a general overprediction of FFM and underprediction of %BF.<xref rid="R29" ref-type="bibr">29–34</xref> Easily applied correction factors brought the measurements in line with the estimates from DXA and from the RJL device and algorithms. The conventional laboratory-based RJL device and the algorithms developed for NHANES<xref rid="R18" ref-type="bibr">18</xref> provided slightly more accurate but very similar results to the InBody adjusted values. Thus, differences in posture (prone vs standing), electrode placement (tetrapolar electrodes applied to one side of the body vs metal contacts for hands and feet) and algorithms (NHANES 50 kHz algorithms vs proprietary multi-frequency InBody algorithms) caused no major differences in the estimation of FFM and %BF between the devices or in reference to the DXA estimations. In other words, although raw data outputs from these two different approaches would be expected to be different, the algorithms applied to the respective systems produce very similar and nearly interchangeable predictions of %BF and FFM.</p><p>Many studies have noted limitations of adequate representation of race and the potential for systematic biases.<xref rid="R20" ref-type="bibr">20 35 36</xref> While there is still clearly a need for obtaining more targeted and diverse data, the present study included proportional representation of races similar to those within the USA<xref rid="R37" ref-type="bibr">37</xref> and generally a higher relative sample size compared with similar studies.<xref rid="R20" ref-type="bibr">20</xref> The 2021 US Census<xref rid="R37" ref-type="bibr">37</xref> reported race proportionally as being 76.3% white (60.1% non-Hispanic white), 18.5% Hispanic, 13.4% black, 5.9% Asian, 1.3% Native American and 2.8% multiple (two or more); while our present study sample is comprised of 49.6% non-Hispanic white (n=394), 28.3% Hispanic (n=225), 9.4% black (n=75), 4.3% Asian (n=34), 0.6% Native American (n=5) and 6.9% as multiple (n=55) (0.9% were recorded as ‘other’ or no answer).</p><p>One advantage of using a user-standardised method (eg, InBody 770) versus a clinical-based or laboratory-based method (eg, RJL) is the likely reduction in user error (eg, consistent electrode contact/placement, standardised posture and position of limbs, and avoidance of random surface conductance). This addresses some of the variability in data that had been raised in earlier studies.<xref rid="R12" ref-type="bibr">12</xref> The laboratory-based method has more opportunity for technician/user error and interobserver differences (eg, electrode placement and body position). The current analyses indicate that commercial systems such as the InBody 770 provide a standardised and simplified method of assessing body composition that is less dependent on careful technician attention to electrode placement and patient positioning. It is important to note that for clinical assessments, there is value in using higher resolution assessments such as bioimpedance spectrometry (BIS), where rather than using single or multiple frequencies (typically 4–6), data are modelled to fit measured impedance values from many frequencies (eg, hundreds). While others have shown multi-frequency BIA methods can provide accuracy comparable with BIS,<xref rid="R38" ref-type="bibr">38 39</xref> the current assessment highlights that when compared with DXA, the standing multi-frequency InBody 770 provides an accessible and accurate method of assessing body composition.</p><p>The BIA methods generally (eg, InBody, RJL) provide precision in gross body composition analyses that are shown to be better than other field expedient methods such as circumference taping.<xref rid="R40" ref-type="bibr">40</xref> The BIA appears to track body composition change, providing an important advantage over anthropometrically based prediction of body composition, especially for women.<xref rid="R29" ref-type="bibr">29 41 42</xref> Commonly used anthropometric predictions using circumferences or skinfolds fail to predict changes detected by DXA in female Army recruits who experience substantial increases in lean mass and reductions in fat mass over 2 months of basic training.<xref rid="R43" ref-type="bibr">43</xref> BIA assessment of total body composition should provide a more accurate prediction for women than regionally based anthropometric predictions because of the difficulty in assessing the wide variation of body fat topography in women (compared with men).<xref rid="R44" ref-type="bibr">44</xref>
+</p><p>BIA more directly assesses the water-containing lean mass component of body composition (vs the inferred fat mass), providing credible predictions for applications related to management of muscle mass. This is important in physical training programmes and perhaps even for physical employment standards for jobs requiring at least a minimum threshold of lean mass for safe and effective task performance. The InBody system has already been used extensively in male military conscript training studies in Finland.<xref rid="R45" ref-type="bibr">45–47</xref>
+</p></sec><sec sec-type="conclusions" id="s5"><title>Conclusions</title><p>More than 25 years after the 1994 NIH Consensus Committee recommendations on research gaps in BIA technology for body composition applications, the technology is proving to be more reliable and useful for field research and in weight management programmes. At least one commercial system (InBody 770) provides body composition predictions that are comparable with a longstanding laboratory BIA device (RJL System), with devices and algorithms that both predict criterion measures based on the DXA system. We found that there was a systematic offset with under-reporting of %BF for the InBody 770 but this can be corrected with a simple adjustment factor. This opens the door to the widespread use of BIA for health and performance research, where specialised training and technician support are not required. Accumulation of these new data will enable more precise understanding of the relationship between adiposity and health outcomes, replacing (or augmenting) weight-for-height data that have for so long served as a poor surrogate measure of body composition in public health. A new appreciation of the lean mass component may similarly benefit public health in the prevention of sarcopenia and for injury prevention in physically demanding occupations.</p></sec></body><back><ack><p>The authors thank the men and women from the Marines who volunteered to participate in this study. The authors also thank Brian McGuire, USMC Training and Education Command and CDR David McEttrick, USMC Marine Expeditionary Rifle Squad, Marine Corps Systems Command for their support and guidance throughout the study. We would also like to thank Major Kimberly Wade, GySgt Travis Titopace, GySgt Clifford Souza, Jason Hancock, Hope Soucy, Lucas Holden, Dr Elisa Guerra and Sai Vangala for assistance in coordinating, organising and collection of study data.</p></ack><fn-group><fn fn-type="other"><p><bold>Contributors:</bold> Guarantor—AWP. Conceptualisation—AWP and KEF. Methodology—AWP, DPL, WJT and KEF. Formal analysis—AWP, DPL, WJT and KEF. Writing (original draft preparation)—AWP and KEF. Writing (review and editing)—AWP, LJN, LDS, AP, DPL, WJT, JAR-E and KEF. All authors have read and agreed to the published version of the manuscript.</p></fn><fn fn-type="other"><p><bold>Funding:</bold> Research was funded by the Military Operational Medicine Research Program, Fort Detrick, Maryland, USA.</p></fn><fn fn-type="other"><p><bold>Disclaimer:</bold> The opinions or assertions contained herein are the private views of the author(s) and are not to be construed as official or reflecting the views of the Army, Marine Corps or the Department of Defense. Any citations of commercial organisations and trade names in this report do not constitute an official Department of the Army or US Marine Corps endorsement of approval of the products or services of these organisations.</p></fn><fn fn-type="COI-statement"><p><bold>Competing interests:</bold> None declared.</p></fn><fn fn-type="other"><p><bold>Provenance and peer review:</bold> Not commissioned; externally peer reviewed by Dr Jose Rojas, Nova Southeastern University, Fort Lauderdale, USA.</p></fn></fn-group><sec sec-type="data-availability"><title>Data availability statement</title><p>Data are available upon reasonable request. The data presented in this study are available on request from the corresponding author. The data are not publicly available due to privacy and associated regulatory constraints.</p></sec><sec sec-type="ethics-statement"><title>Ethics statements</title><sec><title>Patient consent for publication</title><p content-type="ethics-consent-to-publish">Obtained.</p></sec><sec><title>Ethics approval</title><p content-type="ethics-approval">Prior to study-related activities, all volunteers provided written informed consent and women were provided a rapid pregnancy test to establish absence of detectable pregnancy. This study was approved by the US Army Medical Research and Development Command and US Marine Corps Institutional Review Boards (protocol M10873, approved March 2021).</p></sec></sec><ref-list><title>References</title><ref id="R1"><label>1</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Thomasset</surname>
+<given-names>MA</given-names>
+</string-name>
+</person-group>. <article-title>[Bioelectric properties of tissue. Impedance measurement in clinical medicine. Significance of curves obtained]</article-title>. <source>Lyon Med</source>
+<year>1962</year>;<volume>94</volume>:<fpage>107</fpage>–<lpage>18</lpage>.
+<pub-id pub-id-type="pmid">13920843</pub-id></mixed-citation></ref><ref id="R2"><label>2</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Nyboer</surname>
+<given-names>J</given-names>
+</string-name>
+</person-group>. <part-title>Electrical impedance plethysmography</part-title>. In: <person-group person-group-type="editor">
+<string-name name-style="western">
+<surname>Thomas</surname>
+<given-names>CC</given-names>
+</string-name>
+</person-group>, ed. <source>Springfield, ill</source>, <year>1959</year>.</mixed-citation></ref><ref id="R3"><label>3</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Hoffer</surname>
+<given-names>EC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Meador</surname>
+<given-names>CK</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Simpson</surname>
+<given-names>DC</given-names>
+</string-name>
+</person-group>. <article-title>Correlation of whole-body impedance with total body water volume</article-title>. <source>J Appl Physiol</source>
+<year>1969</year>;<volume>27</volume>:<fpage>531</fpage>–<lpage>4</lpage>. <pub-id pub-id-type="doi">10.1152/jappl.1969.27.4.531</pub-id>
+<pub-id pub-id-type="pmid">4898406</pub-id></mixed-citation></ref><ref id="R4"><label>4</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Moore</surname>
+<given-names>FD</given-names>
+</string-name>
+</person-group>. <source>The body cell mass and its supporting environment</source>. <publisher-loc>London</publisher-loc>: <publisher-name>W.B. Saunders</publisher-name>, <year>1963</year>.</mixed-citation></ref><ref id="R5"><label>5</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Mills</surname>
+<given-names>W</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rau</surname>
+<given-names>D</given-names>
+</string-name>
+</person-group>. <article-title>University of Alaska high latitude study, and the MT. McKinley project, 1981-1983</article-title>. <source>Alaska Med</source>
+<year>1983</year>;<volume>25</volume>:<fpage>21</fpage>–<lpage>8</lpage>.
+<pub-id pub-id-type="pmid">6614398</pub-id></mixed-citation></ref><ref id="R6"><label>6</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Pace</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rathbun</surname>
+<given-names>EN</given-names>
+</string-name>
+</person-group>. <article-title>Studies on body composition. 3. the body water and chemically combined nitrogen content in relation to fat content</article-title>. <source>J Biol Chem</source>
+<year>1945</year>;<volume>158</volume>:<fpage>685</fpage>–<lpage>91</lpage>. <pub-id pub-id-type="doi">10.1016/S0021-9258(19)51345-X</pub-id>
+</mixed-citation></ref><ref id="R7"><label>7</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Lukaski</surname>
+<given-names>HC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bolonchuk</surname>
+<given-names>WW</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hall</surname>
+<given-names>CB</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Validation of tetrapolar bioelectrical impedance method to assess human body composition</article-title>. <source>J Appl Physiol</source>
+<year>1986</year>;<volume>60</volume>:<fpage>1327</fpage>–<lpage>32</lpage>. <pub-id pub-id-type="doi">10.1152/jappl.1986.60.4.1327</pub-id>
+<pub-id pub-id-type="pmid">3700310</pub-id></mixed-citation></ref><ref id="R8"><label>8</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Kushner</surname>
+<given-names>RF</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schoeller</surname>
+<given-names>DA</given-names>
+</string-name>
+</person-group>. <article-title>Estimation of total body water by bioelectrical impedance analysis</article-title>. <source>Am J Clin Nutr</source>
+<year>1986</year>;<volume>44</volume>:<fpage>417</fpage>–<lpage>24</lpage>. <pub-id pub-id-type="doi">10.1093/ajcn/44.3.417</pub-id>
+<pub-id pub-id-type="pmid">3529918</pub-id></mixed-citation></ref><ref id="R9"><label>9</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Segal</surname>
+<given-names>KR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gutin</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Presta</surname>
+<given-names>E</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Estimation of human body composition by electrical impedance methods: a comparative study</article-title>. <source>J Appl Physiol</source>
+<year>1985</year>;<volume>58</volume>:<fpage>1565</fpage>–<lpage>71</lpage>. <pub-id pub-id-type="doi">10.1152/jappl.1985.58.5.1565</pub-id>
+<pub-id pub-id-type="pmid">3997721</pub-id></mixed-citation></ref><ref id="R10"><label>10</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Hodgdon</surname>
+<given-names>JA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fitzgerald</surname>
+<given-names>PI</given-names>
+</string-name>
+</person-group>. <article-title>Validity of impedance predictions at various levels of fatness</article-title>. <source>Hum Biol</source>
+<year>1987</year>;<volume>59</volume>:<fpage>281</fpage>–<lpage>98</lpage>.
+<pub-id pub-id-type="pmid">3596568</pub-id></mixed-citation></ref><ref id="R11"><label>11</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Segal</surname>
+<given-names>KR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Van Loan</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fitzgerald</surname>
+<given-names>PI</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Lean body mass estimation by bioelectrical impedance analysis: a four-site cross-validation study</article-title>. <source>Am J Clin Nutr</source>
+<year>1988</year>;<volume>47</volume>:<fpage>7</fpage>–<lpage>14</lpage>. <pub-id pub-id-type="doi">10.1093/ajcn/47.1.7</pub-id>
+<pub-id pub-id-type="pmid">3337041</pub-id></mixed-citation></ref><ref id="R12"><label>12</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Lukaski</surname>
+<given-names>HC</given-names>
+</string-name>
+</person-group>. <article-title>Biological indexes considered in the derivation of the bioelectrical impedance analysis</article-title>. <source>Am J Clin Nutr</source>
+<year>1996</year>;<volume>64</volume>:<fpage>397S</fpage>–<lpage>404</lpage>. <pub-id pub-id-type="doi">10.1093/ajcn/64.3.397S</pub-id>
+<pub-id pub-id-type="pmid">8780355</pub-id></mixed-citation></ref><ref id="R13"><label>13</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Chumlea</surname>
+<given-names>WC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Guo</surname>
+<given-names>SS</given-names>
+</string-name>
+</person-group>. <part-title>Bioelectrical impedance: a history, research issues, and recent consensus</part-title>. In: <person-group person-group-type="editor">
+<string-name name-style="western">
+<surname>Carlson-Newberry</surname>
+<given-names>SJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Costello</surname>
+<given-names>RB</given-names>
+</string-name>
+</person-group>, eds. <source>Emerging technologies for nutrition research. potential for assessing military performance capability</source>. <publisher-loc>Washington DC</publisher-loc>: <publisher-name>National Academy Press</publisher-name>, <year>1997</year>: <fpage>169</fpage>–<lpage>92</lpage>.<pub-id pub-id-type="pmid">25121304</pub-id></mixed-citation></ref><ref id="R14"><label>14</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<collab>National Institutes of Health</collab>
+</person-group>. <source>Bioelectrical impedance analysis in body composition measurement: National Institutes of health technology assessment conference statement, December 12-14, 1994</source>. <publisher-loc>Bethesda, Maryland</publisher-loc>: <publisher-name>NIH Office of Medical Applications of Research</publisher-name>, <year>1994</year>.</mixed-citation></ref><ref id="R15"><label>15</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Choi</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kim</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Shon</surname>
+<given-names>C</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>A new method for bioelectrical impedance analysis (BIA)</article-title>. <source>J Korean Soc Study Obes</source>
+<year>1997</year>;<volume>6</volume>:<fpage>85</fpage>–<lpage>94</lpage>.</mixed-citation></ref><ref id="R16"><label>16</label><mixed-citation publication-type="report">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Cha</surname>
+<given-names>KC</given-names>
+</string-name>
+</person-group>. <article-title>Apparatus and method for analyzing body composition based on bioelectrical impedance analysis, U.S. patent No. 5,720,296</article-title>; <year>1998</year>.</mixed-citation></ref><ref id="R17"><label>17</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Sun</surname>
+<given-names>SS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chumlea</surname>
+<given-names>WC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Heymsfield</surname>
+<given-names>SB</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Development of bioelectrical impedance analysis prediction equations for body composition with the use of a multicomponent model for use in epidemiologic surveys</article-title>. <source>Am J Clin Nutr</source>
+<year>2003</year>;<volume>77</volume>:<fpage>331</fpage>–<lpage>40</lpage>. <pub-id pub-id-type="doi">10.1093/ajcn/77.2.331</pub-id>
+<pub-id pub-id-type="pmid">12540391</pub-id></mixed-citation></ref><ref id="R18"><label>18</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Chumlea</surname>
+<given-names>WC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Guo</surname>
+<given-names>SS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kuczmarski</surname>
+<given-names>RJ</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Body composition estimates from NHANES III bioelectrical impedance data</article-title>. <source>Int J Obes Relat Metab Disord</source>
+<year>2002</year>;<volume>26</volume>:<fpage>1596</fpage>–<lpage>609</lpage>. <pub-id pub-id-type="doi">10.1038/sj.ijo.0802167</pub-id>
+<pub-id pub-id-type="pmid">12461676</pub-id></mixed-citation></ref><ref id="R19"><label>19</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Chumlea</surname>
+<given-names>W</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sun</surname>
+<given-names>S</given-names>
+</string-name>
+</person-group>. <part-title>Bioelectrical impedance analysis</part-title>. In: <source>Human body composition, 2</source>, <year>2005</year>: <fpage>79</fpage>–<lpage>88</lpage>.</mixed-citation></ref><ref id="R20"><label>20</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Kyle</surname>
+<given-names>UG</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bosaeus</surname>
+<given-names>I</given-names>
+</string-name>, <string-name name-style="western">
+<surname>De Lorenzo</surname>
+<given-names>AD</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Bioelectrical impedance analysis--part I: review of principles and methods</article-title>. <source>Clin Nutr</source>
+<year>2004</year>;<volume>23</volume>:<fpage>1226</fpage>–<lpage>43</lpage>. <pub-id pub-id-type="doi">10.1016/j.clnu.2004.06.004</pub-id>
+<pub-id pub-id-type="pmid">15380917</pub-id></mixed-citation></ref><ref id="R21"><label>21</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Houtkooper</surname>
+<given-names>LB</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lohman</surname>
+<given-names>TG</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Going</surname>
+<given-names>SB</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Why bioelectrical impedance analysis should be used for estimating adiposity</article-title>. <source>Am J Clin Nutr</source>
+<year>1996</year>;<volume>64</volume>:<fpage>436S</fpage>–<lpage>48</lpage>. <pub-id pub-id-type="doi">10.1093/ajcn/64.3.436S</pub-id>
+<pub-id pub-id-type="pmid">8780360</pub-id></mixed-citation></ref><ref id="R22"><label>22</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Cha</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chertow</surname>
+<given-names>GM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gonzalez</surname>
+<given-names>J</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Multifrequency bioelectrical impedance estimates the distribution of body water</article-title>. <source>J Appl Physiol</source>
+<year>1995</year>;<volume>79</volume>:<fpage>1316</fpage>–<lpage>9</lpage>. <pub-id pub-id-type="doi">10.1152/jappl.1995.79.4.1316</pub-id>
+<pub-id pub-id-type="pmid">8567578</pub-id></mixed-citation></ref><ref id="R23"><label>23</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Earthman</surname>
+<given-names>CP</given-names>
+</string-name>
+</person-group>. <article-title>Body composition tools for assessment of adult malnutrition at the bedside: a tutorial on research considerations and clinical applications</article-title>. <source>JPEN J Parenter Enteral Nutr</source>
+<year>2015</year>;<volume>39</volume>:<fpage>787</fpage>–<lpage>822</lpage>. <pub-id pub-id-type="doi">10.1177/0148607115595227</pub-id>
+<pub-id pub-id-type="pmid">26287016</pub-id></mixed-citation></ref><ref id="R24"><label>24</label><mixed-citation publication-type="book">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Lukaski</surname>
+<given-names>HC</given-names>
+</string-name>
+</person-group>. <part-title>Body composition in perspective</part-title>. In: <source>Body composition: health and performance in exercise and sport</source>, <year>2017</year>: <fpage>3</fpage>–<lpage>11</lpage>.</mixed-citation></ref><ref id="R25"><label>25</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Ward</surname>
+<given-names>LC</given-names>
+</string-name>
+</person-group>. <article-title>Segmental bioelectrical impedance analysis: an update</article-title>. <source>Curr Opin Clin Nutr Metab Care</source>
+<year>2012</year>;<volume>15</volume>:<fpage>424</fpage>–<lpage>9</lpage>. <pub-id pub-id-type="doi">10.1097/MCO.0b013e328356b944</pub-id>
+<pub-id pub-id-type="pmid">22814626</pub-id></mixed-citation></ref><ref id="R26"><label>26</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Tinsley</surname>
+<given-names>GM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Stratton</surname>
+<given-names>MT</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Harty</surname>
+<given-names>PS</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Influence of acute water ingestion and prolonged standing on RAW bioimpedance and subsequent body fluid and composition estimates</article-title>. <source>J Electr Bioimpedance</source>
+<year>2022</year>;<volume>13</volume>:<fpage>10</fpage>–<lpage>20</lpage>. <pub-id pub-id-type="doi">10.2478/joeb-2022-0003</pub-id>
+<pub-id pub-id-type="pmid">35646197</pub-id><pub-id pub-id-type="pmcid">PMC9124033</pub-id></mixed-citation></ref><ref id="R27"><label>27</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Bland</surname>
+<given-names>JM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Altman</surname>
+<given-names>DG</given-names>
+</string-name>
+</person-group>. <article-title>Statistical methods for assessing agreement between two methods of clinical measurement</article-title>. <source>Lancet</source>
+<year>1986</year>;<volume>1</volume>:<fpage>307</fpage>–<lpage>10</lpage>.
+<pub-id pub-id-type="pmid">2868172</pub-id></mixed-citation></ref><ref id="R28"><label>28</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Bland</surname>
+<given-names>JM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Altman</surname>
+<given-names>DG</given-names>
+</string-name>
+</person-group>. <article-title>Measuring agreement in method comparison studies</article-title>. <source>Stat Methods Med Res</source>
+<year>1999</year>;<volume>8</volume>:<fpage>135</fpage>–<lpage>60</lpage>. <pub-id pub-id-type="doi">10.1177/096228029900800204</pub-id>
+<pub-id pub-id-type="pmid">10501650</pub-id></mixed-citation></ref><ref id="R29"><label>29</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Antonio</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kenyon</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ellerbroek</surname>
+<given-names>A</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Comparison of dual-energy X-ray absorptiometry (DXA) versus a Multi-frequency bioelectrical impedance (InBody 770) device for body composition assessment after a 4-week Hypoenergetic diet</article-title>. <source>J Funct Morphol Kinesiol</source>
+<year>2019</year>;<volume>4</volume>:<elocation-id>23</elocation-id>. <pub-id pub-id-type="doi">10.3390/jfmk4020023</pub-id>
+<pub-id pub-id-type="pmid">33467338</pub-id><pub-id pub-id-type="pmcid">PMC7739224</pub-id></mixed-citation></ref><ref id="R30"><label>30</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Antonio</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kenyon</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ellerbroek</surname>
+<given-names>A</given-names>
+</string-name>
+</person-group>. <article-title>Body composition assessment: a comparison of the bod pod, InBody 770, and DXA</article-title>. <source>J Exerc Nutr</source>
+<year>2019</year>;<volume>2</volume>
+<uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.journalofexerciseandnutrition.com/index.php/JEN/article/view/44">https://www.journalofexerciseandnutrition.com/index.php/JEN/article/view/44</uri>
+</mixed-citation></ref><ref id="R31"><label>31</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Czartoryski</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Garcia</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Manimaleth</surname>
+<given-names>R</given-names>
+</string-name>
+</person-group>. <article-title>Body composition assessment: a comparison of the DXA, Inbody 270, and Omron</article-title>. <source>J Exerc Nutr</source>
+<year>2020</year>;<volume>3</volume>
+<uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://journalofexerciseandnutrition.com/index.php/JEN/article/view/57">https://journalofexerciseandnutrition.com/index.php/JEN/article/view/57</uri>
+</mixed-citation></ref><ref id="R32"><label>32</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Völgyi</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tylavsky</surname>
+<given-names>FA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lyytikäinen</surname>
+<given-names>A</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Assessing body composition with DXA and bioimpedance: effects of obesity, physical activity, and age</article-title>. <source>Obesity</source>
+<year>2008</year>;<volume>16</volume>:<fpage>700</fpage>–<lpage>5</lpage>. <pub-id pub-id-type="doi">10.1038/oby.2007.94</pub-id>
+<pub-id pub-id-type="pmid">18239555</pub-id></mixed-citation></ref><ref id="R33"><label>33</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Faria</surname>
+<given-names>SL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Faria</surname>
+<given-names>OP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cardeal</surname>
+<given-names>MDA</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Validation study of multi-frequency bioelectrical impedance with dual-energy X-ray absorptiometry among obese patients</article-title>. <source>Obes Surg</source>
+<year>2014</year>;<volume>24</volume>:<fpage>1476</fpage>–<lpage>80</lpage>. <pub-id pub-id-type="doi">10.1007/s11695-014-1190-5</pub-id>
+<pub-id pub-id-type="pmid">24464546</pub-id></mixed-citation></ref><ref id="R34"><label>34</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Gába</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kapuš</surname>
+<given-names>O</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cuberek</surname>
+<given-names>R</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Comparison of multi- and single-frequency bioelectrical impedance analysis with dual-energy X-ray absorptiometry for assessment of body composition in post-menopausal women: effects of body mass index and accelerometer-determined physical activity</article-title>. <source>J Hum Nutr Diet</source>
+<year>2015</year>;<volume>28</volume>:<fpage>390</fpage>–<lpage>400</lpage>. <pub-id pub-id-type="doi">10.1111/jhn.12257</pub-id>
+<pub-id pub-id-type="pmid">25039938</pub-id></mixed-citation></ref><ref id="R35"><label>35</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Deurenberg</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Deurenberg-Yap</surname>
+<given-names>M</given-names>
+</string-name>
+</person-group>. <article-title>Validity of body composition methods across ethnic population groups</article-title>. <source>Acta Diabetol</source>
+<year>2003</year>;<volume>40 Suppl 1</volume>:<fpage>s246</fpage>–<lpage>9</lpage>. <pub-id pub-id-type="doi">10.1007/s00592-003-0077-z</pub-id>
+<pub-id pub-id-type="pmid">14618484</pub-id></mixed-citation></ref><ref id="R36"><label>36</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Moore</surname>
+<given-names>ML</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Benavides</surname>
+<given-names>ML</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dellinger</surname>
+<given-names>JR</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Segmental body composition evaluation by bioelectrical impedance analysis and dual-energy X-ray absorptiometry: quantifying agreement between methods</article-title>. <source>Clin Nutr</source>
+<year>2020</year>;<volume>39</volume>:<fpage>2802</fpage>–<lpage>10</lpage>. <pub-id pub-id-type="doi">10.1016/j.clnu.2019.12.009</pub-id>
+<pub-id pub-id-type="pmid">31874783</pub-id></mixed-citation></ref><ref id="R37"><label>37</label><mixed-citation publication-type="report">
+<person-group person-group-type="author">
+<collab>United States, U.C.B.Q.U</collab>
+</person-group>. <article-title>Census bureau QuickFacts</article-title>; <year>2021</year>.</mixed-citation></ref><ref id="R38"><label>38</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Hannan</surname>
+<given-names>WJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cowen</surname>
+<given-names>SJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Plester</surname>
+<given-names>CE</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Comparison of bio-impedance spectroscopy and multi-frequency bio-impedance analysis for the assessment of extracellular and total body water in surgical patients</article-title>. <source>Clin Sci</source>
+<year>1995</year>;<volume>89</volume>:<fpage>651</fpage>–<lpage>8</lpage>. <pub-id pub-id-type="doi">10.1042/cs0890651</pub-id>
+<pub-id pub-id-type="pmid">8549085</pub-id></mixed-citation></ref><ref id="R39"><label>39</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Ward</surname>
+<given-names>LC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dyer</surname>
+<given-names>JM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Byrne</surname>
+<given-names>NM</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Validation of a three-frequency bioimpedance spectroscopic method for body composition analysis</article-title>. <source>Nutrition</source>
+<year>2007</year>;<volume>23</volume>:<fpage>657</fpage>–<lpage>64</lpage>. <pub-id pub-id-type="doi">10.1016/j.nut.2007.06.009</pub-id>
+<pub-id pub-id-type="pmid">17679047</pub-id></mixed-citation></ref><ref id="R40"><label>40</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Potter</surname>
+<given-names>AW</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tharion</surname>
+<given-names>WJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Holden</surname>
+<given-names>LD</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Circumference-based predictions of body fat revisited: preliminary results from a US marine Corps body composition survey</article-title>. <source>Front Physiol</source>
+<year>2022</year>;<volume>13</volume>:<elocation-id>536</elocation-id>. <pub-id pub-id-type="doi">10.3389/fphys.2022.868627</pub-id>
+<pub-id pub-id-type="pmcid">PMC9008774</pub-id><pub-id pub-id-type="pmid">35432005</pub-id></mixed-citation></ref><ref id="R41"><label>41</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Boykin</surname>
+<given-names>JR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tinsley</surname>
+<given-names>GM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Harrison</surname>
+<given-names>CM</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Offseason body composition changes detected by dual-energy X-ray absorptiometry versus multifrequency bioelectrical impedance analysis in collegiate American football athletes</article-title>. <source>Sports</source>
+<year>2021</year>;<volume>9</volume>:<elocation-id>112</elocation-id>. <pub-id pub-id-type="doi">10.3390/sports9080112</pub-id>
+<pub-id pub-id-type="pmid">34437373</pub-id><pub-id pub-id-type="pmcid">PMC8402408</pub-id></mixed-citation></ref><ref id="R42"><label>42</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Schoenfeld</surname>
+<given-names>BJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Nickerson</surname>
+<given-names>BS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wilborn</surname>
+<given-names>CD</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Comparison of multifrequency bioelectrical impedance vs. dual-energy X-ray absorptiometry for assessing body composition changes after participation in a 10-week resistance training program</article-title>. <source>J Strength Cond Res</source>
+<year>2020</year>;<volume>34</volume>:<fpage>678</fpage>–<lpage>88</lpage>. <pub-id pub-id-type="doi">10.1519/JSC.0000000000002708</pub-id>
+<pub-id pub-id-type="pmid">29927888</pub-id></mixed-citation></ref><ref id="R43"><label>43</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Friedl</surname>
+<given-names>KE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Westphal</surname>
+<given-names>KA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Marchitelli</surname>
+<given-names>LJ</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Evaluation of anthropometric equations to assess body-composition changes in young women</article-title>. <source>Am J Clin Nutr</source>
+<year>2001</year>;<volume>73</volume>:<fpage>268</fpage>–<lpage>75</lpage>. <pub-id pub-id-type="doi">10.1093/ajcn/73.2.268</pub-id>
+<pub-id pub-id-type="pmid">11157323</pub-id></mixed-citation></ref><ref id="R44"><label>44</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Vogel</surname>
+<given-names>JA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Friedl</surname>
+<given-names>KE</given-names>
+</string-name>
+</person-group>. <article-title>Body fat assessment in women</article-title>. <source>Sports Medicine</source>
+<year>1992</year>;<volume>13</volume>:<fpage>245</fpage>–<lpage>69</lpage>. <pub-id pub-id-type="doi">10.2165/00007256-199213040-00003</pub-id>
+<pub-id pub-id-type="pmid">1615253</pub-id></mixed-citation></ref><ref id="R45"><label>45</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Mikkola</surname>
+<given-names>I</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Jokelainen</surname>
+<given-names>JJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Timonen</surname>
+<given-names>MJ</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Physical activity and body composition changes during military service</article-title>. <source>Med Sci Sports Exerc</source>
+<year>2009</year>;<volume>41</volume>:<fpage>1735</fpage>–<lpage>42</lpage>. <pub-id pub-id-type="doi">10.1249/MSS.0b013e31819fcd3c</pub-id>
+<pub-id pub-id-type="pmid">19657297</pub-id></mixed-citation></ref><ref id="R46"><label>46</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Vaara</surname>
+<given-names>JP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Eränen</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ojanen</surname>
+<given-names>T</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Can physiological and psychological factors predict dropout from intense 10-day winter military survival training?</article-title>
+<source>Int J Environ Res Public Health</source>
+<year>2020</year>;<volume>17</volume>:<elocation-id>9064</elocation-id>. <pub-id pub-id-type="doi">10.3390/ijerph17239064</pub-id>
+<pub-id pub-id-type="pmid">33291711</pub-id><pub-id pub-id-type="pmcid">PMC7731046</pub-id></mixed-citation></ref><ref id="R47"><label>47</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author">
+<string-name name-style="western">
+<surname>Ojanen</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kyröläinen</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kozharskaya</surname>
+<given-names>E</given-names>
+</string-name>, <etal>et al</etal>
+</person-group>. <article-title>Changes in strength and power performance and serum hormone concentrations during 12 weeks of task‐specific or strength training in conscripts</article-title>. <source>Physiol Rep</source>
+<year>2020</year>;<volume>8</volume>:<elocation-id>e14422</elocation-id>. <pub-id pub-id-type="doi">10.14814/phy2.14422</pub-id>
+<pub-id pub-id-type="pmid">32378340</pub-id><pub-id pub-id-type="pmcid">PMC7202986</pub-id></mixed-citation></ref></ref-list></back></article></pmc-articleset>

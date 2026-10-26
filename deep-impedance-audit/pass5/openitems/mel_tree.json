@@ -1,0 +1,719 @@
+{
+  "sha": "dcd50963aba362ebcfdb090548d099d047451394",
+  "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/dcd50963aba362ebcfdb090548d099d047451394",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03067cbbb2b6ed2b27383bd9ad2087e90c97ec68",
+      "size": 36,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/03067cbbb2b6ed2b27383bd9ad2087e90c97ec68"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fde7b754bb925d1dff948125d56aa82c2d58ba18",
+      "size": 15143,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/fde7b754bb925d1dff948125d56aa82c2d58ba18"
+    },
+    {
+      "path": "blink-led",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bde0aaa16dd29b65c78013c37c47e42b61615b9d",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/bde0aaa16dd29b65c78013c37c47e42b61615b9d"
+    },
+    {
+      "path": "blink-led/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5fe6b8a32d0a1aa72146141e4a183adf07eef4c",
+      "size": 52,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/c5fe6b8a32d0a1aa72146141e4a183adf07eef4c"
+    },
+    {
+      "path": "blink-led/Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e9dedb85373b5611b76ded2d1dd3b50c90b4c9c",
+      "size": 919,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/2e9dedb85373b5611b76ded2d1dd3b50c90b4c9c"
+    },
+    {
+      "path": "blink-led/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "729ec9a20550d4836966b62e4196f8629337c0bd",
+      "size": 5566,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/729ec9a20550d4836966b62e4196f8629337c0bd"
+    },
+    {
+      "path": "blink-led/blink_led.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74ed139e3f74deb60bf3b821bb38bca51b286ee5",
+      "size": 2301,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/74ed139e3f74deb60bf3b821bb38bca51b286ee5"
+    },
+    {
+      "path": "blink-led/linker.ld",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40632013c1354a407989d2df418d4d3cb01cd2f5",
+      "size": 1831,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/40632013c1354a407989d2df418d4d3cb01cd2f5"
+    },
+    {
+      "path": "blink-led/main.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f153aeb2fd0afc07ebb161c9f682c915339fb4b",
+      "size": 2156,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/3f153aeb2fd0afc07ebb161c9f682c915339fb4b"
+    },
+    {
+      "path": "blink-led/openocd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4328fc269812e0a9f9eeaa9a0e10eb8df2fa1a88",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/4328fc269812e0a9f9eeaa9a0e10eb8df2fa1a88"
+    },
+    {
+      "path": "blink-led/openocd/aducm3029.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d63889f18c8c57c699fdd026bf00a52ef3cd2f33",
+      "size": 882,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/d63889f18c8c57c699fdd026bf00a52ef3cd2f33"
+    },
+    {
+      "path": "blink-led/registers.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d94479a66d89fd91e2fbcb810cfa103c769181b",
+      "size": 2328,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/4d94479a66d89fd91e2fbcb810cfa103c769181b"
+    },
+    {
+      "path": "blink-led/startup.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a25f112a8eeb0fb8a05fc789153d09647d15eefe",
+      "size": 2410,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/a25f112a8eeb0fb8a05fc789153d09647d15eefe"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5efdc90ae94287a7dc30072dece42b8f34686e6a",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/5efdc90ae94287a7dc30072dece42b8f34686e6a"
+    },
+    {
+      "path": "docs/EVAL-AD5940_user_guide.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d5b8f4e82cd196e857bce1fee463bfff80a4a3d",
+      "size": 2431625,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/9d5b8f4e82cd196e857bce1fee463bfff80a4a3d"
+    },
+    {
+      "path": "docs/Schematic_EVAL-AD5940BIOZ.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85c4daf34727a41a84947683c1137f0575a440e6",
+      "size": 380428,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/85c4daf34727a41a84947683c1137f0575a440e6"
+    },
+    {
+      "path": "docs/ad5940.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "655196c86a769edde2b09e5e3ed7eb249ede1b77",
+      "size": 2997627,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/655196c86a769edde2b09e5e3ed7eb249ede1b77"
+    },
+    {
+      "path": "docs/an-1557.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "227a34675c455b08cea4dc657c8fad17f92cfd4e",
+      "size": 6633724,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/227a34675c455b08cea4dc657c8fad17f92cfd4e"
+    },
+    {
+      "path": "gui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "59398af68dc6c50cc672e786ef04cd1e1640d0a1",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/59398af68dc6c50cc672e786ef04cd1e1640d0a1"
+    },
+    {
+      "path": "gui/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a230a78aea291ec7c0c35eefbc89b3898612a118",
+      "size": 20,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/a230a78aea291ec7c0c35eefbc89b3898612a118"
+    },
+    {
+      "path": "gui/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3e20b980defb4f04aa394d982fb405d07d01704",
+      "size": 38015,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/a3e20b980defb4f04aa394d982fb405d07d01704"
+    },
+    {
+      "path": "gui/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6798ed8178a3f5c7fc3e47c37b59d36d067fe53",
+      "size": 30,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/c6798ed8178a3f5c7fc3e47c37b59d36d067fe53"
+    },
+    {
+      "path": "gui/test_flash_targets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3de1a52accb54f5f1ac0cbb4f962fdfb0d73490d",
+      "size": 4220,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/3de1a52accb54f5f1ac0cbb4f962fdfb0d73490d"
+    },
+    {
+      "path": "measure-2wire-bioz",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b3a18de438c3594d5a80c503fb71b025886e97b",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/0b3a18de438c3594d5a80c503fb71b025886e97b"
+    },
+    {
+      "path": "measure-2wire-bioz/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5fe6b8a32d0a1aa72146141e4a183adf07eef4c",
+      "size": 52,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/c5fe6b8a32d0a1aa72146141e4a183adf07eef4c"
+    },
+    {
+      "path": "measure-2wire-bioz/Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d7b0306c089961e4ab6a61569286d21d92a543d",
+      "size": 1480,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/3d7b0306c089961e4ab6a61569286d21d92a543d"
+    },
+    {
+      "path": "measure-2wire-bioz/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "905b9bc7a9af39a0aa76316a4ff6cd55989abf16",
+      "size": 8008,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/905b9bc7a9af39a0aa76316a4ff6cd55989abf16"
+    },
+    {
+      "path": "measure-2wire-bioz/ad5940_port.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70454d7606f9fb5e7576ce87f94e4cf54b5359b9",
+      "size": 5508,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/70454d7606f9fb5e7576ce87f94e4cf54b5359b9"
+    },
+    {
+      "path": "measure-2wire-bioz/ad5940lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c29ead5ec4d4464159cc4e246e257e8dce902a9c",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/c29ead5ec4d4464159cc4e246e257e8dce902a9c"
+    },
+    {
+      "path": "measure-2wire-bioz/ad5940lib/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3eb82d4a7948c925959699145fafd169366856f3",
+      "size": 2234,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/3eb82d4a7948c925959699145fafd169366856f3"
+    },
+    {
+      "path": "measure-2wire-bioz/ad5940lib/ad5940.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ebee85fb25a5c53f65e81a0df4d9f1fa41f3a9d",
+      "size": 158477,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/4ebee85fb25a5c53f65e81a0df4d9f1fa41f3a9d"
+    },
+    {
+      "path": "measure-2wire-bioz/ad5940lib/ad5940.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14c7f82a9d1a0b7cbc1d0e5c093cddc9b9b594df",
+      "size": 348952,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/14c7f82a9d1a0b7cbc1d0e5c093cddc9b9b594df"
+    },
+    {
+      "path": "measure-2wire-bioz/bioz_2wire.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef9e9d7c28bdcd719dcf8edfb0a0411cbc2cf6fc",
+      "size": 24310,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/ef9e9d7c28bdcd719dcf8edfb0a0411cbc2cf6fc"
+    },
+    {
+      "path": "measure-2wire-bioz/bioz_2wire.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24090c4bcb1a85ee597898b8addba3029bd46826",
+      "size": 5386,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/24090c4bcb1a85ee597898b8addba3029bd46826"
+    },
+    {
+      "path": "measure-2wire-bioz/linker.ld",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29b54b9d6ee15af38c2de6ea7e28ac557bb4d5ad",
+      "size": 4244,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/29b54b9d6ee15af38c2de6ea7e28ac557bb4d5ad"
+    },
+    {
+      "path": "measure-2wire-bioz/main.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa9fa0ee539b7a9140129e71ee3720e10b560d7f",
+      "size": 13082,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/fa9fa0ee539b7a9140129e71ee3720e10b560d7f"
+    },
+    {
+      "path": "measure-2wire-bioz/openocd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4328fc269812e0a9f9eeaa9a0e10eb8df2fa1a88",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/4328fc269812e0a9f9eeaa9a0e10eb8df2fa1a88"
+    },
+    {
+      "path": "measure-2wire-bioz/openocd/aducm3029.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d63889f18c8c57c699fdd026bf00a52ef3cd2f33",
+      "size": 882,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/d63889f18c8c57c699fdd026bf00a52ef3cd2f33"
+    },
+    {
+      "path": "measure-2wire-bioz/registers.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0ad54e32001c260c1bcafa30dbd8bcb3d49c140",
+      "size": 8521,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/b0ad54e32001c260c1bcafa30dbd8bcb3d49c140"
+    },
+    {
+      "path": "measure-2wire-bioz/startup.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72da99267e007659ddaef4d5101ab1e5ca832ec3",
+      "size": 3899,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/72da99267e007659ddaef4d5101ab1e5ca832ec3"
+    },
+    {
+      "path": "measure-4wire-bioz",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dcc7ecd8491c73cf67abd7786f4229f2db0a1598",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/dcc7ecd8491c73cf67abd7786f4229f2db0a1598"
+    },
+    {
+      "path": "measure-4wire-bioz/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5fe6b8a32d0a1aa72146141e4a183adf07eef4c",
+      "size": 52,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/c5fe6b8a32d0a1aa72146141e4a183adf07eef4c"
+    },
+    {
+      "path": "measure-4wire-bioz/BodyImpedance.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed068030ead2d1722c5e358e6671c114721b0060",
+      "size": 21510,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/ed068030ead2d1722c5e358e6671c114721b0060"
+    },
+    {
+      "path": "measure-4wire-bioz/BodyImpedance.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a93e510bf9271cd683ca4d6d1a2c39c95f5b5a5",
+      "size": 5477,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/5a93e510bf9271cd683ca4d6d1a2c39c95f5b5a5"
+    },
+    {
+      "path": "measure-4wire-bioz/Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c9a653222ba9e48e405b8a4c6328f13279b36bd",
+      "size": 1486,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/9c9a653222ba9e48e405b8a4c6328f13279b36bd"
+    },
+    {
+      "path": "measure-4wire-bioz/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec1cf955c88df5a7a3bdd1ca1544a0e5bb615bc4",
+      "size": 8657,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/ec1cf955c88df5a7a3bdd1ca1544a0e5bb615bc4"
+    },
+    {
+      "path": "measure-4wire-bioz/ad5940_port.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70454d7606f9fb5e7576ce87f94e4cf54b5359b9",
+      "size": 5508,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/70454d7606f9fb5e7576ce87f94e4cf54b5359b9"
+    },
+    {
+      "path": "measure-4wire-bioz/ad5940lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c29ead5ec4d4464159cc4e246e257e8dce902a9c",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/c29ead5ec4d4464159cc4e246e257e8dce902a9c"
+    },
+    {
+      "path": "measure-4wire-bioz/ad5940lib/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3eb82d4a7948c925959699145fafd169366856f3",
+      "size": 2234,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/3eb82d4a7948c925959699145fafd169366856f3"
+    },
+    {
+      "path": "measure-4wire-bioz/ad5940lib/ad5940.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ebee85fb25a5c53f65e81a0df4d9f1fa41f3a9d",
+      "size": 158477,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/4ebee85fb25a5c53f65e81a0df4d9f1fa41f3a9d"
+    },
+    {
+      "path": "measure-4wire-bioz/ad5940lib/ad5940.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14c7f82a9d1a0b7cbc1d0e5c093cddc9b9b594df",
+      "size": 348952,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/14c7f82a9d1a0b7cbc1d0e5c093cddc9b9b594df"
+    },
+    {
+      "path": "measure-4wire-bioz/linker.ld",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29b54b9d6ee15af38c2de6ea7e28ac557bb4d5ad",
+      "size": 4244,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/29b54b9d6ee15af38c2de6ea7e28ac557bb4d5ad"
+    },
+    {
+      "path": "measure-4wire-bioz/main.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9386355b96b0cf3fa961a7011ce7142782827b71",
+      "size": 11479,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/9386355b96b0cf3fa961a7011ce7142782827b71"
+    },
+    {
+      "path": "measure-4wire-bioz/openocd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4328fc269812e0a9f9eeaa9a0e10eb8df2fa1a88",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/4328fc269812e0a9f9eeaa9a0e10eb8df2fa1a88"
+    },
+    {
+      "path": "measure-4wire-bioz/openocd/aducm3029.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d63889f18c8c57c699fdd026bf00a52ef3cd2f33",
+      "size": 882,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/d63889f18c8c57c699fdd026bf00a52ef3cd2f33"
+    },
+    {
+      "path": "measure-4wire-bioz/registers.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0ad54e32001c260c1bcafa30dbd8bcb3d49c140",
+      "size": 8521,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/b0ad54e32001c260c1bcafa30dbd8bcb3d49c140"
+    },
+    {
+      "path": "measure-4wire-bioz/startup.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72da99267e007659ddaef4d5101ab1e5ca832ec3",
+      "size": 3899,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/72da99267e007659ddaef4d5101ab1e5ca832ec3"
+    },
+    {
+      "path": "time-series-bioz-2wire",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "90974cb1310cdb27f1ca2d287940f5a5036324b1",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/90974cb1310cdb27f1ca2d287940f5a5036324b1"
+    },
+    {
+      "path": "time-series-bioz-2wire/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5fe6b8a32d0a1aa72146141e4a183adf07eef4c",
+      "size": 52,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/c5fe6b8a32d0a1aa72146141e4a183adf07eef4c"
+    },
+    {
+      "path": "time-series-bioz-2wire/Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7b8018e51db41518455d43b48fe75dcc3aea63a",
+      "size": 1484,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/b7b8018e51db41518455d43b48fe75dcc3aea63a"
+    },
+    {
+      "path": "time-series-bioz-2wire/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "437c03bf68af4876917b9ac98ba93f404b17d4d0",
+      "size": 10933,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/437c03bf68af4876917b9ac98ba93f404b17d4d0"
+    },
+    {
+      "path": "time-series-bioz-2wire/ad5940_port.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70454d7606f9fb5e7576ce87f94e4cf54b5359b9",
+      "size": 5508,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/70454d7606f9fb5e7576ce87f94e4cf54b5359b9"
+    },
+    {
+      "path": "time-series-bioz-2wire/ad5940lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "46f4f8b69ef08b5c50b1a6b5510f2612ae395aff",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/46f4f8b69ef08b5c50b1a6b5510f2612ae395aff"
+    },
+    {
+      "path": "time-series-bioz-2wire/ad5940lib/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3eb82d4a7948c925959699145fafd169366856f3",
+      "size": 2234,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/3eb82d4a7948c925959699145fafd169366856f3"
+    },
+    {
+      "path": "time-series-bioz-2wire/ad5940lib/ad5940.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fecbd1f638f0f2aab98828a7b131a218d4f1ee09",
+      "size": 159952,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/fecbd1f638f0f2aab98828a7b131a218d4f1ee09"
+    },
+    {
+      "path": "time-series-bioz-2wire/ad5940lib/ad5940.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14c7f82a9d1a0b7cbc1d0e5c093cddc9b9b594df",
+      "size": 348952,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/14c7f82a9d1a0b7cbc1d0e5c093cddc9b9b594df"
+    },
+    {
+      "path": "time-series-bioz-2wire/bioz_2wire.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef9e9d7c28bdcd719dcf8edfb0a0411cbc2cf6fc",
+      "size": 24310,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/ef9e9d7c28bdcd719dcf8edfb0a0411cbc2cf6fc"
+    },
+    {
+      "path": "time-series-bioz-2wire/bioz_2wire.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24090c4bcb1a85ee597898b8addba3029bd46826",
+      "size": 5386,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/24090c4bcb1a85ee597898b8addba3029bd46826"
+    },
+    {
+      "path": "time-series-bioz-2wire/linker.ld",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29b54b9d6ee15af38c2de6ea7e28ac557bb4d5ad",
+      "size": 4244,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/29b54b9d6ee15af38c2de6ea7e28ac557bb4d5ad"
+    },
+    {
+      "path": "time-series-bioz-2wire/main.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f46046256a074b78d66ac00d238be83d9bef569",
+      "size": 28572,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/1f46046256a074b78d66ac00d238be83d9bef569"
+    },
+    {
+      "path": "time-series-bioz-2wire/openocd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4328fc269812e0a9f9eeaa9a0e10eb8df2fa1a88",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/4328fc269812e0a9f9eeaa9a0e10eb8df2fa1a88"
+    },
+    {
+      "path": "time-series-bioz-2wire/openocd/aducm3029.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d63889f18c8c57c699fdd026bf00a52ef3cd2f33",
+      "size": 882,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/d63889f18c8c57c699fdd026bf00a52ef3cd2f33"
+    },
+    {
+      "path": "time-series-bioz-2wire/registers.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b63d70b2a43a95a22240f126b7c5083a7ef4bd6d",
+      "size": 9221,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/b63d70b2a43a95a22240f126b7c5083a7ef4bd6d"
+    },
+    {
+      "path": "time-series-bioz-2wire/startup.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72da99267e007659ddaef4d5101ab1e5ca832ec3",
+      "size": 3899,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/72da99267e007659ddaef4d5101ab1e5ca832ec3"
+    },
+    {
+      "path": "time-series-bioz",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa1f1d4971d947669cfe6f730d20b006add7fd55",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/fa1f1d4971d947669cfe6f730d20b006add7fd55"
+    },
+    {
+      "path": "time-series-bioz/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5fe6b8a32d0a1aa72146141e4a183adf07eef4c",
+      "size": 52,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/c5fe6b8a32d0a1aa72146141e4a183adf07eef4c"
+    },
+    {
+      "path": "time-series-bioz/BodyImpedance.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed068030ead2d1722c5e358e6671c114721b0060",
+      "size": 21510,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/ed068030ead2d1722c5e358e6671c114721b0060"
+    },
+    {
+      "path": "time-series-bioz/BodyImpedance.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a93e510bf9271cd683ca4d6d1a2c39c95f5b5a5",
+      "size": 5477,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/5a93e510bf9271cd683ca4d6d1a2c39c95f5b5a5"
+    },
+    {
+      "path": "time-series-bioz/Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df49d139870d3ce049e3311744744819c13dfcdd",
+      "size": 1484,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/df49d139870d3ce049e3311744744819c13dfcdd"
+    },
+    {
+      "path": "time-series-bioz/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e6181bfa85da251113409ccc21c79c399ec3d10",
+      "size": 8073,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/3e6181bfa85da251113409ccc21c79c399ec3d10"
+    },
+    {
+      "path": "time-series-bioz/ad5940_port.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70454d7606f9fb5e7576ce87f94e4cf54b5359b9",
+      "size": 5508,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/70454d7606f9fb5e7576ce87f94e4cf54b5359b9"
+    },
+    {
+      "path": "time-series-bioz/ad5940lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c29ead5ec4d4464159cc4e246e257e8dce902a9c",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/c29ead5ec4d4464159cc4e246e257e8dce902a9c"
+    },
+    {
+      "path": "time-series-bioz/ad5940lib/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3eb82d4a7948c925959699145fafd169366856f3",
+      "size": 2234,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/3eb82d4a7948c925959699145fafd169366856f3"
+    },
+    {
+      "path": "time-series-bioz/ad5940lib/ad5940.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ebee85fb25a5c53f65e81a0df4d9f1fa41f3a9d",
+      "size": 158477,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/4ebee85fb25a5c53f65e81a0df4d9f1fa41f3a9d"
+    },
+    {
+      "path": "time-series-bioz/ad5940lib/ad5940.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14c7f82a9d1a0b7cbc1d0e5c093cddc9b9b594df",
+      "size": 348952,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/14c7f82a9d1a0b7cbc1d0e5c093cddc9b9b594df"
+    },
+    {
+      "path": "time-series-bioz/linker.ld",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29b54b9d6ee15af38c2de6ea7e28ac557bb4d5ad",
+      "size": 4244,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/29b54b9d6ee15af38c2de6ea7e28ac557bb4d5ad"
+    },
+    {
+      "path": "time-series-bioz/main.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7d21301de654cc61d050ab96ae790e02d46bcbb",
+      "size": 15514,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/e7d21301de654cc61d050ab96ae790e02d46bcbb"
+    },
+    {
+      "path": "time-series-bioz/openocd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4328fc269812e0a9f9eeaa9a0e10eb8df2fa1a88",
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/trees/4328fc269812e0a9f9eeaa9a0e10eb8df2fa1a88"
+    },
+    {
+      "path": "time-series-bioz/openocd/aducm3029.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d63889f18c8c57c699fdd026bf00a52ef3cd2f33",
+      "size": 882,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/d63889f18c8c57c699fdd026bf00a52ef3cd2f33"
+    },
+    {
+      "path": "time-series-bioz/registers.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b63d70b2a43a95a22240f126b7c5083a7ef4bd6d",
+      "size": 9221,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/b63d70b2a43a95a22240f126b7c5083a7ef4bd6d"
+    },
+    {
+      "path": "time-series-bioz/startup.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72da99267e007659ddaef4d5101ab1e5ca832ec3",
+      "size": 3899,
+      "url": "https://api.github.com/repos/melazab/AD5940-BIOZ/git/blobs/72da99267e007659ddaef4d5101ab1e5ca832ec3"
+    }
+  ],
+  "truncated": false
+}
