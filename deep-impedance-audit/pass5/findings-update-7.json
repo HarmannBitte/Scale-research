@@ -1,0 +1,27 @@
+{
+  "generated": "2026-10-18",
+  "scope": "No-hardware rechecks of F13, F21, F03, F05. Sources: MAX30001 datasheet Rev 3 (uploaded), pass5/f21/lib.cpp, pass5/f21/Example01.ino, producer-probe/lib (decoder), pass5/vendor/max30009.h, open-source-survey UPRM selected/src/bioZ.c.",
+  "updates": [
+    {
+      "id": "F05",
+      "status": "resolved",
+      "detail": "Vendor header enum max30009_adc_osr: index 0=8 ... 4=128, 5=256. Register BIOZ_CONFIGURATION1 value 0xA0 has ADC_OSR (bits 5:3) = 100 = index 4 = 128. The UPRM comment (ADC_OSR = 5 = 256) is stale. Firmware table mapping to 128 agrees with the register."
+    },
+    {
+      "id": "F21",
+      "status": "confirmed_source_level",
+      "detail": "Example01.ino sets SAMPLE_RATE = MAX30001_RATE_128 (ECG) and says 'BioZ samples at half the ECG rate'. The decoder header labels the whole pktType 2 stream '128 Hz'. BioZ is therefore labelled at twice its real rate. Datasheet: BioZ rate with FMSTR 00 is 64 sps or 32 sps (CNFG_BIOZ D[23]), so 64 sps is consistent with the producer. Additional finding: decoder header says 'sign-extended 19-bit BioZ'; the datasheet BioZ word is 20 bits (D[23:4])."
+    },
+    {
+      "id": "F13",
+      "status": "partly_confirmed_partly_contradicted",
+      "detail": "ECG: getECGSamples keeps D[23:6] (18 bits) and shifts >>14. Datasheet ECG_DATA[17:0] at D[23:6]. Confirmed. BioZ: getBioZSamples keeps D[23:4] (20 bits), sign-extended. Datasheet confirms 20 bits. Confirmed. The F13 evidence also cites _max30001ReadBIOZFIFO, which keeps only D[23:6] (18 bits; see F32). That function contradicts the F13 claim. F13 should cite getBioZSamples only, plus the F32 note."
+    },
+    {
+      "id": "F03",
+      "status": "arithmetic_confirmed; normalisation_not_verifiable",
+      "detail": "250 mV / 5525 ohm = 45.25 uA peak (matches). 45.25 / sqrt(2) = 32.0 uA rms (matches the datasheet 177 mVrms / 5.525 kohm = 32.0 uA). The 2/pi factor in convertCountsToOhms (bioZ.c 387-400) is present. Whether it is correct depends on how 'count' is produced (DFT normalisation and excitation waveform). The collected selected/ source has no DFT or count code, so this cannot be verified from the collection."
+    }
+  ],
+  "findings_json_edited": false
+}

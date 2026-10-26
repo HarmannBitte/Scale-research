@@ -421,3 +421,21 @@ Not done:
 - Hardware-level verification of any finding.
 - Full review of the MAX30009 and ADI-based firmware repos (not built).
 
+## 17. Approvals recorded (2026-10-18)
+
+- **Hardware checks (F22, F01, F08, F09, F31, F33, F34, F35):** plan written to `HW-CHECK-PLAN-DRAFT-2026-10-18.md`. User has no listed boards (answer: none), so no bench check can run. Flashing is allowed in principle but has no effect without boards. Host-only work (for example an ASan run for F01) needs no approval and has not been started.
+- **F20 maintainer message:** drafted in `F20-MAINTAINER-MESSAGE-DRAFT.md`. User chose "hold". Not sent.
+- **ad5940lib licence files:** user chose "keep as is". The README records the licence limits.
+- This section is local only. It is not yet pushed.
+
+## 18. No-hardware rechecks (2026-10-18)
+
+Results in `deep-impedance-audit/pass5/findings-update-7.json`. `findings.json` not edited.
+
+- **F05 (MAX30009 OSR): resolved.** Vendor header enum: index 4 = 128. Register 0xA0 gives index 4. The UPRM comment (256) is stale.
+- **F21 (BioZ rate label): confirmed at source level.** Example01 runs ECG at 128 SPS and BioZ at half that. The decoder labels the whole stream 128 Hz. Datasheet confirms 64 sps for BioZ at FMSTR 00. The decoder also says "19-bit" BioZ; the datasheet says 20.
+- **F13 (sample widths): partly contradicted.** ECG 18 bits and `getBioZSamples()` 20 bits both match the datasheet. The streaming reader it also cites keeps 18 bits (F32). The F13 evidence should be narrowed.
+- **F03 (UPRM current and 2/π): arithmetic confirmed, normalisation not verifiable.** 250 mV / 5.525 kΩ = 45.25 µA peak = 32.0 µA rms, matching the datasheet example. The DFT and count code are not in the collected source, so the 2/π factor cannot be checked.
+
+Also recorded: the HW plan draft and the F20 draft are in this folder (not sent, not run).
+
